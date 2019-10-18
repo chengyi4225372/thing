@@ -68,7 +68,10 @@ class system extends AuthController
      */
     public function setting()
     {
-        
+        $return_data = Systems::instance()->getSetting();
+        $status = Config::get('site.status');
+        $this->assign('status',$status);
+        $this->assign('data_list',$return_data);
         return $this->fetch();
     }
 

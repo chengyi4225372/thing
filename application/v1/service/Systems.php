@@ -207,4 +207,14 @@ class Systems
         return json(['status' => true,'msg' => '添加成功！']);
     }
 
+    /**
+     * @DESC：获取网站设置列表
+     * @author: jason
+     * @date: 2019-10-18 04:50:51
+     */
+    public function getSetting()
+    {
+        return collection(Site::instance()->order('id desc')->select())->toArray();
+    }
+
 }

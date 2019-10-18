@@ -42,7 +42,7 @@ class Login extends Controller
         if(!$info){
             $this->error(__('Username or password is incorrect'));
         }
-        $this->success(__('Login successful'),$url);
+        $this->success(_('Login successful'),$url);
     }
 
     /**
