@@ -15,3 +15,30 @@
 [ 2019-10-21T09:23:29+08:00 ] 127.0.0.1 POST /v1/login/check.html
 [ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
 >>>>>>> 257cf5b694d4fd7d395041f00b4bb709353921d4
+---------------------------------------------------------------
+[ 2019-10-21T10:55:14+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [8]未定义变量: list[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\512149588c798387a7ead11efb0de004.php:421]
+---------------------------------------------------------------
+[ 2019-10-21T10:55:28+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [8]未定义变量: list[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\512149588c798387a7ead11efb0de004.php:421]
+---------------------------------------------------------------
+[ 2019-10-21T10:55:29+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [8]未定义变量: list[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\512149588c798387a7ead11efb0de004.php:421]
+---------------------------------------------------------------
+[ 2019-10-21T10:55:33+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [8]未定义变量: list[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\512149588c798387a7ead11efb0de004.php:421]
+---------------------------------------------------------------
+[ 2019-10-21T10:55:48+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [8]未定义变量: list[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\512149588c798387a7ead11efb0de004.php:429]
+---------------------------------------------------------------
+[ 2019-10-21T10:55:49+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [8]未定义变量: list[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\512149588c798387a7ead11efb0de004.php:429]
+---------------------------------------------------------------
+[ 2019-10-21T10:55:50+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [8]未定义变量: list[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\512149588c798387a7ead11efb0de004.php:429]
+---------------------------------------------------------------
+[ 2019-10-21T10:55:50+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [8]未定义变量: list[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\512149588c798387a7ead11efb0de004.php:429]
+---------------------------------------------------------------
+[ 2019-10-21T10:55:50+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [8]未定义变量: list[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\512149588c798387a7ead11efb0de004.php:429]
