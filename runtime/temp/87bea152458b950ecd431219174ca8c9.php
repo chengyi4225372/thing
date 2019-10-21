@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:60:"/opt/web/hui-/public/../application/v1/view/index/index.html";i:1571369306;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571369306;s:49:"/opt/web/hui-/application/v1/view/common/map.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:60:"/opt/web/hui-/public/../application/v1/view/index/index.html";i:1571369306;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571621758;s:49:"/opt/web/hui-/application/v1/view/common/map.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -313,13 +313,7 @@
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li class="">
-                        <a href=""><i class="fa fa-circle-o"></i>个人认证</a>
-                    </li>
-                    <li class="">
-                        <a href=""><i class="fa fa-circle-o"></i>公司认证</a>
-                    </li>
-                    <li class="">
-                        <a href=""><i class="fa fa-circle-o"></i>已认证的公司</a>
+                        <a href="<?php echo url('/v1/users/user/index'); ?>"><i class="fa fa-circle-o"></i>用户列表</a>
                     </li>
                 </ul>
             </li>
@@ -332,12 +326,12 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<?php if($paths == '/v1/systematic/system/menu'): ?>active<?php endif; ?>">
+<!--                    <li class="<?php if($paths == '/v1/systematic/system/menu'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/systematic/system/menu'); ?>"><i class="fa fa-circle-o"></i> 菜单管理</a>
                     </li>
                     <li class="<?php if($paths == '/v1/organ/organization/index'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/organ/organization/index'); ?>"><i class="fa fa-circle-o"></i>组织架构管理</a>
-                    </li>
+                    </li>-->
                     <li class="<?php if($paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/systematic/system/setting'); ?>"><i class="fa fa-circle-o"></i>网站设置</a>
                     </li>

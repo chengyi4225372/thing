@@ -67,15 +67,15 @@ class Systems
         if($username != $user_info['username'] || $password != $user_info['password']){
             return false;
         }
-        $arr = [
-            'id' => $user_info['id'],
-            'username' => $user_info['username'],
-        ];
-        $token = $user_info['token'];
-        $cache_token = $this->setToken($arr);
-        if($token != $cache_token){
-            return false;
-        }
+//        $arr = [
+//            'id' => $user_info['id'],
+//            'username' => $user_info['username'],
+//        ];
+//        $token = $user_info['token'];
+//        $cache_token = $this->setToken($arr);
+//        if($token != $cache_token){
+//            return false;
+//        }
         //存入session
         Session::set('userid',$user_info['id']);
         Session::set('username',$user_info['username']);

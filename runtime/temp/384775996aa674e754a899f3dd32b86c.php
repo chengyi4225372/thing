@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/system/setting.html";i:1571391353;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571617841;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/system/setting.html";i:1571391353;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571630155;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -304,15 +304,15 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
-            <li class="treeview">
+            <li class="treeview <?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
                 <a href="#">
                     <i class="glyphicon glyphicon-user"></i> <span>用户管理</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
-                <ul class="treeview-menu" style="display: none;">
-                    <li class="">
+                <ul class="treeview-menu">
+                    <li class="<?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/users/user/index'); ?>"><i class="fa fa-circle-o"></i>用户列表</a>
                     </li>
                 </ul>
@@ -326,12 +326,12 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<?php if($paths == '/v1/systematic/system/menu'): ?>active<?php endif; ?>">
+<!--                    <li class="<?php if($paths == '/v1/systematic/system/menu'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/systematic/system/menu'); ?>"><i class="fa fa-circle-o"></i> 菜单管理</a>
                     </li>
                     <li class="<?php if($paths == '/v1/organ/organization/index'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/organ/organization/index'); ?>"><i class="fa fa-circle-o"></i>组织架构管理</a>
-                    </li>
+                    </li>-->
                     <li class="<?php if($paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/systematic/system/setting'); ?>"><i class="fa fa-circle-o"></i>网站设置</a>
                     </li>

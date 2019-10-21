@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hui-/public/../application/v1/view/users/user/index.html";i:1571621542;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571621758;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hui-/public/../application/v1/view/users/user/index.html";i:1571626751;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571630155;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -304,15 +304,15 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
-            <li class="treeview">
+            <li class="treeview <?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
                 <a href="#">
                     <i class="glyphicon glyphicon-user"></i> <span>用户管理</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
-                <ul class="treeview-menu" style="display: none;">
-                    <li class="">
+                <ul class="treeview-menu">
+                    <li class="<?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/users/user/index'); ?>"><i class="fa fa-circle-o"></i>用户列表</a>
                     </li>
                 </ul>
@@ -364,7 +364,7 @@
 
 
                         <div class="form-group">
-                            <input type="text"  class="form-control" name="username" value="" placeholder="多姓名搜索(空格逗号隔开)">
+                            <input type="text"  class="form-control" name="username" value="<?php echo $params['username']; ?>" placeholder="多姓名搜索(空格逗号隔开)">
                         </div>
 
                         <div class="form-group">
@@ -391,7 +391,7 @@
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                 <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span>ID</span>
+                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
                 </th>
                 <th class="text-center">用户</th>
                 <th class="text-center">电话</th>
@@ -412,7 +412,7 @@
                         <span class="btn <?php if($list['is_del'] == 0): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['is_del']]; ?></span>
                     </td>
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url(); ?>" data-id="" onclick="admin_module.edit_user(this)">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/users/user/edituser',['id' => $list['id']]); ?>" data-id="" onclick="admin_module.user_edit(this)">编辑</a>
                     </td>
                 </tr>
                 <?php endforeach; endif; else: echo "" ;endif; ?>

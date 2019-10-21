@@ -18,7 +18,7 @@
 <div class="dialog-content">
     <form class="form-horizontal">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-9">
                 <div class="form-group">
                     <label class="col-sm-3 control-label">用户：</label>
                     <div class="col-sm-9">
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="dialog-footer">
+        <div class="dialog-footer" style="text-align:center;">
             <button class="btn btn-primary" id="pass_btn" type="button" data="" onclick="admin_module.change_password(this);" data-id="{$userid}" data-url="{:url('v1/login/changepass')}"><i class="glyphicon glyphicon-ok"></i>确认</button>
             <button class="btn btn-danger" id="no_pass_btn" onclick="admin_module.cancel_btn()"  data="" data-url=""> <i class="glyphicon glyphicon-remove"></i>取消</button>
         </div>
