@@ -34,7 +34,7 @@ class Infosservice
        }
 
         if(!empty($param) && isset($param)){
-            $list = Info::instance()->where(['title'=>'like'.'%'.$param.'%'])->order(['create_time'=>'desc'])->paginate(15);
+            $list = Info::instance()->where(['title'=>['like','%'.$param.'%']])->order(['create_time'=>'desc'])->paginate(15);
         }
 
        return $list;

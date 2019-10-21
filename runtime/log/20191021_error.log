@@ -326,3 +326,6 @@
 ---------------------------------------------------------------
 [ 2019-10-21T18:35:35+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
 [ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T18:42:26+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html?title=%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE22334
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
