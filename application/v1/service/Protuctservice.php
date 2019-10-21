@@ -46,4 +46,12 @@ class Protuctservice
           return  $ret;
      }
 
+    /**
+     * $array array
+     * 正常数据
+     */
+    public function normal($array){
+        $nlist = Protuct::instance()->where($array)->order('id desc')->select();
+        return $nlist;
+    }
 }

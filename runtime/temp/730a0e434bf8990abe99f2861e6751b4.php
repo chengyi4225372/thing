@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\login\index.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\login\index.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571657428;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -30,6 +30,8 @@
 <link rel="stylesheet" href="/static/assets/components/jstree/themes/default/style.min.css"/>
 <!-- iCheck for checkboxes and radio inputs -->
 <link rel="stylesheet" href="/static/assets/plugins/iCheck/all.css">
+<!--layui-->
+<link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- Font -->
 <link rel="stylesheet" href="/static/assets/dist/css/fontcss.css">
@@ -111,9 +113,16 @@
 <!-- datatables -->
 <script src="/static/assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="/static/assets/plugins/datatables/dataTables.bootstrap.js"></script>
+<!-- 富文本 -->
+<script src="/static/assets/components/ckeditor/ckeditor.js"></script>
+
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>
 <script src="/static/assets/dist/js/style.js"></script>
+
+<script src="/static/assets/dist/js/protuct.js"></script>
+<script src="/static/assets/dist/js/infos.js"></script>
+<script src="/static/assets/dist/js/partners.js"></script>
 <script>
     admin_module.changepas();
 </script>

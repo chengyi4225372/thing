@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\homes\index.html";i:1571665289;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="__HOME__/css/base.css">
-    <link rel="stylesheet" href="__HOME__/css/index.css">
-    <script src='__HOME__/js/index.js'></script>
+    <link rel="stylesheet" href="/static/home/css/base.css">
+    <link rel="stylesheet" href="/static/home/css/index.css">
+    <script src='/static/home/js/index.js'></script>
 </head>
 
 <body>
@@ -86,15 +87,15 @@
                 <div class='choose-intro'>惠企云平台是一款基于国家政策、以合规化为基础、由金牌顾问团队打造的产品，为企业及个人提供税筹问题的全方位解决方案。</div>
                 <ul class='img_total'>
                     <li>
-                        <img src="__HOME__/images/more.png" alt="">
+                        <img src="/static/home/images/more.png" alt="">
                         <a href="#">集专家智“惠”定制</a>
                     </li>
                     <li>
-                        <img src="__HOME__/images/rainning.png" alt="">
+                        <img src="/static/home/images/rainning.png" alt="">
                         <a href="#">集专家智“惠”定制</a>
                     </li>
                     <li>
-                        <img src="__HOME__/images/pig.png" alt="">
+                        <img src="/static/home/images/pig.png" alt="">
                         <a href="#">给您最优“惠”</a>
                     </li>
                 </ul>
@@ -106,20 +107,20 @@
             <div class='w'>
                 <div class='product_logo'></div>
                 <ul class='all_product'>
-                   {volist name='protuct' id='v1'}
+                   <?php if(is_array($protuct) || $protuct instanceof \think\Collection || $protuct instanceof \think\Paginator): $i = 0; $__LIST__ = $protuct;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
                     <li>
-                        <img src="{$v1.imgs|default=''}" alt="">
-                        <a href="#">{$v1.names|default=''}</a>
-                        <a href="#">{$v1.desc|default=''}</a>
+                        <img src="<?php echo (isset($v1['imgs']) && ($v1['imgs'] !== '')?$v1['imgs']:''); ?>" alt="">
+                        <a href="#"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
+                        <a href="#"><?php echo (isset($v1['desc']) && ($v1['desc'] !== '')?$v1['desc']:''); ?></a>
                         <ul class='one_pic'>
-                            <li><a href="{$v1.purl|default='#'}">{$v1.idea}</a></li>
-                            <li><a href="{$v1.purl|default='#'}">前往网站</a></li>
+                            <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>"><?php echo $v1['idea']; ?></a></li>
+                            <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
                         </ul>
                     </li>
-                    {/volist}
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                    <!--
                     <li>
-                        <img src="__HOME__/images/work.png" alt="">
+                        <img src="/static/home/images/work.png" alt="">
                         <a href="#">惠灵工</a>
                         <a href="#">共享经济双创支撑云平台</a>
                         <ul class='one_pic'>
@@ -129,7 +130,7 @@
                     </li>
                     <li>
 
-                        <img src="__HOME__/images/money.png" alt="">
+                        <img src="/static/home/images/money.png" alt="">
                         <a href="#">惠多薪</a>
                         <a href="#">创新型人力资源节税平台</a>
                         <ul class='one_pic'>
@@ -138,7 +139,7 @@
                         </ul>
                     </li>
                     <li>
-                        <img src="__HOME__/images/chuang.png" alt="">
+                        <img src="/static/home/images/chuang.png" alt="">
                         <a href="#">惠创业</a>
                         <a href="#">专注于武汉本地的税筹产品</a>
                         <ul class='one_pic'>
@@ -147,7 +148,7 @@
                         </ul>
                     </li>
                     <li>
-                        <img src="__HOME__/images/zhao.png" alt="">
+                        <img src="/static/home/images/zhao.png" alt="">
                         <a href="#">惠找事</a>
                         <a href="#">专门帮你找兼职</a>
                         <ul class='one_pic'>
@@ -156,7 +157,7 @@
                         </ul>
                     </li>
                     <li>
-                        <img src="__HOME__/images/qi.png" alt="">
+                        <img src="/static/home/images/qi.png" alt="">
                         <a href="#">惠企动</a>
                         <a href="#">提供创新型人力资源节税方案</a>
                         <ul class='one_pic'>
@@ -180,7 +181,7 @@
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -189,7 +190,7 @@
                             <div>惠创优</div>
                             <div>节税服务案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -198,7 +199,7 @@
                             <div>惠灵工</div>
                             <div>一站用工案例</div>
                             <a href="#">
-                                <imgsrc="__HOME__/jiantou.png" alt="">
+                                <imgsrc="/static/home/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -207,7 +208,7 @@
                             <div>一站用工案例</div>
                             <div>人才服务案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -216,7 +217,7 @@
                             <div>惠创业</div>
                             <div>一站服务案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -225,7 +226,7 @@
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -405,15 +406,15 @@
                     <div class='zhaoTotalInfo'>
                         <div class='totalInfo_title'>招标信息</div>
                         <div class='totalInfo_content'>
-                             {volist name="biao" id="biaos"}
+                             <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                             <div class='zhao_contentInfo'>
-                                <div>{$biaos.title|default=''}</div>
-                                <div>{$biaos.create_time}</div>
+                                <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
+                                <div><?php echo $biaos['create_time']; ?></div>
                             </div>
                             <div>
-                             {$biaos.content|mb_substr='0','50','utf-8'}
+                             <?php echo mb_substr($biaos['content'],'0','50','utf-8'); ?>
                             </div>
-                            {/volist}
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </div>
                         <button class='know_more'>了解更多</button>
                     </div>
@@ -422,15 +423,15 @@
                     <div class='zhaomethods'>
                         <div class='totalInfo_title'>招商政策</div>
                         <div class='totalInfo_content'>
-                            {volist name="shang" id="ss"}
+                            <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                             <div class='zhao_contentInfo'>
-                                <div>{$ss.title}</div>
-                                <div>{$ss.create_time}</div>
+                                <div><?php echo $ss['title']; ?></div>
+                                <div><?php echo $ss['create_time']; ?></div>
                             </div>
                             <div>
-                               {$ss.content|mb_substr='0','50','utf-8'}
+                               <?php echo mb_substr($ss['content'],'0','50','utf-8'); ?>
                             </div>
-                           {/volist}
+                           <?php endforeach; endif; else: echo "" ;endif; ?>
                         </div>
                         <button class='know_more'>了解更多</button>
                     </div>
@@ -496,9 +497,9 @@
 
                 </div>
                 <div class='concat_icon'>
-                    <div><img src="__HOME__/images/bo.png" alt=""></div>
-                    <div><img src="__HOME__/images/wx.png" alt=""></div>
-                    <div><img src="__HOME__/images/tie.png" alt=""></div>
+                    <div><img src="/static/home/images/bo.png" alt=""></div>
+                    <div><img src="/static/home/images/wx.png" alt=""></div>
+                    <div><img src="/static/home/images/tie.png" alt=""></div>
                 </div>
             </div>
         </div>

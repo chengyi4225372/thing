@@ -60,4 +60,22 @@ class Infosservice
         return $info;
     }
 
+    /**
+     * 招标信息
+     *  array('pid'=>1)
+     */
+    public function biao($array){
+        $arr = Info::instance()->where($array)->order('create_time desc')->limit(0,2)->select();
+        return $arr;
+    }
+
+    /**
+     * 招标信息
+     *  array('pid'=>2)
+     */
+    public function shang($array){
+        $arr = Info::instance()->where($array)->order('create_time desc')->limit(0,2)->select();
+        return $arr;
+    }
+
 }

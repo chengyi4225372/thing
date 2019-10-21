@@ -439,3 +439,6 @@
 =======
 >>>>>>> 4793ee2e0817dfd3d7f0f316cf5604a920439291
 >>>>>>> bc65663c8e6172e8b642a4c6874b840d3285cfe2
+---------------------------------------------------------------
+[ 2019-10-21T21:29:52+08:00 ] 127.0.0.1 GET /
+[ error ] [0]method not exist:think\db\Query->selecte[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Query.php:96]

@@ -55,11 +55,11 @@ return [
     // | 模块设置
     // +----------------------------------------------------------------------
     // 默认模块名
-    'default_module'         => 'v1',
+    'default_module'         => 'home',
     // 禁止访问模块
     'deny_module_list'       => ['common'],
     // 默认控制器名
-    'default_controller'     => 'Index',
+    'default_controller'     => 'homes',
     // 默认操作名
     'default_action'         => 'index',
     // 默认验证器
@@ -140,6 +140,7 @@ return [
         '__PUBLIC__' => '/static',
         '__IMAGES__'   => '/images',
         '__CDN__'    => '',
+        '__HOME__'   =>'/static/home'
     ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => APP_PATH . 'common' . DS . 'view' . DS . 'tpl' . DS . 'dispatch_jump.tpl',
