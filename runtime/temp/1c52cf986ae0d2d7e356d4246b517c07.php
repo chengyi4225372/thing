@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:79:"/opt/web/hui-/public/../application/v1/view/systematic/system/addslideshow.html";i:1571642312;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:79:"/opt/web/hui-/public/../application/v1/view/systematic/system/addslideshow.html";i:1571643072;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571643758;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -75,7 +75,7 @@
                 <div class="form-group">
                     <label for="pic" class="col-sm-3 control-label">图片：</label>
                     <div class="col-sm-9">
-                        <button type="button" class="layui-btn" id="pic">
+                        <button type="button" class="layui-btn" id="pic" data-url="<?php echo url('/v1/systematic/system/uploadimg'); ?>">
                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
                         <img src="" style="width:50px;height:50px;" id="cur_pic">
@@ -145,6 +145,8 @@
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>
 <script src="/static/assets/dist/js/style.js"></script>
+
+<script src="/static/assets/dist/js/protuct.js"></script>
 <script>
     admin_module.changepas();
 </script>

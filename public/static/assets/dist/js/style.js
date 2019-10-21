@@ -131,6 +131,10 @@ var admin_module = (function (){
         );
     };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c88a49d964cd4b616ec9851c7cd2b28bf869ced2
     //编辑成员
     var edit_org = function edit_org(objthis){
         var url = $(objthis).attr('data-url');
@@ -266,8 +270,11 @@ var admin_module = (function (){
             }
         );
     };
+<<<<<<< HEAD
 
     //添加网站设置
+=======
+>>>>>>> c88a49d964cd4b616ec9851c7cd2b28bf869ced2
     $(document).on('click','#addsitesetting',function(){
         var url = $(this).attr('data-url');
         layer.open({
@@ -407,6 +414,7 @@ var admin_module = (function (){
     var check_out = function check_out(objthis){
         $('.data-check_box').prop("checked",objthis.checked);
     };
+<<<<<<< HEAD
 
     //var submit_search = function submit_search(objthis){
     //    var url = $(objthis).attr('data-url');
@@ -419,6 +427,8 @@ var admin_module = (function (){
     //        }
     //    );
     //};
+=======
+>>>>>>> c88a49d964cd4b616ec9851c7cd2b28bf869ced2
 
     var init_submit_form = function init_submit_form(){
         $('#form').submit(function (e){
@@ -479,13 +489,7 @@ var admin_module = (function (){
     var add_slideshow = function add_slideshow(objthis){
         var url = $(objthis).attr('data-url');
 
-        $.post(
-            url,
-            {},
-            function (ret){
 
-            }
-        );
     };
 
     //图片上传
@@ -508,18 +512,19 @@ var admin_module = (function (){
     });
 
     return {
-        changepas:changepas,
-        change_password:change_password,
-        cancel_btn:cancel_btn,
-        logout_btn:logout_btn,
-        add_menu:add_menu,
-        show_icon:show_icon,
-        save_menu:save_menu,
-        add_org:add_org,
-        save_btn:save_btn,
-        edit_setting:edit_setting,
-        check_out:check_out,
+        changepas: changepas,
+        change_password: change_password,
+        cancel_btn: cancel_btn,
+        logout_btn: logout_btn,
+        add_menu: add_menu,
+        show_icon: show_icon,
+        save_menu: save_menu,
+        add_org: add_org,
+        save_btn: save_btn,
+        edit_setting: edit_setting,
+        check_out: check_out,
         //submit_search:submit_search,
+<<<<<<< HEAD
         init_submit_form:init_submit_form,
         btn_search:btn_search,
         setting_add:setting_add,
@@ -531,7 +536,18 @@ var admin_module = (function (){
         setting_edit:setting_edit,
         add_slideshow:add_slideshow,
 
+=======
+        init_submit_form: init_submit_form,
+        btn_search: btn_search,
+        setting_add: setting_add,
+        user_add: user_add,
+        user_edit: user_edit,
+        edit_users: edit_users,
+        setting_edit: setting_edit,
+        add_slideshow: add_slideshow,
+>>>>>>> c88a49d964cd4b616ec9851c7cd2b28bf869ced2
     }
+
 })();
 
 
