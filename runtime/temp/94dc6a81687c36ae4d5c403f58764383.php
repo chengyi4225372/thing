@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"/opt/web/hui-/public/../application/v1/view/systematic/system/addsitesetting.html";i:1571637142;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:78:"/opt/web/hui-/public/../application/v1/view/systematic/system/editsetting.html";i:1571638580;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -60,25 +60,25 @@
                 <div class="form-group">
                     <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>网站名称：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="title" name="title">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title" value="<?php echo $data['title']; ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="icp" class="col-sm-3 control-label">ICP备案号：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="icp" name="icp" value=""/>
+                        <input type="text" class="form-control form-control-sm" id="icp" name="icp" value="<?php echo $data['icp']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="count_code" class="col-sm-3 control-label">统计代码：</label>
+                    <label for="count_code" class="col-sm-3 control-label">地址：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="count_code" class="form-control form-control-sm" name="count_code" value=""/>
+                        <input type="text" id="count_code" class="form-control form-control-sm" name="count_code" value="<?php echo $data['count_code']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="tel" class="col-sm-3 control-label">固定电话：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="tel" class="form-control form-control-sm" name="tel" value=""/>
+                        <input type="text" id="tel" class="form-control form-control-sm" name="tel" value="<?php echo $data['tel']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -86,7 +86,7 @@
                     <div class="col-sm-9">
                         <select id="status" name="status" class="form-control form-control-sm">
                             <?php if(is_array($status) || $status instanceof \think\Collection || $status instanceof \think\Paginator): $i = 0; $__LIST__ = $status;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$status_list): $mod = ($i % 2 );++$i;?>
-                            <option value="<?php echo $key; ?>"><?php echo $status_list; ?></option>
+                            <option value="<?php echo $key; ?>" <?php if($key == $data['status']): ?>selected=selected<?php endif; ?>><?php echo $status_list; ?></option>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </div>
@@ -96,8 +96,8 @@
         </div>
         <div class="td-align dialog-footer">
             <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
-            <input type="hidden" name="is_add" value="1">
-            <button class="btn btn-primary" type="button" onclick="admin_module.setting_add(this)" data-url="<?php echo url('/v1/systematic/system/addsitesetting'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <input type="hidden" name="site_id" id="site_id" value="<?php echo $data['id']; ?>">
+            <button class="btn btn-primary" type="button" onclick="admin_module.setting_edit(this)" data-url="<?php echo url('/v1/systematic/system/editsetting'); ?>"><i class="fa fa-save"></i> 确定提交</button>
         </div>
     </form>
 </div>

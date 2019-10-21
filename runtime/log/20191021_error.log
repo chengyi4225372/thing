@@ -64,6 +64,14 @@
 ---------------------------------------------------------------
 [ 2019-10-21T11:49:11+08:00 ] 172.26.2.48 GET /v1/users/user/index.html
 [ error ] [8]未定义数组索引: status[/opt/web/hui-/application/v1/service/Userservice.php:72]
+<<<<<<< HEAD
+---------------------------------------------------------------
+[ 2019-10-21T15:08:38+08:00 ] 172.26.2.48 GET /v1/systematic/system/slideshow.html
+[ error ] [8]未定义变量: data_list[/opt/web/hui-/runtime/temp/b4089230f3bfb6e6626d70069f6efbba.php:408]
+---------------------------------------------------------------
+[ 2019-10-21T15:09:37+08:00 ] 172.26.2.48 GET /v1/systematic/system/slideshow.html
+[ error ] [8]未定义变量: list[/opt/web/hui-/runtime/temp/b4089230f3bfb6e6626d70069f6efbba.php:417]
+=======
 >>>>>>> d4b9aff90cd54049e37dbb85a32cb887ab9951df
 ---------------------------------------------------------------
 [ 2019-10-21T14:31:38+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
@@ -143,3 +151,4 @@
 ---------------------------------------------------------------
 [ 2019-10-21T15:27:08+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/edit.html
 [ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '000003' for key 'PRIMARY'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:463]
+>>>>>>> da1a0cb86a5780c8d7a72ea64e08b608340ea76b

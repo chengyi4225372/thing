@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"/opt/web/hui-/public/../application/v1/view/systematic/system/addsitesetting.html";i:1571637142;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:79:"/opt/web/hui-/public/../application/v1/view/systematic/system/addslideshow.html";i:1571642312;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -30,6 +30,8 @@
 <link rel="stylesheet" href="/static/assets/components/jstree/themes/default/style.min.css"/>
 <!-- iCheck for checkboxes and radio inputs -->
 <link rel="stylesheet" href="/static/assets/plugins/iCheck/all.css">
+<!--layui-->
+<link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- Font -->
 <link rel="stylesheet" href="/static/assets/dist/css/fontcss.css">
@@ -58,29 +60,35 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="form-group">
-                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>网站名称：</label>
+                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>标题：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="title" name="title">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title" value="">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="icp" class="col-sm-3 control-label">ICP备案号：</label>
+                    <label for="desc" class="col-sm-3 control-label">描述：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="icp" name="icp" value=""/>
+                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value=""/>
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="count_code" class="col-sm-3 control-label">统计代码：</label>
+                    <label for="pic" class="col-sm-3 control-label">图片：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="count_code" class="form-control form-control-sm" name="count_code" value=""/>
+                        <button type="button" class="layui-btn" id="pic">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <img src="" style="width:50px;height:50px;" id="cur_pic">
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="tel" class="col-sm-3 control-label">固定电话：</label>
+                    <label for="url" class="col-sm-3 control-label">URL：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="tel" class="form-control form-control-sm" name="tel" value=""/>
+                        <input type="text" id="url" class="form-control form-control-sm" name="url" value=""/>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <label for="status" class="col-sm-3 control-label">状态：</label>
                     <div class="col-sm-9">
@@ -96,8 +104,8 @@
         </div>
         <div class="td-align dialog-footer">
             <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
-            <input type="hidden" name="is_add" value="1">
-            <button class="btn btn-primary" type="button" onclick="admin_module.setting_add(this)" data-url="<?php echo url('/v1/systematic/system/addsitesetting'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <input type="hidden" name="site_id" id="site_id" value="">
+            <button class="btn btn-primary" type="button" onclick="admin_module.add_slideshow(this)" data-url="<?php echo url('/v1/systematic/system/addslideshow'); ?>"><i class="fa fa-save"></i> 确定提交</button>
         </div>
     </form>
 </div>
