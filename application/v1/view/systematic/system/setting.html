@@ -36,7 +36,7 @@
                         <span class="btn {if $list['status'] == 1}btn-success{else/}btn-danger{/if}">{$status[$list['status']]}</span>
                     </td>
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="{:url()}" data-id="" onclick="admin_module.edit_org(this)">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/systematic/system/editsetting',['id' => $list['id']])}" data-id="" onclick="admin_module.edit_setting(this)">编辑</a>
                     </td>
                 </tr>
                 {/volist}

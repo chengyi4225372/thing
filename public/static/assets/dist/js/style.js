@@ -131,21 +131,7 @@ var admin_module = (function (){
         );
     };
 
-    //编辑成员
-    var edit_org = function edit_org(objthis){
-        var url = $(objthis).attr('data-url');
-        var id = $(objthis).attr('data-id');
-        url = url+'?id='+id;
-        layer.open({
-            type: 2,
-            title: "修改部门",
-            maxmin: false,
-            shadeClose: true, //点击遮罩关闭层
-            scrollbar: false,
-            area: ['70%', '60%'],
-            content: url,
-        });
-    }
+
     //添加用户
     $(document).on('click','#addusers',function (){
         var url = $(this).attr('data-url');
@@ -330,6 +316,74 @@ var admin_module = (function (){
         );
 
     }
+
+
+    //编辑网站设置
+    var edit_setting = function edit_setting(objthis){
+        var url = $(objthis).attr('data-url');
+        layer.open({
+            type: 2,
+            title: "修改网站设置",
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            scrollbar: false,
+            area: ['70%', '60%'],
+            content: url,
+        });
+    };
+    //编辑网站设置提交
+    var  setting_edit = function setting_edit(objthis){
+        var url = $(objthis).attr('data-url');
+        var title = $('#title').val();
+        var icp = $('#icp').val();
+        var count_code = $('#count_code').val();
+        var tel = $('#tel').val();
+        var status = $('#status').val();
+        //网站名称不能为空
+        if(title == undefined || title == 'undefined' || title == ''){
+            $('#title').focus();
+            layer.tips('网站名称不能为空!','#title',{tips:[1,'#c00']});
+        }
+        //icp不能为空
+        if(icp == undefined || icp == 'undefined' || icp == ''){
+            $('#icp').focus();
+            layer.tips('ICP备案号!','#icp',{tips:[1,'#c00']});
+        }
+        //统计代码不能为空
+        if(count_code == undefined || count_code == 'undefined' || count_code == ''){
+            $('#count_code').focus();
+            layer.tips('统计代码不能为空!','#count_code',{tips:[1,'#c00']});
+        }
+
+        //固定电话不能为空
+        if(tel == undefined || tel == 'undefined' || tel == ''){
+            $('#tel').focus();
+            layer.tips('固定电话不能为空!','#tel',{tips:[1,'#c00']});
+        }
+        var id = $('#site_id').val();
+        var obj = new Object();
+        obj.title = title;
+        obj.icp = icp;
+        obj.count_code = count_code;
+        obj.tel = tel;
+        obj.status = status;
+        obj.id = id;
+        $.post(
+            url,
+            obj,
+            function (ret){
+                if(ret.status == true){
+                    layer.msg(ret.msg,{icon:1,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }else{
+                    layer.msg(ret.msg);
+                }
+            }
+        );
+    };
+
     //取消
     var cancel_btn = function  cancel_btn(){
         parent.layer.closeAll();
@@ -377,7 +431,54 @@ var admin_module = (function (){
                 $('#btn_search').click();
             }
         });
-    }
+    };
+
+    //添加轮播图
+    $(document).on('click','#addslideshow',function (){
+        var url = $(this).attr('data-url');
+        layer.open({
+            type: 2,
+            title: "添加轮播图",
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            scrollbar: false,
+            area: ['70%', '60%'],
+            content: url,
+        });
+    });
+
+    //确认添加轮播图
+    var add_slideshow = function add_slideshow(objthis){
+        var url = $(objthis).attr('data-url');
+
+        $.post(
+            url,
+            {},
+            function (ret){
+
+            }
+        );
+    };
+
+    //图片上传
+    $(document).ready(function (){
+        layui.use('upload', function(){
+            var upload = layui.upload;
+
+            //执行实例
+            var uploadInst = upload.render({
+                elem: '#pic' //绑定元素
+                ,url: '/upload/' //上传接口
+                ,done: function(res){
+                    //上传完毕回调
+                }
+                ,error: function(){
+                    //请求异常回调
+                }
+            });
+        });
+    });
+
     return {
         changepas:changepas,
         change_password:change_password,
@@ -388,7 +489,7 @@ var admin_module = (function (){
         save_menu:save_menu,
         add_org:add_org,
         save_btn:save_btn,
-        edit_org:edit_org,
+        edit_setting:edit_setting,
         check_out:check_out,
         //submit_search:submit_search,
         init_submit_form:init_submit_form,
@@ -397,6 +498,8 @@ var admin_module = (function (){
         user_add:user_add,
         user_edit:user_edit,
         edit_users:edit_users,
+        setting_edit:setting_edit,
+        add_slideshow:add_slideshow,
     }
 })();
 

@@ -36,3 +36,9 @@
 ---------------------------------------------------------------
 [ 2019-10-21T11:49:11+08:00 ] 172.26.2.48 GET /v1/users/user/index.html
 [ error ] [8]未定义数组索引: status[/opt/web/hui-/application/v1/service/Userservice.php:72]
+---------------------------------------------------------------
+[ 2019-10-21T15:08:38+08:00 ] 172.26.2.48 GET /v1/systematic/system/slideshow.html
+[ error ] [8]未定义变量: data_list[/opt/web/hui-/runtime/temp/b4089230f3bfb6e6626d70069f6efbba.php:408]
+---------------------------------------------------------------
+[ 2019-10-21T15:09:37+08:00 ] 172.26.2.48 GET /v1/systematic/system/slideshow.html
+[ error ] [8]未定义变量: list[/opt/web/hui-/runtime/temp/b4089230f3bfb6e6626d70069f6efbba.php:417]

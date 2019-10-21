@@ -85,6 +85,61 @@ class system extends AuthController
         if($this->request->isAjax() && $this->request->isPost()){
             return Systems::instance()->addSiteSitting($_POST);
         }
+        $status = Config::get('site.status');
+        $this->assign('status',$status);
+        return $this->fetch();
+    }
+
+    /**
+     * @DESC：修改网站设置
+     * @author: jason
+     * @date: 2019-10-21 01:46:50
+     */
+    public function editsetting()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $return_data = Systems::instance()->editsetting($_POST);
+            return $return_data;
+        }
+        $id = $_GET['id'];
+        $status = Config::get('site.status');
+        $retutn_data = Systems::instance()->getEditsetting($id);
+        $this->assign('data',$retutn_data);
+        $this->assign('status',$status);
+        return $this->fetch();
+    }
+
+    /**
+     * @DESC：首页轮播图设置列表
+     * @author: jason
+     * @date: 2019-10-21 02:33:44
+     */
+    public function slideshow()
+    {
+        $status = Config::get('site.lunbo');
+        $params = $_GET;
+        if(isset($params['status']) === false){
+            $params['status'] = '';
+        }
+
+
+        $this->assign('status',$status);
+        return $this->fetch();
+    }
+
+    /**
+     * @DESC：添加轮播图的弹窗
+     * @return mixed
+     * @author: jason
+     * @date: 2019-10-21 02:55:41
+     */
+    public function addslideshow()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+
+        }
+        $status = Config::get('site.lunbo');
+        $this->assign('status',$status);
         return $this->fetch();
     }
 }

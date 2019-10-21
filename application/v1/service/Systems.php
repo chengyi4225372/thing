@@ -209,6 +209,70 @@ class Systems
     }
 
     /**
+     * @DESC：获取编辑网站设置的信息---单个
+     * @param $id
+     * @return mixed
+     * @author: jason
+     * @date: 2019-10-21 02:09:30
+     */
+    public function getEditsetting($id)
+    {
+        if(empty($id)){
+            die('<div style="color:red;">没有找到要编辑的信息</div>');
+        }
+        $siteInfo = Site::instance()->where(['id' => $id])->find();
+        if(empty($siteInfo)){
+            die('<div style="color:red;">没有找到要编辑的信息</div>');
+        }
+        $info = $siteInfo->toArray();
+        return $info;
+    }
+
+    /**
+     * @DESC：编辑网站设置
+     * @param $params
+     * @return \think\response\Json
+     * @author: jason
+     * @date: 2019-10-21 03:31:01
+     */
+    public function editsetting($params)
+    {
+        $id = $params['id'];
+        //数据校验
+        if(empty($id)){
+            return json(['status' => false,'msg' => '没有找到要编辑的信息']);
+        }
+        if(empty($params['title'])){
+            return json(['status' => false,'msg' => '请填写网站名称']);
+        }
+        if(empty($params['icp'])){
+            return json(['status' => false,'msg' => '请填写ICP备案号']);
+        }
+        if(empty($params['count_code'])){
+            return json(['status' => false,'msg' => '请填写地址']);
+        }
+        if(empty($params['tel'])){
+            return json(['status' => false,'msg' => '请填写电话']);
+        }
+        $save['title'] = $params['title'];
+        $save['icp'] = $params['icp'];
+        $save['count_code'] = $params['count_code'];
+        $save['tel'] = $params['tel'];
+        $save['status'] = $params['status'];
+        Site::instance()->update($save,['id' => $id]);
+        return json(['status' => true,'msg' => '修改成功']);
+    }
+
+    /**
+     * @DESC：上传轮播图
+     * @author: jason
+     * @date: 2019-10-21 03:31:26
+     */
+    public function uploadimg()
+    {
+
+    }
+    /**
      * @DESC：获取网站设置列表
      * @author: jason
      * @date: 2019-10-18 04:50:51
@@ -217,5 +281,6 @@ class Systems
     {
         return collection(Site::instance()->order('id desc')->select())->toArray();
     }
+
 
 }
