@@ -62,7 +62,7 @@
             </li>
 
 
-            <li class="treeview {if $paths == '/v1/systematic/system/menu' || $paths == '/v1/organ/organization/index' || $paths == '/v1/systematic/system/setting'}active{/if}">
+            <li class="treeview {if $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'}active{/if}">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>系统管理</span>
                     <span class="pull-right-container">
@@ -80,7 +80,7 @@
                         <a href="{:url('/v1/systematic/system/setting')}"><i class="fa fa-circle-o"></i>网站设置</a>
                     </li>
 
-                    <li class="{if $paths == '/v1/systematic/system/setting'}active{/if}">
+                    <li class="{if $paths == '/v1/systematic/system/slideshow'}active{/if}">
                         <a href="{:url('/v1/systematic/system/slideshow')}"><i class="fa fa-circle-o"></i>首页轮播图</a>
                     </li>
 

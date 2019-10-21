@@ -8,6 +8,7 @@ namespace app\v1\service;
 use app\common\model\Menu;
 use app\common\model\Admin;
 use app\common\model\Site;
+use app\common\model\Slideshow;
 use think\Session;
 use plugin\Tree;
 use plugin\Crypt;
@@ -264,13 +265,173 @@ class Systems
     }
 
     /**
+     * @DESC：添加轮播图
+     * @author: jason
+     * @date: 2019-10-21 05:17:53
+     */
+    public function addslideshow($params)
+    {
+        if(!isset($params['pic']) || empty($params['pic'])){
+            return json(['status' => false,'msg' => '添加失败']);
+        }
+        $add['pic'] = $params['pic'];
+        $add['title'] = $params['title'] ?? '';
+        $add['desc'] = $params['desc'] ?? '';
+        $add['url'] = $params['url'] ?? '';
+        $add['status'] = $params['status'] ?? 1;
+        $res = Slideshow::insert($add);
+        if($res === false){
+            return json(['status' => false,'msg' => '添加失败']);
+        }
+        return json(['status' => true,'msg' => '添加成功']);
+    }
+
+    //轮播图列表
+    public function getslideshow($params)
+    {
+        $where = [];
+        if(!empty($params['status'])){
+            $where['status'] = $params['status'];
+        }
+        $return = collection(Slideshow::order('id desc')->where($where)->select())->toArray();
+        return $return;
+    }
+
+    /**
+     * @DESC：获取单个轮播图
+     * @author: jason
+     * @date: 2019-10-21 06:16:56
+     */
+    public function getOneSlideshow($id)
+    {
+        if(empty($id)){
+            die('<div style="color:red;">没有找到要修改的数据</div>');
+        }
+        $info = Slideshow::where(['id' => $id])->find();
+        if(empty($info)){
+            die('<div style="color:red;">没有找到要修改的数据</div>');
+        }
+        return $info->toArray();
+    }
+
+    /**
+     * @DESC：确认编辑轮播图
+     * @author: jason
+     * @date: 2019-10-21 06:37:04
+     */
+    public function editslideshow($params)
+    {
+        if(empty($params['id'])){
+            return json(['status' => false,'msg' => '没有找到要修改的数据']);
+        }
+        if(empty($params['pic'])){
+            return json(['status' => false,'msg' => '请选择要上传的图片']);
+        }
+        $save['title'] = $params['title'];
+        $save['pic'] = $params['pic'];
+        $save['desc'] = $params['desc'];
+        $save['url'] = $params['url'];
+        $save['status'] = $params['status'];
+        $res = Slideshow::update($save,['id' => $params['id']]);
+        if($res ===  false){
+            return json(['status' => false,'msg' => '修改失败']);
+        }
+        return json(['status' => true,'msg' => '修改成功']);
+    }
+
+    /**
      * @DESC：上传轮播图
      * @author: jason
      * @date: 2019-10-21 03:31:26
      */
-    public function uploadimg()
+    public function uploadimg($file)
     {
-//        echo dirname();exit;
+        //要有上传的数据
+        if(empty($file)){
+            return json(['status' => false,'msg' => '上传失败']);
+        }
+        $res = $this->upload($file);
+        return json($res);
+    }
+
+    /**
+     * @DESC：图片上传
+     * @author: jason
+     * @date: 2019-10-21 04:14:21
+     */
+    public function upload($file)
+    {
+        $imgDir = dirname(THINK_PATH).'/public/uploads/';
+        $imgSmallDir = $imgDir . 'images/';
+        if (!is_dir($imgDir)) {
+            @mkdir($imgDir);
+        }
+        if (!is_dir($imgSmallDir)) {
+            @mkdir($imgSmallDir);
+        }
+        $name = time().'--'.$file['name'];
+
+        $filename = $file['name'];
+        $error = $file['error'];
+
+        $fileimg = strtolower(substr(strrchr($filename, "."), 1));
+        //文件类型
+        $typeArr = array('jpg', 'gif', 'png', 'jpeg');
+        if(!in_array($fileimg,$typeArr)){
+            $arr = array(
+                'status' => 0,
+                'msg' => "图片类型必须是【'jpg', 'gif', 'png', 'jpeg'】!",
+                'data' => []
+            );
+            return $arr;
+        }
+        $tem_name = $file['tmp_name'];
+        move_uploaded_file($tem_name,$imgSmallDir.$name);
+
+        switch($error){
+            case 0 :
+                $arr = array(
+                    'status' => 1,
+                    'msg' => '文件上传成功!',
+                    'data' => ['src' => '/uploads/images/'.$name]
+                );
+                break;
+            case 1:
+                $arr = array(
+                    'status' => 0,
+                    'msg' => '超过了上传文件大小',
+                    'data' => []
+                );
+                break;
+            case 2:
+                $arr = array(
+                    'status' => 0,
+                    'msg' => '超过了文件的大小MAX_FILE_SIZE选项指定的值',
+                    'data' => []
+                );
+                break;
+            case 3:
+                $arr = array(
+                    'status' => 0,
+                    'msg' => '文件只有部分被上传',
+                    'data' => []
+                );
+                break;
+            case 4:
+                $arr = array(
+                    'status' => 0,
+                    'msg' => '没有文件被上传',
+                    'data' => []
+                );
+                break;
+            default:
+                $arr = array(
+                    'status' => 0,
+                    'msg' => '上传文件大小为0',
+                    'data' => []
+                );
+        }
+        return $arr;
     }
     /**
      * @DESC：获取网站设置列表

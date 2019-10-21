@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:79:"/opt/web/hui-/public/../application/v1/view/systematic/system/addslideshow.html";i:1571649170;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571643758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:80:"/opt/web/hui-/public/../application/v1/view/systematic/system/editslideshow.html";i:1571654143;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571643758;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -60,15 +60,15 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="form-group">
-                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>标题：</label>
+                    <label for="title" class="col-sm-3 control-label">标题：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="title" name="title" value="">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title" value="<?php echo $data['title']; ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="desc" class="col-sm-3 control-label">描述：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value=""/>
+                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value="<?php echo $data['desc']; ?>"/>
                     </div>
                 </div>
 
@@ -78,8 +78,8 @@
                         <button type="button" class="layui-btn" id="pic" data-url="<?php echo url('/v1/systematic/system/uploadimg'); ?>">
                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
-                        <img src="" style="width:50px;height:50px;" id="cur_pic">
-                        <input type="hidden" name="pic" id="pic_curr"/>
+                        <img src="<?php echo $data['pic']; ?>" style="width:50px;height:50px;" id="cur_pic">
+                        <input type="hidden" name="pic" id="pic_curr" value="<?php echo $data['pic']; ?>"/>
                     </div>
                     <script>
 
@@ -89,7 +89,7 @@
                 <div class="form-group">
                     <label for="url" class="col-sm-3 control-label">URL：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="url" class="form-control form-control-sm" name="url" value=""/>
+                        <input type="text" id="url" class="form-control form-control-sm" name="url" value="<?php echo $data['url']; ?>"/>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
                     <div class="col-sm-9">
                         <select id="status" name="status" class="form-control form-control-sm">
                             <?php if(is_array($status) || $status instanceof \think\Collection || $status instanceof \think\Paginator): $i = 0; $__LIST__ = $status;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$status_list): $mod = ($i % 2 );++$i;?>
-                            <option value="<?php echo $key; ?>"><?php echo $status_list; ?></option>
+                            <option value="<?php echo $key; ?>" <?php if($key == $data['status']): endif; ?>><?php echo $status_list; ?></option>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </div>
@@ -108,8 +108,8 @@
         </div>
         <div class="td-align dialog-footer">
             <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
-            <input type="hidden" name="site_id" id="site_id" value="">
-            <button class="btn btn-primary" type="button" onclick="admin_module.add_slideshow(this)" data-url="<?php echo url('/v1/systematic/system/addslideshow'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <input type="hidden" name="site_id" id="site_id" value="<?php echo $data['id']; ?>">
+            <button class="btn btn-primary" type="button" onclick="admin_module.slideshow_edit(this)" data-url="<?php echo url('/v1/systematic/system/editslideshow'); ?>"><i class="fa fa-save"></i> 确定提交</button>
         </div>
     </form>
 </div>

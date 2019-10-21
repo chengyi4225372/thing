@@ -153,6 +153,40 @@
 [ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '000003' for key 'PRIMARY'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:463]
 >>>>>>> da1a0cb86a5780c8d7a72ea64e08b608340ea76b
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-10-21T16:00:07+08:00 ] 172.26.2.48 POST /v1/systematic/system/uploadimg
+[ error ] [2]dirname() expects at least 1 parameter, 0 given[/opt/web/hui-/application/v1/controller/systematic/System.php:154]
+---------------------------------------------------------------
+[ 2019-10-21T16:00:41+08:00 ] 172.26.2.48 POST /v1/systematic/system/uploadimg
+[ error ] [2]dirname() expects at least 1 parameter, 0 given[/opt/web/hui-/application/v1/controller/systematic/System.php:154]
+---------------------------------------------------------------
+[ 2019-10-21T16:25:06+08:00 ] 172.26.2.48 POST /v1/systematic/system/uploadimg
+[ error ] [8]未定义数组索引: name[/opt/web/hui-/application/v1/controller/systematic/System.php:174]
+---------------------------------------------------------------
+[ 2019-10-21T16:25:20+08:00 ] 172.26.2.48 POST /v1/systematic/system/uploadimg
+[ error ] [8]未定义数组索引: name[/opt/web/hui-/application/v1/controller/systematic/System.php:174]
+---------------------------------------------------------------
+[ 2019-10-21T16:25:39+08:00 ] 172.26.2.48 POST /v1/systematic/system/uploadimg
+[ error ] [8]未定义变量: filename[/opt/web/hui-/application/v1/controller/systematic/System.php:175]
+---------------------------------------------------------------
+[ 2019-10-21T17:40:54+08:00 ] 172.26.2.48 POST /v1/systematic/system/addslideshow.html
+[ error ] [10501]SQLSTATE[HY000]: General error: 1364 Field 'id' doesn't have a default value[/opt/web/hui-/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-10-21T17:58:57+08:00 ] 172.26.2.48 GET /v1/systematic/system/slideshow.html
+[ error ] [8]未定义变量: data_list[/opt/web/hui-/runtime/temp/b4089230f3bfb6e6626d70069f6efbba.php:450]
+---------------------------------------------------------------
+[ 2019-10-21T18:00:13+08:00 ] 172.26.2.48 GET /v1/systematic/system/slideshow.html
+[ error ] [8]未定义变量: list[/opt/web/hui-/runtime/temp/b4089230f3bfb6e6626d70069f6efbba.php:450]
+---------------------------------------------------------------
+[ 2019-10-21T18:05:13+08:00 ] 172.26.2.48 GET /v1/systematic/system/slideshow.html
+[ error ] [0]语法解析错误: syntax error, unexpected ')'[/opt/web/hui-/runtime/temp/b4089230f3bfb6e6626d70069f6efbba.php:457]
+---------------------------------------------------------------
+[ 2019-10-21T18:08:31+08:00 ] 172.26.2.48 GET /v1/users/user/edituser.html
+[ error ] [8]未定义数组索引: id[/opt/web/hui-/application/v1/controller/users/User.php:61]
+---------------------------------------------------------------
+[ 2019-10-21T18:19:12+08:00 ] 172.26.2.48 GET /v1/systematic/system/editslideshow.html?id=1
+[ error ] [8192]Non-static method app\v1\service\Systems::getOneSlideshow() should not be called statically[/opt/web/hui-/application/v1/controller/systematic/System.php:159]
+=======
 [ 2019-10-21T15:56:28+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
 [ error ] [8]未定义变量: params[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:395]
 ---------------------------------------------------------------
@@ -329,6 +363,7 @@
 ---------------------------------------------------------------
 [ 2019-10-21T18:42:26+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html?title=%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE22334
 [ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+<<<<<<< HEAD
 ---------------------------------------------------------------
 [ 2019-10-21T19:22:39+08:00 ] 127.0.0.1 GET /v1/partners/partner/index.html
 [ error ] [0]类的属性不存在:app\common\model\Protuct->iurls[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Model.php:624]
@@ -395,3 +430,6 @@
 ---------------------------------------------------------------
 [ 2019-10-21T20:13:02+08:00 ] 127.0.0.1 POST /v1/partners/partner/edit.html
 [ error ] [0]致命错误: Call to undefined method app\v1\service\Protuctservice::updateId()[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\partners\Partner.php:66]
+=======
+>>>>>>> 8d895988bd89bc748de29bf672bed159a25cef34
+>>>>>>> 4793ee2e0817dfd3d7f0f316cf5604a920439291

@@ -121,8 +121,9 @@ class System extends AuthController
         if(isset($params['status']) === false){
             $params['status'] = '';
         }
-
-
+        $reutrn_data = Systems::instance()->getslideshow($params);
+        $this->assign('data',$reutrn_data);
+        $this->assign('params',$params);
         $this->assign('status',$status);
         return $this->fetch();
     }
@@ -136,10 +137,41 @@ class System extends AuthController
     public function addslideshow()
     {
         if($this->request->isAjax() && $this->request->isPost()){
-
+            $return_data = Systems::instance()->addslideshow($_POST);
+            return $return_data;
         }
         $status = Config::get('site.lunbo');
         $this->assign('status',$status);
         return $this->fetch();
+    }
+
+    /**
+     * @DESC：编辑轮播图的弹窗
+     * @author: jason
+     * @date: 2019-10-21 06:15:03
+     */
+    public function editslideshow()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $data = Systems::instance()->editslideshow($_POST);
+            return $data;
+        }
+        $id = $_GET['id'];
+        $return_data = Systems::instance()->getOneSlideshow($id);
+        $status = Config::get('site.lunbo');
+        $this->assign('status',$status);
+        $this->assign('data',$return_data);
+        return $this->fetch();
+    }
+
+    /**
+     * @DESC：上传图片
+     * @author: jason
+     * @date: 2019-10-21 04:29:36
+     */
+    public function uploadimg()
+    {
+        $return_data = Systems::instance()->uploadimg($_FILES['file']);
+        return $return_data;
     }
 }
