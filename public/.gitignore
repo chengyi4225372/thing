@@ -3,10 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
-/public/
-/src/img/
 /.idea
-/bootstrap/
 # testing
 /coverage
 
