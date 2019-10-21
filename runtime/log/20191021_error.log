@@ -153,6 +153,7 @@
 [ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '000003' for key 'PRIMARY'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:463]
 >>>>>>> da1a0cb86a5780c8d7a72ea64e08b608340ea76b
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-10-21T16:00:07+08:00 ] 172.26.2.48 POST /v1/systematic/system/uploadimg
 [ error ] [2]dirname() expects at least 1 parameter, 0 given[/opt/web/hui-/application/v1/controller/systematic/System.php:154]
 ---------------------------------------------------------------
@@ -185,3 +186,181 @@
 ---------------------------------------------------------------
 [ 2019-10-21T18:19:12+08:00 ] 172.26.2.48 GET /v1/systematic/system/editslideshow.html?id=1
 [ error ] [8192]Non-static method app\v1\service\Systems::getOneSlideshow() should not be called statically[/opt/web/hui-/application/v1/controller/systematic/System.php:159]
+=======
+[ 2019-10-21T15:56:28+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义变量: params[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:395]
+---------------------------------------------------------------
+[ 2019-10-21T15:56:29+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义变量: params[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:395]
+---------------------------------------------------------------
+[ 2019-10-21T16:06:05+08:00 ] 127.0.0.1 GET /v1/info/infos/infosadd.html
+[ error ] [0]模板文件不存在:C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\infos_add.html[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2019-10-21T16:06:47+08:00 ] 127.0.0.1 GET /v1/info/infos/infosadd.html
+[ error ] [0]模板文件不存在:C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\infos_add.html[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2019-10-21T16:07:02+08:00 ] 127.0.0.1 GET /v1/info/infos/infosadd.html
+[ error ] [0]模板文件不存在:C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\infos_add.html[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2019-10-21T16:40:29+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:40:30+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:04+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:05+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:06+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:06+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:06+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:06+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:25+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:26+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:26+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:26+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:26+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:27+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:27+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:28+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:29+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:41:29+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [0]致命错误: Class 'app\v1\service\Infosservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:15]
+---------------------------------------------------------------
+[ 2019-10-21T16:43:52+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:43:52+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:44:23+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:44:26+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:44:27+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:44:28+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:44:28+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T16:44:29+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T17:59:14+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [2]date() expects parameter 2 to be integer, string given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T17:59:16+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [2]date() expects parameter 2 to be integer, string given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T17:59:38+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [2]date() expects parameter 2 to be integer, string given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T17:59:39+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [2]date() expects parameter 2 to be integer, string given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T17:59:40+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [2]date() expects parameter 2 to be integer, string given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:12+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:13+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:14+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:14+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:14+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:21+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:23+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:24+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:24+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:25+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:01:25+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\3db5fcd2d6428868286a07be19428d82.php:434]
+---------------------------------------------------------------
+[ 2019-10-21T18:08:52+08:00 ] 127.0.0.1 GET /v1/info/infos/infosedit.html?id=3
+[ error ] [0]模板文件不存在:C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\infos_edit.html[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2019-10-21T18:15:13+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [0]致命错误: Class 'app\common\model\info' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\info\Infos.php:67]
+---------------------------------------------------------------
+[ 2019-10-21T18:15:48+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [2]array_udiff_assoc(): Argument #2 is not an array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Model.php:1258]
+---------------------------------------------------------------
+[ 2019-10-21T18:18:04+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [0]method not exist:think\db\Query->save[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2019-10-21T18:18:46+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [2]array_udiff_assoc(): Argument #2 is not an array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Model.php:1258]
+---------------------------------------------------------------
+[ 2019-10-21T18:21:27+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Query.php:2560]
+---------------------------------------------------------------
+[ 2019-10-21T18:25:12+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [2]array_udiff_assoc(): Argument #2 is not an array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Model.php:1258]
+---------------------------------------------------------------
+[ 2019-10-21T18:26:48+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T18:33:13+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T18:33:44+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T18:35:35+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-21T18:42:26+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html?title=%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE22334
+[ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+>>>>>>> 8d895988bd89bc748de29bf672bed159a25cef34

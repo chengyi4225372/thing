@@ -130,8 +130,7 @@ var admin_module = (function (){
             },'json'
         );
     };
-
-
+    
     //编辑成员
     var edit_org = function edit_org(objthis){
         var url = $(objthis).attr('data-url');
@@ -267,6 +266,9 @@ var admin_module = (function (){
             }
         );
     };
+
+    //添加网站设置
+
     $(document).on('click','#addsitesetting',function(){
         var url = $(this).attr('data-url');
         layer.open({
@@ -594,6 +596,7 @@ var admin_module = (function (){
         add_slideshow: add_slideshow,
         edit_slideshow:edit_slideshow,
         slideshow_edit:slideshow_edit,
+
     }
 
 })();

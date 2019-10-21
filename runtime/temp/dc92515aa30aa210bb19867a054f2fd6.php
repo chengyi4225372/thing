@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\index.html";i:1571642051;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571640362;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\index.html";i:1571642051;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -30,6 +30,8 @@
 <link rel="stylesheet" href="/static/assets/components/jstree/themes/default/style.min.css"/>
 <!-- iCheck for checkboxes and radio inputs -->
 <link rel="stylesheet" href="/static/assets/plugins/iCheck/all.css">
+<!--layui-->
+<link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- Font -->
 <link rel="stylesheet" href="/static/assets/dist/css/fontcss.css">
@@ -342,11 +344,7 @@
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li class="">
-                        <a href="<?php echo url('/v1/info/info/cates'); ?>"><i class="fa fa-circle-o"></i>信息分类列表</a>
-                    </li>
-
-                    <li class="">
-                        <a href="<?php echo url('/v1/info/info/index'); ?>"><i class="fa fa-circle-o"></i>信息详情列表</a>
+                        <a href="<?php echo url('/v1/info/infos/index'); ?>"><i class="fa fa-circle-o"></i>信息详情列表</a>
                     </li>
                 </ul>
             </li>
@@ -369,6 +367,11 @@
                     <li class="<?php if($paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/systematic/system/setting'); ?>"><i class="fa fa-circle-o"></i>网站设置</a>
                     </li>
+
+                    <li class="<?php if($paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
+                        <a href="<?php echo url('/v1/systematic/system/slideshow'); ?>"><i class="fa fa-circle-o"></i>首页轮播图</a>
+                    </li>
+
                 </ul>
             </li>
 
