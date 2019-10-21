@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\index\index.html";i:1571369306;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571623302;s:92:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\map.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\systematic\system\menu.html";i:1571369306;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571623302;s:92:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\map.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571369306;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -346,7 +346,7 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
-    <section class="content-header">
+<section class="content-header">
     <h4>777</h4>
     <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> 首页</a></li>
@@ -354,69 +354,53 @@
         <li class="active">hehehehe</li>
     </ol>
 </section>
-    <!-- Main content -->
-    <section class="content">
-        <div class="box box-default color-palette-box" style="min-height:700px;">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">CPU Traffic</span>
-                            <span class="info-box-number">90<small>%</small></span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">Likes</span>
-                            <span class="info-box-number">41,410</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-
-                <!-- fix for small devices only -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">Sales</span>
-                            <span class="info-box-number">760</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">New Members</span>
-                            <span class="info-box-number">2,000</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-            </div>
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog"
+                    onclick="admin_module.add_menu(this)"
+                    data-url="<?php echo url('v1/system/addmenu'); ?>"
+                    title="<?php echo __('添加菜单'); ?>"><i class="fa fa-plus-circle"></i> <?php echo __('添加菜单'); ?>
+            </button>
         </div>
-    </section>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <th class="text-center">ID</th>
+                <th class="text-center">图标</th>
+                <th class="text-center">标题</th>
+                <th class="text-center">请求地址</th>
+                <th class="text-center">权重</th>
+                <th class="text-center">状态</th>
+                <th class="text-center">类型</th>
+                <th class="text-center">创建时间</th>
+                <th class="text-center">备注</th>
+                <th class="text-center">操作</th>
+                </thead>
+                <tbody>
+                <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): if( count($data)==0 ) : echo "" ;else: foreach($data as $key=>$vo): ?>
+                <tr>
+                    <td class="text-center"><?php echo $vo['id']; ?></td>
+                    <td class="text-center"><i class="<?php echo $vo['icon']; ?>"></i></td>
+                    <td class="text-center"><?php echo $vo['title']; ?></td>
+                    <td class="text-center"><?php echo $vo['url']; ?></td>
+                    <td class="text-center"><?php echo $vo['weigh']; ?></td>
+                    <td class="text-center"><?php echo $vo['status']; ?></td>
+                    <td class="text-center"><?php echo $vo['type']; ?></td>
+                    <td class="text-center"><?php echo date("Y-m-d H:i:s",$vo['createtime']); ?></td>
+                    <td class="text-center"><?php echo $vo['remark']; ?></td>
+                    <td class="text-center">编辑</td>
+                </tr>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+                </tbody>
+            </table>
+            <div class="pages"><?php echo isset($page)?$page: ''; ?></div>
+        </div>
+    </div>
+
+</section>
 
     </div>
 

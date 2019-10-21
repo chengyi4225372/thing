@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\index\index.html";i:1571369306;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571623302;s:92:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\map.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:113:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protuct\index.html";i:1571630071;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571635893;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -304,19 +304,53 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
-            <li class="treeview">
+            <li class="treeview <?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
+
                 <a href="#">
                     <i class="glyphicon glyphicon-user"></i> <span>用户管理</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
-                <ul class="treeview-menu" style="display: none;">
-                    <li class="">
+                <ul class="treeview-menu">
+                    <li class="<?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/users/user/index'); ?>"><i class="fa fa-circle-o"></i>用户列表</a>
                     </li>
                 </ul>
             </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="glyphicon glyphicon-user"></i> <span>慧享产品</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                    <li class="">
+                        <a href="<?php echo url('/v1/protuct/protuct/index'); ?>"><i class="fa fa-circle-o"></i>产品列表</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="glyphicon glyphicon-user"></i> <span>招标信息</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                    <li class="">
+                        <a href="<?php echo url('/v1/info/info/cates'); ?>"><i class="fa fa-circle-o"></i>信息分类列表</a>
+                    </li>
+
+                    <li class="">
+                        <a href="<?php echo url('/v1/info/info/index'); ?>"><i class="fa fa-circle-o"></i>信息详情列表</a>
+                    </li>
+                </ul>
+            </li>
+
 
             <li class="treeview <?php if($paths == '/v1/systematic/system/menu' || $paths == '/v1/organ/organization/index' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                 <a href="#">
@@ -346,77 +380,78 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
-    <section class="content-header">
-    <h4>777</h4>
-    <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-home"></i> 首页</a></li>
-        <li>hahaha</li>
-        <li class="active">hehehehe</li>
-    </ol>
-</section>
-    <!-- Main content -->
-    <section class="content">
-        <div class="box box-default color-palette-box" style="min-height:700px;">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">CPU Traffic</span>
-                            <span class="info-box-number">90<small>%</small></span>
+<div class="content" style="margin-bottom:0px;min-height:0px;">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline"  id="form">
+                <div class="panel panel-default panel-btn">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <input type="text"  class="form-control" name="username" value="" placeholder="多姓名搜索(空格逗号隔开)">
                         </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
 
-                        <div class="info-box-content">
-                            <span class="info-box-text">Likes</span>
-                            <span class="info-box-number">41,410</span>
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btn_search" type="Submit"  data-url="<?php echo url('/v1/users/user/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
-                        <!-- /.info-box-content -->
+
                     </div>
-                    <!-- /.info-box -->
                 </div>
-                <!-- /.col -->
-
-                <!-- fix for small devices only -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">Sales</span>
-                            <span class="info-box-number">760</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">New Members</span>
-                            <span class="info-box-number">2,000</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-            </div>
+                <br>
+            </form>
         </div>
-    </section>
+    </div>
+</div>
+
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog" id="addprotuct"
+                    data-url="<?php echo url('/v1/protuct/protuct/add'); ?>">
+                <i class="fa fa-plus-circle">添加</i></button>
+        </div>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <th class="td-align td-width-40px">
+                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span>ID</span>
+                </th>
+                <th class="text-center">产品名称</th>
+                <th class="text-center">产品名称</th>
+                <th class="text-center">产品图</th>
+                <th class="text-center">产品方案</th>
+                <th class="text-center">产品描述</th>
+                <th class="text-center">状态</th>
+                <th class="text-center">操作</th>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td class="td-align td-padding">
+                        <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
+                    </td>
+                    <td class="text-center">111</td>
+                    <td class="text-center">2222</td>
+                    <td class="text-center">33333</td>
+                    <td class="text-center">4444</td>
+                    <td class="text-center">55555</td>
+                    <td class="text-center">
+                        <span class="btn btn-success">正常</span>
+                        <span class="btn btn-danger">禁用</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url(); ?>" data-id="" onclick="admin_module.edit_user(this)">编辑</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div class="pages"></div>
+        </div>
+    </div>
+
+</section>
 
     </div>
 
@@ -461,6 +496,8 @@
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>
 <script src="/static/assets/dist/js/style.js"></script>
+
+<script src="/static/assets/dist/js/protuct.js"></script>
 <script>
     admin_module.changepas();
 </script>
