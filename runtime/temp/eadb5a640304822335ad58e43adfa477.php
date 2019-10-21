@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\index.html";i:1571652570;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571656822;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571647844;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\partners\partner\index.html";i:1571658418;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571656822;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571657428;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -398,26 +398,7 @@
     <div class="content-wrapper">
         
 <div class="content" style="margin-bottom:0px;min-height:0px;">
-    <div class="row">
-        <div class="col-md-12">
-            <form class="form-inline"  id="form">
-
-                <div class="panel panel-default panel-btn">
-                    <div class="panel-heading">
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="title"  value="<?php echo \think\Request::instance()->get('title'); ?>" placeholder="请输入标题名称搜索...">
-                        </div>
-
-                        <div class="form-group">
-                            <button class="btn btn-info" id="btn_search" type="button"  data-url="<?php echo url('/v1/info/infos/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
-                        </div>
-                    </div>
-                </div>
-                <br>
-            </form>
-        </div>
-    </div>
+    <div class="row"></div>
 </div>
 
 <!-- Main content -->
@@ -425,37 +406,34 @@
     <div class="box box-default color-palette-box" style="min-height:700px;">
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
-            <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="infosadd" data-url="<?php echo url('/v1/info/infos/infosadd'); ?>">
+            <button type="button" class="btn bg-purple btn-sm btn-dialog" id="addpartner"
+                    data-url="<?php echo url('/v1/partners/partner/add'); ?>">
                 <i class="fa fa-plus-circle">添加</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="text-center">所属分类</th>
-                <th class="text-center">新闻标题</th>
-                <th class="text-center">创建时间</th>
+
+                <th class="text-center">产品图</th>
+                <th class="text-center">链接地址</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-
-            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
+
+                    <td class="text-center"><?php echo $vo['iurl']; ?></td>
                     <td class="text-center">
-                     <?php if($vo['pid'] == '1'): ?>
-                       招标信息
-                      <?php else: ?>
-                        招商信息
-                      <?php endif; ?>
+                        <a href="<?php echo $vo['imgs']; ?>">
+                            <img src="<?php echo $vo['imgs']; ?>" style="width: 90px;height: 90px;">
+                        </a>
                     </td>
-                    <td class="text-center"><?php echo $vo['title']; ?></td>
-                    <td class="text-center"><?php echo $vo['create_time']; ?></td>
 
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="<?php echo url('/v1/info/infos/infosEdit',['id'=>$vo['id']]); ?>">编辑</a>
+                        <a  class="btn btn-info edit-partner" data-url="<?php echo url('/v1/partners/partner/edit',['id'=>$vo['id']]); ?>">编辑</a>
                     </td>
                 </tr>
-           <?php endforeach; endif; else: echo "" ;endif; ?>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>
             </table>
             <div class="pages"></div>
@@ -513,6 +491,7 @@
 
 <script src="/static/assets/dist/js/protuct.js"></script>
 <script src="/static/assets/dist/js/infos.js"></script>
+<script src="/static/assets/dist/js/partners.js"></script>
 <script>
     admin_module.changepas();
 </script>
