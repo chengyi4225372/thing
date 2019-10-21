@@ -1,3 +1,17 @@
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-10-21T09:24:38+08:00 ] 172.26.2.48 GET /v1/users/user/index.html?status=&username=
 [ error ] [8192]Non-static method app\common\model\Admin::instance() should not be called statically[/opt/web/hui-/application/v1/service/Userservice.php:78]
+=======
+[ 2019-10-21T09:19:27+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:65]
+---------------------------------------------------------------
+[ 2019-10-21T09:20:40+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:65]
+---------------------------------------------------------------
+[ 2019-10-21T09:22:53+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-21T09:23:29+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+>>>>>>> 257cf5b694d4fd7d395041f00b4bb709353921d4

@@ -9,7 +9,7 @@ namespace app\v1\controller;
 use app\common\controller\AuthController;
 use app\v1\service\Systems;
 use think\Config;
-class system extends AuthController
+class System extends AuthController
 {
     /**
      * @DESC：菜单管理列表
