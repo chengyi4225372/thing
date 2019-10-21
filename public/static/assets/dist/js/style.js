@@ -130,7 +130,7 @@ var admin_module = (function (){
             },'json'
         );
     };
-    
+
     //编辑成员
     var edit_org = function edit_org(objthis){
         var url = $(objthis).attr('data-url');

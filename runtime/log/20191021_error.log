@@ -364,3 +364,6 @@
 [ 2019-10-21T18:42:26+08:00 ] 127.0.0.1 GET /v1/info/infos/index.html?title=%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE22334
 [ error ] [8]未定义数组下标: 0[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
 >>>>>>> 8d895988bd89bc748de29bf672bed159a25cef34
+---------------------------------------------------------------
+[ 2019-10-21T20:00:40+08:00 ] 172.26.2.48 GET /v1/systematic/system/setting.html
+[ error ] [0]语法解析错误: syntax error, unexpected '$paths' (T_VARIABLE)[/opt/web/hui-/runtime/temp/384775996aa674e754a899f3dd32b86c.php:378]
