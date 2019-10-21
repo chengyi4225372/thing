@@ -28,43 +28,51 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog" id="addprotuct"
-                    data-url="{:url('/v1/protuct/protuct/add')}">
+                    data-url="{:url('/v1/protuct/protucts/add')}">
                 <i class="fa fa-plus-circle">添加</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                 <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span>ID</span>
+                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span></span>
                 </th>
-                <th class="text-center">产品名称</th>
                 <th class="text-center">产品名称</th>
                 <th class="text-center">产品图</th>
                 <th class="text-center">产品方案</th>
                 <th class="text-center">产品描述</th>
+                <th class="text-center">链接地址</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-
+               {volist name='list' id='vo'}
                 <tr>
                     <td class="td-align td-padding">
-                        <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
+                        <input type="checkbox" name="box_checked" data-id="{$vo.id}" class="data-check_box">
                     </td>
-                    <td class="text-center">111</td>
-                    <td class="text-center">2222</td>
-                    <td class="text-center">33333</td>
-                    <td class="text-center">4444</td>
-                    <td class="text-center">55555</td>
+                    <td class="text-center">{$vo.names}</td>
                     <td class="text-center">
+                        <a href="{$vo.imgs}">
+                        <img src="{$vo.imgs}" style="width: 90px;height: 90px;">
+                        </a>
+                    </td>
+                    <td class="text-center">{$vo.idea|default=''}</td>
+                    <td class="text-center">{$vo.desc|default=''}</td>
+                    <td class="text-center">{$vo.purl|default=''}</td>
+                    <td class="text-center">
+                        {if condition="$vo.status eq 1"}
                         <span class="btn btn-success">正常</span>
+                        {else /}
                         <span class="btn btn-danger">禁用</span>
+                        {/if}
                     </td>
+
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="{:url()}" data-id="" onclick="admin_module.edit_user(this)">编辑</a>
+                        <a  class="btn btn-info edit-protuct" data-url="{:url('/v1/protuct/protucts/edit',['id'=>$vo.id])}">编辑</a>
                     </td>
                 </tr>
-
+                {/volist}
                 </tbody>
             </table>
             <div class="pages"></div>

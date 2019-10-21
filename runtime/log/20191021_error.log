@@ -65,3 +65,81 @@
 [ 2019-10-21T11:49:11+08:00 ] 172.26.2.48 GET /v1/users/user/index.html
 [ error ] [8]未定义数组索引: status[/opt/web/hui-/application/v1/service/Userservice.php:72]
 >>>>>>> d4b9aff90cd54049e37dbb85a32cb887ab9951df
+---------------------------------------------------------------
+[ 2019-10-21T14:31:38+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [64]Cannot declare class app\v1\controller\protuct\Protuct because the name is already in use[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\protuct\Protuct.php:6]
+---------------------------------------------------------------
+[ 2019-10-21T14:36:31+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [0]语法解析错误: syntax error, unexpected '}'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\protuct\Protuct.php:31]
+---------------------------------------------------------------
+[ 2019-10-21T14:42:10+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [64]Cannot declare class app\v1\controller\protuct\Protuct because the name is already in use[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\protuct\Protuct.php:7]
+---------------------------------------------------------------
+[ 2019-10-21T14:43:07+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [64]Cannot declare class app\v1\controller\protuct\protuct because the name is already in use[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\protuct\Protuct.php:7]
+---------------------------------------------------------------
+[ 2019-10-21T14:43:08+08:00 ] 127.0.0.1 GET /v1/protuct/protuct/index.html
+[ error ] [64]Cannot declare class app\v1\controller\protuct\protuct because the name is already in use[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\protuct\Protuct.php:7]
+---------------------------------------------------------------
+[ 2019-10-21T14:44:23+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index.html
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'huiqiyun.protuct' doesn't exist[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-10-21T14:44:45+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index.html
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'huiqiyun.protucts' doesn't exist[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-10-21T14:44:46+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index.html
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'huiqiyun.protucts' doesn't exist[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-10-21T14:44:51+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index.html
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'del' in 'where clause'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-10-21T14:44:52+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index.html
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'del' in 'where clause'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-10-21T14:45:19+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index.html
+[ error ] [0]模板文件不存在:C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\index.html[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2019-10-21T14:45:21+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index.html
+[ error ] [0]模板文件不存在:C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\index.html[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2019-10-21T14:51:45+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/add.html
+[ error ] [0]致命错误: Call to undefined method app\v1\service\Protuctservice::save()[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Protuctservice.php:45]
+---------------------------------------------------------------
+[ 2019-10-21T14:52:16+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/add.html
+[ error ] [0]数据表字段不存在:[/v1/protuct/protucts/add_html][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-10-21T14:55:53+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/add.html
+[ error ] [0]数据表字段不存在:[/v1/protuct/protucts/add_html][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-10-21T14:57:33+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/add.html
+[ error ] [0]数据表字段不存在:[/v1/protuct/protucts/add_html][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-10-21T14:57:50+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/add.html
+[ error ] [0]数据表字段不存在:[/v1/protuct/protucts/add_html][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-10-21T15:00:42+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index
+[ error ] [8]未定义变量: vo[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\dc92515aa30aa210bb19867a054f2fd6.php:431]
+---------------------------------------------------------------
+[ 2019-10-21T15:02:13+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index
+[ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\dc92515aa30aa210bb19867a054f2fd6.php:444]
+---------------------------------------------------------------
+[ 2019-10-21T15:02:19+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index
+[ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\dc92515aa30aa210bb19867a054f2fd6.php:444]
+---------------------------------------------------------------
+[ 2019-10-21T15:02:21+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index
+[ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\dc92515aa30aa210bb19867a054f2fd6.php:444]
+---------------------------------------------------------------
+[ 2019-10-21T15:02:22+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index
+[ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\dc92515aa30aa210bb19867a054f2fd6.php:444]
+---------------------------------------------------------------
+[ 2019-10-21T15:02:22+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index
+[ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\dc92515aa30aa210bb19867a054f2fd6.php:444]
+---------------------------------------------------------------
+[ 2019-10-21T15:13:38+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index
+[ error ] [0]语法解析错误: syntax error, unexpected '/'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\dc92515aa30aa210bb19867a054f2fd6.php:452]
+---------------------------------------------------------------
+[ 2019-10-21T15:21:22+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/edit.html?id=3
+[ error ] [0]致命错误: Call to undefined method app\v1\service\Protuctservice::where()[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\protuct\Protucts.php:51]
+---------------------------------------------------------------
+[ 2019-10-21T15:27:08+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/edit.html
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '000003' for key 'PRIMARY'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:463]

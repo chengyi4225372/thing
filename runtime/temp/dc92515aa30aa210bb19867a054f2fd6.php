@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:113:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protuct\index.html";i:1571630071;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571635893;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\index.html";i:1571642051;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571640362;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -328,7 +328,7 @@
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li class="">
-                        <a href="<?php echo url('/v1/protuct/protuct/index'); ?>"><i class="fa fa-circle-o"></i>产品列表</a>
+                        <a href="<?php echo url('/v1/protuct/protucts/index'); ?>"><i class="fa fa-circle-o"></i>产品列表</a>
                     </li>
                 </ul>
             </li>
@@ -408,43 +408,51 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog" id="addprotuct"
-                    data-url="<?php echo url('/v1/protuct/protuct/add'); ?>">
+                    data-url="<?php echo url('/v1/protuct/protucts/add'); ?>">
                 <i class="fa fa-plus-circle">添加</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                 <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span>ID</span>
+                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span></span>
                 </th>
-                <th class="text-center">产品名称</th>
                 <th class="text-center">产品名称</th>
                 <th class="text-center">产品图</th>
                 <th class="text-center">产品方案</th>
                 <th class="text-center">产品描述</th>
+                <th class="text-center">链接地址</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-
+               <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
                     <td class="td-align td-padding">
-                        <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
+                        <input type="checkbox" name="box_checked" data-id="<?php echo $vo['id']; ?>" class="data-check_box">
                     </td>
-                    <td class="text-center">111</td>
-                    <td class="text-center">2222</td>
-                    <td class="text-center">33333</td>
-                    <td class="text-center">4444</td>
-                    <td class="text-center">55555</td>
+                    <td class="text-center"><?php echo $vo['names']; ?></td>
                     <td class="text-center">
+                        <a href="<?php echo $vo['imgs']; ?>">
+                        <img src="<?php echo $vo['imgs']; ?>" style="width: 90px;height: 90px;">
+                        </a>
+                    </td>
+                    <td class="text-center"><?php echo (isset($vo['idea']) && ($vo['idea'] !== '')?$vo['idea']:''); ?></td>
+                    <td class="text-center"><?php echo (isset($vo['desc']) && ($vo['desc'] !== '')?$vo['desc']:''); ?></td>
+                    <td class="text-center"><?php echo (isset($vo['purl']) && ($vo['purl'] !== '')?$vo['purl']:''); ?></td>
+                    <td class="text-center">
+                        <?php if($vo['status'] == 1): ?>
                         <span class="btn btn-success">正常</span>
+                        <?php else: ?>
                         <span class="btn btn-danger">禁用</span>
+                        <?php endif; ?>
                     </td>
+
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url(); ?>" data-id="" onclick="admin_module.edit_user(this)">编辑</a>
+                        <a  class="btn btn-info edit-protuct" data-url="<?php echo url('/v1/protuct/protucts/edit',['id'=>$vo['id']]); ?>">编辑</a>
                     </td>
                 </tr>
-
+                <?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>
             </table>
             <div class="pages"></div>

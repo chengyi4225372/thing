@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:111:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protuct\add.html";i:1571639193;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\add.html";i:1571641979;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -61,7 +61,7 @@
                 <div class="form-group">
                     <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>产品图片：</label>
                     <div class="col-sm-9">
-                        <input type="file"  onchange="upload_file()"  class="form-control form-control-sm" id="file">
+                        <input type="file"  onchange="upload_file()" style="display:none;" class="form-control form-control-sm" id="file">
                         <img id="imgs" src="/static/default.png" style="width:90px;height:80px;">
                         <input type="hidden" id="Images" value="">
                     </div>
@@ -105,7 +105,7 @@
             </div>
         </div>
         <div class="td-align dialog-footer">
-            <button class="btn btn-primary adds" type="button"   data-url="<?php echo url('/v1/protuct/protuct/add'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-primary adds" type="button"   data-url="<?php echo url('/v1/protuct/protucts/add'); ?>"><i class="fa fa-save"></i> 确定提交</button>
             <button class="btn btn-warning" onclick="go_return()"> <i class="fa fa-close"></i> 取消</button>
         </div>
     </form>

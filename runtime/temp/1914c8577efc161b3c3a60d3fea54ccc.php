@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:111:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protuct\add.html";i:1571639193;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:113:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\edit.html";i:1571642819;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -61,51 +61,51 @@
                 <div class="form-group">
                     <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>产品图片：</label>
                     <div class="col-sm-9">
-                        <input type="file"  onchange="upload_file()"  class="form-control form-control-sm" id="file">
-                        <img id="imgs" src="/static/default.png" style="width:90px;height:80px;">
-                        <input type="hidden" id="Images" value="">
+                        <input type="file"  onchange="upload_file()" style="display:none;" class="form-control form-control-sm" id="file">
+                        <img id="imgs" src="<?php echo (isset($info['imgs']) && ($info['imgs'] !== '')?$info['imgs']:'/static/default.png'); ?>" style="width:90px;height:80px;">
+                        <input type="hidden" id="Images" value="<?php echo $info['imgs']; ?>">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>产品名称：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="names" name="names">
+                        <input type="text" value="<?php echo $info['names']; ?>" class="form-control form-control-sm" id="names" name="names">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="icp" class="col-sm-3 control-label">基本描述：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value=""/>
+                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value="<?php echo $info['desc']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="count_code" class="col-sm-3 control-label">产品方案：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="idea" class="form-control form-control-sm" name="idea" value=""/>
+                        <input type="text" id="idea" class="form-control form-control-sm" name="idea" value="<?php echo $info['idea']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="tel" class="col-sm-3 control-label">跳转地址：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="purl" class="form-control form-control-sm" name="purl" value=""/>
+                        <input type="text" id="purl" class="form-control form-control-sm" name="purl" value="<?php echo $info['purl']; ?>"/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="status" class="col-sm-3 control-label">状态：</label>
                     <div class="col-sm-9">
-                        <select id="status" name="status" class="form-control form-control-sm">
-                            <option value="1">启用</option>
-                            <option value="2">禁止</option>
+                        <select id="status"  class="form-control form-control-sm">
+                            <option value="1" <?php if($info['status'] == '1'): ?> selected=""<?php endif; ?> >启用</option>
+                            <option value="0" <?php if($info['status'] == '0'): ?> selected=""<?php endif; ?> >禁止</option>
                         </select>
                     </div>
                 </div>
-
+                <input type="hidden"  id='pid' value="<?php echo $info['id']; ?>" />
             </div>
         </div>
         <div class="td-align dialog-footer">
-            <button class="btn btn-primary adds" type="button"   data-url="<?php echo url('/v1/protuct/protuct/add'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-primary edits" type="button"   data-url="<?php echo url('/v1/protuct/protucts/edit'); ?>"><i class="fa fa-save"></i> 确定提交</button>
             <button class="btn btn-warning" onclick="go_return()"> <i class="fa fa-close"></i> 取消</button>
         </div>
     </form>
