@@ -146,7 +146,129 @@ var admin_module = (function (){
             content: url,
         });
     }
+<<<<<<< HEAD
 
+=======
+    //添加用户
+    $(document).on('click','#addusers',function (){
+        var url = $(this).attr('data-url');
+        layer.open({
+            type: 2,
+            title: "添加用户",
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            scrollbar: false,
+            area: ['700px', '450px'],
+            content: url,
+        });
+    });
+    //添加用户确认提交
+    var user_add = function user_add(objthis)
+    {
+        var url = $(objthis).attr('data-url');
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var tel = $('#tel').val();
+        var mail = $('#mail').val();
+        if(username == undefined || username == 'undefined' || username == ''){
+            $('#username').focus();
+            layer.tips('用户名不能为空!','#username',{tips:[1,'#c00']});
+            return;
+        }
+        if(password == undefined || password == 'undefined' || password == ''){
+            $('#password').focus();
+            layer.tips('密码不能为空!','#password',{tips:[1,'#c00']});
+            return;
+        }
+        if(tel == undefined || tel == 'undefined' || tel == ''){
+            $('#tel').focus();
+            layer.tips('电话不能为空!','#tel',{tips:[1,'#c00']});
+            return;
+        }
+        if(mail == undefined || mail == 'undefined' || mail == ''){
+            $('#mail').focus();
+            layer.tips('邮箱不能为空!','#mail',{tips:[1,'#c00']});
+            return;
+        }
+        var obj = new Object();
+        obj.username = username;
+        obj.password = password;
+        obj.tel = tel;
+        obj.mail = mail;
+        $.post(
+            url,
+            obj,
+            function (ret){
+                if(ret.status == true){
+                    layer.msg(ret.msg,{icon:1,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }else{
+                    layer.msg(ret.msg);
+                }
+            }
+        );
+    };
+
+    //编辑用户
+    var user_edit = function user_edit(objthis){
+        var url = $(objthis).attr('data-url');
+        layer.open({
+            type: 2,
+            title: "编辑用户",
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            scrollbar: false,
+            area: ['700px', '450px'],
+            content: url,
+        });
+    };
+    //确认用户编辑
+    var edit_users = function edit_users(objthis){
+        var url = $(objthis).attr('data-url');
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var tel = $('#tel').val();
+        var mail = $('#mail').val();
+        var id = $('#userid').val();
+        if(username == undefined || username == 'undefined' || username == ''){
+            $('#username').focus();
+            layer.tips('用户名不能为空!','#username',{tips:[1,'#c00']});
+            return;
+        }
+
+        if(tel == undefined || tel == 'undefined' || tel == ''){
+            $('#tel').focus();
+            layer.tips('电话不能为空!','#tel',{tips:[1,'#c00']});
+            return;
+        }
+        if(mail == undefined || mail == 'undefined' || mail == ''){
+            $('#mail').focus();
+            layer.tips('邮箱不能为空!','#mail',{tips:[1,'#c00']});
+            return;
+        }
+        var obj = new Object();
+        obj.username = username;
+        obj.tel = tel;
+        obj.mail = mail;
+        obj.id = id;
+        $.post(
+            url,
+            obj,
+            function (ret){
+                if(ret.status == true){
+                    layer.msg(ret.msg,{icon:1,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }else{
+                    layer.msg(ret.msg);
+                }
+            }
+        );
+    };
+>>>>>>> bac28a6bb709b8ac2c3cb1faa7b1e428eb6d3328
     //添加网站设置
     $(document).on('click','#addsitesetting',function(){
         var url = $(this).attr('data-url');
@@ -160,6 +282,10 @@ var admin_module = (function (){
             content: url,
         });
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> bac28a6bb709b8ac2c3cb1faa7b1e428eb6d3328
     //网站设置提交
     var setting_add = function setting_add(objthis){
         var url = $(objthis).attr('data-url');
@@ -218,6 +344,7 @@ var admin_module = (function (){
     var check_out = function check_out(objthis){
         $('.data-check_box').prop("checked",objthis.checked);
     };
+<<<<<<< HEAD
     //var submit_search = function submit_search(objthis){
     //    var url = $(objthis).attr('data-url');
     //    var value = $('#form').serialize();
@@ -229,6 +356,9 @@ var admin_module = (function (){
     //        }
     //    );
     //};
+=======
+
+>>>>>>> bac28a6bb709b8ac2c3cb1faa7b1e428eb6d3328
     var init_submit_form = function init_submit_form(){
         $('#form').submit(function (e){
             var data = $(this).serializeArray();
@@ -285,6 +415,12 @@ var admin_module = (function (){
         init_submit_form:init_submit_form,
         btn_search:btn_search,
         setting_add:setting_add,
+<<<<<<< HEAD
+=======
+        user_add:user_add,
+        user_edit:user_edit,
+        edit_users:edit_users,
+>>>>>>> bac28a6bb709b8ac2c3cb1faa7b1e428eb6d3328
     }
 })();
 
