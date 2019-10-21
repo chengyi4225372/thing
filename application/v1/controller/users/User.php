@@ -23,9 +23,16 @@ class user extends AuthController
     public function index()
     {
         $status = Config::get('user.status');
-
-        $list = Userservice::instance()->getList($_GET);
+        $params = $_GET;
+        if(isset($params['status']) === false){
+            $params['status'] = '';
+        }
+        if(!isset($params['username']) || empty($params['username'])){
+            $params['username'] = '';
+        }
+        $list = Userservice::instance()->getList($params);
         $this->assign('status',$status);
+        $this->assign('params',$params);
         $this->assign('data_list',$list['list']['data']);
         return $this->fetch();
     }
@@ -37,6 +44,23 @@ class user extends AuthController
      */
     public function adduser()
     {
+        if($this->request->isAjax() && $this->request->isPost()){
+
+            $return_data = Userservice::instance()->adduser($_POST);
+            return $return_data;
+        }
+        return $this->fetch();
+    }
+
+    public function edituser()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $return_data = Userservice::instance()->edituser($_POST);
+            return $return_data;
+        }
+        $id = $_GET['id'];
+        $return_data = Userservice::instance()->getEditUserInfo($id);
+        $this->assign('data',$return_data);
         return $this->fetch();
     }
 }

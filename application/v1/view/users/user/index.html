@@ -18,7 +18,7 @@
 
 
                         <div class="form-group">
-                            <input type="text"  class="form-control" name="username" value="" placeholder="多姓名搜索(空格逗号隔开)">
+                            <input type="text"  class="form-control" name="username" value="{$params['username']}" placeholder="多姓名搜索(空格逗号隔开)">
                         </div>
 
                         <div class="form-group">
@@ -45,7 +45,7 @@
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                 <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span>ID</span>
+                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
                 </th>
                 <th class="text-center">用户</th>
                 <th class="text-center">电话</th>
@@ -66,7 +66,7 @@
                         <span class="btn {if $list['is_del'] == 0}btn-success{else/}btn-danger{/if}">{$status[$list['is_del']]}</span>
                     </td>
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="{:url()}" data-id="" onclick="admin_module.edit_user(this)">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/users/user/edituser',['id' => $list['id']])}" data-id="" onclick="admin_module.user_edit(this)">编辑</a>
                     </td>
                 </tr>
                 {/volist}

@@ -69,7 +69,9 @@ class Userservice
 
             $where['username'] = ['LIKE',$userArr,'OR'];
         }
-
+        if(isset($params['status']) || $params['status'] != ''){
+            $where['is_del'] = $params['status'];
+        }
 
         //分页url参数
         $config = [
@@ -87,5 +89,109 @@ class Userservice
         ];
 
         return $return_data;
+    }
+
+    /**
+     * @DESC：生成token
+     * @author: jason
+     * @date: 2019-08-07 03:43:31
+     */
+    public function setToken($params)
+    {
+        return Crypt::encrypt($params);
+    }
+
+    /**
+     * @DESC：添加用户
+     * @author: jason
+     * @date: 2019-10-21 10:12:02
+     */
+    public function adduser($params)
+    {
+        $username = $params['username'];
+        $password = $params['password'];
+        $tel = $params['tel'];
+        $mail = $params['mail'];
+        if(empty($username)){
+            return json(['status' => false,'msg' => '用户名不能为空']);
+        }
+        if(empty($password)){
+            return json(['status' => false,'msg' => '密码不能为空']);
+        }
+        if(empty($tel)){
+            return json(['status' => false,'msg' => '电话不能为空']);
+        }
+        if(empty($mail)){
+            return json(['status' => false,'msg' => '邮箱不能为空']);
+        }
+
+        $userInfo = Admin::where(['username' => $username])->find();
+        if(!empty($userInfo)){
+            return json(['status' => false,'msg' => '用户已存在']);
+        }
+        $add['username'] = $username;
+        $add['password'] = md5(md5($password));
+        $add['tel'] = $tel;
+        $add['mail'] = $mail;
+        $res = Admin::insertGetId($add);
+        if(empty($res)){
+            return json(['status' => false,'msg' => '添加用户失败']);
+        }
+        $arr = [
+            'id' => $res,
+            'username' => $username,
+        ];
+        //更新token
+        $token = $this->setToken($arr);
+        $save['token'] = $token;
+        Admin::update($save,['id' => $res]);
+        return json(['status' => true,'msg' => '添加用户成功']);
+    }
+
+    /**
+     * @DESC：获取编辑用户信息
+     * @author: jason
+     * @date: 2019-10-21 10:57:47
+     */
+    public function getEditUserInfo($id)
+    {
+        if(empty($id)){
+            echo '<div style="color:red;">用户不存在</div>';die();
+        }
+        $where['id'] = $id;
+        $userInfo = Admin::where($where)->find()->toArray();
+        if(empty($userInfo)){
+            echo '<div style="color:red;">用户不存在</div>';die();
+        }
+        return $userInfo;
+    }
+
+    /**
+     * @DESC：编辑用户信息
+     * @author: jason
+     * @date: 2019-10-21 11:15:14
+     */
+    public function edituser($params)
+    {
+        //数据校验
+        if(!isset($params['id']) || empty($params['id']))return json(['status' => false,'msg' => '用户不存在']);
+        if(!isset($params['username']) || empty($params['username']))return json(['status' => false,'msg' => '用户不存在']);
+        if(!isset($params['tel']) || empty($params['tel']))return json(['status' => false,'msg' => '电话不能为空']);
+        if(!isset($params['mail']) || empty($params['mail']))return json(['status' => false,'msg' => '邮箱不能为空']);
+        $userInfo = Admin::where(['id' => $params['id']])->find();
+        if(empty($userInfo))return json(['status' => false,'msg' => '用户不存在']);
+        $save['username'] = $params['username'];
+        $save['tel'] = $params['tel'];
+        $save['mail'] = $params['mail'];
+
+        $arr = [
+            'id' => $params['id'],
+            'username' => $params['username'],
+        ];
+        $token = $this->setToken($arr);
+        $save['token'] = $token;
+        $where['id'] = $params['id'];
+        Admin::update($save,$where);
+        return json(['status' => true,'msg' => '修改用户信息成功']);
     }
 }
