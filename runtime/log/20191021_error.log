@@ -1,0 +1,3 @@
+---------------------------------------------------------------
+[ 2019-10-21T09:24:38+08:00 ] 172.26.2.48 GET /v1/users/user/index.html?status=&username=
+[ error ] [8192]Non-static method app\common\model\Admin::instance() should not be called statically[/opt/web/hui-/application/v1/service/Userservice.php:78]

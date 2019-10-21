@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/system/setting.html";i:1571391353;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571617841;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:9:{s:73:"/opt/web/hui-/public/../application/v1/view/organ/organization/index.html";i:1571369306;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571617841;s:68:"/opt/web/hui-/application/v1/view/organ/organization/index_form.html";i:1571369306;s:69:"/opt/web/hui-/application/v1/view/organ/organization/index_table.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -346,53 +346,93 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
-<!-- Main content -->
-<section class="content">
-    <div class="box box-default color-palette-box" style="min-height:700px;">
-        <div class="box-header with-border">
-            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
-            <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addsitesetting" data-url="<?php echo url('/v1/systematic/system/addsitesetting'); ?>">
-                <i class="fa fa-plus-circle">添加网站设置</i></button>
-        </div>
-        <div class="box-body">
-            <table class="table table-bordered table-hover table-striped">
-                <thead>
-                <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span>ID</span>
-                </th>
-                <th class="text-center">网站名称</th>
-                <th class="text-center">固定电话</th>
-                <th class="text-center">地址</th>
-                <th class="text-center">ICP备案号</th>
-                <th class="text-center">状态</th>
-                <th class="text-center">操作</th>
-                </thead>
-                <tbody>
-                <?php if(is_array($data_list) || $data_list instanceof \think\Collection || $data_list instanceof \think\Paginator): $i = 0; $__LIST__ = $data_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
-                <tr>
-                    <td class="td-align td-padding">
-                        <input type="checkbox" name="box_checked" data-id="<?php echo $list['id']; ?>" class="data-check_box">
-                    </td>
-                    <td class="text-center"><?php echo $list['title']; ?></td>
-                    <td class="text-center"><?php echo $list['tel']; ?></td>
-                    <td class="text-center"><?php echo $list['count_code']; ?></td>
-                    <td class="text-center"><?php echo $list['icp']; ?></td>
-                    <td class="text-center">
-                        <span class="btn <?php if($list['status'] == 1): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
-                    </td>
-                    <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url(); ?>" data-id="" onclick="admin_module.edit_org(this)">编辑</a>
-                    </td>
-                </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-                </tbody>
-            </table>
-            <div class="pages"></div>
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline"  id="form">
+
+    <div class="panel panel-default panel-btn">
+        <div class="panel-heading">
+            <div class="form-group">
+                <label>状态：</label>
+                <select class="form-control" name="status">
+                    <option value="">请选择</option>
+                    <option value="1" <?php if($params['status'] == 1): ?>selected='selected'<?php endif; ?>>启用</option>
+                    <option value="0" <?php if($params['status'] == 0): ?>selected='selected'<?php endif; ?>>禁用</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>是否绑定账号：</label>
+                <select class="form-control" name="binding">
+                    <option value="">请选择</option>
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="text"  class="form-control" name="user_name" value=" <?php if(isset($params['user_name'])): ?><?php echo $params['user_name']; endif; ?>"  placeholder="多姓名搜索(空格逗号隔开)">
+            </div>
+
+            <div class="form-group">
+                <input type="text"  class="form-control" name="account" value=""  placeholder="多帐号搜索(逗号隔开)">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-info" id="btn_search" type="Submit"  data-url="<?php echo url('v1/organization/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+            </div>
         </div>
     </div>
+    <br>
+</form>
 
-</section>
+
+            <div class="btn-group">
+    <button type="button" class="btn btn-sm btn-primary" onclick="admin_module.add_org(this)" data-url="<?php echo url('/v1/organ/organization/addorg'); ?>">新增成员</button>
+</div>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+    <tr>
+        <th class="td-align td-width-40px">
+            <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
+        </th>
+        <th class="td-align">所属小组|部门</th>
+        <th class="td-align">负责人</th>
+        <th class="td-align">状态</th>
+        <th class="td-align">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
+        <tr>
+            <td class="td-align td-padding">
+                <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
+            </td>
+            <td class="td-align td-padding"><?php echo $data_list['title']; ?></td>
+            <td class="td-align td-padding"><?php echo $data_list['manage']; ?></td>
+            <td class="td-align td-padding">
+                <?php if($data_list['status'] == 1): ?>
+                <span class="btn btn-success">启用</span>
+                <?php else: ?>
+                <span class="btn btn-danger">已禁用</span>
+                <?php endif; ?>
+            </td>
+            <td class="td-align td-padding">
+                <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/organ/organization/editorg'); ?>" data-id="<?php echo $data_list['id']; ?>" onclick="admin_module.edit_org(this)">编辑</a>
+            </td>
+        </tr>
+    <?php endforeach; endif; else: echo "" ;endif; ?>
+
+
+    </tbody>
+</table>
+<div class="pages"><?php echo isset($page)?$page: ''; ?></div>
+
+        </div>
+    </div>
+</div>
+
 
     </div>
 
