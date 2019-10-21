@@ -465,25 +465,108 @@ var admin_module = (function (){
     //确认添加轮播图
     var add_slideshow = function add_slideshow(objthis){
         var url = $(objthis).attr('data-url');
+        var pic = $('#pic_curr').val();
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var urls = $('#url').val();
+        var status = $('#status').val();
+        if(pic == undefined || pic == 'undefined' || pic == ''){
+            layer.msg('请选择要上传的图片');return;
+            //layer.tips('请选择要上传的图片!','#pic',{tips:[1,'#c00']});
+        }
+        var obj = new Object();
+        obj.pic = pic;
+        obj.title = title;
+        obj.desc = desc;
+        obj.url = urls;
+        obj.status = status;
+        $.post(
+            url,
+            obj,
+            function (ret){
+                if(ret.status == true){
+                    layer.msg(ret.msg,{icon:1,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }else{
+                    layer.msg(ret.msg);
+                }
+            }
+        );
+    };
 
-
+    //编辑轮播图的弹窗
+    var edit_slideshow = function edit_slideshow(objthis){
+        var url = $(objthis).attr('data-url');
+        layer.open({
+            type: 2,
+            title: "编辑轮播图",
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            scrollbar: false,
+            area: ['70%', '60%'],
+            content: url,
+        });
+    };
+    //确认编辑轮播图
+    var slideshow_edit = function slideshow_edit(objthis){
+        var url = $(objthis).attr('data-url');
+        var pic = $('#pic_curr').val();
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var urls = $('#url').val();
+        var status = $('#status').val();
+        var id = $('#site_id').val();
+        if(pic == undefined || pic == 'undefined' || pic == ''){
+            layer.msg('请选择要上传的图片');return;
+            //layer.tips('请选择要上传的图片!','#pic',{tips:[1,'#c00']});
+        }
+        var obj = new Object();
+        obj.pic = pic;
+        obj.title = title;
+        obj.desc = desc;
+        obj.url = urls;
+        obj.status = status;
+        obj.id = id;
+        $.post(
+            url,
+            obj,
+            function (ret){
+                if(ret.status == true){
+                    layer.msg(ret.msg,{icon:1,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }else{
+                    layer.msg(ret.msg);
+                }
+            }
+        );
     };
 
     //图片上传
-    $(document).ready(function (){
+    $(function (){
         layui.use('upload', function(){
             var upload = layui.upload;
 
             //执行实例
             var uploadInst = upload.render({
                 elem: '#pic' //绑定元素
-                ,url: '/upload/' //上传接口
-                ,done: function(res){
-                    //上传完毕回调
+                ,url: '/v1/systematic/system/uploadimg' //上传接口
+                ,done: function(ret){
+                    if(ret.status){
+                        $('#cur_pic').attr('src',ret['data']['src']);
+                        $('#pic_curr').val(ret['data']['src']);
+                    }else{
+                        layer.msg(ret.msg, {
+                            icon: 2,
+                            time: 1000 //2秒关闭（如果不配置，默认是3秒）
+                        })
+                    }
+
                 }
-                ,error: function(){
-                    //请求异常回调
-                }
+                ,accept: 'images'
             });
         });
     });
@@ -509,6 +592,8 @@ var admin_module = (function (){
         edit_users: edit_users,
         setting_edit: setting_edit,
         add_slideshow: add_slideshow,
+        edit_slideshow:edit_slideshow,
+        slideshow_edit:slideshow_edit,
     }
 
 })();

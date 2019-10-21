@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/system/slideshow.html";i:1571641878;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571643758;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571643758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/system/slideshow.html";i:1571652710;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571652614;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571643758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -354,7 +354,7 @@
             </li>
 
 
-            <li class="treeview <?php if($paths == '/v1/systematic/system/menu' || $paths == '/v1/organ/organization/index' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
+            <li class="treeview <?php if($paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>系统管理</span>
                     <span class="pull-right-container">
@@ -372,7 +372,7 @@
                         <a href="<?php echo url('/v1/systematic/system/setting'); ?>"><i class="fa fa-circle-o"></i>网站设置</a>
                     </li>
 
-                    <li class="<?php if($paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
+                    <li class="<?php if($paths == '/v1/systematic/system/slideshow'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/systematic/system/slideshow'); ?>"><i class="fa fa-circle-o"></i>首页轮播图</a>
                     </li>
 
@@ -405,10 +405,6 @@
 
 
                         <div class="form-group">
-                            <input type="text"  class="form-control" name="username" value="" placeholder="多姓名搜索(空格逗号隔开)">
-                        </div>
-
-                        <div class="form-group">
                             <button class="btn btn-info" id="btn_search" type="Submit"  data-url="<?php echo url('/v1/users/user/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
@@ -426,7 +422,7 @@
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
                     id="addslideshow" data-url="<?php echo url('/v1/systematic/system/addslideshow'); ?>">
-                <i class="fa fa-plus-circle">添加用户</i></button>
+                <i class="fa fa-plus-circle">添加轮播图</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
@@ -434,28 +430,34 @@
                 <th class="td-align td-width-40px">
                     <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
                 </th>
-                <th class="text-center">用户</th>
-                <th class="text-center">电话</th>
-                <th class="text-center">邮箱</th>
+                <th class="text-center">标题</th>
+                <th class="text-center">描述</th>
+                <th class="text-center">URL</th>
+                <th class="text-center">图片</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
+                <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
+                    <tr>
+                        <td class="td-align td-padding">
+                            <input type="checkbox" name="box_checked" data-id="<?php echo isset($list['id']) ? $list['id'] : ''; ?>" class="data-check_box">
+                        </td>
+                        <td class="text-center"><?php echo $list['title']; ?></td>
+                        <td class="text-center"><?php echo $list['desc']; ?></td>
+                        <td class="text-center"><?php echo $list['url']; ?></td>
+                        <td class="text-center">
+                            <img src="<?php echo $list['pic']; ?>" style="width:50px;height:50px;">
+                        </td>
+                        <td class="text-center">
+                            <span class="btn <?php if($list['status'] == 1): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
+                        </td>
+                        <td class="text-center">
+                            <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/systematic/system/editslideshow',['id' => $list['id']]); ?>" onclick="admin_module.edit_slideshow(this)">编辑</a>
+                        </td>
+                    </tr>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
 
-                <tr>
-                    <td class="td-align td-padding">
-                        <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
-                    </td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                    <td class="text-center">
-                        <span class="btn "></span>
-                    </td>
-                    <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/users/user/edituser'); ?>" data-id="" onclick="admin_module.user_edit(this)">编辑</a>
-                    </td>
-                </tr>
 
                 </tbody>
             </table>
