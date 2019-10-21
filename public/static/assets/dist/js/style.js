@@ -131,9 +131,7 @@ var admin_module = (function (){
         );
     };
 
-<<<<<<< HEAD
 
-=======
     //编辑成员
     var edit_org = function edit_org(objthis){
         var url = $(objthis).attr('data-url');
@@ -149,10 +147,7 @@ var admin_module = (function (){
             content: url,
         });
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> da1a0cb86a5780c8d7a72ea64e08b608340ea76b
     //添加用户
     $(document).on('click','#addusers',function (){
         var url = $(this).attr('data-url');
@@ -272,8 +267,6 @@ var admin_module = (function (){
             }
         );
     };
->>>>>>> bac28a6bb709b8ac2c3cb1faa7b1e428eb6d3328
-    //添加网站设置
     $(document).on('click','#addsitesetting',function(){
         var url = $(this).attr('data-url');
         layer.open({
@@ -286,10 +279,7 @@ var admin_module = (function (){
             content: url,
         });
     });
-<<<<<<< HEAD
-=======
 
->>>>>>> bac28a6bb709b8ac2c3cb1faa7b1e428eb6d3328
     //网站设置提交
     var setting_add = function setting_add(objthis){
         var url = $(objthis).attr('data-url');
@@ -416,21 +406,7 @@ var admin_module = (function (){
     var check_out = function check_out(objthis){
         $('.data-check_box').prop("checked",objthis.checked);
     };
-<<<<<<< HEAD
-    //var submit_search = function submit_search(objthis){
-    //    var url = $(objthis).attr('data-url');
-    //    var value = $('#form').serialize();
-    //    $.post(
-    //        url,
-    //        {data:value},
-    //        function (ret){
-    //
-    //        }
-    //    );
-    //};
-=======
 
->>>>>>> bac28a6bb709b8ac2c3cb1faa7b1e428eb6d3328
     var init_submit_form = function init_submit_form(){
         $('#form').submit(function (e){
             var data = $(this).serializeArray();
@@ -490,13 +466,7 @@ var admin_module = (function (){
     var add_slideshow = function add_slideshow(objthis){
         var url = $(objthis).attr('data-url');
 
-        $.post(
-            url,
-            {},
-            function (ret){
 
-            }
-        );
     };
 
     //图片上传
@@ -519,33 +489,28 @@ var admin_module = (function (){
     });
 
     return {
-        changepas:changepas,
-        change_password:change_password,
-        cancel_btn:cancel_btn,
-        logout_btn:logout_btn,
-        add_menu:add_menu,
-        show_icon:show_icon,
-        save_menu:save_menu,
-        add_org:add_org,
-        save_btn:save_btn,
-        edit_setting:edit_setting,
-        check_out:check_out,
+        changepas: changepas,
+        change_password: change_password,
+        cancel_btn: cancel_btn,
+        logout_btn: logout_btn,
+        add_menu: add_menu,
+        show_icon: show_icon,
+        save_menu: save_menu,
+        add_org: add_org,
+        save_btn: save_btn,
+        edit_setting: edit_setting,
+        check_out: check_out,
         //submit_search:submit_search,
-        init_submit_form:init_submit_form,
-        btn_search:btn_search,
-        setting_add:setting_add,
-<<<<<<< HEAD
-=======
-        user_add:user_add,
-        user_edit:user_edit,
-        edit_users:edit_users,
-<<<<<<< HEAD
-        setting_edit:setting_edit,
-        add_slideshow:add_slideshow,
-=======
->>>>>>> bac28a6bb709b8ac2c3cb1faa7b1e428eb6d3328
->>>>>>> da1a0cb86a5780c8d7a72ea64e08b608340ea76b
+        init_submit_form: init_submit_form,
+        btn_search: btn_search,
+        setting_add: setting_add,
+        user_add: user_add,
+        user_edit: user_edit,
+        edit_users: edit_users,
+        setting_edit: setting_edit,
+        add_slideshow: add_slideshow,
     }
+
 })();
 
 

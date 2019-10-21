@@ -270,7 +270,7 @@ class Systems
      */
     public function uploadimg()
     {
-
+//        echo dirname();exit;
     }
     /**
      * @DESC：获取网站设置列表
