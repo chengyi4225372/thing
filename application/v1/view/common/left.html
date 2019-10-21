@@ -87,6 +87,25 @@
                 </ul>
             </li>
 
+            <li class="treeview {if $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/cases/casedetail'}active{/if}">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>案例管理</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{if $paths == '/v1/systematic/cases/index'}active{/if}">
+                        <a href="{:url('/v1/systematic/cases/index')}"><i class="fa fa-circle-o"></i>主案例管理</a>
+                    </li>
+
+                    <li class="{if $paths == '/v1/systematic/cases/casedetail'}active{/if}">
+                        <a href="{:url('/v1/systematic/cases/casedetail')}"><i class="fa fa-circle-o"></i>案例详情管理</a>
+                    </li>
+
+                </ul>
+            </li>
+
 
         </ul>
     </section>
