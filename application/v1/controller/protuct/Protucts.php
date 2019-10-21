@@ -48,6 +48,10 @@ class Protucts extends AuthController
        if($this->request->isGet()){
 
          $id   = input('get.id','','int');
+         if(empty($id)){
+             return false;
+         }
+
          $info = Protuct::instance()->where(['id'=>$id])->find();
 
          $this->assign('info',$info);
@@ -92,7 +96,8 @@ class Protucts extends AuthController
    }
 
     //todo 待完成删除
-    public function del(){
+    public function del()
+    {
 
     }
 }

@@ -46,6 +46,11 @@ $('.infos-add').click(function(){
     var pid = $("#pid option:selected").val();
     var title   = $('#title').val();
 
+    if(title == '' || title== undefined){
+        layer.msg('请填写新闻标题');
+        return ;
+    }
+
     var content = editor.document.getBody().getHtml();//取得html文本
 
     $.post(urls,{'title':title,'pid':pid,'content':content},function(ret){
@@ -83,6 +88,16 @@ $('.infos-edits').click(function(){
     var pid     = $("#pid option:selected").val();
     var title   = $('#title').val();
     var id      = $('#mid').val();
+
+    if(title == '' || title== undefined){
+        layer.msg('请填写新闻标题');
+        return ;
+    }
+
+    if(id == '' || id==undefined){
+        layer.msg('数据不合法');
+        return ;
+    }
 
     var content = editor.document.getBody().getHtml();//取得html文本
 
