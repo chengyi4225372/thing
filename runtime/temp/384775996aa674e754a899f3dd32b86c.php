@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\index\index.html";i:1571369306;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571621497;s:92:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\map.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/system/setting.html";i:1571391353;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -352,77 +352,53 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
-    <section class="content-header">
-    <h4>777</h4>
-    <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-home"></i> 首页</a></li>
-        <li>hahaha</li>
-        <li class="active">hehehehe</li>
-    </ol>
-</section>
-    <!-- Main content -->
-    <section class="content">
-        <div class="box box-default color-palette-box" style="min-height:700px;">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">CPU Traffic</span>
-                            <span class="info-box-number">90<small>%</small></span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">Likes</span>
-                            <span class="info-box-number">41,410</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-
-                <!-- fix for small devices only -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">Sales</span>
-                            <span class="info-box-number">760</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">New Members</span>
-                            <span class="info-box-number">2,000</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-            </div>
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog"
+                    id="addsitesetting" data-url="<?php echo url('/v1/systematic/system/addsitesetting'); ?>">
+                <i class="fa fa-plus-circle">添加网站设置</i></button>
         </div>
-    </section>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <th class="td-align td-width-40px">
+                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span>ID</span>
+                </th>
+                <th class="text-center">网站名称</th>
+                <th class="text-center">固定电话</th>
+                <th class="text-center">地址</th>
+                <th class="text-center">ICP备案号</th>
+                <th class="text-center">状态</th>
+                <th class="text-center">操作</th>
+                </thead>
+                <tbody>
+                <?php if(is_array($data_list) || $data_list instanceof \think\Collection || $data_list instanceof \think\Paginator): $i = 0; $__LIST__ = $data_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
+                <tr>
+                    <td class="td-align td-padding">
+                        <input type="checkbox" name="box_checked" data-id="<?php echo $list['id']; ?>" class="data-check_box">
+                    </td>
+                    <td class="text-center"><?php echo $list['title']; ?></td>
+                    <td class="text-center"><?php echo $list['tel']; ?></td>
+                    <td class="text-center"><?php echo $list['count_code']; ?></td>
+                    <td class="text-center"><?php echo $list['icp']; ?></td>
+                    <td class="text-center">
+                        <span class="btn <?php if($list['status'] == 1): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
+                    </td>
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url(); ?>" data-id="" onclick="admin_module.edit_org(this)">编辑</a>
+                    </td>
+                </tr>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+                </tbody>
+            </table>
+            <div class="pages"></div>
+        </div>
+    </div>
+
+</section>
 
     </div>
 

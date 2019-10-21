@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+[ 2019-10-21T09:19:27+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:65]
+---------------------------------------------------------------
+[ 2019-10-21T09:20:40+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:65]
+---------------------------------------------------------------
+[ 2019-10-21T09:22:53+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-21T09:23:29+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]

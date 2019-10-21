@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/hui.iml" filepath="$PROJECT_DIR$/.idea/hui.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/hui-.iml" filepath="$PROJECT_DIR$/.idea/hui-.iml" />
+>>>>>>> 6ea6930ba47369485d2e12abb706862f570b847b
     </modules>
   </component>
 </project>
