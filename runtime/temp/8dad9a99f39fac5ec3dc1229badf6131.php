@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\homes\index.html";i:1571716277;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\homes\index.html";i:1571733829;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="/static/home/css/base.css">
     <link rel="stylesheet" href="/static/home/css/index.css">
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/index.js'></script>
+    <script src='/static/home/js/common.js'></script>
+
+    <style>
+        .header
+        {
+            background-image: url("<?php echo $slideshow['pic']; ?>");
+        }
+    </style>
 </head>
 
 <body>
@@ -64,11 +74,11 @@
 
             <!-- 文字部分-->
             <div class='content_text'>
-                <div class='w'>您公司的一站式服务平台</div>
+                <div class='w'><?php echo $slideshow['title']; ?></div>
             </div>
 
             <div class='rentong'>
-                <div class='w'>30万客户认同 | 8年专业经验 | 万千客户之选</div>
+                <div class='w'><?php echo $slideshow['desc']; ?></div>
             </div>
 
             <div class='btn'>
@@ -199,7 +209,7 @@
                             <div>惠灵工</div>
                             <div>一站用工案例</div>
                             <a href="#">
-                                <imgsrc="/static/home/jiantou.png" alt="">
+                                <img src="/static/home/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -451,10 +461,12 @@
                     <div>返回顶部</div>
                 </div>
                 <div class='search'>
-                    <input type="text" placeholder="请输入姓名">
-                    <input type="text" placeholder="请输入公司名称">
-                    <input type="text" placeholder="请输入手机号码">
-                    <input type="button" value='定义方案'>
+                    <input type="text" id="contactName"  placeholder="请输入姓名">
+                    <input type="text" id="companyName"  placeholder="请输入公司名称">
+                    <input type="text" id="contactMobile" placeholder="请输入手机号码">
+                    <input type="hidden" id="source" value="门户首页">
+                    <input type="hidden" id="identification" value="企业一站式服务">
+                    <input type="button" id="getErp" value='定义方案'>
                 </div>
             </div>
 
@@ -510,5 +522,10 @@
     </div>
 
 </body>
+<script>
 
+
+
+
+</script>
 </html>

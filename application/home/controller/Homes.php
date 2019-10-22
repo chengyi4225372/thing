@@ -26,5 +26,6 @@ class Homes extends Controller
             $this->assign('shang',$shang);
             return $this->fetch();
         }
+
     }
 }
