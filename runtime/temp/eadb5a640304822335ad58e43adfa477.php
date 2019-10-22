@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\partners\partner\index.html";i:1571658418;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571656822;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571657428;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\partners\partner\index.html";i:1571658418;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571661636;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571657428;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -364,7 +364,7 @@
             </li>
 
 
-            <li class="treeview <?php if($paths == '/v1/systematic/system/menu' || $paths == '/v1/organ/organization/index' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
+            <li class="treeview <?php if($paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>系统管理</span>
                     <span class="pull-right-container">
@@ -382,8 +382,27 @@
                         <a href="<?php echo url('/v1/systematic/system/setting'); ?>"><i class="fa fa-circle-o"></i>网站设置</a>
                     </li>
 
-                    <li class="<?php if($paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
+                    <li class="<?php if($paths == '/v1/systematic/system/slideshow'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/systematic/system/slideshow'); ?>"><i class="fa fa-circle-o"></i>首页轮播图</a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="treeview <?php if($paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>案例管理</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
+                        <a href="<?php echo url('/v1/systematic/cases/index'); ?>"><i class="fa fa-circle-o"></i>主案例管理</a>
+                    </li>
+
+                    <li class="<?php if($paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
+                        <a href="<?php echo url('/v1/systematic/cases/casedetail'); ?>"><i class="fa fa-circle-o"></i>案例详情管理</a>
                     </li>
 
                 </ul>

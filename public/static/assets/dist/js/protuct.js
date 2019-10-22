@@ -71,6 +71,15 @@ $('.adds').click(function(){
          return false;
     }
 
+    if(desc == '' || desc==undefined){
+        layer.msg('描述不能为空');
+        return;
+    }
+
+    if(imgs == '' || imgs == undefined){
+        layer.msg('请上传图片');
+        return ;
+    }
 
     $.post(url,{'purl':purl,'names':names,'desc':desc,'idea':idea,'imgs':imgs,'status':status},function(ret){
           if(ret.code == 200){
@@ -113,6 +122,29 @@ $('.edits').click(function(){
     var imgs   = $('#Images').val();
     var status = $('#status option:selected').val();
     var pid    = $('#pid').val();
+
+
+
+
+    if(purl == '' || purl==undefined){
+        layer.msg('请输入连接地址');
+        return ;
+    }
+
+    if(names =='' || names == undefined){
+        layer.msg('请输入产品名称');
+        return false;
+    }
+
+    if(desc == '' || desc==undefined){
+        layer.msg('描述不能为空');
+        return;
+    }
+
+    if(imgs == '' || imgs == undefined){
+        layer.msg('请上传图片');
+        return ;
+    }
 
     var url =  $(this).attr('data-url');
 
