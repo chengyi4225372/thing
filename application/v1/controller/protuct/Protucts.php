@@ -31,7 +31,6 @@ class Protucts extends AuthController
             'names'=>$param['names'],
             'status'=>$param['status'],
             'desc'  =>$param['desc'],
-            'idea'=>$param['idea'],
         ];
         $ret = Protuctservice::instance()->protuctAdd($array);
         if($ret){
@@ -66,7 +65,6 @@ class Protucts extends AuthController
               'names'=>$param['names'],
               'status'=>$param['status'],
               'desc'  =>$param['desc'],
-              'idea'=>$param['idea'],
           );
 
            $ret = Protuctservice::instance()->protuctAdd($array,['id'=>$param['id']]);

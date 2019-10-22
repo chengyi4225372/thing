@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\homes\index.html";i:1571665289;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\homes\index.html";i:1571716277;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,7 +113,7 @@
                         <a href="#"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
                         <a href="#"><?php echo (isset($v1['desc']) && ($v1['desc'] !== '')?$v1['desc']:''); ?></a>
                         <ul class='one_pic'>
-                            <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>"><?php echo $v1['idea']; ?></a></li>
+                            <li><a href="#">获取方案</a></li>
                             <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
                         </ul>
                     </li>

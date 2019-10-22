@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\login\index.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571657428;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\login\index.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571710980;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -114,7 +114,10 @@
 <script src="/static/assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="/static/assets/plugins/datatables/dataTables.bootstrap.js"></script>
 <!-- 富文本 -->
-<script src="/static/assets/components/ckeditor/ckeditor.js"></script>
+<script src="/static/assets/plugins/ueditor//ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- 富文本-->
 
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>

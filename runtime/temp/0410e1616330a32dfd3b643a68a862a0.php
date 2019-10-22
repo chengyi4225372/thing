@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\add.html";i:1571641979;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571628431;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\add.html";i:1571716443;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571710980;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -30,6 +30,8 @@
 <link rel="stylesheet" href="/static/assets/components/jstree/themes/default/style.min.css"/>
 <!-- iCheck for checkboxes and radio inputs -->
 <link rel="stylesheet" href="/static/assets/plugins/iCheck/all.css">
+<!--layui-->
+<link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- Font -->
 <link rel="stylesheet" href="/static/assets/dist/css/fontcss.css">
@@ -77,12 +79,6 @@
                     <label for="icp" class="col-sm-3 control-label">基本描述：</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control form-control-sm" id="desc" name="desc" value=""/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="count_code" class="col-sm-3 control-label">产品方案：</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="idea" class="form-control form-control-sm" name="idea" value=""/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -143,11 +139,19 @@
 <!-- datatables -->
 <script src="/static/assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="/static/assets/plugins/datatables/dataTables.bootstrap.js"></script>
+<!-- 富文本 -->
+<script src="/static/assets/plugins/ueditor//ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- 富文本-->
+
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>
 <script src="/static/assets/dist/js/style.js"></script>
 
 <script src="/static/assets/dist/js/protuct.js"></script>
+<script src="/static/assets/dist/js/infos.js"></script>
+<script src="/static/assets/dist/js/partners.js"></script>
 <script>
     admin_module.changepas();
 </script>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\infos_add.html";i:1571711135;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571710980;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\infos_add.html";i:1571715340;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571710980;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -52,7 +52,7 @@
     
 <style>
     .dialog-content{margin:20px;}
-    .dialog-footer{position:fixed;right:39%;top:82%}
+    .dialog-footer{right:39%;top:82%;margin-left:30%;}
     .red-color{color:red;}
 </style>
 <div class="dialog-content">
@@ -85,6 +85,7 @@
                 </div>
             </div>
         </div>
+
         <div class="td-align dialog-footer">
             <button class="btn btn-warning cancle"> <i class="fa fa-close"></i> 取消</button>
             <button class="btn btn-primary infos-add" type="button"  data-url="<?php echo url('/v1/info/infos/infosadd'); ?>"><i class="fa fa-save"></i> 确定提交</button>

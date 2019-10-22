@@ -12,20 +12,17 @@ $('#btn_search').click(function(){
 })
 
 //富文本
-var ue = UE.getEditor('content',{initialFrameWidth:'100%',initialFrameHeight:300,charset:"utf-8"});
+var ue = UE.getEditor('content',{initialFrameWidth:'90%',initialFrameHeight:300,charset:"utf-8"});
 
 //添加
 $('#infosadd').click(function(){
-
-
-
     var url = $(this).attr('data-url');
     layer.open({
         type: 2,
         title: '添加新闻',
         shadeClose: true,
         shade: 0.8,
-        area: ['65%', '90%'],
+        area: ['65%', '80%'],
         content: url, //iframe的url
     })
 })
@@ -78,7 +75,7 @@ $('.infos_edit').click(function(){
         title: '编辑新闻',
         shadeClose: true,
         shade: 0.8,
-        area: ['65%', '90%'],
+        area: ['60%', '85%'],
         content: url, //iframe的url
     })
 });
