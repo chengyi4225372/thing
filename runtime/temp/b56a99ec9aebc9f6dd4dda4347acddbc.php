@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\index\index.html";i:1571369306;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571661636;s:92:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\map.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571369306;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571710980;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\index\index.html";i:1571727608;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571727608;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571727760;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571710980;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -59,9 +59,9 @@
     <!-- Logo -->
     <a href="index2.html" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini">HQY</span>
+        <span class="logo-mini">HLG</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg">慧企云后台管理</span>
+        <span class="logo-lg">HLG后台管理</span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -73,125 +73,6 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                <!-- Messages: style can be found in dropdown.less-->
-                <li class="dropdown messages-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success">4</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="header">You have 4 messages</li>
-                        <li>
-                            <!-- inner menu: contains the actual data -->
-                            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
-                                <li><!-- start message -->
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            Support Team
-                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <!-- end message -->
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            AdminLTE Design Team
-                                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            Developers
-                                            <small><i class="fa fa-clock-o"></i> Today</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            Sales Department
-                                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            Reviewers
-                                            <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                            </ul><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
-                        </li>
-                        <li class="footer"><a href="#">查看所有消息</a></li>
-                    </ul>
-                </li>
-                <!-- Notifications: style can be found in dropdown.less -->
-                <li class="dropdown notifications-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-bell-o"></i>
-                        <span class="label label-warning">10</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="header">You have 10 notifications</li>
-                        <li>
-                            <!-- inner menu: contains the actual data -->
-                            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                                        page and may cause design problems
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-users text-red"></i> 5 new members joined
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-user text-red"></i> You changed your username
-                                    </a>
-                                </li>
-                            </ul><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
-                        </li>
-                        <li class="footer"><a href="#">全部</a></li>
-                    </ul>
-                </li>
                 <!-- Tasks: style can be found in dropdown.less -->
                 <li class="dropdown tasks-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -364,6 +245,25 @@
             </li>
 
 
+            <li class="treeview <?php if($paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>案例管理</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
+                        <a href="<?php echo url('/v1/systematic/cases/index'); ?>"><i class="fa fa-circle-o"></i>主案例管理</a>
+                    </li>
+
+                    <li class="<?php if($paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
+                        <a href="<?php echo url('/v1/systematic/cases/casedetail'); ?>"><i class="fa fa-circle-o"></i>案例详情管理</a>
+                    </li>
+
+                </ul>
+            </li>
+
             <li class="treeview <?php if($paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>系统管理</span>
@@ -389,25 +289,6 @@
                 </ul>
             </li>
 
-            <li class="treeview <?php if($paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
-                <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>案例管理</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
-                        <a href="<?php echo url('/v1/systematic/cases/index'); ?>"><i class="fa fa-circle-o"></i>主案例管理</a>
-                    </li>
-
-                    <li class="<?php if($paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
-                        <a href="<?php echo url('/v1/systematic/cases/casedetail'); ?>"><i class="fa fa-circle-o"></i>案例详情管理</a>
-                    </li>
-
-                </ul>
-            </li>
-
 
         </ul>
     </section>
@@ -416,14 +297,6 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
-    <section class="content-header">
-    <h4>777</h4>
-    <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-home"></i> 首页</a></li>
-        <li>hahaha</li>
-        <li class="active">hehehehe</li>
-    </ol>
-</section>
     <!-- Main content -->
     <section class="content">
         <div class="box box-default color-palette-box" style="min-height:700px;">
@@ -493,9 +366,9 @@
 </div>
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.7
+        <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright © 2014-2019 <a href="javascript:void(0)">慧企云后台管理</a>.</strong> All rights
+    <strong>Copyright © 2014-2019 <a href="javascript:void(0)">HLG后台管理</a>.</strong> All rights
     reserved.
 </footer>
 <!-- 加载JS脚本 -->

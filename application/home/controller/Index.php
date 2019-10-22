@@ -4,7 +4,7 @@ use think\Controller;
 use app\v1\service\Protuctservice;
 use app\v1\service\Infosservice;
 use app\v1\service\Systems;
-class Homes extends Controller
+class Index extends Controller
 {
     public function index(){
 
@@ -26,6 +26,6 @@ class Homes extends Controller
             $this->assign('shang',$shang);
             return $this->fetch();
         }
-
+        return false;
     }
 }
