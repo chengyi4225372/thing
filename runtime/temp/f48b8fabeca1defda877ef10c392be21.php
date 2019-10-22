@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hui-/public/../application/v1/view/systematic/cases/index.html";i:1571664098;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571724611;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hui-/public/../application/v1/view/systematic/cases/index.html";i:1571738518;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571737563;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -245,7 +245,7 @@
             </li>
 
 
-            <li class="treeview <?php if($paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
+            <li class="treeview <?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>案例管理</span>
                     <span class="pull-right-container">
@@ -254,11 +254,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
-                        <a href="<?php echo url('/v1/systematic/cases/index'); ?>"><i class="fa fa-circle-o"></i>主案例管理</a>
-                    </li>
-
-                    <li class="<?php if($paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
-                        <a href="<?php echo url('/v1/systematic/cases/casedetail'); ?>"><i class="fa fa-circle-o"></i>案例详情管理</a>
+                        <a href="<?php echo url('/v1/systematic/cases/index'); ?>"><i class="fa fa-circle-o"></i>案例列表</a>
                     </li>
 
                 </ul>
@@ -340,15 +336,20 @@
                 <th class="td-align td-width-40px">
                     <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
                 </th>
-                <th class="text-center">案例标题</th>
+                <th class="text-center">标题</th>
+                <th class="text-center">标题2</th>
+                <th class="text-center">标题3</th>
+                <th class="text-center">图片</th>
+                <th class="text-center">URL</th>
                 <th class="text-center">描述</th>
-                <th class="text-center">原增值税纳税额</th>
-                <th class="text-center">原所得税纳税额</th>
-                <th class="text-center">年纳税额</th>
-                <th class="text-center">园区政策</th>
-                <th class="text-center">园区政策奖励额</th>
-                <th class="text-center">节税额</th>
+                <th class="text-center">描述2</th>
+                <th class="text-center">描述3</th>
+                <th class="text-center">描述4</th>
+                <th class="text-center">描述5</th>
+                <th class="text-center">描述6</th>
+                <th class="text-center">描述7</th>
                 <th class="text-center">状态</th>
+                <th class="text-center">是否显示</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
@@ -358,18 +359,36 @@
                         <input type="checkbox" name="box_checked" data-id="<?php echo isset($data_list['id']) ? $data_list['id'] : ''; ?>" class="data-check_box">
                     </td>
                     <td class="text-center"><?php echo isset($data_list['title']) ? $data_list['title'] : ''; ?></td>
+                    <td class="text-center"><?php echo isset($data_list['title2']) ? $data_list['title2'] : ''; ?></td>
+                    <td class="text-center"><?php echo isset($data_list['title3']) ? $data_list['title3'] : ''; ?></td>
+                    <td class="text-center">
+                        <?php if(isset($data_list['pic']) && !empty($data_list['pic'])): ?>
+                        <img src="<?php echo $data_list['pic']; ?>" style="width:50px;height:50px;"/>
+                        <?php else: ?>
+                        <img src="/static/default.png" style="width:50px;height:50px;"/>
+                        <?php endif; ?>
+
+                    </td>
+                    <td><?php echo isset($data_list['url']) ? $data_list['url'] : ''; ?></td>
                     <td class="text-center"><?php echo isset($data_list['desc']) ? $data_list['desc'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['original_vat_amount']) ? $data_list['original_vat_amount'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['original_income_tax']) ? $data_list['original_income_tax'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['year_ratal']) ? $data_list['year_ratal'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['campus_policy']) ? $data_list['campus_policy'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['campus_award']) ? $data_list['campus_award'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['end_tax']) ? $data_list['end_tax'] : ''; ?></td>
+                    <td class="text-center"><?php echo isset($data_list['desc2']) ? $data_list['desc2'] : ''; ?></td>
+                    <td class="text-center"><?php echo isset($data_list['desc3']) ? $data_list['desc3'] : ''; ?></td>
+                    <td class="text-center"><?php echo isset($data_list['desc4']) ? $data_list['desc4'] : ''; ?></td>
+                    <td class="text-center"><?php echo isset($data_list['desc5']) ? $data_list['desc5'] : ''; ?></td>
+                    <td class="text-center"><?php echo isset($data_list['desc6']) ? $data_list['desc6'] : ''; ?></td>
+                    <td class="text-center"><?php echo isset($data_list['desc7']) ? $data_list['desc7'] : ''; ?></td>
                     <td class="text-center">
                         <?php if($data_list['status'] == 1): ?>
                         <span class="btn btn-success"><?php echo $status[$data_list['status']]; ?></span>
                         <?php else: ?>
                         <span class="btn btn-danger"><?php echo $status[$data_list['status']]; ?></span>
+                        <?php endif; ?>
+                    </td>
+                    <td class="text-center">
+                        <?php if($data_list['is_show'] == 1): ?>
+                        <span class="btn btn-danger"><?php echo $is_show[$data_list['is_show']]; ?></span>
+                        <?php else: ?>
+                        <span class="btn btn-success"><?php echo $is_show[$data_list['is_show']]; ?></span>
                         <?php endif; ?>
                     </td>
                     <td class="text-center">
