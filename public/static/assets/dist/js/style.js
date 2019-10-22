@@ -909,6 +909,7 @@ var admin_module = (function (){
         case_edit:case_edit,
         add_case_detail:add_case_detail,
         detail_edit:detail_edit,
+        edit_detail:edit_detail,
     }
 
 })();

@@ -269,6 +269,41 @@ class Caseservice
      */
     public function editdetail($params)
     {
-        echo '<pre>';print_r($params);exit;
+        if(empty($params['id'])){
+            return json(['status' => false,'msg' => '没有要修改的数据']);
+        }
+        if(empty($params['pid'])){
+            return json(['status' => false,'msg' => '请选择子案例的父类']);
+        }
+        if(empty($params['title'])){
+            return json(['status' => false,'msg' => '请填写标题']);
+        }
+        if(empty($params['desc'])){
+            return json(['status' => false,'msg' => '请填写描述']);
+        }
+        if(empty($params['pic_curr'])){
+            return json(['status' => false,'msg' => '请选择要上传的图片']);
+        }
+        if(empty($params['url'])){
+            return json(['status' => false,'msg' => '请填写地址']);
+        }
+        if(empty($params['status'])){
+            return json(['status' => false,'msg' => '请选择状态']);
+        }
+        $res = Casedetail::where(['id' => $params['id']])->find()->toArray();
+        if(empty($res)){
+            return json(['status' => false,'msg' => '没有要修改的数据']);
+        }
+        $save['pid'] = $params['pid'];
+        $save['title'] = $params['title'];
+        $save['desc'] = $params['desc'];
+        $save['pic'] = $params['pic_curr'];
+        $save['url'] = $params['url'];
+        $save['status'] = $params['status'];
+        $result = Casedetail::update($save,['id' => $params['id']]);
+        if($result === false){
+            return json(['status' => false,'msg' => '修改失败']);
+        }
+        return json(['status' => true,'msg' => '修改成功']);
     }
 }

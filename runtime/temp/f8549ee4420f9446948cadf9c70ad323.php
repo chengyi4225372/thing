@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/cases/editdetail.html";i:1571713378;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571660236;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/cases/editdetail.html";i:1571713608;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571660236;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -116,8 +116,8 @@
         </div>
         <div class="td-align dialog-footer" style="top:90%;">
             <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
-            <input type="hidden" name="is_add" value="1">
-            <button class="btn btn-primary" type="button" onclick="admin_module.add_case_detail(this)" data-url="<?php echo url('/v1/systematic/cases/adddetail'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <input type="hidden" id="detail_id" name="detail_id" value="<?php echo $data['id']; ?>">
+            <button class="btn btn-primary" type="button" onclick="admin_module.edit_detail(this)" data-url="<?php echo url('/v1/systematic/cases/editdetail'); ?>"><i class="fa fa-save"></i> 确定提交</button>
         </div>
     </form>
 </div>
