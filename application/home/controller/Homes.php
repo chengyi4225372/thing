@@ -4,6 +4,7 @@ use think\Controller;
 use app\v1\service\Protuctservice;
 use app\v1\service\Infosservice;
 use app\v1\service\Systems;
+use app\v1\service\Caseservice;
 class Homes extends Controller
 {
     public function index(){
@@ -21,6 +22,12 @@ class Homes extends Controller
 
             //轮播
             $slideshow = Systems::instance()->getOneshow();
+
+            //近期成功案例
+            $caseInfo = Caseservice::instance()->getallparent();
+
+//            echo '<pre>';print_r($caseInfo);exit;
+            $this->assign('case_list',$caseInfo);
             $this->assign('slideshow',$slideshow);
             $this->assign('biao',$biao);
             $this->assign('shang',$shang);

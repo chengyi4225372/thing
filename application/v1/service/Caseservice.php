@@ -9,7 +9,6 @@ namespace app\v1\service;
 
 use app\common\model\Admin;
 use app\common\model\Cases;
-use app\common\model\Casedetail;
 use think\Session;
 use plugin\Tree;
 use plugin\Crypt;
@@ -105,14 +104,19 @@ class Caseservice
     public function addcase($params)
     {
         $add['title'] = $params['title'];
+        $add['title2'] = $params['title2'];
+        $add['title3'] = $params['title3'];
+        $add['pic'] = $params['pic'];
+        $add['url'] = $params['url'];
         $add['desc'] = $params['desc'];
-        $add['original_vat_amount'] = $params['original_vat_amount'];
-        $add['original_income_tax'] = $params['original_income_tax'];
-        $add['year_ratal'] = $params['year_ratal'];
-        $add['campus_policy'] = $params['campus_policy'];
-        $add['campus_award'] = $params['campus_award'];
-        $add['end_tax'] = $params['end_tax'];
+        $add['desc2'] = $params['desc2'];
+        $add['desc3'] = $params['desc3'];
+        $add['desc4'] = $params['desc4'];
+        $add['desc5'] = $params['desc5'];
+        $add['desc6'] = $params['desc6'];
+        $add['desc7'] = $params['desc7'];
         $add['status'] = $params['status'];
+        $add['is_show'] = $params['is_show'];
         $res = Cases::insert($add);
         if($res === false){
             return json(['status' => false,'msg' => '添加失败']);
@@ -155,14 +159,19 @@ class Caseservice
             return json(['status' => false,'msg' => '没有要修改的数据']);
         }
         $add['title'] = $params['title'];
+        $add['title2'] = $params['title2'];
+        $add['title3'] = $params['title3'];
+        $add['pic'] = $params['pic'];
+        $add['url'] = $params['url'];
         $add['desc'] = $params['desc'];
-        $add['original_vat_amount'] = $params['original_vat_amount'];
-        $add['original_income_tax'] = $params['original_income_tax'];
-        $add['year_ratal'] = $params['year_ratal'];
-        $add['campus_policy'] = $params['campus_policy'];
-        $add['campus_award'] = $params['campus_award'];
-        $add['end_tax'] = $params['end_tax'];
+        $add['desc2'] = $params['desc2'];
+        $add['desc3'] = $params['desc3'];
+        $add['desc4'] = $params['desc4'];
+        $add['desc5'] = $params['desc5'];
+        $add['desc6'] = $params['desc6'];
+        $add['desc7'] = $params['desc7'];
         $add['status'] = $params['status'];
+        $add['is_show'] = $params['is_show'];
         $res = Cases::update($add,['id' => $params['case_id']]);
         if($res === false){
             return json(['status' => false,'msg' => '修改失败']);
@@ -181,129 +190,5 @@ class Caseservice
         return $return_data;
     }
 
-    /**
-     * @DESC：添加案例详情
-     * @author: jason
-     * @date: 2019-10-21 09:51:57
-     */
-    public function adddetail($params)
-    {
-        //数据校验
-        if(empty($params['pid']))return json(['status' => false,'msg' => '请选择当前子案例的父类']);
-        if(empty($params['title']))return json(['status' => false,'msg' => '请填写标题']);
-        if(empty($params['desc']))return json(['status' => false,'msg' => '请填写描述']);
-        if(empty($params['pic_curr']))return json(['status' => false,'msg' => '请选择要上传的图片']);
-        if(empty($params['url']))return json(['status' => false,'msg' => '请填写URL']);
-        if(empty($params['status']))return json(['status' => false,'msg' => '请选择状态']);
-        $pid = intval($params['pid']);
-        //判断标题是否存在
 
-        $res = Casedetail::where(['title' => trim($params['title'])])->find();
-        if(!empty($res)){
-            return json(['status' => false,'msg' => '当前的子案例已存在']);
-        }
-        $add['pid'] = $pid;
-        $add['title'] = $params['title'];
-        $add['desc'] = $params['desc'];
-        $add['pic'] = $params['pic_curr'];
-        $add['url'] = $params['url'];
-        $add['status'] = $params['status'];
-        $result = Casedetail::insert($add);
-        if($result === false){
-            return json(['status' => false,'msg' => '添加失败']);
-        }
-        return json(['status' => true,'msg' => '添加成功']);
-    }
-
-    /**
-     * @DESC：查询所有的案例详情
-     * @author: jason
-     * @date: 2019-10-22 10:31:17
-     */
-    public function getAllDetail($params)
-    {
-        //每页显示的数量
-        $page_size = !empty($params['ps']) ? $params['ps'] : 20;
-        //当前页
-        $current_page = (!empty($params['page']) && intval($params['page']) > 0) ? $params['page'] : 1;
-        //分页起始值
-        $start = $page_size * ($current_page - 1);
-        $where['status'] = 1;
-        //分页url参数
-        $config = [
-            'query' => request()->param(),
-        ];
-        $detailInfo = Casedetail::instance()->where($where)
-            ->limit($start,$page_size)
-            ->order('id', 'desc')
-            ->paginate($page_size, false, $config);
-        $page = $detailInfo->render();
-        $return_data = [
-            'list' => $detailInfo->toArray(),
-            'page' => $page,
-        ];
-        return $return_data;
-    }
-
-    /**
-     * @DESC：根据ID查询出案例 详情
-     * @author: jason
-     * @date: 2019-10-22 10:28:07
-     */
-    public function getCaseDetail($id)
-    {
-        if(empty($id)){
-            die('<div style="color:red;">没有要修改的数据</div>');
-        }
-        $detailInfo = Casedetail::where(['id' => $id])->find()->toArray();
-        if(empty($detailInfo)){
-            die('<div style="color:red;">没有要修改的数据</div>');
-        }
-        return $detailInfo;
-    }
-
-    /**
-     * @DESC：编辑案例详情
-     * @author: jason
-     * @date: 2019-10-22 11:07:44
-     */
-    public function editdetail($params)
-    {
-        if(empty($params['id'])){
-            return json(['status' => false,'msg' => '没有要修改的数据']);
-        }
-        if(empty($params['pid'])){
-            return json(['status' => false,'msg' => '请选择子案例的父类']);
-        }
-        if(empty($params['title'])){
-            return json(['status' => false,'msg' => '请填写标题']);
-        }
-        if(empty($params['desc'])){
-            return json(['status' => false,'msg' => '请填写描述']);
-        }
-        if(empty($params['pic_curr'])){
-            return json(['status' => false,'msg' => '请选择要上传的图片']);
-        }
-        if(empty($params['url'])){
-            return json(['status' => false,'msg' => '请填写地址']);
-        }
-        if(empty($params['status'])){
-            return json(['status' => false,'msg' => '请选择状态']);
-        }
-        $res = Casedetail::where(['id' => $params['id']])->find()->toArray();
-        if(empty($res)){
-            return json(['status' => false,'msg' => '没有要修改的数据']);
-        }
-        $save['pid'] = $params['pid'];
-        $save['title'] = $params['title'];
-        $save['desc'] = $params['desc'];
-        $save['pic'] = $params['pic_curr'];
-        $save['url'] = $params['url'];
-        $save['status'] = $params['status'];
-        $result = Casedetail::update($save,['id' => $params['id']]);
-        if($result === false){
-            return json(['status' => false,'msg' => '修改失败']);
-        }
-        return json(['status' => true,'msg' => '修改成功']);
-    }
 }

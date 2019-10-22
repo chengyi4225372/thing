@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/cases/editcase.html";i:1571665231;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571660236;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/cases/editcase.html";i:1571740262;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -66,46 +66,77 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="title2" class="col-sm-3 control-label">标题2：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title2" name="title2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="title3" class="col-sm-3 control-label">标题3：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title3" name="title3">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pic" class="col-sm-3 control-label">图片：</label>
+                    <div class="col-sm-9">
+                        <button type="button" class="layui-btn" id="pic">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <img src="/static/default.png" style="width:50px;height:50px;" id="cur_pic"/>
+                        <input type="hidden" name="pic_curr" id="pic_curr" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="url" class="col-sm-3 control-label">URL：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="url" name="url">
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="desc" class="col-sm-3 control-label">描述：</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control form-control-sm" id="desc" name="desc" value="<?php echo $data['desc']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="original_vat_amount" class="col-sm-3 control-label">原增值税纳税额：</label>
+                    <label for="desc2" class="col-sm-3 control-label">描述2：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="original_vat_amount" class="form-control form-control-sm" name="original_vat_amount" value="<?php echo $data['original_vat_amount']; ?>"/>
+                        <input type="text" id="desc2" class="form-control form-control-sm" name="desc2" value="<?php echo $data['desc2']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="original_income_tax" class="col-sm-3 control-label">原所得税纳税额：</label>
+                    <label for="desc3" class="col-sm-3 control-label">描述3：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="original_income_tax" class="form-control form-control-sm" name="original_income_tax" value="<?php echo $data['original_income_tax']; ?>"/>
+                        <input type="text" id="desc3" class="form-control form-control-sm" name="desc3" value="<?php echo $data['desc3']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="year_ratal" class="col-sm-3 control-label">年纳税额：</label>
+                    <label for="desc4" class="col-sm-3 control-label">描述4：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="year_ratal" class="form-control form-control-sm" name="year_ratal" value="<?php echo $data['year_ratal']; ?>"/>
+                        <input type="text" id="desc4" class="form-control form-control-sm" name="desc4" value="<?php echo $data['desc4']; ?>"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="campus_policy" class="col-sm-3 control-label">园区政策：</label>
+                    <label for="desc5" class="col-sm-3 control-label">描述5：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="campus_policy" class="form-control form-control-sm" name="campus_policy" value="<?php echo $data['campus_policy']; ?>"/>
+                        <input type="text" id="desc5" class="form-control form-control-sm" name="desc5" value="<?php echo $data['desc5']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="campus_award" class="col-sm-3 control-label">园区政策奖励额：</label>
+                    <label for="desc6" class="col-sm-3 control-label">描述6：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="campus_award" class="form-control form-control-sm" name="campus_award" value="<?php echo $data['campus_award']; ?>"/>
+                        <input type="text" id="desc6" class="form-control form-control-sm" name="desc6" value="<?php echo $data['desc6']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="end_tax" class="col-sm-3 control-label">节税额：</label>
+                    <label for="desc7" class="col-sm-3 control-label">描述7：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="end_tax" class="form-control form-control-sm" name="end_tax" value="<?php echo $data['end_tax']; ?>"/>
+                        <input type="text" id="desc7" class="form-control form-control-sm" name="desc7" value="<?php echo $data['desc7']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -118,6 +149,17 @@
                         </select>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="is_show" class="col-sm-3 control-label">是否显示：</label>
+                    <div class="col-sm-9">
+                        <select id="is_show" name="is_show" class="form-control form-control-sm">
+                            <?php if(is_array($is_show) || $is_show instanceof \think\Collection || $is_show instanceof \think\Paginator): $i = 0; $__LIST__ = $is_show;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$is_show_list): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $key; ?>"><?php echo $is_show_list; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </select>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="td-align dialog-footer" style="top:90%;">
@@ -161,7 +203,10 @@
 <script src="/static/assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="/static/assets/plugins/datatables/dataTables.bootstrap.js"></script>
 <!-- 富文本 -->
-<script src="/static/assets/components/ckeditor/ckeditor.js"></script>
+<script src="/static/assets/plugins/ueditor//ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- 富文本-->
 
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>

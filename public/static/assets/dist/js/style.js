@@ -578,7 +578,7 @@ var admin_module = (function (){
         var url = $(this).attr('data-url');
         layer.open({
             type: 2,
-            title: "添加主案例",
+            title: "添加案例",
             maxmin: false,
             shadeClose: true, //点击遮罩关闭层
             scrollbar: false,
@@ -587,65 +587,93 @@ var admin_module = (function (){
         });
     });
     var add_case = function add_case(objthis){
-        var url = $(objthis).attr('data-url');
+        var urls = $(objthis).attr('data-url');
         var title = $('#title').val();
+        var title2 = $('#title2').val();
+        var title3 = $('#title3').val();
+        var pic = $('#pic_curr').val();
+        var url = $('#url').val();
         var desc = $('#desc').val();
-        var original_vat_amount = $('#original_vat_amount').val();
-        var original_income_tax = $('#original_income_tax').val();
-        var year_ratal = $('#year_ratal').val();
-        var campus_policy = $('#campus_policy').val();
-        var campus_award     = $('#campus_award ').val();
-        var end_tax = $('#end_tax').val();
+        var desc2 = $('#desc2').val();
+        var desc3 = $('#desc3').val();
+        var desc4 = $('#desc4').val();
+        var desc5 = $('#desc5').val();
+        var desc6     = $('#desc6 ').val();
+        var desc7 = $('#desc7').val();
         var status = $('#status').val();
+        var is_show = $('#is_show').val();
         //数据校验
         if(title == '' || title == undefined || title == 'undefined'){
             $('#title').focus();
             layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
         }
+        if(title2 == '' || title2 == undefined || title2 == 'undefined'){
+            $('#title2').focus();
+            layer.tips('标题2不能为空!','#title2',{tips:[1,'#c00']});return;
+        }
+        if(title3 == '' || title3 == undefined || title3 == 'undefined'){
+            $('#title3').focus();
+            layer.tips('标题不能为空!','#title3',{tips:[1,'#c00']});return;
+        }
+        if(pic == '' || pic == undefined || pic == 'undefined'){
+            layer.msg('请选择要上传的图片');return;
+        }
+        if(url == '' || url == undefined || url == 'undefined'){
+            $('#url').focus();
+            layer.tips('请填写URL!','#url',{tips:[1,'#c00']});return;
+        }
         if(desc == '' || desc == undefined || desc == 'undefined'){
             $('#desc').focus();
             layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
         }
-        if(original_vat_amount == '' || original_vat_amount == undefined || original_vat_amount == 'undefined'){
-            $('#original_vat_amount').focus();
-            layer.tips('原增值税纳税额不能为空!','#original_vat_amount',{tips:[1,'#c00']});return;
+        if(desc2 == '' || desc2 == undefined || desc2 == 'undefined'){
+            $('#desc2').focus();
+            layer.tips('描述2不能为空!','#desc2',{tips:[1,'#c00']});return;
         }
-        if(original_income_tax == '' || original_income_tax == undefined || original_income_tax == 'undefined'){
-            $('#original_income_tax').focus();
-            layer.tips('原所得税纳税额不能为空!','#original_income_tax',{tips:[1,'#c00']});return;
+        if(desc3 == '' || desc3 == undefined || desc3 == 'undefined'){
+            $('#desc3').focus();
+            layer.tips('描述3不能为空弄!','#desc3',{tips:[1,'#c00']});return;
         }
-        if(year_ratal == '' || year_ratal == undefined || year_ratal == 'undefined'){
-            $('#year_ratal').focus();
-            layer.tips('年纳税额不能为空!','#year_ratal',{tips:[1,'#c00']});return;
+        if(desc4 == '' || desc4 == undefined || desc4 == 'undefined'){
+            $('#desc4').focus();
+            layer.tips('描述4不能为空!','#desc4',{tips:[1,'#c00']});return;
         }
-        if(campus_policy == '' || campus_policy == undefined || campus_policy == 'undefined'){
-            $('#campus_policy').focus();
-            layer.tips('园区政策不能为空!','#campus_policy',{tips:[1,'#c00']});return;
+        if(desc5 == '' || desc5 == undefined || desc5 == 'undefined'){
+            $('#desc5').focus();
+            layer.tips('描述5不能为空!','#desc5',{tips:[1,'#c00']});return;
         }
-        if(campus_award == '' || campus_award == undefined || campus_award == 'undefined'){
-            $('#campus_award').focus();
-            layer.tips('园区政策奖励额不能为空!','#campus_award',{tips:[1,'#c00']});return;
+        if(desc6 == '' || desc6 == undefined || desc6 == 'undefined'){
+            $('#desc6').focus();
+            layer.tips('描述6不能为空!','#desc6',{tips:[1,'#c00']});return;
         }
-        if(end_tax == '' || end_tax == undefined || end_tax == 'undefined'){
-            $('#end_tax').focus();
-            layer.tips('节税额不能为空!','#end_tax',{tips:[1,'#c00']});return;
+        if(desc7 == '' || desc7 == undefined || desc7 == 'undefined'){
+            $('#desc7').focus();
+            layer.tips('描述7不能为空!','#desc7',{tips:[1,'#c00']});return;
         }
         if(status == '' || status == undefined || status == 'undefined'){
             layer.msg('请选择状态');return;
         }
+        if(is_show == '' || is_show == undefined || is_show == 'undefined'){
+            layer.msg('请选择是否显示');return;
+        }
         var obj = new Object();
         obj.title = title;
+        obj.title2 = title2;
+        obj.title3 = title3;
+        obj.pic = pic;
+        obj.url = url;
         obj.desc = desc;
-        obj.original_vat_amount = original_vat_amount;
-        obj.original_income_tax = original_income_tax;
-        obj.year_ratal = year_ratal;
-        obj.campus_policy = campus_policy;
-        obj.campus_award = campus_award;
-        obj.end_tax = end_tax;
+        obj.desc2 = desc2;
+        obj.desc3 = desc3;
+        obj.desc4 = desc4;
+        obj.desc5 = desc5;
+        obj.desc6 = desc6;
+        obj.desc7 = desc7;
         obj.status = status;
+        obj.is_show = is_show;
 
         $.post(
-            url,
+            urls,
             obj,
             function (ret){
                 if(ret.status == true){
@@ -664,7 +692,7 @@ var admin_module = (function (){
         var url = $(objthis).attr('data-url');
         layer.open({
             type: 2,
-            title: "编辑主案例",
+            title: "编辑案例",
             maxmin: false,
             shadeClose: true, //点击遮罩关闭层
             scrollbar: false,
@@ -675,67 +703,95 @@ var admin_module = (function (){
 
     //主案例确认提交
     var case_edit = function case_edit(objthis){
-        var url = $(objthis).attr('data-url');
+        var urls = $(objthis).attr('data-url');
         var title = $('#title').val();
+        var title2 = $('#title2').val();
+        var title3 = $('#title3').val();
+        var pic = $('#pic_curr').val();
+        var url = $('#url').val();
         var desc = $('#desc').val();
-        var original_vat_amount = $('#original_vat_amount').val();
-        var original_income_tax = $('#original_income_tax').val();
-        var year_ratal = $('#year_ratal').val();
-        var campus_policy = $('#campus_policy').val();
-        var campus_award     = $('#campus_award ').val();
-        var end_tax = $('#end_tax').val();
+        var desc2 = $('#desc2').val();
+        var desc3 = $('#desc3').val();
+        var desc4 = $('#desc4').val();
+        var desc5 = $('#desc5').val();
+        var desc6     = $('#desc6 ').val();
+        var desc7 = $('#desc7').val();
         var status = $('#status').val();
+        var is_show = $('#is_show').val();
         var case_id = $('#case_id').val();
         //数据校验
         if(title == '' || title == undefined || title == 'undefined'){
             $('#title').focus();
             layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
         }
+        if(title2 == '' || title2 == undefined || title2 == 'undefined'){
+            $('#title2').focus();
+            layer.tips('标题2不能为空!','#title2',{tips:[1,'#c00']});return;
+        }
+        if(title3 == '' || title3 == undefined || title3 == 'undefined'){
+            $('#title3').focus();
+            layer.tips('标题不能为空!','#title3',{tips:[1,'#c00']});return;
+        }
+        if(pic == '' || pic == undefined || pic == 'undefined'){
+            layer.msg('请选择要上传的图片');return;
+        }
+        if(url == '' || url == undefined || url == 'undefined'){
+            $('#url').focus();
+            layer.tips('请填写URL!','#url',{tips:[1,'#c00']});return;
+        }
         if(desc == '' || desc == undefined || desc == 'undefined'){
             $('#desc').focus();
             layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
         }
-        if(original_vat_amount == '' || original_vat_amount == undefined || original_vat_amount == 'undefined'){
-            $('#original_vat_amount').focus();
-            layer.tips('原增值税纳税额不能为空!','#original_vat_amount',{tips:[1,'#c00']});return;
+        if(desc2 == '' || desc2 == undefined || desc2 == 'undefined'){
+            $('#desc2').focus();
+            layer.tips('描述2不能为空!','#desc2',{tips:[1,'#c00']});return;
         }
-        if(original_income_tax == '' || original_income_tax == undefined || original_income_tax == 'undefined'){
-            $('#original_income_tax').focus();
-            layer.tips('原所得税纳税额不能为空!','#original_income_tax',{tips:[1,'#c00']});return;
+        if(desc3 == '' || desc3 == undefined || desc3 == 'undefined'){
+            $('#desc3').focus();
+            layer.tips('描述3不能为空弄!','#desc3',{tips:[1,'#c00']});return;
         }
-        if(year_ratal == '' || year_ratal == undefined || year_ratal == 'undefined'){
-            $('#year_ratal').focus();
-            layer.tips('年纳税额不能为空!','#year_ratal',{tips:[1,'#c00']});return;
+        if(desc4 == '' || desc4 == undefined || desc4 == 'undefined'){
+            $('#desc4').focus();
+            layer.tips('描述4不能为空!','#desc4',{tips:[1,'#c00']});return;
         }
-        if(campus_policy == '' || campus_policy == undefined || campus_policy == 'undefined'){
-            $('#campus_policy').focus();
-            layer.tips('园区政策不能为空!','#campus_policy',{tips:[1,'#c00']});return;
+        if(desc5 == '' || desc5 == undefined || desc5 == 'undefined'){
+            $('#desc5').focus();
+            layer.tips('描述5不能为空!','#desc5',{tips:[1,'#c00']});return;
         }
-        if(campus_award == '' || campus_award == undefined || campus_award == 'undefined'){
-            $('#campus_award').focus();
-            layer.tips('园区政策奖励额不能为空!','#campus_award',{tips:[1,'#c00']});return;
+        if(desc6 == '' || desc6 == undefined || desc6 == 'undefined'){
+            $('#desc6').focus();
+            layer.tips('描述6不能为空!','#desc6',{tips:[1,'#c00']});return;
         }
-        if(end_tax == '' || end_tax == undefined || end_tax == 'undefined'){
-            $('#end_tax').focus();
-            layer.tips('节税额不能为空!','#end_tax',{tips:[1,'#c00']});return;
+        if(desc7 == '' || desc7 == undefined || desc7 == 'undefined'){
+            $('#desc7').focus();
+            layer.tips('描述7不能为空!','#desc7',{tips:[1,'#c00']});return;
         }
         if(status == '' || status == undefined || status == 'undefined'){
             layer.msg('请选择状态');return;
         }
+        if(is_show == '' || is_show == undefined || is_show == 'undefined'){
+            layer.msg('请选择是否显示');return;
+        }
         var obj = new Object();
         obj.title = title;
+        obj.title2 = title2;
+        obj.title3 = title3;
+        obj.pic = pic;
+        obj.url = url;
         obj.desc = desc;
-        obj.original_vat_amount = original_vat_amount;
-        obj.original_income_tax = original_income_tax;
-        obj.year_ratal = year_ratal;
-        obj.campus_policy = campus_policy;
-        obj.campus_award = campus_award;
-        obj.end_tax = end_tax;
+        obj.desc2 = desc2;
+        obj.desc3 = desc3;
+        obj.desc4 = desc4;
+        obj.desc5 = desc5;
+        obj.desc6 = desc6;
+        obj.desc7 = desc7;
         obj.status = status;
+        obj.is_show = is_show;
         obj.case_id = case_id;
 
         $.post(
-            url,
+            urls,
             obj,
             function (ret){
                 if(ret.status == true){
@@ -749,138 +805,7 @@ var admin_module = (function (){
             },'json'
         );
     };
-    //添加案例详情页
-    $(document).on('click','#adddetail',function (){
-        var url = $(this).attr('data-url');
-        layer.open({
-            type: 2,
-            title: "添加案例详情页",
-            maxmin: false,
-            shadeClose: true, //点击遮罩关闭层
-            scrollbar: false,
-            area: ['70%', '60%'],
-            content: url,
-        });
-    });
-    //添加案例详情的提交页面
-    var add_case_detail = function add_case_detail(objthis){
-        var url2 = $(objthis).attr('data-url');
-        var pid = $('#pid').val();
-        var title = $('#title').val();
-        var desc = $('#desc').val();
-        var pic_curr = $('#pic_curr').val();
-        var url = $('#url').val();
-        var status = $('#status').val();
-        if(pid == '' || pid == undefined || pid == 'undefined'){
-            layer.msg('请选择当前子案例的父类');return;
-        }
-        if(title == '' || title == undefined || title == 'undefined'){
-            $('#title').focus();
-            layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
-        }
-        if(desc == '' || desc == undefined || desc == 'undefined'){
-            $('#desc').focus();
-            layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
-        }
-        if(url == '' || url == undefined || url == 'undefined'){
-            $('#url').focus();
-            layer.tips('URL不能为空!','#url',{tips:[1,'#c00']});return;
-        }
-        if(pic_curr == '' || pic_curr == undefined || pic_curr == 'undefined'){
-            layer.msg('请选择要上传的图片');return;
-        }
-        if(status == '' || status == undefined || status == 'undefined'){
-            layer.msg('请选择状态');return;
-        }
-        var obj = new Object();
-        obj.pid = pid;
-        obj.title = title;
-        obj.desc = desc;
-        obj.pic_curr = pic_curr;
-        obj.url = url;
-        obj.status = status;
-        $.post(
-            url2,
-            obj,
-            function (ret){
-                if(ret.status == true){
-                    layer.msg(ret.msg,{icon:1,time:1500},function (){
-                        parent.layer.close();
-                        parent.location.reload();
-                    });
-                }else{
-                    layer.msg(ret.msg);
-                }
-            },'json'
-        );
-    };
-    //编辑案例详情
-    var detail_edit = function detail_edit(objthis){
-        var url = $(objthis).attr('data-url');
-        layer.open({
-            type: 2,
-            title: "编辑案例详情页",
-            maxmin: false,
-            shadeClose: true, //点击遮罩关闭层
-            scrollbar: false,
-            area: ['70%', '60%'],
-            content: url,
-        });
-    };
-    //编辑案例详情的确认提交
-    var edit_detail = function edit_detail(objthis){
-        var url2 = $(objthis).attr('data-url');
-        var pid = $('#pid').val();
-        var title = $('#title').val();
-        var desc = $('#desc').val();
-        var pic_curr = $('#pic_curr').val();
-        var url = $('#url').val();
-        var status = $('#status').val();
-        var id = $('#detail_id').val();
-        if(pid == '' || pid == undefined || pid == 'undefined'){
-            layer.msg('请选择当前子案例的父类');return;
-        }
-        if(title == '' || title == undefined || title == 'undefined'){
-            $('#title').focus();
-            layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
-        }
-        if(desc == '' || desc == undefined || desc == 'undefined'){
-            $('#desc').focus();
-            layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
-        }
-        if(url == '' || url == undefined || url == 'undefined'){
-            $('#url').focus();
-            layer.tips('URL不能为空!','#url',{tips:[1,'#c00']});return;
-        }
-        if(pic_curr == '' || pic_curr == undefined || pic_curr == 'undefined'){
-            layer.msg('请选择要上传的图片');return;
-        }
-        if(status == '' || status == undefined || status == 'undefined'){
-            layer.msg('请选择状态');return;
-        }
-        var obj = new Object();
-        obj.pid = pid;
-        obj.title = title;
-        obj.desc = desc;
-        obj.pic_curr = pic_curr;
-        obj.url = url;
-        obj.status = status;
-        obj.id = id;
-        $.post(
-            url2,
-            obj,
-            function (ret){
-                if(ret.status == true){
-                    layer.msg(ret.msg,{icon:1,time:1500},function (){
-                        parent.layer.close();
-                        parent.location.reload();
-                    });
-                }else{
-                    layer.msg(ret.msg);
-                }
-            },'json'
-        );
-    };
+
     return {
         changepas: changepas,
         change_password: change_password,
@@ -907,9 +832,6 @@ var admin_module = (function (){
         add_case:add_case,
         edit_case:edit_case,
         case_edit:case_edit,
-        add_case_detail:add_case_detail,
-        detail_edit:detail_edit,
-        edit_detail:edit_detail,
     }
 
 })();

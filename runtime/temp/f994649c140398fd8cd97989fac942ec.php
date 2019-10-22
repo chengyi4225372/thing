@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/homes/index.html";i:1571726576;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/homes/index.html";i:1571732146;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -205,7 +205,7 @@
                             <div>惠灵工</div>
                             <div>一站用工案例</div>
                             <a href="#">
-                                <imgsrc="/static/home/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
