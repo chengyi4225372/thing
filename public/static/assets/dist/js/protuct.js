@@ -55,7 +55,6 @@ $('.adds').click(function(){
     var purl   =  $("#purl").val();
     var names  = $("#names").val();
     var desc   = $("#desc").val();
-    var idea   = $("#idea").val();
     var imgs    = $('#Images').val();
     var status = $('#status option:selected').val();
 
@@ -81,7 +80,7 @@ $('.adds').click(function(){
         return ;
     }
 
-    $.post(url,{'purl':purl,'names':names,'desc':desc,'idea':idea,'imgs':imgs,'status':status},function(ret){
+    $.post(url,{'purl':purl,'names':names,'desc':desc,'imgs':imgs,'status':status},function(ret){
           if(ret.code == 200){
               layer.msg(ret.msg,function(){
                   parent.location.href = "index";
@@ -118,13 +117,9 @@ $('.edits').click(function(){
     var purl   = $("#purl").val();
     var names  = $("#names").val();
     var desc   = $("#desc").val();
-    var idea   = $("#idea").val();
     var imgs   = $('#Images').val();
     var status = $('#status option:selected').val();
     var pid    = $('#pid').val();
-
-
-
 
     if(purl == '' || purl==undefined){
         layer.msg('请输入连接地址');
@@ -153,13 +148,7 @@ $('.edits').click(function(){
         return ;
     }
 
-    if(names =='' || names == undefined){
-        layer.msg('请输入产品名称');
-        return false;
-    }
-
-
-    $.post(url,{'purl':purl,'names':names,'desc':desc,'idea':idea,'imgs':imgs,'status':status,'id':pid},function(ret){
+    $.post(url,{'purl':purl,'names':names,'desc':desc,'imgs':imgs,'status':status,'id':pid},function(ret){
         if(ret.code == 200){
             layer.msg(ret.msg,function(){
                 parent.location.href = "index";

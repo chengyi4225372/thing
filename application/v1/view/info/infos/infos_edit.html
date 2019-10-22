@@ -2,7 +2,7 @@
 {block name='content'}
 <style>
     .dialog-content{margin:20px;}
-    .dialog-footer{position:fixed;right:39%;top:82%}
+    .dialog-footer{right:39%;top:82%;margin-left:30%; }
     .red-color{color:red;}
 </style>
 <div class="dialog-content">
@@ -30,19 +30,17 @@
                 <div class="form-group">
                     <label for="content" class="col-sm-3 control-label">新闻详情：</label>
                     <div class="col-sm-9">
-                        <textarea class="form-control form-control-sm" name="content" id="content">{$info.content}</textarea>
+                        <script id="content" name="content" type="text/plain">{$info.content}</script>
                     </div>
                 </div>
-
-
                 <input type="hidden" id="mid" value="{$info.id}">
             </div>
 
         </div>
         <div class="td-align dialog-footer">
             <button class="btn btn-warning cancle"> <i class="fa fa-close"></i> 取消</button>
-
             <button class="btn btn-primary infos-edits" type="button"  data-url="{:url('/v1/info/infos/infosEdit')}"><i class="fa fa-save"></i> 确定提交</button>
+
         </div>
     </form>
 </div>
