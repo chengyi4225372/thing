@@ -67,7 +67,7 @@ class Protucts extends AuthController
               'desc'  =>$param['desc'],
           );
 
-           $ret = Protuctservice::instance()->protuctAdd($array,['id'=>$param['id']]);
+           $ret = Protuctservice::instance()->updateByid($array,$param['id']);
            if($ret){
                return json(['code'=>200,'msg'=>'操作成功']);
            }else {

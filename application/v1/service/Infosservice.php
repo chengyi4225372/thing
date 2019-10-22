@@ -30,11 +30,11 @@ class Infosservice
      */
     public function getList($param){
        if(empty($param)){
-           $list = Info::instance()->order(['create_time'=>'desc'])->paginate(15);
+           $list = Info::instance()->where(['status'=>1])->order(['create_time'=>'desc'])->paginate(15);
        }
 
         if(!empty($param) && isset($param)){
-            $list = Info::instance()->where(['title'=>['like','%'.$param.'%']])->order(['create_time'=>'desc'])->paginate(15);
+            $list = Info::instance()->where(['title'=>['like','%'.$param.'%'],['status'=>1]])->order(['create_time'=>'desc'])->paginate(15);
         }
 
        return $list;
@@ -55,6 +55,11 @@ class Infosservice
         return $rest;
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     * 通过id 获取信息
+     */
     public function getId($id){
         $info = Info::instance()->where(['id'=>$id])->find();
         return $info;
@@ -65,6 +70,7 @@ class Infosservice
      *  array('pid'=>1)
      */
     public function biao($array){
+        $array['status'] =1;
         $arr = Info::instance()->where($array)->order('create_time desc')->limit(0,2)->select();
         return $arr;
     }
@@ -74,8 +80,18 @@ class Infosservice
      *  array('pid'=>2)
      */
     public function shang($array){
+        $array['status'] =1;
         $arr = Info::instance()->where($array)->order('create_time desc')->limit(0,2)->select();
         return $arr;
+    }
+
+    /**
+     * id string
+     * 删除功能
+     */
+    public function dels($arr,$id){
+        $ret = Info::instance()->where(['id'=>$id])->update($arr);
+        return $ret;
     }
 
 }

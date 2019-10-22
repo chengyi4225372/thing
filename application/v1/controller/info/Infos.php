@@ -17,6 +17,7 @@ class Infos extends  AuthController
         return $this->fetch();
     }
 
+    return false;
   }
 
 
@@ -74,8 +75,26 @@ class Infos extends  AuthController
   }
 
 
-  //删除 todo
+  //删除
   public function infoDels(){
 
+     if($this->request->isGet()){
+        $id = input('get.id','','int');
+
+        if(empty($id)){
+            return false;
+        }
+
+        $arr = ['status'=>0];
+        $ret = Infosservice::instance()->dels($arr,$id);
+
+        if($ret){
+          return json(['code'=>200,'msg'=>'操作成功']);
+        }else{
+            return json(['code'=>400,'msg'=>'操作失败']);
+        }
+     }
+     return false;
   }
+
 }
