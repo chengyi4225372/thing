@@ -46,6 +46,18 @@ class Protuctservice
           return  $ret;
      }
 
+
+    /**
+     * 编辑
+     * arr  array
+     * id  string
+     * return bool
+     */
+     public function updateByid($arr,$id){
+         $ret = Protuct::instance()->where(['id'=>$id])->update($arr);
+         return $ret;
+     }
+
     /**
      * $array array
      * 正常数据

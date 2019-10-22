@@ -11,7 +11,7 @@ class Homes extends Controller
         if($this->request->isGet()){
 
             //慧享产品
-            $array = ['del_time'=>0,'status'=>1];
+            $array = array('status'=>'1');
             $protuct = Protuctservice::instance()->normal($array);
             $this->assign('protuct',$protuct);
 

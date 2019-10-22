@@ -10,3 +10,12 @@
 ---------------------------------------------------------------
 [ 2019-10-22T11:03:03+08:00 ] 172.26.2.48 GET /v1/systematic/cases/editdetail.html?id=1
 [ error ] [8]未定义变量: parent[/opt/web/hui-/runtime/temp/f8549ee4420f9446948cadf9c70ad323.php:67]
+---------------------------------------------------------------
+[ 2019-10-22T14:13:05+08:00 ] 127.0.0.1 GET /
+[ error ] [0]致命错误: Call to a member function toArray() on array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Protuctservice.php:54]
+---------------------------------------------------------------
+[ 2019-10-22T14:15:31+08:00 ] 127.0.0.1 GET /
+[ error ] [0]致命错误: Call to a member function toArray() on array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Homes.php:15]
+---------------------------------------------------------------
+[ 2019-10-22T14:15:32+08:00 ] 127.0.0.1 GET /
+[ error ] [0]致命错误: Call to a member function toArray() on array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Homes.php:15]
