@@ -32,8 +32,14 @@ class Protuctservice
     /**
      * 获取所有产品
      */
-    public function getList(){
-       $list = Protuct::instance()->where(['del_time'=>0])->order(['id'=>'desc'])->paginate(15);
+    public function getList($names){
+      if(empty($names) || !isset($names)){
+          $list = Protuct::instance()->where(['del_time'=>0])->order(['id'=>'desc'])->paginate(15);
+      }
+
+      if(!empty($names) && isset($names)){
+      $list = Protuct::instance()->where(['del_time'=>0,'names'=>['like','%'.$names.'%']])->order(['id'=>'desc'])->paginate(15);
+      }
        return $list;
     }
 

@@ -10,7 +10,8 @@ class Protucts extends AuthController
    public function index(){
 
       if($this->request->isGet()){
-          $list = Protuctservice::instance()->getList();
+          $names = input('get.names','','trim');
+          $list = Protuctservice::instance()->getList($names);
           $this->assign('list',$list);
           return $this->fetch();
       }

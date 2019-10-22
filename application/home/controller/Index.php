@@ -4,8 +4,12 @@ use think\Controller;
 use app\v1\service\Protuctservice;
 use app\v1\service\Infosservice;
 use app\v1\service\Systems;
+<<<<<<< HEAD:application/home/controller/Homes.php
 use app\v1\service\Caseservice;
 class Homes extends Controller
+=======
+class Index extends Controller
+>>>>>>> e7e201add2e2669969cb83e73eaefe3b1c351493:application/home/controller/Index.php
 {
     public function index(){
 
@@ -33,5 +37,6 @@ class Homes extends Controller
             $this->assign('shang',$shang);
             return $this->fetch();
         }
+        return false;
     }
 }
