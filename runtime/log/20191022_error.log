@@ -27,3 +27,6 @@
 ---------------------------------------------------------------
 [ 2019-10-22T17:20:13+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index.html?names=%E5%93%88%E5%93%88%E5%93%88
 [ error ] [8]未定义数组下标: 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:319]
+---------------------------------------------------------------
+[ 2019-10-22T18:23:00+08:00 ] 127.0.0.1 HEAD /
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Response.php:316]
