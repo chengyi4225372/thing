@@ -10,3 +10,6 @@
 ---------------------------------------------------------------
 [ 2019-10-22T11:03:03+08:00 ] 172.26.2.48 GET /v1/systematic/cases/editdetail.html?id=1
 [ error ] [8]未定义变量: parent[/opt/web/hui-/runtime/temp/f8549ee4420f9446948cadf9c70ad323.php:67]
+---------------------------------------------------------------
+[ 2019-10-22T13:48:49+08:00 ] 172.26.2.48 GET /
+[ error ] [0]类的属性不存在:app\common\model\Protuct->idea[/opt/web/hui-/thinkphp/library/think/Model.php:624]
