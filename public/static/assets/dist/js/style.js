@@ -205,7 +205,7 @@ var admin_module = (function (){
                 }else{
                     layer.msg(ret.msg);
                 }
-            }
+            },'json'
         );
     };
 
@@ -263,7 +263,7 @@ var admin_module = (function (){
                 }else{
                     layer.msg(ret.msg);
                 }
-            }
+            },'json'
         );
     };
 
@@ -293,23 +293,23 @@ var admin_module = (function (){
         //网站名称不能为空
         if(title == undefined || title == 'undefined' || title == ''){
             $('#title').focus();
-            layer.tips('网站名称不能为空!','#title',{tips:[1,'#c00']});
+            layer.tips('网站名称不能为空!','#title',{tips:[1,'#c00']});return;
         }
         //icp不能为空
         if(icp == undefined || icp == 'undefined' || icp == ''){
             $('#icp').focus();
-            layer.tips('ICP备案号!','#icp',{tips:[1,'#c00']});
+            layer.tips('ICP备案号!','#icp',{tips:[1,'#c00']});return;
         }
         //统计代码不能为空
         if(count_code == undefined || count_code == 'undefined' || count_code == ''){
             $('#count_code').focus();
-            layer.tips('统计代码不能为空!','#count_code',{tips:[1,'#c00']});
+            layer.tips('统计代码不能为空!','#count_code',{tips:[1,'#c00']});return;
         }
 
         //固定电话不能为空
         if(tel == undefined || tel == 'undefined' || tel == ''){
             $('#tel').focus();
-            layer.tips('固定电话不能为空!','#tel',{tips:[1,'#c00']});
+            layer.tips('固定电话不能为空!','#tel',{tips:[1,'#c00']});return;
         }
         var obj = new Object();
         obj.title = title;
@@ -329,7 +329,7 @@ var admin_module = (function (){
                 }else{
                     layer.msg(ret.msg);
                 }
-            }
+            },'json'
         );
 
     }
@@ -359,23 +359,23 @@ var admin_module = (function (){
         //网站名称不能为空
         if(title == undefined || title == 'undefined' || title == ''){
             $('#title').focus();
-            layer.tips('网站名称不能为空!','#title',{tips:[1,'#c00']});
+            layer.tips('网站名称不能为空!','#title',{tips:[1,'#c00']});return;
         }
         //icp不能为空
         if(icp == undefined || icp == 'undefined' || icp == ''){
             $('#icp').focus();
-            layer.tips('ICP备案号!','#icp',{tips:[1,'#c00']});
+            layer.tips('ICP备案号!','#icp',{tips:[1,'#c00']});return;
         }
         //统计代码不能为空
         if(count_code == undefined || count_code == 'undefined' || count_code == ''){
             $('#count_code').focus();
-            layer.tips('统计代码不能为空!','#count_code',{tips:[1,'#c00']});
+            layer.tips('统计代码不能为空!','#count_code',{tips:[1,'#c00']});return;
         }
 
         //固定电话不能为空
         if(tel == undefined || tel == 'undefined' || tel == ''){
             $('#tel').focus();
-            layer.tips('固定电话不能为空!','#tel',{tips:[1,'#c00']});
+            layer.tips('固定电话不能为空!','#tel',{tips:[1,'#c00']});return;
         }
         var id = $('#site_id').val();
         var obj = new Object();
@@ -397,7 +397,7 @@ var admin_module = (function (){
                 }else{
                     layer.msg(ret.msg);
                 }
-            }
+            },'json'
         );
     };
 
@@ -494,7 +494,7 @@ var admin_module = (function (){
                 }else{
                     layer.msg(ret.msg);
                 }
-            }
+            },'json'
         );
     };
 
@@ -543,7 +543,7 @@ var admin_module = (function (){
                 }else{
                     layer.msg(ret.msg);
                 }
-            }
+            },'json'
         );
     };
 
@@ -573,6 +573,314 @@ var admin_module = (function (){
         });
     });
 
+    //添加主案例的弹窗
+    $(document).on('click','#addcase',function (){
+        var url = $(this).attr('data-url');
+        layer.open({
+            type: 2,
+            title: "添加主案例",
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            scrollbar: false,
+            area: ['70%', '60%'],
+            content: url,
+        });
+    });
+    var add_case = function add_case(objthis){
+        var url = $(objthis).attr('data-url');
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var original_vat_amount = $('#original_vat_amount').val();
+        var original_income_tax = $('#original_income_tax').val();
+        var year_ratal = $('#year_ratal').val();
+        var campus_policy = $('#campus_policy').val();
+        var campus_award     = $('#campus_award ').val();
+        var end_tax = $('#end_tax').val();
+        var status = $('#status').val();
+        //数据校验
+        if(title == '' || title == undefined || title == 'undefined'){
+            $('#title').focus();
+            layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
+        }
+        if(desc == '' || desc == undefined || desc == 'undefined'){
+            $('#desc').focus();
+            layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
+        }
+        if(original_vat_amount == '' || original_vat_amount == undefined || original_vat_amount == 'undefined'){
+            $('#original_vat_amount').focus();
+            layer.tips('原增值税纳税额不能为空!','#original_vat_amount',{tips:[1,'#c00']});return;
+        }
+        if(original_income_tax == '' || original_income_tax == undefined || original_income_tax == 'undefined'){
+            $('#original_income_tax').focus();
+            layer.tips('原所得税纳税额不能为空!','#original_income_tax',{tips:[1,'#c00']});return;
+        }
+        if(year_ratal == '' || year_ratal == undefined || year_ratal == 'undefined'){
+            $('#year_ratal').focus();
+            layer.tips('年纳税额不能为空!','#year_ratal',{tips:[1,'#c00']});return;
+        }
+        if(campus_policy == '' || campus_policy == undefined || campus_policy == 'undefined'){
+            $('#campus_policy').focus();
+            layer.tips('园区政策不能为空!','#campus_policy',{tips:[1,'#c00']});return;
+        }
+        if(campus_award == '' || campus_award == undefined || campus_award == 'undefined'){
+            $('#campus_award').focus();
+            layer.tips('园区政策奖励额不能为空!','#campus_award',{tips:[1,'#c00']});return;
+        }
+        if(end_tax == '' || end_tax == undefined || end_tax == 'undefined'){
+            $('#end_tax').focus();
+            layer.tips('节税额不能为空!','#end_tax',{tips:[1,'#c00']});return;
+        }
+        if(status == '' || status == undefined || status == 'undefined'){
+            layer.msg('请选择状态');return;
+        }
+        var obj = new Object();
+        obj.title = title;
+        obj.desc = desc;
+        obj.original_vat_amount = original_vat_amount;
+        obj.original_income_tax = original_income_tax;
+        obj.year_ratal = year_ratal;
+        obj.campus_policy = campus_policy;
+        obj.campus_award = campus_award;
+        obj.end_tax = end_tax;
+        obj.status = status;
+
+        $.post(
+            url,
+            obj,
+            function (ret){
+                if(ret.status == true){
+                    layer.msg(ret.msg,{icon:1,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }else{
+                    layer.msg(ret.msg);
+                }
+            },'json'
+        );
+    };
+    //编辑主案例弹窗
+    var edit_case = function edit_case(objthis){
+        var url = $(objthis).attr('data-url');
+        layer.open({
+            type: 2,
+            title: "编辑主案例",
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            scrollbar: false,
+            area: ['70%', '60%'],
+            content: url,
+        });
+    };
+
+    //主案例确认提交
+    var case_edit = function case_edit(objthis){
+        var url = $(objthis).attr('data-url');
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var original_vat_amount = $('#original_vat_amount').val();
+        var original_income_tax = $('#original_income_tax').val();
+        var year_ratal = $('#year_ratal').val();
+        var campus_policy = $('#campus_policy').val();
+        var campus_award     = $('#campus_award ').val();
+        var end_tax = $('#end_tax').val();
+        var status = $('#status').val();
+        var case_id = $('#case_id').val();
+        //数据校验
+        if(title == '' || title == undefined || title == 'undefined'){
+            $('#title').focus();
+            layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
+        }
+        if(desc == '' || desc == undefined || desc == 'undefined'){
+            $('#desc').focus();
+            layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
+        }
+        if(original_vat_amount == '' || original_vat_amount == undefined || original_vat_amount == 'undefined'){
+            $('#original_vat_amount').focus();
+            layer.tips('原增值税纳税额不能为空!','#original_vat_amount',{tips:[1,'#c00']});return;
+        }
+        if(original_income_tax == '' || original_income_tax == undefined || original_income_tax == 'undefined'){
+            $('#original_income_tax').focus();
+            layer.tips('原所得税纳税额不能为空!','#original_income_tax',{tips:[1,'#c00']});return;
+        }
+        if(year_ratal == '' || year_ratal == undefined || year_ratal == 'undefined'){
+            $('#year_ratal').focus();
+            layer.tips('年纳税额不能为空!','#year_ratal',{tips:[1,'#c00']});return;
+        }
+        if(campus_policy == '' || campus_policy == undefined || campus_policy == 'undefined'){
+            $('#campus_policy').focus();
+            layer.tips('园区政策不能为空!','#campus_policy',{tips:[1,'#c00']});return;
+        }
+        if(campus_award == '' || campus_award == undefined || campus_award == 'undefined'){
+            $('#campus_award').focus();
+            layer.tips('园区政策奖励额不能为空!','#campus_award',{tips:[1,'#c00']});return;
+        }
+        if(end_tax == '' || end_tax == undefined || end_tax == 'undefined'){
+            $('#end_tax').focus();
+            layer.tips('节税额不能为空!','#end_tax',{tips:[1,'#c00']});return;
+        }
+        if(status == '' || status == undefined || status == 'undefined'){
+            layer.msg('请选择状态');return;
+        }
+        var obj = new Object();
+        obj.title = title;
+        obj.desc = desc;
+        obj.original_vat_amount = original_vat_amount;
+        obj.original_income_tax = original_income_tax;
+        obj.year_ratal = year_ratal;
+        obj.campus_policy = campus_policy;
+        obj.campus_award = campus_award;
+        obj.end_tax = end_tax;
+        obj.status = status;
+        obj.case_id = case_id;
+
+        $.post(
+            url,
+            obj,
+            function (ret){
+                if(ret.status == true){
+                    layer.msg(ret.msg,{icon:1,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }else{
+                    layer.msg(ret.msg);
+                }
+            },'json'
+        );
+    };
+    //添加案例详情页
+    $(document).on('click','#adddetail',function (){
+        var url = $(this).attr('data-url');
+        layer.open({
+            type: 2,
+            title: "添加案例详情页",
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            scrollbar: false,
+            area: ['70%', '60%'],
+            content: url,
+        });
+    });
+    //添加案例详情的提交页面
+    var add_case_detail = function add_case_detail(objthis){
+        var url2 = $(objthis).attr('data-url');
+        var pid = $('#pid').val();
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var pic_curr = $('#pic_curr').val();
+        var url = $('#url').val();
+        var status = $('#status').val();
+        if(pid == '' || pid == undefined || pid == 'undefined'){
+            layer.msg('请选择当前子案例的父类');return;
+        }
+        if(title == '' || title == undefined || title == 'undefined'){
+            $('#title').focus();
+            layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
+        }
+        if(desc == '' || desc == undefined || desc == 'undefined'){
+            $('#desc').focus();
+            layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
+        }
+        if(url == '' || url == undefined || url == 'undefined'){
+            $('#url').focus();
+            layer.tips('URL不能为空!','#url',{tips:[1,'#c00']});return;
+        }
+        if(pic_curr == '' || pic_curr == undefined || pic_curr == 'undefined'){
+            layer.msg('请选择要上传的图片');return;
+        }
+        if(status == '' || status == undefined || status == 'undefined'){
+            layer.msg('请选择状态');return;
+        }
+        var obj = new Object();
+        obj.pid = pid;
+        obj.title = title;
+        obj.desc = desc;
+        obj.pic_curr = pic_curr;
+        obj.url = url;
+        obj.status = status;
+        $.post(
+            url2,
+            obj,
+            function (ret){
+                if(ret.status == true){
+                    layer.msg(ret.msg,{icon:1,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }else{
+                    layer.msg(ret.msg);
+                }
+            },'json'
+        );
+    };
+    //编辑案例详情
+    var detail_edit = function detail_edit(objthis){
+        var url = $(objthis).attr('data-url');
+        layer.open({
+            type: 2,
+            title: "编辑案例详情页",
+            maxmin: false,
+            shadeClose: true, //点击遮罩关闭层
+            scrollbar: false,
+            area: ['70%', '60%'],
+            content: url,
+        });
+    };
+    //编辑案例详情的确认提交
+    var edit_detail = function edit_detail(objthis){
+        var url2 = $(objthis).attr('data-url');
+        var pid = $('#pid').val();
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var pic_curr = $('#pic_curr').val();
+        var url = $('#url').val();
+        var status = $('#status').val();
+        var id = $('#detail_id').val();
+        if(pid == '' || pid == undefined || pid == 'undefined'){
+            layer.msg('请选择当前子案例的父类');return;
+        }
+        if(title == '' || title == undefined || title == 'undefined'){
+            $('#title').focus();
+            layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
+        }
+        if(desc == '' || desc == undefined || desc == 'undefined'){
+            $('#desc').focus();
+            layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
+        }
+        if(url == '' || url == undefined || url == 'undefined'){
+            $('#url').focus();
+            layer.tips('URL不能为空!','#url',{tips:[1,'#c00']});return;
+        }
+        if(pic_curr == '' || pic_curr == undefined || pic_curr == 'undefined'){
+            layer.msg('请选择要上传的图片');return;
+        }
+        if(status == '' || status == undefined || status == 'undefined'){
+            layer.msg('请选择状态');return;
+        }
+        var obj = new Object();
+        obj.pid = pid;
+        obj.title = title;
+        obj.desc = desc;
+        obj.pic_curr = pic_curr;
+        obj.url = url;
+        obj.status = status;
+        obj.id = id;
+        $.post(
+            url2,
+            obj,
+            function (ret){
+                if(ret.status == true){
+                    layer.msg(ret.msg,{icon:1,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }else{
+                    layer.msg(ret.msg);
+                }
+            },'json'
+        );
+    };
     return {
         changepas: changepas,
         change_password: change_password,
@@ -596,7 +904,12 @@ var admin_module = (function (){
         add_slideshow: add_slideshow,
         edit_slideshow:edit_slideshow,
         slideshow_edit:slideshow_edit,
-
+        add_case:add_case,
+        edit_case:edit_case,
+        case_edit:case_edit,
+        add_case_detail:add_case_detail,
+        detail_edit:detail_edit,
+        edit_detail:edit_detail,
     }
 
 })();

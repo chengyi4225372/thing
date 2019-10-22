@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+[ 2019-10-22T09:11:38+08:00 ] 172.26.2.48 GET /v1/systematic/cases/adddetail.html
+[ error ] [0]致命错误: Call to a member function toArray() on array[/opt/web/hui-/application/v1/service/Caseservice.php:169]
+---------------------------------------------------------------
+[ 2019-10-22T10:12:39+08:00 ] 172.26.2.48 POST /v1/systematic/cases/adddetail.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[/opt/web/hui-/application/v1/service/Caseservice.php:200]
+---------------------------------------------------------------
+[ 2019-10-22T10:13:54+08:00 ] 172.26.2.48 POST /v1/systematic/cases/adddetail.html
+[ error ] [2]current() expects parameter 1 to be array, null given[/opt/web/hui-/thinkphp/helper.php:582]
+---------------------------------------------------------------
+[ 2019-10-22T11:03:03+08:00 ] 172.26.2.48 GET /v1/systematic/cases/editdetail.html?id=1
+[ error ] [8]未定义变量: parent[/opt/web/hui-/runtime/temp/f8549ee4420f9446948cadf9c70ad323.php:67]
