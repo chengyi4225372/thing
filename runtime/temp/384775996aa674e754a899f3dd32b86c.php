@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/system/setting.html";i:1571655338;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571659253;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571654923;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/system/setting.html";i:1571655338;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571665422;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571660236;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -349,6 +349,20 @@
                 </ul>
             </li>
 
+            <li class="treeview">
+                <a href="#">
+                    <i class="glyphicon glyphicon-user"></i> <span>合作伙伴</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                    <li class="">
+                        <a href="<?php echo url('/v1/partners/partner/index'); ?>"><i class="fa fa-circle-o"></i>合作伙伴列表</a>
+                    </li>
+                </ul>
+            </li>
+
 
             <li class="treeview <?php if($paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                 <a href="#">
@@ -499,6 +513,7 @@
 
 <script src="/static/assets/dist/js/protuct.js"></script>
 <script src="/static/assets/dist/js/infos.js"></script>
+<script src="/static/assets/dist/js/partners.js"></script>
 <script>
     admin_module.changepas();
 </script>

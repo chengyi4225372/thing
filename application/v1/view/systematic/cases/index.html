@@ -34,8 +34,8 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addslideshow" data-url="{:url('/v1/systematic/system/addslideshow')}">
-                <i class="fa fa-plus-circle">添加轮播图</i></button>
+                    id="addcase" data-url="{:url('/v1/systematic/cases/addcase')}">
+                <i class="fa fa-plus-circle">添加主案例</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
@@ -55,7 +55,7 @@
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-                {volist name="list" id="data_list"}
+                {volist name="data['list']['data']" id="data_list"}
                 <tr>
                     <td class="td-align td-padding">
                         <input type="checkbox" name="box_checked" data-id="{:isset($data_list['id']) ? $data_list['id'] : ''}" class="data-check_box">
@@ -69,10 +69,14 @@
                     <td class="text-center">{:isset($data_list['campus_award']) ? $data_list['campus_award'] : ''}</td>
                     <td class="text-center">{:isset($data_list['end_tax']) ? $data_list['end_tax'] : ''}</td>
                     <td class="text-center">
-                        {:isset($data_list['status']) ? $data_list['status'] : ''}
+                        {if $data_list['status'] == 1}
+                        <span class="btn btn-success">{$status[$data_list['status']]}</span>
+                        {else/}
+                        <span class="btn btn-danger">{$status[$data_list['status']]}</span>
+                        {/if}
                     </td>
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/systematic/system/editslideshow')}" onclick="admin_module.edit_slideshow(this)">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/systematic/cases/editcase',['id' => $data_list['id']])}" onclick="admin_module.edit_case(this)">编辑</a>
                     </td>
                 </tr>
                 {/volist}
@@ -80,7 +84,7 @@
 
                 </tbody>
             </table>
-            <div class="pages"></div>
+            <div class="pages">{$data['page']}</div>
         </div>
     </div>
 

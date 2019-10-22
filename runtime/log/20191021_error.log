@@ -439,3 +439,12 @@
 =======
 >>>>>>> 4793ee2e0817dfd3d7f0f316cf5604a920439291
 >>>>>>> bc65663c8e6172e8b642a4c6874b840d3285cfe2
+---------------------------------------------------------------
+[ 2019-10-21T20:40:10+08:00 ] 172.26.2.48 GET /v1/systematic/cases/addcase.html
+[ error ] [8]未定义变量: status[/opt/web/hui-/runtime/temp/f11abe2b28e9b69118279e05c4b47095.php:115]
+---------------------------------------------------------------
+[ 2019-10-21T21:32:10+08:00 ] 172.26.2.48 GET /v1/systematic/cases/editcase.html?id=2
+[ error ] [0]语法解析错误: syntax error, unexpected '<'[/opt/web/hui-/runtime/temp/24f0e31a216e63095c7befbd23c0d115.php:116]
+---------------------------------------------------------------
+[ 2019-10-21T21:37:15+08:00 ] 172.26.2.48 POST /v1/systematic/cases/editcase.html
+[ error ] [8]未定义数组索引: id[/opt/web/hui-/application/v1/controller/systematic/Cases.php:56]

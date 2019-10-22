@@ -1,0 +1,80 @@
+{extend name="layout/dialog" /}
+{block name='content'}
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label">标题：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title" value="{$data['title']}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc" class="col-sm-3 control-label">描述：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value="{$data['desc']}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="original_vat_amount" class="col-sm-3 control-label">原增值税纳税额：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="original_vat_amount" class="form-control form-control-sm" name="original_vat_amount" value="{$data['original_vat_amount']}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="original_income_tax" class="col-sm-3 control-label">原所得税纳税额：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="original_income_tax" class="form-control form-control-sm" name="original_income_tax" value="{$data['original_income_tax']}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="year_ratal" class="col-sm-3 control-label">年纳税额：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="year_ratal" class="form-control form-control-sm" name="year_ratal" value="{$data['year_ratal']}"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="campus_policy" class="col-sm-3 control-label">园区政策：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="campus_policy" class="form-control form-control-sm" name="campus_policy" value="{$data['campus_policy']}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="campus_award" class="col-sm-3 control-label">园区政策奖励额：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="campus_award" class="form-control form-control-sm" name="campus_award" value="{$data['campus_award']}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="end_tax" class="col-sm-3 control-label">节税额：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="end_tax" class="form-control form-control-sm" name="end_tax" value="{$data['end_tax']}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="status" class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select id="status" name="status" class="form-control form-control-sm">
+                            {volist name="status" id="status_list"}
+                            <option value="{$key}" {if $key == $data['status']}selected=selected{/if}>{$status_list}</option>
+                            {/volist}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="td-align dialog-footer" style="top:90%;">
+            <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
+            <input type="hidden" id="case_id" name="case_id" value="{$data['id']}">
+            <button class="btn btn-primary" type="button" onclick="admin_module.case_edit(this)" data-url="{:url('/v1/systematic/cases/editcase')}"><i class="fa fa-save"></i> 确定提交</button>
+        </div>
+    </form>
+</div>
+{/block}
