@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:78:"/opt/web/hui-/public/../application/v1/view/systematic/system/editsetting.html";i:1571638580;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571369306;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:78:"/opt/web/hui-/public/../application/v1/view/systematic/system/editsetting.html";i:1571638580;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -30,6 +30,8 @@
 <link rel="stylesheet" href="/static/assets/components/jstree/themes/default/style.min.css"/>
 <!-- iCheck for checkboxes and radio inputs -->
 <link rel="stylesheet" href="/static/assets/plugins/iCheck/all.css">
+<!--layui-->
+<link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- Font -->
 <link rel="stylesheet" href="/static/assets/dist/css/fontcss.css">
@@ -134,9 +136,19 @@
 <!-- datatables -->
 <script src="/static/assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="/static/assets/plugins/datatables/dataTables.bootstrap.js"></script>
+<!-- 富文本 -->
+<script src="/static/assets/plugins/ueditor//ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- 富文本-->
+
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>
 <script src="/static/assets/dist/js/style.js"></script>
+
+<script src="/static/assets/dist/js/protuct.js"></script>
+<script src="/static/assets/dist/js/infos.js"></script>
+<script src="/static/assets/dist/js/partners.js"></script>
 <script>
     admin_module.changepas();
 </script>

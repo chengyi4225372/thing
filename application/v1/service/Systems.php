@@ -443,5 +443,16 @@ class Systems
         return collection(Site::instance()->order('id desc')->select())->toArray();
     }
 
+    /**
+     * @DESC：获取一条轮播图用来显示在前端
+     * @author: jason
+     * @date: 2019-10-22 02:36:24
+     */
+    public function getOneshow()
+    {
+        $where['status'] = 1;
+        $return_data = Slideshow::where($where)->find()->toArray();
+        return $return_data;
+    }
 
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:80:"/opt/web/hui-/public/../application/v1/view/systematic/system/editslideshow.html";i:1571654143;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571643758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:80:"/opt/web/hui-/public/../application/v1/view/systematic/system/editslideshow.html";i:1571654143;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -146,11 +146,19 @@
 <!-- datatables -->
 <script src="/static/assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="/static/assets/plugins/datatables/dataTables.bootstrap.js"></script>
+<!-- 富文本 -->
+<script src="/static/assets/plugins/ueditor//ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- 富文本-->
+
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>
 <script src="/static/assets/dist/js/style.js"></script>
 
 <script src="/static/assets/dist/js/protuct.js"></script>
+<script src="/static/assets/dist/js/infos.js"></script>
+<script src="/static/assets/dist/js/partners.js"></script>
 <script>
     admin_module.changepas();
 </script>

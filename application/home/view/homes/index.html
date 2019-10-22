@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="__HOME__/css/base.css">
     <link rel="stylesheet" href="__HOME__/css/index.css">
     <script src='__HOME__/js/index.js'></script>
+    <style>
+        .header
+        {
+            background-image: url("{$slideshow['pic']}");
+        }
+    </style>
 </head>
 
 <body>
@@ -63,11 +69,11 @@
 
             <!-- 文字部分-->
             <div class='content_text'>
-                <div class='w'>您公司的一站式服务平台</div>
+                <div class='w'>{$slideshow['title']}</div>
             </div>
 
             <div class='rentong'>
-                <div class='w'>30万客户认同 | 8年专业经验 | 万千客户之选</div>
+                <div class='w'>{$slideshow['desc']}</div>
             </div>
 
             <div class='btn'>
@@ -198,7 +204,7 @@
                             <div>惠灵工</div>
                             <div>一站用工案例</div>
                             <a href="#">
-                                <imgsrc="__HOME__/jiantou.png" alt="">
+                                <img src="__HOME__/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>

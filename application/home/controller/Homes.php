@@ -3,7 +3,7 @@ namespace app\home\controller;
 use think\Controller;
 use app\v1\service\Protuctservice;
 use app\v1\service\Infosservice;
-
+use app\v1\service\Systems;
 class Homes extends Controller
 {
     public function index(){
@@ -18,6 +18,10 @@ class Homes extends Controller
             //招标 招商信息
             $biao   = Infosservice::instance()->biao(['pid'=>1]);
             $shang  = Infosservice::instance()->shang(['pid'=>2]);
+
+            //轮播
+            $slideshow = Systems::instance()->getOneshow();
+            $this->assign('slideshow',$slideshow);
             $this->assign('biao',$biao);
             $this->assign('shang',$shang);
             return $this->fetch();

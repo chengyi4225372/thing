@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/homes/index.html";i:1571713952;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/homes/index.html";i:1571726576;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="/static/home/css/base.css">
     <link rel="stylesheet" href="/static/home/css/index.css">
     <script src='/static/home/js/index.js'></script>
+    <style>
+        .header
+        {
+            background-image: url("<?php echo $slideshow['pic']; ?>");
+        }
+    </style>
 </head>
 
 <body>
@@ -64,11 +70,11 @@
 
             <!-- 文字部分-->
             <div class='content_text'>
-                <div class='w'>您公司的一站式服务平台</div>
+                <div class='w'><?php echo $slideshow['title']; ?></div>
             </div>
 
             <div class='rentong'>
-                <div class='w'>30万客户认同 | 8年专业经验 | 万千客户之选</div>
+                <div class='w'><?php echo $slideshow['desc']; ?></div>
             </div>
 
             <div class='btn'>
@@ -113,7 +119,7 @@
                         <a href="#"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
                         <a href="#"><?php echo (isset($v1['desc']) && ($v1['desc'] !== '')?$v1['desc']:''); ?></a>
                         <ul class='one_pic'>
-                            <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>"><?php echo $v1['idea']; ?></a></li>
+                            <li><a href="#">获取方案</a></li>
                             <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
                         </ul>
                     </li>

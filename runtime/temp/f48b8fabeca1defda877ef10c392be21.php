@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hui-/public/../application/v1/view/systematic/cases/index.html";i:1571664098;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571665422;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571369306;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571660236;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hui-/public/../application/v1/view/systematic/cases/index.html";i:1571664098;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571724611;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -245,6 +245,25 @@
             </li>
 
 
+            <li class="treeview <?php if($paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>案例管理</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
+                        <a href="<?php echo url('/v1/systematic/cases/index'); ?>"><i class="fa fa-circle-o"></i>主案例管理</a>
+                    </li>
+
+                    <li class="<?php if($paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
+                        <a href="<?php echo url('/v1/systematic/cases/casedetail'); ?>"><i class="fa fa-circle-o"></i>案例详情管理</a>
+                    </li>
+
+                </ul>
+            </li>
+
             <li class="treeview <?php if($paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>系统管理</span>
@@ -265,25 +284,6 @@
 
                     <li class="<?php if($paths == '/v1/systematic/system/slideshow'): ?>active<?php endif; ?>">
                         <a href="<?php echo url('/v1/systematic/system/slideshow'); ?>"><i class="fa fa-circle-o"></i>首页轮播图</a>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="treeview <?php if($paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
-                <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>案例管理</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
-                        <a href="<?php echo url('/v1/systematic/cases/index'); ?>"><i class="fa fa-circle-o"></i>主案例管理</a>
-                    </li>
-
-                    <li class="<?php if($paths == '/v1/systematic/cases/casedetail'): ?>active<?php endif; ?>">
-                        <a href="<?php echo url('/v1/systematic/cases/casedetail'); ?>"><i class="fa fa-circle-o"></i>案例详情管理</a>
                     </li>
 
                 </ul>
@@ -392,9 +392,9 @@
 </div>
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.7
+        <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright © 2014-2019 <a href="javascript:void(0)">慧企云后台管理</a>.</strong> All rights
+    <strong>Copyright © 2014-2019 <a href="javascript:void(0)">HLG后台管理</a>.</strong> All rights
     reserved.
 </footer>
 <!-- 加载JS脚本 -->
@@ -428,7 +428,10 @@
 <script src="/static/assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="/static/assets/plugins/datatables/dataTables.bootstrap.js"></script>
 <!-- 富文本 -->
-<script src="/static/assets/components/ckeditor/ckeditor.js"></script>
+<script src="/static/assets/plugins/ueditor//ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- 富文本-->
 
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>

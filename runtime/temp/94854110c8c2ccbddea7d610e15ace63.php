@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:75:"/opt/web/hui-/public/../application/v1/view/systematic/cases/adddetail.html";i:1571708695;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571660236;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:75:"/opt/web/hui-/public/../application/v1/view/systematic/cases/adddetail.html";i:1571725600;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -88,7 +88,7 @@
                         <button type="button" class="layui-btn" id="pic" data-url="<?php echo url('/v1/systematic/system/uploadimg'); ?>">
                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
-                        <img src="" style="width:50px;height:50px;" id="cur_pic">
+                        <img src="/static/default.png" style="width:50px;height:50px;" id="cur_pic">
                         <input type="hidden" name="pic" id="pic_curr"/>
                     </div>
                 </div>
@@ -155,7 +155,10 @@
 <script src="/static/assets/plugins/datatables/jquery.dataTables.js"></script>
 <script src="/static/assets/plugins/datatables/dataTables.bootstrap.js"></script>
 <!-- 富文本 -->
-<script src="/static/assets/components/ckeditor/ckeditor.js"></script>
+<script src="/static/assets/plugins/ueditor//ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/static/assets/plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- 富文本-->
 
 <script src="/static/assets/dist/js/default.js"></script>
 <script src="/static/assets/dist/js/app.js"></script>
