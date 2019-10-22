@@ -3,15 +3,15 @@
 <div class="content" style="margin-bottom:0px;min-height:0px;">
     <div class="row">
         <div class="col-md-12">
-            <form class="form-inline"  id="form">
+            <form class="form-inline">
                 <div class="panel panel-default panel-btn">
                     <div class="panel-heading">
                         <div class="form-group">
-                            <input type="text"  class="form-control" name="username" value="" placeholder="多姓名搜索(空格逗号隔开)">
+                            <input type="text"  class="form-control" name="names" id="names" value="{$Think.get.names}" placeholder="请输入产品名称搜索...">
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-info" id="btn_search" type="Submit"  data-url="{:url('/v1/users/user/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info" id="btn_search_protuct" type="button"  data-url="{:url('/v1/protuct/protucts/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
 
                     </div>

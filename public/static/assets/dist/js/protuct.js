@@ -1,3 +1,17 @@
+//搜索
+$('#btn_search_protuct').click(function(){
+    var url   = $(this).attr('data-url');
+    var names = $('#names').val();
+
+    if(names == '' || names == undefined){
+        layer.msg('搜索条件不能为空')
+        return;
+    }
+    window.location.href = url+"?names="+names;
+})
+
+
+
 $("#addprotuct").click(function(){
     var url = $(this).attr('data-url');
     layer.open({
