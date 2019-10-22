@@ -119,3 +119,31 @@ $('.infos-edits').click(function(){
         }
     },'json')
 })
+
+//删除
+$('.infos_del').click(function(){
+
+    var url = $(this).attr('data-url');
+
+    layer.confirm('您确定要删除？', {
+        btn: ['是的','点错了'] //按钮
+    }, function(){
+        $.get(url,function(ret){
+
+            if(ret.code == 200){
+                layer.msg(ret.msg,{icon:6},function(){
+                    parent.location.href="index";
+                })
+            }
+
+            if(ret.code == 400){
+                layer.msg(ret.msg,{icon:5},function(){
+                    parent.location.href="index";
+                })
+            }
+        },'json')
+    }, function(){
+       parent.layer.closeAll();
+    });
+
+})
