@@ -1,11 +1,3 @@
-//富文本
-var editor;
-$(function() {
-    editor = CKEDITOR.replace('content',{
-        width:600,//设置默认宽度
-            height:400  //设置默认高度,这个高度是不包含顶部菜单的高度
-    });
-});
 
 //搜索
 $('#btn_search').click(function(){
@@ -19,9 +11,13 @@ $('#btn_search').click(function(){
     window.location.href = url+"?title="+title;
 })
 
+//富文本
+var ue = UE.getEditor('content',{initialFrameWidth:'100%',initialFrameHeight:300,charset:"utf-8"});
 
 //添加
 $('#infosadd').click(function(){
+
+
 
     var url = $(this).attr('data-url');
     layer.open({
@@ -29,7 +25,7 @@ $('#infosadd').click(function(){
         title: '添加新闻',
         shadeClose: true,
         shade: 0.8,
-        area: ['60%', '85%'],
+        area: ['65%', '90%'],
         content: url, //iframe的url
     })
 })
@@ -51,7 +47,13 @@ $('.infos-add').click(function(){
         return ;
     }
 
-    var content = editor.document.getBody().getHtml();//取得html文本
+    var content = ue.getContent();//取得html文本
+
+    if(content == '' || content == undefined){
+        layer.msg('请填写新闻编辑内容');
+        return false;
+    }
+
 
     $.post(urls,{'title':title,'pid':pid,'content':content},function(ret){
            if(ret.code == 200){
@@ -76,7 +78,7 @@ $('.infos_edit').click(function(){
         title: '编辑新闻',
         shadeClose: true,
         shade: 0.8,
-        area: ['60%', '85%'],
+        area: ['65%', '90%'],
         content: url, //iframe的url
     })
 });
@@ -99,7 +101,12 @@ $('.infos-edits').click(function(){
         return ;
     }
 
-    var content = editor.document.getBody().getHtml();//取得html文本
+    var content = ue.getContent();//取得html文本
+
+    if(content == '' || content == undefined){
+         layer.msg('请填写新闻编辑内容');
+         return false;
+    }
 
     $.post(urls,{'title':title,'pid':pid,'content':content,'id':id},function(ret){
         if(ret.code == 200){
