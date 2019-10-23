@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571811033;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571811253;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +13,6 @@
     <script src='/static/home/js/index.js'></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/common.js'></script>
-    <script src="/static/home/js/dialog.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/home/css/ui.default.css">
 
     <style>
         .header
@@ -154,13 +152,6 @@
                         <div class='hui_icon'>
                             <div>惠创优</div>
                             <div>节税服务案例</div>
-<<<<<<< HEAD
-
-=======
-<!--                             <a href="#">
-                                <img src="/static/home/images/jiantou.png" alt="">
-                            </a>-->
->>>>>>> c8ff9f8b982d704799eebaa436291b03a934850d
                         </div>
                     </div>
                     <div onclick="click_show(this)" data-attr="huilinggong">
