@@ -33,7 +33,7 @@ class Index extends Controller
 
             $caseInfo = Caseservice::instance()->getallparent();
 
-
+            $this->assign('count',count($caseInfo));
             $this->assign('case_list', $caseInfo);
 
 

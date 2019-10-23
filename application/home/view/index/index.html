@@ -17,11 +17,23 @@
         {
             background-image: url("{$slideshow['pic']|default='__HOME__/images/default.png'}");
         }
+
+        .success_icon > div:nth-of-type(1) {position: absolute;  top: 49px;  left: 14px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('__HOME__/images/huiduoxin.png');  }
+
+        .success_icon > div:nth-of-type(2) {  position: absolute;  top: 106px;  right: -3px;  width: 386px;  height: 166px;  background-size: 100%;  background-image: url('__HOME__/images/huichuangyou.png');  }
+
+        .success_icon > div:nth-of-type(3) {  position: absolute;  top: 190px; left: -1px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('__HOME__/images/huilinggong.png');  }
+
+        .success_icon > div:nth-of-type(4) {  position: absolute;  top: 229px;  right: 6px;  width: 386px;  height: 166px;  background-size: 100%;  background-image: url('__HOME__/images/huizhaoshi.png');  }
+
+        .success_icon > div:nth-of-type(5) {  position: absolute;  bottom: 107px;  left: 12px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('__HOME__/images/huiqidong.png');  }
+
+        .success_icon > div:nth-of-type(6) {  position: absolute;  bottom: 72px;  right: -7px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('__HOME__/images/huichuangye.png');  }
     </style>
 
 </head>
 
-<body>
+<body id="getdata" data="{$count}">
 
     <div class='container'>
 
@@ -142,12 +154,12 @@
                 <div class='success_title'></div>
                 <div class='success_icon'>
                     {volist name="case_list" id="data_list"}
-                    <div onclick="click_show(this)" data-attr="{$data_list['is_show']}">
+                    <div onclick="click_show(this)" class="{$data_list['is_show'].$key}" data="{$count}" data-attr="{$data_list['is_show']}">
                         <div class='{if $key == 1}hui_icon{else /}p_icon{/if}'>
                             <div>{$data_list['title2']}</div>
                             <div>{$data_list['title3']}</div>
                             {if $key != 1}
-                            <a href="#">
+                            <a href="javascript:void(0)">
                                 <img src="__HOME__/images/jiantou.png" alt="">
                             </a>
                             {/if}
@@ -450,10 +462,7 @@
         <div class='partener'>
             <div class='w partener_total'>
                 <div class='parter_icon'></div>
-                <div class='goTop'>
-                    <i></i>
-                    <div>返回顶部</div>
-                </div>
+
                 <!-- <div class='search' id='search'>
                     <input type="text" placeholder="请输入姓名">
                     <input type="text" placeholder="请输入公司名称">
@@ -509,6 +518,11 @@
         </div>
 
 
+
+        <div class='goTop'>
+            <i></i>
+            <div>返回顶部</div>
+        </div>
 
     </div>
 

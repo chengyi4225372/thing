@@ -148,3 +148,9 @@
 ---------------------------------------------------------------
 [ 2019-10-23T17:06:31+08:00 ] 172.26.2.48 GET /v1/info/infos/index.html
 [ error ] [0]语法解析错误: syntax error, unexpected '$paths' (T_VARIABLE)[/opt/web/hui-/runtime/temp/3550082debcdbbc3bb1e5e38176dee21.php:191]
+---------------------------------------------------------------
+[ 2019-10-23T20:08:51+08:00 ] 172.26.2.48 GET /
+[ error ] [2]A non-numeric value encountered[/opt/web/hui-/runtime/temp/fc43eb112f593b1af4478cc2ab82a207.php:155]
+---------------------------------------------------------------
+[ 2019-10-23T20:09:45+08:00 ] 172.26.2.48 GET /
+[ error ] [8]未定义变量: keys[/opt/web/hui-/runtime/temp/fc43eb112f593b1af4478cc2ab82a207.php:155]

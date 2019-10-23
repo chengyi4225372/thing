@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1571813780;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1571834127;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,11 +19,23 @@
         {
             background-image: url("<?php echo (isset($slideshow['pic']) && ($slideshow['pic'] !== '')?$slideshow['pic']:'/static/home/images/default.png'); ?>");
         }
+
+        .success_icon > div:nth-of-type(1) {position: absolute;  top: 49px;  left: 14px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('/static/home/images/huiduoxin.png');  }
+
+        .success_icon > div:nth-of-type(2) {  position: absolute;  top: 106px;  right: -3px;  width: 386px;  height: 166px;  background-size: 100%;  background-image: url('/static/home/images/huichuangyou.png');  }
+
+        .success_icon > div:nth-of-type(3) {  position: absolute;  top: 190px; left: -1px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('/static/home/images/huilinggong.png');  }
+
+        .success_icon > div:nth-of-type(4) {  position: absolute;  top: 229px;  right: 6px;  width: 386px;  height: 166px;  background-size: 100%;  background-image: url('/static/home/images/huizhaoshi.png');  }
+
+        .success_icon > div:nth-of-type(5) {  position: absolute;  bottom: 107px;  left: 12px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('/static/home/images/huiqidong.png');  }
+
+        .success_icon > div:nth-of-type(6) {  position: absolute;  bottom: 72px;  right: -7px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('/static/home/images/huichuangye.png');  }
     </style>
 
 </head>
 
-<body>
+<body id="getdata" data="<?php echo $count; ?>">
 
     <div class='container'>
 
@@ -140,7 +152,7 @@
                 <div class='success_title'></div>
                 <div class='success_icon'>
                     <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
-                    <div onclick="click_show(this)" data-attr="<?php echo $data_list['is_show']; ?>">
+                    <div onclick="click_show(this)" class="<?php echo $data_list['is_show'].$key; ?>" data="<?php echo $count; ?>" data-attr="<?php echo $data_list['is_show']; ?>">
                         <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
                             <div><?php echo $data_list['title2']; ?></div>
                             <div><?php echo $data_list['title3']; ?></div>
@@ -447,10 +459,7 @@
         <div class='partener'>
             <div class='w partener_total'>
                 <div class='parter_icon'></div>
-                <div class='goTop'>
-                    <i></i>
-                    <div>返回顶部</div>
-                </div>
+
                 <!-- <div class='search' id='search'>
                     <input type="text" placeholder="请输入姓名">
                     <input type="text" placeholder="请输入公司名称">
@@ -519,7 +528,10 @@
                 </div>
             
         </div>
-
+        <div class='goTop'>
+            <i></i>
+            <div>返回顶部</div>
+        </div>
     </div>
 
 </body>
