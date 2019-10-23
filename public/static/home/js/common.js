@@ -1,3 +1,5 @@
+
+//手机验证
 function checkPhone(phone) {
     var tel_reg = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
     if (tel_reg.test(phone)) {
@@ -11,7 +13,7 @@ function checkPhone(phone) {
 var gurl = "http://172.26.2.41:8088";
 
 
-   function getErp() {
+function getErp() {
        var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
 
        var data = {};
