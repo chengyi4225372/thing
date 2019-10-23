@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:113:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\infos_edit.html";i:1571715315;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571710980;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:113:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\infos_edit.html";i:1571801703;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571710980;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -73,7 +73,23 @@
                     <label for="username" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻标题：</label>
                     <div class="col-sm-9">
-                        <input type="text"value="<?php echo $info['title']; ?>"  class="form-control form-control-sm" id="title">
+                        <input type="text" value="<?php echo $info['title']; ?>"  class="form-control form-control-sm" id="title">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="keyword" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>新闻关键字：</label>
+                    <div class="col-sm-9">
+                        <input type="text" value="<?php echo $info['keyword']; ?>" class="form-control form-control-sm" id="keyword">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>新闻重点描述：</label>
+                    <div class="col-sm-9">
+                        <textarea  id="desc" class="form-control form-control-sm"  rows="5" ><?php echo $info['desc']; ?></textarea>
                     </div>
                 </div>
 

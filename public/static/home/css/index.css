@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 .container {
     position: relative;
 }
@@ -310,7 +309,7 @@ color:rgba(0,0,0,1);
     /* width:1200px;
     margin: 0 auto; */
     background-color:#F5F9FF;
-    padding-top:48px;
+    padding-top:76px;
     box-sizing: border-box;
 }
 .hui_product .product_logo{
@@ -594,7 +593,7 @@ color:rgba(102,102,102,1);
     top:138px;
     right: -10px;
     width: 370px;
-    height:590px;
+    height:620px;
 }
 .huichuangyou_title{
     font-size:30px;
@@ -633,8 +632,8 @@ color:rgba(102,102,102,1);
 .huiqidong,
 .huichuangye{
     position:absolute;
-    top:8px;
-    left: 25px;
+    top:0px;
+    left: 0px;
     
 }
 .huiduoxin{
@@ -664,7 +663,7 @@ color:rgba(102,102,102,1);
 .con {
     font-size:18px;
 color:rgba(0,0,0,1);
-    width: 306px;
+    width: 370px;
 }
 .con div{
     font-size:14px;
@@ -1094,4 +1093,3 @@ outline:none;
 border:none;
  
 }
->>>>>>> 15928ae43876f85c803767aa87ebf765cba85764

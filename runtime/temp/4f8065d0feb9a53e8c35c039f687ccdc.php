@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571793078;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571801449;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +17,7 @@
     <style>
         .header
         {
-            background-image: url("<?php echo $slideshow['pic']; ?>");
+            background-image: url("<?php if(!empty($slideshow['pic'])): ?><?php echo $slideshow['pic']; else: ?>/static/default.png<?php endif; ?>");
         }
     </style>
 
@@ -144,7 +144,7 @@
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                             <div>惠创优</div>
                             <div>节税服务案例</div>
                             <!-- <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a> -->
                         </div>
                     </div>
@@ -366,45 +366,43 @@
                 <div class='diandiantwo'></div>
                 <div class='w'>
                     <div class='zhao_title'></div>
+
+                    <div class='zhaomethods'>
+                        <div class='totalInfo_title'>招商政策</div>
+                        <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
+                        <div class='totalInfo_content'>
+
+                            <div class='zhao_contentInfo'>
+                                <div><?php echo $ss['title']; ?></div>
+                                <div><?php echo $ss['create_time']; ?></div>
+                            </div>
+                            <div> <?php echo mb_substr($ss['desc'],'0','200','utf-8'); ?></div>
+
+                        </div>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                        <button class='know_more'>了解更多</button>
+                    </div>
+
                     <div class='zhaoTotalInfo'>
                         <div class='totalInfo_title'>招标信息</div>
+                        <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
-                            <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                             <div class='zhao_contentInfo'>
                                 <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                                 <div><?php echo $biaos['create_time']; ?></div>
                             </div>
                             <div>
-                                <?php echo mb_substr($biaos['content'],'0','50','utf-8'); ?>
+                                <?php echo mb_substr($biaos['desc'],'0','200','utf-8'); ?>
                             </div>
-                            <?php endforeach; endif; else: echo "" ;endif; ?>
 
                         </div>
-                        <button class='know_more'>了解更多</button>
-                    </div>
-
-
-                    <div class='zhaomethods'>
-                        <div class='totalInfo_title'>招商政策</div>
-                        <div class='totalInfo_content'>
-                            <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
-                            <div class='zhao_contentInfo'>
-                                <div><?php echo $ss['title']; ?></div>
-                                <div><?php echo $ss['create_time']; ?></div>
-                            </div>
-                            <div>
-                                <?php echo mb_substr($ss['content'],'0','50','utf-8'); ?>
-                            </div>
-                            <?php endforeach; endif; else: echo "" ;endif; ?>
-
-                        </div>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
                         <button class='know_more'>了解更多</button>
                     </div>
 
                 </div>
             </div>
         </div>
-
 
 
         <!-- 合作伙伴 -->

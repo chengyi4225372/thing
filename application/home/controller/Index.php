@@ -27,7 +27,7 @@ class Index extends Controller
             $slideshow = Systems::instance()->getOneshow();
 
             //近期成功案例
-<<<<<<< HEAD
+
 //            $caseInfo = Caseservice::instance()->getallparent();
 //            $arr = [];
 //            foreach ($caseInfo as $key => $val) {
@@ -54,11 +54,11 @@ class Index extends Controller
 //            }
 //
 //            $this->assign('case_list', $caseInfo);
-=======
+
             $caseInfo = Caseservice::instance()->getallparent();
 
             $this->assign('case_list', $caseInfo);
->>>>>>> 15928ae43876f85c803767aa87ebf765cba85764
+
             $this->assign('slideshow', $slideshow);
             $this->assign('biao', $biao);
             $this->assign('shang', $shang);
