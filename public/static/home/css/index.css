@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
 .container {
     position: relative;
 }
@@ -307,8 +311,18 @@ color:rgba(0,0,0,1);
     /* height:908px; */
     /* width:1200px;
     margin: 0 auto; */
+<<<<<<< HEAD
     background-color:#F5F9FF;
     padding-top:48px;
+=======
+<<<<<<< HEAD
+    background-color:#F5F9FF;
+    padding-top:76px;
+=======
+    background-color: #F5F9FF;
+    padding-top: 48px;
+>>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
+>>>>>>> bdfb1c4adc2e26603f6d2228ddce0b5224cbb087
     box-sizing: border-box;
 }
 .hui_product .product_logo{
@@ -592,7 +606,12 @@ color:rgba(102,102,102,1);
     top:138px;
     right: -10px;
     width: 370px;
+<<<<<<< HEAD
     height:590px;
+=======
+<<<<<<< HEAD
+    height:620px;
+>>>>>>> bdfb1c4adc2e26603f6d2228ddce0b5224cbb087
 }
 .huichuangyou_title{
     font-size:30px;
@@ -618,6 +637,41 @@ color:rgba(102,102,102,1);
     width:370px;
     height:48px;
     outline:none;
+<<<<<<< HEAD
+=======
+=======
+    height: 590px;
+}
+
+.huichuangyou_title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 43px;
+}
+
+.total_input {
+    margin-top: 45px;
+}
+
+.total_input input[type='text'] {
+    width: 370px;
+    height: 48px;
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(106, 142, 180, 1);
+    border-radius: 4px;
+    margin-bottom: 22px;
+    color: #a8a8a8;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.total_input input[type='button'] {
+    width: 370px;
+    height: 48px;
+    outline: none;
+>>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
+>>>>>>> bdfb1c4adc2e26603f6d2228ddce0b5224cbb087
     background-color: #4091FF;
     color:#fff;
     font-size:16px;
@@ -629,11 +683,25 @@ color:rgba(102,102,102,1);
 .huilinggong,
 .huizhaoshi,
 .huiqidong,
+<<<<<<< HEAD
 .huichuangye{
     position:absolute;
     top:8px;
+=======
+<<<<<<< HEAD
+.huichuangye{
+    position:absolute;
+    top:0px;
+    left: 0px;
+    
+=======
+.huichuangye {
+    position: absolute;
+    top: 8px;
+>>>>>>> bdfb1c4adc2e26603f6d2228ddce0b5224cbb087
     left: 25px;
 
+>>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
 }
 .huiduoxin{
     display:none;
@@ -660,9 +728,20 @@ color:rgba(102,102,102,1);
 }
 
 .con {
+<<<<<<< HEAD
     font-size:18px;
 color:rgba(0,0,0,1);
+=======
+<<<<<<< HEAD
+    font-size:18px;
+color:rgba(0,0,0,1);
+    width: 370px;
+=======
+    font-size: 18px;
+    color: rgba(0, 0, 0, 1);
+>>>>>>> bdfb1c4adc2e26603f6d2228ddce0b5224cbb087
     width: 306px;
+>>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
 }
 .con div{
     font-size:14px;
@@ -1046,6 +1125,67 @@ color:rgba(220,220,220,1);
     color:#fff;
 }
 
+<<<<<<< HEAD
+=======
+/* 弹框 */
+<<<<<<< HEAD
+.prop{
+    display:none;
+    z-index:999;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:300px;
+    height:300px;
+    background:rgba(245,247,254,1);
+border-radius:4px;
+    
+}
+
+.searcher{
+    padding:40px 10px 0;
+    z-index:999;
+    width:320px;
+    height:320px;
+    box-sizing:border-box;
+    font-size:16px;
+    box-sizing:border-box;
+    
+}
+.prop .searcher input[type='text']{
+    width:280px;
+    height:36px;
+    margin-bottom:30px;
+    padding-left:10px;
+    box-sizing:border-box;
+
+}
+.prop .searcher input[type='button']{
+    width:280px;
+    height:36px;
+    font-size:18px;
+font-family:Source Han Sans CN;
+font-weight:400;
+color:rgba(255,255,255,1);
+background:rgba(64,145,255,1);
+outline:none;
+border:none;
+ 
+}
+=======
+.prop {
+    display: none;
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: rgba(245, 247, 254, 1);
+    border-radius: 4px;
+>>>>>>> bdfb1c4adc2e26603f6d2228ddce0b5224cbb087
 
 /* 弹框 */
 .prop{
@@ -1093,3 +1233,4 @@ border:none;
 
 }
 
+>>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b

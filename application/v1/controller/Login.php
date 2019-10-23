@@ -38,7 +38,6 @@ class Login extends Controller
         $username  = $this->request->post('username');
         $password  = $this->request->post('password');
         //检查用户名跟密码是否正确
-
         $info = Systems::instance()->checklogin($username,$password);
         if(!$info){
             $this->error(__('Username or password is incorrect'));

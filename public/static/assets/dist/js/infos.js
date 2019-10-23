@@ -36,11 +36,23 @@ $('.cancle').click(function(){
 $('.infos-add').click(function(){
     var urls = $(this).attr('data-url');
 
-    var pid = $("#pid option:selected").val();
+    var pid     = $("#pid option:selected").val();
     var title   = $('#title').val();
+    var desc    = $("#desc").val();
+    var keyword    = $("#keyword").val();
 
     if(title == '' || title== undefined){
         layer.msg('请填写新闻标题');
+        return ;
+    }
+
+    if(desc == '' || desc == undefined){
+        layer.msg('请填写新闻描述');
+        return false;
+    }
+
+    if(keyword =='' || keyword ==undefined){
+        layer.msg('请填写新闻关键字');
         return ;
     }
 
@@ -52,7 +64,7 @@ $('.infos-add').click(function(){
     }
 
 
-    $.post(urls,{'title':title,'pid':pid,'content':content},function(ret){
+    $.post(urls,{'title':title,'pid':pid,'desc':desc,'content':content,'keyword':keyword},function(ret){
            if(ret.code == 200){
                layer.msg(ret.msg,{icon:6},function(){
                    parent.location.href="index";
@@ -87,6 +99,8 @@ $('.infos-edits').click(function(){
     var pid     = $("#pid option:selected").val();
     var title   = $('#title').val();
     var id      = $('#mid').val();
+    var desc    = $("#desc").val();
+    var keyword    = $("#keyword").val();
 
     if(title == '' || title== undefined){
         layer.msg('请填写新闻标题');
@@ -98,6 +112,16 @@ $('.infos-edits').click(function(){
         return ;
     }
 
+    if(desc == '' || desc == undefined){
+        layer.msg('请填写新闻描述');
+        return false;
+    }
+
+    if(keyword == '' || keyword == undefined){
+        layer.msg('新闻关键字不能为空');
+        return false;
+    }
+
     var content = ue.getContent();//取得html文本
 
     if(content == '' || content == undefined){
@@ -105,7 +129,7 @@ $('.infos-edits').click(function(){
          return false;
     }
 
-    $.post(urls,{'title':title,'pid':pid,'content':content,'id':id},function(ret){
+    $.post(urls,{'title':title,'pid':pid,'content':content,'id':id,'desc':desc,'keyword':keyword},function(ret){
         if(ret.code == 200){
             layer.msg(ret.msg,{icon:6},function(){
                 parent.location.href="index";

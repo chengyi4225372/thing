@@ -56,8 +56,16 @@ class Index extends Controller
 //            }
 //
 //            $this->assign('case_list', $caseInfo);
+<<<<<<< HEAD
+
+            $caseInfo = Caseservice::instance()->getallparent();
+
+            $this->assign('case_list', $caseInfo);
+
+=======
 
             $this->assign('site_info',$siteInfo);
+>>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
             $this->assign('slideshow', $slideshow);
             $this->assign('biao', $biao);
             $this->assign('shang', $shang);

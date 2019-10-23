@@ -1,0 +1,99 @@
+---------------------------------------------------------------
+[ 2019-10-23T09:28:43+08:00 ] 127.0.0.1 HEAD /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-10-23T09:29:05+08:00 ] 127.0.0.1 HEAD /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-10-23T09:30:33+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:30:42+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:32:01+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:33:04+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:67]
+---------------------------------------------------------------
+[ 2019-10-23T09:33:10+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:67]
+---------------------------------------------------------------
+[ 2019-10-23T09:33:32+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:33:46+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:34:06+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:34:39+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:35:10+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-10-23T09:35:28+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:36:54+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-10-23T09:37:00+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-10-23T09:37:13+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-10-23T09:37:16+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-10-23T09:37:40+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-10-23T09:37:41+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-10-23T09:38:57+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:39:03+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:40:01+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:40:58+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:41:08+08:00 ] 127.0.0.1 HEAD /
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2019-10-23T09:41:10+08:00 ] 127.0.0.1 HEAD /
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2019-10-23T09:42:37+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:43:20+08:00 ] 127.0.0.1 HEAD /
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2019-10-23T09:44:46+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:45:46+08:00 ] 127.0.0.1 HEAD /
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2019-10-23T09:47:10+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:48:15+08:00 ] 127.0.0.1 HEAD /
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2019-10-23T09:48:55+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:66]
+---------------------------------------------------------------
+[ 2019-10-23T09:59:17+08:00 ] 127.0.0.1 HEAD /
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Response.php:316]

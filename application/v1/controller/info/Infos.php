@@ -32,6 +32,8 @@ class Infos extends  AuthController
           'pid' =>$param['pid'],
           'title' =>$param['title'],
           'content' =>$param['content'],
+          'desc'    =>$param['desc'],
+          'keyword'    =>$param['keyword'],
           'create_time' =>time(),
         );
        $ret = Infosservice::instance()->saves($array);
@@ -63,6 +65,8 @@ class Infos extends  AuthController
               'pid'     =>input('post.pid','','int'),
               'title'   =>input('post.title','','trim'),
               'content' =>input('post.content'),
+              'desc'    =>input('post.desc','','trim'),
+              'keyword' =>input('post.keyword','','trim'),
           );
 
           $ret = Infosservice::instance()->updateId($array,$id);
