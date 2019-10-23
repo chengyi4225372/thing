@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/system/setting.html";i:1571655338;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571821916;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/system/setting.html";i:1571822825;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571821962;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -254,7 +254,7 @@
 
                     <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
                         <a href="#">
-                            <i class="fa fa-dashboard"></i> <span>案例管理</span>
+                            <i class="glyphicon glyphicon-inbox"></i> <span>案例管理</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -319,6 +319,7 @@
                 <th class="text-center">固定电话</th>
                 <th class="text-center">地址</th>
                 <th class="text-center">ICP备案号</th>
+                <th class="text-center">邮箱</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
@@ -332,6 +333,7 @@
                     <td class="text-center"><?php echo $list['tel']; ?></td>
                     <td class="text-center"><?php echo $list['count_code']; ?></td>
                     <td class="text-center"><?php echo $list['icp']; ?></td>
+                    <td class="text-center"><?php echo $list['mail']; ?></td>
                     <td class="text-center">
                         <span class="btn <?php if($list['status'] == 1): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
                     </td>

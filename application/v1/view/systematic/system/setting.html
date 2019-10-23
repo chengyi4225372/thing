@@ -19,6 +19,7 @@
                 <th class="text-center">固定电话</th>
                 <th class="text-center">地址</th>
                 <th class="text-center">ICP备案号</th>
+                <th class="text-center">邮箱</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
@@ -32,6 +33,7 @@
                     <td class="text-center">{$list['tel']}</td>
                     <td class="text-center">{$list['count_code']}</td>
                     <td class="text-center">{$list['icp']}</td>
+                    <td class="text-center">{$list['mail']}</td>
                     <td class="text-center">
                         <span class="btn {if $list['status'] == 1}btn-success{else/}btn-danger{/if}">{$status[$list['status']]}</span>
                     </td>

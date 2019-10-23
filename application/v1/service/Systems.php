@@ -196,12 +196,16 @@ class Systems
         if(empty($params['tel']) || !isset($params['tel'])){
             return json(['status' => false,'msg' => '固定电话不能为空!']);
         }
+        if(empty($params['mail']) || !isset($params['mail'])){
+            return json(['status' => false,'msg' => '邮箱不能为空!']);
+        }
         $add = [
             'title' => $params['title'],
             'icp' => $params['icp'],
             'count_code' => $params['count_code'],
             'tel' => $params['tel'],
             'status' => $params['status'],
+            'mail' => $params['mail'],
         ];
         $res = Site::instance()->insert($add);
         if($res === false){
@@ -256,11 +260,16 @@ class Systems
         if(empty($params['tel'])){
             return json(['status' => false,'msg' => '请填写电话']);
         }
+
+        if(empty($params['mail'])){
+            return json(['status' => false,'msg' => '请填写邮箱']);
+        }
         $save['title'] = $params['title'];
         $save['icp'] = $params['icp'];
         $save['count_code'] = $params['count_code'];
         $save['tel'] = $params['tel'];
         $save['status'] = $params['status'];
+        $save['mail'] = $params['mail'];
         Site::instance()->update($save,['id' => $id]);
         return json(['status' => true,'msg' => '修改成功']);
     }
