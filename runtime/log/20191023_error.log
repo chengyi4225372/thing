@@ -133,3 +133,18 @@
 ---------------------------------------------------------------
 [ 2019-10-23T11:48:12+08:00 ] 127.0.0.1 GET /
 [ error ] [0]致命错误: Class 'app\home\controller\Caseservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:61]
+---------------------------------------------------------------
+[ 2019-10-23T14:36:00+08:00 ] 172.26.2.48 POST /v1/systematic/cases/editcase.html
+[ error ] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'is_show' at row 1[/opt/web/hui-/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-10-23T14:36:30+08:00 ] 172.26.2.48 POST /v1/systematic/cases/editcase.html
+[ error ] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'is_show' at row 1[/opt/web/hui-/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-10-23T14:37:42+08:00 ] 172.26.2.48 POST /v1/systematic/cases/editcase.html
+[ error ] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'is_show' at row 1[/opt/web/hui-/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-10-23T14:52:55+08:00 ] 172.26.2.48 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE)[/opt/web/hui-/runtime/temp/fc43eb112f593b1af4478cc2ab82a207.php:144]
+---------------------------------------------------------------
+[ 2019-10-23T17:06:31+08:00 ] 172.26.2.48 GET /v1/info/infos/index.html
+[ error ] [0]语法解析错误: syntax error, unexpected '$paths' (T_VARIABLE)[/opt/web/hui-/runtime/temp/3550082debcdbbc3bb1e5e38176dee21.php:191]

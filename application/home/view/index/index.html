@@ -141,7 +141,20 @@
             <div class='w success_content'>
                 <div class='success_title'></div>
                 <div class='success_icon'>
-                    <div onclick="click_show(this)" data-attr="huiduoxin">
+                    {volist name="case_list" id="data_list"}
+                    <div onclick="click_show(this)" data-attr="{$data_list['is_show']}">
+                        <div class='{if $key == 1}hui_icon{else /}p_icon{/if}'>
+                            <div>{$data_list['title2']}</div>
+                            <div>{$data_list['title3']}</div>
+                            {if $key != 1}
+                            <a href="#">
+                                <img src="__HOME__/images/jiantou.png" alt="">
+                            </a>
+                            {/if}
+                        </div>
+                    </div>
+                    {/volist}
+<!--                    <div onclick="click_show(this)" data-attr="huiduoxin">
                         <div class='p_icon'>
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
@@ -191,10 +204,38 @@
                                 <img src="__HOME__/images/jiantou.png" alt="">
                             </a>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class='to_detailInfo'>
-                    <div class='huichuangyou'>
+                    {volist name="case_list" id="info_list"}
+                    <div class="{$info_list['is_show']}">
+                        <div class='huichuangyou_title'>{$info_list['title']}</div>
+                        <div class="con">
+                            <div class="desc">{$info_list['desc']}</div>
+                            <div class="desc">{$info_list['desc2']}</div>
+                            <div class="desc">{$info_list['desc3']}</div>
+                            <div class="desc">{$info_list['desc4']}</div>
+                            <div class="desc">{$info_list['desc5']}</div>
+                            <div class="desc">{$info_list['desc6']}</div>
+                            <div class="desc">{$info_list['desc7']}</div>
+                            <div class='total_input'>
+                                <div>
+                                    <input type="text" placeholder="请输入您的姓名..">
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="请输入您的公司名称..">
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="请输入您的手机号..">
+                                </div>
+                                <div>
+                                    <input type="button" value='定制您的方案'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/volist}
+<!--                    <div class='huichuangyou'>
                         <div class='huichuangyou_title'>惠创优-服务案例</div>
                         <div class="con">
                             <div class="desc">惠创优：能省122万</div>
@@ -305,9 +346,9 @@
                             <div class="desc">某高新技术企业的净利润为200万，研发费用为100万</div>
                             <div class="desc">研发费用可按照175%进行企业所得税的税前扣除</div>
                             <div class="desc">所需交税额：（200-175）*15%=3.75万</div>
-                            <!-- <div>园区政策:520*10%=52万</div>
+                            &lt;!&ndash; <div>园区政策:520*10%=52万</div>
                                 <div>园区政策奖励额:875*8%=875万</div>
-                                <div>惠创优的节税额:52+70=122万</div> -->
+                                <div>惠创优的节税额:52+70=122万</div> &ndash;&gt;
                             <div class='total_input'>
                                 <div>
                                     <input type="text" placeholder="请输入您的姓名..">
@@ -331,9 +372,9 @@
                             <div class="desc">合理运用税收杠杆 , 匹配注册资金方案</div>
                             <div class="desc">多方位了解各类政策 , 合法享受政策优惠</div>
                             <div class="desc">大幅降低运营成本 , 显著提高营业利润</div>
-                            <!-- <div>园区政策:520*10%=52万</div>
+                            &lt;!&ndash; <div>园区政策:520*10%=52万</div>
                                 <div>园区政策奖励额:875*8%=875万</div>
-                                <div>惠创优的节税额:52+70=122万</div> -->
+                                <div>惠创优的节税额:52+70=122万</div> &ndash;&gt;
                             <div class='total_input'>
                                 <div>
                                     <input type="text" placeholder="请输入您的姓名..">
@@ -349,7 +390,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
 
                 </div>

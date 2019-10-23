@@ -290,6 +290,7 @@ var admin_module = (function (){
         var count_code = $('#count_code').val();
         var tel = $('#tel').val();
         var status = $('#status').val();
+        var mail = $('#mail').val();
         //网站名称不能为空
         if(title == undefined || title == 'undefined' || title == ''){
             $('#title').focus();
@@ -311,12 +312,18 @@ var admin_module = (function (){
             $('#tel').focus();
             layer.tips('固定电话不能为空!','#tel',{tips:[1,'#c00']});return;
         }
+        if(mail == undefined || mail == 'undefined' || mail == ''){
+            $('#mail').focus();
+            layer.tips('邮箱不能为空!','#mail',{tips:[1,'#c00']});return;
+        }
+
         var obj = new Object();
         obj.title = title;
         obj.icp = icp;
         obj.count_code = count_code;
         obj.tel = tel;
         obj.status = status;
+        obj.mail = mail;
         $.post(
             url,
             obj,
@@ -356,6 +363,7 @@ var admin_module = (function (){
         var count_code = $('#count_code').val();
         var tel = $('#tel').val();
         var status = $('#status').val();
+        var mail = $('#mail').val();
         //网站名称不能为空
         if(title == undefined || title == 'undefined' || title == ''){
             $('#title').focus();
@@ -377,6 +385,11 @@ var admin_module = (function (){
             $('#tel').focus();
             layer.tips('固定电话不能为空!','#tel',{tips:[1,'#c00']});return;
         }
+
+        if(mail == undefined || mail == 'undefined' || mail == ''){
+            $('#mail').focus();
+            layer.tips('邮箱不能为空!','#mail',{tips:[1,'#c00']});return;
+        }
         var id = $('#site_id').val();
         var obj = new Object();
         obj.title = title;
@@ -385,6 +398,7 @@ var admin_module = (function (){
         obj.tel = tel;
         obj.status = status;
         obj.id = id;
+        obj.mail = mail;
         $.post(
             url,
             obj,
