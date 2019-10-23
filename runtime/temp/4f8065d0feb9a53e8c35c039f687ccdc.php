@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571810701;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571811033;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -154,7 +154,13 @@
                         <div class='hui_icon'>
                             <div>惠创优</div>
                             <div>节税服务案例</div>
+<<<<<<< HEAD
 
+=======
+<!--                             <a href="#">
+                                <img src="/static/home/images/jiantou.png" alt="">
+                            </a>-->
+>>>>>>> c8ff9f8b982d704799eebaa436291b03a934850d
                         </div>
                     </div>
                     <div onclick="click_show(this)" data-attr="huilinggong">
@@ -168,8 +174,17 @@
                     </div>
                     <div onclick="click_show(this)" data-attr="huizhaoshi">
                         <div class='p_icon'>
-                            <div>一站用工案例</div>
+                            <div>惠找事</div>
                             <div>人才服务案例</div>
+                            <a href="#">
+                                <img src="/static/home/images/jiantou.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div onclick="click_show(this)" data-attr="huiqidong">
+                        <div class='p_icon'>
+                            <div>惠启动</div>
+                            <div>一站服务案例</div>
                             <a href="#">
                                 <img src="/static/home/images/jiantou.png" alt="">
                             </a>
@@ -178,15 +193,6 @@
                     <div onclick="click_show(this)" data-attr="huichuangye">
                         <div class='p_icon'>
                             <div>惠创业</div>
-                            <div>一站服务案例</div>
-                            <a href="#">
-                                <img src="/static/home/images/jiantou.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div onclick="click_show(this)" data-attr="huiduoxin">
-                        <div class='p_icon'>
-                            <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
                                 <img src="/static/home/images/jiantou.png" alt="">

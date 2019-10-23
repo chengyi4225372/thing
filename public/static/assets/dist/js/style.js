@@ -607,6 +607,10 @@ var admin_module = (function (){
             $('#title').focus();
             layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
         }
+        if(is_show == '' || is_show == undefined || is_show == 'undefined'){
+            $('#is_show').focus();
+            layer.tips('请填写样式名称!','#is_show',{tips:[1,'#c00']});return;
+        }
         if(title2 == '' || title2 == undefined || title2 == 'undefined'){
             $('#title2').focus();
             layer.tips('标题2不能为空!','#title2',{tips:[1,'#c00']});return;
@@ -652,9 +656,6 @@ var admin_module = (function (){
         }
         if(status == '' || status == undefined || status == 'undefined'){
             layer.msg('请选择状态');return;
-        }
-        if(is_show == '' || is_show == undefined || is_show == 'undefined'){
-            layer.msg('请选择是否显示');return;
         }
         var obj = new Object();
         obj.title = title;
@@ -724,6 +725,10 @@ var admin_module = (function (){
             $('#title').focus();
             layer.tips('标题不能为空!','#title',{tips:[1,'#c00']});return;
         }
+        if(is_show == '' || is_show == undefined || is_show == 'undefined'){
+            $('#is_show').focus();
+            layer.tips('请填写样式名称!','#is_show',{tips:[1,'#c00']});return;
+        }
         if(title2 == '' || title2 == undefined || title2 == 'undefined'){
             $('#title2').focus();
             layer.tips('标题2不能为空!','#title2',{tips:[1,'#c00']});return;
@@ -770,9 +775,7 @@ var admin_module = (function (){
         if(status == '' || status == undefined || status == 'undefined'){
             layer.msg('请选择状态');return;
         }
-        if(is_show == '' || is_show == undefined || is_show == 'undefined'){
-            layer.msg('请选择是否显示');return;
-        }
+
         var obj = new Object();
         obj.title = title;
         obj.title2 = title2;

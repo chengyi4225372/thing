@@ -370,7 +370,7 @@ class Systems
         if (!is_dir($imgSmallDir)) {
             @mkdir($imgSmallDir);
         }
-        $name = time().'--'.$file['name'];
+        $name = $file['name'];
 
         $filename = $file['name'];
         $error = $file['error'];
