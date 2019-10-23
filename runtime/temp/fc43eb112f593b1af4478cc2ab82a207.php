@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571793044;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1571745928;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="/static/home/css/base.css">
     <link rel="stylesheet" href="/static/home/css/index.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src='/static/home/js/index.js'></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
+    <script src='/static/home/js/index.js'></script>
     <script src='/static/home/js/common.js'></script>
 
     <style>
@@ -19,9 +19,7 @@
         {
             background-image: url("<?php echo $slideshow['pic']; ?>");
         }
-        
     </style>
-
 </head>
 
 <body>
@@ -119,17 +117,65 @@
             <div class='w'>
                 <div class='product_logo'></div>
                 <ul class='all_product'>
-                    <?php if(is_array($protuct) || $protuct instanceof \think\Collection || $protuct instanceof \think\Paginator): $i = 0; $__LIST__ = $protuct;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
+                   <?php if(is_array($protuct) || $protuct instanceof \think\Collection || $protuct instanceof \think\Paginator): $i = 0; $__LIST__ = $protuct;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
                     <li>
                         <img src="<?php echo (isset($v1['imgs']) && ($v1['imgs'] !== '')?$v1['imgs']:''); ?>" alt="">
                         <a href="#"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
                         <a href="#"><?php echo (isset($v1['desc']) && ($v1['desc'] !== '')?$v1['desc']:''); ?></a>
                         <ul class='one_pic'>
-                            <li><a onclick="showSearch()">获取方案</a></li>
+                            <li><a href="#">获取方案</a></li>
                             <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
                         </ul>
                     </li>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
+                   <!--
+                    <li>
+                        <img src="/static/home/images/work.png" alt="">
+                        <a href="#">惠灵工</a>
+                        <a href="#">共享经济双创支撑云平台</a>
+                        <ul class='one_pic'>
+                            <li><a href="#">获取方案</a></li>
+                            <li><a href="#">前往网站</a></li>
+                        </ul>
+                    </li>
+                    <li>
+
+                        <img src="/static/home/images/money.png" alt="">
+                        <a href="#">惠多薪</a>
+                        <a href="#">创新型人力资源节税平台</a>
+                        <ul class='one_pic'>
+                            <li><a href="#">获取方案</a></li>
+                            <li><a href="#">前往网站</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="/static/home/images/chuang.png" alt="">
+                        <a href="#">惠创业</a>
+                        <a href="#">专注于武汉本地的税筹产品</a>
+                        <ul class='one_pic'>
+                            <li><a href="#">获取方案</a></li>
+                            <li><a href="#">前往网站</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="/static/home/images/zhao.png" alt="">
+                        <a href="#">惠找事</a>
+                        <a href="#">专门帮你找兼职</a>
+                        <ul class='one_pic'>
+                            <li><a href="#">获取方案</a></li>
+                            <li><a href="#">前往网站</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="/static/home/images/qi.png" alt="">
+                        <a href="#">惠企动</a>
+                        <a href="#">提供创新型人力资源节税方案</a>
+                        <ul class='one_pic'>
+                            <li><a href="#">获取方案</a></li>
+                            <li><a href="#">前往网站</a></li>
+                        </ul>
+                    </li>
+                    -->
                 </ul>
             </div>
         </div>
@@ -145,7 +191,7 @@
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -153,9 +199,9 @@
                         <div class='hui_icon'>
                             <div>惠创优</div>
                             <div>节税服务案例</div>
-                            <!-- <a href="#">
-                                <img src="./images/jiantou.png" alt="">
-                            </a> -->
+                            <a href="#">
+                                <img src="/static/home/images/jiantou.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div>
@@ -163,7 +209,7 @@
                             <div>惠灵工</div>
                             <div>一站用工案例</div>
                             <a href="#">
-                                <img src="/static/home/images/jiantou.png" alt="">
+                                <imgsrc="/static/home/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -370,16 +416,15 @@
                     <div class='zhaoTotalInfo'>
                         <div class='totalInfo_title'>招标信息</div>
                         <div class='totalInfo_content'>
-                            <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
+                             <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                             <div class='zhao_contentInfo'>
                                 <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                                 <div><?php echo $biaos['create_time']; ?></div>
                             </div>
                             <div>
-                                <?php echo mb_substr($biaos['content'],'0','50','utf-8'); ?>
+                             <?php echo mb_substr($biaos['content'],'0','50','utf-8'); ?>
                             </div>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
-
                         </div>
                         <button class='know_more'>了解更多</button>
                     </div>
@@ -394,10 +439,9 @@
                                 <div><?php echo $ss['create_time']; ?></div>
                             </div>
                             <div>
-                                <?php echo mb_substr($ss['content'],'0','50','utf-8'); ?>
+                               <?php echo mb_substr($ss['content'],'0','50','utf-8'); ?>
                             </div>
-                            <?php endforeach; endif; else: echo "" ;endif; ?>
-
+                           <?php endforeach; endif; else: echo "" ;endif; ?>
                         </div>
                         <button class='know_more'>了解更多</button>
                     </div>
@@ -416,12 +460,14 @@
                     <i></i>
                     <div>返回顶部</div>
                 </div>
-                <!-- <div class='search' id='search'>
-                    <input type="text" placeholder="请输入姓名">
-                    <input type="text" placeholder="请输入公司名称">
-                    <input type="text" placeholder="请输入手机号码">
-                    <input type="button" value='定义方案'>
-                </div> -->
+                <div class='search'>
+                    <input type="text" id="contactName"  placeholder="请输入姓名">
+                    <input type="text" id="companyName"  placeholder="请输入公司名称">
+                    <input type="text" id="contactMobile" placeholder="请输入手机号码">
+                    <input type="hidden" id="source" value="门户首页">
+                    <input type="hidden" id="identification" value="企业一站式服务">
+                    <input type="button" id="getErp" value='定义方案'>
+                </div>
             </div>
 
         </div>
@@ -429,7 +475,7 @@
 
         <div class='partner_bottom'>
             <div class='w content'>
-                <div class='partener_titile'>用智“慧”创造优“惠”</div>
+                <div class='partener_titile'>用智“惠”创造优“惠”</div>
                 <div class='parterne_info'>
                     深耕税筹行业多年，合作企业多达几千家。专业为个人和企业解决税务难题。为您提供一站式金融、税务和人力外包服务，以及专业的税筹划分析，最安全、高效、合理的节税措施。我们有最成熟的专家团队和各行业实操经验！作为国内领先的标准化税筹服务互联网平台，我们得到了上海、安徽、江西、湖北等各地政府的大力支持，为企业节税保驾护航！
                 </div>
@@ -471,22 +517,15 @@
         </div>
 
 
-        
-        <div class='prop'>
 
-                <div class='searcher' id='search'>
-                    <input type="text" id="contactName"  placeholder="请输入姓名">
-                    <input type="text" id="companyName"  placeholder="请输入公司名称">
-                    <input type="text" id="contactMobile" placeholder="请输入手机号码">
-                    <input type="hidden" id="source" value="门户首页">
-                    <input type="hidden" id="identification" value="企业一站式服务">
-                    <input type="button" id="getErp" value='定义方案'>
-                </div>
-            
-        </div>
 
     </div>
 
 </body>
+<script>
 
+
+
+
+</script>
 </html>
