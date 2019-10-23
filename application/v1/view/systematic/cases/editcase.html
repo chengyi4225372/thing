@@ -15,6 +15,14 @@
                         <input type="text" class="form-control form-control-sm" id="title" name="title" value="{$data['title']}">
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label for="is_show" class="col-sm-3 control-label">样式名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="is_show" name="is_show" value="{$data['is_show']}" placeholder="样式名称将影响前台页面的布局，如有不明白的问PHP程序员">
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label for="title2" class="col-sm-3 control-label">标题2：</label>
                     <div class="col-sm-9">
@@ -99,16 +107,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="is_show" class="col-sm-3 control-label">是否显示：</label>
-                    <div class="col-sm-9">
-                        <select id="is_show" name="is_show" class="form-control form-control-sm">
-                            {volist name="is_show" id="is_show_list"}
-                            <option value="{$key}">{$is_show_list}</option>
-                            {/volist}
-                        </select>
-                    </div>
-                </div>
+
 
             </div>
         </div>
