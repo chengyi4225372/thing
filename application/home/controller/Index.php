@@ -27,8 +27,32 @@ class Index extends Controller
             $slideshow = Systems::instance()->getOneshow();
 
             //近期成功案例
-            $caseInfo = Caseservice::instance()->getallparent();
-            $this->assign('case_list', $caseInfo);
+//            $caseInfo = Caseservice::instance()->getallparent();
+//            $arr = [];
+//            foreach ($caseInfo as $key => $val) {
+//
+//                if($val['is_show'] == 2){
+//                    $arr['id'] = $val['id'];
+//                    $arr['title'] = $val['title'];
+//                    $arr['title2'] = $val['title2'];
+//                    $arr['title3'] = $val['title3'];
+//                    $arr['desc'] = $val['desc'];
+//                    $arr['desc2'] = $val['desc2'];
+//                    $arr['desc3'] = $val['desc3'];
+//                    $arr['desc4'] = $val['desc4'];
+//                    $arr['desc5'] = $val['desc5'];
+//                    $arr['desc6'] = $val['desc6'];
+//                    $arr['desc7'] = $val['desc7'];
+//                    $arr['pic'] = $val['pic'];
+//                    $arr['url'] = $val['url'];
+//                    $arr['status'] = $val['status'];
+//                    $arr['is_show'] = $val['is_show'];
+//                    unset($caseInfo[$key]);
+//                    break;
+//                }
+//            }
+//
+//            $this->assign('case_list', $caseInfo);
             $this->assign('slideshow', $slideshow);
             $this->assign('biao', $biao);
             $this->assign('shang', $shang);

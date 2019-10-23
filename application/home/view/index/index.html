@@ -13,29 +13,14 @@
     <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
     <script src='__HOME__/js/common.js'></script>
 
-<<<<<<< HEAD
-=======
+
     <style>
         .header
         {
-            background-image: url("{$slideshow['pic']}");
+            background-image: url("{if !empty($slideshow['pic'])}{$slideshow['pic']}{else /}/static/default.png{/if}");
         }
-
-        .success_icon > div:nth-of-type(1) {position: absolute;top: 31px;  left: 14px;  width: 482px;  height: 208px;  background-size: contain;  background-image: url('../images/huiduoxing.png');  }
-
-        .success_icon > div:nth-of-type(2) {position: absolute;top: 96px;  right: -3px;  width: 436px;  height: 128px;  background-size: contain;  background-image: url('../images/huichuangyou.png');  }
-
-        .success_icon > div:nth-of-type(3) {position: absolute;  top: 204px;  left: -1px;  width: 482px;  height: 208px;  background-size: contain;  background-image: url('../images/huilinggong.png');  }
-
-        .success_icon > div:nth-of-type(4) {position: absolute;top: 252px;right: 6px;width: 482px;height: 208px;  background-size: contain;  background-image: url('../images/huizhaoshi.png');  }
-
-        .success_icon > div:nth-of-type(5) {position: absolute;bottom: 162px;left: 12px;width: 482px;height: 208px;background-size: contain;background-image: url('../images/huiqidong.png');  }
-
-        .success_icon > div:nth-of-type(6) {position: absolute;bottom: 116px;right: -7px;width: 480px;height: 208px;background-size: contain;background-image: url('../images/huiye.png');  }
-
-
     </style>
->>>>>>> ed72eb488f4f387cd6e753f9861b2240c073fe31
+
 </head>
 
 <body>
@@ -113,15 +98,15 @@
                 <div class='choose-intro'>惠企云平台是一款基于国家政策、以合规化为基础、由金牌顾问团队打造的产品，为企业及个人提供税筹问题的全方位解决方案。</div>
                 <ul class='img_total'>
                     <li>
-                        <img src="./images/more.png" alt="">
+                        <img src="__HOME__/images/more.png" alt="">
                         <a href="#">集专家智“惠”定制</a>
                     </li>
                     <li>
-                        <img src="./images/rainning.png" alt="">
+                        <img src="__HOME__/images/rainning.png" alt="">
                         <a href="#">集专家智“惠”定制</a>
                     </li>
                     <li>
-                        <img src="./images/pig.png" alt="">
+                        <img src="__HOME__/images/pig.png" alt="">
                         <a href="#">给您最优“惠”</a>
                     </li>
                 </ul>
@@ -159,7 +144,7 @@
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="__HOME__/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -168,7 +153,7 @@
                             <div>惠创优</div>
                             <div>节税服务案例</div>
                             <!-- <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="__HOME__/images/jiantou.png" alt="">
                             </a> -->
                         </div>
                     </div>
@@ -177,11 +162,7 @@
                             <div>惠灵工</div>
                             <div>一站用工案例</div>
                             <a href="#">
-<<<<<<< HEAD
-                                <img src="./images/jiantou.png" alt="">
-=======
-                                <imgsrc="__HOME__/jiantou.png" alt="">
->>>>>>> ed72eb488f4f387cd6e753f9861b2240c073fe31
+                                <img src="__HOME__/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -208,7 +189,7 @@
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="__HOME__/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
