@@ -63,8 +63,8 @@ class Systems
     public function checklogin($username,$password)
     {
         $password = md5(md5($password));
-        $user_info = Admin::where(['username' => $username,'is_del' => 0])->find();
-        $user_info = $user_info->toArray();
+        $user_info = Admin::where(['username' => $username,'is_del' => 0])->find()->toArray();
+
         if($username != $user_info['username'] || $password != $user_info['password']){
             return false;
         }

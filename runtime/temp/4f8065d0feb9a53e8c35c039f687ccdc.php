@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571793044;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571793078;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +19,6 @@
         {
             background-image: url("<?php echo $slideshow['pic']; ?>");
         }
-        
     </style>
 
 </head>
