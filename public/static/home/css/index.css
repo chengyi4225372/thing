@@ -596,6 +596,7 @@
     top: 138px;
     right: -10px;
     width: 370px;
+<<<<<<< HEAD
     height: 616px;
 }
 
@@ -621,11 +622,62 @@
     padding-left: 10px;
     box-sizing: border-box;
 }
+=======
+    height:616px;
+}
+.huichuangyou_title{
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:43px;
+}
+.total_input input[type='text']{
+    width:370px;
+    height:48px;
+    outline:none;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(106,142,180,1);
+    border-radius:4px;
+    margin-bottom:22px;
+    color:#a8a8a8;
+    padding-left:10px;
+    box-sizing:border-box;
+}
+.total_input input[type='button']{
+    width:370px;
+    height:48px;
+    outline:none;
+    height: 590px;
+}
+
+.huichuangyou_title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 43px;
+}
+
+.total_input input[type='text'] {
+    width: 370px;
+    height: 48px;
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(106, 142, 180, 1);
+    border-radius: 4px;
+    margin-bottom: 22px;
+    color: #a8a8a8;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+>>>>>>> d043749fc91100c73902b55b323f2a0d3a06a0f6
 
 .total_input input[type='button'] {
     width: 370px;
     height: 48px;
     outline: none;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b09051918e3da2945dc93a62e30ce32d335f629c
+>>>>>>> d043749fc91100c73902b55b323f2a0d3a06a0f6
     background-color: #4091FF;
     color: #fff;
     font-size: 16px;
@@ -695,10 +747,15 @@
     height: 100%;
 
 }
+<<<<<<< HEAD
 
 .zhaoBox {
 
     height: 990px;
+=======
+.zhaoBox{
+    height:990px;
+>>>>>>> d043749fc91100c73902b55b323f2a0d3a06a0f6
     background-color: #F5F9FF;
     padding-top: 91px;
     box-sizing: border-box;
@@ -721,10 +778,18 @@
     background-image: url('');
 }
 
+<<<<<<< HEAD
 .zhao_title {
     width: 544px;
     height: 54px;
     margin-bottom: 25px;
+=======
+
+.zhao_title{
+    width:544px;
+    height:54px;
+    margin-bottom:25px;
+>>>>>>> d043749fc91100c73902b55b323f2a0d3a06a0f6
     background-size: contain;
     background-image: url('../images/zhaobiao.png');
 }
@@ -1140,5 +1205,117 @@ color:rgba(255,255,255,1);
 background:rgba(64,145,255,1);
 outline:none;
 border:none;
- 
-} */
+<<<<<<< HEAD
+
+}
+
+.prop {
+    display: none;
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: rgba(245, 247, 254, 1);
+    border-radius: 4px;
+
+}
+
+.searcher {
+    padding: 40px 10px 0;
+    z-index: 999;
+    width: 320px;
+    height: 320px;
+    box-sizing: border-box;
+    font-size: 16px;
+    box-sizing: border-box;
+
+}
+
+.prop .searcher input[type='text'] {
+    width: 280px;
+    height: 36px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+
+}
+
+.prop .searcher input[type='button'] {
+    width: 280px;
+    height: 36px;
+    font-size: 18px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(64, 145, 255, 1);
+    outline: none;
+    border: none;
+}
+/* 弹窗*/
+.prop_box{
+    z-index:10000;
+    width:100%;
+    height:100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    position:absolute;
+    display: none;
+}
+
+.propbox{
+    position:fixed;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:400px;
+    height:400px;
+    z-index: 20000;
+    background-color: #ccc;
+}
+.propbox .title{
+    width:400px;
+    height:120px;
+    background-image: url('../images/title.png');
+}
+.total_input{
+    width:400px;
+    height:280px;
+    padding:40px 20px 24px 70px;
+    box-sizing:border-box;
+    background:rgba(245,247,254,1);
+    border-radius:0px 0px 4px 4px;
+}
+.total_input div{
+    height:20px;
+    line-height:20px;
+    margin-bottom:20px;
+}
+.propbox .total_input input{
+    width:160px;
+    height:20px;
+
+}
+.total_input .button{
+    width:160px;
+    height:28px;
+    text-align:center;
+    line-height:28px;
+    background:linear-gradient(90deg,rgba(124,219,249,1),rgba(47,128,237,1));
+    border-radius:4px;
+    outline:none;
+    border:none;
+    margin:20px 0 0 50px;
+    font-size:12px;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    /*line-height:60px;*/
+}
+.total_input span{
+    margin-right:5px;
+}
+
