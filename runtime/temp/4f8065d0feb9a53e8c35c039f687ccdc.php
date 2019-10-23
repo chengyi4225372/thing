@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571823942;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571833442;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <div class='propbox' style="display:none;"></div>
+       <div class="prop_box" ></div>
 
 
         <!-- 近期成功案例 -->
@@ -142,7 +142,20 @@
             <div class='w success_content'>
                 <div class='success_title'></div>
                 <div class='success_icon'>
-                    <div onclick="click_show(this)" data-attr="huiduoxin">
+                    <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
+                    <div onclick="click_show(this)" data-attr="<?php echo $data_list['is_show']; ?>">
+                        <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
+                            <div><?php echo $data_list['title2']; ?></div>
+                            <div><?php echo $data_list['title3']; ?></div>
+                            <?php if($key != 1): ?>
+                            <a href="#">
+                                <img src="/static/home/images/jiantou.png" alt="">
+                            </a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+<!--                    <div onclick="click_show(this)" data-attr="huiduoxin">
                         <div class='p_icon'>
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
@@ -192,10 +205,38 @@
                                 <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class='to_detailInfo'>
-                    <div class='huichuangyou'>
+                    <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($i % 2 );++$i;?>
+                    <div class="<?php echo $info_list['is_show']; ?>">
+                        <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
+                        <div class="con">
+                            <div class="desc"><?php echo $info_list['desc']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc2']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc3']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc4']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc5']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc6']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc7']; ?></div>
+                            <div class='total_input'>
+                                <div>
+                                    <input type="text" placeholder="请输入您的姓名..">
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="请输入您的公司名称..">
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="请输入您的手机号..">
+                                </div>
+                                <div>
+                                    <input type="button" value='定制您的方案'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+<!--                    <div class='huichuangyou'>
                         <div class='huichuangyou_title'>惠创优-服务案例</div>
                         <div class="con">
                             <div class="desc">惠创优：能省122万</div>
@@ -306,9 +347,9 @@
                             <div class="desc">某高新技术企业的净利润为200万，研发费用为100万</div>
                             <div class="desc">研发费用可按照175%进行企业所得税的税前扣除</div>
                             <div class="desc">所需交税额：（200-175）*15%=3.75万</div>
-                            <!-- <div>园区政策:520*10%=52万</div>
+                            &lt;!&ndash; <div>园区政策:520*10%=52万</div>
                                 <div>园区政策奖励额:875*8%=875万</div>
-                                <div>惠创优的节税额:52+70=122万</div> -->
+                                <div>惠创优的节税额:52+70=122万</div> &ndash;&gt;
                             <div class='total_input'>
                                 <div>
                                     <input type="text" placeholder="请输入您的姓名..">
@@ -332,9 +373,9 @@
                             <div class="desc">合理运用税收杠杆 , 匹配注册资金方案</div>
                             <div class="desc">多方位了解各类政策 , 合法享受政策优惠</div>
                             <div class="desc">大幅降低运营成本 , 显著提高营业利润</div>
-                            <!-- <div>园区政策:520*10%=52万</div>
+                            &lt;!&ndash; <div>园区政策:520*10%=52万</div>
                                 <div>园区政策奖励额:875*8%=875万</div>
-                                <div>惠创优的节税额:52+70=122万</div> -->
+                                <div>惠创优的节税额:52+70=122万</div> &ndash;&gt;
                             <div class='total_input'>
                                 <div>
                                     <input type="text" placeholder="请输入您的姓名..">
@@ -350,12 +391,13 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
 
                 </div>
             </div>
         </div>
+
 
 
 
