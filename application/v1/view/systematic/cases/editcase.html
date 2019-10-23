@@ -26,13 +26,13 @@
                 <div class="form-group">
                     <label for="title2" class="col-sm-3 control-label">标题2：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="title2" name="title2">
+                        <input type="text" class="form-control form-control-sm" id="title2" name="title2" value="{$data['title2']}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="title3" class="col-sm-3 control-label">标题3：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="title3" name="title3">
+                        <input type="text" class="form-control form-control-sm" id="title3" name="title3" value="{$data['title3']}">
                     </div>
                 </div>
 
@@ -42,15 +42,15 @@
                         <button type="button" class="layui-btn" id="pic">
                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
-                        <img src="/static/default.png" style="width:50px;height:50px;" id="cur_pic"/>
-                        <input type="hidden" name="pic_curr" id="pic_curr" value="">
+                        <img src="{$data['pic']}" style="width:50px;height:50px;" id="cur_pic"/>
+                        <input type="hidden" name="pic_curr" id="pic_curr" value="{$data['pic']}">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="url" class="col-sm-3 control-label">URL：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="url" name="url">
+                        <input type="text" class="form-control form-control-sm" id="url" name="url" value="{$data['url']}">
                     </div>
                 </div>
 
