@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
 .container {
     position: relative;
 }
@@ -343,13 +340,9 @@
     /* height:908px; */
     /* width:1200px;
     margin: 0 auto; */
-<<<<<<< HEAD
-    background-color:#F5F9FF;
-    padding-top:76px;
-=======
+
     background-color: #F5F9FF;
     padding-top: 48px;
->>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
     box-sizing: border-box;
 }
 
@@ -528,7 +521,7 @@
     right: 6px;
     width: 386px;
     height: 166px;
-    background-size: contain;
+    background-size: 100%;
     background-image: url('../images/huizhaoshi.png');
 }
 
@@ -654,8 +647,8 @@
 
 .duo_icon img {
     position: absolute;
-    right: 87px;
-    bottom: 41px;
+    right: 100px;
+    bottom: 44px;
 }
 
 .to_detailInfo {
@@ -663,7 +656,6 @@
     top: 138px;
     right: -10px;
     width: 370px;
-<<<<<<< HEAD
     height:620px;
 }
 .huichuangyou_title{
@@ -690,7 +682,6 @@
     width:370px;
     height:48px;
     outline:none;
-=======
     height: 590px;
 }
 
@@ -721,7 +712,6 @@
     width: 370px;
     height: 48px;
     outline: none;
->>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
     background-color: #4091FF;
     color: #fff;
     font-size: 16px;
@@ -734,19 +724,16 @@
 .huilinggong,
 .huizhaoshi,
 .huiqidong,
-<<<<<<< HEAD
-.huichuangye{
-    position:absolute;
-    top:0px;
+.huichuangye {
+    position: absolute;
+    top: 0px;
     left: 0px;
-    
-=======
+}
 .huichuangye {
     position: absolute;
     top: 8px;
     left: 25px;
 
->>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
 }
 
 .huiduoxin {
@@ -779,15 +766,12 @@
 }
 
 .con {
-<<<<<<< HEAD
     font-size:18px;
-color:rgba(0,0,0,1);
+    color:rgba(0,0,0,1);
     width: 370px;
-=======
     font-size: 18px;
     color: rgba(0, 0, 0, 1);
     width: 306px;
->>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b
 }
 
 .con div {
@@ -1192,7 +1176,7 @@ color:rgba(0,0,0,1);
 }
 
 /* 弹框 */
-<<<<<<< HEAD
+
 .prop{
     display:none;
     z-index:999;
@@ -1237,7 +1221,7 @@ outline:none;
 border:none;
  
 }
-=======
+
 .prop {
     display: none;
     z-index: 999;
@@ -1285,4 +1269,3 @@ border:none;
 
 }
 
->>>>>>> b8fa3271abaa872b54e7f0f36936bacdf526681b

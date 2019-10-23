@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571801449;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571810701;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +13,13 @@
     <script src='/static/home/js/index.js'></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/common.js'></script>
+    <script src="/static/home/js/dialog.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/home/css/ui.default.css">
 
     <style>
         .header
         {
-            background-image: url("<?php if(!empty($slideshow['pic'])): ?><?php echo $slideshow['pic']; else: ?>/static/default.png<?php endif; ?>");
+            background-image: url("<?php echo (isset($slideshow['pic']) && ($slideshow['pic'] !== '')?$slideshow['pic']:'/static/home/images/default.png'); ?>");
         }
     </style>
 
@@ -35,9 +37,9 @@
                     <div class='w header_icon'>
                         <div class='title_icon'>
                             <span class='phone'></span>
-                            <span>400-150-9896</span>
+                            <span><?php echo $site_info['tel']; ?></span>
                             <span class='email'></span>
-                            <span>hqylm008@dingtalk.com</span>
+                            <span><?php echo $site_info['mail']; ?></span>
                             <span class='bo'></span>
                             <span class='wx'></span>
                             <span class='tie'></span>
@@ -75,11 +77,11 @@
 
             <!-- 文字部分-->
             <div class='content_text'>
-                <div class='w'>您公司的一站式服务平台</div>
+                <div class='w'><?php echo $slideshow['title']; ?></div>
             </div>
 
             <div class='rentong'>
-                <div class='w'>30万客户认同 | 8年专业经验 | 万千客户之选</div>
+                <div class='w'><?php echo $slideshow['desc']; ?></div>
             </div>
 
             <div class='btn'>
@@ -139,7 +141,7 @@
             <div class='w success_content'>
                 <div class='success_title'></div>
                 <div class='success_icon'>
-                    <div>
+                    <div onclick="click_show(this)" data-attr="huiduoxin">
                         <div class='p_icon'>
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
@@ -148,16 +150,14 @@
                             </a>
                         </div>
                     </div>
-                    <div>
+                    <div onclick="click_show(this)" data-attr="huichuangyou">
                         <div class='hui_icon'>
                             <div>惠创优</div>
                             <div>节税服务案例</div>
-                            <!-- <a href="#">
-                                <img src="/static/home/images/jiantou.png" alt="">
-                            </a> -->
+
                         </div>
                     </div>
-                    <div>
+                    <div onclick="click_show(this)" data-attr="huilinggong">
                         <div class='duo_icon'>
                             <div>惠灵工</div>
                             <div>一站用工案例</div>
@@ -166,7 +166,7 @@
                             </a>
                         </div>
                     </div>
-                    <div>
+                    <div onclick="click_show(this)" data-attr="huizhaoshi">
                         <div class='p_icon'>
                             <div>一站用工案例</div>
                             <div>人才服务案例</div>
@@ -175,7 +175,7 @@
                             </a>
                         </div>
                     </div>
-                    <div>
+                    <div onclick="click_show(this)" data-attr="huichuangye">
                         <div class='p_icon'>
                             <div>惠创业</div>
                             <div>一站服务案例</div>
@@ -184,7 +184,7 @@
                             </a>
                         </div>
                     </div>
-                    <div>
+                    <div onclick="click_show(this)" data-attr="huiduoxin">
                         <div class='p_icon'>
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
@@ -453,9 +453,9 @@
                     </dl>
                     <dl>
                         <dt><a href="#">联系我们</a></dt>
-                        <dd><a href="#">400-150-9896</a></dd>
-                        <dd><a href="#">hcylm008@dingtalk.com</a></dd>
-                        <dd><a href="#">武汉市硚口区南国大武汉H座18楼</a></dd>
+                        <dd><a href="#"><?php echo $site_info['tel']; ?></a></dd>
+                        <dd><a href="#"><?php echo $site_info['mail']; ?></a></dd>
+                        <dd><a href="#"><?php echo $site_info['count_code']; ?></a></dd>
                     </dl>
 
                 </div>

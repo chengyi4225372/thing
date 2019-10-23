@@ -95,7 +95,7 @@ function showSearch(){
        content += "</div>";
 
 
-    layer.open({
+   layer.open({
         type: 1,
         title: '提交',
         shadeClose: true,
@@ -105,7 +105,6 @@ function showSearch(){
         content: content,
     })
 }
-
 
 
 function click_show(objthis){

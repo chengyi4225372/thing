@@ -12,11 +12,13 @@
     <script src='__HOME__/js/index.js'></script>
     <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
     <script src='__HOME__/js/common.js'></script>
+    <script src="__HOME__/js/dialog.js"></script>
+    <link rel="stylesheet" type="text/css" href="__HOME__/css/ui.default.css">
 
     <style>
         .header
         {
-            background-image: url("{if !empty($slideshow['pic'])}{$slideshow['pic']}{else /}/static/default.png{/if}");
+            background-image: url("{$slideshow['pic']|default='__HOME__/images/default.png'}");
         }
     </style>
 
@@ -151,9 +153,7 @@
                         <div class='hui_icon'>
                             <div>惠创优</div>
                             <div>节税服务案例</div>
-                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
-                            </a>
+
                         </div>
                     </div>
                     <div onclick="click_show(this)" data-attr="huilinggong">

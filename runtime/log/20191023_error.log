@@ -97,3 +97,39 @@
 ---------------------------------------------------------------
 [ 2019-10-23T09:59:17+08:00 ] 127.0.0.1 HEAD /
 [ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2019-10-23T11:45:02+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:45:15+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:45:33+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:45:34+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:45:34+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:47:01+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:47:01+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:47:02+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:47:02+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:47:02+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:59]
+---------------------------------------------------------------
+[ 2019-10-23T11:48:10+08:00 ] 127.0.0.1 GET /
+[ error ] [0]致命错误: Class 'app\home\controller\Caseservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:61]
+---------------------------------------------------------------
+[ 2019-10-23T11:48:12+08:00 ] 127.0.0.1 GET /
+[ error ] [0]致命错误: Class 'app\home\controller\Caseservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Index.php:61]
