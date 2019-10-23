@@ -13,10 +13,14 @@
     <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
     <script src='__HOME__/js/common.js'></script>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 15928ae43876f85c803767aa87ebf765cba85764
     <style>
         .header
         {
-            background-image: url("{$slideshow['pic']}");
+            background-image: url("{if !empty($slideshow['pic'])}{$slideshow['pic']}{else /}/static/default.png{/if}");
         }
     </style>
 
@@ -143,7 +147,7 @@
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="__HOME__/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -152,7 +156,7 @@
                             <div>惠创优</div>
                             <div>节税服务案例</div>
                             <!-- <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="__HOME__/images/jiantou.png" alt="">
                             </a> -->
                         </div>
                     </div>
