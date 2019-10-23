@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571746100;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571793044;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +13,14 @@
     <script src='/static/home/js/index.js'></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/common.js'></script>
+
+    <style>
+        .header
+        {
+            background-image: url("<?php echo $slideshow['pic']; ?>");
+        }
+        
+    </style>
 
 </head>
 
@@ -91,15 +99,15 @@
                 <div class='choose-intro'>惠企云平台是一款基于国家政策、以合规化为基础、由金牌顾问团队打造的产品，为企业及个人提供税筹问题的全方位解决方案。</div>
                 <ul class='img_total'>
                     <li>
-                        <img src="./images/more.png" alt="">
+                        <img src="/static/home/images/more.png" alt="">
                         <a href="#">集专家智“惠”定制</a>
                     </li>
                     <li>
-                        <img src="./images/rainning.png" alt="">
+                        <img src="/static/home/images/rainning.png" alt="">
                         <a href="#">集专家智“惠”定制</a>
                     </li>
                     <li>
-                        <img src="./images/pig.png" alt="">
+                        <img src="/static/home/images/pig.png" alt="">
                         <a href="#">给您最优“惠”</a>
                     </li>
                 </ul>
@@ -155,7 +163,7 @@
                             <div>惠灵工</div>
                             <div>一站用工案例</div>
                             <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -182,7 +190,7 @@
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="./images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
