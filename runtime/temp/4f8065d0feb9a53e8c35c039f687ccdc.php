@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571811253;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571823942;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +13,6 @@
     <script src='/static/home/js/index.js'></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/common.js'></script>
-
     <style>
         .header
         {
@@ -26,6 +25,8 @@
 <body>
 
     <div class='container'>
+
+
 
         <!-- 头部 -->
         <div class='header'>
@@ -132,6 +133,8 @@
                 </ul>
             </div>
         </div>
+
+        <div class='propbox' style="display:none;"></div>
 
 
         <!-- 近期成功案例 -->
@@ -465,22 +468,11 @@
         </div>
 
 
-        
-        <div class='prop'>
-
-                <div class='searcher' id='search'>
-                    <input type="text" id="contactName"  placeholder="请输入姓名">
-                    <input type="text" id="companyName"  placeholder="请输入公司名称">
-                    <input type="text" id="contactMobile" placeholder="请输入手机号码">
-                    <input type="hidden" id="source" value="门户首页">
-                    <input type="hidden" id="identification" value="企业一站式服务">
-                    <input type="button" id="getErp" value='定义方案'>
-                </div>
-            
-        </div>
 
     </div>
 
 </body>
+
+
 
 </html>

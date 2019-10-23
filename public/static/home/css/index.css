@@ -727,9 +727,6 @@ color:rgba(102,102,102,1);
     font-weight:700;
     margin-bottom:43px;
 }
-.total_input{
-    margin-top:45px;
-}
 .total_input input[type='text']{
     width:370px;
     height:48px;
@@ -753,10 +750,6 @@ color:rgba(102,102,102,1);
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 43px;
-}
-
-.total_input {
-    margin-top: 45px;
 }
 
 .total_input input[type='text'] {
@@ -1312,4 +1305,51 @@ border:none;
     outline: none;
     border: none;
 }
+/* 弹窗*/
 
+.propbox{
+    width:600px;
+    height:570px;
+    z-index: 9999;
+}
+.propbox .title{
+    width:600px;
+    height:120px;
+    background-image: url('../images/title.png');
+}
+.total_input{
+    width:600px;
+    height:450px;
+    padding:96px 101px 48px 99px;
+    box-sizing:border-box;
+    background:rgba(245,247,254,1);
+    border-radius:0px 0px 4px 4px;
+}
+.total_input div{
+    height:40px;
+    line-height:40px;
+    margin-bottom:31px;
+}
+.propbox .total_input input{
+    width:320px;
+    height:40px;
+
+}
+.total_input .btn{
+    width:320px;
+    height:56px;
+    line-height:56px;
+    background:linear-gradient(90deg,rgba(124,219,249,1),rgba(47,128,237,1));
+    border-radius:4px;
+    outline:none;
+    border:none;
+    margin:37px 0 0 41px;
+    font-size:24px;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:60px;
+}
+.total_input span{
+    margin-right:3px;
+}

@@ -82,28 +82,32 @@ $(function(){
 
 //点击弹窗
 function showSearch(){
-   var content = '';
-       content +="<div class='prop' style='display:block;'>";
-       content += "<div class='searcher' id='search'>";
-       content +=" <input type='text' id='contactName'  placeholder='请输入姓名'>";
-       content +=" <input type='text' id='companyName'  placeholder='请输入公司名称'>";
-       content +="<input type='text' id='contactMobile' placeholder='请输入手机号码'>";
-       content +="<input type='hidden' id='source' value='门户首页'>";
-       content +="<input type='hidden' id='identification' value='企业一站式服务'>";
-       content +=" <input type='button' id='getErp' value='定义方案'>";
-       content += "</div>";
-       content += "</div>";
+   var   content = '';
+         content += "<div class='title'></div>";
+         content += "<div class='total_input'> <div>";
+         content += "<span>您的姓名</span>";
+         content += "<input type='text' id='contactName'  placeholder='请输入姓名'></div>";
+         content += "<div><span>联系方式</span>";
+         content += "<input type='text' id='contactMobile' placeholder='请输入手机号码'></div><div>";
+         content += "<span>您的公司</span>";
+         content += "<input type='text' id='companyName'  placeholder='请输入公司名称'></div>";
+         content += "<input type='hidden' id='source' value='门户首页'>";
+         content += "<input type='hidden' id='identification' value='企业一站式服务'><div>";
+         content += "<button  class='btn' id='getErp'>获取方案</button>";
+         content += "</div></div>";
 
+         console.log(content);
+         $(".propbox").append(content).show();
 
-   layer.open({
-        type: 1,
-        title: '提交',
-        shadeClose: true,
-        shade: 0.8,
-        area: ['470px', '397px'],
-        scrollbar: false, // 父页面 滚动条 禁止
-        content: content,
-    })
+   // layer.open({
+   //      type: 1,
+   //      title: '提交',
+   //      shadeClose: true,
+   //      shade: 0.8,
+   //      area: ['470px', '397px'],
+   //      scrollbar: false, // 父页面 滚动条 禁止
+   //      content: content,
+   //  })
 }
 
 
