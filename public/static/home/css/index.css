@@ -596,7 +596,6 @@
     top: 138px;
     right: -10px;
     width: 370px;
-<<<<<<< HEAD
     height: 616px;
 }
 
@@ -621,9 +620,6 @@
     color: #a8a8a8;
     padding-left: 10px;
     box-sizing: border-box;
-}
-=======
-    height:616px;
 }
 .huichuangyou_title{
     font-size:30px;
@@ -667,17 +663,12 @@
     padding-left: 10px;
     box-sizing: border-box;
 }
->>>>>>> d043749fc91100c73902b55b323f2a0d3a06a0f6
+
 
 .total_input input[type='button'] {
     width: 370px;
     height: 48px;
     outline: none;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> b09051918e3da2945dc93a62e30ce32d335f629c
->>>>>>> d043749fc91100c73902b55b323f2a0d3a06a0f6
     background-color: #4091FF;
     color: #fff;
     font-size: 16px;
@@ -747,15 +738,9 @@
     height: 100%;
 
 }
-<<<<<<< HEAD
 
-.zhaoBox {
-
-    height: 990px;
-=======
 .zhaoBox{
     height:990px;
->>>>>>> d043749fc91100c73902b55b323f2a0d3a06a0f6
     background-color: #F5F9FF;
     padding-top: 91px;
     box-sizing: border-box;
@@ -778,18 +763,13 @@
     background-image: url('');
 }
 
-<<<<<<< HEAD
-.zhao_title {
-    width: 544px;
-    height: 54px;
-    margin-bottom: 25px;
-=======
+
+
 
 .zhao_title{
     width:544px;
     height:54px;
     margin-bottom:25px;
->>>>>>> d043749fc91100c73902b55b323f2a0d3a06a0f6
     background-size: contain;
     background-image: url('../images/zhaobiao.png');
 }
