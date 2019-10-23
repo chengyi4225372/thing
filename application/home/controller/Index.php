@@ -5,7 +5,6 @@ use think\Controller;
 use app\v1\service\Protuctservice;
 use app\v1\service\Infosservice;
 use app\v1\service\Systems;
-use app\v1\service\Caseservice;
 
 class Index extends Controller
 {
@@ -26,8 +25,11 @@ class Index extends Controller
             //轮播
             $slideshow = Systems::instance()->getOneshow();
 
+            //有关电话号码、邮箱、地址
+            $siteInfo = Systems::instance()->getOneSite();
+
             //近期成功案例
-<<<<<<< HEAD
+
 //            $caseInfo = Caseservice::instance()->getallparent();
 //            $arr = [];
 //            foreach ($caseInfo as $key => $val) {
@@ -54,11 +56,8 @@ class Index extends Controller
 //            }
 //
 //            $this->assign('case_list', $caseInfo);
-=======
-            $caseInfo = Caseservice::instance()->getallparent();
 
-            $this->assign('case_list', $caseInfo);
->>>>>>> 15928ae43876f85c803767aa87ebf765cba85764
+            $this->assign('site_info',$siteInfo);
             $this->assign('slideshow', $slideshow);
             $this->assign('biao', $biao);
             $this->assign('shang', $shang);

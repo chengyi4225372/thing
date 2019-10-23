@@ -455,5 +455,15 @@ class Systems
         return $return_data;
     }
 
+    /**
+     * @DESC：查询一条数据显示在前台页面
+     * @author: jason
+     * @date: 2019-10-23 09:30:42
+     */
+    public function getOneSite()
+    {
+        $return_data = Site::instance()->where(['status' => 1])->find()->toArray();
+        return $return_data;
+    }
 
 }

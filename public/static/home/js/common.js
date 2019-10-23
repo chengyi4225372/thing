@@ -106,3 +106,16 @@ function showSearch(){
     })
 }
 
+
+
+function click_show(objthis){
+    var v = $(objthis).attr('data-attr');
+    $('.huichuangyou').css('display','none');
+    $('.huiduoxin').css('display','none');
+    $('.huilinggong').css('display','none');
+    $('.huizhaoshi').css('display','none');
+    $('.huiqidong').css('display','none');
+    $('.huichuangye').css('display','none');
+    $('.' + v).css('display','block');
+}
+
