@@ -34,6 +34,7 @@ class user extends AuthController
         $this->assign('status',$status);
         $this->assign('params',$params);
         $this->assign('data_list',$list['list']['data']);
+        $this->assign('title','用户列表');
         return $this->fetch();
     }
 

@@ -14,6 +14,7 @@ class Infos extends  AuthController
         $title = input('get.title','','trim');
         $list = Infosservice::instance()->getList($title);
         $this->assign('list',$list);
+        $this->assign('title','招标信息');
         return $this->fetch();
     }
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hui-/public/../application/v1/view/systematic/cases/index.html";i:1571802576;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571821916;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hui-/public/../application/v1/view/systematic/cases/index.html";i:1571802576;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571821962;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -254,7 +254,7 @@
 
                     <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
                         <a href="#">
-                            <i class="fa fa-dashboard"></i> <span>案例管理</span>
+                            <i class="glyphicon glyphicon-inbox"></i> <span>案例管理</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>

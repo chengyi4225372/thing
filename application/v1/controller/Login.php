@@ -21,6 +21,7 @@ class Login extends Controller
      */
     public function index()
     {
+        $this->assign('title','登录');
         return $this->fetch();
     }
 

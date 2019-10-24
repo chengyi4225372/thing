@@ -26,6 +26,7 @@ class Cases extends AuthController
         $this->assign('is_show',$is_show);
         $this->assign('status',$status);
         $this->assign('data',$return_data);
+        $this->assign('title','最新案例');
         return $this->fetch();
     }
 

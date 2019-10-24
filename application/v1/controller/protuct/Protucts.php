@@ -13,6 +13,7 @@ class Protucts extends AuthController
           $names = input('get.names','','trim');
           $list = Protuctservice::instance()->getList($names);
           $this->assign('list',$list);
+          $this->assign('title','产品列表');
           return $this->fetch();
       }
 

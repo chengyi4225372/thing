@@ -72,6 +72,7 @@ class System extends AuthController
         $status = Config::get('site.status');
         $this->assign('status',$status);
         $this->assign('data_list',$return_data);
+        $this->assign('title','网站设置');
         return $this->fetch();
     }
 
@@ -125,6 +126,7 @@ class System extends AuthController
         $this->assign('data',$reutrn_data);
         $this->assign('params',$params);
         $this->assign('status',$status);
+        $this->assign('title','首页轮播图');
         return $this->fetch();
     }
 

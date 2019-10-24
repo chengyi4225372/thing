@@ -15,6 +15,7 @@ class Partner extends  AuthController
    if($this->request->isGet()){
        $list = Partnersservice::instance()->getList();
        $this->assign('list',$list);
+       $this->assign('title','合作伙伴');
        return $this->fetch();
    }
 

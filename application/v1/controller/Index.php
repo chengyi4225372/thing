@@ -24,7 +24,7 @@ class Index extends AuthController
         $data = Home::instance()->getData($userId);
 //        echo '<pre>';print_r($data);exit;
 
-
+        $this->assign('title','首页');
         $this->assign('userInfo',$userInfo);
         return $this->fetch();
     }
