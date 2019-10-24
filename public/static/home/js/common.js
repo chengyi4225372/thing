@@ -86,7 +86,7 @@ function showSearch(){
    var   content = '';
 
          content += "<div class='propbox' >";
-         content += "<div class='title'><i class='close'></i></div>";
+         content += "<div class='title' onclick='closedTab()'>方案咨询<i class='close'></i></div>";
          content += "<div class='total-input'> <div>";
          content += "<span>您的姓名</span>";
          content += "<input type='text' id='contactName'  placeholder='请输入姓名'></div>";
@@ -101,17 +101,13 @@ function showSearch(){
 
          console.log(content);
          $(".prop_box").append(content).show();
-
-   // layer.open({
-   //      type: 1,
-   //      title: '提交',
-   //      shadeClose: true,
-   //      shade: 0.8,
-   //      area: ['470px', '397px'],
-   //      scrollbar: false, // 父页面 滚动条 禁止
-   //      content: content,
-   //  })
 }
+
+//关闭弹窗
+function closedTab(){
+    $(".prop_box").hide();
+}
+
 
 
 $(function(){

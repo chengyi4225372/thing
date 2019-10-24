@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571835613;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571882118;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,9 +51,9 @@
                             <span><?php echo $site_info['tel']; ?></span>
                             <span class='email'></span>
                             <span><?php echo $site_info['mail']; ?></span>
-                            <span class='bo'></span>
-                            <span class='wx'></span>
-                            <span class='tie'></span>
+                            <!--<span class='bo'></span>-->
+                            <!--<span class='wx'></span>-->
+                            <!--<span class='tie'></span>-->
                         </div>
                         <div class='title_lan'>中文</div>
                     </div>
@@ -160,9 +160,9 @@
                             <div><?php echo $data_list['title2']; ?></div>
                             <div><?php echo $data_list['title3']; ?></div>
                             <?php if($key != 1): ?>
-                            <a href="javascript:void(0)">
-                                <img src="/static/home/images/jiantou.png" alt="">
-                            </a>
+                            <!--<a href="javascript:void(0)">-->
+                                <!--<img src="/static/home/images/jiantou.png" alt="">-->
+                            <!--</a>-->
                             <?php endif; ?>
                         </div>
                     </div>
@@ -419,7 +419,19 @@
                 <div class='diandianone'></div>
                 <div class='diandiantwo'></div>
                 <div class='w'>
-                    <div class='zhao_title'></div>
+                    <div class='search_info'>
+                        <div class='zhao_title'>
+                        </div>
+
+                        <!-- 搜索 -->
+                        <div class='zhaoSearch'>
+                            <div class='searchLogo'>
+                                <i></i>
+                                <input type="text" placeholder="搜索招标政策和招标信息...">
+                            </div>
+                            <button>查询</button>
+                        </div>
+                    </div>
 
                     <div class='zhaomethods'>
                         <div class='totalInfo_title'>招商政策</div>
@@ -510,17 +522,17 @@
                     </dl>
 
                 </div>
-                <div class='concat_icon'>
-                    <div><img src="/static/home/images/bo.png" alt=""></div>
-                    <div><img src="/static/home/images/wx.png" alt=""></div>
-                    <div><img src="/static/home/images/tie.png" alt=""></div>
-                </div>
+                <!--<div class='concat_icon'>-->
+                    <!--<div><img src="/static/home/images/bo.png" alt=""></div>-->
+                    <!--<div><img src="/static/home/images/wx.png" alt=""></div>-->
+                    <!--<div><img src="/static/home/images/tie.png" alt=""></div>-->
+                <!--</div>-->
             </div>
         </div>
 
 
 
-        <div class='goTop'>
+        <div class='goTop'id="goTop">
             <i></i>
             <div>返回顶部</div>
         </div>
