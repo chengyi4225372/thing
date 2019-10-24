@@ -30,7 +30,31 @@ class Workservice
     public function getNewList(){
         $where = ['del_time'=>0];
         $list  = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->paginate(15);
-        return $$list;
+        return  $list;
+    }
+
+
+    /**
+     * array array
+     *
+     * 添加 数据
+     */
+    public function setAddArray($array){
+        $ret = Work::instance()->save($array);
+        return $ret;
+    }
+
+
+    /**
+     * 通过id 更新
+     * array array
+     * id    string
+     *return bool
+     */
+    public function  updateByArray($array,$id){
+        $w = ['id'=>$id];
+        $ret =  Work::instance()->where($w)->update($array);
+        return $ret;
     }
 
 
@@ -39,6 +63,28 @@ class Workservice
      */
     public function getIdInfo($id){
 
+        if(empty($id) || $id <=0){
+            return false;
+        }
+       $w    = ['id'=>$id];
+       $info = Work::instance()->where($w)->fond();
+       return $info;
+    }
+
+    /**
+     * 删除 del
+     * id string
+     * return bool
+     */
+    public function setDel($id){
+        if(empty($id) || $id <=0){
+            return false;
+        }
+
+        $w   = ['id'=>$id];
+        $c   = ['del_time'=>time()];
+        $ret = Work::instance()->where($w)->update($c);
+        return $ret;
     }
 
 }

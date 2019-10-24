@@ -2,7 +2,7 @@
 namespace app\v1\controller\work;
 use app\common\controller\AuthController;
 use think\Config;
-use app\common\model\work;
+use app\common\model\Work;
 use app\v1\service\Workservice;
 
 class Works extends  AuthController
@@ -10,10 +10,10 @@ class Works extends  AuthController
 
     public function index()
     {
-
      if($this->request->isGet()){
 
-     }
+         return $this->fetch();
+       }
      return false;
     }
 
