@@ -86,8 +86,8 @@ function showSearch(){
    var   content = '';
 
          content += "<div class='propbox' >";
-         content += "<div class='title'></div>";
-         content += "<div class='total_input'> <div>";
+         content += "<div class='title'><i class='close'></i></div>";
+         content += "<div class='total-input'> <div>";
          content += "<span>您的姓名</span>";
          content += "<input type='text' id='contactName'  placeholder='请输入姓名'></div>";
          content += "<div><span>联系方式</span>";

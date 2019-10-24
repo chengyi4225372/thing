@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1571834127;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1571881946;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +13,6 @@
     <script src='/static/home/js/index.js'></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/common.js'></script>
-
     <style>
         .header
         {
@@ -39,6 +38,8 @@
 
     <div class='container'>
 
+
+
         <!-- 头部 -->
         <div class='header'>
             <!-- 头部图标 -->
@@ -50,9 +51,9 @@
                             <span><?php echo $site_info['tel']; ?></span>
                             <span class='email'></span>
                             <span><?php echo $site_info['mail']; ?></span>
-                            <span class='bo'></span>
-                            <span class='wx'></span>
-                            <span class='tie'></span>
+                            <!--<span class='bo'></span>-->
+                            <!--<span class='wx'></span>-->
+                            <!--<span class='tie'></span>-->
                         </div>
                         <div class='title_lan'>中文</div>
                     </div>
@@ -145,6 +146,8 @@
             </div>
         </div>
 
+       <div class="prop_box" ></div>
+
 
         <!-- 近期成功案例 -->
         <div class='success'>
@@ -157,9 +160,9 @@
                             <div><?php echo $data_list['title2']; ?></div>
                             <div><?php echo $data_list['title3']; ?></div>
                             <?php if($key != 1): ?>
-                            <a href="#">
-                                <img src="/static/home/images/jiantou.png" alt="">
-                            </a>
+                            <!--<a href="javascript:void(0)">-->
+                                <!--<img src="/static/home/images/jiantou.png" alt="">-->
+                            <!--</a>-->
                             <?php endif; ?>
                         </div>
                     </div>
@@ -409,13 +412,26 @@
 
 
 
+
         <!-- 招标信息政策 -->
         <div class='zhaoBox'>
             <div class='zhaoInfo'>
                 <div class='diandianone'></div>
                 <div class='diandiantwo'></div>
                 <div class='w'>
-                    <div class='zhao_title'></div>
+                    <div class='search_info'>
+                        <div class='zhao_title'>
+                        </div>
+
+                        <!-- 搜索 -->
+                        <div class='zhaoSearch'>
+                            <div class='searchLogo'>
+                                <i></i>
+                                <input type="text" placeholder="搜索招标政策和招标信息...">
+                            </div>
+                            <button>查询</button>
+                        </div>
+                    </div>
 
                     <div class='zhaomethods'>
                         <div class='totalInfo_title'>招商政策</div>
@@ -506,34 +522,25 @@
                     </dl>
 
                 </div>
-                <div class='concat_icon'>
-                    <div><img src="/static/home/images/bo.png" alt=""></div>
-                    <div><img src="/static/home/images/wx.png" alt=""></div>
-                    <div><img src="/static/home/images/tie.png" alt=""></div>
-                </div>
+                <!--<div class='concat_icon'>-->
+                    <!--<div><img src="/static/home/images/bo.png" alt=""></div>-->
+                    <!--<div><img src="/static/home/images/wx.png" alt=""></div>-->
+                    <!--<div><img src="/static/home/images/tie.png" alt=""></div>-->
+                <!--</div>-->
             </div>
         </div>
 
 
-        
-        <div class='prop'>
 
-                <div class='searcher' id='search'>
-                    <input type="text" id="contactName"  placeholder="请输入姓名">
-                    <input type="text" id="companyName"  placeholder="请输入公司名称">
-                    <input type="text" id="contactMobile" placeholder="请输入手机号码">
-                    <input type="hidden" id="source" value="门户首页">
-                    <input type="hidden" id="identification" value="企业一站式服务">
-                    <input type="button" id="getErp" value='定义方案'>
-                </div>
-            
-        </div>
-        <div class='goTop'>
+        <div class='goTop'id="goTop">
             <i></i>
             <div>返回顶部</div>
         </div>
+
     </div>
 
 </body>
+
+
 
 </html>

@@ -770,13 +770,14 @@
     width:544px;
     height:54px;
     margin-bottom:25px;
+
     background-size: contain;
     background-image: url('../images/zhaobiao.png');
 }
 
 .zhaoTotalInfo {
     margin-left: 30px;
-    width: 865px;
+    width: 1079px;
     margin: 0 auto;
     height: 380px;
     padding: 0 11px 0 11px;
@@ -860,7 +861,7 @@
 
 .zhaomethods {
     margin: auto;
-    width: 865px;
+    width: 1079px;
     height: 380px;
     padding: 0 11px 0;
     background-color: #fff;
@@ -935,7 +936,7 @@
 
 .diandiantwo {
     position: absolute;
-    top: 392px;
+    top: 462px;
     right: 52px;
     width: 165px;
     height: 204px;
@@ -1257,11 +1258,12 @@ border:none;
     background-color: #ccc;
 }
 .propbox .title{
+    position:relative;
     width:400px;
     height:120px;
     background-image: url('../images/title.png');
 }
-.total_input{
+.total-input{
     width:400px;
     height:280px;
     padding:40px 20px 24px 70px;
@@ -1269,33 +1271,112 @@ border:none;
     background:rgba(245,247,254,1);
     border-radius:0px 0px 4px 4px;
 }
-.total_input div{
-    height:20px;
-    line-height:20px;
-    margin-bottom:20px;
+.total-input div{
+    height:30px;
+    line-height:30px;
+    margin-bottom:25px;
 }
-.propbox .total_input input{
-    width:160px;
-    height:20px;
+.propbox .total-input input{
+    border-radius:4px;
+    outline:none;
+    border:none;
+    width:180px;
+    height:30px;
+    padding-left:5px;
+    box-sizing:border-box;
 
 }
-.total_input .button{
-    width:160px;
-    height:28px;
+.total-input .button{
+    width:190px;
+    height:34px;
     text-align:center;
-    line-height:28px;
+    line-height:34px;
     background:linear-gradient(90deg,rgba(124,219,249,1),rgba(47,128,237,1));
     border-radius:4px;
     outline:none;
     border:none;
-    margin:20px 0 0 50px;
-    font-size:12px;
+    margin:14px 0 0 30px;
+    font-size:16px;
     font-family:Source Han Sans CN;
     font-weight:400;
     color:rgba(255,255,255,1);
     /*line-height:60px;*/
 }
-.total_input span{
-    margin-right:5px;
+.total-input span{
+    font-size:14px;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(0,0,0,1);
+    line-height:36px;
+    margin-right:12px;
+}
+.propbox .close{
+    width:20px;
+    height:20px;
+
+    position:absolute;
+    top:10px;
+    right:10px;
+    background-image: url('../images/close.png');
 }
 
+.search_info{
+    position:relative;
+
+}
+
+.zhaoSearch{
+    position:absolute;
+    width:334px;
+    top:7px;
+    right:62px;
+
+}
+.searchLogo{
+
+    width:248px;
+    height:40px;
+    border-bottom:2px solid #000;
+}
+.searchLogo input{
+    border:none;
+    width:248px;
+    height:40px;
+
+}
+.searchLogo input{
+    border: none;
+    margin-left:38px;
+    width: 210px;
+    height: 40px;
+    outline: none;
+    background-color: #F5F9FF;
+}
+.searchLogo i{
+    display:inline-block;
+    position:absolute;
+    top:11px;
+    left:0;
+    width:18px;
+    height:17px;
+    background-image: url('../images/sou.png');
+
+}
+.zhaoSearch button{
+
+    width:72px;
+    height:32px;
+    font-size:14px;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    background:rgba(64,145,255,1);
+    border-radius:4px;
+    outline:none;
+    border:none;
+    position:absolute;
+    top:50%;
+    right:0;
+    transform: translateY(-50%);
+
+}
