@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/system/slideshow.html";i:1571652710;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571821962;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/system/slideshow.html";i:1571652710;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571883474;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -293,6 +293,27 @@
 
                 </ul>
             </li>
+
+            <li class="treeview " >
+                <a href="#">
+                    <i class="fa fa-share"></i> <span>慧灵工</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="active">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user"></i> <span>行业资讯</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
         </ul>
     </section>
     <!-- /.sidebar -->

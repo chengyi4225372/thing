@@ -275,16 +275,7 @@ return [
         // 缓存有效期 0表示永久缓存
         'expire'   => 0,
     ]),
-
-    // +----------------------------------------------------------------------
-    // | 自定义设置
-    // +----------------------------------------------------------------------
-    'app'                    => [
-        //API接口地址
-        'api_url'             => ENVIRONMENT == 'production' ? 'http://erp.spocoo.com/t.php?s=' : 'http://erptest.spocoo.com/t.php?s=',
-        // 配置分组
-        'configgroup'         => ['basic' => '基础配置', 'notice' => '通知管理', 'dictionary' => '字典配置']
-    ],
+    
     // 定义错误的重定向页面地址
     'http_exception_template' => [
         404 => APP_PATH.'404.html',
