@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571882118;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571909642;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -495,30 +495,30 @@
                 </div>
                 <div class='parter_catefories'>
                     <dl>
-                        <dt><a href="#">服务产品</a></dt>
-                        <dd><a href="#">服务型税筹</a></dd>
-                        <dd><a href="#">门户型税筹</a></dd>
-                        <dd><a href="#">人力资源</a></dd>
+                        <dt>服务产品</dt>
+                        <dd>服务型税筹</dd>
+                        <dd>门户型税筹</dd>
+                        <dd>人力资源</dd>
                     </dl>
                     <dl>
-                        <dt><a href="#">招商政策</a></dt>
-                        <dd><a href="#">招商政策网</a></dd>
+                        <dt>招商政策</dt>
+                        <dd>招商政策网</dd>
                     </dl>
                     <dl>
-                        <dt><a href="#">合作</a></dt>
-                        <dd><a href="#">代理合作</a></dd>
+                        <dt>合作</dt>
+                        <dd>代理合作</dd>
                     </dl>
                     <dl>
-                        <dt><a href="#">公司信息</a></dt>
-                        <dd><a href="#">瑟维斯有限公司</a></dd>
-                        <dd><a href="#">惠创优产业联盟</a></dd>
-                        <dd><a href="#">中兴瑞华有限公司</a></dd>
+                        <dt>公司信息</dt>
+                        <dd>瑟维斯有限公司</dd>
+                        <dd>惠创优产业联盟</dd>
+                        <dd>中兴瑞华有限公司</dd>
                     </dl>
                     <dl>
-                        <dt><a href="#">联系我们</a></dt>
-                        <dd><a href="#"><?php echo $site_info['tel']; ?></a></dd>
-                        <dd><a href="#"><?php echo $site_info['mail']; ?></a></dd>
-                        <dd><a href="#"><?php echo $site_info['count_code']; ?></a></dd>
+                        <dt>联系我们</dt>
+                        <dd><?php echo $site_info['tel']; ?></dd>
+                        <dd><?php echo $site_info['mail']; ?></dd>
+                        <dd><?php echo $site_info['count_code']; ?></dd>
                     </dl>
 
                 </div>
