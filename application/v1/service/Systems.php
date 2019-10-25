@@ -9,10 +9,8 @@ use app\common\model\Menu;
 use app\common\model\Admin;
 use app\common\model\Site;
 use app\common\model\Slideshow;
-use think\Session;
 use plugin\Tree;
 use plugin\Crypt;
-use think\Cache;
 use think\Config;
 class Systems
 {
@@ -33,15 +31,6 @@ class Systems
         return self::$instance;
     }
 
-    /**
-     * @DESC：初始化
-     * @author: jason
-     * @date: 2019-08-05 03:48:18
-     */
-    public function __construct()
-    {
-        $this->_reids = Cache::init(Config::get('cache.redis'));
-    }
 
     /**
      * @DESC：生成token
@@ -79,12 +68,12 @@ class Systems
 //            return false;
 //        }
         //存入session
-        Session::set('userid',$user_info['id']);
-        Session::set('username',$user_info['username']);
-        Session::set('truename',$user_info['truename']);
-        Session::set('tel',$user_info['tel']);
-        Session::set('power',$user_info['power']);
-        Session::set('admin',$user_info['admin']);
+        cookie('userid',$user_info['id'],864000);
+        cookie('username',$user_info['username'],864000);
+        cookie('truename',$user_info['truename'],864000);
+        cookie('tel',$user_info['tel'],864000);
+        cookie('power',$user_info['power'],864000);
+        cookie('admin',$user_info['admin'],864000);
 
         return true;
     }

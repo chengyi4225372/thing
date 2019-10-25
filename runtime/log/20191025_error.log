@@ -1,3 +1,0 @@
----------------------------------------------------------------
-[ 2019-10-25T09:42:36+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?content=%3Cp%3E654465465%3C%2Fp%3E
-[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Response.php:316]

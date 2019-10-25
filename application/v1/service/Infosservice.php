@@ -1,10 +1,8 @@
 <?php
 namespace app\v1\service;
 use app\common\model\Info;
-use think\Session;
 use plugin\Tree;
 use plugin\Crypt;
-use think\Cache;
 use think\Config;
 
 class Infosservice

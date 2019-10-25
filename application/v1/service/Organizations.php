@@ -7,10 +7,8 @@
  */
 namespace app\v1\service;
 
-use think\session;
 use plugin\Tree;
 use plugin\Crypt;
-use think\Cache;
 use think\Config;
 use app\common\model\User;
 use app\common\model\organ;

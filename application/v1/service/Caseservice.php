@@ -9,10 +9,8 @@ namespace app\v1\service;
 
 use app\common\model\Admin;
 use app\common\model\Cases;
-use think\Session;
 use plugin\Tree;
 use plugin\Crypt;
-use think\Cache;
 use think\Config;
 
 class Caseservice
@@ -33,15 +31,6 @@ class Caseservice
         return self::$instance;
     }
 
-    /**
-     * @DESC：初始化
-     * @author: jason
-     * @date: 2019-08-05 03:48:18
-     */
-    public function __construct()
-    {
-        $this->_reids = Cache::init(Config::get('cache.redis'));
-    }
 
     /**
      * @DESC：获取成功案例父类列表

@@ -178,7 +178,7 @@ class AuthController extends Controller
      */
     protected function isLogin($url)
     {
-        $userInfo = Session::get('username');
+        $userInfo = Cookie('username');
         if(empty($userInfo)){
             $this->redirect($url);
         }
