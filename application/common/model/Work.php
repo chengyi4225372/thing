@@ -7,7 +7,7 @@ class Work extends  Model
 {
     protected static $readInstance = null;
     //表名
-    protected $table='work_news';
+    protected $table='h_work_news';
     /**
      * 单例
      * @author lamkakyun

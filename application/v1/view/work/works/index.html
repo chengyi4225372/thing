@@ -9,11 +9,11 @@
                     <div class="panel-heading">
 
                         <div class="form-group">
-                            <input type="text"  class="form-control" name="keyword" value="" placeholder="">
+                            <input type="text"  class="form-control" name="keyword"  value="" placeholder="请输入新闻标题搜索....">
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-info" id="btn_search" type="Submit"  data-url="{:url('/v1/users/user/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info btn_search"  type="button"  data-url="{:url('/v1/work/works/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
                 </div>
@@ -29,14 +29,14 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addusers" data-url="{:url('/v1/users/user/adduser')}">
-                <i class="fa fa-plus-circle">添加用户</i></button>
+                    id="addwork" data-url="{:url('/v1/work/works/add')}">
+                <i class="fa fa-plus-circle">添加新闻</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                 <th class="text-center">新闻标题</th>
-                <th class="text-center">排序</th>
+                <th class="col-xs-3">排序</th>
                 <th class="text-center">新闻展示图</th>
                 <th class="text-center">新闻关键字</th>
                 <th class="text-center">创建时间</th>
@@ -51,17 +51,21 @@
                 <tr>
 
                     <td class="text-center">{$vo.title|default=''}</td>
-                    <td class="text-center"></td>
+                    <td class="col-xs-3 ">
+                        <input class=" col-xs-3" type="text" value="{$vo.sort|default='0'}" data-id="{$vo.id}">
+                    </td>
                     <td class="text-center">
+                        <a href="{$vo.imgs|default='__PUBLIC__/default.png'}">
                         <img src="{$vo.imgs|default=''}" alt="" style="width: 100px;height:100px;">
+                        </a>
                     </td>
                     <td class="text-center">{$vo.keyword|default=''}</td>
                     <td class="text-center">{$vo.create_time|default=''}</td>
 
                     <td class="text-center">
 
-                        <a  onclick="editWork()"  class="btn btn-info" data-url="{:url('/v1/work/works/edit',['id' => $list['id']])}" >编辑</a>
-                        <a  onclick="delWork()" class="btn btn-danger" data-url="{:url('/v1/work/works/del',['id' => $list['id']])}"  >删除</a>
+                        <a   class="btn btn-info editWork" data-url="{:url('/v1/work/works/edit',['id' => $vo['id']])}" >编辑</a>
+                        <a  onclick="delWork()" class="btn btn-danger" data-url="{:url('/v1/work/works/del',['id' => $vo['id']])}"  >删除</a>
 
                     </td>
                 </tr>
@@ -69,7 +73,9 @@
                 {/empty}
                 </tbody>
             </table>
-            <div class="pages"></div>
+            <div class="pages">
+                {$list->render()}
+            </div>
         </div>
     </div>
 

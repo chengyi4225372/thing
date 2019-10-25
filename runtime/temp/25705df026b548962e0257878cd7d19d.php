@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\users\user\index.html";i:1571635873;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571727608;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571905529;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571899026;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\work\works\index.html";i:1571909335;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571727608;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571905529;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571899026;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -328,22 +328,13 @@
 
                 <div class="panel panel-default panel-btn">
                     <div class="panel-heading">
-                        <div class="form-group">
-                            <label>状态：</label>
-                            <select class="form-control" name="status">
-                                <option value="">请选择</option>
-                                <option value="0" <?php if((isset($params['status'])) && ($params['status'] == 0)): ?>selected='selected'<?php endif; ?>>启用</option>
-                                <option value="1" <?php if((isset($params['status'])) && ($params['status'] == 1)): ?>selected='selected'<?php endif; ?>>禁用</option>
-                            </select>
-                        </div>
-
 
                         <div class="form-group">
-                            <input type="text"  class="form-control" name="username" value="<?php echo $params['username']; ?>" placeholder="多姓名搜索(空格逗号隔开)">
+                            <input type="text"  class="form-control" name="keyword"  value="" placeholder="请输入新闻标题搜索....">
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-info" id="btn_search" type="Submit"  data-url="<?php echo url('/v1/users/user/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info btn_search"  type="button"  data-url="<?php echo url('/v1/work/works/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
                 </div>
@@ -359,41 +350,48 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addusers" data-url="<?php echo url('/v1/users/user/adduser'); ?>">
-                <i class="fa fa-plus-circle">添加用户</i></button>
+                    id="addwork" data-url="<?php echo url('/v1/work/works/add'); ?>">
+                <i class="fa fa-plus-circle">添加新闻</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
-                </th>
-                <th class="text-center">用户</th>
-                <th class="text-center">电话</th>
-                <th class="text-center">邮箱</th>
-                <th class="text-center">状态</th>
+                <th class="text-center">新闻标题</th>
+                <th class="col-xs-3">排序</th>
+                <th class="text-center">新闻展示图</th>
+                <th class="text-center">新闻关键字</th>
+                <th class="text-center">创建时间</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-                <?php if(is_array($data_list) || $data_list instanceof \think\Collection || $data_list instanceof \think\Paginator): $i = 0; $__LIST__ = $data_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
+                <?php if(empty($list) || (($list instanceof \think\Collection || $list instanceof \think\Paginator ) && $list->isEmpty())): else: if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td class="td-align td-padding">
-                        <input type="checkbox" name="box_checked" data-id="<?php echo $list['id']; ?>" class="data-check_box">
-                    </td>
-                    <td class="text-center"><?php echo $list['username']; ?></td>
-                    <td class="text-center"><?php echo $list['tel']; ?></td>
-                    <td class="text-center"><?php echo $list['mail']; ?></td>
-                    <td class="text-center">
-                        <span class="btn <?php if($list['is_del'] == 0): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['is_del']]; ?></span>
+
+                    <td class="text-center"><?php echo (isset($vo['title']) && ($vo['title'] !== '')?$vo['title']:''); ?></td>
+                    <td class="col-xs-3 ">
+                        <input class=" col-xs-3" type="text" value="<?php echo (isset($vo['sort']) && ($vo['sort'] !== '')?$vo['sort']:'0'); ?>" data-id="<?php echo $vo['id']; ?>">
                     </td>
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/users/user/edituser',['id' => $list['id']]); ?>" data-id="" onclick="admin_module.user_edit(this)">编辑</a>
+                        <a href="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:'/static/default.png'); ?>">
+                        <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="" style="width: 100px;height:100px;">
+                        </a>
+                    </td>
+                    <td class="text-center"><?php echo (isset($vo['keyword']) && ($vo['keyword'] !== '')?$vo['keyword']:''); ?></td>
+                    <td class="text-center"><?php echo (isset($vo['create_time']) && ($vo['create_time'] !== '')?$vo['create_time']:''); ?></td>
+
+                    <td class="text-center">
+
+                        <a   class="btn btn-info editWork" data-url="<?php echo url('/v1/work/works/edit',['id' => $vo['id']]); ?>" >编辑</a>
+                        <a  onclick="delWork()" class="btn btn-danger" data-url="<?php echo url('/v1/work/works/del',['id' => $vo['id']]); ?>"  >删除</a>
+
                     </td>
                 </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
+                 <?php endforeach; endif; else: echo "" ;endif; endif; ?>
                 </tbody>
             </table>
-            <div class="pages"></div>
+            <div class="pages">
+                <?php echo $list->render(); ?>
+            </div>
         </div>
     </div>
 

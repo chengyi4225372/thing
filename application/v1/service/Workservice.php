@@ -53,6 +53,9 @@ class Workservice
      */
     public function  updateByArray($array,$id){
         $w = ['id'=>$id];
+        if(empty($id) || $id <=0){
+            return false;
+        }
         $ret =  Work::instance()->where($w)->update($array);
         return $ret;
     }
@@ -67,7 +70,7 @@ class Workservice
             return false;
         }
        $w    = ['id'=>$id];
-       $info = Work::instance()->where($w)->fond();
+       $info = Work::instance()->where($w)->find();
        return $info;
     }
 
