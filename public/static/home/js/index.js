@@ -9,7 +9,7 @@ window.onscroll = function () {
     // var goTop=document.getElementByClassName("goTop")
     // console.log(goTop)
     if (top >= 1080) {
-        box.style.backgroundColor = "black";
+        box.style.backgroundColor = "#031c36";
         box.style.position = 'fixed'
         // box.style.top='0'+px
         logo.style.display = 'none'
