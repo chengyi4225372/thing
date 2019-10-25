@@ -31,7 +31,7 @@
                     <label for="sort" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻排序：</label>
                     <div class="col-sm-9">
-                        <input type="number" value="{$info.sort|default=''}" class="form-control form-control-sm" id="sort">
+                        <input type="number"   value="{$info.sort|default=''}" class="form-control form-control-sm" id="sort">
                     </div>
                 </div>
 
@@ -48,7 +48,7 @@
                     <label for="username" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻重点描述：</label>
                     <div class="col-sm-9">
-                        <textarea  id="desc" class="form-control form-control-sm"  rows="5" value="{$info.desc|default=''}"></textarea>
+                        <textarea  id="desc" class="form-control form-control-sm"  rows="5" >{$info.desc}</textarea>
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@
         <input type="hidden" id="mid" value="{$info.id}">
         <div class="td-align dialog-footer">
             <button class="btn btn-warning cancle"> <i class="fa fa-close"></i> 取消</button>
-            <button class="btn btn-primary editworks" type="button"  data-url="{:url('/v1/work/works/edit')}"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-primary" id="editWorks" type="button"  data-url="{:url('/v1/work/works/edit')}"><i class="fa fa-save"></i> 确定提交</button>
         </div>
     </form>
 </div>

@@ -25,10 +25,21 @@ class Workservice
 
 
     /**
+     * title string
      *获取资讯列表
      */
-    public function getNewList(){
-        $where = ['del_time'=>0];
+    public function getNewList($title){
+        if(empty($title) || !isset($title)){
+
+            $where = ['del_time'=>0];
+        }else {
+
+            $where =[
+                 'del_time'=>0,
+                 'title|keyword'=>['like','%'.$title.'%'],
+            ];
+        }
+
         $list  = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->paginate(15);
         return  $list;
     }
@@ -53,9 +64,15 @@ class Workservice
      */
     public function  updateByArray($array,$id){
         $w = ['id'=>$id];
+
         if(empty($id) || $id <=0){
             return false;
         }
+
+        if(empty($array)){
+            return  false;
+        }
+
         $ret =  Work::instance()->where($w)->update($array);
         return $ret;
     }
@@ -88,6 +105,34 @@ class Workservice
         $c   = ['del_time'=>time()];
         $ret = Work::instance()->where($w)->update($c);
         return $ret;
+    }
+
+    /**
+     *设置排序
+     * id  string
+     * sort string|int
+     * return bool
+     */
+    public  function toSetsort($id,$sort){
+        if(empty($id) || !isset($id)){
+            return false;
+        }
+
+        if(empty($sort) || $sort <= 0){
+            $sort = 0;
+        }
+
+        $w   = ['id'=>$id];
+        $arr = ['sort'=>$sort];
+
+        $ret = Work::instance()->where($w)->update($arr);
+
+        if($ret !== false){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
 }

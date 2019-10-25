@@ -11,7 +11,8 @@ class Works extends  AuthController
     public function index()
     {
      if($this->request->isGet()){
-         $list = Workservice::instance()->getNewList();
+         $title = input('get.title','','trim');
+         $list = Workservice::instance()->getNewList($title);
          $this->assign('list',$list);
          return $this->fetch();
        }
@@ -73,11 +74,29 @@ class Works extends  AuthController
         }
 
         if($this->request->isPost()){
+           $data = $this->request->param();
+           if(empty($data['id']) || !isset($data['id'])){
+               return false;
+           }
 
+           $arr= array(
+               'title'=>$data['title'],
+               'keyword'=>$data['keyword'],
+               'desc'=>$data['desc'],
+               'content'=>$data['content'],
+               'imgs'=>$data['imgs'],
+               'sort'=>$data['sort'],
+           );
+           $ret = Workservice::instance()->updateByArray($arr,$data['id']);
+
+           if($ret){
+               return json(['code'=>200,'msg'=>'操作成功']);
+           }else {
+               return json(['code'=>400,'msg'=>'操作失败']);
+           }
         }
 
     }
-
 
     /**
      * @return bool
@@ -85,8 +104,8 @@ class Works extends  AuthController
      */
     public function del(){
 
-        if($this->request->isGet()){
-          $id = input('get.id','','int');
+        if($this->request->isPost()){
+          $id = input('post.id','','int');
 
           if(empty($id)){
               return false;
@@ -95,10 +114,35 @@ class Works extends  AuthController
           $ret = Workservice::instance()->setDel($id);
 
           if($ret){
-               return json(['code'=>200,'msg'=>'操作失败']);
+               return json(['code'=>200,'msg'=>'操作成功']);
           }else {
-              return json(['code'=>400,'msg'=>'操作成功']);
+              return json(['code'=>400,'msg'=>'操作失败']);
           }
+        }
+        return false;
+    }
+
+    /**
+     * @return cheng
+     * 设置 排序
+     */
+    public function setsort(){
+        if($this->request->isPost()){
+            $id  = input('post.id','','int');
+            $sort= input('post.sort','','int');
+
+            if(!is_int($id) && !is_string($id)){
+                return false;
+            }
+
+            $ret = Workservice::instance()->toSetsort($id,$sort);
+
+            if($ret === true){
+                return json(['code'=>200,'msg'=>'排序成功']);
+            }else {
+                return json(['code'=>400,'msg'=>'排序失败']);
+            }
+
         }
         return false;
     }
