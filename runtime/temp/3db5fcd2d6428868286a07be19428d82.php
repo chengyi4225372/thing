@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/system/slideshow.html";i:1571652710;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571883474;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\info\infos\index.html";i:1571726869;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571727608;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571905529;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571899026;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -294,16 +294,16 @@
                 </ul>
             </li>
 
-            <li class="treeview " >
+            <li class=" <?php if($paths == '/v1/work/works/index'): ?>treeview <?php endif; ?> " >
                 <a href="#">
-                    <i class="fa fa-share"></i> <span>慧灵工</span>
+                    <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active">
-                        <a href="#">
+                    <li class="<?php if($paths == '/v1/work/works/index'): ?>active <?php endif; ?>">
+                        <a href="<?php echo url('/v1/work/works/index'); ?>">
                             <i class="glyphicon glyphicon-user"></i> <span>行业资讯</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
@@ -328,18 +328,13 @@
 
                 <div class="panel panel-default panel-btn">
                     <div class="panel-heading">
+
                         <div class="form-group">
-                            <label>状态：</label>
-                            <select class="form-control" name="status">
-                                <option value="">请选择</option>
-                                <option value="1" <?php if((isset($params['status'])) && ($params['status'] == 1)): ?>selected='selected'<?php endif; ?>>启用</option>
-                                <option value="2" <?php if((isset($params['status'])) && ($params['status'] == 2)): ?>selected='selected'<?php endif; ?>>禁用</option>
-                            </select>
+                            <input type="text" class="form-control" id="title"  value="<?php echo \think\Request::instance()->get('title'); ?>" placeholder="请输入标题名称搜索...">
                         </div>
 
-
                         <div class="form-group">
-                            <button class="btn btn-info" id="btn_search" type="Submit"  data-url="<?php echo url('/v1/users/user/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info" id="btn_search" type="button"  data-url="<?php echo url('/v1/info/infos/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
                 </div>
@@ -355,44 +350,40 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addslideshow" data-url="<?php echo url('/v1/systematic/system/addslideshow'); ?>">
-                <i class="fa fa-plus-circle">添加轮播图</i></button>
+                    id="infosadd" data-url="<?php echo url('/v1/info/infos/infosadd'); ?>">
+                <i class="fa fa-plus-circle">添加</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
-                </th>
-                <th class="text-center">标题</th>
-                <th class="text-center">描述</th>
-                <th class="text-center">URL</th>
-                <th class="text-center">图片</th>
-                <th class="text-center">状态</th>
+                <th class="text-center">所属分类</th>
+                <th class="text-center">新闻标题</th>
+                <th class="text-center">创建时间</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-                <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
-                    <tr>
-                        <td class="td-align td-padding">
-                            <input type="checkbox" name="box_checked" data-id="<?php echo isset($list['id']) ? $list['id'] : ''; ?>" class="data-check_box">
-                        </td>
-                        <td class="text-center"><?php echo $list['title']; ?></td>
-                        <td class="text-center"><?php echo $list['desc']; ?></td>
-                        <td class="text-center"><?php echo $list['url']; ?></td>
-                        <td class="text-center">
-                            <img src="<?php echo $list['pic']; ?>" style="width:50px;height:50px;">
-                        </td>
-                        <td class="text-center">
-                            <span class="btn <?php if($list['status'] == 1): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
-                        </td>
-                        <td class="text-center">
-                            <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/systematic/system/editslideshow',['id' => $list['id']]); ?>" onclick="admin_module.edit_slideshow(this)">编辑</a>
-                        </td>
-                    </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
 
+            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <tr>
+                    <td class="text-center">
+                     <?php if($vo['pid'] == '1'): ?>
+                       招标信息
+                      <?php else: ?>
+                        招商信息
+                      <?php endif; ?>
+                    </td>
+                    <td class="text-center"><?php echo $vo['title']; ?></td>
+                    <td class="text-center"><?php echo $vo['create_time']; ?></td>
 
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="<?php echo url('/v1/info/infos/infosEdit',['id'=>$vo['id']]); ?>">编辑</a>
+
+                        <a  class="btn btn-danger infos_del" data-url="<?php echo url('/v1/info/infos/infoDels',['id'=>$vo['id']]); ?>">删除</a>
+
+                    </td>
+
+                </tr>
+           <?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>
             </table>
             <div class="pages"></div>
@@ -454,6 +445,7 @@
 <script src="/static/assets/dist/js/protuct.js"></script>
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
+<script src="/static/assets/dist/js/works.js"></script>
 <script>
     admin_module.changepas();
 </script>
