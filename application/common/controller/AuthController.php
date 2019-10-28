@@ -166,7 +166,7 @@ class AuthController extends Controller
         $this->assign('site', $site);
         $this->assign('config', $config);
         $this->assign('request', $this->request);
-        $this->assign('userInfo',Session::get());
+        $this->assign('userInfo',Cookie::get());
         $this->assign('adaptive', $this->adaptive);
     }
 
@@ -178,7 +178,7 @@ class AuthController extends Controller
      */
     protected function isLogin($url)
     {
-        $userInfo = Session::get('username');
+        $userInfo = Cookie('username');
         if(empty($userInfo)){
             $this->redirect($url);
         }

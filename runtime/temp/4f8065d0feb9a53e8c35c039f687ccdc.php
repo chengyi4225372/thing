@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1571909642;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572224448;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,7 +97,7 @@
 
             <div class='btn'>
                 <div class='w'>
-                    <button>定制您的方案</button>
+                    <button onclick="showSearch()">定制您的方案</button>
                 </div>
             </div>
 

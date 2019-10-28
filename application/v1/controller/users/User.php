@@ -13,7 +13,7 @@ use think\Config;
  * Class user
  * @package app\v1\controller\users
  */
-class user extends AuthController
+class User extends AuthController
 {
     /**
      * @DESC：用户列表

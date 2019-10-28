@@ -1,7 +1,6 @@
 <?php
 namespace app\v1\service;
-use app\common\model\Work;
-use think\Session;
+use app\common\model\Work;;
 use think\Cache;
 use think\Config;
 

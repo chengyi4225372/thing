@@ -275,7 +275,7 @@ return [
         // 缓存有效期 0表示永久缓存
         'expire'   => 0,
     ]),
-    
+
     // 定义错误的重定向页面地址
     'http_exception_template' => [
         404 => APP_PATH.'404.html',

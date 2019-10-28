@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hui-/public/../application/v1/view/users/user/index.html";i:1571626751;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571883474;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hui-/public/../application/v1/view/users/user/index.html";i:1571626751;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1571986795;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571986795;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -294,16 +294,16 @@
                 </ul>
             </li>
 
-            <li class="treeview " >
+            <li class=" <?php if($paths == '/v1/work/works/index'): ?>treeview <?php endif; ?> " >
                 <a href="#">
-                    <i class="fa fa-share"></i> <span>慧灵工</span>
+                    <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active">
-                        <a href="#">
+                    <li class="<?php if($paths == '/v1/work/works/index'): ?>active <?php endif; ?>">
+                        <a href="<?php echo url('/v1/work/works/index'); ?>">
                             <i class="glyphicon glyphicon-user"></i> <span>行业资讯</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
@@ -452,6 +452,7 @@
 <script src="/static/assets/dist/js/protuct.js"></script>
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
+<script src="/static/assets/dist/js/works.js"></script>
 <script>
     admin_module.changepas();
 </script>
