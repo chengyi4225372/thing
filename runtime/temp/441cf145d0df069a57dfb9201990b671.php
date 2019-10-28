@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"C:\Users\Administrator\Desktop\hui-\public/../application/home\view\index\index.html";i:1572225281;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,34 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="__HOME__/css/base.css">
-    <link rel="stylesheet" href="__HOME__/css/index.css">
+    <link rel="stylesheet" href="/static/home/css/base.css">
+    <link rel="stylesheet" href="/static/home/css/index.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src='__HOME__/js/index.js'></script>
-    <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
-    <script src='__HOME__/js/common.js'></script>
+    <script src='/static/home/js/index.js'></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
+    <script src='/static/home/js/common.js'></script>
     <style>
         .header
         {
-            background-image: url("{$slideshow['pic']|default='__HOME__/images/default.png'}");
+            background-image: url("<?php echo (isset($slideshow['pic']) && ($slideshow['pic'] !== '')?$slideshow['pic']:'/static/home/images/default.png'); ?>");
         }
 
-        .success_icon > div:nth-of-type(1) {position: absolute;  top: 49px;  left: 14px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('__HOME__/images/huiduoxin.png');  }
+        .success_icon > div:nth-of-type(1) {position: absolute;  top: 49px;  left: 14px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('/static/home/images/huiduoxin.png');  }
 
-        .success_icon > div:nth-of-type(2) {  position: absolute;  top: 106px;  right: -3px;  width: 386px;  height: 166px;  background-size: 100%;  background-image: url('__HOME__/images/huichuangyou.png');  }
+        .success_icon > div:nth-of-type(2) {  position: absolute;  top: 106px;  right: -3px;  width: 386px;  height: 166px;  background-size: 100%;  background-image: url('/static/home/images/huichuangyou.png');  }
 
-        .success_icon > div:nth-of-type(3) {  position: absolute;  top: 190px; left: -1px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('__HOME__/images/huilinggong.png');  }
+        .success_icon > div:nth-of-type(3) {  position: absolute;  top: 190px; left: -1px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('/static/home/images/huilinggong.png');  }
 
-        .success_icon > div:nth-of-type(4) {  position: absolute;  top: 229px;  right: 6px;  width: 386px;  height: 166px;  background-size: 100%;  background-image: url('__HOME__/images/huizhaoshi.png');  }
+        .success_icon > div:nth-of-type(4) {  position: absolute;  top: 229px;  right: 6px;  width: 386px;  height: 166px;  background-size: 100%;  background-image: url('/static/home/images/huizhaoshi.png');  }
 
-        .success_icon > div:nth-of-type(5) {  position: absolute;  bottom: 107px;  left: 12px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('__HOME__/images/huiqidong.png');  }
+        .success_icon > div:nth-of-type(5) {  position: absolute;  bottom: 107px;  left: 12px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('/static/home/images/huiqidong.png');  }
 
-        .success_icon > div:nth-of-type(6) {  position: absolute;  bottom: 72px;  right: -7px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('__HOME__/images/huichuangye.png');  }
+        .success_icon > div:nth-of-type(6) {  position: absolute;  bottom: 72px;  right: -7px;  width: 386px;  height: 166px;  background-size: contain;  background-image: url('/static/home/images/huichuangye.png');  }
     </style>
 
 </head>
 
-<body id="getdata" data="{$count}">
+<body id="getdata" data="<?php echo $count; ?>">
 
     <div class='container'>
 
@@ -47,9 +48,9 @@
                     <div class='w header_icon'>
                         <div class='title_icon'>
                             <span class='phone'></span>
-                            <span>{$site_info['tel']}</span>
+                            <span><?php echo $site_info['tel']; ?></span>
                             <span class='email'></span>
-                            <span>{$site_info['mail']}</span>
+                            <span><?php echo $site_info['mail']; ?></span>
                             <!--<span class='bo'></span>-->
                             <!--<span class='wx'></span>-->
                             <!--<span class='tie'></span>-->
@@ -87,11 +88,11 @@
 
             <!-- 文字部分-->
             <div class='content_text'>
-                <div class='w'>{$slideshow['title']}</div>
+                <div class='w'><?php echo $slideshow['title']; ?></div>
             </div>
 
             <div class='rentong'>
-                <div class='w'>{$slideshow['desc']}</div>
+                <div class='w'><?php echo $slideshow['desc']; ?></div>
             </div>
 
             <div class='btn'>
@@ -110,15 +111,15 @@
                 <div class='choose-intro'>惠企云平台是一款基于国家政策、以合规化为基础、由金牌顾问团队打造的产品，为企业及个人提供税筹问题的全方位解决方案。</div>
                 <ul class='img_total'>
                     <li>
-                        <img src="__HOME__/images/more.png" alt="">
+                        <img src="/static/home/images/more.png" alt="">
                         <a href="#">集专家智“惠”定制</a>
                     </li>
                     <li>
-                        <img src="__HOME__/images/rainning.png" alt="">
+                        <img src="/static/home/images/rainning.png" alt="">
                         <a href="#">集专家智“惠”定制</a>
                     </li>
                     <li>
-                        <img src="__HOME__/images/pig.png" alt="">
+                        <img src="/static/home/images/pig.png" alt="">
                         <a href="#">给您最优“惠”</a>
                     </li>
                 </ul>
@@ -130,17 +131,17 @@
             <div class='w'>
                 <div class='product_logo'></div>
                 <ul class='all_product'>
-                    {volist name='protuct' id='v1'}
+                    <?php if(is_array($protuct) || $protuct instanceof \think\Collection || $protuct instanceof \think\Paginator): $i = 0; $__LIST__ = $protuct;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
                     <li>
-                        <img src="{$v1.imgs|default=''}" alt="">
-                        <a href="#">{$v1.names|default=''}</a>
-                        <a href="#">{$v1.desc|default=''}</a>
+                        <img src="<?php echo (isset($v1['imgs']) && ($v1['imgs'] !== '')?$v1['imgs']:''); ?>" alt="">
+                        <a href="#"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
+                        <a href="#"><?php echo (isset($v1['desc']) && ($v1['desc'] !== '')?$v1['desc']:''); ?></a>
                         <ul class='one_pic'>
                             <li><a onclick="showSearch()">获取方案</a></li>
-                            <li><a href="{$v1.purl|default='#'}">前往网站</a></li>
+                            <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
                         </ul>
                     </li>
-                    {/volist}
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </div>
@@ -153,25 +154,25 @@
             <div class='w success_content'>
                 <div class='success_title'></div>
                 <div class='success_icon'>
-                    {volist name="case_list" id="data_list"}
-                    <div onclick="click_show(this)" keys="{$key}" class="{$data_list['is_show'].$key}" data="{$count}" data-attr="{$data_list['is_show']}">
-                        <div class='{if $key == 1}hui_icon{else /}p_icon{/if}'>
-                            <div>{$data_list['title2']}</div>
-                            <div>{$data_list['title3']}</div>
-                            {if $key != 1}
+                    <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
+                    <div onclick="click_show(this)" class="<?php echo $data_list['is_show'].$key; ?>" data="<?php echo $count; ?>" data-attr="<?php echo $data_list['is_show']; ?>">
+                        <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
+                            <div><?php echo $data_list['title2']; ?></div>
+                            <div><?php echo $data_list['title3']; ?></div>
+                            <?php if($key != 1): ?>
                             <!--<a href="javascript:void(0)">-->
-                                <!--<img src="__HOME__/images/jiantou.png" alt="">-->
+                                <!--<img src="/static/home/images/jiantou.png" alt="">-->
                             <!--</a>-->
-                            {/if}
+                            <?php endif; ?>
                         </div>
                     </div>
-                    {/volist}
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
 <!--                    <div onclick="click_show(this)" data-attr="huiduoxin">
                         <div class='p_icon'>
                             <div>惠多薪</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -186,7 +187,7 @@
                             <div>惠灵工</div>
                             <div>一站用工案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -195,7 +196,7 @@
                             <div>惠找事</div>
                             <div>人才服务案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -204,7 +205,7 @@
                             <div>惠启动</div>
                             <div>一站服务案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -213,23 +214,23 @@
                             <div>惠创业</div>
                             <div>薪酬服务案例</div>
                             <a href="#">
-                                <img src="__HOME__/images/jiantou.png" alt="">
+                                <img src="/static/home/images/jiantou.png" alt="">
                             </a>
                         </div>
                     </div>-->
                 </div>
                 <div class='to_detailInfo'>
-                    {volist name="case_list" id="info_list"}
-                    <div class="{$info_list['is_show']}">
-                        <div class='huichuangyou_title'>{$info_list['title']}</div>
+                    <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($i % 2 );++$i;?>
+                    <div class="<?php echo $info_list['is_show']; ?>">
+                        <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
                         <div class="con">
-                            <div class="desc">{$info_list['desc']}</div>
-                            <div class="desc">{$info_list['desc2']}</div>
-                            <div class="desc">{$info_list['desc3']}</div>
-                            <div class="desc">{$info_list['desc4']}</div>
-                            <div class="desc">{$info_list['desc5']}</div>
-                            <div class="desc">{$info_list['desc6']}</div>
-                            <div class="desc">{$info_list['desc7']}</div>
+                            <div class="desc"><?php echo $info_list['desc']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc2']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc3']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc4']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc5']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc6']; ?></div>
+                            <div class="desc"><?php echo $info_list['desc7']; ?></div>
                             <div class='total_input'>
                                 <div>
                                     <input type="text" placeholder="请输入您的姓名..">
@@ -246,7 +247,7 @@
                             </div>
                         </div>
                     </div>
-                    {/volist}
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
 <!--                    <div class='huichuangyou'>
                         <div class='huichuangyou_title'>惠创优-服务案例</div>
                         <div class="con">
@@ -434,34 +435,34 @@
 
                     <div class='zhaomethods'>
                         <div class='totalInfo_title'>招商政策</div>
-                        {volist name="shang" id="ss"}
+                        <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
 
                             <div class='zhao_contentInfo'>
-                                <div>{$ss.title}</div>
-                                <div>{$ss.create_time}</div>
+                                <div><?php echo $ss['title']; ?></div>
+                                <div><?php echo $ss['create_time']; ?></div>
                             </div>
-                            <div> {$ss.desc|mb_substr='0','200','utf-8'}</div>
+                            <div> <?php echo mb_substr($ss['desc'],'0','200','utf-8'); ?></div>
 
                         </div>
-                        {/volist}
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
                         <button class='know_more'>了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
                         <div class='totalInfo_title'>招标信息</div>
-                        {volist name="biao" id="biaos"}
+                        <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
                             <div class='zhao_contentInfo'>
-                                <div>{$biaos.title|default=''}</div>
-                                <div>{$biaos.create_time}</div>
+                                <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
+                                <div><?php echo $biaos['create_time']; ?></div>
                             </div>
                             <div>
-                                {$biaos.desc|mb_substr='0','200','utf-8'}
+                                <?php echo mb_substr($biaos['desc'],'0','200','utf-8'); ?>
                             </div>
 
                         </div>
-                        {/volist}
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
                         <button class='know_more'>了解更多</button>
                     </div>
 
@@ -515,16 +516,16 @@
                     </dl>
                     <dl>
                         <dt>联系我们</dt>
-                        <dd>{$site_info['tel']}</dd>
-                        <dd>{$site_info['mail']}</dd>
-                        <dd>{$site_info['count_code']}</dd>
+                        <dd><?php echo $site_info['tel']; ?></dd>
+                        <dd><?php echo $site_info['mail']; ?></dd>
+                        <dd><?php echo $site_info['count_code']; ?></dd>
                     </dl>
 
                 </div>
                 <!--<div class='concat_icon'>-->
-                    <!--<div><img src="__HOME__/images/bo.png" alt=""></div>-->
-                    <!--<div><img src="__HOME__/images/wx.png" alt=""></div>-->
-                    <!--<div><img src="__HOME__/images/tie.png" alt=""></div>-->
+                    <!--<div><img src="/static/home/images/bo.png" alt=""></div>-->
+                    <!--<div><img src="/static/home/images/wx.png" alt=""></div>-->
+                    <!--<div><img src="/static/home/images/tie.png" alt=""></div>-->
                 <!--</div>-->
             </div>
         </div>
