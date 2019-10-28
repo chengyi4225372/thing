@@ -143,4 +143,65 @@ class Workservice
 
     }
 
+
+    /**
+     * 上一篇
+     * id string
+     * return array|null
+     */
+    public function getTop($id){
+       if(empty($id) || !isset($id)){
+           return false;
+       }
+
+       $info = Work::instance()->where('id','<',$id)->order(['sort'=>'asc','create_time'=>'desc'])->find();
+
+       if(empty($info)){
+           return  $info ='';
+       }else{
+           return  $info;
+       }
+
+    }
+
+    /**
+     * 下一篇
+     * id string
+     * return array|null
+     */
+    public function getNext($id){
+        if(empty($id) || !isset($id)){
+            return false;
+        }
+
+        $info = Work::instance()->where('id','>',$id)->order(['sort'=>'desc','create_time'=>'desc'])->find();
+
+        if(empty($info)){
+            return  $info ='';
+        }else{
+            return  $info;
+        }
+    }
+
+    /**
+     * $keyword string
+     *
+     * return string|int
+     */
+    public function getCount(){
+        if(empty($title) || !isset($title)){
+
+            $where = ['del_time'=>0];
+        }else {
+
+            $where =[
+                'del_time'=>0,
+                'title|keyword'=>['like','%'.$title.'%'],
+            ];
+        }
+
+        $count  = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->count('id');
+        return  $count;
+    }
+
 }

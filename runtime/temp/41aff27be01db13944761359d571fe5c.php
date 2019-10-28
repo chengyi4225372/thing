@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:117:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\information_list.html";i:1572233410;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:117:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\information_list.html";i:1572243234;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +54,7 @@
     <div class="content-box">
       <div class="w content">
         <div class="bread-crumbs">
-          <span>惠灵工</span> > <span>资讯</span> > <span>搜索结果共<span>11</span>条</span>
+          <span>惠灵工</span> > <span>资讯</span> > <span>搜索结果共<span><?php echo (isset($total) && ($total !== '')?$total:'0'); ?></span>条</span>
         </div>
         <div class="information-list">
           <div class="tabs clearfix">
@@ -71,7 +71,7 @@
             <ul>
               <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
               <li>
-                <a href="<?php echo url('/home/spirit/detail',['id'=>$vo['id']]); ?>">
+                <a href="<?php echo url('/home/spirit/detail',['mid'=>$vo['id']]); ?>">
                   <div class="tabs-items-img">
                     <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
                   </div>
