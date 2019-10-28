@@ -18,7 +18,7 @@
 
 
                         <div class="form-group">
-                            <button class="btn btn-info" id="btn_search" type="Submit"  data-url="{:url('/v1/users/user/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info" id="btn_search" type="Submit"  data-url="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/v1/users/user/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addslideshow" data-url="{:url('/v1/systematic/system/addslideshow')}">
+                    id="addslideshow" data-url="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/v1/systematic/system/addslideshow')}">
                 <i class="fa fa-plus-circle">添加轮播图</i></button>
         </div>
         <div class="box-body">
@@ -66,7 +66,7 @@
                             <span class="btn {if $list['status'] == 1}btn-success{else/}btn-danger{/if}">{$status[$list['status']]}</span>
                         </td>
                         <td class="text-center">
-                            <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/systematic/system/editslideshow',['id' => $list['id']])}" onclick="admin_module.edit_slideshow(this)">编辑</a>
+                            <a href="javascript:void(0)" class="btn btn-info" data-url="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/v1/systematic/system/editslideshow',['id' => $list['id']])}" onclick="admin_module.edit_slideshow(this)">编辑</a>
                         </td>
                     </tr>
                 {/volist}
