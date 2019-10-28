@@ -153,12 +153,12 @@ class Works extends  AuthController
         // 获取上传文件
         $file =$this->request->file('file');
         // 验证图片,并移动图片到框架目录下。
-        $path = ROOT_PATH.'public/Uploads/imgs/';
+        $path = ROOT_PATH.'public/uploads/imgs/';
         $info = $file-> move($path);
         if($info){
             $mes = $info->getSaveName();
             $mes = str_replace("\\",'/',$mes);
-            return json(['code'=>'200','msg'=>'上传成功','path'=>'/Uploads/imgs/'.$mes]);
+            return json(['code'=>'200','msg'=>'上传成功','path'=>'/uploads/imgs/'.$mes]);
         }else{
             // 文件上传失败后的错误信息
             $mes = $file->getError();

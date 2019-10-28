@@ -30,7 +30,7 @@ function getErp() {
            return false;
        }
 
-       if (!checkPhone(data.contactMobile) === false) {
+       if (checkPhone(data.contactMobile) === false) {
            layer.msg("联系电话不合法");
            return false;
        }
@@ -156,4 +156,39 @@ function click_show(objthis){
 
 
 }
+
+
+//搜索
+ function search(){
+        var keyword = $('#keyword').val();
+        var url = "/home/index/infoList";
+
+        if(keyword == '' || keyword==undefined){
+            layer.msg('请输入搜索条件');
+            return false;
+        }
+
+        window.location.href = url+"?keyword="+keyword;
+    }
+
+//了解更多
+function showUrl(){
+   window.location.href="/home/index/infoList";
+}
+
+//列表页搜索
+$(function(){
+    $('#searched').click(function(){
+        var keyword = $('#keyword').val();
+        if(keyword == '' || keyword == undefined){
+            layer.msg('请输入搜索条件');
+            return false;
+        }
+        var urlw = "/home/index/infoList";
+
+        window.location.href = urlw+"?keyword="+keyword;
+
+    });
+});
+
 

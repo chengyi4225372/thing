@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1572231769;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1572267913;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
     <script src='/static/spirit/js/index.js'></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
-
+    <script src="/static/spirit/js/spirit.js"></script>
 
 </head>
 
@@ -68,11 +68,13 @@
                     <div class="header-form-right fr">
                         <p class="header-right-title">想拥有更专业的方案吗？</p>
                         <div class="header-right-input">
-                            <input type="text" name="" id="" placeholder="您的姓名">
-                            <input type="text" name="" id="" placeholder="联系方式">
-                            <input type="text" name="" id="" placeholder="您的公司">
+                            <input type="text" value="" id="contactName" placeholder="您的姓名">
+                            <input type="text" value="" id="contactMobile" placeholder="联系方式">
+                            <input type="text" value="" id="companyName" placeholder="您的公司">
+                            <input type='hidden' id='source' value='惠灵工'>
+                            <input type='hidden' id='identification' value='灵活用工'>
                         </div>
-                        <div class="header-right-btn">获取方案</div>
+                        <div class="header-right-btn" onclick="btnErp()">获取方案</div>
                     </div>
                 </div>
                 <div class="focus-icon">
