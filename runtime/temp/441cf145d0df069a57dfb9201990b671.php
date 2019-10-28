@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"C:\Users\Administrator\Desktop\hui-\public/../application/home\view\index\index.html";i:1572224079;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"C:\Users\Administrator\Desktop\hui-\public/../application/home\view\index\index.html";i:1572225281;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,9 +77,9 @@
                             <li><a href="#">惠启动</a></li>
                         </ul>
                         <div class='register'>
-                            <a href="#">登录</a>
+                            <a href="login.html">登录</a>
                             <span></span>
-                            <a href="#">注册</a>
+                            <a href="register">注册</a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
 
             <div class='btn'>
                 <div class='w'>
-                    <button>定制您的方案</button>
+                    <button onclick="showSearch()">定制您的方案</button>
                 </div>
             </div>
 
