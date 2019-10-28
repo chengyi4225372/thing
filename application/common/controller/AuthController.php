@@ -162,6 +162,14 @@ class AuthController extends Controller
         // 渲染菜单
 //        $this->view->assign('menulist', $menulist);
 //        $this->view->assign('navlist', $navlist);
+        $SOFTWARE = $_SERVER['SERVER_SOFTWARE'];
+        $is_nginx = stripos($SOFTWARE,'nginx');
+        if($is_nginx !== false){
+            $is_nginx = '';
+        }else{
+            $is_nginx = '/index.php';
+        }
+        $this->assign('is_nginx',$is_nginx);
         $this->assign('paths',$path);
         $this->assign('site', $site);
         $this->assign('config', $config);

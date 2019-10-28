@@ -32,15 +32,7 @@ class Systems
     }
 
 
-    /**
-     * @DESC：生成token
-     * @author: jason
-     * @date: 2019-08-07 03:43:31
-     */
-    public function setToken($params)
-    {
-        return Crypt::encrypt($params);
-    }
+
 
     /**
      * @DESC：检查是否有登录
@@ -361,12 +353,12 @@ class Systems
     public function upload($file)
     {
         $imgDir = dirname(THINK_PATH).'/public/uploads/';
-        $imgSmallDir = $imgDir . 'images/';
+        $imgSmallDir = $imgDir . 'images/'.date('YmdH').'/';
         if (!is_dir($imgDir)) {
-            @mkdir($imgDir);
+            @mkdir($imgDir,777,true);
         }
         if (!is_dir($imgSmallDir)) {
-            @mkdir($imgSmallDir);
+            @mkdir($imgSmallDir,777,true);
         }
         $name = $file['name'];
 

@@ -53,7 +53,7 @@
     <div class="content-box">
       <div class="w content">
         <div class="bread-crumbs">
-          <span>惠灵工</span> > <span>资讯</span> > <span>搜索结果共<span>11</span>条</span>
+          <span>惠灵工</span> > <span>资讯</span> > <span>搜索结果共<span>{$total|default='0'}</span>条</span>
         </div>
         <div class="information-list">
           <div class="tabs clearfix">
@@ -70,7 +70,7 @@
             <ul>
               {volist name='list' id='vo'}
               <li>
-                <a href="{:url('/home/spirit/detail',['id'=>$vo['id']])}">
+                <a href="{:url('/home/spirit/detail',['mid'=>$vo['id']])}">
                   <div class="tabs-items-img">
                     <img src="{$vo.imgs|default=''}" alt="">
                   </div>
