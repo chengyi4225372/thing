@@ -10,6 +10,7 @@ function checkPhone(phone) {
 }
 
 
+
 var gurl = "http://172.26.2.41:8088";
 
 
@@ -29,7 +30,7 @@ function getErp() {
            return false;
        }
 
-       if (checkPhone(data.contactMobile) == false) {
+       if (!checkPhone(data.contactMobile) === false) {
            layer.msg("联系电话不合法");
            return false;
        }
@@ -53,6 +54,7 @@ function getErp() {
            dataType: 'json',
            data: JSON.stringify(data),
            success: function (ret) {
+
                //201 号码已经存在
                if (ret.status == 200 && ret.rel == true) {
                    layer.msg('提交成功', function () {
@@ -91,9 +93,9 @@ function showSearch(){
          content += "<span>您的姓名</span>";
          content += "<input type='text' id='contactName'  placeholder='请输入您的姓名'></div>";
          content += "<div><span>您的公司</span>";
-         content += "<input type='text' id='contactMobile' placeholder='请输入您的公司名...'></div><div>";
+         content += "<input type='text' id='companyName' placeholder='请输入您的公司名...'></div><div>";
          content += "<span>联系方式</span>";
-         content += "<input type='text' id='companyName'  placeholder='请输入您的联系方式...'></div>";
+         content += "<input type='text' id='contactMobile'  placeholder='请输入您的联系方式...'></div>";
          content += "<input type='hidden' id='source' value='门户首页'>";
          content += "<input type='hidden' id='identification' value='企业一站式服务'>";
          content += "<button  class='button' onclick='getErp()'>获取方案</button>";
