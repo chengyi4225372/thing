@@ -30,7 +30,7 @@ function getErp() {
            return false;
        }
 
-       if (!checkPhone(data.contactMobile) === false) {
+       if (checkPhone(data.contactMobile) === false) {
            layer.msg("联系电话不合法");
            return false;
        }
