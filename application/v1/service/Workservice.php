@@ -22,6 +22,15 @@ class Workservice
         return self::$instance;
     }
 
+    /**
+     * 前台获取最高的3条信息
+     */
+    public function three(){
+        $where = ['del_time'=>0];
+        $data = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->limit(3)->select();
+        return $data;
+    }
+
 
     /**
      * title string
