@@ -1,4 +1,8 @@
+<<<<<<< HEAD:runtime/temp/4f8065d0feb9a53e8c35c039f687ccdc.php
 <?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572229442;}*/ ?>
+=======
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572232148;}*/ ?>
+>>>>>>> e3765e571977a2ae2501dc9cad275807e328e89d:runtime/temp/fc43eb112f593b1af4478cc2ab82a207.php
 <!DOCTYPE html>
 <html lang="en">
 
@@ -155,7 +159,7 @@
                 <div class='success_title'></div>
                 <div class='success_icon'>
                     <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
-                    <div onclick="click_show(this)" class="<?php echo $data_list['is_show'].$key; ?>" data="<?php echo $count; ?>" data-attr="<?php echo $data_list['is_show']; ?>">
+                    <div onclick="click_show(this)" keys="<?php echo $key; ?>" class="<?php echo $data_list['is_show'].$key; ?>" data="<?php echo $count; ?>" data-attr="<?php echo $data_list['is_show']; ?>">
                         <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
                             <div><?php echo $data_list['title2']; ?></div>
                             <div><?php echo $data_list['title3']; ?></div>

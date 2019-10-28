@@ -32,7 +32,10 @@ class Index extends Controller
             //近期成功案例
 
             $caseInfo = Caseservice::instance()->getallparent();
-
+            $pic = array_column($caseInfo,'pic');
+            $pic2 = array_column($caseInfo,'pic2');
+            $this->assign('pic1',json_encode($pic));
+            $this->assign('pic2',json_encode($pic2));
             $this->assign('count',count($caseInfo));
             $this->assign('case_list', $caseInfo);
 
@@ -45,5 +48,26 @@ class Index extends Controller
             return $this->fetch();
         }
         return false;
+    }
+
+    /**
+     * @DESC：ajax获取案例图片
+     * @author: jason
+     * @date: 2019-10-28 10:27:42
+     */
+    public function ajaximage(){
+        if($this->request->isAjax() && $this->request->isPost() && $_POST['data'] == 'getdata'){
+            $caseInfo = Caseservice::instance()->getallparent();
+            $pic_arr = [];
+            $pic2_arr = [];
+            foreach($caseInfo as $key => $value){
+                $pic_arr[$key]['pic1'] = $value['pic'];
+                $pic_arr[$key]['is_show'] = $value['is_show'];
+                $pic2_arr[$key]['pic2'] = $value['pic2'];
+                $pic2_arr[$key]['is_show'] = $value['is_show'];
+                $pic2_arr[$key]['is_pic1'] = $value['pic'];
+            }
+            return json(['pic1' => $pic_arr,'pic2' => $pic2_arr]);
+        }
     }
 }
