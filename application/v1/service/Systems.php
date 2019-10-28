@@ -32,15 +32,7 @@ class Systems
     }
 
 
-    /**
-     * @DESC：生成token
-     * @author: jason
-     * @date: 2019-08-07 03:43:31
-     */
-    public function setToken($params)
-    {
-        return Crypt::encrypt($params);
-    }
+
 
     /**
      * @DESC：检查是否有登录
