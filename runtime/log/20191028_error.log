@@ -1,0 +1,57 @@
+---------------------------------------------------------------
+[ 2019-10-28T09:22:32+08:00 ] 127.0.0.1 GET /
+[ error ] [2006]SQLSTATE[HY000] [2006] MySQL server has gone away[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-10-28T09:24:46+08:00 ] 127.0.0.1 GET /
+[ error ] [2006]SQLSTATE[HY000] [2006] MySQL server has gone away[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-10-28T09:29:06+08:00 ] 127.0.0.1 GET /
+[ error ] [2006]SQLSTATE[HY000] [2006] MySQL server has gone away[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-10-28T09:31:52+08:00 ] 127.0.0.1 GET /
+[ error ] [2006]SQLSTATE[HY000] [2006] MySQL server has gone away[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-10-28T09:39:55+08:00 ] 127.0.0.1 GET /
+[ error ] [2006]SQLSTATE[HY000] [2006] MySQL server has gone away[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-10-28T09:43:12+08:00 ] 127.0.0.1 GET /
+[ error ] [2006]SQLSTATE[HY000] [2006] MySQL server has gone away[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-10-28T09:45:26+08:00 ] 127.0.0.1 GET /
+[ error ] [2006]SQLSTATE[HY000] [2006] MySQL server has gone away[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-10-28T09:47:52+08:00 ] 127.0.0.1 GET /
+[ error ] [2006]SQLSTATE[HY000] [2006] MySQL server has gone away[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-10-28T10:03:42+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\25705df026b548962e0257878cd7d19d.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:05:19+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\25705df026b548962e0257878cd7d19d.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:05:26+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\25705df026b548962e0257878cd7d19d.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:06:28+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\25705df026b548962e0257878cd7d19d.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:08:17+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\25705df026b548962e0257878cd7d19d.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:08:18+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\25705df026b548962e0257878cd7d19d.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:09:34+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\25705df026b548962e0257878cd7d19d.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:09:35+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\25705df026b548962e0257878cd7d19d.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:09:53+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\25705df026b548962e0257878cd7d19d.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:10:02+08:00 ] 127.0.0.1 GET /v1/users/user/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\890f58c3ad9c898b51b7bc21d67fbd9e.php:157]
+---------------------------------------------------------------
+[ 2019-10-28T10:10:13+08:00 ] 127.0.0.1 GET /v1/protuct/protucts/index.html
+[ error ] [8]未定义数组索引: username[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\dc92515aa30aa210bb19867a054f2fd6.php:157]

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572224448;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572224693;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -429,7 +429,7 @@
                                 <i></i>
                                 <input type="text" placeholder="搜索招标政策和招标信息...">
                             </div>
-                            <button>查询</button>
+                            <!-- <button>查询</button> -->
                         </div>
                     </div>
 
