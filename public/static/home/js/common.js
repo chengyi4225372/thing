@@ -113,9 +113,7 @@ function closedTab(){
 
 
 $(function(){
-    var pic1 = $('#pic1').attr('pic1');
-    var pic2 = $('#pic2').attr('pic2');
-    var url = '/home/index/ajaximage';
+    var url = $('#add_url').val();
 
     $.post(
         url,
@@ -137,7 +135,7 @@ $(function(){
 function click_show(objthis){
     var v = $(objthis).attr('data-attr');
     var keys = $(objthis).attr('keys');
-    var url = '/home/index/ajaximage';
+    var url = $('#add_url').val();
 
     $.post(
         url,

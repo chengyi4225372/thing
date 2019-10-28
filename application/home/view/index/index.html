@@ -76,7 +76,7 @@
                             <li><a href="#">惠启动</a></li>
                         </ul>
                         <div class='register'>
-                            <a href="login.html">登录</a>
+                            <a href="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/home/index/ajaximage')}">登录</a>
                             <span></span>
                             <a href="register">注册</a>
                         </div>
@@ -149,6 +149,7 @@
 
 
         <!-- 近期成功案例 -->
+        <input type="hidden" id="add_url" value="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/home/index/ajaximage')}">
         <div class='success'>
             <div class='w success_content'>
                 <div class='success_title'></div>
