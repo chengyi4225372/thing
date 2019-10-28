@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572232148;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572234171;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +69,7 @@
                         <div class='content_logo' id='logo'></div>
                         <ul>
                             <li><a href="#">首页</a></li>
-                            <li><a href="#">惠创优</a></li>
+                            <li><a href="#">惠优税</a></li>
                             <li><a href="#">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
@@ -77,9 +77,9 @@
                             <li><a href="#">惠启动</a></li>
                         </ul>
                         <div class='register'>
-                            <a href="#">登录</a>
+                            <a href="login.html">登录</a>
                             <span></span>
-                            <a href="#">注册</a>
+                            <a href="register">注册</a>
                         </div>
                     </div>
                 </div>

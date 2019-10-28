@@ -361,12 +361,12 @@ class Systems
     public function upload($file)
     {
         $imgDir = dirname(THINK_PATH).'/public/uploads/';
-        $imgSmallDir = $imgDir . 'images/';
+        $imgSmallDir = $imgDir . 'images/'.date('YmdH').'/';
         if (!is_dir($imgDir)) {
-            @mkdir($imgDir);
+            @mkdir($imgDir,777,true);
         }
         if (!is_dir($imgSmallDir)) {
-            @mkdir($imgSmallDir);
+            @mkdir($imgSmallDir,777,true);
         }
         $name = $file['name'];
 
