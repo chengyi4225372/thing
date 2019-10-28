@@ -111,53 +111,49 @@ function closedTab(){
 
 
 $(function(){
-    var count = $('#getdata').attr('data');
-    var url1 = '/static/home/images/huichuangyou1.png';
-    var url2 = '/static/home/images/huiduoxin1.png';
-    var url3 = '/static/home/images/huilinggong1.png';
-    var url4 = '/static/home/images/huizhaoshi1.png';
-    var url5 = '/static/home/images/huiqidong1.png';
-    var url6 = '/static/home/images/huichuangye1.png';
-    for(var i=0; i<count; i++){
-        if(i == 1){
-            $('.huichuangyou'+i).css('background-image','url('+url1+')');
-            $('.huiduoxin'+i).css('background-image','url('+url2+')');
-            $('.huilinggong'+i).css('background-image','url('+url3+')');
-            $('.huizhaoshi'+i).css('background-image','url('+url4+')');
-            $('.huiqidong'+i).css('background-image','url('+url5+')');
-            $('.huichuangye'+i).css('background-image','url('+url6+')');
+    var pic1 = $('#pic1').attr('pic1');
+    var pic2 = $('#pic2').attr('pic2');
+    var url = '/home/index/ajaximage';
+
+    $.post(
+        url,
+        {data:'getdata'},
+        function (ret){
+            $.each(ret.pic2,function (index,item){
+                if(index == 1){
+                    $('.'+item.is_show+index).css('background-image','url('+item.pic2+')');
+                }else{
+                    $('.'+item.is_show+index).css('background-image','url('+item.is_pic1+')');
+                }
+            });
         }
-    }
+    );
+
 });
 
 //显示案例
 function click_show(objthis){
-    var count = $(objthis).attr('data');
     var v = $(objthis).attr('data-attr');
-    $('.huichuangyou').css('display','none');
-    $('.huiduoxin').css('display','none');
-    $('.huilinggong').css('display','none');
-    $('.huizhaoshi').css('display','none');
-    $('.huiqidong').css('display','none');
-    $('.huichuangye').css('display','none');
-    $('.' + v).css('display','block');
-    //$(objthis).css({'border':'1px solid #C0C0C0','border-radius':'4px'});
-    var url1 = '/static/home/images/huichuangyou.png';
-    var url2 = '/static/home/images/huiduoxin.png';
-    var url3 = '/static/home/images/huilinggong.png';
-    var url4 = '/static/home/images/huizhaoshi.png';
-    var url5 = '/static/home/images/huiqidong.png';
-    var url6 = '/static/home/images/huichuangye.png';
-    for(var i=0; i<count; i++){
-        $('.huichuangyou'+i).css('background-image','url('+url1+')');
-        $('.huiduoxin'+i).css('background-image','url('+url2+')');
-        $('.huilinggong'+i).css('background-image','url('+url3+')');
-        $('.huizhaoshi'+i).css('background-image','url('+url4+')');
-        $('.huiqidong'+i).css('background-image','url('+url5+')');
-        $('.huichuangye'+i).css('background-image','url('+url6+')');
-    }
-    var img = '/static/home/images/'+v+'1'+'.png';
-    $(objthis).css('background-image','url('+img+')');
+    var keys = $(objthis).attr('keys');
+    var url = '/home/index/ajaximage';
+
+    $.post(
+        url,
+        {data:'getdata'},
+        function (ret){
+            $.each(ret.pic2,function (index,item){
+                $('.'+item.is_show).css('display','none');
+                $('.' + v).css('display','block');
+                if(keys == index){
+                    $('.'+item.is_show+index).css('background-image','url('+item.pic2+')');
+                }else{
+                    $('.'+item.is_show+index).css('background-image','url('+item.is_pic1+')');
+                }
+            });
+        }
+    );
+
+
 
 }
 

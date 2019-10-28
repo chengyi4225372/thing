@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"C:\Users\Administrator\Desktop\hui-\public/../application/home\view\index\index.html";i:1571968297;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572232148;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,7 +97,7 @@
 
             <div class='btn'>
                 <div class='w'>
-                    <button>定制您的方案</button>
+                    <button onclick="showSearch()">定制您的方案</button>
                 </div>
             </div>
 
@@ -155,7 +155,7 @@
                 <div class='success_title'></div>
                 <div class='success_icon'>
                     <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
-                    <div onclick="click_show(this)" class="<?php echo $data_list['is_show'].$key; ?>" data="<?php echo $count; ?>" data-attr="<?php echo $data_list['is_show']; ?>">
+                    <div onclick="click_show(this)" keys="<?php echo $key; ?>" class="<?php echo $data_list['is_show'].$key; ?>" data="<?php echo $count; ?>" data-attr="<?php echo $data_list['is_show']; ?>">
                         <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
                             <div><?php echo $data_list['title2']; ?></div>
                             <div><?php echo $data_list['title3']; ?></div>
