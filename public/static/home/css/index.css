@@ -1345,15 +1345,14 @@ line-height:72px;
     outline: none;
     background-color: #F5F9FF;
 }
-.searchLogo i{
-    display:inline-block;
+
+.searchLogo i {
     position:absolute;
-    top:11px;
+    top:3px;
     right:0;
     width:18px;
-    height:17px;
+    height:18px;
     background-image: url('../images/sou.png');
-
 }
 .zhaoSearch button{
 
