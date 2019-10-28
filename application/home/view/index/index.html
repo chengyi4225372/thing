@@ -426,8 +426,8 @@
                         <!-- 搜索 -->
                         <div class='zhaoSearch'>
                             <div class='searchLogo'>
-                                <i></i>
-                                <input type="text" placeholder="搜索招标政策和招标信息...">
+                                <i onclick="search()"></i>
+                                <input type="text" id="keyword"  placeholder="搜索招标政策和招标信息...">
                             </div>
                             <!-- <button>查询</button> -->
                         </div>
@@ -437,33 +437,34 @@
                         <div class='totalInfo_title'>招商政策</div>
                         {volist name="shang" id="ss"}
                         <div class='totalInfo_content'>
-
+                            <a href="{:url('home/index/infoList')}">
                             <div class='zhao_contentInfo'>
                                 <div>{$ss.title}</div>
                                 <div>{$ss.create_time}</div>
                             </div>
-                            <div> {$ss.desc|mb_substr='0','200','utf-8'}</div>
-
+                            <div> {$ss.desc}</div>
+                            </a>
                         </div>
                         {/volist}
-                        <button class='know_more'>了解更多</button>
+                        <button class='know_more' onclick='showUrl()'>了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
                         <div class='totalInfo_title'>招标信息</div>
                         {volist name="biao" id="biaos"}
                         <div class='totalInfo_content'>
+                            <a href="{:url('home/index/infoList')}">
                             <div class='zhao_contentInfo'>
                                 <div>{$biaos.title|default=''}</div>
                                 <div>{$biaos.create_time}</div>
                             </div>
                             <div>
-                                {$biaos.desc|mb_substr='0','200','utf-8'}
+                                {$biaos.desc}
                             </div>
-
+                            </a>
                         </div>
                         {/volist}
-                        <button class='know_more'>了解更多</button>
+                        <button class='know_more'onclick='showUrl()'>了解更多</button>
                     </div>
 
                 </div>

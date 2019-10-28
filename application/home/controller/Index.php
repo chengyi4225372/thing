@@ -1,6 +1,7 @@
 <?php
 namespace app\home\controller;
 
+use app\v1\service\Workservice;
 use think\Controller;
 use app\v1\service\Protuctservice;
 use app\v1\service\Infosservice;
@@ -86,4 +87,49 @@ class Index extends Controller
             return json(['pic1' => $pic_arr,'pic2' => $pic2_arr]);
         }
     }
+
+
+    /**
+     * 列表页面
+     */
+    public function infoList(){
+       if($this->request->isGet()){
+           //招标 招商信息
+           $title = input('get.keyword','','trim');
+           $biao = Infosservice::instance()->getbiao($title);
+           $shang = Infosservice::instance()->getshang($title);
+           $total = count($biao) + count($shang);
+           $this->assign('total',$total);
+           $this->assign('biao',$biao);
+           $this->assign('shang',$shang);
+           $this->assign('title','招商招标信息列表');
+           return $this->fetch();
+       }
+       return false;
+    }
+
+    /**
+     * 新闻详情页
+     * min  string | int
+     */
+    public function getInfo(){
+        if($this->request->isGet()){
+           $id = input('get.mid','','int');
+           if(empty($id) || !isset($id)|| $id <=0){
+               return false;
+           }
+           $info = infosservice::instance()->getId($id);
+           $top  = Infosservice::instance()->getTop($id);
+           $next = Infosservice::instance()->getNext($id);
+           $this->assign('info',$info);
+           $this->assign('top',$top);
+           $this->assign('next',$next);
+           $this->assign('title','新闻详情');
+           return $this->fetch();
+        }
+        return false;
+    }
+
+
+
 }

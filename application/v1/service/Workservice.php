@@ -158,7 +158,7 @@ class Workservice
             'del_time'=>0
        ];
 
-       $info = Work::instance()->where($where)->order(['sort'=>'asc','create_time'=>'desc'])->find();
+       $info = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->find();
 
        if(empty($info)){
            return  $info ='';
@@ -182,7 +182,7 @@ class Workservice
             'id'=>['>',$id],
             'del_time'=>0
         ];
-        $info = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->find();
+        $info = Work::instance()->where($where)->order(['sort'=>'asc','create_time'=>'desc'])->find();
 
         if(empty($info)){
             return  $info ='';

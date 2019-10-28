@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572243280;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572263678;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +69,7 @@
                         <div class='content_logo' id='logo'></div>
                         <ul>
                             <li><a href="#">首页</a></li>
-                            <li><a href="#">惠优税</a></li>
+                            <li><a href="#">惠税优</a></li>
                             <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
@@ -77,7 +77,7 @@
                             <li><a href="#">惠启动</a></li>
                         </ul>
                         <div class='register'>
-                            <a href="login.html">登录</a>
+                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/ajaximage'); ?>">登录</a>
                             <span></span>
                             <a href="register">注册</a>
                         </div>
@@ -150,6 +150,7 @@
 
 
         <!-- 近期成功案例 -->
+        <input type="hidden" id="add_url" value="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/ajaximage'); ?>">
         <div class='success'>
             <div class='w success_content'>
                 <div class='success_title'></div>
@@ -426,8 +427,8 @@
                         <!-- 搜索 -->
                         <div class='zhaoSearch'>
                             <div class='searchLogo'>
-                                <i></i>
-                                <input type="text" placeholder="搜索招标政策和招标信息...">
+                                <i onclick="search()"></i>
+                                <input type="text" id="keyword"  placeholder="搜索招标政策和招标信息...">
                             </div>
                             <!-- <button>查询</button> -->
                         </div>
@@ -437,33 +438,34 @@
                         <div class='totalInfo_title'>招商政策</div>
                         <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
-
+                            <a href="<?php echo url('home/index/infoList'); ?>">
                             <div class='zhao_contentInfo'>
                                 <div><?php echo $ss['title']; ?></div>
                                 <div><?php echo $ss['create_time']; ?></div>
                             </div>
-                            <div> <?php echo mb_substr($ss['desc'],'0','200','utf-8'); ?></div>
-
+                            <div> <?php echo $ss['desc']; ?></div>
+                            </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more'>了解更多</button>
+                        <button class='know_more' onclick='showUrl()'>了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
                         <div class='totalInfo_title'>招标信息</div>
                         <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
+                            <a href="<?php echo url('home/index/infoList'); ?>">
                             <div class='zhao_contentInfo'>
                                 <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                                 <div><?php echo $biaos['create_time']; ?></div>
                             </div>
                             <div>
-                                <?php echo mb_substr($biaos['desc'],'0','200','utf-8'); ?>
+                                <?php echo $biaos['desc']; ?>
                             </div>
-
+                            </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more'>了解更多</button>
+                        <button class='know_more'onclick='showUrl()'>了解更多</button>
                     </div>
 
                 </div>
