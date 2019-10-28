@@ -9,7 +9,7 @@ namespace app\v1\controller;
 //use think\Controller;
 use app\common\controller\AuthController;
 use app\v1\service\Home;
-use think\Session;
+use app\common\model\Admin;
 class Index extends AuthController
 {
     /**
@@ -19,9 +19,10 @@ class Index extends AuthController
      */
     public function index()
     {
-        $userInfo = Session::get();
-        $userId = $userInfo['userid'];
-        $data = Home::instance()->getData($userId);
+        $userId = Cookie('userid');
+        //用户信息
+        $userInfo = Admin::where(['id' => $userId])->find()->toArray();
+//        $data = Home::instance()->getData($userId);
 //        echo '<pre>';print_r($data);exit;
 
         $this->assign('title','首页');

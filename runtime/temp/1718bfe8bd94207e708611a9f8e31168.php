@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:60:"/opt/web/hui-/public/../application/v1/view/login/index.html";i:1571818113;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571723378;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:60:"/opt/web/hui-/public/../application/v1/view/login/index.html";i:1571818113;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571986795;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -124,6 +124,7 @@
 <script src="/static/assets/dist/js/protuct.js"></script>
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
+<script src="/static/assets/dist/js/works.js"></script>
 <script>
     admin_module.changepas();
 </script>

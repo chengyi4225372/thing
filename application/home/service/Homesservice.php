@@ -1,13 +1,11 @@
 <?php
 namespace app\home\service;
 
-use think\Cache;
 use think\Config;
 
 class Homesservice
 {
     protected static $instance = null;
-    protected $_reids = null;
 
     /**
      * @DESC：单例
