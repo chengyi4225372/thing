@@ -90,15 +90,8 @@ class Userservice
         return $return_data;
     }
 
-    /**
-     * @DESC：生成token
-     * @author: jason
-     * @date: 2019-08-07 03:43:31
-     */
-    public function setToken($params)
-    {
-        return Crypt::encrypt($params);
-    }
+
+
 
     /**
      * @DESC：添加用户
@@ -136,14 +129,8 @@ class Userservice
         if(empty($res)){
             return json(['status' => false,'msg' => '添加用户失败']);
         }
-        $arr = [
-            'id' => $res,
-            'username' => $username,
-        ];
-        //更新token
-        $token = $this->setToken($arr);
-        $save['token'] = $token;
-        Admin::update($save,['id' => $res]);
+
+
         return json(['status' => true,'msg' => '添加用户成功']);
     }
 
@@ -183,12 +170,6 @@ class Userservice
         $save['tel'] = $params['tel'];
         $save['mail'] = $params['mail'];
 
-        $arr = [
-            'id' => $params['id'],
-            'username' => $params['username'],
-        ];
-        $token = $this->setToken($arr);
-        $save['token'] = $token;
         $where['id'] = $params['id'];
         Admin::update($save,$where);
         return json(['status' => true,'msg' => '修改用户信息成功']);
