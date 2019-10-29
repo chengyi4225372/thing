@@ -46,6 +46,28 @@ dd {
     list-style: none;
 }
 
+select {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: solid 1px #DDD;
+
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    /*在选择框的最右侧中间显示小箭头图片*/
+    
+
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 20px;
+    padding-left: 5px;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand {
+    display: none;
+}
+
 input,
 button,
 textarea {
@@ -80,12 +102,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
+    /* padding-top: 15px; */
 }
 
 .header .logo {
-    width: 124px;
-    height: 54px;
+    width: 192px;
+    height: 52px;
 }
 
 .header .logo a {
@@ -98,6 +120,10 @@ a {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.header .tohome {
+    padding-top: 20px;
 }
 
 .header .tohome a {
@@ -114,13 +140,13 @@ a {
 }
 
 .form {
-    padding-top: 110px;
+    padding-top: 90px;
 }
 
 .form-content,
 .succeed-box {
-    width: 680px;
-    height: 720px;
+    width: 640px;
+    height: 700px;
     background: rgba(255, 255, 255, 1);
     box-shadow: -2px 0px 10px 0px rgba(44, 44, 44, 0.1);
     border-radius: 4px;
@@ -131,12 +157,28 @@ a {
 
 .form-content {
     /* display: none; */
-    padding-top: 59px;
+    /* padding-top: 59px; */
 }
 
 /* 注册成功 */
 .succeed-box {
     display: none;
+}
+
+.succeed-box>.form-content-title {
+    display: block;
+    width: 348px;
+    height: 84px;
+    margin: 0px auto;
+    transform: translateY(-29%);
+    background: url('../images/biaodanbeijing.png') no-repeat;
+    font-size: 24px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    /* color: rgba(47, 128, 237, 1); */
+    color: #fff;
+    line-height: 84px;
+    text-align: center;
 }
 
 .succeed-box>div {
@@ -145,11 +187,12 @@ a {
     align-items: center;
     width: 320px;
     margin: 0 auto;
+    margin-top: -96px;
     padding-top: 10px;
 }
 
 .succeed-box>div div:nth-child(1) {
-    margin-top: 161px;
+    margin-top: 230px;
     text-align: center;
 }
 
@@ -163,7 +206,7 @@ a {
     font-weight: 400;
     color: rgba(47, 128, 237, 1);
     line-height: 30px;
-    margin-bottom: 214px;
+    margin-bottom: 150px;
 }
 
 .succeed-box>div div:nth-child(2) {
@@ -194,22 +237,28 @@ a {
 }
 
 .form-content-title {
-    font-size: 30px;
+    width: 348px;
+    height: 84px;
+    margin: 0px auto;
+    transform: translateY(-29%);
+    background: url('../images/biaodanbeijing.png') no-repeat;
+    font-size: 24px;
     font-family: Microsoft YaHei;
     font-weight: 400;
-    color: rgba(47, 128, 237, 1);
-    line-height: 30px;
+    /* color: rgba(47, 128, 237, 1); */
+    color: #fff;
+    line-height: 84px;
     text-align: center;
     margin-bottom: 37px;
 }
 
 .tabs {
-    font-size: 24px;
+    font-size: 18px;
     font-family: Microsoft YaHei;
     font-weight: 400;
     line-height: 30px;
     text-align: center;
-    color: rgba(153, 153, 153, 1);
+    color: rgba(50, 50, 50, 1);
     margin-bottom: 106px;
 }
 
@@ -226,7 +275,7 @@ a {
     content: '';
     height: 16px;
     width: 2px;
-    background-color: #000;
+    background: rgba(77, 77, 77, 1);
 }
 
 .tabs .tab {}
@@ -287,7 +336,6 @@ a {
 
 .tabs-item-gr .two-box div:nth-child(3) select {
     height: 100%;
-    background: rgba(255, 255, 255, 1);
     padding-left: 17px;
     font-size: 16px;
     font-family: Microsoft YaHei;
@@ -300,11 +348,14 @@ a {
 .tabs-item-gr .two-box div:nth-child(3) select:nth-child(1) {
     width: 230px;
     margin-right: 12px;
-
+    background: url('../images/selectimg.png') no-repeat scroll 114px center transparent;
+    background-size: 16px 10px;
 }
 
 .tabs-item-gr .two-box div:nth-child(3) select:nth-child(2) {
     width: 100%;
+    background: url('../images/selectimg.png') no-repeat scroll 228px center transparent;
+    background-size: 16px 10px;
 }
 
 .tabs-item-qy .one-box div span,
@@ -388,11 +439,15 @@ a {
 .tabs-item-qy p,
 .tabs-item-gr p {
     text-align: right;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
 }
 
 .tabs-item-qy p a,
 .tabs-item-gr p a {
-    font-size: 16px;
+    font-size: 14px;
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: #2F80ED;
@@ -406,18 +461,26 @@ a {
     width: 320px;
     height: 56px;
     margin: 0 auto;
-    margin-top: 24px;
+    margin-top: 40px;
     background: linear-gradient(90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
     opacity: 0.96;
     border-radius: 4px;
     text-align: center;
     line-height: 56px;
-    font-size: 24px;
+    font-size: 20px;
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
     line-height: 60px;
     cursor: pointer;
+}
+
+.tabs-item-qy>.two-box>span {
+    margin-top: 24px !important;
+}
+
+.tabs-item-gr>.two-box>span {
+    margin-top: 118px !important;
 }
 
 .tabs-item-qy .two-box {

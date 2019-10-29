@@ -117,13 +117,13 @@ window.onload = function () {
         $.ajax({
             type: "post",
             url: url,
-            data: {userMobile:phone,verCode:code,loginPassword:password1},
+            data: JSON.stringify({userType:user_type,taxNo:industryNo,businessAddress:customerAddress,userMobile:phone,verCode:code,loginPassword:password1,businessName:businessName,legalPersonName:legalPersonName,legalPersonMobile:legalPersonMobile}),
             headers: {
                 "Content-Type": "application/json",
             },
             dataType: 'json',
             success: function (ret) {
-                if (ret.status == true) {
+                if (ret.status == 200) {
                     succeedbox.style.display = "block";
                     formcontent.style.display = "none";
 
@@ -134,7 +134,60 @@ window.onload = function () {
             }
         });
 
-    }
+    };
+
+    //刚进来就要去查询出希望从事的行业
+    $(window).ready(function (){
+        var url = baseUrl + '/api/portal/getIndustryParent';
+        $.ajax({
+            type: "get",
+            url: url,
+            data: '',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            dataType: 'json',
+            success: function (ret) {
+                if (ret.status == 200) {
+                    var _html = '';
+                    var _html2 = '';
+                    if(ret.data.length >0){
+                        $.each(ret.data,function (index,item){
+                            _html += '<option value="'+item.industryNo+'">'+item.industryName+'</option>';
+                            if(index == 0){
+                                $.ajax({
+                                    type:"get",
+                                    url:url,
+                                    data:{parentNo:item.industryNo},//JSON.stringify({parentNo:item.industryNo}),
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                    },
+                                    dataType: 'json',
+                                    success:function(res){
+                                        if(res.status == 200){
+                                            if(res.data.length > 0){
+                                                $.each(res.data,function (index2,item2){
+                                                    _html2 += '<option value="'+item2.industryNo+'">'+item2.industryName+'</option>';
+                                                });
+                                                $('#taxNo2').append('').html(_html2);
+                                            }
+                                        }
+                                    },
+                                    error: function (data) {
+                                        console.log(data)
+                                    }
+                                });
+                            }
+                        });
+                        $('#taxNo').append('').html(_html);
+                    }
+                }
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        });
+    });
 
     //个人注册  第一步
     gronebtn.onclick = function () {
@@ -151,7 +204,7 @@ window.onload = function () {
             layer.msg('请填写手机号', {icon: 2, time: 2000});return;
         }
         if (check_phone(user_phone) == false) {
-            //layer.msg('手机号不合法', {icon: 2, time: 2000});return;
+            layer.msg('手机号不合法', {icon: 2, time: 2000});return;
         }
         if(user_code == '' || user_code == 'undefined' || user_code == undefined){
             layer.msg('请填写验证码', {icon: 2, time: 2000});return;
@@ -161,6 +214,10 @@ window.onload = function () {
         }
         if(user_password2 == '' || user_password2 == 'undefined' || user_password2 == undefined){
             layer.msg('请确认密码', {icon: 2, time: 2000});return;
+        }
+
+        if(user_password != user_password2){
+            layer.msg('两次输入的密码不一致', {icon: 2, time: 2000});return;
         }
         gronebox.style.display = "none";
         grtwobox.style.display = "block";
@@ -196,24 +253,25 @@ window.onload = function () {
         if(taxNo == '' || taxNo == 'undefined' || taxNo == undefined){
             layer.msg('请选择所从事的行业1', {icon: 2, time: 2000});return;
         }
+
+        if(taxNo2 == '' || taxNo2 == 'undefined' || taxNo2 == undefined){
+            layer.msg('请选择所从事的行业2', {icon: 2, time: 2000});return;
+        }
         if(contact == '' || contact == 'undefined' || contact == undefined){
             layer.msg('请填写联系方式', {icon: 2, time: 2000});return;
         }
 
-        if(check_phone(contact) == false){
-            layer.msg('联系方式不合法', {icon: 2, time: 2000});return;
-        }
-
+        var user_type = $('#user_type2').val();
         $.ajax({
             type: "post",
             url: url,
-            data: data,
+            data: JSON.stringify({userType:user_type,userMobile:user_phone,verCode:user_code,loginPassword:user_password,industryNo:taxNo2,userName:userName,customerAddress:contact}),
             headers: {
                 "Content-Type": "application/json",
             },
             dataType: 'json',
             success: function (ret) {
-                if (ret.status == true) {
+                if (ret.status == 200) {
                     succeedbox.style.display = "block";
                     formcontent.style.display = "none";
                 }
@@ -224,22 +282,6 @@ window.onload = function () {
         });
 
     };
-    //qyonebtn.onclick = function () {
-    //    qyonebox.style.display = "none"
-    //    qytwobox.style.display = "block"
-    //}
-    //qytwobtn.onclick = function () {
-    //    succeedbox.style.display = "block"
-    //    formcontent.style.display = "none"
-    //}
-    //gronebtn.onclick = function () {
-    //    gronebox.style.display = "none"
-    //    grtwobox.style.display = "block"
-    //}
-    //grtwobtn.onclick = function () {
-    //    succeedbox.style.display = "block"
-    //    formcontent.style.display = "none"
-    //}
 
     for (var i = 0; i < tabArr.length; i++) {
         //绑定索引值（新增一个自定义属性：index属性）
@@ -255,10 +297,92 @@ window.onload = function () {
             tabsitemArr[this.index].classList.add("tabs-item-active");
         }
     }
-
-
-
-
 };
 
+function change_tax(objthis){
+    var taxNo = $(objthis).val();
+    var url = baseUrl + '/api/portal/getIndustryParent';
+    $.ajax({
+        type:"get",
+        url:url,
+        data:{parentNo:taxNo},
+        headers: {
+            "Content-Type": "application/json",
+        },
+        dataType: 'json',
+        success:function(res){
 
+            if(res.status == 200){
+                if(res.data.length > 0){
+                    var _html2 = '';
+                    $.each(res.data,function (index2,item2){
+                        _html2 += '<option value="'+item2.industryNo+'">'+item2.industryName+'</option>';
+                    });
+                    $('#taxNo2').append('').html(_html2);
+                }
+            }
+        },
+        error: function (data) {
+            console.log(data)
+        }
+    });
+
+}
+
+//获取gr注册验证码
+function get_code(){
+    var code = $('#user_phone').val();
+    if(code == '' || code == 'undefined' || code == undefined){
+        layer.msg('请填写手机号', {icon: 2, time: 2000});return;
+    }
+    var url = baseUrl + '/api/wechatLogin/sendRegisterSMSCode';
+    $.ajax({
+        type:"post",
+        url:url,
+        data:JSON.stringify({phoneNumber:code}),
+        headers: {
+            "Content-Type": "application/json",
+        },
+        dataType: 'json',
+        success:function(res){
+
+            if(res.status == 200){
+                layer.msg(res.message, {icon: 1, time: 2000});
+            }else{
+                layer.msg(res.message, {icon: 2, time: 2000});
+            }
+        },
+        error: function (data) {
+            console.log(data)
+        }
+    });
+}
+
+//获得企业注册验证码
+function get_qy_code(){
+    var code = $('#phone').val();
+    if(code == '' || code == 'undefined' || code == undefined){
+        layer.msg('请填写手机号', {icon: 2, time: 2000});return;
+    }
+    var url = baseUrl + '/api/wechatLogin/sendRegisterSMSCode';
+    $.ajax({
+        type:"post",
+        url:url,
+        data:JSON.stringify({phoneNumber:code}),
+        headers: {
+            "Content-Type": "application/json",
+        },
+        dataType: 'json',
+        success:function(res){
+
+            if(res.status == 200){
+                layer.msg(res.message, {icon: 1, time: 2000});
+            }else{
+                layer.msg(res.message, {icon: 2, time: 2000});
+            }
+        },
+        error: function (data) {
+            console.log(data)
+        }
+    });
+}

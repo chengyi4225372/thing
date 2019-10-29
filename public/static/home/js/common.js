@@ -164,10 +164,11 @@ function click_show(objthis){
     }
 
 //了解更多
-function showUrl(mobile,objthis){
+function showUrl(objthis){
     var data_url = $(objthis).attr('data-url');
     var login_url = $(objthis).attr('login_url');
-    if(mobile == '' || mobile != 'undefined' || mobile != undefined){
+    var is_login = $(objthis).attr('mobile-phone');
+    if(is_login == '' || is_login == 'undefined' || is_login == undefined){
         window.location.href=login_url;
     }else{
         window.location.href=data_url;
@@ -179,13 +180,14 @@ function showUrl(mobile,objthis){
 $(function(){
     $('#searched').click(function(){
         var keyword = $('#keyword').val();
+        var url = $(this).attr('data-url');
         if(keyword == '' || keyword == undefined){
             layer.msg('请输入搜索条件');
             return false;
         }
-        var urlw = "/home/index/infoList";
+        //var urlw = "/home/index/infoList";
 
-        window.location.href = urlw+"?keyword="+keyword;
+        window.location.href = url+"?keyword="+keyword;
 
     });
 });

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572331868;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572346453;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +21,7 @@
     <div class="header-box">
       <div class="w header">
         <div class="logo">
-          <a href="<?php echo url('/home/index/index'); ?>"><img src="/static/spirit/images/logo2.png" alt=""></a>
+          <a href="<?php echo url('/home/index/index'); ?>"><img src="/static/spirit/images/logo22.png" alt=""></a>
         </div>
         <div class="tohome"><a href="<?php echo url('/home/index/index'); ?>">返回首页>></a></div>
       </div>
@@ -30,7 +30,7 @@
     <div class="form-box">
       <div class="w form">
         <!-- 表单内容 -->
-        <div id="login_url" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/login'); ?>"></div>
+        <div id="login_url" data-url="<?php echo url('/home/login/login'); ?>"></div>
         <div class="form-content" id="form-content">
           <div class="form-content-title">欢迎注册惠灵工账号</div>
           <div class="tabs">
@@ -47,16 +47,16 @@
                   <input type="text" placeholder="请输入手机号" id="phone" value="">
                 </div>
                 <div>
-                  <input type="text" placeholder="请输入验证码" id="code" value="">
-                  <span>获取验证码</span>
+                  <input type="text" placeholder="请输入验证码" id="code" value="" >
+                  <span onclick="get_qy_code()">获取验证码</span>
                 </div>
                 <div>
                   <span>输入密码</span>
-                  <input type="text" placeholder="请设置密码" id="password1" value="">
+                  <input type="password" placeholder="请设置密码" id="password1" value="">
                 </div>
                 <div>
                   <span>确认密码</span>
-                  <input type="text" placeholder="请再次输入密码" id="password2" value="">
+                  <input type="password" placeholder="请再次输入密码" id="password2" value="">
                 </div>
                 <p>已有账号？<a href="./login.html">去登录</a></p>
                 <span id="qy-one-btn">下一步</span>
@@ -98,15 +98,15 @@
                 </div>
                 <div>
                   <input type="text" placeholder="请输入验证码" id="user_code">
-                  <span>获取验证码</span>
+                  <span onclick="get_code()">获取验证码</span>
                 </div>
                 <div>
                   <span>输入密码</span>
-                  <input type="text" placeholder="请设置密码" id="user_password">
+                  <input type="password" placeholder="请设置密码" id="user_password">
                 </div>
                 <div>
                   <span>确认密码</span>
-                  <input type="text" placeholder="请再次输入密码" id="user_password2">
+                  <input type="password" placeholder="请再次输入密码" id="user_password2">
                 </div>
                 <p>已有账号？<a href="./login.html">去登录</a></p>
                 <span id="gr-one-btn">下一步</span>
@@ -119,7 +119,7 @@
                 </div>
                 <div>希望从事行业</div>
                 <div>
-                  <select id="taxNo">
+                  <select id="taxNo" onchange="change_tax(this)">
                     <option value="请选择">请选择</option>
                     <option value="saab">Saab</option>
                     <option value="opel">Opel</option>
@@ -145,6 +145,7 @@
         </div>
         <!-- 完成注册 -->
         <div class="succeed-box" id="succeed-box">
+          <span class="form-content-title">欢迎注册惠灵工账号</span>
           <div>
             <div class="success">
               <img src="/static/spirit/images/zhucechenggong2x.png" alt="">
