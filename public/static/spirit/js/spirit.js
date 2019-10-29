@@ -1,8 +1,8 @@
 //搜索
-function search(){
+function search(objthis){
     var keyword = $('#keyword').val();
 
-    var url = $(this).attr('data-url');
+    var url = $(objthis).attr('data-url');
     if(keyword== '' || keyword==undefined){
         layer.msg('请输入搜索内容');
         return false;
