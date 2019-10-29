@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572268855;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572331868;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +21,9 @@
     <div class="header-box">
       <div class="w header">
         <div class="logo">
-          <a href="./index.html"><img src="/static/spirit/images/logo2.png" alt=""></a>
+          <a href="<?php echo url('/home/index/index'); ?>"><img src="/static/spirit/images/logo2.png" alt=""></a>
         </div>
-        <div class="tohome"><a href="./index.html">返回首页>></a></div>
+        <div class="tohome"><a href="<?php echo url('/home/index/index'); ?>">返回首页>></a></div>
       </div>
     </div>
     <!-- 登陆表单 -->
