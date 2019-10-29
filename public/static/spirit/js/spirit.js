@@ -2,12 +2,13 @@
 function search(){
     var keyword = $('#keyword').val();
 
+    var url = $(this).attr('data-url');
     if(keyword== '' || keyword==undefined){
         layer.msg('请输入搜索内容');
         return false;
     }
 
-    window.location.href='informationList?keyword='+keyword;
+    window.location.href= url+'?keyword='+keyword;
 }
 
 //手机验证
@@ -169,14 +170,15 @@ function form_btn(){
 
 
 //分页
-function getMore(keyword,i){
-   var urls = '/home/spirit/getpageInfo';
+function getMore(keyword,i,objthis){
+   var urls = $(objthis).attr('data-url');
 
+   var hrefs=$(objthis).attr('data-href');
    $.get(urls,{'keyword':keyword,'page':i},function(ret){
          if(ret.code == 200){
              var html= '<li>';
              $.each(ret.data,function(i,item){
-                html+= "<a href='/home/spirit/detail.html?mid="+item.id+"'>";
+                html+= "<a href= '"+hrefs+"?mid="+item.id+"'>";
                 html+= "<div class='tabs-items-img'><img src="+item.imgs+" alt=''></div>";
                 html+= "<div class='tabs-items-content'><div class='tabs-items-content-title figcaption'>";
                 html+=  "<p>"+ item.title +"</p></div>";
@@ -188,7 +190,7 @@ function getMore(keyword,i){
                 html+= "</a>";
              });
              html +='</li>';
-
+            console.log(html);return;
             $('#page').val(++i);
             $('#content').append(html).html();
          }

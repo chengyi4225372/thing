@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:117:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\information_list.html";i:1572339459;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:117:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\information_list.html";i:1572348538;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +64,7 @@
             </ul>
             <div class="search-box fr">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-              <div onclick="search()">搜索</div>
+              <div onclick="search()" data-url="<?php echo url('/home/spirit/informationList'); ?>">搜索</div>
             </div>
           </div>
           <div class="tabs-items show">
@@ -94,7 +94,7 @@
             </ul>
             <input type="hidden" value="<?php echo \think\Request::instance()->get('keyword'); ?>" id="sid">
             <input type="hidden" value="1" id="page">
-            <div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val())">查看更多</div>
+            <div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val(),this)" data-href="<?php echo url('/home/spirit/detail'); ?>" data-url="<?php echo url('/home/spirit/getpageInfo'); ?>">查看更多</div>
           </div>
 
         </div>
