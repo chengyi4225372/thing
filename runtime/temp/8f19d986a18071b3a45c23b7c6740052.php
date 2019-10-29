@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1572267913;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1572329838;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,9 +68,9 @@
                     <div class="header-form-right fr">
                         <p class="header-right-title">想拥有更专业的方案吗？</p>
                         <div class="header-right-input">
-                            <input type="text" value="" id="contactName" placeholder="您的姓名">
-                            <input type="text" value="" id="contactMobile" placeholder="联系方式">
-                            <input type="text" value="" id="companyName" placeholder="您的公司">
+                            <input type="text" value="" id="Name" placeholder="您的姓名">
+                            <input type="text" value="" id="Mobile" placeholder="联系方式">
+                            <input type="text" value="" id="cName" placeholder="您的公司">
                             <input type='hidden' id='source' value='惠灵工'>
                             <input type='hidden' id='identification' value='灵活用工'>
                         </div>
@@ -98,7 +98,7 @@
                         <p>良性优化用工类型</p>
                         <p>用工场景合法合规</p>
                         <div class="serve-item-btn">
-                            <div class="btn" id="serve-item-btn">获取方案</div>
+                            <div class="btn" onclick="GetErp()">获取方案</div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                         <p>良性优化用工类型</p>
                         <p>用工场景合法合规</p>
                         <div class="serve-item-btn">
-                            <div class="btn">获取方案</div>
+                            <div class="btn" onclick="GetErp()">获取方案</div>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                         <p>良性优化用工类型</p>
                         <p>用工场景合法合规</p>
                         <div class="serve-item-btn">
-                            <div class="btn">获取方案</div>
+                            <div class="btn" onclick="GetErp()">获取方案</div>
                         </div>
                     </div>
                 </div>
@@ -205,22 +205,22 @@
                     <div class="project-tabs-items show">
                         <p>转变灵活用工方式合理提高个人收益，规避企业风险</p>
                         <p>企业内部组织变革，重构企业与个人的关系。个人一键创业成为创客，以灵活用工方式与企业形成合作关系，合理解除用工劳动关系风险</p>
-                        <div class="project-btn">立即咨询</div>
+                        <div class="project-btn" onclick="GetErp()">立即咨询</div>
                     </div>
                     <div class="project-tabs-items">
                         <p>合理开出可用于进项抵扣的增值税专票</p>
                         <p>个人通过平台承包项目，按项目服务效果获取服务费，即“项目应收款”，而非雇佣关系下的薪酬工资。平台给发包方企业开6%增值税专票，可用于进项抵扣和费用抵减。</p>
-                        <div class="project-btn">立即咨询</div>
+                        <div class="project-btn" onclick="GetErp()">立即咨询</div>
                     </div>
                     <div class="project-tabs-items">
                         <p>达到标准后付费，保障企业权益</p>
                         <p>企业通过平台将业务形成一个个标准件外包出去，并按服务效果付费，通过每个标准件的盈利最终达到企业所有业务均盈利的目的</p>
-                        <div class="project-btn">立即咨询</div>
+                        <div class="project-btn" onclick="GetErp()">立即咨询</div>
                     </div>
                     <div class="project-tabs-items">
                         <p>合理享受各项政策，让企业减负前行</p>
                         <p>平台注册的创客享受国家税收优惠政策，政府支持，企业认可，创客欢迎。平台能力对外开放且有严格的风控制度，综合性服务让企业安心、省心。</p>
-                        <div class="project-btn">立即咨询</div>
+                        <div class="project-btn" onclick="GetErp()">立即咨询</div>
                     </div>
                 </div>
 
@@ -376,7 +376,7 @@
             <div class="salary">
                 <div>从“薪”开始，用工无忧</div>
                 <div>企业“薪、税、酬”全用工链一体化解决方案</div>
-                <div><a href="#">获取方案</a></div>
+                <div><a onclick="GetErp()">获取方案</a></div>
             </div>
         </div>
 
@@ -435,13 +435,15 @@
             <div class="form">
                 <div class="form-titile">
                     <p>方案咨询</p>
-                    <span class="turnoff" id="turnoff"></span>
+                    <span class="turnoff" onclick="turnoff()"></span>
                 </div>
                 <div class="form-content">
-                    <div><span class="title">您的姓名</span><input type="text" placeholder="请输入你的名字"></div>
-                    <div><span class="title">联系方式</span><input type="text" placeholder="请输入你的联系方式"></div>
-                    <div><span class="title">您的公司</span><input type="text" placeholder="请输入你的公司"></div>
-                    <div class="form-btn">获取方案</div>
+                    <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                    <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式"></div>
+                    <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                    <input type='hidden' id='sources' value='惠灵工'>
+                    <input type='hidden' id='identifications' value='灵活用工'>
+                    <div class="form-btn" onclick="form_btn()">获取方案</div>
                 </div>
             </div>
 

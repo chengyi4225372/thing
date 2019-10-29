@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572263678;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572328166;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,13 +73,13 @@
                             <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
-                            <li><a href="#">惠找事</a></li>
+                            <li><a href="#">惠找事</a></li>serve-item-btn
                             <li><a href="#">惠启动</a></li>
                         </ul>
                         <div class='register'>
-                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/ajaximage'); ?>">登录</a>
+                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/login'); ?>">登录</a>
                             <span></span>
-                            <a href="register">注册</a>
+                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/register'); ?>">注册</a>
                         </div>
                     </div>
                 </div>
@@ -234,16 +234,18 @@
                             <div class="desc"><?php echo $info_list['desc7']; ?></div>
                             <div class='total_input'>
                                 <div>
-                                    <input type="text" placeholder="请输入您的姓名..">
+                                    <input type="text" id='contactName' placeholder="请输入您的姓名..">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="请输入您的公司名称..">
+                                    <input type="text" id="companyName" placeholder="请输入您的公司名称..">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="请输入您的手机号..">
+                                    <input type="text" id='contactMobile' placeholder="请输入您的手机号..">
                                 </div>
                                 <div>
-                                    <input type="button" value='定制您的方案'>
+                                    <input type='hidden' id='source' value='门户首页'>
+                                    <input type='hidden' id='identification' value='企业一站式服务'>
+                                    <input type="button"  onclick='getErp()' value='定制您的方案'>
                                 </div>
                             </div>
                         </div>

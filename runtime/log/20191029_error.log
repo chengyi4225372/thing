@@ -18,3 +18,18 @@
 [ 2019-10-29T10:40:21+08:00 ] 172.26.2.48 POST /v1/systematic/system/uploadimg
 [ error ] [2]mkdir(): File exists[/opt/web/hui-/application/v1/service/Systems.php:359]
 >>>>>>> ad3efcefa46a1ba16baa580defcd0ad3c1972041
+---------------------------------------------------------------
+[ 2019-10-29T14:47:49+08:00 ] 127.0.0.1 GET /home/spirit/informationlist.html
+[ error ] [2]Missing argument 2 for app\v1\service\Workservice::getNewList(), called in C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Spirit.php on line 52 and defined[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Workservice.php:39]
+---------------------------------------------------------------
+[ 2019-10-29T14:47:50+08:00 ] 127.0.0.1 GET /home/spirit/informationlist.html
+[ error ] [2]Missing argument 2 for app\v1\service\Workservice::getNewList(), called in C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Spirit.php on line 52 and defined[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Workservice.php:39]
+---------------------------------------------------------------
+[ 2019-10-29T14:47:51+08:00 ] 127.0.0.1 GET /home/spirit/informationlist.html
+[ error ] [2]Missing argument 2 for app\v1\service\Workservice::getNewList(), called in C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Spirit.php on line 52 and defined[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Workservice.php:39]
+---------------------------------------------------------------
+[ 2019-10-29T14:47:52+08:00 ] 127.0.0.1 GET /home/spirit/informationlist.html
+[ error ] [2]Missing argument 2 for app\v1\service\Workservice::getNewList(), called in C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Spirit.php on line 52 and defined[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Workservice.php:39]
+---------------------------------------------------------------
+[ 2019-10-29T14:48:15+08:00 ] 127.0.0.1 GET /home/spirit/informationlist.html
+[ error ] [2]Missing argument 2 for app\v1\service\Workservice::getNewList(), called in C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\controller\Spirit.php on line 52 and defined[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Workservice.php:39]
