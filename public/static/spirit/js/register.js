@@ -330,7 +330,7 @@ function change_tax(objthis){
 }
 
 //获取gr注册验证码
-function user_phone(){
+function get_code(){
     var code = $('#user_phone').val();
     if(code == '' || code == 'undefined' || code == undefined){
         layer.msg('请填写手机号', {icon: 2, time: 2000});return;
@@ -339,7 +339,7 @@ function user_phone(){
     $.ajax({
         type:"post",
         url:url,
-        data:JSON.stringify({h5AuthDTO:code}),
+        data:JSON.stringify({phoneNumber:code}),
         headers: {
             "Content-Type": "application/json",
         },
@@ -368,7 +368,7 @@ function get_qy_code(){
     $.ajax({
         type:"post",
         url:url,
-        data:JSON.stringify({h5AuthDTO:code}),
+        data:JSON.stringify({phoneNumber:code}),
         headers: {
             "Content-Type": "application/json",
         },
