@@ -355,10 +355,10 @@ class Systems
         $imgDir = dirname(THINK_PATH).'/public/uploads/';
         $imgSmallDir = $imgDir . 'images/'.date('YmdH').'/';
         if (!is_dir($imgDir)) {
-            @mkdir($imgDir,777,true);
+            @mkdir($imgDir,0777,true);
         }
         if (!is_dir($imgSmallDir)) {
-            @mkdir($imgSmallDir,777,true);
+            @mkdir($imgSmallDir,0777,true);
         }
         $name = $file['name'];
 
