@@ -67,7 +67,7 @@
             </div>
           </div>
           <div class="tabs-items show">
-            <ul>
+            <ul  id="shang">
               {volist name='shang' id='sh'}
               <li>
                 <a href="{:url('/home/index/getInfo',array('mid'=>$sh.id))}">
@@ -88,10 +88,12 @@
               </li>
               {/volist}
             </ul>
-            <div class="more-btn">查看更多</div>
+            <input type="hidden" id="sid" value="{$Think.get.keyword}">
+            <input type="hidden" id="page" value="1">
+            <div class="more-btn" onclick="moreShang($('#sid').val(),$('#page').val())">查看更多</div>
           </div>
           <div class="tabs-items">
-            <ul>
+            <ul id="biao">
               {volist name='biao' id='ww'}
               <li>
                 <a href="{:url('/home/index/getInfo',array('mid'=>$ww.id))}">
@@ -114,7 +116,9 @@
               </li>
               {/volist}
             </ul>
-            <div class="more-btn">查看更多</div>
+            <input type="hidden" id="bid" value="{$Think.get.keyword}">
+            <input type="hidden" id="pages" value="1">
+            <div class="more-btn" onclick="moreBiao($('#bid').val(),$('#pages').val())">查看更多</div>
           </div>
         </div>
       </div>

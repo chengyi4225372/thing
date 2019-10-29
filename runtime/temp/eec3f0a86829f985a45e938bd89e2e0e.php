@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\info_list.html";i:1572266443;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\info_list.html";i:1572343157;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +68,7 @@
             </div>
           </div>
           <div class="tabs-items show">
-            <ul>
+            <ul  id="shang">
               <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sh): $mod = ($i % 2 );++$i;?>
               <li>
                 <a href="<?php echo url('/home/index/getInfo',array('mid'=>$sh['id'])); ?>">
@@ -89,10 +89,12 @@
               </li>
               <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
-            <div class="more-btn">查看更多</div>
+            <input type="hidden" id="sid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
+            <input type="hidden" id="page" value="1">
+            <div class="more-btn" onclick="moreShang($('#sid').val(),$('#page').val())">查看更多</div>
           </div>
           <div class="tabs-items">
-            <ul>
+            <ul id="biao">
               <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ww): $mod = ($i % 2 );++$i;?>
               <li>
                 <a href="<?php echo url('/home/index/getInfo',array('mid'=>$ww['id'])); ?>">
@@ -115,7 +117,9 @@
               </li>
               <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
-            <div class="more-btn">查看更多</div>
+            <input type="hidden" id="bid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
+            <input type="hidden" id="pages" value="1">
+            <div class="more-btn" onclick="moreBiao($('#bid').val(),$('#pages').val())">查看更多</div>
           </div>
         </div>
       </div>

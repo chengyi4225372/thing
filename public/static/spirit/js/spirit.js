@@ -188,7 +188,6 @@ function getMore(keyword,i){
                 html+= "</a>";
              });
              html +='</li>';
-             console.log(111);
 
             $('#page').val(++i);
             $('#content').append(html).html();
