@@ -62,8 +62,8 @@ var login_module = (function () {
             //layer.msg('手机号不合法',{icon:2,time:2000});return;
         }
 
-        var data = {};
-        data.userMobile = phone;
+        var datas = {};
+        datas.data.data.phone = phone;
         $.ajax({
             type:"post",
             url: url,
@@ -71,6 +71,7 @@ var login_module = (function () {
             headers:{
                 "Content-Type": "application/json",
             },
+            type:'json',
             success: function(ret) {
 
                 location.href = '/home/index/index';
