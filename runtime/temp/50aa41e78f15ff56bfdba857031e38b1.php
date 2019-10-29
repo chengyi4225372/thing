@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572268220;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572318616;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +29,7 @@
         </div>
       </div>
       <div id="login_url" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/index'); ?>"></div>
+      <div id="check_url" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/savetoken'); ?>"></div>
       <div class='login_content'>
         <div class='login_xin'>
           <div class='login_box'>

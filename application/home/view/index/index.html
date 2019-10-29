@@ -68,18 +68,26 @@
                         <div class='content_logo' id='logo'></div>
                         <ul>
                             <li><a href="#">首页</a></li>
-                            <li><a href="#">惠税优</a></li>
+                            <li><a href="#">惠优税</a></li>
                             <li><a href="{:url('/home/spirit/index')}">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
-                            <li><a href="#">惠找事</a></li>serve-item-btn
+                            <li><a href="#">惠找事</a></li>
                             <li><a href="#">惠启动</a></li>
                         </ul>
+                        {if empty($userinfo['mobile'])}
                         <div class='register'>
-                            <a href="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/home/login/login')}">登录</a>
+                            <a href="{:url('/home/login/login')}">登录</a>
                             <span></span>
-                            <a href="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/home/login/register')}">注册</a>
+                            <a href="{:url('/home/login/register')}">注册</a>
                         </div>
+                        {else /}
+                        <div style="float: right;margin-top: 17px;cursor: pointer;">
+                            <img src="__HOME__/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+                            <span style="vertical-align: middle;">{$userinfo['mobile']}></span>
+                        </div>
+
+                        {/if}
                     </div>
                 </div>
             </div>
@@ -448,7 +456,7 @@
                             </a>
                         </div>
                         {/volist}
-                        <button class='know_more' onclick='showUrl()'>了解更多</button>
+                        <button class='know_more' onclick="showUrl('{$userinfo['mobile']}',this)" data-url="{:url('/home/index/infoList')}" login_url="{:url('/home/login/login')}">了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
@@ -466,7 +474,9 @@
                             </a>
                         </div>
                         {/volist}
-                        <button class='know_more'onclick='showUrl()'>了解更多</button>
+
+                        <button class='know_more'onclick="showUrl('{$userinfo['mobile']}',this)" data-url="{:url('/home/index/infoList')}" login_url="{:url('/home/login/login')}">了解更多</button>
+
                     </div>
 
                 </div>

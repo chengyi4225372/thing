@@ -1,11 +1,12 @@
 <?php
 namespace app\home\controller;
 
+use app\common\controller\BaseController;
 use app\common\model\Work;
 use think\Controller;
 use app\v1\service\Workservice;
 
-class Spirit extends Controller
+class Spirit extends BaseController
 {
     /**
      * @DESC：初始化

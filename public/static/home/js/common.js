@@ -172,8 +172,15 @@ function click_show(objthis){
     }
 
 //了解更多
-function showUrl(){
-   window.location.href="/home/index/infoList";
+function showUrl(mobile,objthis){
+    var data_url = $(objthis).attr('data-url');
+    var login_url = $(objthis).attr('login_url');
+    if(mobile == '' || mobile != 'undefined' || mobile != undefined){
+        window.location.href=login_url;
+    }else{
+        window.location.href=data_url;
+    }
+
 }
 
 //列表页搜索

@@ -53,6 +53,10 @@ window.onload = function () {
         if (password2 == '' || password2 == 'undefined' || password2 == undefined) {
             layer.msg('再次确认密码', {icon: 2, time: 2000});return;
         }
+
+        if(password1 != password2){
+            layer.msg('两次输入的密码不一致', {icon: 2, time: 2000});return;
+        }
         qyonebox.style.display = "none";
         qytwobox.style.display = "block";
 
@@ -83,6 +87,8 @@ window.onload = function () {
         //纳税识别号
         var industryNo = $('#industryNo').val();
 
+        //两次输入的密码是否一致
+
         if (businessName == '' || businessName == 'undefined' || businessName == undefined) {
             layer.msg('请输入企业名称', {icon: 2, time: 2000});
             return;
@@ -111,7 +117,7 @@ window.onload = function () {
         $.ajax({
             type: "post",
             url: url,
-            data: data,
+            data: {userMobile:phone,verCode:code,loginPassword:password1},
             headers: {
                 "Content-Type": "application/json",
             },

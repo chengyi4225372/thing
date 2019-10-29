@@ -1,34 +1,24 @@
 <?php
 namespace app\home\controller;
 
+use app\common\controller\BaseController;
 use app\v1\service\Workservice;
 use think\Controller;
 use app\v1\service\Protuctservice;
 use app\v1\service\Infosservice;
 use app\v1\service\Systems;
 use app\v1\service\Caseservice;
+use think\Cookie;
 
-class Index extends Controller
+class Index extends BaseController
 {
-
-    /**
-     * @DESC：初始化
-     * @author: jason
-     * @date: 2019-10-28 04:24:30
-     */
-    public function _initialize(){
-        $SOFTWARE = $_SERVER['SERVER_SOFTWARE'];
-        $is_nginx = stripos($SOFTWARE,'nginx');
-        if($is_nginx !== false){
-            $is_nginx = '';
-        }else{
-            $is_nginx = '/index.php';
-        }
-        $this->assign('is_nginx',$is_nginx);
-    }
 
     public function index()
     {
+//        Cookie::clear('mobile');
+//        Cookie::clear('token');
+//        Cookie::clear('userName');
+//        Cookie::clear('userType');
         if ($this->request->isGet()) {
 
             //慧享产品
@@ -62,6 +52,8 @@ class Index extends Controller
             $this->assign('slideshow', $slideshow);
             $this->assign('biao', $biao);
             $this->assign('shang', $shang);
+            //用户信息
+            $this->assign('userinfo',$this->userinfo);
             return $this->fetch();
         }
         return false;

@@ -27,6 +27,7 @@ window.onload = function () {
 var login_module = (function () {
     //手机号登录
     var phone_login_info = function phone_login_info(objthis){
+        layer.msg('暂时只有账号登录的一种方式',{icon:2,time:2000});return;
         var url = baseUrl + '/api/portal/login';
         var phone = $(objthis).parent().find('.phone_input').val();
         var check_phones = check_phone(phone);
@@ -69,18 +70,35 @@ var login_module = (function () {
             layer.msg('请输入密码',{icon:2,time:2000});return;
         }
 
-
+        var url2 = $('#check_url').attr('data-url');
         $.ajax({
             type:"post",
             url: url,
-            data: {userMobile:phone,loginPassword:pass_input},//JSON.stringify({userMobile:phone}),
+            data: JSON.stringify({userMobile:phone,loginPassword:pass_input}),//{userMobile:phone,loginPassword:pass_input},//
             headers:{
                 "Content-Type": "application/json",
             },
             dataType:'json',
             success: function(ret) {
+                if(ret.status == 200){
+                    $.post(
+                        url2,
+                        {mobile:ret.data.mobile,token:ret.data.token,userName:ret.data.userName,userType:ret.data.userType},
+                        function (res){
+                            if(res.status == true){
+                                layer.msg(res.message,{icon:1,time:1500},function (){
+                                    var href_url = $('#login_url').attr('data-url');
+                                    location.href = href_url;
+                                });
+                            }else{
+                                layer.msg(res.message,{icon:2,time:2000});
+                            }
+                        }
+                    );
+                }else{
+                    layer.msg(ret.message,{icon:2,time:2000});
+                }
 
-                location.href = '/home/index/index';
             },
             error: function(data) {
                 console.log(data)
