@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"C:\Users\Administrator\Desktop\hui-\public/../application/home\view\index\index.html";i:1572234566;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"C:\Users\Administrator\Desktop\hui-\public/../application/home\view\index\index.html";i:1572255024;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +69,7 @@
                         <div class='content_logo' id='logo'></div>
                         <ul>
                             <li><a href="#">首页</a></li>
-                            <li><a href="#">惠优税</a></li>
+                            <li><a href="#">惠税优</a></li>
                             <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
@@ -77,7 +77,7 @@
                             <li><a href="#">惠启动</a></li>
                         </ul>
                         <div class='register'>
-                            <a href="login.html">登录</a>
+                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/ajaximage'); ?>">登录</a>
                             <span></span>
                             <a href="register">注册</a>
                         </div>
@@ -150,6 +150,7 @@
 
 
         <!-- 近期成功案例 -->
+        <input type="hidden" id="add_url" value="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/ajaximage'); ?>">
         <div class='success'>
             <div class='w success_content'>
                 <div class='success_title'></div>

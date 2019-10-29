@@ -145,10 +145,10 @@ body{
 
 .header_content .content_logo {
     float: left;
-    width: 35px;
-    height: 26px;
+    width: 57px;
+    height: 41px;
     color: #fff;
-    margin-top: 14px;
+    margin-top: 4px;
     background-size: contain;
     vertical-align: middle;
     background-image: url('../images/H.png');
