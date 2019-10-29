@@ -98,7 +98,7 @@ class Spirit extends BaseController
         $list  = Workservice::instance()->Getinfolist($keyword,$page);
 
         if(empty($list)){
-            return json(['code'=>404,'msg'=>'已经是最后一条了']);
+            return json(['code'=>404,'msg'=>'没有更多了']);
         }
 
         if($list){

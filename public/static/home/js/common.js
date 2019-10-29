@@ -199,7 +199,7 @@ function moreShang(keyword,pages){
         if(ret.code == 200){
             var html= "<li>";
             $.each(ret.data,function(i,item){
-                 html+= "<a href='/getInfo.html?mid="+item.id+" '>";
+                 html+= "<a href='/home/index/getInfo.html?mid="+item.id+" '>";
                  html+= "<div class='tabs-items-content'>";
                  html+= "<div class='tabs-items-content-title figcaption'>";
                  html+= "<p>"+item.title+"</p></div>";
@@ -230,7 +230,7 @@ function moreBiao(keyword,pages){
         if(ret.code == 200){
             var html= "<li>";
             $.each(ret.data,function(i,item){
-                html+= "<a href='/getInfo.html?mid="+item.id+" '>";
+                html+= "<a href='/home/index/getInfo.html?mid="+item.id+" '>";
                 html+= "<div class='tabs-items-content'>";
                 html+= "<div class='tabs-items-content-title figcaption'>";
                 html+= "<p>"+item.title+"</p></div>";

@@ -176,14 +176,14 @@ function getMore(keyword,i){
          if(ret.code == 200){
              var html= '<li>';
              $.each(ret.data,function(i,item){
-                html+= "<a href='detail.html?mid="+item.id+"'>";
+                html+= "<a href='/home/spirit/detail.html?mid="+item.id+"'>";
                 html+= "<div class='tabs-items-img'><img src="+item.imgs+" alt=''></div>";
                 html+= "<div class='tabs-items-content'><div class='tabs-items-content-title figcaption'>";
                 html+=  "<p>"+ item.title +"</p></div>";
                 html+= "<div class='tabs-items-content-text figcaption'>";
                 html+= "<p>"+item.desc+"</p></div>";
                 html+=" <div class='tabs-items-content-time'>" ;
-                html+="<span><img src='__SPI__/images/shijian2x.png' alt=''></span>";
+                html+="<span><img src='/static/spirit/images/shijian2x.png' alt=''></span>";
                 html+="<span>"+item.create_time +"</span></div></div>";
                 html+= "</a>";
              });

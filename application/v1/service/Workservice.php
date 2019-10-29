@@ -231,7 +231,7 @@ class Workservice
             ];
         }
 
-        $next = 15;
+        $next = 10;
         if(empty($page)){
           $page = 0;
         }else {

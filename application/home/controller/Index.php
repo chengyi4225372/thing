@@ -135,7 +135,7 @@ class Index extends BaseController
         $list  =  Infosservice::instance()->getshang($keyword,$page);
 
         if(empty($list)){
-            return json(['code'=>404,'msg'=>'这是最后一条！']);
+            return json(['code'=>404,'msg'=>'没有更多了']);
         }
 
         if(isset($list) && !empty($list)){
@@ -155,7 +155,7 @@ class Index extends BaseController
         $list  =  Infosservice::instance()->getbiao($keyword,$page);
 
         if(empty($list)){
-            return json(['code'=>404,'msg'=>'这是最后一条！']);
+            return json(['code'=>404,'msg'=>'没有更多了！']);
         }
 
         if(isset($list) && !empty($list)){
