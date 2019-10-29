@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572318616;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572332172;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,12 +24,12 @@
             <a href="<?php echo url('/home/index/index'); ?>"></a>
           </div>
           <div class='a_href'>
-            <a href="./index.html">返回首页>></a>
+            <a href="<?php echo url('/home/index/index'); ?>">返回首页>></a>
           </div>
         </div>
       </div>
-      <div id="login_url" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/index'); ?>"></div>
-      <div id="check_url" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/savetoken'); ?>"></div>
+      <div id="login_url" data-url="<?php echo url('/home/index/index'); ?>"></div>
+      <div id="check_url" data-url="<?php echo url('/home/login/savetoken'); ?>"></div>
       <div class='login_content'>
         <div class='login_xin'>
           <div class='login_box'>
@@ -47,7 +47,7 @@
                 </div>
                 <div class='password'>
                   <span class='u_pass'>密码</span>
-                  <input type="text" placeholder="请输入密码" class='pass_input'>
+                  <input type="password" placeholder="请输入密码" class='pass_input'>
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>

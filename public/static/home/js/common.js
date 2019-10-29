@@ -172,10 +172,11 @@ function click_show(objthis){
     }
 
 //了解更多
-function showUrl(mobile,objthis){
+function showUrl(objthis){
     var data_url = $(objthis).attr('data-url');
     var login_url = $(objthis).attr('login_url');
-    if(mobile == '' || mobile != 'undefined' || mobile != undefined){
+    var is_login = $(objthis).attr('mobile-phone');
+    if(is_login == '' || is_login == 'undefined' || is_login == undefined){
         window.location.href=login_url;
     }else{
         window.location.href=data_url;
