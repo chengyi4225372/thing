@@ -56,22 +56,28 @@ var login_module = (function () {
     //账号登录
     var account_login_info = function account_login_info(objthis){
         var url = baseUrl + '/api/portal/login';
-        var phone = $(objthis).parent().find('.accout_input');
+        var phone = $(objthis).parent().find('.accout_input').val();
+        var pass_input = $(objthis).parent().find('.pass_input').val();
         var check_phones = check_phone(phone);
+        if(phone == '' || phone == 'undefined' || phone == undefined){
+            layer.msg('请输入用户名',{icon:2,time:2000});return;
+        }
         if(check_phones == false){
             //layer.msg('手机号不合法',{icon:2,time:2000});return;
         }
+        if(pass_input == '' || pass_input == 'undefined' || pass_input == undefined){
+            layer.msg('请输入密码',{icon:2,time:2000});return;
+        }
 
-        var datas = {};
-        datas.data.data.phone = phone;
+
         $.ajax({
             type:"post",
             url: url,
-            data: JSON.stringify(data),
+            data: {userMobile:phone,loginPassword:pass_input},//JSON.stringify({userMobile:phone}),
             headers:{
                 "Content-Type": "application/json",
             },
-            type:'json',
+            dataType:'json',
             success: function(ret) {
 
                 location.href = '/home/index/index';

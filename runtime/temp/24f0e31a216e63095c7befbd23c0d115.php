@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/cases/editcase.html";i:1572227435;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571986795;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"/opt/web/hui-/public/../application/v1/view/systematic/cases/editcase.html";i:1572315195;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571986795;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -89,7 +89,7 @@
                 <div class="form-group">
                     <label for="pic" class="col-sm-3 control-label">图片1：</label>
                     <div class="col-sm-9">
-                        <button type="button" class="layui-btn" id="pic">
+                        <button type="button" class="layui-btn" id="pic" is_nginx="<?php echo $is_nginx; ?>">
                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
                         <img src="<?php echo $data['pic']; ?>" style="width:50px;height:50px;" id="cur_pic"/>
@@ -99,7 +99,7 @@
                 <div class="form-group">
                     <label for="pic2" class="col-sm-3 control-label">图片2：</label>
                     <div class="col-sm-9">
-                        <button type="button" class="layui-btn" id="pic2">
+                        <button type="button" class="layui-btn" id="pic2" is_nginx="<?php echo $is_nginx; ?>">
                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
                         <img src="<?php echo $data['pic2']; ?>" style="width:50px;height:50px;" id="cur_pic2"/>
