@@ -352,9 +352,10 @@ class Systems
      */
     public function upload($file)
     {
-        $imgDir = dirname(THINK_PATH).'/public/uploads/';
-        $imgSmallDir = $imgDir . 'images/'.date('YmdH').'/';
-        if (!is_dir($imgDir)) {
+        $imgDir = dirname(THINK_PATH).'/public';
+        $lastDir = '/uploads/images/'.date('YmdH').'/';
+        $imgSmallDir = $imgDir . $lastDir;
+        if (!is_dir($lastDir)) {
             @mkdir($imgDir,0777,true);
         }
         if (!is_dir($imgSmallDir)) {
@@ -384,7 +385,7 @@ class Systems
                 $arr = array(
                     'status' => 1,
                     'msg' => '文件上传成功!',
-                    'data' => ['src' => '/uploads/images/'.$name]
+                    'data' => ['src' => $lastDir.$name]
                 );
                 break;
             case 1:
