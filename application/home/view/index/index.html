@@ -456,7 +456,9 @@
                             </a>
                         </div>
                         {/volist}
+                        {if !empty($userinfo['mobile'])}
                         <button class='know_more' onclick='showUrl()'>了解更多</button>
+                        {/if}
                     </div>
 
                     <div class='zhaoTotalInfo'>
@@ -474,7 +476,9 @@
                             </a>
                         </div>
                         {/volist}
+                        {if !empty($userinfo['mobile'])}
                         <button class='know_more'onclick='showUrl()'>了解更多</button>
+                        {/if}
                     </div>
 
                 </div>
