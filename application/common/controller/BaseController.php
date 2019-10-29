@@ -34,13 +34,13 @@ class BaseController extends Controller
         $token = Cookie('token');
         $userName = Cookie('userName');
         $userType = Cookie('userType');
-        $mobile = isset($mobile) ? $mobile :'';
-        $token = isset($token) ? $token : '';
-        $userName = isset($userName) ? $userName : '';
-        $userType = isset($userType) ? $userType : '';
+        $mobile = !empty($mobile) ? $mobile :'';
+        $token = !empty($token) ? $token : '';
+        $userName = !empty($userName) ? $userName : '';
+        $userType = !empty($userType) ? $userType : '';
         $userInfo = [];
 
-        $userInfo['mobile'] = mb_substr($mobile,0,6,$charset="utf-8");
+        $userInfo['mobile'] = !empty($mobile) ? mb_substr($mobile,0,6,$charset="utf-8") : '';
         $userInfo['token'] = $token;
         $userInfo['userName'] = $userName;
         $userInfo['userType'] = $userType;

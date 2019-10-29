@@ -111,7 +111,7 @@ window.onload = function () {
         $.ajax({
             type: "post",
             url: url,
-            data: data,
+            data: {},
             headers: {
                 "Content-Type": "application/json",
             },
