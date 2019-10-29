@@ -14,7 +14,6 @@ use think\Controller;
 use think\Cookie;
 use think\Hook;
 use think\Lang;
-use think\Session;
 
 /**
  * 后台控制器基类
@@ -150,7 +149,7 @@ class AuthController extends Controller
         ];
         $config = array_merge($config, Config::get("view_replace_str"));
         // 更新访问时间
-        Session::set('accesstime', time());
+        Cookie::set('accesstime', time());
         // 配置信息后
         Hook::listen("config_init", $config);
         //加载当前控制器语言包

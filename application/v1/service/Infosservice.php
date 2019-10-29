@@ -74,7 +74,7 @@ class Infosservice
     }
 
     /**
-     * 招标信息
+     * 招商信息
      *  array('pid'=>2)
      */
     public function shang($array){
@@ -84,12 +84,95 @@ class Infosservice
     }
 
     /**
+     * 招标信息 列表
+     * title string
+     */
+    public function getbiao($title){
+        if(empty($title)){
+            $array['status'] =1;
+            $array['pid'] =1;
+        }else{
+            $array['status'] =1;
+            $array['pid'] =1;
+            $array['title|keyword|desc'] = ['like','%'.$title.'%'];
+        }
+
+        $arr = Info::instance()->where($array)->order('create_time desc')->paginate(15);;
+        return $arr;
+    }
+
+    /**
+     * 招商信息列表
+     * title string
+     */
+    public function getshang($title){
+        if(empty($title)){
+            $array['status'] =1;
+            $array['pid'] =2;
+        }else{
+            $array['status'] =1;
+            $array['pid'] =2;
+            $array['title|keyword|desc'] = ['like','%'.$title.'%'];
+        }
+        $arr = Info::instance()->where($array)->order('create_time desc')->paginate(15);;
+        return $arr;
+    }
+
+
+    /**
      * id string
      * 删除功能
      */
     public function dels($arr,$id){
         $ret = Info::instance()->where(['id'=>$id])->update($arr);
         return $ret;
+    }
+
+    /**
+     * 上一篇
+     * id string
+     * return array|null
+     */
+    public function getTop($id){
+        if(empty($id) || !isset($id)){
+            return false;
+        }
+        $where = [
+            'id'=>['<',$id],
+            'status'=>1
+        ];
+
+        $info = Info::instance()->where($where)->order(['create_time'=>'desc'])->find();
+
+        if(empty($info)){
+            return  $info ='';
+        }else{
+            return  $info;
+        }
+
+    }
+
+    /**
+     * 下一篇
+     * id string
+     * return array|null
+     */
+    public function getNext($id){
+        if(empty($id) || !isset($id)){
+            return false;
+        }
+
+        $where = [
+            'id'=>['>',$id],
+            'status'=>1
+        ];
+        $info = Info::instance()->where($where)->order(['create_time'=>'asc'])->find();
+
+        if(empty($info)){
+            return  $info ='';
+        }else{
+            return  $info;
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572251136;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572329613;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,18 +69,26 @@
                         <div class='content_logo' id='logo'></div>
                         <ul>
                             <li><a href="#">首页</a></li>
-                            <li><a href="#">惠优税</a></li>
+                            <li><a href="#">惠税优</a></li>
                             <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
                             <li><a href="#">惠找事</a></li>
                             <li><a href="#">惠启动</a></li>
                         </ul>
+                        <?php if(empty($userinfo['mobile'])): ?>
                         <div class='register'>
-                            <a href="login.html">登录</a>
+                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/login'); ?>">登录</a>
                             <span></span>
-                            <a href="register">注册</a>
+                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/register'); ?>">注册</a>
                         </div>
+                        <?php else: ?>
+                        <div style="float: right;margin-top: 17px;cursor: pointer;">
+                            <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+                            <span style="vertical-align: middle;"><?php echo $userinfo['mobile']; ?></span><span>...</span>
+                        </div>
+
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -234,16 +242,18 @@
                             <div class="desc"><?php echo $info_list['desc7']; ?></div>
                             <div class='total_input'>
                                 <div>
-                                    <input type="text" placeholder="请输入您的姓名..">
+                                    <input type="text" id='contactName' placeholder="请输入您的姓名..">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="请输入您的公司名称..">
+                                    <input type="text" id="companyName" placeholder="请输入您的公司名称..">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="请输入您的手机号..">
+                                    <input type="text" id='contactMobile' placeholder="请输入您的手机号..">
                                 </div>
                                 <div>
-                                    <input type="button" value='定制您的方案'>
+                                    <input type='hidden' id='source' value='门户首页'>
+                                    <input type='hidden' id='identification' value='企业一站式服务'>
+                                    <input type="button"  onclick='getErp()' value='定制您的方案'>
                                 </div>
                             </div>
                         </div>
@@ -427,8 +437,8 @@
                         <!-- 搜索 -->
                         <div class='zhaoSearch'>
                             <div class='searchLogo'>
-                                <i></i>
-                                <input type="text" placeholder="搜索招标政策和招标信息...">
+                                <i onclick="search()"></i>
+                                <input type="text" id="keyword"  placeholder="搜索招标政策和招标信息...">
                             </div>
                             <!-- <button>查询</button> -->
                         </div>
@@ -438,33 +448,34 @@
                         <div class='totalInfo_title'>招商政策</div>
                         <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
-
+                            <a href="<?php echo url('home/index/infoList'); ?>">
                             <div class='zhao_contentInfo'>
                                 <div><?php echo $ss['title']; ?></div>
                                 <div><?php echo $ss['create_time']; ?></div>
                             </div>
-                            <div> <?php echo mb_substr($ss['desc'],'0','200','utf-8'); ?></div>
-
+                            <div> <?php echo $ss['desc']; ?></div>
+                            </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more'>了解更多</button>
+                        <button class='know_more' onclick='showUrl()'>了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
                         <div class='totalInfo_title'>招标信息</div>
                         <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
+                            <a href="<?php echo url('home/index/infoList'); ?>">
                             <div class='zhao_contentInfo'>
                                 <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                                 <div><?php echo $biaos['create_time']; ?></div>
                             </div>
                             <div>
-                                <?php echo mb_substr($biaos['desc'],'0','200','utf-8'); ?>
+                                <?php echo $biaos['desc']; ?>
                             </div>
-
+                            </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more'>了解更多</button>
+                        <button class='know_more'onclick='showUrl()'>了解更多</button>
                     </div>
 
                 </div>

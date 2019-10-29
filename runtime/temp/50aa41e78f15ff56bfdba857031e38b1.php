@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572318616;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="__SPI__/css/base.css">
-  <link rel="stylesheet" href="__SPI__/css/login.css">
-  <script src='__SPI__/js/login.js'></script>
-  <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
+  <link rel="stylesheet" href="/static/spirit/css/base.css">
+  <link rel="stylesheet" href="/static/spirit/css/login.css">
+  <script src='/static/spirit/js/login.js'></script>
+  <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
@@ -20,15 +21,15 @@
       <div class='header'>
         <div class="header_content">
           <div class='logo'>
-            <a href="{:url('/home/index/index')}"></a>
+            <a href="<?php echo url('/home/index/index'); ?>"></a>
           </div>
           <div class='a_href'>
-            <a href="{:url('/home/index/index')}">返回首页>></a>
+            <a href="./index.html">返回首页>></a>
           </div>
         </div>
       </div>
-      <div id="login_url" data-url="{:url('/home/index/index')}"></div>
-      <div id="check_url" data-url="{:url('/home/login/savetoken')}"></div>
+      <div id="login_url" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/index'); ?>"></div>
+      <div id="check_url" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/savetoken'); ?>"></div>
       <div class='login_content'>
         <div class='login_xin'>
           <div class='login_box'>
@@ -46,7 +47,7 @@
                 </div>
                 <div class='password'>
                   <span class='u_pass'>密码</span>
-                  <input type="password" placeholder="请输入密码" class='pass_input'>
+                  <input type="text" placeholder="请输入密码" class='pass_input'>
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>
