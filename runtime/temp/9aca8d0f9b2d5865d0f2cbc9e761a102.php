@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572344177;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572346453;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +30,7 @@
     <div class="form-box">
       <div class="w form">
         <!-- 表单内容 -->
-        <div id="login_url" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/login'); ?>"></div>
+        <div id="login_url" data-url="<?php echo url('/home/login/login'); ?>"></div>
         <div class="form-content" id="form-content">
           <div class="form-content-title">欢迎注册惠灵工账号</div>
           <div class="tabs">
