@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hui-/public/../application/home/view/index/info_list.html";i:1572346518;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hui-/public/../application/home/view/index/info_list.html";i:1572349595;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,7 +91,7 @@
             </ul>
             <input type="hidden" id="sid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
             <input type="hidden" id="page" value="1">
-            <div class="more-btn" onclick="moreShang($('#sid').val(),$('#page').val())">查看更多</div>
+            <div class="more-btn" onclick="moreShang($('#sid').val(),$('#page').val(),this)" data-href="<?php echo url('/home/index/getInfo'); ?>" data-url="<?php echo url('/home/index/getshangPage'); ?>">查看更多</div>
           </div>
           <div class="tabs-items">
             <ul id="biao">
@@ -119,7 +119,7 @@
             </ul>
             <input type="hidden" id="bid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
             <input type="hidden" id="pages" value="1">
-            <div class="more-btn" onclick="moreBiao($('#bid').val(),$('#pages').val())">查看更多</div>
+            <div class="more-btn" onclick="moreBiao($('#bid').val(),$('#pages').val(),this)" data-href="<?php echo url('/home/index/getInfo'); ?>" data-url="<?php echo url('/home/index/getbiaoPage'); ?>">查看更多</div>
           </div>
         </div>
       </div>

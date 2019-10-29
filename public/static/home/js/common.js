@@ -194,14 +194,14 @@ $(function(){
 
 
 //招商信息分页
-function moreShang(keyword,pages){
-    var urls = '/home/index/getshangPage';
-
+function moreShang(keyword,pages,objthis){
+    var urls = $(objthis).attr('data-url');
+    var hrefs = $(objthis).attr('data-href');
     $.get(urls,{'keyword':keyword,'page':pages},function(ret){
         if(ret.code == 200){
             var html= "<li>";
             $.each(ret.data,function(i,item){
-                 html+= "<a href='/home/index/getInfo.html?mid="+item.id+" '>";
+                 html+= "<a href='"+hrefs+"?mid="+item.id+" '>";
                  html+= "<div class='tabs-items-content'>";
                  html+= "<div class='tabs-items-content-title figcaption'>";
                  html+= "<p>"+item.title+"</p></div>";
@@ -225,14 +225,14 @@ function moreShang(keyword,pages){
 }
 
 //招标信息分页
-function moreBiao(keyword,pages){
-    var urls = '/home/index/getbiaoPage';
-
+function moreBiao(keyword,pages,objthis){
+    var urls = $(objthis).attr('data-url');
+    var hrefs = $(objthis).attr('data-href');
     $.get(urls,{'keyword':keyword,'page':pages},function(ret){
         if(ret.code == 200){
             var html= "<li>";
             $.each(ret.data,function(i,item){
-                html+= "<a href='/home/index/getInfo.html?mid="+item.id+" '>";
+                html+= "<a href='"+hrefs+"?mid="+item.id+" '>";
                 html+= "<div class='tabs-items-content'>";
                 html+= "<div class='tabs-items-content-title figcaption'>";
                 html+= "<p>"+item.title+"</p></div>";
