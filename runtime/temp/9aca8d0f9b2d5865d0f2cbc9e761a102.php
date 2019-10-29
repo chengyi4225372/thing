@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572268855;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="__SPI__/css/base.css">
-  <link rel="stylesheet" href="__SPI__/css/register.css">
-  <script src='__SPI__/js/register.js'></script>
-  <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
+  <link rel="stylesheet" href="/static/spirit/css/base.css">
+  <link rel="stylesheet" href="/static/spirit/css/register.css">
+  <script src='/static/spirit/js/register.js'></script>
+  <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
@@ -20,7 +21,7 @@
     <div class="header-box">
       <div class="w header">
         <div class="logo">
-          <a href="./index.html"><img src="__SPI__/images/logo2.png" alt=""></a>
+          <a href="./index.html"><img src="/static/spirit/images/logo2.png" alt=""></a>
         </div>
         <div class="tohome"><a href="./index.html">返回首页>></a></div>
       </div>
@@ -29,7 +30,7 @@
     <div class="form-box">
       <div class="w form">
         <!-- 表单内容 -->
-        <div id="login_url" data-url="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/home/login/login')}"></div>
+        <div id="login_url" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/login'); ?>"></div>
         <div class="form-content" id="form-content">
           <div class="form-content-title">欢迎注册惠灵工账号</div>
           <div class="tabs">
@@ -146,7 +147,7 @@
         <div class="succeed-box" id="succeed-box">
           <div>
             <div class="success">
-              <img src="__SPI__/images/zhucechenggong2x.png" alt="">
+              <img src="/static/spirit/images/zhucechenggong2x.png" alt="">
               <p>恭喜!注册成功!</p>
             </div>
             <div><a href="/home/login/login">立即登录</a></div>

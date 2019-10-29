@@ -81,12 +81,17 @@ class Partner extends  AuthController
         // 获取上传文件
         $file =$this->request->file('file');
         // 验证图片,并移动图片到框架目录下。
-        $path = ROOT_PATH.'public/uploads/imgs/';
-        $info = $file-> move($path);
+        $path = ROOT_PATH.'public/uploads/imgs/partner/';
+
+       if(!is_dir($path)){
+         mkdir($path,0755);
+       }
+
+        $info = $file-> move($path,false,true);
         if($info){
             $mes = $info->getSaveName();
             $mes = str_replace("\\",'/',$mes);
-            return json(['code'=>'200','msg'=>'上传成功','path'=>'/uploads/imgs/'.$mes]);
+            return json(['code'=>'200','msg'=>'上传成功','path'=>'/uploads/imgs/partner/'.$mes]);
         }else{
             // 文件上传失败后的错误信息
             $mes = $file->getError();

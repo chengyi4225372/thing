@@ -12,7 +12,7 @@
     <!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
-        <form id="loginForm" action="{/if}{:url('/v1/login/check')}" login-action="{:url('/index/login', ['url' => ''])}" method="post">
+        <form id="loginForm" action="{:url('/v1/login/check')}" login-action="{:url('/index/login', ['url' => ''])}" method="post">
             <div class="usernamelogin">
                 <div class="form-group has-feedback">
                     <input type="text" class="form-control" id="pd-form-username" placeholder="{:__('Username')}" name="username" autocomplete="off" value=""

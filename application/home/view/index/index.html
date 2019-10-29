@@ -76,9 +76,9 @@
                             <li><a href="#">惠启动</a></li>
                         </ul>
                         <div class='register'>
-                            <a href="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/home/index/ajaximage')}">登录</a>
+                            <a href="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/home/login/login')}">登录</a>
                             <span></span>
-                            <a href="register">注册</a>
+                            <a href="{if $is_nginx != ''}{$is_nginx}{/if}{:url('/home/login/register')}">注册</a>
                         </div>
                     </div>
                 </div>
@@ -233,16 +233,18 @@
                             <div class="desc">{$info_list['desc7']}</div>
                             <div class='total_input'>
                                 <div>
-                                    <input type="text" placeholder="请输入您的姓名..">
+                                    <input type="text" id='contactName' placeholder="请输入您的姓名..">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="请输入您的公司名称..">
+                                    <input type="text" id="companyName" placeholder="请输入您的公司名称..">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="请输入您的手机号..">
+                                    <input type="text" id='contactMobile' placeholder="请输入您的手机号..">
                                 </div>
                                 <div>
-                                    <input type="button" value='定制您的方案'>
+                                    <input type='hidden' id='source' value='门户首页'>
+                                    <input type='hidden' id='identification' value='企业一站式服务'>
+                                    <input type="button"  onclick='getErp()' value='定制您的方案'>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,5 @@
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-10-29T11:19:11+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/uploadImg
 [ error ] [2]move_uploaded_file(): The second argument to copy() function cannot be a directory[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\File.php:368]
 ---------------------------------------------------------------
@@ -13,3 +14,7 @@
 ---------------------------------------------------------------
 [ 2019-10-29T11:46:33+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/uploadImg
 [ error ] [0]致命错误: Call to a member function move() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\controller\protuct\Protucts.php:91]
+=======
+[ 2019-10-29T10:40:21+08:00 ] 172.26.2.48 POST /v1/systematic/system/uploadimg
+[ error ] [2]mkdir(): File exists[/opt/web/hui-/application/v1/service/Systems.php:359]
+>>>>>>> ad3efcefa46a1ba16baa580defcd0ad3c1972041

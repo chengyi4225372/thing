@@ -92,7 +92,7 @@ class Protucts extends AuthController
        if($info){
            $mes = $info->getSaveName();
            $mes = str_replace("\\",'/',$mes);
-           return json(['code'=>'200','msg'=>'上传成功','path'=>'/uploads/imgs/'.$mes]);
+           return json(['code'=>'200','msg'=>'上传成功','path'=>'/uploads/imgs/protucts/'.$mes]);
        }else{
            // 文件上传失败后的错误信息
            $mes = $file->getError();
