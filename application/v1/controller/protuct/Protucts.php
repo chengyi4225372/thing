@@ -82,8 +82,13 @@ class Protucts extends AuthController
        // 获取上传文件
        $file =$this->request->file('file');
        // 验证图片,并移动图片到框架目录下。
-       $path = ROOT_PATH.'public/uploads/imgs/';
-       $info = $file-> move($path);
+       $path = ROOT_PATH.'public/uploads/imgs/protucts/';
+
+       if(!is_dir($path)){
+           mkdir($path,0755);
+       }
+
+       $info = $file->move($path,false,true);
        if($info){
            $mes = $info->getSaveName();
            $mes = str_replace("\\",'/',$mes);

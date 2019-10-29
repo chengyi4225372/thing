@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\info_list.html";i:1572265717;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\info_list.html";i:1572266443;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +34,7 @@
           <ul class="clearfix">
             <li class="nav-active"><a href="/">首页</a></li>
             <li><a href="#">惠优税</a></li>
-            <li><a href="#">惠灵工</a></li>
+            <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
             <li><a href="#">惠多薪</a></li>
             <li><a href="#">惠创业</a></li>
             <li><a href="#">惠找事</a></li>
