@@ -187,7 +187,7 @@ $(function(){
         }
         //var urlw = "/home/index/infoList";
 
-        window.location.href = urlw+"?keyword="+keyword;
+        window.location.href = url+"?keyword="+keyword;
 
     });
 });
