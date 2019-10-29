@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572269754;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572329613;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,11 +76,19 @@
                             <li><a href="#">惠找事</a></li>
                             <li><a href="#">惠启动</a></li>
                         </ul>
+                        <?php if(empty($userinfo['mobile'])): ?>
                         <div class='register'>
                             <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/login'); ?>">登录</a>
                             <span></span>
                             <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/register'); ?>">注册</a>
                         </div>
+                        <?php else: ?>
+                        <div style="float: right;margin-top: 17px;cursor: pointer;">
+                            <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+                            <span style="vertical-align: middle;"><?php echo $userinfo['mobile']; ?></span><span>...</span>
+                        </div>
+
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
