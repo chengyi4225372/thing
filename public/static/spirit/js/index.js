@@ -57,17 +57,6 @@ window.onload = function () {
         }
     }
 
-    // 弹窗
-    var btn = document.querySelector("#serve-item-btn")
-    var popbox = document.querySelector('#popbox')
-    var turnoff = document.querySelector('#turnoff')
-    console.log(btn);
-    btn.onclick = function () {
-        popbox.style.display = "block"
-    }
-    turnoff.onclick = function () {
-        popbox.style.display = "none"
-    }
     // 溢出隐藏
 
     // var module1 = document.querySelector(".consulting-item-content-details");

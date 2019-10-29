@@ -50,8 +50,10 @@ class Spirit extends BaseController
 
          if($this->request->isGet()){
            $keyword = input('get.keyword','','trim');
-           $list  = Workservice::instance()->getNewList($keyword);
+           $list  = Workservice::instance()->Getinfolist($keyword,'');
+           //总数
            $total = Workservice::instance()->getCount($keyword);
+
            $this->assign('list',$list);
            $this->assign('title','惠灵工行业资讯');
            $this->assign('total',$total);
@@ -83,6 +85,26 @@ class Spirit extends BaseController
            return $this->fetch();
          }
          return false;
+     }
+
+
+     /*
+      * 分页接口
+      */
+     public function getpageInfo(){
+        $keyword = input('get.keyword','','trim');
+        $page    = input('get.page','','int');
+
+        $list  = Workservice::instance()->Getinfolist($keyword,$page);
+
+        if(empty($list)){
+            return json(['code'=>404,'msg'=>'没有更多了']);
+        }
+
+        if($list){
+            return json(['code'=>200,'data'=>$list,'msg'=>'请求成功']);
+        }
+
      }
 
 }

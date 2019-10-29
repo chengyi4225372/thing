@@ -67,7 +67,7 @@
             </div>
           </div>
           <div class="tabs-items show">
-            <ul>
+            <ul id="content">
               {volist name='list' id='vo'}
               <li>
                 <a href="{:url('/home/spirit/detail',['mid'=>$vo['id']])}">
@@ -86,153 +86,19 @@
                   </div>
                 </a>
               </li>
+
+
               {/volist}
-              <!--
-              <li>
-                <a href="./detail.html">
-                  <div class="tabs-items-img">
-                    <img src="./images/qitewentiyewu.jpg" alt="">
-                  </div>
-                  <div class="tabs-items-content">
-                    <div class="tabs-items-content-title">
-                      <p>社保外包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么意思?有什么好处?</p>
-                    </div>
-                    <div class="tabs-items-content-text">
-                      <p>“薪酬”无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。“薪酬”
-                        无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬个行业的薪酬个行业的薪酬个行业的薪酬的薪酬个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。目前很多企业的...</p>
-                    </div>
-                    <div class="tabs-items-content-time"><span><img src="./images/shijian2x.png"
-                          alt=""></span><span>2019-10-11</span></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="./detail.html">
-                  <div class="tabs-items-img">
-                    <img src="./images/qitewentiyewu.jpg" alt="">
-                  </div>
-                  <div class="tabs-items-content">
-                    <div class="tabs-items-content-title">
-                      <p>社保外包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么意思?有什么好处?</p>
-                    </div>
-                    <div class="tabs-items-content-text">
-                      <p>“薪酬”无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。“薪酬”
-                        无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬个行业的薪酬个行业的薪酬个行业的薪酬的薪酬个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。目前很多企业的...</p>
-                    </div>
-                    <div class="tabs-items-content-time"><span><img src="./images/shijian2x.png"
-                          alt=""></span><span>2019-10-11</span></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="./detail.html">
-                  <div class="tabs-items-img">
-                    <img src="./images/qitewentiyewu.jpg" alt="">
-                  </div>
-                  <div class="tabs-items-content">
-                    <div class="tabs-items-content-title">
-                      <p>社保外包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么意思?有什么好处?</p>
-                    </div>
-                    <div class="tabs-items-content-text">
-                      <p>“薪酬”无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。“薪酬”
-                        无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬个行业的薪酬个行业的薪酬个行业的薪酬的薪酬个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。目前很多企业的...</p>
-                    </div>
-                    <div class="tabs-items-content-time"><span><img src="./images/shijian2x.png"
-                          alt=""></span><span>2019-10-11</span></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="./detail.html">
-                  <div class="tabs-items-img">
-                    <img src="./images/qitewentiyewu.jpg" alt="">
-                  </div>
-                  <div class="tabs-items-content">
-                    <div class="tabs-items-content-title">
-                      <p>社保外包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么意思?有什么好处?</p>
-                    </div>
-                    <div class="tabs-items-content-text">
-                      <p>“薪酬”无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。“薪酬”
-                        无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬个行业的薪酬个行业的薪酬个行业的薪酬的薪酬个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。目前很多企业的...</p>
-                    </div>
-                    <div class="tabs-items-content-time"><span><img src="./images/shijian2x.png"
-                          alt=""></span><span>2019-10-11</span></div>
-                  </div>
-                </a>
-              </li>
-              -->
+
             </ul>
-            <div class="more-btn">查看更多</div>
+            <input type="hidden" value="{$Think.get.keyword}" id="sid">
+            <input type="hidden" value="1" id="page">
+            <div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val())">查看更多</div>
           </div>
-          <!--
-          <div class="tabs-items">
-            <ul>
-              <li>
-                <a href="./detail.html">
-                  <div class="tabs-items-img">
-                    <img src="./images/qitewentiyewu.jpg" alt="">
-                  </div>
-                  <div class="tabs-items-content">
-                    <div class="tabs-items-content-title">
-                      <p>社保外包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么意思?有什么好处?</p>
-                    </div>
-                    <div class="tabs-items-content-text">
-                      <p>“薪酬”无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。“薪酬”
-                        无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬个行业的薪酬个行业的薪酬个行业的薪酬的薪酬个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。目前很多企业的...</p>
-                    </div>
-                    <div class="tabs-items-content-time">
-                      <span><img src="./images/shijian2x.png" alt=""></span>
-                      <span>2019-10-11</span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="./detail.html">
-                  <div class="tabs-items-img">
-                    <img src="./images/qitewentiyewu.jpg" alt="">
-                  </div>
-                  <div class="tabs-items-content">
-                    <div class="tabs-items-content-title">
-                      <p>社保外包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么意思?有什么好处?</p>
-                    </div>
-                    <div class="tabs-items-content-text">
-                      <p>“薪酬”无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。“薪酬”
-                        无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬个行业的薪酬个行业的薪酬个行业的薪酬的薪酬个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。目前很多企业的...</p>
-                    </div>
-                    <div class="tabs-items-content-time"><span><img src="./images/shijian2x.png"
-                          alt=""></span><span>2019-10-11</span></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="./detail.html">
-                  <div class="tabs-items-img">
-                    <img src="./images/qitewentiyewu.jpg" alt="">
-                  </div>
-                  <div class="tabs-items-content">
-                    <div class="tabs-items-content-title">
-                      <p>社保外包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么包服务是什么意思?有什么好处?</p>
-                    </div>
-                    <div class="tabs-items-content-text">
-                      <p>“薪酬”无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。“薪酬”
-                        无疑是职场上最吸引人眼球的话题之一，往往某个行业的薪酬个行业的薪酬个行业的薪酬个行业的薪酬的薪酬个行业的薪酬数据一揭秘，就会引起媒体和社交圈的广泛探讨和热议。目前很多企业的...</p>
-                    </div>
-                    <div class="tabs-items-content-time"><span><img src="./images/shijian2x.png"
-                          alt=""></span><span>2019-10-11</span></div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="more-btn">查看更多</div>
-          </div>
-          -->
+
         </div>
       </div>
     </div>
-
-
-
 
     <!-- 底部 -->
     <div class="fotter-box">
@@ -284,8 +150,6 @@
       <i></i>
       <div>返回顶部</div>
     </div>
-
-
 
   </div>
 

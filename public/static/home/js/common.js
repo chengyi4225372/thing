@@ -1,4 +1,3 @@
-
 //手机验证
 function checkPhone(phone) {
     var tel_reg = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
@@ -9,10 +8,7 @@ function checkPhone(phone) {
     }
 }
 
-
-
 var gurl = "http://172.26.2.41:8088";
-
 
 function getErp() {
        var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
@@ -82,7 +78,6 @@ function getErp() {
 
    }
 
-
 //点击弹窗
 function showSearch(){
    var   content = '';
@@ -109,8 +104,6 @@ function showSearch(){
 function closedTab(){
     $(".prop_box").hide();
 }
-
-
 
 $(function(){
     var url = $('#add_url').val();
@@ -157,7 +150,6 @@ function click_show(objthis){
 
 }
 
-
 //搜索
  function search(){
         var keyword = $('#keyword').val();
@@ -198,5 +190,68 @@ $(function(){
 
     });
 });
+
+
+//招商信息分页
+function moreShang(keyword,pages){
+    var urls = '/home/index/getshangPage';
+
+    $.get(urls,{'keyword':keyword,'page':pages},function(ret){
+        if(ret.code == 200){
+            var html= "<li>";
+            $.each(ret.data,function(i,item){
+                 html+= "<a href='/home/index/getInfo.html?mid="+item.id+" '>";
+                 html+= "<div class='tabs-items-content'>";
+                 html+= "<div class='tabs-items-content-title figcaption'>";
+                 html+= "<p>"+item.title+"</p></div>";
+                 html+= "<div class='tabs-items-content-text figcaption'>";
+                 html+= "<p>"+item.desc+"</p></div>";
+                 html+= "<div class='tabs-items-content-time'><span>";
+                 html+= "<img src='/static/spirit/images/shijian2x.png'>";
+                 html+="</span><span>"+item.create_time+"</span></div></div></a>";
+            });
+            html +="</li>";
+
+            $('#page').val(++pages);
+            $('#shang').append(html).html();
+        }
+
+        if(ret.code == 404){
+            layer.msg(ret.msg);
+            return false;
+        }
+    },'json');
+}
+
+//招标信息分页
+function moreBiao(keyword,pages){
+    var urls = '/home/index/getbiaoPage';
+
+    $.get(urls,{'keyword':keyword,'page':pages},function(ret){
+        if(ret.code == 200){
+            var html= "<li>";
+            $.each(ret.data,function(i,item){
+                html+= "<a href='/home/index/getInfo.html?mid="+item.id+" '>";
+                html+= "<div class='tabs-items-content'>";
+                html+= "<div class='tabs-items-content-title figcaption'>";
+                html+= "<p>"+item.title+"</p></div>";
+                html+= "<div class='tabs-items-content-text figcaption'>";
+                html+= "<p>"+item.desc+"</p></div>";
+                html+= "<div class='tabs-items-content-time'><span>";
+                html+= "<img src='/static/spirit/images/shijian2x.png'>";
+                html+="</span><span>"+item.create_time+"</span></div></div></a>";
+            });
+            html +="</li>";
+
+            $('#pages').val(++pages);
+            $('#biao').append(html).html();
+        }
+
+        if(ret.code == 404){
+            layer.msg(ret.msg);
+            return false;
+        }
+    },'json');
+}
 
 

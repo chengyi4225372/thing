@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572263678;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572340369;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,18 +69,26 @@
                         <div class='content_logo' id='logo'></div>
                         <ul>
                             <li><a href="#">首页</a></li>
-                            <li><a href="#">惠税优</a></li>
+                            <li><a href="#">惠优税</a></li>
                             <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
                             <li><a href="#">惠找事</a></li>
                             <li><a href="#">惠启动</a></li>
                         </ul>
+                        <?php if(empty($userinfo['mobile'])): ?>
                         <div class='register'>
-                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/ajaximage'); ?>">登录</a>
+                            <a href="<?php echo url('/home/login/login'); ?>">登录</a>
                             <span></span>
-                            <a href="register">注册</a>
+                            <a href="<?php echo url('/home/login/register'); ?>">注册</a>
                         </div>
+                        <?php else: ?>
+                        <div style="float: right;margin-top: 17px;cursor: pointer;">
+                            <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+                            <span style="vertical-align: middle;"><?php echo $userinfo['mobile']; ?>></span>
+                        </div>
+
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -234,16 +242,18 @@
                             <div class="desc"><?php echo $info_list['desc7']; ?></div>
                             <div class='total_input'>
                                 <div>
-                                    <input type="text" placeholder="请输入您的姓名..">
+                                    <input type="text" id='contactName' placeholder="请输入您的姓名..">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="请输入您的公司名称..">
+                                    <input type="text" id="companyName" placeholder="请输入您的公司名称..">
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="请输入您的手机号..">
+                                    <input type="text" id='contactMobile' placeholder="请输入您的手机号..">
                                 </div>
                                 <div>
-                                    <input type="button" value='定制您的方案'>
+                                    <input type='hidden' id='source' value='门户首页'>
+                                    <input type='hidden' id='identification' value='企业一站式服务'>
+                                    <input type="button"  onclick='getErp()' value='定制您的方案'>
                                 </div>
                             </div>
                         </div>
@@ -447,7 +457,7 @@
                             </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more' onclick='showUrl()'>了解更多</button>
+                        <button class='know_more' onclick="showUrl('<?php echo $userinfo['mobile']; ?>',this)" data-url="<?php echo url('/home/index/infoList'); ?>" login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
@@ -465,7 +475,9 @@
                             </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more'onclick='showUrl()'>了解更多</button>
+
+                        <button class='know_more'onclick="showUrl('<?php echo $userinfo['mobile']; ?>',this)" data-url="<?php echo url('/home/index/infoList'); ?>" login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
+
                     </div>
 
                 </div>

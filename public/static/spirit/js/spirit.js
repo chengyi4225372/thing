@@ -20,21 +20,96 @@ function checkPhone(phone) {
     }
 }
 
-
 //接口 公海
-var gurl = "http://172.26.2.41:8088";
+var gurl = "http://172.26.2.41:8089";
 
+var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
 
 function btnErp(){
-    var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
 
+    var datas = {};
+
+    datas.contactName = $("#Name").val();//联系姓名
+    datas.companyName = $("#cName").val(); //公司
+    datas.contactMobile = $("#Mobile").val();//手机
+    datas.source = $("#source").val(); //渠道
+    datas.identification = $("#identification").val();//标识
+
+    if (datas.contactMobile == '' || datas.contactMobile == undefined) {
+        layer.msg('请填写联系电话');
+        return false;
+    }
+
+    if (checkPhone(datas.contactMobile) === false) {
+        layer.msg("联系电话不合法");
+        return false;
+    }
+
+    if (datas.companyName == '' || datas.companyName == undefined) {
+        layer.msg('请填写公司名称');
+        return false;
+    }
+
+    if (datas.contactName == '' || datas.contactName == undefined) {
+        layer.msg('请填写您的姓名');
+        return false;
+    }
+
+    $.ajax({
+        url: urkl,
+        type: "post",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        dataType: 'json',
+        data: JSON.stringify(datas),
+        success: function (ret) {
+
+            //201 号码已经存在
+            if (ret.status == 200 && ret.rel == true) {
+                layer.msg('提交成功', function () {
+                    parent.location.reload();
+                })
+            }
+
+            if (ret.status == 201) {
+                layer.msg(ret.message, function () {
+                    parent.location.reload();
+                })
+            }
+
+            if (ret.status == 500) {
+                layer.msg('网络错误，请稍后再提交。', function () {
+                    parent.location.reload();
+                });
+            }
+        },
+        error: function (ret) {
+            console.log(ret);
+        }
+
+    });
+}
+
+//弹窗
+function GetErp(){
+    $('#popbox').show();
+}
+
+//关闭
+function turnoff(){
+    $('#popbox').hide();
+}
+
+//提交公海
+function form_btn(){
     var data = {};
 
     data.contactName = $("#contactName").val();//联系姓名
     data.companyName = $("#companyName").val(); //公司
     data.contactMobile = $("#contactMobile").val();//手机
-    data.source = $("#source").val(); //渠道
-    data.identification = $("#identification").val();//标识
+    data.source = $("#sources").val(); //渠道
+    data.identification = $("#identifications").val();//标识
 
     if (data.contactMobile == '' || data.contactMobile == undefined) {
         layer.msg('请填写联系电话');
@@ -90,8 +165,38 @@ function btnErp(){
         }
 
     });
+};
+
+
+//分页
+function getMore(keyword,i){
+   var urls = '/home/spirit/getpageInfo';
+
+   $.get(urls,{'keyword':keyword,'page':i},function(ret){
+         if(ret.code == 200){
+             var html= '<li>';
+             $.each(ret.data,function(i,item){
+                html+= "<a href='/home/spirit/detail.html?mid="+item.id+"'>";
+                html+= "<div class='tabs-items-img'><img src="+item.imgs+" alt=''></div>";
+                html+= "<div class='tabs-items-content'><div class='tabs-items-content-title figcaption'>";
+                html+=  "<p>"+ item.title +"</p></div>";
+                html+= "<div class='tabs-items-content-text figcaption'>";
+                html+= "<p>"+item.desc+"</p></div>";
+                html+=" <div class='tabs-items-content-time'>" ;
+                html+="<span><img src='/static/spirit/images/shijian2x.png' alt=''></span>";
+                html+="<span>"+item.create_time +"</span></div></div>";
+                html+= "</a>";
+             });
+             html +='</li>';
+
+            $('#page').val(++i);
+            $('#content').append(html).html();
+         }
+
+         if(ret.code == 404){
+             layer.msg(ret.msg);
+             return false;
+         }
+   },'json')
+
 }
-
-
-
-
