@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572340369;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572352825;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,7 +85,7 @@
                         <?php else: ?>
                         <div style="float: right;margin-top: 17px;cursor: pointer;">
                             <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
-                            <span style="vertical-align: middle;"><?php echo $userinfo['mobile']; ?>></span>
+                            <span style="vertical-align: middle;"><?php echo $userinfo['mobile']; ?></span>
                         </div>
 
                         <?php endif; ?>
@@ -158,7 +158,7 @@
 
 
         <!-- 近期成功案例 -->
-        <input type="hidden" id="add_url" value="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/ajaximage'); ?>">
+        <input type="hidden" id="add_url" value="<?php echo url('/home/index/ajaximage'); ?>">
         <div class='success'>
             <div class='w success_content'>
                 <div class='success_title'></div>
@@ -437,7 +437,7 @@
                         <!-- 搜索 -->
                         <div class='zhaoSearch'>
                             <div class='searchLogo'>
-                                <i onclick="search()"></i>
+                                <i onclick="search(this)" data-url="<?php echo url('/home/index/infoList'); ?>"></i>
                                 <input type="text" id="keyword"  placeholder="搜索招标政策和招标信息...">
                             </div>
                             <!-- <button>查询</button> -->
@@ -457,7 +457,7 @@
                             </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more' onclick="showUrl('<?php echo $userinfo['mobile']; ?>',this)" data-url="<?php echo url('/home/index/infoList'); ?>" login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
+                        <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)" data-url="<?php echo url('/home/index/infoList'); ?>" login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
@@ -476,7 +476,7 @@
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
 
-                        <button class='know_more'onclick="showUrl('<?php echo $userinfo['mobile']; ?>',this)" data-url="<?php echo url('/home/index/infoList'); ?>" login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
+                        <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)" data-url="<?php echo url('/home/index/infoList'); ?>" login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
 
                     </div>
 

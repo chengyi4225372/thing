@@ -151,9 +151,9 @@ function click_show(objthis){
 }
 
 //搜索
- function search(){
+ function search(obj){
         var keyword = $('#keyword').val();
-        var url = "/home/index/infoList";
+        var url = $(obj).attr('data-url');
 
         if(keyword == '' || keyword==undefined){
             layer.msg('请输入搜索条件');
