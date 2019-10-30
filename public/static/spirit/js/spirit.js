@@ -202,3 +202,17 @@ function getMore(keyword,i,objthis){
    },'json')
 
 }
+
+
+//登录了才能查看了解更多
+function is_login(objthis){
+    var data_url = $(objthis).attr('data-url');
+    var login_url = $(objthis).attr('login_url');
+    var is_login = $(objthis).attr('mobile-phone');
+    if(is_login == '' || is_login == 'undefined' || is_login == undefined){
+        window.location.href=login_url;
+    }else{
+        window.location.href=data_url;
+    }
+}
+
