@@ -22,7 +22,7 @@ function checkPhone(phone) {
 }
 
 //接口 公海
-var gurl = "http://172.26.2.41:8089";
+var gurl = "http://172.26.3.8:8089";
 
 var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
 
