@@ -30,9 +30,9 @@ function btnErp(){
 
     var datas = {};
 
-    datas.contactName = $("#Name").val();//联系姓名
-    datas.companyName = $("#cName").val(); //公司
-    datas.contactMobile = $("#Mobile").val();//手机
+    datas.contactName =$.trim($("#Name").val());//联系姓名
+    datas.companyName = $.trim($("#cName").val()); //公司
+    datas.contactMobile =$.trim($("#Mobile").val());//手机
     datas.source = $("#source").val(); //渠道
     datas.identification = $("#identification").val();//标识
 
@@ -106,9 +106,9 @@ function turnoff(){
 function form_btn(){
     var data = {};
 
-    data.contactName = $("#contactName").val();//联系姓名
-    data.companyName = $("#companyName").val(); //公司
-    data.contactMobile = $("#contactMobile").val();//手机
+    data.contactName = $.trim($("#contactName").val());//联系姓名
+    data.companyName = $.trim($("#companyName").val()); //公司
+    data.contactMobile =$.trim($("#contactMobile").val());//手机
     data.source = $("#sources").val(); //渠道
     data.identification = $("#identifications").val();//标识
 

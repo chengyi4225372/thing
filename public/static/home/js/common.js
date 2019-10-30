@@ -15,9 +15,9 @@ function getErp() {
 
        var data = {};
 
-       data.contactName = $("#contactName").val();//联系姓名
-       data.companyName = $("#companyName").val(); //公司
-       data.contactMobile = $("#contactMobile").val();//手机
+       data.contactName = $.trim($("#contactName").val());//联系姓名
+       data.companyName = $.trim($("#companyName").val()); //公司
+       data.contactMobile = $.trim($("#contactMobile").val());//手机
        data.source = $("#source").val(); //渠道
        data.identification = $("#identification").val();//标识
 
