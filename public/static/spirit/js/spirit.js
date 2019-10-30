@@ -178,7 +178,7 @@ function getMore(keyword,i,objthis){
          if(ret.code == 200){
              var html= '';
              $.each(ret.data,function(i,item){
-                html= "<li>";
+                html+= "<li>";
                 html+= "<a href= '"+hrefs+"?mid="+item.id+"'>";
                 html+= "<div class='tabs-items-img'><img src="+item.imgs+" alt=''></div>";
                 html+= "<div class='tabs-items-content'><div class='tabs-items-content-title figcaption'>";
@@ -191,10 +191,9 @@ function getMore(keyword,i,objthis){
                 html+= "</a>";
                 html+="</li>";
              });
-            console.log(html);
-            $('#content').append(html).html();
-            $('#page').val(++i);
-
+             console.log(html);
+             $('#content').append(html).html();
+             $('#page').val(++i);
          }
 
          if(ret.code == 404){
