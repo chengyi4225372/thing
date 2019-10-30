@@ -90,8 +90,8 @@ class Index extends BaseController
            $title = input('get.keyword','','trim');
            $biao = Infosservice::instance()->getbiao($title,'');
            $shang = Infosservice::instance()->getshang($title,'');
-           $total = count($biao) + count($shang);
-           $this->assign('total',$total);
+          // $total = count($biao) + count($shang);
+          // $this->assign('total',$total);
            $this->assign('biao',$biao);
            $this->assign('shang',$shang);
            $this->assign('title','招商招标信息列表');

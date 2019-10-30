@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:117:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\information_list.html";i:1572348538;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:117:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\information_list.html";i:1572404508;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +54,7 @@
     <div class="content-box">
       <div class="w content">
         <div class="bread-crumbs">
-          <span>惠灵工</span> > <span>资讯</span> > <span>搜索结果共<span><?php echo (isset($total) && ($total !== '')?$total:'0'); ?></span>条</span>
+          <span><a onclick="go_work(this)" data-url="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></span> > <span><a onclick="go_news(this)" data-url="<?php echo url('/home/spirit/informationList'); ?>">资讯</a></span> ><span></span>
         </div>
         <div class="information-list">
           <div class="tabs clearfix">
@@ -64,12 +64,20 @@
             </ul>
             <div class="search-box fr">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-              <div onclick="search()" data-url="<?php echo url('/home/spirit/informationList'); ?>">搜索</div>
+              <div onclick="search(this)" data-url="<?php echo url('/home/spirit/informationList'); ?>">搜索</div>
             </div>
           </div>
           <div class="tabs-items show">
             <ul id="content">
-              <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+              <?php if(empty($list) || (($list instanceof \think\Collection || $list instanceof \think\Paginator ) && $list->isEmpty())): ?>
+              <li>
+                  <div class="tabs-items-content">
+                    <div class="tabs-items-content-text figcaption">
+                      <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
+                    </div>
+                  </div>
+              </li>
+              <?php else: if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
               <li>
                 <a href="<?php echo url('/home/spirit/detail',['mid'=>$vo['id']]); ?>">
                   <div class="tabs-items-img">
@@ -87,9 +95,7 @@
                   </div>
                 </a>
               </li>
-
-
-              <?php endforeach; endif; else: echo "" ;endif; ?>
+              <?php endforeach; endif; else: echo "" ;endif; endif; ?>
 
             </ul>
             <input type="hidden" value="<?php echo \think\Request::instance()->get('keyword'); ?>" id="sid">

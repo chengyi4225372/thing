@@ -46,7 +46,7 @@ class Protuctservice
      * 添加数据
      */
      public function protuctAdd($param){
-         $ret = Protuct::instance()->save($param);
+         $ret = Protuct::instance()->data($param)->save();
           return  $ret;
      }
 

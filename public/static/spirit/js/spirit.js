@@ -202,3 +202,15 @@ function getMore(keyword,i,objthis){
    },'json')
 
 }
+
+//回到惠灵工
+function go_work(obj){
+    var urls  = $(obj).attr('data-url');
+    window.location.href= urls;
+}
+
+//回惠灵工新闻列表
+function go_news(obj){
+    var urlk  = $(obj).attr('data-url');
+    window.location.href= urlk;
+}

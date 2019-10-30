@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\detail.html";i:1572245585;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\detail.html";i:1572404086;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +39,7 @@
     </div>
     <div class='main_content'>
       <div class='content_middle'>
-        <div class='bread_title'>惠灵工 > 资讯 > 新闻详情</div>
+        <div class='bread_title'><a onclick="go_work(this)" data-url="<?php echo url('/home/spirit/index'); ?>">惠灵工</a> > <a onclick="go_news(this)" data-url="<?php echo url('/home/spirit/informationList'); ?>">资讯</a> > 新闻详情</div>
         <div class='pic_total'>
           <div class='pic_title'><?php echo $info['title']; ?></div>
           <div class='time'><?php echo $info['create_time']; ?></div>

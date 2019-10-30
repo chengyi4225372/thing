@@ -28,15 +28,12 @@ class Infos extends  AuthController
     }
 
     if($this->request->isPost()){
-        $param = $this->request->param();
-        $array = array(
-          'pid' =>$param['pid'],
-          'title' =>$param['title'],
-          'content' =>$param['content'],
-          'desc'    =>$param['desc'],
-          'keyword'    =>$param['keyword'],
-          'create_time' =>time(),
-        );
+        $array['pid'] = input('post.pid', '', 'int');
+        $array['title'] = input('post.title', '', 'trim');
+        $array['content'] = input('post.content', '');
+        $array['desc'] = input('post.desc', '', 'trim');
+        $array['keyword'] = input('post.keyword', '', 'trim');
+
        $ret = Infosservice::instance()->saves($array);
        if($ret){
            return json(['code'=>200,'msg'=>'操作成功']);
