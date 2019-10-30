@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/system/slideshow.html";i:1572247980;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1572353315;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571986795;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/system/slideshow.html";i:1572247980;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1572404193;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1572399441;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571986795;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -7,7 +7,7 @@
 <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="renderer" content="webkit">
-<link rel="shortcut icon" href="/static/assets/img/favicon.ico" />
+<link rel="shortcut icon" href="/static/favicon.ico" />
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.7 -->
@@ -188,7 +188,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>" >
+            <li class="treeview <?php if($paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>首页</span>
                     <span class="pull-right-container">
@@ -294,7 +294,7 @@
                 </ul>
             </li>
 
-            <li class=" <?php if($paths == '/v1/work/works/index'): ?>treeview <?php endif; ?> " >
+            <li class="treeview <?php if($paths == '/v1/work/works/index'): ?> active <?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
@@ -302,7 +302,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<?php if($paths == '/v1/work/works/index'): ?>active <?php endif; ?>">
+                    <li class="<?php if($paths == '/v1/work/works/index'): ?> active <?php endif; ?>">
                         <a href="<?php echo url('/v1/work/works/index'); ?>">
                             <i class="glyphicon glyphicon-user"></i> <span>行业资讯</span>
                             <span class="pull-right-container">
@@ -310,7 +310,6 @@
                             </span>
                         </a>
                     </li>
-
                 </ul>
             </li>
 
