@@ -13,7 +13,7 @@ function search(objthis){
 
 //手机验证
 function checkPhone(phone) {
-    var tel_reg = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
+    var tel_reg = /^1(3|4|5|6|7|8|9)\d{9}$/;
     if (tel_reg.test(phone)) {
         return true;
     } else {
@@ -22,7 +22,7 @@ function checkPhone(phone) {
 }
 
 //接口 公海
-var gurl = "http://172.26.2.41:8089";
+var gurl = "http://172.26.3.8:8089";
 
 var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
 
@@ -30,9 +30,9 @@ function btnErp(){
 
     var datas = {};
 
-    datas.contactName = $("#Name").val();//联系姓名
-    datas.companyName = $("#cName").val(); //公司
-    datas.contactMobile = $("#Mobile").val();//手机
+    datas.contactName =$.trim($("#Name").val());//联系姓名
+    datas.companyName = $.trim($("#cName").val()); //公司
+    datas.contactMobile =$.trim($("#Mobile").val());//手机
     datas.source = $("#source").val(); //渠道
     datas.identification = $("#identification").val();//标识
 
@@ -106,9 +106,9 @@ function turnoff(){
 function form_btn(){
     var data = {};
 
-    data.contactName = $("#contactName").val();//联系姓名
-    data.companyName = $("#companyName").val(); //公司
-    data.contactMobile = $("#contactMobile").val();//手机
+    data.contactName = $.trim($("#contactName").val());//联系姓名
+    data.companyName = $.trim($("#companyName").val()); //公司
+    data.contactMobile =$.trim($("#contactMobile").val());//手机
     data.source = $("#sources").val(); //渠道
     data.identification = $("#identifications").val();//标识
 
@@ -178,7 +178,7 @@ function getMore(keyword,i,objthis){
          if(ret.code == 200){
              var html= '';
              $.each(ret.data,function(i,item){
-                html= "<li>";
+                html+= "<li>";
                 html+= "<a href= '"+hrefs+"?mid="+item.id+"'>";
                 html+= "<div class='tabs-items-img'><img src="+item.imgs+" alt=''></div>";
                 html+= "<div class='tabs-items-content'><div class='tabs-items-content-title figcaption'>";
@@ -191,10 +191,9 @@ function getMore(keyword,i,objthis){
                 html+= "</a>";
                 html+="</li>";
              });
-            console.log(html);
-            $('#content').append(html).html();
-            $('#page').val(++i);
-
+             console.log(html);
+             $('#content').append(html).html();
+             $('#page').val(++i);
          }
 
          if(ret.code == 404){
