@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572429117;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572429293;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,7 +101,7 @@
                   <input type="text" placeholder="请输入验证码" id="user_code">
                   <span onclick="get_code(this)" id="gr_msg_code">获取验证码</span>
                 </div>
-                <div style="margin:11px 0px 11px 0px;color:red;display:none;" id="msg_code">验证码已发送，请查收短信</div>
+                <div style="color:red;display:none;height:20px;width:420px;align-items: center;padding-left: 0px;border:none;box-sizing: border-box;border-radius: 0px;font-size:12px;" id="msg_code">验证码已发送，请查收短信</div>
                 <div>
                   <span>输入密码</span>
                   <input type="password" placeholder="请设置密码" id="user_password">
