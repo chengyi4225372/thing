@@ -255,11 +255,13 @@ body{
     line-height: 62px;
     background-color: #4091FF;
     color: #fff;
-    border: none;
+    border: 1px solid #fff;
+    /* outline:none; */
     font-size: 24px;
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
+    cursor: pointer;
 }
 
 /* 选择我们 */
@@ -390,6 +392,7 @@ body{
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(52, 48, 48, 1);
+    cursor: pointer;
 
 }
 
@@ -398,6 +401,7 @@ body{
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(66, 133, 244, 1);
+    cursor: pointer;
 
 }
 
@@ -1249,6 +1253,10 @@ border:none;
     position:fixed;
     top: 50%;
     left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
     transform:translate(-50%,-50%);
     width:600px;
     height:570px;
@@ -1306,15 +1314,16 @@ border:none;
     color:rgba(255,255,255,1);
 }
 .total-input span{
+    display:inline-block;
     width:56px;
-height:157px;
+height:40px;
 font-size:14px;
 font-family:Source Han Sans CN;
 font-weight:400;
 color:rgba(0,0,0,1);
 line-height:72px;
     line-height:40px;
-    margin-right:24px;
+    margin-right:11px;
 }
 .propbox .close{
     width:20px;
@@ -1368,5 +1377,9 @@ line-height:72px;
     position:absolute;
     top:50%;
     right:0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }

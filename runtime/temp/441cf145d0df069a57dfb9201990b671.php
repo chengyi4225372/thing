@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"C:\Users\Administrator\Desktop\hui-\public/../application/home\view\index\index.html";i:1572333623;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:84:"C:\Users\Administrator\Desktop\hui-\public/../application/home\view\index\index.html";i:1572399901;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,7 +87,6 @@
                             <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
                             <span style="vertical-align: middle;"><?php echo $userinfo['mobile']; ?>></span>
                         </div>
-
                         <?php endif; ?>
                     </div>
                 </div>

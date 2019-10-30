@@ -222,6 +222,11 @@ a {
     position: absolute;
     right: -38px;
     top: 50%;
+   
+    -webkit-transform: translateY(-43%);
+    -moz-transform: translateY(-43%);
+    -o-transform: translateY(-43%);
+    -ms-transform: translateY(-43%);
     transform: translateY(-43%);
     content: '';
     height: 16px;

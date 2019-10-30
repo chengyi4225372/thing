@@ -181,6 +181,10 @@ a {
     position: absolute;
     bottom: -15px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     content: '';
     width: 60%;
@@ -326,7 +330,7 @@ a {
     border-radius: 3px 0px 0px 3px;
 }
 
-.search-box>div::after {
+/* .search-box>div::after {
     content: '';
     position: absolute;
     left: -20px;
@@ -335,7 +339,7 @@ a {
     height: 14px;
     background: url('../images/guanbi.png') no-repeat 100% 100%;
     cursor: pointer;
-}
+} */
 
 .search-box>div {
     position: relative;
