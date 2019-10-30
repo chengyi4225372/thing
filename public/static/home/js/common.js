@@ -154,7 +154,6 @@ function click_show(objthis){
  function search(obj){
         var keyword = $('#keyword').val();
         var url = $(obj).attr('data-url');
-
         if(keyword == '' || keyword==undefined){
             layer.msg('请输入搜索条件');
             return false;

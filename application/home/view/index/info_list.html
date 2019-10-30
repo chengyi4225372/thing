@@ -41,10 +41,18 @@
           </ul>
         </div>
         <!-- 登陆注册 -->
-        <div class="u_info clearfix">
-          <i></i>
-          <span>13312541484</span>
+        {if empty($userinfo['mobile'])}
+        <div class='register'>
+          <a href="{:url('/home/login/login')}">登录</a>
+          <span></span>
+          <a href="{:url('/home/login/register')}">注册</a>
         </div>
+        {else /}
+        <div class="u_info clearfix" style="cursor:pointer;">
+          <i></i>
+          <span>{$userinfo['mobile']}</span>
+        </div>
+        {/if}
       </div>
 
     </div>

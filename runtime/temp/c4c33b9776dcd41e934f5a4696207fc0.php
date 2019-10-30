@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:80:"/opt/web/hui-/public/../application/v1/view/systematic/system/editslideshow.html";i:1572246974;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571986795;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:80:"/opt/web/hui-/public/../application/v1/view/systematic/system/editslideshow.html";i:1572353297;s:52:"/opt/web/hui-/application/v1/view/layout/dialog.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1571642226;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571986795;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -75,7 +75,7 @@
                 <div class="form-group">
                     <label for="pic" class="col-sm-3 control-label">图片：</label>
                     <div class="col-sm-9">
-                        <button type="button" class="layui-btn" id="pic" data-url="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/v1/systematic/system/uploadimg'); ?>">
+                        <button type="button" class="layui-btn" id="pic"  is_nginx="<?php echo $is_nginx; ?>">
                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
                         <img src="<?php echo $data['pic']; ?>" style="width:50px;height:50px;" id="cur_pic">

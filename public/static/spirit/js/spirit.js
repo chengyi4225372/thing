@@ -203,6 +203,7 @@ function getMore(keyword,i,objthis){
 
 }
 
+<<<<<<< HEAD
 //回到惠灵工
 function go_work(obj){
     var urls  = $(obj).attr('data-url');
@@ -214,3 +215,18 @@ function go_news(obj){
     var urlk  = $(obj).attr('data-url');
     window.location.href= urlk;
 }
+=======
+
+//登录了才能查看了解更多
+function is_login(objthis){
+    var data_url = $(objthis).attr('data-url');
+    var login_url = $(objthis).attr('login_url');
+    var is_login = $(objthis).attr('mobile-phone');
+    if(is_login == '' || is_login == 'undefined' || is_login == undefined){
+        window.location.href=login_url;
+    }else{
+        window.location.href=data_url;
+    }
+}
+
+>>>>>>> da3e85cb4a2ff309ebb8f44f7843ec3b96f2dadc
