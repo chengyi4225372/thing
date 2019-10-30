@@ -8,7 +8,7 @@ function checkPhone(phone) {
     }
 }
 
-var gurl = "http://172.26.2.41:8088";
+var gurl = "http://172.26.2.41:8089";
 
 function getErp() {
        var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
@@ -252,6 +252,13 @@ function moreBiao(keyword,pages,objthis){
             return false;
         }
     },'json');
+}
+
+
+//回到列表页
+function go_news(obj){
+    var url = $(obj).attr('data-url');
+    window.location.href= url;
 }
 
 

@@ -39,7 +39,7 @@ $('.infos-add').click(function(){
     var pid     = $("#pid option:selected").val();
     var title   = $('#title').val();
     var desc    = $("#desc").val();
-    var keyword    = $("#keyword").val();
+    var keyword = $("#keyword").val();
 
     if(title == '' || title== undefined){
         layer.msg('请填写新闻标题');

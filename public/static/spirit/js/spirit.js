@@ -203,6 +203,19 @@ function getMore(keyword,i,objthis){
 
 }
 
+<<<<<<< HEAD
+//回到惠灵工
+function go_work(obj){
+    var urls  = $(obj).attr('data-url');
+    window.location.href= urls;
+}
+
+//回惠灵工新闻列表
+function go_news(obj){
+    var urlk  = $(obj).attr('data-url');
+    window.location.href= urlk;
+}
+=======
 
 //登录了才能查看了解更多
 function is_login(objthis){
@@ -216,3 +229,4 @@ function is_login(objthis){
     }
 }
 
+>>>>>>> da3e85cb4a2ff309ebb8f44f7843ec3b96f2dadc

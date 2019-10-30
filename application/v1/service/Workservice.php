@@ -59,7 +59,7 @@ class Workservice
      * 添加 数据
      */
     public function setAddArray($array){
-        $ret = Work::instance()->save($array);
+        $ret = Work::instance()->data($array)->save();
         return $ret;
     }
 

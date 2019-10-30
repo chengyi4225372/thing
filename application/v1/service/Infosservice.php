@@ -38,9 +38,12 @@ class Infosservice
        return $list;
     }
 
-    //添加
-    public function saves($param){
-        $ret = Info::instance()->save($param);
+    /**
+     * @param $array
+     * @return mixed
+     */
+    public function saves($array){
+        $ret = Info::instance()->data($array)->save();
         return $ret;
     }
 

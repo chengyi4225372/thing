@@ -34,12 +34,13 @@ class Spirit extends BaseController
          if($this->request->isGet()){
            $keyword = input('get.keyword','','trim');
            $list  = Workservice::instance()->Getinfolist($keyword,'');
-           //总数
-           $total = Workservice::instance()->getCount($keyword);
+
+           //$total = Workservice::instance()->getCount($keyword);
+          // $this->assign('total',$total);
 
            $this->assign('list',$list);
            $this->assign('title','惠灵工行业资讯');
-           $this->assign('total',$total);
+
            return $this->fetch();
          }
          return false;
