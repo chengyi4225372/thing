@@ -5,7 +5,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview {if $paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'}active{/if}" >
+            <li class="treeview {if $paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'}active{/if} " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>首页</span>
                     <span class="pull-right-container">
@@ -54,7 +54,7 @@
                             </li>
                         </ul>
                     </li>
-
+                    <!-- 注释
                     <li class="{if $paths == '/v1/partners/partner/index'}active{/if}">
                         <a href="#">
                             <i class="glyphicon glyphicon-book"></i> <span>合作伙伴</span>
@@ -68,7 +68,7 @@
                             </li>
                         </ul>
                     </li>
-
+                     -->
                     <li class="{if $paths == '/v1/systematic/cases/index'}active{/if}">
                         <a href="#">
                             <i class="glyphicon glyphicon-inbox"></i> <span>案例管理</span>
@@ -111,7 +111,7 @@
                 </ul>
             </li>
 
-            <li class=" {if $paths == '/v1/work/works/index'}treeview {/if} " >
+            <li class="treeview {if $paths == '/v1/work/works/index'} active {/if} " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
@@ -119,7 +119,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{if $paths == '/v1/work/works/index'}active {/if}">
+                    <li class="{if $paths == '/v1/work/works/index'} active {/if}">
                         <a href="{:url('/v1/work/works/index')}">
                             <i class="glyphicon glyphicon-user"></i> <span>行业资讯</span>
                             <span class="pull-right-container">
@@ -127,7 +127,6 @@
                             </span>
                         </a>
                     </li>
-
                 </ul>
             </li>
 

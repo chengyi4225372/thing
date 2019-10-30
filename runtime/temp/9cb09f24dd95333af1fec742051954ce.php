@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572345137;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\login\login.html";i:1572340369;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,12 +61,12 @@
                     <option value='+86'>+86</option>
                   </select>
                   <i></i>
-                  <input type="text" placeholder="请输入手机号" class='phone_input' id="phone_input" value="">
+                  <input type="text" placeholder="请输入手机号" class='phone_input' value="">
                 </div>
                 <div class='code_box'>
                   <input type="text" placeholder="验证码" class='code_input'>
                   <i></i>
-                  <span class='huo_code' onclick="login_module.get_code()">获取验证码</span>
+                  <span class='huo_code'>获取验证码</span>
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>

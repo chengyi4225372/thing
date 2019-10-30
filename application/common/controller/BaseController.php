@@ -52,6 +52,15 @@ class BaseController extends Controller
         }else{
             $is_nginx = '/index.php';
         }
+
+
+        $modulename = $this->request->module();
+        $controllername = strtolower($this->request->controller());
+        $actionname = strtolower($this->request->action());
+
+        // 当前路径
+        $path = '/'.$modulename . '/' . str_replace('.', '/', $controllername) . '/' . $actionname;
+        $this->assign('path',$path);
         $this->assign('is_nginx',$is_nginx);
 
         $this->assign('userinfo',$userInfo);

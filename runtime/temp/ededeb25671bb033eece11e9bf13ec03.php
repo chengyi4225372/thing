@@ -1,17 +1,18 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/opt/web/hui-/public/../application/home/view/spirit/index.html";i:1572344474;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{$title|default=''}</title>
-    <link rel="stylesheet" href="__SPI__/css/base.css">
-    <link rel="stylesheet" href="__SPI__/css/index.css">
-    <script src="__SPI__/js/clamp.js"></script>
-    <script src='__SPI__/js/index.js'></script>
+    <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
+    <link rel="stylesheet" href="/static/spirit/css/base.css">
+    <link rel="stylesheet" href="/static/spirit/css/index.css">
+    <script src="/static/spirit/js/clamp.js"></script>
+    <script src='/static/spirit/js/index.js'></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
-    <script src="__SPI__/js/spirit.js"></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
+    <script src="/static/spirit/js/spirit.js"></script>
 
 </head>
 
@@ -25,7 +26,7 @@
                 <!-- logo图 -->
                 <div class="logo">
                     <h1>
-                        <img src="__SPI__/images/logo2x.png">
+                        <img src="/static/spirit/images/logo2x.png">
                     </h1>
                 </div>
                 <!-- nav部分 -->
@@ -33,7 +34,7 @@
                     <ul class="clearfix">
                         <li><a href="/">首页</a></li>
                         <li><a href="#">惠优税</a></li>
-                        <li class="nav-active"><a href="{:url('/home/spirit/index')}">惠灵工</a></li>
+                        <li class="nav-active"><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                         <li><a href="#">惠多薪</a></li>
                         <li><a href="#">惠创业</a></li>
                         <li><a href="#">惠找事</a></li>
@@ -41,19 +42,12 @@
                     </ul>
                 </div>
                 <!-- 登陆注册 -->
-                {if empty($userinfo['mobile'])}
                 <div class="loging clearfix">
-                    <div class="register-btn"><a href="{:url('/home/login/login')}">
-                        登陆
-                    </a></div>
-                    <div class="loging-btn"><a href="{:url('/home/login/register')}">注册</a></div>
+                    <div class="register-btn"><a href="login.html">
+                            登陆
+                        </a></div>
+                    <div class="loging-btn"><a href="/register.html">注册</a></div>
                 </div>
-                {else /}
-                <div style="float: right;margin-top: 17px;cursor: pointer;">
-                    <img src="__HOME__/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
-                    <span style="width:48px;color:#fff;display:inline-block;height:0px;">{$userinfo['mobile']}</span>
-                </div>
-                {/if}
             </div>
 
         </div>
@@ -97,7 +91,7 @@
             <div class="w serves clearfix">
                 <div class="serve-item fl">
                     <div class="serve-item-img">
-                        <img src="__SPI__/images/yonghu2x.png" alt="">
+                        <img src="/static/spirit/images/yonghu2x.png" alt="">
                     </div>
                     <div class="serve-item-text">
                         <p>共享用工服务</p>
@@ -110,7 +104,7 @@
                 </div>
                 <div class="serve-item fl">
                     <div class="serve-item-img">
-                        <img src="__SPI__/images/qianbao2X.png" alt="">
+                        <img src="/static/spirit/images/qianbao2X.png" alt="">
                     </div>
                     <div class="serve-item-text">
                         <p>共享用工服务</p>
@@ -123,7 +117,7 @@
                 </div>
                 <div class="serve-item fl">
                     <div class="serve-item-img">
-                        <img src="__SPI__/images/fuwuxing2x.png" alt="">
+                        <img src="/static/spirit/images/fuwuxing2x.png" alt="">
                     </div>
                     <div class="serve-item-text">
                         <p>共享用工服务</p>
@@ -147,7 +141,7 @@
                     <ul class="clearfix">
                         <li class="difficulty-item">
                             <div class="difficulty-item-img">
-                                <img src="__SPI__/images/qiyewentishuiwu.jpg" alt="">
+                                <img src="/static/spirit/images/qiyewentishuiwu.jpg" alt="">
                             </div>
                             <div class="difficulty-item-title">
                                 <p>税务管理压力</p>
@@ -157,7 +151,7 @@
                         </li>
                         <li class="difficulty-item">
                             <div class="difficulty-item-img">
-                                <img src="__SPI__/images/qitewentiyewu.jpg" alt="">
+                                <img src="/static/spirit/images/qitewentiyewu.jpg" alt="">
                             </div>
                             <div class="difficulty-item-title">
                                 <p>业务成本压力</p>
@@ -167,7 +161,7 @@
                         </li>
                         <li class="difficulty-item">
                             <div class="difficulty-item-img">
-                                <img src="__SPI__/images/qiyewentiyongren2X.jpg" alt="">
+                                <img src="/static/spirit/images/qiyewentiyongren2X.jpg" alt="">
                             </div>
                             <div class="difficulty-item-title">
                                 <p>用人成本压力</p>
@@ -177,7 +171,7 @@
                         </li>
                         <li class="difficulty-item">
                             <div class="difficulty-item-img">
-                                <img src="__SPI__/images/qiyewentixingxi2X.jpg" alt="">
+                                <img src="/static/spirit/images/qiyewentixingxi2X.jpg" alt="">
                             </div>
                             <div class="difficulty-item-title">
                                 <p>信息管理挑战</p>
@@ -246,7 +240,7 @@
                     <div class="reason-content-items fl">
                         <div class="reason-content-item">
                             <div class="reason-content-item-img">
-                                <img src="__SPI__/images/liyouxuanzhuan@2x.png" alt="">
+                                <img src="/static/spirit/images/liyouxuanzhuan@2x.png" alt="">
                             </div>
                             <div class="reason-content-item-text">
                                 <p>合法合规</p>
@@ -256,7 +250,7 @@
                         </div>
                         <div class="reason-content-item">
                             <div class="reason-content-item-img">
-                                <img src="__SPI__/images/liyouyingbi2x.png" alt="">
+                                <img src="/static/spirit/images/liyouyingbi2x.png" alt="">
                             </div>
                             <div class="reason-content-item-text">
                                 <p>成本风险控制</p>
@@ -266,7 +260,7 @@
                         </div>
                         <div class="reason-content-item">
                             <div class="reason-content-item-img">
-                                <img src="__SPI__/images/liyou3D2x.png" alt="">
+                                <img src="/static/spirit/images/liyou3D2x.png" alt="">
                             </div>
                             <div class="reason-content-item-text">
                                 <p>三流合一</p>
@@ -275,7 +269,7 @@
                         </div>
                     </div>
                     <div class="reason-content-img">
-                        <img src="__SPI__/images/liyou22x.png" alt="">
+                        <img src="/static/spirit/images/liyou22x.png" alt="">
                     </div>
                 </div>
             </div>
@@ -291,7 +285,7 @@
                     惠用工服务体系业务逻辑流程图
                 </div>
                 <div class="process-img">
-                    <img src="__SPI__/images/liucheng2x.png" alt="">
+                    <img src="/static/spirit/images/liucheng2x.png" alt="">
                 </div>
             </div>
         </div>
@@ -307,34 +301,34 @@
                 </div>
                 <div class="consulting-items">
                     <ul>
-                        {volist name='data' id='vo'}
+                        <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                         <li class="consulting-item">
                             <div class="consulting-item-img">
                                 <div class="shade"></div>
-                                <img src="{$vo.imgs|default=''}" alt="">
+                                <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
                             </div>
                             <div class="consulting-item-content-box">
                                 <div class="consulting-item-content">
-                                    <p class="consulting-item-content-title">{$vo.title}</p>
-                                    <p class="consulting-item-content-time">{$vo.create_time}</p>
+                                    <p class="consulting-item-content-title"><?php echo $vo['title']; ?></p>
+                                    <p class="consulting-item-content-time"><?php echo $vo['create_time']; ?></p>
                                     <p class="consulting-item-content-details">
-                                        {$vo.desc}
+                                        <?php echo $vo['desc']; ?>
                                     </p>
                                 </div>
                             </div>
                             <div class="consulting-item-btn-box">
                                 <div class="consulting-item-btn">
-                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="{:url('/home/login/login')}" data-url="{:url('/home/spirit/informationlist')}" mobile-phone="{$userinfo['mobile']}">了解更多</a>
+                                    <a href="<?php echo url('/home/spirit/informationlist'); ?>">了解更多</a>
                                 </div>
                             </div>
                         </li>
-                        {/volist}
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
                         <!--
                         <li class="consulting-item">
                             <div class="consulting-item-img">
                                 <div class="shade"></div>
 
-                                <img src="__SPI__/images/hangyezixun2.jpg" alt="">
+                                <img src="/static/spirit/images/hangyezixun2.jpg" alt="">
                             </div>
                             <div class="consulting-item-content-box">
                                 <div class="consulting-item-content">
@@ -354,7 +348,7 @@
                         <li class="consulting-item">
                             <div class="consulting-item-img">
                                 <div class="shade"></div>
-                                <img src="__SPI__/images/hangyezixun3.jpg" alt="">
+                                <img src="/static/spirit/images/hangyezixun3.jpg" alt="">
                             </div>
                             <div class="consulting-item-content-box">
                                 <div class="consulting-item-content">
@@ -423,9 +417,9 @@
 
                 </div>
                 <div class='concat_icon clearfix'>
-                    <div><img src="__SPI__/images/tie.png" alt=""></div>
-                    <div><img src="__SPI__/images/wx.png" alt=""></div>
-                    <div><img src="__SPI__/images/bo.png" alt=""></div>
+                    <div><img src="/static/spirit/images/tie.png" alt=""></div>
+                    <div><img src="/static/spirit/images/wx.png" alt=""></div>
+                    <div><img src="/static/spirit/images/bo.png" alt=""></div>
                 </div>
             </div>
         </div>

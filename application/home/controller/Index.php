@@ -88,10 +88,10 @@ class Index extends BaseController
        if($this->request->isGet()){
            //招标 招商信息
            $title = input('get.keyword','','trim');
-           $biao = Infosservice::instance()->getbiao($title);
-           $shang = Infosservice::instance()->getshang($title);
-           $total = count($biao) + count($shang);
-           $this->assign('total',$total);
+           $biao = Infosservice::instance()->getbiao($title,'');
+           $shang = Infosservice::instance()->getshang($title,'');
+          // $total = count($biao) + count($shang);
+          // $this->assign('total',$total);
            $this->assign('biao',$biao);
            $this->assign('shang',$shang);
            $this->assign('title','招商招标信息列表');
@@ -123,5 +123,44 @@ class Index extends BaseController
     }
 
 
+    /**
+     * 招商信息 接口
+     * keyword string
+     * page string |id
+     */
+    public function getshangPage(){
+        $keyword = input('get.keyword','','trim');
+        $page    = input('get.page','','int');
 
+        $list  =  Infosservice::instance()->getshang($keyword,$page);
+
+        if(empty($list)){
+            return json(['code'=>404,'msg'=>'没有更多了']);
+        }
+
+        if(isset($list) && !empty($list)){
+            return json(['code'=>200,'msg'=>'请求成功','data'=>$list]);
+        }
+
+    }
+
+
+    /**
+     * 招标信息 接口
+     */
+    public function getbiaoPage(){
+        $keyword = input('get.keyword','','trim');
+        $page    = input('get.page','','int');
+
+        $list  =  Infosservice::instance()->getbiao($keyword,$page);
+
+        if(empty($list)){
+            return json(['code'=>404,'msg'=>'没有更多了！']);
+        }
+
+        if(isset($list) && !empty($list)){
+            return json(['code'=>200,'msg'=>'请求成功','data'=>$list]);
+        }
+
+    }
 }

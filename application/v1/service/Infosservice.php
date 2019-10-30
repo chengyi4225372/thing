@@ -38,9 +38,12 @@ class Infosservice
        return $list;
     }
 
-    //添加
-    public function saves($param){
-        $ret = Info::instance()->save($param);
+    /**
+     * @param $array
+     * @return mixed
+     */
+    public function saves($array){
+        $ret = Info::instance()->data($array)->save();
         return $ret;
     }
 
@@ -87,7 +90,7 @@ class Infosservice
      * 招标信息 列表
      * title string
      */
-    public function getbiao($title){
+    public function getbiao($title,$page){
         if(empty($title)){
             $array['status'] =1;
             $array['pid'] =1;
@@ -97,7 +100,14 @@ class Infosservice
             $array['title|keyword|desc'] = ['like','%'.$title.'%'];
         }
 
-        $arr = Info::instance()->where($array)->order('create_time desc')->paginate(15);;
+        $limit = 10;
+        if(empty($page)){
+            $page = '';
+        }else{
+            $page = $page * $limit;
+        }
+
+        $arr = Info::instance()->where($array)->order('create_time desc')->limit($page,$limit)->select();
         return $arr;
     }
 
@@ -105,7 +115,7 @@ class Infosservice
      * 招商信息列表
      * title string
      */
-    public function getshang($title){
+    public function getshang($title,$page){
         if(empty($title)){
             $array['status'] =1;
             $array['pid'] =2;
@@ -114,7 +124,14 @@ class Infosservice
             $array['pid'] =2;
             $array['title|keyword|desc'] = ['like','%'.$title.'%'];
         }
-        $arr = Info::instance()->where($array)->order('create_time desc')->paginate(15);;
+        $limit = 10;
+        if(empty($page)){
+            $page = 0;
+        }else{
+            $page = $page * $limit;
+        }
+
+        $arr = Info::instance()->where($array)->order('create_time desc')->limit($page,$limit)->select();
         return $arr;
     }
 

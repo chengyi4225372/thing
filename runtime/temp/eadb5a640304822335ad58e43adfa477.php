@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hui-/public/../application/v1/view/systematic/system/slideshow.html";i:1572247980;s:53:"/opt/web/hui-/application/v1/view/layout/default.html";i:1571369306;s:50:"/opt/web/hui-/application/v1/view/common/meta.html";i:1572404193;s:52:"/opt/web/hui-/application/v1/view/common/header.html";i:1571715191;s:50:"/opt/web/hui-/application/v1/view/common/left.html";i:1572399441;s:52:"/opt/web/hui-/application/v1/view/common/footer.html";i:1571715917;s:52:"/opt/web/hui-/application/v1/view/common/script.html";i:1571986795;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\partners\partner\index.html";i:1571658418;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\default.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1571644345;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\header.html";i:1571727608;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\left.html";i:1571905529;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\footer.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571899026;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -7,7 +7,7 @@
 <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="renderer" content="webkit">
-<link rel="shortcut icon" href="/static/favicon.ico" />
+<link rel="shortcut icon" href="/static/assets/img/favicon.ico" />
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.7 -->
@@ -188,7 +188,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?> " >
+            <li class="treeview <?php if($paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>" >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>首页</span>
                     <span class="pull-right-container">
@@ -237,7 +237,7 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- 注释
+
                     <li class="<?php if($paths == '/v1/partners/partner/index'): ?>active<?php endif; ?>">
                         <a href="#">
                             <i class="glyphicon glyphicon-book"></i> <span>合作伙伴</span>
@@ -251,7 +251,7 @@
                             </li>
                         </ul>
                     </li>
-                     -->
+
                     <li class="<?php if($paths == '/v1/systematic/cases/index'): ?>active<?php endif; ?>">
                         <a href="#">
                             <i class="glyphicon glyphicon-inbox"></i> <span>案例管理</span>
@@ -294,7 +294,7 @@
                 </ul>
             </li>
 
-            <li class="treeview <?php if($paths == '/v1/work/works/index'): ?> active <?php endif; ?> " >
+            <li class=" <?php if($paths == '/v1/work/works/index'): ?>treeview <?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
@@ -302,7 +302,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<?php if($paths == '/v1/work/works/index'): ?> active <?php endif; ?>">
+                    <li class="<?php if($paths == '/v1/work/works/index'): ?>active <?php endif; ?>">
                         <a href="<?php echo url('/v1/work/works/index'); ?>">
                             <i class="glyphicon glyphicon-user"></i> <span>行业资讯</span>
                             <span class="pull-right-container">
@@ -310,6 +310,7 @@
                             </span>
                         </a>
                     </li>
+
                 </ul>
             </li>
 
@@ -321,31 +322,7 @@
     <div class="content-wrapper">
         
 <div class="content" style="margin-bottom:0px;min-height:0px;">
-    <div class="row">
-        <div class="col-md-12">
-            <form class="form-inline"  id="form">
-
-                <div class="panel panel-default panel-btn">
-                    <div class="panel-heading">
-                        <div class="form-group">
-                            <label>状态：</label>
-                            <select class="form-control" name="status">
-                                <option value="">请选择</option>
-                                <option value="1" <?php if((isset($params['status'])) && ($params['status'] == 1)): ?>selected='selected'<?php endif; ?>>启用</option>
-                                <option value="2" <?php if((isset($params['status'])) && ($params['status'] == 2)): ?>selected='selected'<?php endif; ?>>禁用</option>
-                            </select>
-                        </div>
-
-
-                        <div class="form-group">
-                            <button class="btn btn-info" id="btn_search" type="Submit"  data-url="<?php echo url('/v1/users/user/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
-                        </div>
-                    </div>
-                </div>
-                <br>
-            </form>
-        </div>
-    </div>
+    <div class="row"></div>
 </div>
 
 <!-- Main content -->
@@ -353,45 +330,34 @@
     <div class="box box-default color-palette-box" style="min-height:700px;">
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
-            <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addslideshow" data-url="<?php echo url('/v1/systematic/system/addslideshow'); ?>">
-                <i class="fa fa-plus-circle">添加轮播图</i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog" id="addpartner"
+                    data-url="<?php echo url('/v1/partners/partner/add'); ?>">
+                <i class="fa fa-plus-circle">添加</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
-                </th>
-                <th class="text-center">标题</th>
-                <th class="text-center">描述</th>
-                <th class="text-center">URL</th>
-                <th class="text-center">图片</th>
-                <th class="text-center">状态</th>
+
+                <th class="text-center">产品图</th>
+                <th class="text-center">链接地址</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-                <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
-                    <tr>
-                        <td class="td-align td-padding">
-                            <input type="checkbox" name="box_checked" data-id="<?php echo isset($list['id']) ? $list['id'] : ''; ?>" class="data-check_box">
-                        </td>
-                        <td class="text-center"><?php echo $list['title']; ?></td>
-                        <td class="text-center"><?php echo $list['desc']; ?></td>
-                        <td class="text-center"><?php echo $list['url']; ?></td>
-                        <td class="text-center">
-                            <img src="<?php echo $list['pic']; ?>" style="width:50px;height:50px;">
-                        </td>
-                        <td class="text-center">
-                            <span class="btn <?php if($list['status'] == 1): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
-                        </td>
-                        <td class="text-center">
-                            <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/systematic/system/editslideshow',['id' => $list['id']]); ?>" onclick="admin_module.edit_slideshow(this)">编辑</a>
-                        </td>
-                    </tr>
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <tr>
+
+                    <td class="text-center"><?php echo $vo['iurl']; ?></td>
+                    <td class="text-center">
+                        <a href="<?php echo $vo['imgs']; ?>">
+                            <img src="<?php echo $vo['imgs']; ?>" style="width: 90px;height: 90px;">
+                        </a>
+                    </td>
+
+                    <td class="text-center">
+                        <a  class="btn btn-info edit-partner" data-url="<?php echo url('/v1/partners/partner/edit',['id'=>$vo['id']]); ?>">编辑</a>
+                    </td>
+                </tr>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
-
-
                 </tbody>
             </table>
             <div class="pages"></div>

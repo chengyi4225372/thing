@@ -18,7 +18,7 @@ class Partner extends  AuthController
        $this->assign('title','合作伙伴');
        return $this->fetch();
    }
-
+   return false;
   }
 
   public function add(){

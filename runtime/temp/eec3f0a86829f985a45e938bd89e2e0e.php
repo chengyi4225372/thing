@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\info_list.html";i:1572266443;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\info_list.html";i:1572404634;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +54,7 @@
     <div class="content-box">
       <div class="w content">
         <div class="bread-crumbs">
-          <span>首页</span> > <span>资讯</span> > <span>搜索结果共<span><?php echo $total; ?></span>条</span>
+          <span><a href="/">首页</a></span> > <span><a onclick="go_news(this)" data-url="<?php echo url('/home/index/infoList'); ?>">资讯</a></span> > <span></span>
         </div>
         <div class="information-list">
           <div class="tabs clearfix">
@@ -64,12 +64,20 @@
             </ul>
             <div class="search-box fr">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-              <div  id="searched">搜索</div>
+              <div  id="searched" data-url="<?php echo url('/home/index/infoList'); ?>">搜索</div>
             </div>
           </div>
           <div class="tabs-items show">
-            <ul>
-              <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sh): $mod = ($i % 2 );++$i;?>
+            <ul  id="shang">
+              <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
+              <li>
+                <div class="tabs-items-content">
+                  <div class="tabs-items-content-text figcaption">
+                    <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
+                  </div>
+                </div>
+              </li>
+              <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sh): $mod = ($i % 2 );++$i;?>
               <li>
                 <a href="<?php echo url('/home/index/getInfo',array('mid'=>$sh['id'])); ?>">
 <!--                  <div class="tabs-items-img">-->
@@ -87,13 +95,23 @@
                   </div>
                 </a>
               </li>
-              <?php endforeach; endif; else: echo "" ;endif; ?>
+              <?php endforeach; endif; else: echo "" ;endif; endif; ?>
             </ul>
-            <div class="more-btn">查看更多</div>
+            <input type="hidden" id="sid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
+            <input type="hidden" id="page" value="1">
+            <div class="more-btn" onclick="moreShang($('#sid').val(),$('#page').val(),this)" data-href="<?php echo url('/home/index/getInfo'); ?>" data-url="<?php echo url('/home/index/getshangPage'); ?>">查看更多</div>
           </div>
           <div class="tabs-items">
-            <ul>
-              <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ww): $mod = ($i % 2 );++$i;?>
+            <ul id="biao">
+              <?php if(empty($biao) || (($biao instanceof \think\Collection || $biao instanceof \think\Paginator ) && $biao->isEmpty())): ?>
+              <li>
+                <div class="tabs-items-content">
+                  <div class="tabs-items-content-text figcaption">
+                    <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
+                  </div>
+                </div>
+              </li>
+              <?php else: if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ww): $mod = ($i % 2 );++$i;?>
               <li>
                 <a href="<?php echo url('/home/index/getInfo',array('mid'=>$ww['id'])); ?>">
 <!--                  <div class="tabs-items-img">-->
@@ -113,9 +131,11 @@
                   </div>
                 </a>
               </li>
-              <?php endforeach; endif; else: echo "" ;endif; ?>
+              <?php endforeach; endif; else: echo "" ;endif; endif; ?>
             </ul>
-            <div class="more-btn">查看更多</div>
+            <input type="hidden" id="bid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
+            <input type="hidden" id="pages" value="1">
+            <div class="more-btn" onclick="moreBiao($('#bid').val(),$('#pages').val(),this)" data-href="<?php echo url('/home/index/getInfo'); ?>" data-url="<?php echo url('/home/index/getbiaoPage'); ?>">查看更多</div>
           </div>
         </div>
       </div>

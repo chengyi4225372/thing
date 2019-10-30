@@ -1,4 +1,3 @@
-
 //手机验证
 function checkPhone(phone) {
     var tel_reg = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
@@ -9,10 +8,7 @@ function checkPhone(phone) {
     }
 }
 
-
-
-var gurl = "http://172.26.2.41:8088";
-
+var gurl = "http://172.26.2.41:8089";
 
 function getErp() {
        var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
@@ -82,7 +78,6 @@ function getErp() {
 
    }
 
-
 //点击弹窗
 function showSearch(){
    var   content = '';
@@ -109,8 +104,6 @@ function showSearch(){
 function closedTab(){
     $(".prop_box").hide();
 }
-
-
 
 $(function(){
     var url = $('#add_url').val();
@@ -157,12 +150,10 @@ function click_show(objthis){
 
 }
 
-
 //搜索
- function search(){
+ function search(obj){
         var keyword = $('#keyword').val();
-        var url = "/home/index/infoList";
-
+        var url = $(obj).attr('data-url');
         if(keyword == '' || keyword==undefined){
             layer.msg('请输入搜索条件');
             return false;
@@ -172,23 +163,102 @@ function click_show(objthis){
     }
 
 //了解更多
-function showUrl(){
-   window.location.href="/home/index/infoList";
+function showUrl(objthis){
+    var data_url = $(objthis).attr('data-url');
+    var login_url = $(objthis).attr('login_url');
+    var is_login = $(objthis).attr('mobile-phone');
+    if(is_login == '' || is_login == 'undefined' || is_login == undefined){
+        window.location.href=login_url;
+    }else{
+        window.location.href=data_url;
+    }
+
 }
 
 //列表页搜索
 $(function(){
     $('#searched').click(function(){
         var keyword = $('#keyword').val();
+        var url = $(this).attr('data-url');
         if(keyword == '' || keyword == undefined){
             layer.msg('请输入搜索条件');
             return false;
         }
-        var urlw = "/home/index/infoList";
+        //var urlw = "/home/index/infoList";
 
-        window.location.href = urlw+"?keyword="+keyword;
+        window.location.href = url+"?keyword="+keyword;
 
     });
 });
+
+
+//招商信息分页
+function moreShang(keyword,pages,objthis){
+    var urls = $(objthis).attr('data-url');
+    var hrefs = $(objthis).attr('data-href');
+    $.get(urls,{'keyword':keyword,'page':pages},function(ret){
+        if(ret.code == 200){
+            var html= "<li>";
+            $.each(ret.data,function(i,item){
+                 html+= "<a href='"+hrefs+"?mid="+item.id+" '>";
+                 html+= "<div class='tabs-items-content'>";
+                 html+= "<div class='tabs-items-content-title figcaption'>";
+                 html+= "<p>"+item.title+"</p></div>";
+                 html+= "<div class='tabs-items-content-text figcaption'>";
+                 html+= "<p>"+item.desc+"</p></div>";
+                 html+= "<div class='tabs-items-content-time'><span>";
+                 html+= "<img src='/static/spirit/images/shijian2x.png'>";
+                 html+="</span><span>"+item.create_time+"</span></div></div></a>";
+            });
+            html +="</li>";
+
+            $('#page').val(++pages);
+            $('#shang').append(html).html();
+        }
+
+        if(ret.code == 404){
+            layer.msg(ret.msg);
+            return false;
+        }
+    },'json');
+}
+
+//招标信息分页
+function moreBiao(keyword,pages,objthis){
+    var urls = $(objthis).attr('data-url');
+    var hrefs = $(objthis).attr('data-href');
+    $.get(urls,{'keyword':keyword,'page':pages},function(ret){
+        if(ret.code == 200){
+            var html= "<li>";
+            $.each(ret.data,function(i,item){
+                html+= "<a href='"+hrefs+"?mid="+item.id+" '>";
+                html+= "<div class='tabs-items-content'>";
+                html+= "<div class='tabs-items-content-title figcaption'>";
+                html+= "<p>"+item.title+"</p></div>";
+                html+= "<div class='tabs-items-content-text figcaption'>";
+                html+= "<p>"+item.desc+"</p></div>";
+                html+= "<div class='tabs-items-content-time'><span>";
+                html+= "<img src='/static/spirit/images/shijian2x.png'>";
+                html+="</span><span>"+item.create_time+"</span></div></div></a>";
+            });
+            html +="</li>";
+
+            $('#pages').val(++pages);
+            $('#biao').append(html).html();
+        }
+
+        if(ret.code == 404){
+            layer.msg(ret.msg);
+            return false;
+        }
+    },'json');
+}
+
+
+//回到列表页
+function go_news(obj){
+    var url = $(obj).attr('data-url');
+    window.location.href= url;
+}
 
 

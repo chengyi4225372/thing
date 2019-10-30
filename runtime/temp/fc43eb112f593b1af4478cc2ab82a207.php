@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572329613;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572352966;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +69,7 @@
                         <div class='content_logo' id='logo'></div>
                         <ul>
                             <li><a href="#">首页</a></li>
-                            <li><a href="#">惠税优</a></li>
+                            <li><a href="#">惠优税</a></li>
                             <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
@@ -78,14 +78,14 @@
                         </ul>
                         <?php if(empty($userinfo['mobile'])): ?>
                         <div class='register'>
-                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/login'); ?>">登录</a>
+                            <a href="<?php echo url('/home/login/login'); ?>">登录</a>
                             <span></span>
-                            <a href="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/login/register'); ?>">注册</a>
+                            <a href="<?php echo url('/home/login/register'); ?>">注册</a>
                         </div>
                         <?php else: ?>
                         <div style="float: right;margin-top: 17px;cursor: pointer;">
                             <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
-                            <span style="vertical-align: middle;"><?php echo $userinfo['mobile']; ?></span><span>...</span>
+                            <span style="vertical-align: middle;"><?php echo $userinfo['mobile']; ?></span>
                         </div>
 
                         <?php endif; ?>
@@ -158,7 +158,7 @@
 
 
         <!-- 近期成功案例 -->
-        <input type="hidden" id="add_url" value="<?php if($is_nginx != ''): ?><?php echo $is_nginx; endif; ?><?php echo url('/home/index/ajaximage'); ?>">
+        <input type="hidden" id="add_url" value="<?php echo url('/home/index/ajaximage'); ?>">
         <div class='success'>
             <div class='w success_content'>
                 <div class='success_title'></div>
@@ -437,7 +437,7 @@
                         <!-- 搜索 -->
                         <div class='zhaoSearch'>
                             <div class='searchLogo'>
-                                <i onclick="search()"></i>
+                                <i onclick="search(this)" data-url="<?php echo url('/home/index/infoList'); ?>"></i>
                                 <input type="text" id="keyword"  placeholder="搜索招标政策和招标信息...">
                             </div>
                             <!-- <button>查询</button> -->
@@ -457,7 +457,7 @@
                             </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more' onclick='showUrl()'>了解更多</button>
+                        <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)" data-url="<?php echo url('/home/index/infoList'); ?>" login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
@@ -475,7 +475,9 @@
                             </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
-                        <button class='know_more'onclick='showUrl()'>了解更多</button>
+
+                        <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)" data-url="<?php echo url('/home/index/infoList'); ?>" login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
+
                     </div>
 
                 </div>

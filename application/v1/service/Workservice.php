@@ -59,7 +59,7 @@ class Workservice
      * 添加 数据
      */
     public function setAddArray($array){
-        $ret = Work::instance()->save($array);
+        $ret = Work::instance()->data($array)->save();
         return $ret;
     }
 
@@ -196,7 +196,7 @@ class Workservice
      *
      * return string|int
      */
-    public function getCount(){
+    public function getCount($title){
         if(empty($title) || !isset($title)){
 
             $where = ['del_time'=>0];
@@ -210,6 +210,36 @@ class Workservice
 
         $count  = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->count('id');
         return  $count;
+    }
+
+
+    /**
+     * 前台新闻列表 接口
+     * title string
+     * page  string | int
+     * return array|null
+     */
+    public function  Getinfolist($title,$page){
+        if(empty($title) || !isset($title)){
+
+            $where = ['del_time'=>0];
+        }else {
+
+            $where =[
+                'del_time'=>0,
+                'title|keyword'=>['like','%'.$title.'%'],
+            ];
+        }
+
+        $next = 10;
+        if(empty($page)){
+          $page = 0;
+        }else {
+            $page= $next * $page;
+        }
+
+        $list  = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->limit($page,$next)->select();
+        return  $list;
     }
 
 }
