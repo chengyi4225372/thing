@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hui-/public/../application/home/view/index/info_list.html";i:1572404765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hui-/public/../application/home/view/index/info_list.html";i:1572433761;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +22,7 @@
 
     <!-- 导航部分 -->
     <div class="nav-box">
-      <div class="w nav-container clearfix">
+      <div class="w nav-container clearfix content">
         <!-- logo图 -->
         <div class="logo">
           <h1>

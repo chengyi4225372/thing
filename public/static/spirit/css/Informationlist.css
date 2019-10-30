@@ -191,7 +191,9 @@ a {
     height: 2px;
     background-color: #fff;
 }
-
+.nav-container{
+    position:relative;
+}
 .nav-container .loging {
     float: right;
     margin: 12px 0 0 10px;
@@ -217,7 +219,32 @@ a {
     color: rgba(255, 255, 255, 1);
     line-height: 40px;
 }
+.register {
+    position:absolute;
+    top: 26px;
+    right:0;
+    border: 1px solid #ccc;
+    margin-top: 11px;
+}
 
+.content .register > a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    width: 86px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+
+}
+
+.register > span {
+    height: 34px;
+    width: 1px;
+    background-color: #ccc;
+    position: absolute;
+    right: 88px;
+}
 .nav-container .loging div:nth-child(1) {
     border-right: 0;
     border-radius: 4px 0px 0px 4px;
