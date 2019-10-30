@@ -49,9 +49,9 @@
                     <div class="loging-btn"><a href="{:url('/home/login/register')}">注册</a></div>
                 </div>
                 {else /}
-                <div class="u_info clearfix" style="cursor:pointer;">
-                    <i></i>
-                    <span>{$userinfo['mobile']}</span>
+                <div style="float: right;margin-top: 17px;cursor: pointer;">
+                    <img src="__HOME__/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+                    <span style="width:48px;color:#fff;display:inline-block;height:0px;">{$userinfo['mobile']}</span>
                 </div>
                 {/if}
             </div>
