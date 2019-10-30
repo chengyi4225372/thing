@@ -176,8 +176,9 @@ function getMore(keyword,i,objthis){
    var hrefs=$(objthis).attr('data-href');
    $.get(urls,{'keyword':keyword,'page':i},function(ret){
          if(ret.code == 200){
-             var html= '<li>';
+             var html= '';
              $.each(ret.data,function(i,item){
+                html= "<li>";
                 html+= "<a href= '"+hrefs+"?mid="+item.id+"'>";
                 html+= "<div class='tabs-items-img'><img src="+item.imgs+" alt=''></div>";
                 html+= "<div class='tabs-items-content'><div class='tabs-items-content-title figcaption'>";
@@ -188,11 +189,12 @@ function getMore(keyword,i,objthis){
                 html+="<span><img src='/static/spirit/images/shijian2x.png' alt=''></span>";
                 html+="<span>"+item.create_time +"</span></div></div>";
                 html+= "</a>";
+                html+="</li>";
              });
-             html +='</li>';
-            console.log(html);return;
-            $('#page').val(++i);
+            console.log(html);
             $('#content').append(html).html();
+            $('#page').val(++i);
+
          }
 
          if(ret.code == 404){
