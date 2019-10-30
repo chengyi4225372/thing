@@ -358,8 +358,8 @@ function get_code(objthis){
         success:function(res){
 
             if(res.status == 200){
-                $('#msg_code').css('display','block');
-                //layer.msg(res.message, {icon: 1, time: 2000});
+                //$('#msg_code').css('display','block');
+                layer.msg('验证码已发送，请查收短信',{icon:1,time:2000});
             }else{
                 layer.msg(res.message, {icon: 2, time: 2000});
             }
@@ -393,8 +393,8 @@ function get_qy_code(objthis){
         success:function(res){
 
             if(res.status == 200){
-                $('#msg_code2').css('display','block');
-                //layer.msg(res.message, {icon: 1, time: 2000});
+                //$('#msg_code2').css('display','block');
+                layer.msg('验证码已发送，请查收短信',{icon:1,time:2000});
             }else{
                 layer.msg(res.message, {icon: 2, time: 2000});
             }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572426187;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572430087;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +68,6 @@
                   <i></i>
                   <span class='huo_code' onclick="login_module.get_code(this)">获取验证码</span>
                 </div>
-                <div style="margin:11px 0px 11px 0px;color:red;display:none;" id="msg_code">验证码已发送，请查收短信</div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>
                   <a href='./register.html'>去注册</a>

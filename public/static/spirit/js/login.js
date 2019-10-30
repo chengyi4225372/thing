@@ -177,7 +177,7 @@ var login_module = (function () {
             success: function (res) {
 
                 if (res.status == 200) {
-                    $('#msg_code').css('display','block');
+                    layer.msg('验证码已发送，请查收短信',{icon:1,time:2000});
                 } else {
                     layer.msg(res.message, {icon: 2, time: 2000});
                 }
@@ -187,7 +187,30 @@ var login_module = (function () {
             }
         });
     };
+    function settime(obj) { //发送验证码倒计时
+        ++time_one;
+        if(time_one > 1){
+            return;
+        }
+        var validCode = true;
 
+        var $code = $(obj);
+        $(obj).attr('disabled',true);
+        if (validCode) {
+            validCode = false;
+            var t = setInterval(function () {
+                time--;
+                $code.html(time + "秒");
+                if (time == 0) {
+                    clearInterval(t);
+                    $code.html("重新获取");
+                    validCode = true;
+                    time_one = 0;
+                    $('#msg_code').css('display','none');
+                }
+            }, 1000)
+        }
+    }
     return {
         phone_login_info: phone_login_info,
         account_login_info: account_login_info,
