@@ -21,8 +21,3 @@ var index_module = (function (){
         user_logout:user_logout,
     }
 })();
-
-
-function get_session(){
-    return $.session.get();
-}
