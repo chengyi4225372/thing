@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572506531;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572509498;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,6 +124,7 @@
                             <li><a href="#">惠找事</a></li>
                             <li><a href="#">惠启动</a></li>
                         </ul>
+
                         <?php if(empty($userinfo['mobile'])): ?>
                         <div class='register'>
                             <a href="<?php echo url('/home/login/login'); ?>">登录</a>

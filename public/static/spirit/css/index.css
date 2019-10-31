@@ -92,7 +92,7 @@ a {
 
 .nav-container .nav {
     float: left;
-    margin-left: 160px;
+    margin-left: 60px;
 }
 
 .nav-container .nav ul {
@@ -177,6 +177,25 @@ a {
     color: #2F80ED;
 }
 
+.enterprise-portal {
+    float: left;
+    width: 120px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 42px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.enterprise{
+    color:#fff;
+}
 
 /* 头部部分 */
 
