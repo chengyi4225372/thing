@@ -32,6 +32,11 @@ class Spirit extends BaseController
      public function informationList(){
 
          if($this->request->isGet()){
+
+             if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+                 return $this->redirect('/home/spirit/index');
+             }
+
            $keyword = input('get.keyword','','trim');
            $list  = Workservice::instance()->Getinfolist($keyword,'');
 
@@ -52,6 +57,11 @@ class Spirit extends BaseController
      public function detail(){
 
          if($this->request->isGet()){
+
+             if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+                 return $this->redirect('/home/spirit/index');
+             }
+
            $id = input('get.mid','','int');
            if(empty($id) || !isset($id)){
                return false;
