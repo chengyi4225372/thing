@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572430087;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572505335;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="/static/spirit/css/login.css">
   <script src='/static/spirit/js/login.js'></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
+
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="/static/common/js/jquerySession.js"></script>
 </head>
 
 <body>
@@ -66,7 +68,7 @@
                 <div class='code_box'>
                   <input type="text" placeholder="验证码" class='code_input'>
                   <i></i>
-                  <span class='huo_code' onclick="login_module.get_code(this)">获取验证码</span>
+                  <span class='huo_code' onclick="login_module.get_code()">获取验证码</span>
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>

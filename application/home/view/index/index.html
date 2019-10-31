@@ -12,6 +12,7 @@
     <script src='__HOME__/js/index.js'></script>
     <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
     <script src='__HOME__/js/common.js'></script>
+    <script src='__PUBLIC__/common/js/common.js'></script>
     <style>
         .header {
             background-image: url("{$slideshow['pic']|default='__HOME__/images/default.png'}");
@@ -134,7 +135,7 @@
                                 style="width:30px;height:30px; vertical-align: middle;">
                             <span style="vertical-align: middle;">{$userinfo['mobile']}</span>
                             <div class="u_info_content" id="u_info_content">
-                               <a class="u_out" href="#">退出账号</a>
+                               <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" data-url="{:url('/home/login/logout')}">退出账号</a>
                             </div>
                         </div>
                         {/if}

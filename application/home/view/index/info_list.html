@@ -13,6 +13,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
   <script src='__HOME__/js/common.js'></script>
+  <script src='__PUBLIC__/common/js/common.js'></script>
 </head>
 
 <body>
@@ -48,9 +49,13 @@
           <a href="{:url('/home/login/register')}">注册</a>
         </div>
         {else /}
-        <div class="u_info clearfix" style="cursor:pointer;">
-          <i></i>
-          <span>{$userinfo['mobile']}</span>
+        <div class="u_info">
+          <img src="__HOME__/images/user_img.png"
+               style="width:30px;height:30px; vertical-align: middle;">
+          <span style="vertical-align: middle;color:#fff">{$userinfo['mobile']}</span>
+          <div class="u_info_content" id="u_info_content">
+            <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" data-url="{:url('/home/login/logout')}">退出账号</a>
+          </div>
         </div>
         {/if}
       </div>

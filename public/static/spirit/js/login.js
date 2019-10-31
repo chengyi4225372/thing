@@ -62,6 +62,11 @@ var login_module = (function () {
             },
             dataType: 'json',
             success: function (ret) {
+                var sess = $.session.get('mobile',ret.data.mobile);
+                var sess = $.session.get('token',ret.data.token);
+                var sess = $.session.get('userName',ret.data.userName);
+                var sess = $.session.get('userType',ret.data.userType);
+                console.log(sess);return;
                 if (ret.status == 200) {
                     if (ret.status == 200) {
                         $.post(
@@ -76,7 +81,8 @@ var login_module = (function () {
                                 if (res.status == true) {
                                     layer.msg(res.message, {icon: 1, time: 1500}, function () {
                                         var href_url = $('#login_url').attr('data-url');
-                                        location.href = href_url;
+                                        //location.href = href_url;
+
                                     });
                                 } else {
                                     layer.msg(res.message, {icon: 2, time: 2000});
