@@ -19,7 +19,7 @@ body{
 }
 
 .header_fixed {
-    /* overflow: hidden; */
+     overflow: hidden;
 }
 
 .header_line {

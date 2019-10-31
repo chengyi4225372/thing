@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/opt/web/hui-/public/../application/home/view/spirit/index.html";i:1572401528;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/opt/web/hui-/public/../application/home/view/spirit/index.html";i:1572498018;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +13,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src="/static/spirit/js/spirit.js"></script>
+    <script src='/static/common/js/common.js'></script>
 
 </head>
 
@@ -50,9 +51,23 @@
                     <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
                 </div>
                 <?php else: ?>
-                <div style="float: right;margin-top: 17px;cursor: pointer;">
-                    <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+                <div class="u_info">
+<!--                    <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
                     <span style="width:48px;color:#fff;display:inline-block;height:0px;"><?php echo $userinfo['mobile']; ?></span>
+                    <div class="u_info_content" id="u_info_content">
+                        <ul>
+                            <li><a href="javascript:void(0)">管理中心</a></li>
+                            <li><a href="javascript:void(0)" onclick="index_module.user_logout(this)" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a></li>
+                        </ul>
+                    </div>-->
+                    <div class="u_info">
+                        <img src="/static/home/images/user_img.png"
+                             style="width:30px;height:30px; vertical-align: middle;">
+                        <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
+                        <div class="u_info_content" id="u_info_content">
+                            <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+                        </div>
+                    </div>
                 </div>
                 <?php endif; ?>
             </div>
