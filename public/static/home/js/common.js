@@ -88,9 +88,9 @@ function showSearch(){
          content += "<span>您的姓名</span>";
          content += "<input type='text' id='contactName'  placeholder='请输入您的姓名'></div>";
          content += "<div><span>您的公司</span>";
-         content += "<input type='text' id='companyName' placeholder='请输入您的公司名...'></div><div>";
+         content += "<input type='text' id='companyName' placeholder='请输入您的公司名称'></div><div>";
          content += "<span>联系方式</span>";
-         content += "<input type='text' id='contactMobile'  placeholder='请输入您的联系方式...'></div>";
+         content += "<input type='text' id='contactMobile'  placeholder='请输入您的联系方式'></div>";
          content += "<input type='hidden' id='source' value='门户首页'>";
          content += "<input type='hidden' id='identification' value='企业一站式服务'>";
          content += "<button  class='button' onclick='getErp()'>获取方案</button>";
