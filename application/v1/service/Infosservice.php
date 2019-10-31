@@ -101,7 +101,7 @@ class Infosservice
         }else{
             $array['status'] =1;
             $array['pid'] =1;
-            $array['title|keyword|desc'] = ['like','%'.$title.'%'];
+            $array['title|keyword|describe'] = ['like','%'.$title.'%'];
         }
 
         $limit = 10;
@@ -126,7 +126,7 @@ class Infosservice
         }else{
             $array['status'] =1;
             $array['pid'] =2;
-            $array['title|keyword|desc'] = ['like','%'.$title.'%'];
+            $array['title|keyword|describe'] = ['like','%'.$title.'%'];
         }
         $limit = 10;
         if(empty($page)){
