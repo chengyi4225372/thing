@@ -31,7 +31,7 @@ class Infos extends  AuthController
         $array['pid'] = input('post.pid', '', 'int');
         $array['title'] = input('post.title', '', 'trim');
         $array['content'] = input('post.content', '');
-        $array['desc'] = input('post.desc', '', 'trim');
+        $array['desc'] = input('post.describe', '', 'trim');
         $array['keyword'] = input('post.keyword', '', 'trim');
         $array['create_time'] =time();
 
@@ -64,7 +64,7 @@ class Infos extends  AuthController
               'pid'     =>input('post.pid','','int'),
               'title'   =>input('post.title','','trim'),
               'content' =>input('post.content'),
-              'desc'    =>input('post.desc','','trim'),
+              'desc'    =>input('post.describe','','trim'),
               'keyword' =>input('post.keyword','','trim'),
           );
 

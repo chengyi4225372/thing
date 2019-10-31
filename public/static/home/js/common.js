@@ -206,7 +206,7 @@ function moreShang(keyword,pages,objthis){
                  html+= "<div class='tabs-items-content-title figcaption'>";
                  html+= "<p>"+item.title+"</p></div>";
                  html+= "<div class='tabs-items-content-text figcaption'>";
-                 html+= "<p>"+item.desc+"</p></div>";
+                 html+= "<p>"+item.describe+"</p></div>";
                  html+= "<div class='tabs-items-content-time'><span>";
                  html+= "<img src='/static/spirit/images/shijian2x.png'>";
                  html+="</span><span>"+item.create_time+"</span></div></div></a>";
@@ -238,7 +238,7 @@ function moreBiao(keyword,pages,objthis){
                 html+= "<div class='tabs-items-content-title figcaption'>";
                 html+= "<p>"+item.title+"</p></div>";
                 html+= "<div class='tabs-items-content-text figcaption'>";
-                html+= "<p>"+item.desc+"</p></div>";
+                html+= "<p>"+item.describe+"</p></div>";
                 html+= "<div class='tabs-items-content-time'><span>";
                 html+= "<img src='/static/spirit/images/shijian2x.png'>";
                 html+="</span><span>"+item.create_time+"</span></div></div></a>";
