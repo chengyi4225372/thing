@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1572513071;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1572514190;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +42,12 @@
                         <li><a href="#">惠启动</a></li>
                     </ul>
                 </div>
+                <!-- 企业入口 -->
+                <a class="enterprise" href="http://172.26.3.12/#/login" target="_blank">
+                    <div class="enterprise-portal">
+                        企业入口
+                    </div>
+                </a>
                 <!-- 登陆注册 -->
                 <?php if(empty($userinfo['mobile'])): ?>
                 <div class="loging clearfix">

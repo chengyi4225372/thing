@@ -48,3 +48,18 @@ Stack trace:
 #6 {main}
   thrown
 >>>>>>> 1f9a3a9c4e7a4b2f29c13aa13fdb2dbf7f1ba87d
+---------------------------------------------------------------
+[ 2019-10-31T17:43:16+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [0]数据表字段不存在:[desc][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-10-31T17:43:18+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [0]数据表字段不存在:[desc][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-10-31T17:43:19+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [0]数据表字段不存在:[desc][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-10-31T17:43:34+08:00 ] 127.0.0.1 POST /v1/info/infos/infosEdit.html
+[ error ] [0]数据表字段不存在:[desc][C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Builder.php:111]
+---------------------------------------------------------------
+[ 2019-10-31T17:49:32+08:00 ] 127.0.0.1 GET /
+[ error ] [8]Use of undefined constant utf - assumed 'utf'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\runtime\temp\4f8065d0feb9a53e8c35c039f687ccdc.php:309]
