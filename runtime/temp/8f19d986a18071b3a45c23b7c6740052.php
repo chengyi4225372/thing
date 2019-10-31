@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1572506611;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1572513071;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,6 +106,12 @@
                             <input type='hidden' id='identification' value='灵活用工'>
                         </div>
                         <div class="header-right-btn" onclick="btnErp()">获取方案</div>
+                        <!-- 提交成果后弹窗 -->
+                        <div class="mask-box">
+                            <span></span>
+                            <p class="mask-box-title">提交成功</p>
+                            <p class="mask-box-content">我们会在一个工作日内联系您</p>
+                        </div>
                     </div>
                 </div>
                 <div class="focus-icon">
@@ -475,6 +481,12 @@
                     <input type='hidden' id='sources' value='惠灵工'>
                     <input type='hidden' id='identifications' value='灵活用工'>
                     <div class="form-btn" onclick="form_btn()">获取方案</div>
+                </div>
+                <!-- 提交成果后弹窗 -->
+                <div class="mask-box">
+                    <span></span>
+                    <p class="mask-box-title">提交成功</p>
+                    <p class="mask-box-content">我们会在一个工作日内联系您</p>
                 </div>
             </div>
 

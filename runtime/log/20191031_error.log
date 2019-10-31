@@ -19,3 +19,6 @@
 ---------------------------------------------------------------
 [ 2019-10-31T15:19:10+08:00 ] 172.26.2.48 GET /home/index/index.html
 [ error ] [0]类的属性不存在:app\common\model\Info->desc[/opt/web/hui-/thinkphp/library/think/Model.php:624]
+---------------------------------------------------------------
+[ 2019-10-31T17:07:14+08:00 ] 127.0.0.1 GET /v1/info/infos/infosEdit.html?id=12
+[ error ] [0]类的属性不存在:app\common\model\Info->desc[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Model.php:624]
