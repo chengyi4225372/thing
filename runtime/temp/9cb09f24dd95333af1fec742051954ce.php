@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\login\login.html";i:1572404913;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\login\login.html";i:1572505804;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="/static/spirit/css/login.css">
   <script src='/static/spirit/js/login.js'></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
+
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="/static/common/js/jquerySession.js"></script>
 </head>
 
 <body>
