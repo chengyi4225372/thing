@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"/opt/web/hui-/public/../application/home/view/spirit/information_list.html";i:1572500656;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"/opt/web/hui-/public/../application/home/view/spirit/information_list.html";i:1572500844;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,22 +44,22 @@
         </div>
         <!-- 登陆注册 -->
         <?php if(empty($userinfo['mobile'])): ?>
-        <div class="loging clearfix">
-          <div class="register-btn"><a href="<?php echo url('/home/login/login'); ?>">
-            登陆
-          </a></div>
-          <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
-        </div>
-        <?php else: ?>
-        <div class="u_info">
-          <img src="/static/home/images/user_img.png"
-               style="width:30px;height:30px; vertical-align: middle;">
-          <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
-          <div class="u_info_content" id="u_info_content">
-            <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
-          </div>
-        </div>
-        <?php endif; ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="<?php echo url('/home/login/login'); ?>">
+        登陆
+    </a></div>
+    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <img src="/static/home/images/user_img.png"
+         style="width:30px;height:30px; vertical-align: middle;">
+    <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?>
       </div>
 
     </div>

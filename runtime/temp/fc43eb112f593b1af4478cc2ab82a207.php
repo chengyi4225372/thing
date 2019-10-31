@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572506284;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572506531;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -512,7 +512,7 @@
                                     <div><?php echo $ss['title']; ?></div>
                                     <div><?php echo $ss['create_time']; ?></div>
                                 </div>
-                                <div> <?php echo $ss['desc']; ?></div>
+                                <div> <?php echo $ss['describe']; ?></div>
                             </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
@@ -531,7 +531,7 @@
                                     <div><?php echo $biaos['create_time']; ?></div>
                                 </div>
                                 <div>
-                                    <?php echo $biaos['desc']; ?>
+                                    <?php echo $biaos['describe']; ?>
                                 </div>
                             </a>
                         </div>

@@ -20,4 +20,4 @@ var index_module = (function (){
     return {
         user_logout:user_logout,
     }
-})();
+})()
