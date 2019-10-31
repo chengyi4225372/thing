@@ -20,5 +20,31 @@
 [ 2019-10-31T15:19:10+08:00 ] 172.26.2.48 GET /home/index/index.html
 [ error ] [0]类的属性不存在:app\common\model\Info->desc[/opt/web/hui-/thinkphp/library/think/Model.php:624]
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-10-31T17:07:14+08:00 ] 127.0.0.1 GET /v1/info/infos/infosEdit.html?id=12
 [ error ] [0]类的属性不存在:app\common\model\Info->desc[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\Model.php:624]
+=======
+[ 2019-10-31T16:32:34+08:00 ] 172.26.2.48 GET /home/spirit/indexe
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/hui-/public/../application/404.html in /opt/web/hui-/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/hui-/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/hui-/p...', Array, Array)
+#1 /opt/web/hui-/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/hui-/p...', Array, Array)
+#2 /opt/web/hui-/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/hui-/p...')
+#3 /opt/web/hui-/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/hui-/thinkphp/library/think/Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
+---------------------------------------------------------------
+[ 2019-10-31T16:32:34+08:00 ] 172.26.2.48 GET /assets/dist/img/error.svg
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/hui-/public/../application/404.html in /opt/web/hui-/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/hui-/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/hui-/p...', Array, Array)
+#1 /opt/web/hui-/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/hui-/p...', Array, Array)
+#2 /opt/web/hui-/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/hui-/p...')
+#3 /opt/web/hui-/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/hui-/thinkphp/library/think/Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
+>>>>>>> 1f9a3a9c4e7a4b2f29c13aa13fdb2dbf7f1ba87d
