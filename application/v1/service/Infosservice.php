@@ -196,4 +196,15 @@ class Infosservice
         }
     }
 
+    /**
+     * @DESC：首页统计招标信息的数量
+     * @return mixed
+     * @author: jason
+     * @date: 2019-10-31 09:36:25
+     */
+    public function getinfocount()
+    {
+        $info = Info::instance()->where(['status' => 1])->count();
+        return $info;
+    }
 }
