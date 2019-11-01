@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/hui-/public/../application/home/view/spirit/index.html";i:1572510097;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/hui-/public/../application/home/view/spirit/index.html";i:1572579701;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,17 +33,17 @@
                 <!-- nav部分 -->
                 <div class="nav">
                     <ul class="clearfix">
-                        <li><a href="/">首页</a></li>
+                        <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
                         <li><a href="#">惠优税</a></li>
                         <li class="nav-active"><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                         <li><a href="#">惠多薪</a></li>
                         <li><a href="#">惠创业</a></li>
                         <li><a href="#">惠找事</a></li>
-                        <li><a href="#">惠启动</a></li>
+                        <li><a href="#">惠企动</a></li>
                     </ul>
                 </div>
                 <!-- 企业入口 -->
-                <a class="enterprise" href="http://172.26.3.12/#/login" target="_blank">
+                <a class="enterprise" href="http://172.26.3.12:8009/#/login" target="_blank">
                     <div class="enterprise-portal">
                         企业入口
                     </div>
@@ -112,6 +112,12 @@
                             <input type='hidden' id='identification' value='灵活用工'>
                         </div>
                         <div class="header-right-btn" onclick="btnErp()">获取方案</div>
+                        <!-- 提交成果后弹窗 -->
+                        <div class="mask-box">
+                            <span></span>
+                            <p class="mask-box-title">提交成功</p>
+                            <p class="mask-box-content">我们会在一个工作日内联系您</p>
+                        </div>
                     </div>
                 </div>
                 <div class="focus-icon">
@@ -481,6 +487,12 @@
                     <input type='hidden' id='sources' value='惠灵工'>
                     <input type='hidden' id='identifications' value='灵活用工'>
                     <div class="form-btn" onclick="form_btn()">获取方案</div>
+                </div>
+                <!-- 提交成果后弹窗 -->
+                <div class="mask-box">
+                    <span></span>
+                    <p class="mask-box-title">提交成功</p>
+                    <p class="mask-box-content">我们会在一个工作日内联系您</p>
                 </div>
             </div>
 

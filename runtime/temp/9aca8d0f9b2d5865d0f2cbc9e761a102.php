@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572404913;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1572590696;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +48,8 @@
                 </div>
                 <div>
                   <input type="text" placeholder="请输入验证码" id="code" value="" >
-                  <span onclick="get_qy_code()">获取验证码</span>
+                  <span onclick="get_qy_code(this)">获取验证码</span>
+                  <span id="msg_code2" style="display:none;">60秒后重新获取</span>
                 </div>
                 <div>
                   <span>输入密码</span>
@@ -98,7 +99,8 @@
                 </div>
                 <div>
                   <input type="text" placeholder="请输入验证码" id="user_code">
-                  <span onclick="get_code()">获取验证码</span>
+                  <span onclick="get_code(this)">获取验证码</span>
+                  <span id="msg_code" style="display:none;">60秒后重新获取</span>
                 </div>
                 <div>
                   <span>输入密码</span>

@@ -329,10 +329,10 @@ function change_tax(objthis){
 
 }
 var time_one = 0;
-var time = 60;
+
 
 var time_one2 = 0;
-var time2 = 60;
+
 
 
 //获取gr注册验证码
@@ -341,11 +341,9 @@ function get_code(objthis){
     if(code == '' || code == 'undefined' || code == undefined){
         layer.msg('请填写手机号', {icon: 2, time: 2000});return;
     }
-    if(time_one > 0){
-        $(objthis).attr('disabled',true);
-        return;
-    }
     settime(objthis);
+
+
     var url = baseUrl + '/api/wechatLogin/sendRegisterSMSCode';
     $.ajax({
         type:"post",
@@ -376,11 +374,9 @@ function get_qy_code(objthis){
     if(code == '' || code == 'undefined' || code == undefined){
         layer.msg('请填写手机号', {icon: 2, time: 2000});return;
     }
-    if(time_one2 > 0){
-        $(objthis).attr('disabled',true);
-        return;
-    }
     settime2(objthis);
+
+    return;
     var url = baseUrl + '/api/wechatLogin/sendRegisterSMSCode';
     $.ajax({
         type:"post",
@@ -407,25 +403,21 @@ function get_qy_code(objthis){
 
 
 function settime(obj) { //发送验证码倒计时
-    ++time_one;
-    if(time_one > 1){
-        return;
-    }
+    $(obj).css('display','none');
+    $('#msg_code').css('display','block');
+    var time2 = 60;
     var validCode = true;
 
-    var $code = $(obj);
-    $(obj).attr('disabled',true);
     if (validCode) {
         validCode = false;
         var t = setInterval(function () {
-            time--;
-            $code.html(time + "秒");
-            if (time == 0) {
+            time2--;
+            $('#msg_code').html(time2 + "秒后重新获取");
+            if (time2 == 0) {
                 clearInterval(t);
-                $code.html("重新获取");
                 validCode = true;
-                time_one = 0;
                 $('#msg_code').css('display','none');
+                $(obj).css('display','block');
             }
         }, 1000)
     }
@@ -433,25 +425,21 @@ function settime(obj) { //发送验证码倒计时
 
 
 function settime2(obj) { //发送验证码倒计时
-    ++time_one2;
-    if(time_one2 > 1){
-        return;
-    }
+    $(obj).css('display','none');
+    $('#msg_code2').css('display','block');
+    var time2 = 60;
     var validCode = true;
 
-    var $code = $(obj);
-    $(obj).attr('disabled',true);
     if (validCode) {
         validCode = false;
         var t = setInterval(function () {
             time2--;
-            $code.html(time2 + "秒");
+            $('#msg_code2').html(time2 + "秒后重新获取");
             if (time2 == 0) {
                 clearInterval(t);
-                $code.html("重新获取");
                 validCode = true;
-                time_one2 = 0;
                 $('#msg_code2').css('display','none');
+                $(obj).css('display','block');
             }
         }, 1000)
     }

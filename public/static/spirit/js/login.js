@@ -166,10 +166,6 @@ var login_module = (function () {
             layer.msg('请填写手机号', {icon: 2, time: 2000});
             return;
         }
-        if(time_one > 0){
-            $(objthis).attr('disabled',true);
-            return;
-        }
         settime(objthis);
         var url = baseUrl + '/api/wechatLogin/sendSMSCode';
         $.ajax({
@@ -193,30 +189,7 @@ var login_module = (function () {
             }
         });
     };
-    function settime(obj) { //发送验证码倒计时
-        ++time_one;
-        if(time_one > 1){
-            return;
-        }
-        var validCode = true;
 
-        var $code = $(obj);
-        $(obj).attr('disabled',true);
-        if (validCode) {
-            validCode = false;
-            var t = setInterval(function () {
-                time--;
-                $code.html(time + "秒");
-                if (time == 0) {
-                    clearInterval(t);
-                    $code.html("重新获取");
-                    validCode = true;
-                    time_one = 0;
-                    $('#msg_code').css('display','none');
-                }
-            }, 1000)
-        }
-    }
     return {
         phone_login_info: phone_login_info,
         account_login_info: account_login_info,
@@ -225,6 +198,25 @@ var login_module = (function () {
 })();
 
 
+function settime(obj) { //发送验证码倒计时
+    $(obj).css('display','none');
+    $('#msg_code').css('display','block');
+    var time2 = 60;
+    var validCode = true;
 
+    if (validCode) {
+        validCode = false;
+        var t = setInterval(function () {
+            time2--;
+            $('#msg_code').html(time2 + "秒后重新获取");
+            if (time2 == 0) {
+                clearInterval(t);
+                validCode = true;
+                $('#msg_code').css('display','none');
+                $(obj).css('display','block');
+            }
+        }, 1000)
+    }
+}
 
 

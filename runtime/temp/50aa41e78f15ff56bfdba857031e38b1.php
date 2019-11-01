@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572506226;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572590826;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +68,8 @@
                 <div class='code_box'>
                   <input type="text" placeholder="验证码" class='code_input'>
                   <i></i>
-                  <span class='huo_code' onclick="login_module.get_code()">获取验证码</span>
+                  <span class='huo_code' onclick="login_module.get_code(this)">获取验证码</span>
+                  <span id="msg_code" style="display:none;">60秒后重新获取</span>
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>
