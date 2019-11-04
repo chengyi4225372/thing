@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\get_info.html";i:1572506611;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\get_info.html";i:1572835869;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +12,19 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src='/static/home/js/common.js'></script>
   <script src='/static/common/js/common.js'></script>
+  <style>
+    /* 归属信息 */
+    .affiliation{
+      text-align: right;
+      font-size: 10px;
+      color: #ccc;
+      padding-right: 20px;
+      margin-top: 200px;
+    }
+    .page{
+      margin-top: 60px;
+    }
+  </style>
 </head>
 
 <body>
@@ -64,6 +77,11 @@
           <div class='line'></div>
           <div class='tuwen'>
             <div class='wenzi'><?php echo $info['content']; ?></div>
+
+            <div class="affiliation">
+              <p>本信息来源：中国招标网</p>
+            </div>
+
             <div class='page'>
                <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
               <div><span>上一篇:</span><a href="#">已经是第一篇了</a></div>

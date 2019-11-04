@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572515722;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572515770;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -306,7 +306,7 @@
                                     <div><?php echo $ss['title']; ?></div>
                                     <div><?php echo $ss['create_time']; ?></div>
                                 </div>
-                                <div> <?php echo mb_substr($ss['describe'],'0','180','utf-8'); ?></div>
+                                <div> <?php echo $ss['describe']; ?></div>
                             </a>
                         </div>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
@@ -325,7 +325,7 @@
                                     <div><?php echo $biaos['create_time']; ?></div>
                                 </div>
                                 <div>
-                                    <?php echo mb_substr($biaos['describe'],'0','180','utf-8'); ?>
+                                    <?php echo $biaos['describe']; ?>
                                 </div>
                             </a>
                         </div>
