@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572515770;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572835919;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -122,7 +122,7 @@
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
                             <li><a href="#">惠找事</a></li>
-                            <li><a href="#">惠启动</a></li>
+                            <li><a href="#">惠企动</a></li>
                         </ul>
 
                         <?php if(empty($userinfo['mobile'])): ?>
