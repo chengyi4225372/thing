@@ -66,7 +66,7 @@ var login_module = (function () {
                 var sess = $.session.get('token',ret.data.token);
                 var sess = $.session.get('userName',ret.data.userName);
                 var sess = $.session.get('userType',ret.data.userType);
-                
+
                 if (ret.status == 200) {
                     if (ret.status == 200) {
                         $.post(
@@ -81,7 +81,7 @@ var login_module = (function () {
                                 if (res.status == true) {
                                     layer.msg(res.message, {icon: 1, time: 1500}, function () {
                                         var href_url = $('#login_url').attr('data-url');
-                                        //location.href = href_url;
+                                        location.href = href_url;
 
                                     });
                                 } else {
