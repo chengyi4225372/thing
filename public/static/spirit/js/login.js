@@ -66,7 +66,7 @@ var login_module = (function () {
                 var sess = $.session.get('token',ret.data.token);
                 var sess = $.session.get('userName',ret.data.userName);
                 var sess = $.session.get('userType',ret.data.userType);
-                console.log(sess);return;
+                
                 if (ret.status == 200) {
                     if (ret.status == 200) {
                         $.post(
