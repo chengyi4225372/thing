@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -286,7 +286,11 @@
                         <div class='totalInfo_title'>招商政策</div>
                         {volist name="shang" id="ss"}
                         <div class='totalInfo_content'>
-                            <a href="{:url('home/index/infoList')}">
+                            <a href="javascript:void(0)"
+                               data-url="{:url('/home/index/getInfo',['id' => $ss.id])}"
+                               login_url="{:url('/home/login/login')}"
+                               mobile-phone="{$userinfo['mobile']}"
+                               data-id="{$ss['id']}" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div>{$ss.title}</div>
                                     <div>{$ss.create_time}</div>
@@ -304,7 +308,10 @@
                         <div class='totalInfo_title'>招标信息</div>
                         {volist name="biao" id="biaos"}
                         <div class='totalInfo_content'>
-                            <a href="{:url('home/index/infoList')}">
+                            <a href="javascript:void(0)"
+                               data-url="{:url('/home/index/getInfo',['id' => $ss.id])}"
+                               login_url="{:url('/home/login/login')}"
+                               mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div>{$biaos.title|default=''}</div>
                                     <div>{$biaos.create_time}</div>

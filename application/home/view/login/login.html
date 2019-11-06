@@ -29,7 +29,8 @@
           </div>
         </div>
       </div>
-      <div id="login_url" data-url="{:url('/home/index/index')}"></div>
+      <div id="login_url" data-url="{:url('/home/index/getInfo')}"></div>
+      <div id="login_url2" data-url="{:url('/home/index/index')}"></div>
       <div id="check_url" data-url="{:url('/home/login/savetoken')}"></div>
       <div class='login_content'>
         <div class='login_xin'>
@@ -54,7 +55,7 @@
                   <span>还没有账号?</span>
                   <a href='./register.html'>去注册</a>
                 </div>
-                <button onclick="login_module.account_login_info(this)">登录</button>
+                <button data-id="{$data_id}" onclick="login_module.account_login_info(this)">登录</button>
               </div>
               <div class='phone_user'>
                 <div class='phone_box'>
@@ -74,7 +75,7 @@
                   <span>还没有账号?</span>
                   <a href='./register.html'>去注册</a>
                 </div>
-                <button onclick="login_module.phone_login_info(this)">登录</button>
+                <button data-id="{$data_id}" onclick="login_module.phone_login_info(this)">登录</button>
               </div>
             </div>
           </div>

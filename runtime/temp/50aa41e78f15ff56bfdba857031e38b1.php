@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1572590826;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1573030894;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +30,8 @@
           </div>
         </div>
       </div>
-      <div id="login_url" data-url="<?php echo url('/home/index/index'); ?>"></div>
+      <div id="login_url" data-url="<?php echo url('/home/index/getInfo'); ?>"></div>
+      <div id="login_url2" data-url="<?php echo url('/home/index/index'); ?>"></div>
       <div id="check_url" data-url="<?php echo url('/home/login/savetoken'); ?>"></div>
       <div class='login_content'>
         <div class='login_xin'>
@@ -55,7 +56,7 @@
                   <span>还没有账号?</span>
                   <a href='./register.html'>去注册</a>
                 </div>
-                <button onclick="login_module.account_login_info(this)">登录</button>
+                <button data-id="<?php echo $data_id; ?>" onclick="login_module.account_login_info(this)">登录</button>
               </div>
               <div class='phone_user'>
                 <div class='phone_box'>
@@ -69,13 +70,13 @@
                   <input type="text" placeholder="验证码" class='code_input'>
                   <i></i>
                   <span class='huo_code' onclick="login_module.get_code(this)">获取验证码</span>
-                  <span id="msg_code" style="display:none;">60秒后重新获取</span>
+                  <span class="huo_code" id="msg_code" style="display:none;">60秒后重新获取</span>
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>
                   <a href='./register.html'>去注册</a>
                 </div>
-                <button onclick="login_module.phone_login_info(this)">登录</button>
+                <button data-id="<?php echo $data_id; ?>" onclick="login_module.phone_login_info(this)">登录</button>
               </div>
             </div>
           </div>

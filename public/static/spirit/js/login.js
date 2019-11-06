@@ -44,6 +44,7 @@ var login_module = (function () {
         var phone = $(objthis).parent().find('.phone_input').val();
         var code_input = $(objthis).parent().find('.code_input').val();
         var check_phones = check_phone(phone);
+        var id = $(objthis).attr('data-id');
         if (check_phones == false) {
             layer.msg('手机号不合法', {icon: 2, time: 2000});
             return;
@@ -62,10 +63,10 @@ var login_module = (function () {
             },
             dataType: 'json',
             success: function (ret) {
-                var sess = $.session.get('mobile',ret.data.mobile);
-                var sess = $.session.get('token',ret.data.token);
-                var sess = $.session.get('userName',ret.data.userName);
-                var sess = $.session.get('userType',ret.data.userType);
+                var sess = $.session.get('mobile', ret.data.mobile);
+                var sess = $.session.get('token', ret.data.token);
+                var sess = $.session.get('userName', ret.data.userName);
+                var sess = $.session.get('userType', ret.data.userType);
 
                 if (ret.status == 200) {
                     if (ret.status == 200) {
@@ -81,8 +82,13 @@ var login_module = (function () {
                                 if (res.status == true) {
                                     layer.msg(res.message, {icon: 1, time: 1500}, function () {
                                         var href_url = $('#login_url').attr('data-url');
-                                        location.href = href_url;
-
+                                        var href_url2 = $('#login_url2').attr('data-url');
+                                        //如果是从点击详情进来的就直接调到详情页，没有就调到首页
+                                        if (id == '' || id == 'undefined' || id == undefined) {
+                                            location.href = href_url2;
+                                        } else {
+                                            location.href = href_url + '?mid=' + id;
+                                        }
                                     });
                                 } else {
                                     layer.msg(res.message, {icon: 2, time: 2000});
@@ -105,6 +111,7 @@ var login_module = (function () {
         var phone = $(objthis).parent().find('.accout_input').val();
         var pass_input = $(objthis).parent().find('.pass_input').val();
         var check_phones = check_phone(phone);
+        var id = $(objthis).attr('data-id');
         if (phone == '' || phone == 'undefined' || phone == undefined) {
             layer.msg('请输入用户名', {icon: 2, time: 2000});
             return;
@@ -140,7 +147,13 @@ var login_module = (function () {
                             if (res.status == true) {
                                 layer.msg(res.message, {icon: 1, time: 1500}, function () {
                                     var href_url = $('#login_url').attr('data-url');
-                                    location.href = href_url;
+                                    var href_url2 = $('#login_url2').attr('data-url');
+                                    //如果是从点击详情进来的就直接调到详情页，没有就调到首页
+                                    if (id == '' || id == 'undefined' || id == undefined) {
+                                        location.href = href_url2;
+                                    } else {
+                                        location.href = href_url + '?mid=' + id;
+                                    }
                                 });
                             } else {
                                 layer.msg(res.message, {icon: 2, time: 2000});
@@ -179,7 +192,7 @@ var login_module = (function () {
             success: function (res) {
 
                 if (res.status == 200) {
-                    layer.msg('验证码已发送，请查收短信',{icon:1,time:2000});
+                    layer.msg('验证码已发送，请查收短信', {icon: 1, time: 2000});
                 } else {
                     layer.msg(res.message, {icon: 2, time: 2000});
                 }
@@ -199,8 +212,8 @@ var login_module = (function () {
 
 
 function settime(obj) { //发送验证码倒计时
-    $(obj).css('display','none');
-    $('#msg_code').css('display','block');
+    $(obj).css('display', 'none');
+    $('#msg_code').css('display', 'block');
     var time2 = 60;
     var validCode = true;
 
@@ -212,8 +225,8 @@ function settime(obj) { //发送验证码倒计时
             if (time2 == 0) {
                 clearInterval(t);
                 validCode = true;
-                $('#msg_code').css('display','none');
-                $(obj).css('display','block');
+                $('#msg_code').css('display', 'none');
+                $(obj).css('display', 'block');
             }
         }, 1000)
     }

@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1572579701;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573031347;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -301,7 +301,11 @@
                         <div class='totalInfo_title'>招商政策</div>
                         <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
-                            <a href="<?php echo url('home/index/infoList'); ?>">
+                            <a href="javascript:void(0)"
+                               data-url="<?php echo url('/home/index/getInfo',['id' => $ss['id']]); ?>"
+                               login_url="<?php echo url('/home/login/login'); ?>"
+                               mobile-phone="<?php echo $userinfo['mobile']; ?>"
+                               data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div><?php echo $ss['title']; ?></div>
                                     <div><?php echo $ss['create_time']; ?></div>
@@ -319,7 +323,10 @@
                         <div class='totalInfo_title'>招标信息</div>
                         <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
-                            <a href="<?php echo url('home/index/infoList'); ?>">
+                            <a href="javascript:void(0)"
+                               data-url="<?php echo url('/home/index/getInfo',['id' => $ss['id']]); ?>"
+                               login_url="<?php echo url('/home/login/login'); ?>"
+                               mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                                     <div><?php echo $biaos['create_time']; ?></div>
