@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1573032593;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="__SPI__/css/base.css">
-  <link rel="stylesheet" href="__SPI__/css/register.css">
-  <script src='__SPI__/js/register.js'></script>
-  <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
+  <link rel="stylesheet" href="/static/spirit/css/base.css">
+  <link rel="stylesheet" href="/static/spirit/css/register.css">
+  <script src='/static/spirit/js/register.js'></script>
+  <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
@@ -20,16 +21,16 @@
     <div class="header-box">
       <div class="w header">
         <div class="logo">
-          <a href="{:url('/home/index/index')}"><img src="__SPI__/images/logo22.png" alt=""></a>
+          <a href="<?php echo url('/home/index/index'); ?>"><img src="/static/spirit/images/logo22.png" alt=""></a>
         </div>
-        <div class="tohome"><a href="{:url('/home/index/index')}">返回首页>></a></div>
+        <div class="tohome"><a href="<?php echo url('/home/index/index'); ?>">返回首页>></a></div>
       </div>
     </div>
     <!-- 登陆表单 -->
     <div class="form-box">
       <div class="w form">
         <!-- 表单内容 -->
-        <div id="login_url" data-url="{:url('/home/login/login')}"></div>
+        <div id="login_url" data-url="<?php echo url('/home/login/login'); ?>"></div>
         <div class="form-content" id="form-content">
           <div class="form-content-title">欢迎注册惠灵工账号</div>
           <div class="tabs">
@@ -58,7 +59,7 @@
                   <span>确认密码</span>
                   <input type="password" placeholder="请再次输入密码" id="password2" value="">
                 </div>
-                <p>已有账号？<a href="{:url('/home/login/login',['id' => $data_id])}">去登录</a></p>
+                <p>已有账号？<a href="<?php echo url('/home/login/login',['id' => $data_id]); ?>">去登录</a></p>
                 <span id="qy-one-btn">下一步</span>
               </div>
               <!-- 第二个盒子 -->
@@ -84,7 +85,7 @@
                   <input type="text" placeholder="请输入识别号" id="industryNo">
                 </div>
                 <input type="hidden" id="user_type" value="B"/>
-                <p>已有账号？<a href="{:url('/home/login/login',['id' => $data_id])}">去登录</a></p>
+                <p>已有账号？<a href="<?php echo url('/home/login/login',['id' => $data_id]); ?>">去登录</a></p>
                 <span class="qy-two-btn" id="qy-two-btn">完成注册</span>
               </div>
             </div>
@@ -109,7 +110,7 @@
                   <span>确认密码</span>
                   <input type="password" placeholder="请再次输入密码" id="user_password2">
                 </div>
-                <p>已有账号？<a href="{:url('/home/login/login',['id' => $data_id])}">去登录</a></p>
+                <p>已有账号？<a href="<?php echo url('/home/login/login',['id' => $data_id]); ?>">去登录</a></p>
                 <span id="gr-one-btn">下一步</span>
               </div>
               <!-- 第二个盒子 -->
@@ -149,10 +150,10 @@
           <span class="form-content-title">欢迎注册惠灵工账号</span>
           <div>
             <div class="success">
-              <img src="__SPI__/images/zhucechenggong2x.png" alt="">
+              <img src="/static/spirit/images/zhucechenggong2x.png" alt="">
               <p>恭喜!注册成功!</p>
             </div>
-            <div><a href="{:url('/home/login/login',['id' => $data_id])}">立即登录</a></div>
+            <div><a href="<?php echo url('/home/login/login',['id' => $data_id]); ?>">立即登录</a></div>
           </div>
         </div>
       </div>

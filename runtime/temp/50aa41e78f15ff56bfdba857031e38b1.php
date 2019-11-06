@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1573030894;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1573032529;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +54,7 @@
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>
-                  <a href='./register.html'>去注册</a>
+                  <a href="<?php echo url('/home/login/register',['id' => $data_id]); ?>">去注册</a>
                 </div>
                 <button data-id="<?php echo $data_id; ?>" onclick="login_module.account_login_info(this)">登录</button>
               </div>
@@ -74,7 +74,7 @@
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>
-                  <a href='./register.html'>去注册</a>
+                  <a href="<?php echo url('/home/login/register',['id' => $data_id]); ?>">去注册</a>
                 </div>
                 <button data-id="<?php echo $data_id; ?>" onclick="login_module.phone_login_info(this)">登录</button>
               </div>

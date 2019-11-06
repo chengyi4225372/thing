@@ -18,6 +18,12 @@ class Login extends  BaseController{
     }
 
     public  function register(){
+        if(isset($_GET['id']) && !empty($_GET['id'])){
+            $id = intval($_GET['id']);
+        }else{
+            $id = '';
+        }
+        $this->assign('data_id',$id);
         return $this->fetch();
     }
 
