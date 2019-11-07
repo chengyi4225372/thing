@@ -53,7 +53,9 @@ dd {
 a {
     text-decoration: none;
 }
-
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
 
 /* nav部分 */
 
@@ -1135,12 +1137,13 @@ span:nth-child(4) {
     position: fixed;
     bottom: 20px;
     right: 135px;
-    width: 50px;
-    height: 45px;
+    width: 80px;
+    height: 70px;
     text-align: center;
-    z-index: 999px;
+    line-height: 30px;
+    z-index: 999;
     background-color: #fff;
-    padding-top: 5px;
+    padding-top: 13px;
     display: none;
     cursor: pointer
 }
@@ -1295,7 +1298,9 @@ span:nth-child(4) {
 .u_info {
     position: relative;
     float: right;
-    margin-top: 17px;
+    margin-top: 10px;
+    padding-left: 20px;
+    height: 80px;
     cursor: pointer;
 }
 
@@ -1304,8 +1309,8 @@ span:nth-child(4) {
     width: 90px;
     height: 43px;
     position: absolute;
-    bottom: -61px;
-    left: -29px;
+    bottom: -10px;
+    left: -9px;
     background-color: pink;
     text-align: center;
     box-sizing: border-box;
