@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573109180;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1573109606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573110364;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1573109606;}*/ ?>
  <!DOCTYPE html>
 <html lang="en">
 
@@ -117,7 +117,7 @@
                         <div class='content_logo' id='logo'></div>
                         <ul>
                             <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-                            <li><a href="#">惠优税</a></li>
+                            <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
                             <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
                             <li><a href="#">惠创业</a></li>
