@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/opt/web/hui-/public/../application/home/view/optimal/index.html";i:1573110302;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/opt/web/hui-/public/../application/home/view/optimal/index.html";i:1573112157;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-        <img src="/static/error_mes.png" style="width:1280px;height:800px;">
+        <img src="/static/hys_error.png" style="width:1280px;height:800px;">
     </div>
 </body>
 </html>
