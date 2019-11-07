@@ -87,13 +87,17 @@ var login_module = (function () {
                                         var href_url3 = $('#login_url3').attr('data-url');//惠灵工的了解更多
                                         var href_url4 = $('#login_url4').attr('data-url');//首页的了解更多
                                         //如果是从点击详情进来的就直接调到详情页，没有就调到首页
-                                        if(web_type == 1 && (id != '0' || id != 'undefined' || id != undefined)){
+                                        if(web_type == 1){
+                                            //首页的文章详情
                                             location.href = href_url + '?mid=' + id+'&type='+web_type;
                                         }else if(web_type == 2){
-                                            location.href = href_url3 + 'type='+web_type;
-                                        }else if(web_type == 1 && (id == '0' || id == 'undefined' || id == undefined)){
-                                            location.href = href_url4 + 'type=' + web_type;
+                                            //惠灵工的了解更多
+                                            location.href = href_url3 + '?type='+web_type;
+                                        }else if((web_type == 3)){
+                                            //首页了解更多
+                                            location.href = href_url4 + '?type=' + web_type;
                                         }else{
+                                            //首页
                                             location.href = href_url2;
                                         }
 
