@@ -1,9 +1,0 @@
----------------------------------------------------------------
-[ 2019-11-07T11:00:08+08:00 ] 172.26.2.194 GET /home/index/getInfo.html?mid=type=1
-[ error ] [0]variable type error： boolean[/opt/web/hui-/thinkphp/library/think/Response.php:316]
----------------------------------------------------------------
-[ 2019-11-07T11:07:28+08:00 ] 172.26.2.194 GET /home/index/getInfo.html?mid=0type=1
-[ error ] [0]variable type error： boolean[/opt/web/hui-/thinkphp/library/think/Response.php:316]
----------------------------------------------------------------
-[ 2019-11-07T11:09:34+08:00 ] 172.26.2.194 GET /home/index/getInfo.html?mid=0type=1
-[ error ] [0]variable type error： boolean[/opt/web/hui-/thinkphp/library/think/Response.php:316]

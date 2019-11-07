@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573096769;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573109180;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1573109606;}*/ ?>
  <!DOCTYPE html>
 <html lang="en">
 
@@ -116,7 +116,7 @@
                     <div class='w content'>
                         <div class='content_logo' id='logo'></div>
                         <ul>
-                            <li class="nav-active"><a href="#">首页</a></li>
+                            <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
                             <li><a href="#">惠优税</a></li>
                             <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
@@ -144,7 +144,7 @@
          style="width:30px;height:30px; vertical-align: middle;">
     <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
     <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+        <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; endif; ?>
@@ -418,7 +418,5 @@
     </div>
 
 </body>
-
-
 
 </html>
