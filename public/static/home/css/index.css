@@ -1401,8 +1401,11 @@ line-height:72px;
 .u_info {
     position: relative;
     float: right;
-    margin-top: 17px;
+    /*margin-top: 17px;*/
     cursor: pointer;
+    height: 100%;
+    padding-top: 17px;
+    padding-left: 20px;
 }
 
 .u_info_content {
@@ -1410,8 +1413,8 @@ line-height:72px;
     width: 90px;
     height: 43px;
     position: absolute;
-    bottom: -61px;
-    left: -29px;
+    bottom: -29px;
+    left: -9px;
     background-color: pink;
     text-align: center;
     box-sizing: border-box;
