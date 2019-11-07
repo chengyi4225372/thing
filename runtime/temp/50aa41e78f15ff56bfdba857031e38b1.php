@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1573032529;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/login/login.html";i:1573094730;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +32,8 @@
       </div>
       <div id="login_url" data-url="<?php echo url('/home/index/getInfo'); ?>"></div>
       <div id="login_url2" data-url="<?php echo url('/home/index/index'); ?>"></div>
+      <div id="login_url3" data-url="<?php echo url('/home/spirit/informationlist'); ?>"></div>
+      <div id="login_url4" data-url="<?php echo url('/home/index/infoList'); ?>"></div>
       <div id="check_url" data-url="<?php echo url('/home/login/savetoken'); ?>"></div>
       <div class='login_content'>
         <div class='login_xin'>
@@ -54,9 +56,9 @@
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>
-                  <a href="<?php echo url('/home/login/register',['id' => $data_id]); ?>">去注册</a>
+                  <a href="<?php echo url('/home/login/register',['id' => $data_id,'type' => $web_type]); ?>">去注册</a>
                 </div>
-                <button data-id="<?php echo $data_id; ?>" onclick="login_module.account_login_info(this)">登录</button>
+                <button data-id="<?php echo $data_id; ?>" web_type="<?php echo $web_type; ?>" onclick="login_module.account_login_info(this)">登录</button>
               </div>
               <div class='phone_user'>
                 <div class='phone_box'>
@@ -74,9 +76,9 @@
                 </div>
                 <div class='goRegister'>
                   <span>还没有账号?</span>
-                  <a href="<?php echo url('/home/login/register',['id' => $data_id]); ?>">去注册</a>
+                  <a href="<?php echo url('/home/login/register',['id' => $data_id,'type' => $web_type]); ?>">去注册</a>
                 </div>
-                <button data-id="<?php echo $data_id; ?>" onclick="login_module.phone_login_info(this)">登录</button>
+                <button data-id="<?php echo $data_id; ?>" web_type="<?php echo $web_type; ?>" onclick="login_module.phone_login_info(this)">登录</button>
               </div>
             </div>
           </div>

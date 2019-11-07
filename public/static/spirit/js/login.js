@@ -44,6 +44,7 @@ var login_module = (function () {
         var phone = $(objthis).parent().find('.phone_input').val();
         var code_input = $(objthis).parent().find('.code_input').val();
         var check_phones = check_phone(phone);
+        var web_type = $(objthis).attr('web_type');
         var id = $(objthis).attr('data-id');
         if (check_phones == false) {
             layer.msg('手机号不合法', {icon: 2, time: 2000});
@@ -81,14 +82,21 @@ var login_module = (function () {
                             function (res) {
                                 if (res.status == true) {
                                     layer.msg(res.message, {icon: 1, time: 1500}, function () {
-                                        var href_url = $('#login_url').attr('data-url');
-                                        var href_url2 = $('#login_url2').attr('data-url');
+                                        var href_url = $('#login_url').attr('data-url');//首页的文章详情
+                                        var href_url2 = $('#login_url2').attr('data-url');//首页
+                                        var href_url3 = $('#login_url3').attr('data-url');//惠灵工的了解更多
+                                        var href_url4 = $('#login_url4').attr('data-url');//首页的了解更多
                                         //如果是从点击详情进来的就直接调到详情页，没有就调到首页
-                                        if (id == '' || id == 'undefined' || id == undefined) {
+                                        if(web_type == 1 && (id != '0' || id != 'undefined' || id != undefined)){
+                                            location.href = href_url + '?mid=' + id+'&type='+web_type;
+                                        }else if(web_type == 2){
+                                            location.href = href_url3 + 'type='+web_type;
+                                        }else if(web_type == 1 && (id == '0' || id == 'undefined' || id == undefined)){
+                                            location.href = href_url4 + 'type=' + web_type;
+                                        }else{
                                             location.href = href_url2;
-                                        } else {
-                                            location.href = href_url + '?mid=' + id;
                                         }
+
                                     });
                                 } else {
                                     layer.msg(res.message, {icon: 2, time: 2000});
@@ -111,6 +119,7 @@ var login_module = (function () {
         var phone = $(objthis).parent().find('.accout_input').val();
         var pass_input = $(objthis).parent().find('.pass_input').val();
         var check_phones = check_phone(phone);
+        var web_type = $(objthis).attr('web_type');
         var id = $(objthis).attr('data-id');
         if (phone == '' || phone == 'undefined' || phone == undefined) {
             layer.msg('请输入用户名', {icon: 2, time: 2000});
@@ -146,13 +155,23 @@ var login_module = (function () {
                         function (res) {
                             if (res.status == true) {
                                 layer.msg(res.message, {icon: 1, time: 1500}, function () {
-                                    var href_url = $('#login_url').attr('data-url');
-                                    var href_url2 = $('#login_url2').attr('data-url');
+                                    var href_url = $('#login_url').attr('data-url');//首页的文章详情
+                                    var href_url2 = $('#login_url2').attr('data-url');//首页
+                                    var href_url3 = $('#login_url3').attr('data-url');//惠灵工的了解更多
+                                    var href_url4 = $('#login_url4').attr('data-url');//首页的了解更多
                                     //如果是从点击详情进来的就直接调到详情页，没有就调到首页
-                                    if (id == '' || id == 'undefined' || id == undefined) {
+                                    if(web_type == 1){
+                                        //首页的文章详情
+                                        location.href = href_url + '?mid=' + id+'&type='+web_type;
+                                    }else if(web_type == 2){
+                                        //惠灵工的了解更多
+                                        location.href = href_url3 + '?type='+web_type;
+                                    }else if((web_type == 3)){
+                                        //首页了解更多
+                                        location.href = href_url4 + '?type=' + web_type;
+                                    }else{
+                                        //首页
                                         location.href = href_url2;
-                                    } else {
-                                        location.href = href_url + '?mid=' + id;
                                     }
                                 });
                             } else {

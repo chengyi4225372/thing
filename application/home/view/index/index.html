@@ -287,8 +287,8 @@
                         {volist name="shang" id="ss"}
                         <div class='totalInfo_content'>
                             <a href="javascript:void(0)"
-                               data-url="{:url('/home/index/getInfo',['id' => $ss.id])}"
-                               login_url="{:url('/home/login/login')}"
+                               data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"
+                               login_url="{:url('/home/login/login',['type' => 1,'id' => $ss.id])}"
                                mobile-phone="{$userinfo['mobile']}"
                                data-id="{$ss['id']}" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
@@ -301,7 +301,7 @@
                         {/volist}
                         <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoList')}"
-                            login_url="{:url('/home/login/login')}">了解更多</button>
+                            login_url="{:url('/home/login/login',['type' => 3])}">了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
@@ -309,8 +309,8 @@
                         {volist name="biao" id="biaos"}
                         <div class='totalInfo_content'>
                             <a href="javascript:void(0)"
-                               data-url="{:url('/home/index/getInfo',['id' => $ss.id])}"
-                               login_url="{:url('/home/login/login')}"
+                               data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"
+                               login_url="{:url('/home/login/login',['type' => 1,'id' => $ss.id])}"
                                mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div>{$biaos.title|default=''}</div>
@@ -325,7 +325,7 @@
 
                         <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoList')}"
-                            login_url="{:url('/home/login/login')}">了解更多</button>
+                            login_url="{:url('/home/login/login',['type' => 3])}">了解更多</button>
 
                     </div>
 

@@ -11,8 +11,14 @@ class Login extends  BaseController{
         if(isset($_GET['id']) && !empty($_GET['id'])){
             $id = intval($_GET['id']);
         }else{
-            $id = '';
+            $id = '0';
         }
+        if(isset($_GET['type']) && !empty($_GET['type'])){
+            $type = intval($_GET['type']);
+        }else{
+            $type = '0';
+        }
+        $this->assign('web_type',$type);
         $this->assign('data_id',$id);
         return $this->fetch();
     }

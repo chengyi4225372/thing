@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573031347;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573096769;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1572500941;}*/ ?>
  <!DOCTYPE html>
 <html lang="en">
 
@@ -302,8 +302,8 @@
                         <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
                             <a href="javascript:void(0)"
-                               data-url="<?php echo url('/home/index/getInfo',['id' => $ss['id']]); ?>"
-                               login_url="<?php echo url('/home/login/login'); ?>"
+                               data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"
+                               login_url="<?php echo url('/home/login/login',['type' => 1,'id' => $ss['id']]); ?>"
                                mobile-phone="<?php echo $userinfo['mobile']; ?>"
                                data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
@@ -316,7 +316,7 @@
                         <?php endforeach; endif; else: echo "" ;endif; ?>
                         <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoList'); ?>"
-                            login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
+                            login_url="<?php echo url('/home/login/login',['type' => 3]); ?>">了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
@@ -324,8 +324,8 @@
                         <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
                             <a href="javascript:void(0)"
-                               data-url="<?php echo url('/home/index/getInfo',['id' => $ss['id']]); ?>"
-                               login_url="<?php echo url('/home/login/login'); ?>"
+                               data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"
+                               login_url="<?php echo url('/home/login/login',['type' => 1,'id' => $ss['id']]); ?>"
                                mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
@@ -340,7 +340,7 @@
 
                         <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoList'); ?>"
-                            login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
+                            login_url="<?php echo url('/home/login/login',['type' => 3]); ?>">了解更多</button>
 
                     </div>
 
