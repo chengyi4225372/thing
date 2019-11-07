@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1572835919;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1572505804;}*/ ?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1573106971;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1573106971;}*/ ?>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -116,7 +116,7 @@
                     <div class='w content'>
                         <div class='content_logo' id='logo'></div>
                         <ul>
-                            <li class="nav-active"><a href="#">首页</a></li>
+                            <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
                             <li><a href="#">惠优税</a></li>
                             <li><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
                             <li><a href="#">惠多薪</a></li>
@@ -144,7 +144,7 @@
          style="width:30px;height:30px; vertical-align: middle;">
     <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
     <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+        <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; endif; ?>
@@ -301,7 +301,11 @@
                         <div class='totalInfo_title'>招商政策</div>
                         <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
-                            <a href="<?php echo url('home/index/infoList'); ?>">
+                            <a href="javascript:void(0)"
+                               data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"
+                               login_url="<?php echo url('/home/login/login',['type' => 1,'id' => $ss['id']]); ?>"
+                               mobile-phone="<?php echo $userinfo['mobile']; ?>"
+                               data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div><?php echo $ss['title']; ?></div>
                                     <div><?php echo $ss['create_time']; ?></div>
@@ -312,14 +316,17 @@
                         <?php endforeach; endif; else: echo "" ;endif; ?>
                         <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoList'); ?>"
-                            login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
+                            login_url="<?php echo url('/home/login/login',['type' => 3]); ?>">了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
                         <div class='totalInfo_title'>招标信息</div>
                         <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                         <div class='totalInfo_content'>
-                            <a href="<?php echo url('home/index/infoList'); ?>">
+                            <a href="javascript:void(0)"
+                               data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"
+                               login_url="<?php echo url('/home/login/login',['type' => 1,'id' => $ss['id']]); ?>"
+                               mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                                     <div><?php echo $biaos['create_time']; ?></div>
@@ -333,7 +340,7 @@
 
                         <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoList'); ?>"
-                            login_url="<?php echo url('/home/login/login'); ?>">了解更多</button>
+                            login_url="<?php echo url('/home/login/login',['type' => 3]); ?>">了解更多</button>
 
                     </div>
 
