@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\protuct\protucts\add.html";i:1571716443;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\layout\dialog.html";i:1571369306;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1572405618;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571899026;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/v1\view\login\index.html";i:1572328166;s:93:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\meta.html";i:1572405618;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\view\common\script.html";i:1571899026;}*/ ?>
 <!DOCTYPE html>
-<html lang="<?php echo $config['language']; ?>">
+<html lang="zh-CN">
 <head>
     <!-- 加载样式及META信息 -->
     <meta charset="utf-8">
@@ -43,72 +43,44 @@
   <script src="/static/assets/dist/js/respond.min.js"></script>
 <![endif]-->
 
-    
-    <!-- 用来添加自定义的 样式 -->
-    
 </head>
-<body class="hold-transition skin-purple-light sidebar-mini">
-<div class="container-fluid">
-    
-<style>
-    .dialog-content{margin:20px;}
-    .dialog-footer{position:fixed;right:39%;top:82%}
-    .red-color{color:red;}
-</style>
-<div class="dialog-content">
-    <form class="form-horizontal dialog-form" id="form">
-        <div class="row">
-            <div class="col-md-9">
-
-                <div class="form-group">
-                    <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>产品图片：</label>
-                    <div class="col-sm-9">
-                        <input type="file"  onchange="upload_file()" style="display:none;" class="form-control form-control-sm" id="file">
-                        <img id="imgs" src="/static/default.png" style="width:90px;height:80px;">
-                        <input type="hidden" id="Images" value="">
-                    </div>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="javascript:void(0);"><b>后台管理</b></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+        <form id="loginForm" action="<?php echo url('/v1/login/check'); ?>" login-action="<?php echo url('/index/login', ['url' => '']); ?>" method="post">
+            <div class="usernamelogin">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" id="pd-form-username" placeholder="<?php echo __('Username'); ?>" name="username" autocomplete="off" value=""
+                           data-rule="required;"/>
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
-
-                <div class="form-group">
-                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>产品名称：</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="names" name="names">
-                    </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" id="pd-form-password" placeholder="<?php echo __('Password'); ?>" name="password" autocomplete="off" value=""
+                           data-rule="<?php echo __('Password'); ?>:required;password"/>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
-                <div class="form-group">
-                    <label for="icp" class="col-sm-3 control-label">基本描述：</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value=""/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="tel" class="col-sm-3 control-label">跳转地址：</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="purl" class="form-control form-control-sm" name="purl" value=""/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="status" class="col-sm-3 control-label">状态：</label>
-                    <div class="col-sm-9">
-                        <select id="status" name="status" class="form-control form-control-sm">
-                            <option value="1">启用</option>
-                            <option value="2">禁止</option>
-                        </select>
-                    </div>
-                </div>
-
             </div>
-        </div>
-        <div class="td-align dialog-footer">
-            <button class="btn btn-primary adds" type="button"   data-url="<?php echo url('/v1/protuct/protucts/add'); ?>"><i class="fa fa-save"></i> 确定提交</button>
-            <button class="btn btn-warning" onclick="go_return()"> <i class="fa fa-close"></i> 取消</button>
-        </div>
-    </form>
-</div>
+            <div class="social-auth-links text-center">
+                <p>- TO -</p>
+                <button type="submit" id="submit" class="btn bg-purple btn-block btn-flat">Sign In</button>
+            </div>
+            <div class="alert alert-warning alert-dismissible margin-top10">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="fa fa-fw fa-thumbs-o-down"></i><span> Please enter your name and password</span></div>
 
+        </form>
+    </div>
+    <div class="lockscreen-footer text-center">
+        Copyright &copy; 2019-2025 <b>慧企云</b><br>
+        All rights reserved
+    </div>
+    <!-- /.login-box-body -->
 </div>
-
 <!-- 加载JS脚本 -->
 <!-- jQuery 3 -->
 <script src="/static/assets/components/jquery/dist/jquery.min.js"></script>
@@ -159,7 +131,6 @@
 <!--<script src="/static/assets/dist/js/common.js"></script>-->
 
 
-
-
+<script src="/static/assets/dist/js/login.js"></script>
 </body>
 </html>

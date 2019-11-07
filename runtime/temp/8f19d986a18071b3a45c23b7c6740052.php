@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1573106971;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1573106971;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\spirit\index.html";i:1573112788;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1573106971;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,12 +34,12 @@
                 <div class="nav">
                     <ul class="clearfix">
                         <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-                        <li><a href="#">惠优税</a></li>
+                        <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
                         <li class="nav-active"><a href="<?php echo url('/home/spirit/index'); ?>">惠灵工</a></li>
-                        <li><a href="#">惠多薪</a></li>
-                        <li><a href="#">惠创业</a></li>
-                        <li><a href="#">惠找事</a></li>
-                        <li><a href="#">惠企动</a></li>
+                        <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
+                        <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                        <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
+                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
                     </ul>
                 </div>
                 <!-- 企业入口 -->
@@ -361,7 +361,7 @@
                             </div>
                             <div class="consulting-item-btn-box">
                                 <div class="consulting-item-btn">
-                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo url('/home/login/login',['type' => 2]); ?>" data-url="<?php echo url('/home/spirit/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
+                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo url('/home/login/login',['type']); ?>" data-url="<?php echo url('/home/spirit/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
                                 </div>
                             </div>
                         </li>
