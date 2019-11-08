@@ -293,7 +293,9 @@
                                data-id="{$ss['id']}" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div>{$ss.title}</div>
-                                    <div>{$ss.create_time}</div>
+                                    <div>
+                                        {$ss.release_time}
+                                    </div>
                                 </div>
                                 <div> {$ss.describe}</div>
                             </a>
@@ -314,7 +316,9 @@
                                mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div>{$biaos.title|default=''}</div>
-                                    <div>{$biaos.create_time}</div>
+                                    <div>
+                                        {$biaos.release_time}
+                                    </div>
                                 </div>
                                 <div>
                                     {$biaos.describe}

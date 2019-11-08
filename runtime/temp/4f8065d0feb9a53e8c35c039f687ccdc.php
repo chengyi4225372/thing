@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1573114123;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1573106971;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\public/../application/home\view\index\index.html";i:1573181705;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\home\view\common\login.html";i:1573106971;}*/ ?>
  <!DOCTYPE html>
 <html lang="en">
 
@@ -308,7 +308,9 @@
                                data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div><?php echo $ss['title']; ?></div>
-                                    <div><?php echo $ss['create_time']; ?></div>
+                                    <div>
+                                        <?php echo $ss['release_time']; ?>
+                                    </div>
                                 </div>
                                 <div> <?php echo $ss['describe']; ?></div>
                             </a>
@@ -329,7 +331,9 @@
                                mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
-                                    <div><?php echo $biaos['create_time']; ?></div>
+                                    <div>
+                                        <?php echo $biaos['release_time']; ?>
+                                    </div>
                                 </div>
                                 <div>
                                     <?php echo $biaos['describe']; ?>

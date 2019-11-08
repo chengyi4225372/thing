@@ -209,7 +209,7 @@ function moreShang(keyword,pages,objthis){
                  html+= "<p>"+item.describe+"</p></div>";
                  html+= "<div class='tabs-items-content-time'><span>";
                  html+= "<img src='/static/spirit/images/shijian2x.png'>";
-                 html+="</span><span>"+item.create_time+"</span></div></div></a>";
+                 html+="</span><span>"+item.release_time+"</span></div></div></a>";
                  html +="</li>";
             });
             $('#shang').append(html).html();
@@ -241,7 +241,7 @@ function moreBiao(keyword,pages,objthis){
                 html+= "<p>"+item.describe+"</p></div>";
                 html+= "<div class='tabs-items-content-time'><span>";
                 html+= "<img src='/static/spirit/images/shijian2x.png'>";
-                html+="</span><span>"+item.create_time+"</span></div></div></a>";
+                html+="</span><span>"+item.release_time+"</span></div></div></a>";
                 html+="</li>";
             });
             console.log(html);
