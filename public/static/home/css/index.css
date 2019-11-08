@@ -890,7 +890,7 @@ body{
 }
 
 /* .totalInfo_content {
-    
+
 } */
 
 .zhaomethods .zhao_contentInfo {
@@ -1034,7 +1034,7 @@ body{
     color: rgba(255, 255, 255, 1);
 
     border-bottom: 1px solid #ccc;
-    
+
 }
 
 .parter_catefories {
@@ -1159,7 +1159,7 @@ body{
 
 /* 弹框 */
 /* .prop{
-    
+
     z-index:999;
     position:absolute;
     top:50%;
@@ -1169,7 +1169,7 @@ body{
     height:320px;
     background:rgba(245,247,254,1);
 border-radius:4px;
-    
+
 }
 
 .searcher{
@@ -1180,7 +1180,7 @@ border-radius:4px;
     box-sizing:border-box;
     font-size:16px;
     box-sizing:border-box;
-    
+
 }
 .prop .searcher input[type='text']{
     width:280px;
@@ -1456,7 +1456,7 @@ line-height:72px;
     transform: translateX(-50%);
     border-top: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #fffF;
+    border-bottom: 10px solid #fff;
     border-left: 10px solid transparent;
 }
 

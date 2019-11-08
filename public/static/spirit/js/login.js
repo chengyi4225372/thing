@@ -158,6 +158,11 @@ var login_module = (function () {
                         },
                         function (res) {
                             if (res.status == true) {
+                                //将用户信息存入session
+                                $.session.set('mobile',ret.data.mobile);
+                                $.session.set('token',ret.data.token);
+                                $.session.set('userName',ret.data.userName);
+                                $.session.set('userType',ret.data.userType);
                                 layer.msg(res.message, {icon: 1, time: 1500}, function () {
                                     var href_url = $('#login_url').attr('data-url');//首页的文章详情
                                     var href_url2 = $('#login_url2').attr('data-url');//首页
