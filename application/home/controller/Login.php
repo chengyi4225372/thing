@@ -72,22 +72,18 @@ class Login extends  BaseController{
     {
         //允许跨域
         header("Access-Control-Allow-Origin:*");
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            if(empty($_POST)){
-                return json(['status' => 400,'message' => '请确认用户或密码是否正确']);
-            }
-            $mobile = $_POST['mobile'];
-            $token = $_POST['token'];
-            $userName = $_POST['userName'];
-            $userType = $_POST['userType'];
-            Cookie::set('mobile',$mobile);
-            Cookie::set('token',$token);
-            Cookie::set('userName',$userName);
-            Cookie::set('userType',$userType);
-            return json(['status' => 200,'message' => '成功']);
-        }else{
-            return json(['status' => 400,'message' => '请确认用户或密码是否正确']);
+        if(empty($_GET['msg1']) || !isset($_GET['msg1'])){
+            $this->redirect('http://172.26.3.12:8009/#');return;
         }
+        if(empty($_GET['msg2']) || !isset($_GET['msg2'])){
+            $this->redirect('http://172.26.3.12:8009/#');return;
+        }
+
+        $mobile = $_GET['msg1'];
+        $token = $_GET['msg2'];
+        Cookie::set('mobile',$mobile);
+        Cookie::set('token',$token);
+        $this->redirect('http://172.26.3.12:8009/#');
     }
 
 

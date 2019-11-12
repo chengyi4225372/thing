@@ -52,7 +52,7 @@ class BaseController extends Controller
         }else{
             $is_nginx = '/index.php';
         }
-        //跳转登录页面
+
         $base_url = 'http://172.26.3.12:8009/#/login';
         $modulename = $this->request->module();
         $controllername = strtolower($this->request->controller());
