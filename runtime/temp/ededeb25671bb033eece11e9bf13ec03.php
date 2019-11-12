@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/hui-/public/../application/home/view/spirit/index.html";i:1573461769;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1573461974;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/hui-/public/../application/home/view/spirit/index.html";i:1573519087;s:53:"/opt/web/hui-/application/home/view/common/login.html";i:1573518983;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src="/static/spirit/js/spirit.js"></script>
-    <script src='/static/common/js/common.js'></script>
+    <script src='/static/common/js/public.js'></script>
 
 </head>
 
@@ -51,22 +51,13 @@
                 <!-- 登陆注册 -->
                 <?php if(empty($userinfo['mobile'])): ?>
                 <div class="loging clearfix">
-                    <div class="register-btn">
-                        <!--<a href="<?php echo url('/home/login/login'); ?>">登陆</a>-->
-                        <a href="<?php echo $baseurl; ?>" target="_blank">登录</a>
-                    </div>
+                    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
+                        登陆
+                    </a></div>
                     <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
                 </div>
                 <?php else: ?>
                 <div class="u_info">
-<!--                    <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
-                    <span style="width:48px;color:#fff;display:inline-block;height:0px;"><?php echo $userinfo['mobile']; ?></span>
-                    <div class="u_info_content" id="u_info_content">
-                        <ul>
-                            <li><a href="javascript:void(0)">管理中心</a></li>
-                            <li><a href="javascript:void(0)" onclick="index_module.user_logout(this)" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a></li>
-                        </ul>
-                    </div>-->
                     <?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
@@ -80,7 +71,7 @@
          style="width:30px;height:30px; vertical-align: middle;">
     <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
     <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?>

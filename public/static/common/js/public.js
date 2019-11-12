@@ -1,5 +1,6 @@
+var baseUrl = 'http://172.26.2.215:8089';
 function user_logout(objthis){
-    var baseUrl = 'http://172.26.2.215:8089';
+
     //var url = $(objthis).attr('data-url');
     var url = baseUrl + '/api/huser/goOut';;
     var url2 = $(objthis).attr('location_url');
@@ -23,3 +24,23 @@ function user_logout(objthis){
         }
     });
 }
+
+//$(function (){
+//    var url = baseUrl + '/api/front/cPersonalInfo/getInfo';
+//    $.ajax({
+//        type: "get",
+//        url: url,
+//        data: '',
+//        headers: {
+//            "Content-Type": "application/json",
+//            "Authorization":'123457854llkjhhghg.khn.hh'
+//        },
+//        dataType: 'json',
+//        success: function (ret) {
+//
+//        },
+//        error: function (data) {
+//            layer.msg(data)
+//        }
+//    });
+//});

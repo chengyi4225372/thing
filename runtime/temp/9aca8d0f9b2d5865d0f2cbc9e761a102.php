@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1573032593;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1573538453;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +59,7 @@
                   <span>确认密码</span>
                   <input type="password" placeholder="请再次输入密码" id="password2" value="">
                 </div>
-                <p>已有账号？<a href="<?php echo url('/home/login/login',['id' => $data_id]); ?>">去登录</a></p>
+                <p>已有账号？<a href="<?php echo $baseurl; ?>">去登录</a></p>
                 <span id="qy-one-btn">下一步</span>
               </div>
               <!-- 第二个盒子 -->
@@ -85,7 +85,7 @@
                   <input type="text" placeholder="请输入识别号" id="industryNo">
                 </div>
                 <input type="hidden" id="user_type" value="B"/>
-                <p>已有账号？<a href="<?php echo url('/home/login/login',['id' => $data_id]); ?>">去登录</a></p>
+                <p>已有账号？<a href="<?php echo $baseurl; ?>">去登录</a></p>
                 <span class="qy-two-btn" id="qy-two-btn">完成注册</span>
               </div>
             </div>
@@ -110,7 +110,7 @@
                   <span>确认密码</span>
                   <input type="password" placeholder="请再次输入密码" id="user_password2">
                 </div>
-                <p>已有账号？<a href="<?php echo url('/home/login/login',['id' => $data_id]); ?>">去登录</a></p>
+                <p>已有账号？<a href="<?php echo $baseurl; ?>">去登录</a></p>
                 <span id="gr-one-btn">下一步</span>
               </div>
               <!-- 第二个盒子 -->
@@ -153,7 +153,7 @@
               <img src="/static/spirit/images/zhucechenggong2x.png" alt="">
               <p>恭喜!注册成功!</p>
             </div>
-            <div><a href="<?php echo url('/home/login/login',['id' => $data_id]); ?>">立即登录</a></div>
+            <div><a href="<?php echo $baseurl; ?>">立即登录</a></div>
           </div>
         </div>
       </div>

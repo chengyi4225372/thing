@@ -127,6 +127,8 @@ window.onload = function () {
                     succeedbox.style.display = "block";
                     formcontent.style.display = "none";
 
+                }else{
+                    layer.msg(ret.message,{icon:2,time:1500});
                 }
             },
             error: function (data) {
