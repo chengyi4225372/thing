@@ -12,7 +12,7 @@
     <script src='__HOME__/js/index.js'></script>
     <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
     <script src='__HOME__/js/common.js'></script>
-    <script src='__PUBLIC__/common/js/common.js'></script>
+    <script src='__PUBLIC__/common/js/public.js'></script>
     <style>
         .header {
             background-image: url("{$slideshow['pic']|default='__HOME__/images/default.png'}");
@@ -126,7 +126,8 @@
 
                         {if empty($userinfo['mobile'])}
                         <div class='register'>
-                            <a href="{:url('/home/login/login')}">登录</a>
+                            <!--<a href="{:url('/home/login/login')}">登录</a>-->
+                            <a href="{$baseurl}" target="_blank">登录</a>
                             <span></span>
                             <a href="{:url('/home/login/register')}">注册</a>
                         </div>
@@ -136,7 +137,7 @@
                                  style="width:30px;height:30px; vertical-align: middle;">
                             <p style="display:inline-block;color:#fff;">{$userinfo['mobile']}</p>
                             <div class="u_info_content" id="u_info_content">
-                                <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" location_url="{:url('/home/index/index')}" data-url="{:url('/home/login/logout')}">退出账号</a>
+                                <a class="u_out" href="javascript:void(0)" data-token="{$userinfo['token']}" onclick="user_logout(this)" location_url="{:url('/home/index/index')}" data-url="{:url('/home/login/logout')}">退出账号</a>
                             </div>
                         </div>
                         {/if}
@@ -310,7 +311,7 @@
                         {/volist}
                         <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoList')}"
-                            login_url="{:url('/home/login/login',['type' => 3])}">了解更多</button>
+                            login_url="{$baseurl}">了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
@@ -319,7 +320,7 @@
                         <div class='totalInfo_content'>
                             <a href="javascript:void(0)"
                                data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"
-                               login_url="{:url('/home/login/login',['type' => 1,'id' => $ss.id])}"
+                               login_url="{$baseurl}"
                                mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div>{$biaos.title|default=''}</div>
@@ -336,7 +337,7 @@
 
                         <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoList')}"
-                            login_url="{:url('/home/login/login',['type' => 3])}">了解更多</button>
+                            login_url="{$baseurl}">了解更多</button>
 
                     </div>
 
@@ -412,7 +413,34 @@
         </div>
 
     </div>
+    <script>
 
+
+
+/*        function user_logout(objthis){
+            var baseUrl = 'http://172.26.2.215:8089';
+            //var url = $(objthis).attr('data-url');
+            var url = baseUrl + '/api/huser/goOut';;
+            var url2 = $(objthis).attr('location_url');
+            var tokens = $(objthis).attr('data-token');
+            $.ajax({
+                type: "post",
+                url: url,
+                data: '',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization":tokens
+                },
+                dataType: 'json',
+                success: function (ret) {
+
+                },
+                error: function (data) {
+                    console.log(data)
+                }
+            });
+        }*/
+    </script>
 </body>
 
 </html>

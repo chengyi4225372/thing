@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573180673;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573519009;}*/ ?>
  <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +13,7 @@
     <script src='/static/home/js/index.js'></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/common.js'></script>
-    <script src='/static/common/js/common.js'></script>
+    <script src='/static/common/js/public.js'></script>
     <style>
         .header {
             background-image: url("<?php echo (isset($slideshow['pic']) && ($slideshow['pic'] !== '')?$slideshow['pic']:'/static/home/images/default.png'); ?>");
@@ -127,7 +127,8 @@
 
                         <?php if(empty($userinfo['mobile'])): ?>
                         <div class='register'>
-                            <a href="<?php echo url('/home/login/login'); ?>">登录</a>
+                            <!--<a href="<?php echo url('/home/login/login'); ?>">登录</a>-->
+                            <a href="<?php echo $baseurl; ?>" target="_blank">登录</a>
                             <span></span>
                             <a href="<?php echo url('/home/login/register'); ?>">注册</a>
                         </div>
@@ -137,7 +138,7 @@
                                  style="width:30px;height:30px; vertical-align: middle;">
                             <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
                             <div class="u_info_content" id="u_info_content">
-                                <a class="u_out" href="javascript:void(0)" onclick="index_module.user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+                                <a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
                             </div>
                         </div>
                         <?php endif; ?>
@@ -301,7 +302,9 @@
                                data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div><?php echo $ss['title']; ?></div>
-                                    <div><?php echo $ss['create_time']; ?></div>
+                                    <div>
+                                        <?php echo $ss['release_time']; ?>
+                                    </div>
                                 </div>
                                 <div> <?php echo $ss['describe']; ?></div>
                             </a>
@@ -309,7 +312,7 @@
                         <?php endforeach; endif; else: echo "" ;endif; ?>
                         <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoList'); ?>"
-                            login_url="<?php echo url('/home/login/login',['type' => 3]); ?>">了解更多</button>
+                            login_url="<?php echo $baseurl; ?>">了解更多</button>
                     </div>
 
                     <div class='zhaoTotalInfo'>
@@ -318,11 +321,13 @@
                         <div class='totalInfo_content'>
                             <a href="javascript:void(0)"
                                data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"
-                               login_url="<?php echo url('/home/login/login',['type' => 1,'id' => $ss['id']]); ?>"
+                               login_url="<?php echo $baseurl; ?>"
                                mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>" onclick="home_module.show_detail(this)">
                                 <div class='zhao_contentInfo'>
                                     <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
-                                    <div><?php echo $biaos['create_time']; ?></div>
+                                    <div>
+                                        <?php echo $biaos['release_time']; ?>
+                                    </div>
                                 </div>
                                 <div>
                                     <?php echo $biaos['describe']; ?>
@@ -333,7 +338,7 @@
 
                         <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoList'); ?>"
-                            login_url="<?php echo url('/home/login/login',['type' => 3]); ?>">了解更多</button>
+                            login_url="<?php echo $baseurl; ?>">了解更多</button>
 
                     </div>
 
@@ -409,7 +414,34 @@
         </div>
 
     </div>
+    <script>
 
+
+
+/*        function user_logout(objthis){
+            var baseUrl = 'http://172.26.2.215:8089';
+            //var url = $(objthis).attr('data-url');
+            var url = baseUrl + '/api/huser/goOut';;
+            var url2 = $(objthis).attr('location_url');
+            var tokens = $(objthis).attr('data-token');
+            $.ajax({
+                type: "post",
+                url: url,
+                data: '',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization":tokens
+                },
+                dataType: 'json',
+                success: function (ret) {
+
+                },
+                error: function (data) {
+                    console.log(data)
+                }
+            });
+        }*/
+    </script>
 </body>
 
 </html>

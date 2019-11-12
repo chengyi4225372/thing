@@ -9,7 +9,7 @@ use app\v1\service\Infosservice;
 use app\v1\service\Systems;
 use app\v1\service\Caseservice;
 use think\Cookie;
-
+use think\Cache;
 class Index extends BaseController
 {
 
@@ -19,6 +19,9 @@ class Index extends BaseController
 //        Cookie::clear('token');
 //        Cookie::clear('userName');
 //        Cookie::clear('userType');
+//        var_dump(Cache::set(18681524382,'')).'<br>';
+//        var_dump(Cookie::get('mobile'));exit;
+
         if ($this->request->isGet()) {
 
             //慧享产品

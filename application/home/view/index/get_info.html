@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="__SPI__/css/detail.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src='__HOME__/js/common.js'></script>
-  <script src='__PUBLIC__/common/js/common.js'></script>
+  <script src='__PUBLIC__/common/js/public.js'></script>
   <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
   <style>
     /* 归属信息 */
@@ -45,7 +45,7 @@
         </ul>
         {if empty($userinfo['mobile'])}
         <div class='register'>
-          <a href="{:url('/home/login/login')}">登录</a>
+          <a href="{$baseurl}" target="_blank">登录</a>
           <span></span>
           <a href="{:url('/home/login/register')}">注册</a>
         </div>

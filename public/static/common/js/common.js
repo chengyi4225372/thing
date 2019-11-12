@@ -22,7 +22,3 @@ var index_module = (function (){
         user_logout:user_logout,
     }
 })();
-$(function (){
-    var mobile = $.session.get('mobile');
-    console.log(mobile);
-});
