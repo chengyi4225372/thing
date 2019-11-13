@@ -2,176 +2,106 @@
 namespace app\home\controller;
 
 use app\common\controller\BaseController;
-use app\v1\service\Workservice;
+use app\common\model\Work;
 use think\Controller;
-use app\v1\service\Protuctservice;
-use app\v1\service\Infosservice;
-use app\v1\service\Systems;
-use app\v1\service\Caseservice;
-use think\Cookie;
-use think\Cache;
+use app\v1\service\Workservice;
+
 class Index extends BaseController
 {
 
-    public function index()
+    /**
+     * @return bool|mixed
+     * 慧灵工 首页
+     */
+    public function  index()
     {
-//        Cookie::clear('mobile');
-//        Cookie::clear('token');
-//        Cookie::clear('userName');
-//        Cookie::clear('userType');
-//        var_dump(Cache::set(18681524382,'')).'<br>';
-//        var_dump(Cookie::get());exit;
+        if($this->request->isGet()){
+            //行业资讯
+            $data = Workservice::instance()->three();
 
-        if ($this->request->isGet()) {
+            $this->assign('data',$data);
 
-            //慧享产品
-            $array = array('status' => '1');
-            $protuct = Protuctservice::instance()->normal($array);
-            $this->assign('protuct', $protuct);
+            $this->assign('title','惠灵工');
 
-            //招标 招商信息
-            $biao = Infosservice::instance()->biao(['pid' => 1]);
-            $shang = Infosservice::instance()->shang(['pid' => 2]);
-
-            //轮播
-            $slideshow = Systems::instance()->getOneshow();
-
-            //有关电话号码、邮箱、地址
-            $siteInfo = Systems::instance()->getOneSite();
-
-            //近期成功案例
-
-            $caseInfo = Caseservice::instance()->getallparent();
-            $pic = array_column($caseInfo,'pic');
-            $pic2 = array_column($caseInfo,'pic2');
-            $this->assign('pic1',json_encode($pic));
-            $this->assign('pic2',json_encode($pic2));
-            $this->assign('count',count($caseInfo));
-            $this->assign('case_list', $caseInfo);
-
-
-            $this->assign('site_info',$siteInfo);
-
-            $this->assign('slideshow', $slideshow);
-            $this->assign('biao', $biao);
-            $this->assign('shang', $shang);
-            //用户信息
-            $this->assign('userinfo',$this->userinfo);
-            return $this->fetch();
+            return  $this->fetch();
         }
         return false;
     }
 
-    /**
-     * @DESC：ajax获取案例图片
-     * @author: jason
-     * @date: 2019-10-28 10:27:42
-     */
-    public function ajaximage(){
-        if($this->request->isAjax() && $this->request->isPost() && $_POST['data'] == 'getdata'){
-            $caseInfo = Caseservice::instance()->getallparent();
-            $pic_arr = [];
-            $pic2_arr = [];
-            foreach($caseInfo as $key => $value){
-                $pic_arr[$key]['pic1'] = $value['pic'];
-                $pic_arr[$key]['is_show'] = $value['is_show'];
-                $pic2_arr[$key]['pic2'] = $value['pic2'];
-                $pic2_arr[$key]['is_show'] = $value['is_show'];
-                $pic2_arr[$key]['is_pic1'] = $value['pic'];
-            }
-            return json(['pic1' => $pic_arr,'pic2' => $pic2_arr]);
-        }
-    }
-
 
     /**
-     * 列表页面
+     * 慧灵工 列表页
      */
-    public function infoList(){
-       if($this->request->isGet()){
+     public function informationList(){
 
-           if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
-               return $this->redirect('/home/index/index');
-           }
-           //招标 招商信息
-           $title = input('get.keyword','','trim');
-           $biao = Infosservice::instance()->getbiao($title,'');
-           $shang = Infosservice::instance()->getshang($title,'');
-          // $total = count($biao) + count($shang);
+         if($this->request->isGet()){
+
+             if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+                 return $this->redirect('/home/spirit/index');
+             }
+
+           $keyword = input('get.keyword','','trim');
+           $list  = Workservice::instance()->Getinfolist($keyword,'');
+
+           //$total = Workservice::instance()->getCount($keyword);
           // $this->assign('total',$total);
-           $this->assign('biao',$biao);
-           $this->assign('shang',$shang);
-           $this->assign('title','招商招标信息列表');
-           return $this->fetch();
-       }
-       return false;
-    }
 
-    /**
-     * 新闻详情页
-     * min  string | int
-     */
-    public function getInfo(){
-        if($this->request->isGet()){
-            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
-                return $this->redirect('/home/index/index');
-            }
+           $this->assign('list',$list);
+           $this->assign('title','惠灵工行业资讯');
+
+           return $this->fetch();
+         }
+         return false;
+     }
+
+     /**
+      * 惠灵工详情页
+      */
+     public function detail(){
+
+         if($this->request->isGet()){
+
+             if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+                 return $this->redirect('/home/index/index');
+             }
 
            $id = input('get.mid','','int');
-           if(empty($id) || !isset($id)|| $id <=0){
+           if(empty($id) || !isset($id)){
                return false;
            }
-           $info = infosservice::instance()->getId($id);
-           $top  = Infosservice::instance()->getTop($id);
-           $next = Infosservice::instance()->getNext($id);
-           $this->assign('info',$info);
+
+           $info = Workservice::instance()->getIdInfo($id);
+           $top  = Workservice::instance()->getTop($id);
+           $next = Workservice::instance()->getNext($id);
+
            $this->assign('top',$top);
            $this->assign('next',$next);
-           $this->assign('title','新闻详情');
+
+           $this->assign('info',$info);
+           $this->assign('title','资讯详情');
            return $this->fetch();
-        }
-        return false;
-    }
+         }
+         return false;
+     }
 
 
-    /**
-     * 招商信息 接口
-     * keyword string
-     * page string |id
-     */
-    public function getshangPage(){
+     /**
+      * 分页接口
+      */
+     public function getpageInfo(){
         $keyword = input('get.keyword','','trim');
         $page    = input('get.page','','int');
 
-        $list  =  Infosservice::instance()->getshang($keyword,$page);
+        $list  = Workservice::instance()->Getinfolist($keyword,$page);
 
         if(empty($list)){
             return json(['code'=>404,'msg'=>'没有更多了']);
         }
 
-        if(isset($list) && !empty($list)){
-            return json(['code'=>200,'msg'=>'请求成功','data'=>$list]);
+        if($list){
+            return json(['code'=>200,'data'=>$list,'msg'=>'请求成功']);
         }
 
-    }
+     }
 
-
-    /**
-     * 招标信息 接口
-     */
-    public function getbiaoPage(){
-        $keyword = input('get.keyword','','trim');
-        $page    = input('get.page','','int');
-
-        $list  =  Infosservice::instance()->getbiao($keyword,$page);
-
-        if(empty($list)){
-            return json(['code'=>404,'msg'=>'没有更多了！']);
-        }
-
-        if(isset($list) && !empty($list)){
-            return json(['code'=>200,'msg'=>'请求成功','data'=>$list]);
-        }
-
-    }
 }

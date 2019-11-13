@@ -242,4 +242,14 @@ class Workservice
         return  $list;
     }
 
+
+    /**
+     * 获取有效数据总条数
+     */
+     public function getWorkCount(){
+         $count = Work::instance()->where(['del_time'=>0])->count();
+         return $count;
+     }
+
+
 }
