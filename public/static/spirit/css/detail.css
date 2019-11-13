@@ -1,7 +1,7 @@
 /* 版心 */
 
 .w {
-    width: 1200px;
+    width: 75rem;
     margin: 0 auto;
 }
 
@@ -29,6 +29,46 @@
 
 .clearfix {
     *zoom: 1;
+}
+/* 分成120等分 */
+html {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1280px) {
+    html {
+        font-size: 10.666px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    html {
+        font-size: 11.38333333333333px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 13.3333333333px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
@@ -62,24 +102,25 @@ a {
 
 .header {
     width: 100%;
-    height: 100px;
+    height: 6.25rem;
     background: rgba(3, 28, 54, 1);
 
 }
 
 .header_content {
-    width: 1200px;
+    width: 75rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 32px 0 14px 0;
+    padding: 2rem 0 .875rem 0;
 }
 
 .logo {
-    margin-left: 12px;
-    width: 124px;
-    height: 54px;
+    margin-left: .75rem;
+    width: 7.75rem;
+    height: 3.375rem;
     background-image: url('../images/logo.png');
+    background-size: 100% 100%;
 }
 
 .logo a {
@@ -93,31 +134,31 @@ a {
     display: flex;
   
     /* margin: 0px 0px 0 129px; */
-    height: 44px;
+    height: 2.75rem;
 }
 
 .titile li:nth-of-type(1) a {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: #fff;
 }
 
 .titile li:nth-of-type(2) {
-    margin: 0 42px;
+    margin: 0 2.625rem;
 }
 
 .titile li:nth-of-type(4) {
-    margin: 0 41px;
+    margin: 0 2.5625rem;
 }
 
 .titile li:nth-of-type(6) {
-    margin: 0 42px 0 41px;
+    margin: 0 2.625rem 0 2.5625rem;
 }
 
 .titile a {
     /* padding:0 28px; */
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: #fff;
@@ -131,23 +172,23 @@ a {
 .nav-active::after {
     content: '';
     position: absolute;
-    bottom: -4px;
+    bottom: -0.25rem;
     left: 50%;
     transform: translateX(-50%);
     content: '';
-    width: 38px;
+    width: 2.375rem;
     height: 2px;
     background: rgba(255, 255, 255, 1);
 }
 
 .titile li {
-    padding-top: 12px;
+    padding-top: .75rem;
     box-sizing: border-box;
 
 }
 
 .titile li:nth-of-type(1) {
-    padding-top: 9px;
+    padding-top: 0.5625rem;
     box-sizing: border-box;
 }
 
@@ -157,21 +198,21 @@ a {
 .u_info {
     position: relative;
     float: right;
-    margin-top: 17px;
+    margin-top: .4625rem;
     cursor: pointer;
 }
 
 .u_info_content {
     display: none;
-    width: 90px;
-    height: 43px;
+    width: 5.625rem;
+    height: 2.6875rem;
     position: absolute;
-    bottom: -61px;
-    left: -29px;
+    bottom: -2.8125rem;
+    left: -1.8125rem;
     background-color: pink;
     text-align: center;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: .875rem;
     font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
     font-weight: 500;
     color: rgba(51, 51, 51, 1);
@@ -181,15 +222,15 @@ a {
 }
 
 .u_info_content .u_out {
-    font-size: 14px;
+    font-size: .875rem;
     font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
     color: #333;
     display: block;
     width: 100%;
     height: 100%;
-    padding: 17px 14px;
+    padding: 1.0625rem .875rem;
     box-sizing: border-box;
-    line-height: 12px;
+    line-height: .75rem;
 }
 
 .u_info_content .u_out:hover {
@@ -201,17 +242,17 @@ a {
     content: '';
     display: block;
     position: absolute;
-    top: -20px;
+    top: -1.25rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    border-top: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #fffF;
-    border-left: 10px solid transparent;
+    border-top: .625rem solid transparent;
+    border-right: .625rem solid transparent;
+    border-bottom: .625rem solid #fffF;
+    border-left: .625rem solid transparent;
 }
 
 .u_info:hover .u_info_content {
@@ -225,115 +266,115 @@ a {
 }
 
 .content_middle {
-    width: 1200px;
+    width: 75rem;
     margin: 0 auto;
 }
 
 .bread_title {
-    height: 72px;
-    line-height: 72px;
-    font-size: 16px;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1rem;
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
 }
 
 .pic_total {
-    width: 1200;
+    width: 75rem;
     /* height: 1780px; */
     background: rgba(255, 255, 255, 1);
-    padding: 32px 84px 0 54px;
+    padding: 2rem 5.25rem 0 3.375rem;
     box-sizing: border-box;
 }
 
 .pic_title {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(25, 38, 60, 1);
 }
 
 .time {
-    margin-top: 25px;
-    font-size: 12px;
+    margin-top: 1.5625rem;
+    font-size: .75rem;
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
 }
 
 .line {
-    width: 1050px;
+    width: 65.625rem;
     height: 1px;
     background: rgba(245, 245, 245, 1);
-    margin-top: 9px;
+    margin-top: 0.5625rem;
 }
 
 .tuwen {
-    padding: 54px 0 66px 32px;
+    padding: 3.375rem 0 4.125rem 2rem;
 }
 
 
 
 .wenzi {
-    font-size: 14px;
+    font-size: .875rem;
     font-family: Microsoft YaHei;
     font-weight: 400;
-    line-height: 24px;
-    margin: 14px 0;
+    line-height: 1.5rem;
+    margin: .875rem 0;
     color: #333333;
 }
 
 .wenzi:nth-child(1) {
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
 }
 
 .tuwen img:nth-of-type(1) {
     display: inline-block;
-    width: 640px;
-    height: 480px;
-    margin: 10px 0 10px 189px;
+    width: 40rem;
+    height: 30rem;
+    margin: .625rem 0 .625rem 11.8125rem;
 }
 
 .tuwen img:nth-of-type(2) {
     display: inline-block;
-    width: 640px;
-    height: 426px;
-    margin: 10px 0 10px 189px;
+    width: 40rem;
+    height: 26.625rem;
+    margin: .625rem 0 .625rem 11.8125rem;
 }
 
 .song,
 .dong,
 .xian,
 .more {
-    font-size: 14px;
+    font-size: .875rem;
     font-family: Microsoft YaHei;
     font-weight: 400;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
     color: #333;
 }
 
 .song {
-    margin-top: 10px;
+    margin-top: .625rem;
 }
 
 .dong {
-    line-height: 24px;
+    line-height: 1.5rem;
 }
 
 .page {
-    margin-top: 260px;
-    font-size: 14px;
+    margin-top: 16.25rem;
+    font-size: .875rem;
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: rgba(51, 51, 51, 1);
 }
 
 .page div {
-    margin-bottom: 6px;
+    margin-bottom: .375rem;
 }
 
 .page div span {
-    margin-right: 5px;
+    margin-right: 0.3125rem;
 }
 
 .page div a:hover {
@@ -345,16 +386,16 @@ a {
 }
 
 .fotter-box {
-    border-radius: 80px 80px 0px 0px;
+    border-radius: 5rem 5rem 0px 0px;
     background-color: #323C48;
-    padding-bottom: 38px;
+    padding-bottom: 2.375rem;
 }
 
 .fotter-box .fotter {}
 
 .partener_titile {
-    padding-top: 59px;
-    font-size: 48px;
+    padding-top: 3.6875rem;
+    font-size: 3rem;
     font-family: "PingFang SC";
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
@@ -363,20 +404,20 @@ a {
 }
 
 .parterne_info {
-    margin: 60px 0 0 0;
-    padding-bottom: 60px;
+    margin: 3.75rem 0 0 0;
+    padding-bottom: 3.75rem;
     border-bottom: 1px solid #ccc;
-    font-size: 14px;
+    font-size: .875rem;
     font-family: "Source Han Sans CN";
     font-weight: 300;
     color: rgba(255, 255, 255, .7);
-    line-height: 23px;
+    line-height: 1.4375rem;
 }
 
 .parter_catefories {
-    margin-top: 79px;
+    margin-top: 4.9375rem;
     overflow: hidden;
-    font-size: 11px;
+    font-size: .6875rem;
     font-family: "Source Han Sans CN";
     font-weight: 300;
     color: rgba(220, 220, 220, 1);
@@ -387,11 +428,11 @@ a {
 }
 
 .parter_catefories>dl:nth-of-type(2) {
-    margin: 0 82px 0 94px;
+    margin: 0 5.125rem 0 5.875rem;
 }
 
 .parter_catefories>dl:nth-of-type(3) {
-    margin-right: 94px;
+    margin-right: 5.875rem;
 }
 
 .parter_catefories>dl:nth-of-type(5) {
@@ -399,49 +440,49 @@ a {
 }
 
 .parter_catefories dl dt {
-    margin-bottom: 53px;
+    margin-bottom: 3.3125rem;
 }
 
 .parter_catefories dl dd {
-    margin-top: 29px;
+    margin-top: 1.8125rem;
 }
 
 .parter_catefories dl dt>a {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: "Source Han Sans CN";
     font-weight: 700;
     color: rgba(220, 220, 220, 1);
 }
 
 .parter_catefories dl dd>a {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: 'Source Han Sans CN';
     font-weight: 400;
     color: rgba(220, 220, 220, .7);
 }
 
 .concat_icon {
-    margin-top: 28px;
+    margin-top: 1.75rem;
     /* margin-right: 46px; */
-    padding-right: 46px;
-    padding-bottom: 57px;
+    padding-right: 2.875rem;
+    padding-bottom: 3.5625rem;
     border-bottom: 1px solid rgba(122, 122, 122, 1);
 }
 
 .concat_icon div {
     float: right;
-    width: 24px;
+    width: 1.5rem;
     border: 1px solid #ccc;
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
     text-align: center;
-    line-height: 24px;
-    margin-left: 24px;
+    line-height: 1.5rem;
+    margin-left: 1.5rem;
 }
 
 .concat_icon img {
-    padding-top: 3px;
+    padding-top: 0.1875rem;
     padding-left: 1px;
     height: 60%;
     width: 60%;
@@ -457,13 +498,13 @@ a {
 }
 
 .partener_fotter {
-    margin-top: 22px;
+    margin-top: 1.375rem;
     text-align: center;
-    font-size: 14px;
+    font-size: .875rem;
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(195, 195, 195, 1);
-    padding-bottom: 68px;
+    padding-bottom: 4.25rem;
 }
 
 
@@ -471,14 +512,14 @@ a {
 
 .goTop {
     position: fixed;
-    bottom: 20px;
-    right: 135px;
-    width: 50px;
-    height: 45px;
+    bottom: 1.25rem;
+    right: 8.4375rem;
+    width: 3.125rem;
+    height: 2.8125rem;
     text-align: center;
-    z-index: 999px;
+    z-index: 999;
     background-color: #fff;
-    padding-top: 5px;
+    padding-top: 0.3125rem;
     display: none;
     cursor: pointer
 }
@@ -487,14 +528,14 @@ a {
     overflow: hidden;
     /* float: right; */
     display: inline-block;
-    width: 23px;
-    height: 26px;
+    width: 1.4375rem;
+    height: 1.625rem;
     background-size: contain;
     background-image: url('../images/goback.png');
 }
 
 .goTop div {
-    font-size: 9px;
+    font-size: 0.5625rem;
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(50, 50, 50, 1);

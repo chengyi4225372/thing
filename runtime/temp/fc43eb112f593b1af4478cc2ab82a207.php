@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573539065;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hui-/public/../application/home/view/index/index.html";i:1573604403;}*/ ?>
  <!DOCTYPE html>
 <html lang="en">
 
@@ -112,6 +112,7 @@
 
             <!-- 头部其他内容 -->
             <div class='header_fixed'>
+                <input type="hidden" id="data_token" value="<?php echo $userinfo['token']; ?>"/>
                 <div class='header_content' id='headerContent'>
                     <div class='w content'>
                         <div class='content_logo' id='logo'></div>

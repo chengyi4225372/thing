@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1573538453;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:65:"/opt/web/hui-/public/../application/home/view/login/register.html";i:1573538580;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
