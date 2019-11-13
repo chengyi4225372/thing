@@ -20,7 +20,7 @@ class Index extends BaseController
 //        Cookie::clear('userName');
 //        Cookie::clear('userType');
 //        var_dump(Cache::set(18681524382,'')).'<br>';
-//        var_dump(Cookie::get('mobile'));exit;
+//        var_dump(Cookie::get());exit;
 
         if ($this->request->isGet()) {
 
