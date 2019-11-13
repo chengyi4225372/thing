@@ -579,7 +579,7 @@ span:nth-child(4) {
 
 .project-box {
     height: 42.5rem;
-    background: url('../images/beijing22x.png') no-repeat
+    background: url('../images/beijing.png') no-repeat;
 }
 
 .project-box .project {

@@ -27,9 +27,9 @@ class Index extends AuthController
         //用户信息
         $userInfo = Admin::where(['id' => $userId])->find()->toArray();
         //惠享产品 统计
-      //  $pro_count = Protuctservice::instance()->getproductcount();
+        // $pro_count = Protuctservice::instance()->getproductcount();
         //招标信息统计
-      //  $info_count = Infosservice::instance()->getinfocount();
+       //$info_count = Infosservice::instance()->getinfocount();
 
        // 行业资讯
         $work_count  = Workservice::instance()->getWorkCount();
