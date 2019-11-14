@@ -33,7 +33,7 @@ class BaseController extends Controller
 
         $token = Cookie('token');
         $userName = Cookie('userName');
-        $userType = Cookie('userType');
+        $userType = Cookie('userType'); //c 个人 b 企业
         $mobile = !empty($mobile) ? $mobile :'';
         $token = !empty($token) ? $token : '';
         $userName = !empty($userName) ? $userName : '';
