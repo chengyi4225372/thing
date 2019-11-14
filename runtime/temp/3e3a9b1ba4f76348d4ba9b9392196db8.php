@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1573636512;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1573613439;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1573695389;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1573613439;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 <head>
@@ -34,7 +34,7 @@
                 <!-- nav部分 -->
                 <div class="nav">
                     <ul class="clearfix">
-                        <li><a href="#">首页</a></li>
+                        <li><a href="<?php echo config('work.hqy_url'); ?>">首页</a></li>
                         <li><a href="#">惠优税</a></li>
                         <li class="nav-active"><a href="/">惠灵工</a></li>
                         <li><a href="#">惠多薪</a></li>
