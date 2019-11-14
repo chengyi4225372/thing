@@ -5,7 +5,7 @@ use app\common\controller\BaseController;
 use app\common\model\Work;
 use think\Controller;
 use app\v1\service\Workservice;
-
+use think\Cookie;
 class Index extends BaseController
 {
 
