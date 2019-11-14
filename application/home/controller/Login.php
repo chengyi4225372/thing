@@ -72,30 +72,13 @@ class Login extends  BaseController{
     {
         //允许跨域
         header("Access-Control-Allow-Origin:*");
-        //token
-        if(empty($_GET['msg1']) || !isset($_GET['msg1'])){
-            $this->redirect('http://172.26.3.12:8009/#');return;
-        }
-        //电话
-        if(empty($_GET['msg2']) || !isset($_GET['msg2'])){
-            $this->redirect('http://172.26.3.12:8009/#');return;
-        }
-        //角色
-        if(empty($_GET['msg3']) || !isset($_GET['msg3'])){
-            $this->redirect('http://172.26.3.12:8009/#');return;
-        }
-        $mobile = $_GET['msg2'];
-        $token = $_GET['msg1'];
-        $userType = $_GET['msg3'];
+        $mobile = $_POST['mobile'];
+        $token = $_POST['token'];
+        $userType = $_POST['userType'];
         Cookie::set('mobile',$mobile);
         Cookie::set('token',$token);
         Cookie::set('userType',$userType);
-        if($userType == 'B'){
-            $this->redirect('http://172.26.3.12:8009/#/task/task');
-        }
-        if($userType == 'C'){
-            $this->redirect('http://172.26.3.12:8009/#/personTask/myTask');
-        }
+        return json(['status' => 200,'message' => 'success']);
     }
 
 
