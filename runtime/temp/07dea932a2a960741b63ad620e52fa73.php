@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1573636141;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573636141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1573694955;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573636141;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 <head>
@@ -354,7 +354,7 @@
                             </div>
                             <div class="consulting-item-btn-box">
                                 <div class="consulting-item-btn">
-                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo url('/home/login/login',['type']); ?>" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
+                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
                                 </div>
                             </div>
                         </li>

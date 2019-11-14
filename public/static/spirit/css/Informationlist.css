@@ -744,12 +744,13 @@ a {
     position: fixed;
     bottom: 1.25rem;
     right: 8.4375rem;
-    width: 3.125rem;
-    height: 2.8125rem;
+    width: 4.375rem;
+    height: 3.875rem;
     text-align: center;
     z-index: 999;
     background-color: #fff;
-    padding-top: .3125rem;
+    padding-top: .625rem;
+    line-height: 1.875rem;
     display: none;
     cursor: pointer
 }
