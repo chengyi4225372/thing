@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\login\login.html";i:1573106971;}*/ ?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\login\login.html";i:1573627283;}*/ ?>
+<!DOCTYPE >
 <html lang="en">
 
 <head>

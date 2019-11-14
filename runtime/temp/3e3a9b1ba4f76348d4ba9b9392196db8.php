@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1573631464;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1573613439;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1573636512;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1573613439;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 <head>
@@ -354,7 +354,7 @@
                             </div>
                             <div class="consulting-item-btn-box">
                                 <div class="consulting-item-btn">
-                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo url('/home/login/login',['type']); ?>" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
+                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
                                 </div>
                             </div>
                         </li>
