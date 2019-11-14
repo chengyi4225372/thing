@@ -89,15 +89,11 @@ class Login extends  BaseController{
      * @date: 2019-10-31 10:38:54
      */
     public function logout(){
-        if($this->request->isAjax() && $this->request->isPost()){
-            Cookie::clear('mobile');
-            Cookie::clear('token');
-            Cookie::clear('userName');
-            Cookie::clear('userType');
-            return json(['status' => true,'message' => '退出登录成功']);
-        }else{
-            return json(['status' => false,'message' => '退出登录失败']);
-        }
+        header("Access-Control-Allow-Origin:*");
+        Cookie::clear('mobile');
+        Cookie::clear('token');
+        Cookie::clear('userType');
+        return json(['status' => 200,'message' => 'success']);
     }
 
 
