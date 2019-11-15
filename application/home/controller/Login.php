@@ -84,36 +84,35 @@ class Login extends  BaseController{
 
 
     /**
-     * @DESC：其他页面退出,这个页面也要退出,
-     * @return \think\response\Json
-     * @author: jason
-     * @date: 2019-10-31 10:38:54
-     */
-    public function logout2(){
-        header("Access-Control-Allow-Origin:*");
-        Cookie::clear('mobile');
-        Cookie::clear('token');
-        Cookie::clear('userType');
-        return json(['status' => 200,'message' => 'success']);
-    }
-
-
-    /**
      * @DESC：前台退出登录
      * @return \think\response\Json
      * @author: jason
      * @date: 2019-10-31 10:38:54
      */
     public function logout(){
-        $website_url = Config::get('curl.website');
         header("Access-Control-Allow-Origin:*");
+        $website_url = Config::get('curl.website');
+        $hzs_url = Config::get('curl.hzs');
         Cookie::clear('mobile');
         Cookie::clear('token');
         Cookie::clear('userType');
         //官网退出
         $res = curl_get($website_url.'/home/login/apilogout');
+        $res2 = curl_get($hzs_url.'/home/login/apilogout');
         return json(['status' => 200,'message' => 'success']);
     }
 
-
+    /**
+     * @DESC：其他页面退出那么当前这个页面也要退出
+     * @author: jason
+     * @date: 2019-11-14 04:14:53
+     */
+    public function apilogout()
+    {
+        header("Access-Control-Allow-Origin:*");
+        Cookie::clear('mobile');
+        Cookie::clear('token');
+        Cookie::clear('userType');
+        return json(['status' => 200,'message' => 'success']);
+    }
 }
