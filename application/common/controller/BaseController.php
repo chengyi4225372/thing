@@ -53,7 +53,7 @@ class BaseController extends Controller
             $is_nginx = '/index.php';
         }
 
-        $base_url = 'http://172.26.3.12:8009/#/login';
+        $base_url = COnfig::get('curl.login_url');
         $modulename = $this->request->module();
         $controllername = strtolower($this->request->controller());
         $actionname = strtolower($this->request->action());

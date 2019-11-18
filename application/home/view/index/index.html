@@ -44,7 +44,7 @@
                 </div>
                 <!-- 企业入口 -->
                {empty name="$userinfo['userType']"}
-                <a class="enterprise" href="http://172.26.3.12:8009/#/login" target="_blank">
+                <a class="enterprise" href="{:config('curl.login_url')}">
                     <div class="enterprise-portal">
                         企业入口
                     </div>
@@ -52,7 +52,7 @@
                 {else /}
                    {eq name="$userinfo['userType']" value='c'}
 
-                   <a class="enterprise" href="http://172.26.3.12:8009/#/task/task" target="_blank">
+                   <a class="enterprise" href="{:config('curl.redirect_url')}/task/task">
                     <div class="enterprise-portal">
                         企业入口
                     </div>
@@ -60,7 +60,7 @@
 
                    {else /}
 
-                   <a class="enterprise" href="http://172.26.3.12:8009/#/personTask/myTask" target="_blank">
+                   <a class="enterprise" href="{:config('curl.redirect_url')}/personTask/myTask">
                     <div class="enterprise-portal">
                         企业入口
                     </div>
@@ -73,7 +73,7 @@
                 <!-- 登陆注册 -->
                 {if empty($userinfo['mobile'])}
                 <div class="loging clearfix">
-                    <div class="register-btn"><a href="{$baseurl}" target="_blank">
+                    <div class="register-btn"><a href="{$baseurl}">
                         登录
                     </a></div>
                     <div class="loging-btn"><a href="{:url('/home/login/register')}">注册</a></div>
