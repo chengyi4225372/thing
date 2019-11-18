@@ -197,7 +197,9 @@ a {
 .u_info {
     position: relative;
     float: right;
-    margin-top: .4625rem;
+    margin-top: .3625rem;
+    padding-left: 1.25rem;
+    height: 5rem;
     cursor: pointer;
 }
 
@@ -206,8 +208,8 @@ a {
     width: 5.625rem;
     height: 2.6875rem;
     position: absolute;
-    bottom: -2.8125rem;
-    left: -1.8125rem;
+    bottom: -12px;
+    left: -0.5625rem;
     background-color: pink;
     text-align: center;
     box-sizing: border-box;
@@ -227,9 +229,9 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 1.0625rem .875rem;
+    /*padding: 1.0625rem .875rem;*/
     box-sizing: border-box;
-    line-height: .75rem;
+    line-height: 2.75rem;
 }
 
 .u_info_content .u_out:hover {

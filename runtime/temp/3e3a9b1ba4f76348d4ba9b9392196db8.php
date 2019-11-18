@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1573695389;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1573613439;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1573721378;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1573722221;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 <head>
@@ -44,11 +44,31 @@
                     </ul>
                 </div>
                 <!-- 企业入口 -->
+               <?php if(empty($userinfo['userType']) || (($userinfo['userType'] instanceof \think\Collection || $userinfo['userType'] instanceof \think\Paginator ) && $userinfo['userType']->isEmpty())): ?>
                 <a class="enterprise" href="http://172.26.3.12:8009/#/login" target="_blank">
                     <div class="enterprise-portal">
                         企业入口
                     </div>
                 </a>
+                <?php else: if($userinfo['userType'] == 'c'): ?>
+
+                   <a class="enterprise" href="http://172.26.3.12:8009/#/task/task" target="_blank">
+                    <div class="enterprise-portal">
+                        企业入口
+                    </div>
+                    </a>
+
+                   <?php else: ?>
+
+                   <a class="enterprise" href="http://172.26.3.12:8009/#/personTask/myTask" target="_blank">
+                    <div class="enterprise-portal">
+                        企业入口
+                    </div>
+                    </a>
+
+                   <?php endif; endif; ?>
+
+
                 <!-- 登陆注册 -->
                 <?php if(empty($userinfo['mobile'])): ?>
                 <div class="loging clearfix">
@@ -72,7 +92,7 @@
          style="width:30px;height:30px; vertical-align: middle;">
     <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
     <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?>
