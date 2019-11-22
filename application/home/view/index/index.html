@@ -44,7 +44,7 @@
                 </div>
                 <!-- 企业入口 -->
 
-                <a class="enterprise" href="{if $userinfo['userType'] == 'C'}{:config('curl.redirect_url')}/task/task{else /}javascript:void(0){/if}">
+                <a class="enterprise" href="{if $userinfo['userType'] == 'C'}javascript:void(0){else /}{:config('curl.redirect_url')}/task/task{/if}">
                     <div class="enterprise-portal">
                         企业入口
                     </div>
