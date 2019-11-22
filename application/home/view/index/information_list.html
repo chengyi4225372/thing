@@ -32,13 +32,13 @@
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
-            <li ><a href="{:config('work.hqy_url')}">首页</a></li>
-            <li><a href="#" target="_blank">惠优税</a></li>
-            <li class="nav-active"><a href="/">惠灵工</a></li>
-            <li><a href="#">惠多薪</a></li>
-            <li><a href="#">惠创业</a></li>
-            <li><a href="#">惠找事</a></li>
-            <li><a href="#">惠启动</a></li>
+            <li ><a href="{:config('curl.website')}">首页</a></li>
+            <li><a href="{:url('/home/optimal/index')}">惠优税</a></li>
+            <li class="nav-active"><a href="{:url('/home/index/index')}">惠灵工</a></li>
+            <li><a href="{:url('/home/many/index')}">惠多薪</a></li>
+            <li><a href="{:url('/home/business/index')}">惠创业</a></li>
+            <li><a href="{:config('curl.hzs')}">惠找事</a></li>
+            <li><a href="{:url('/home/launch/index')}">惠企动</a></li>
           </ul>
         </div>
         <!-- 登陆注册 -->
