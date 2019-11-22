@@ -43,7 +43,13 @@
                     </ul>
                 </div>
                 <!-- 企业入口 -->
-               {empty name="$userinfo['userType']"}
+
+                <a class="enterprise" href="{if $userinfo['userType'] == 'C'}{:config('curl.redirect_url')}/task/task{else /}javascript:void(0){/if}">
+                    <div class="enterprise-portal">
+                        企业入口
+                    </div>
+                </a>
+<!--               {empty name="$userinfo['userType']"}
                 <a class="enterprise" href="{:config('curl.login_url')}">
                     <div class="enterprise-portal">
                         企业入口
@@ -52,7 +58,7 @@
                 {else /}
                    {eq name="$userinfo['userType']" value='c'}
 
-                   <a class="enterprise" href="{:config('curl.redirect_url')}/task/task">
+                   <a class="enterprise" href="">
                     <div class="enterprise-portal">
                         企业入口
                     </div>
@@ -67,7 +73,7 @@
                     </a>
 
                    {/eq}
-                {/empty}
+                {/empty}-->
 
 
                 <!-- 登陆注册 -->
