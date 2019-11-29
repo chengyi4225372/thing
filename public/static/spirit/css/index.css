@@ -30,7 +30,10 @@
 .clearfix {
     *zoom: 1;
 }
+
+
 /* 分成120等分 */
+
 html {
     font-size: 16px;
 }
@@ -70,6 +73,7 @@ html {
         font-size: 16px;
     }
 }
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -92,9 +96,11 @@ dd {
 a {
     text-decoration: none;
 }
+
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
+
 
 /* nav部分 */
 
@@ -133,7 +139,7 @@ input:-webkit-autofill {
 
 .nav-container .nav {
     float: left;
-    margin-left: 3.75rem;
+    margin-left: 9.625rem;
 }
 
 .nav-container .nav ul {
@@ -144,7 +150,11 @@ input:-webkit-autofill {
 
 .nav-container .nav ul li {
     float: left;
-    margin-right: 2.625rem;
+    margin-right: 1.875rem;
+}
+
+.nav-container .nav ul li:last-child {
+    margin-right: 0;
 }
 
 .nav-container .nav ul li a {
@@ -152,7 +162,7 @@ input:-webkit-autofill {
     width: 100%;
     /*height: 100%;*/
     font-size: 1.25rem;
-    font-family: "PingFang SC";
+    font-family: "PingFang-SC-Medium";
     font-weight: 500;
     color: rgba(255, 255, 255, 1);
 }
@@ -163,7 +173,7 @@ input:-webkit-autofill {
 
 .nav-active::after {
     position: absolute;
-    bottom: -0.9375rem;
+    bottom: -2.3125rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -171,14 +181,14 @@ input:-webkit-autofill {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     content: '';
-    width: 60%;
+    width: 100%!important;
     height: 2px;
     background-color: #fff;
 }
 
 .nav-container .loging {
     float: right;
-    margin: .75rem 0 0 .625rem;
+    margin: .75rem 0 0 4.375rem;
 }
 
 .nav-container .loging div {
@@ -234,9 +244,10 @@ input:-webkit-autofill {
     cursor: pointer;
 }
 
-.enterprise{
-    color:#fff;
+.enterprise {
+    color: #fff;
 }
+
 
 /* 头部部分 */
 
@@ -419,6 +430,7 @@ span:nth-child(4) {
     height: 6.25rem;
     margin-left: 2.25rem;
 }
+
 .serve-item .serve-item-img img {
     width: 100%;
     height: 100%;
@@ -547,6 +559,7 @@ span:nth-child(4) {
     height: 11.25rem;
     /* background-color: red; */
 }
+
 .difficulty-items .difficulty-item-img img {
     width: 100%;
 }
@@ -773,6 +786,7 @@ span:nth-child(4) {
     width: 4rem;
     height: 4.125rem;
 }
+
 .reason-content-item-img img {
     width: 100%;
 }
@@ -805,9 +819,11 @@ span:nth-child(4) {
     width: 38.5625rem;
     bottom: -3.75rem;
 }
+
 .reason-content-img img {
     width: 100%;
 }
+
 
 /* 方案流程 */
 
@@ -1181,7 +1197,7 @@ span:nth-child(4) {
 
 .concat_icon {
     margin-top: 1.75rem;
-    margin-right: 2.875rem;
+    margin-right: 8.75rem;
 }
 
 .concat_icon div {
@@ -1265,11 +1281,11 @@ span:nth-child(4) {
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     width: 37.5rem;
     height: 35.625rem;
 }
@@ -1385,8 +1401,6 @@ span:nth-child(4) {
 }
 
 
-
-
 /* 用户信息 */
 
 .u_info {
@@ -1457,6 +1471,7 @@ span:nth-child(4) {
 
 
 /* 提交成果弹出框 */
+
 .mask-box {
     position: absolute;
     left: 50%;
@@ -1495,7 +1510,7 @@ span:nth-child(4) {
     background: rgba(0, 0, 0, 1);
     opacity: 0.7;
     border-radius: .75rem;
-     display: none;
+    display: none;
 }
 
 .mask-box span {
