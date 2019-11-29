@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1573718804;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573636141;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1574999323;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,26 +34,54 @@
                 <!-- nav部分 -->
                 <div class="nav">
                     <ul class="clearfix">
-                        <li><a href="<?php echo config('work.hqy_url'); ?>">首页</a></li>
-                        <li><a href="#">惠优税</a></li>
-                        <li class="nav-active"><a href="/">惠灵工</a></li>
-                        <li><a href="#">惠多薪</a></li>
-                        <li><a href="#">惠创业</a></li>
-                        <li><a href="#">惠找事</a></li>
-                        <li><a href="#">惠企动</a></li>
+                        <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                        <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                        <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
+                        <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                        <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
+                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
                     </ul>
                 </div>
                 <!-- 企业入口 -->
-                <a class="enterprise" href="http://172.26.3.12:8009/#/login" target="_blank">
+
+                <a class="enterprise" href="<?php if($userinfo['userType'] == 'C'): ?>javascript:void(0)<?php else: ?><?php echo config('curl.redirect_url'); ?>/task/task<?php endif; ?>">
                     <div class="enterprise-portal">
                         企业入口
                     </div>
                 </a>
+<!--               <?php if(empty($userinfo['userType']) || (($userinfo['userType'] instanceof \think\Collection || $userinfo['userType'] instanceof \think\Paginator ) && $userinfo['userType']->isEmpty())): ?>
+                <a class="enterprise" href="<?php echo config('curl.login_url'); ?>">
+                    <div class="enterprise-portal">
+                        企业入口
+                    </div>
+                </a>
+                <?php else: if($userinfo['userType'] == 'c'): ?>
+
+                   <a class="enterprise" href="">
+                    <div class="enterprise-portal">
+                        企业入口
+                    </div>
+                    </a>
+
+                   <?php else: ?>
+
+                   <a class="enterprise" href="<?php echo config('curl.redirect_url'); ?>/personTask/myTask">
+                    <div class="enterprise-portal">
+                        企业入口
+                    </div>
+                    </a>
+
+                   <?php endif; endif; ?>-->
+
+
                 <!-- 登陆注册 -->
                 <?php if(empty($userinfo['mobile'])): ?>
                 <div class="loging clearfix">
-                    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-                        登陆
+                    <div class="register-btn"><a href="javascript:void(0)"
+                                                 login_url="<?php echo config('curl.login_url'); ?>"
+                                                 loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">
+                        登录
                     </a></div>
                     <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
                 </div>
@@ -70,9 +98,9 @@
 <div class="u_info">
     <img src="/static/spirit/images/user_img.png"
          style="width:30px;height:30px; vertical-align: middle;">
-    <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
+    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
     <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?>
@@ -354,7 +382,7 @@
                             </div>
                             <div class="consulting-item-btn-box">
                                 <div class="consulting-item-btn">
-                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
+                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>/home/index/informationlist" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
                                 </div>
                             </div>
                         </li>
