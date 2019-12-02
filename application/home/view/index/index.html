@@ -41,12 +41,14 @@
                         <li><a href="{:url('/home/business/index')}">惠创业</a></li>
                         <li><a href="{:config('curl.hzs')}">惠找事</a></li>
                         <li><a href="{:url('/home/launch/index')}">惠企动</a></li> -->
-                        <li class="nav-active"><a href="javascript:;">首页</a></li>
+                        <li class="nav-active"><a href="{:url('/home/index/index')}">首页</a></li>
                         <li><a href="javascript:;">产品服务</a></li>
                         <li><a href="javascript:;">行业解决方案</a></li>
                         <li><a href="javascript:;">客户案例</a></li>
                         <li><a href="javascript:;">行业新闻资讯</a></li>
-                        <li><a href="javascript:;">会员通道</a></li>
+                        <li>
+                            <a href="{if $userinfo['userType'] == 'C' || empty($userinfo['userType'])}javascript:void(0){else /}{:config('curl.redirect_url')}/task/task{/if}">会员通道</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- 企业入口 -->

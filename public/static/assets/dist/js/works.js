@@ -32,11 +32,11 @@ $("#addwork").click(function(){
 })
 
 //上传图片
-function upload_files() {
+function upload_files(objthis) {
     var formData =new FormData();
     formData.append("file",$("#file")[0].files[0]);
 
-    var urls = "uploadImgs";
+    var urls = $(objthis).attr('data-url');
 
     $.ajax({
         url: urls,
@@ -66,44 +66,31 @@ $('.addworks').click(function(){
     var data = {};
 
     data.title = $('#title').val();
-    data.desc  = $('#desc').val();
-    data.sort  = $('#sort').val();
-    data.keyword = $('#keyword').val();
-    data.content = ue.getContent();//取得html文本
-    data.imgs    =$('#Images').val();
+    data.pic    =$('#Images').val();
 
-    if(data.title== '' || data.title == undefined){
-        layer.msg('请输入新闻标题');
-        return false;
-    }
-
-    if(data.imgs== '' || data.imgs == undefined){
+    if(data.pic== '' || data.pic == undefined){
         layer.msg('请上传新闻图片');
         return false;
     }
 
-
-    if(data.desc== '' || data.desc == undefined){
-        layer.msg('请输入新闻描述');
+    if(data.title== '' || data.title == undefined){
+        $('#title').focus();
+        layer.msg('请输入新闻标题');
         return false;
     }
 
-    if(data.content== '' || data.content == undefined){
-        layer.msg('请填写新闻详情');
-        return false;
-    }
+
 
    $.post(urlk,data,function(ret){
         if(ret.code == 200){
             layer.msg(ret.msg,function(){
-                parent.location.href='index';
+                parent.layer.close();
+                parent.location.reload();
             })
         }
 
        if(ret.code == 400){
-           layer.msg(ret.msg,function(){
-               parent.location.href='index';
-           })
+           layer.msg(ret.msg)
        }
    },'json')
 
@@ -128,11 +115,7 @@ $('#editWorks').click(function(){
 
     var datas  = {};
     datas.title = $('#title').val();
-    datas.desc  = $('#desc').val();
-    datas.sort  = $('#sort').val();
-    datas.keyword = $('#keyword').val();
-    datas.content = ue.getContent();//取得html文本
-    datas.imgs    =$('#Images').val();
+    datas.pic    =$('#Images').val();
     datas.id     = $('#mid').val();
 
 
@@ -140,39 +123,29 @@ $('#editWorks').click(function(){
         return false;
     }
 
-    if(datas.title== '' || datas.title == undefined){
-        layer.msg('请填写新闻标题');
-        return false;
-    }
-
-    if(datas.imgs== '' || datas.imgs == undefined){
+    if(datas.pic== '' || datas.pic == undefined){
         layer.msg('请上传新闻图片');
         return false;
     }
 
-
-    if(datas.desc== '' || datas.desc == undefined){
-        layer.msg('请填写新闻描述');
+    if(datas.title== '' || datas.title == undefined){
+        $('#title').focus();
+        layer.msg('请填写新闻标题');
         return false;
     }
 
-    if(datas.content== '' || datas.content == undefined){
-        layer.msg('请填写新闻详情');
-        return false;
-    }
 
     $.post(urle,datas,function(ret){
 
         if(ret.code == 200){
             layer.msg(ret.msg,function(){
-                parent.location.href='index';
+                parent.layer.close();
+                parent.location.reload();
             })
         }
 
         if(ret.code == 400){
-            layer.msg(ret.msg,function(){
-                parent.location.href='index';
-            })
+            layer.msg(ret.msg)
         }
     },'json')
 });

@@ -1,6 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1574999323;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575014377;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<!DOCTYPE >
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,23 +35,31 @@
                 <!-- nav部分 -->
                 <div class="nav">
                     <ul class="clearfix">
-                        <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                        <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
                         <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
                         <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
                         <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
                         <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
                         <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
-                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
+                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                        <li><a href="javascript:;">产品服务</a></li>
+                        <li><a href="javascript:;">行业解决方案</a></li>
+                        <li><a href="javascript:;">客户案例</a></li>
+                        <li><a href="javascript:;">行业新闻资讯</a></li>
+                        <li>
+                            <a href="<?php if($userinfo['userType'] == 'C' || empty($userinfo['userType'])): ?>javascript:void(0)<?php else: ?><?php echo config('curl.redirect_url'); ?>/task/task<?php endif; ?>">会员通道</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- 企业入口 -->
 
-                <a class="enterprise" href="<?php if($userinfo['userType'] == 'C'): ?>javascript:void(0)<?php else: ?><?php echo config('curl.redirect_url'); ?>/task/task<?php endif; ?>">
+                <!-- <a class="enterprise" href="<?php if($userinfo['userType'] == 'C'): ?>javascript:void(0)<?php else: ?><?php echo config('curl.redirect_url'); ?>/task/task<?php endif; ?>">
                     <div class="enterprise-portal">
                         企业入口
                     </div>
-                </a>
-<!--               <?php if(empty($userinfo['userType']) || (($userinfo['userType'] instanceof \think\Collection || $userinfo['userType'] instanceof \think\Paginator ) && $userinfo['userType']->isEmpty())): ?>
+                </a> -->
+                <!--               <?php if(empty($userinfo['userType']) || (($userinfo['userType'] instanceof \think\Collection || $userinfo['userType'] instanceof \think\Paginator ) && $userinfo['userType']->isEmpty())): ?>
                 <a class="enterprise" href="<?php echo config('curl.login_url'); ?>">
                     <div class="enterprise-portal">
                         企业入口
@@ -78,9 +87,7 @@
                 <!-- 登陆注册 -->
                 <?php if(empty($userinfo['mobile'])): ?>
                 <div class="loging clearfix">
-                    <div class="register-btn"><a href="javascript:void(0)"
-                                                 login_url="<?php echo config('curl.login_url'); ?>"
-                                                 loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">
+                    <div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">
                         登录
                     </a></div>
                     <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
@@ -249,14 +256,13 @@
         </div>
 
         <!-- 解决方案 -->
-        <div class="project-box" >
+        <div class="project-box">
             <div class="w project">
                 <div class="project-title">
                     <p>我们的解决方案</p>
                 </div>
                 <div class="project-text">
-                    将共享经济引入人力资源灵活用工行业,变革企业的用工模式，将“企业和员工之间的雇佣关系”，转变为“企业与个人间的业务合作关系”
-                    通过平台一站式完成任务派发、费用结算支付、开票和完税，合法合规的进行灵活用工、结算支付和财税优化。
+                    将共享经济引入人力资源灵活用工行业,变革企业的用工模式，将“企业和员工之间的雇佣关系”，转变为“企业与个人间的业务合作关系” 通过平台一站式完成任务派发、费用结算支付、开票和完税，合法合规的进行灵活用工、结算支付和财税优化。
                 </div>
                 <!-- tab栏切换 -->
                 <div class="project-items">
@@ -480,5 +486,19 @@
     </div>
 
 </body>
+<script>
+    $('.nav ul li').on('click', function() {
+        $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
+    })
+    $('.nav ul li').on('mouseenter', function() {
+        $(this).addClass('nav-active').siblings().removeClass('nav-active')
+    })
+    $('.nav-box').on('mouseleave', function() {
+        $('.nav ul li').removeClass('nav-active')
+        if ($('.chosenPage').length < 1) $('.nav ul li').eq(0).addClass('chosenPage')
+
+        $('.chosenPage').addClass('nav-active')
+    })
+</script>
 
 </html>

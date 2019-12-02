@@ -1,6 +1,7 @@
 <?php
 namespace app\v1\service;
-use app\common\model\Work;;
+use app\common\model\Work;
+use app\common\model\News;
 use think\Cache;
 use think\Config;
 
@@ -22,34 +23,25 @@ class Workservice
         return self::$instance;
     }
 
-    /**
-     * 前台获取最高的3条信息
-     */
-    public function three(){
-        $where = ['del_time'=>0];
-        $data = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->limit(3)->select();
-        return $data;
-    }
-
 
     /**
      * title string
      *获取资讯列表
      */
     public function getNewList($title){
-        if(empty($title) || !isset($title)){
-
-            $where = ['del_time'=>0];
-        }else {
-
-            $where =[
-                 'del_time'=>0,
-                 'title|keyword'=>['like','%'.$title.'%'],
-            ];
+        if(!empty($title) && isset($title)){
+            $where['title'] = ['like','%'.$title.'%'];
         }
+        $where['status'] = ['EQ',1];
 
-        $list  = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->paginate(15);
-        return  $list;
+        $list  = News::instance()->where($where)->order(['id'=>'desc','update_time'=>'desc'])->paginate(8);
+        $lists = $list->toArray();
+        $page = $list->render();
+        $return_data = [
+            'list' => $lists,
+            'page' => $page
+        ];
+        return  $return_data;
     }
 
 
@@ -59,7 +51,7 @@ class Workservice
      * 添加 数据
      */
     public function setAddArray($array){
-        $ret = Work::instance()->data($array)->save();
+        $ret = News::instance()->data($array)->save();
         return $ret;
     }
 
@@ -81,7 +73,7 @@ class Workservice
             return  false;
         }
 
-        $ret =  Work::instance()->where($w)->update($array);
+        $ret =  News::instance()->where($w)->update($array);
         return $ret;
     }
 
@@ -95,7 +87,7 @@ class Workservice
             return false;
         }
        $w    = ['id'=>$id];
-       $info = Work::instance()->where($w)->find();
+       $info = News::instance()->where($w)->find()->toArray();
        return $info;
     }
 

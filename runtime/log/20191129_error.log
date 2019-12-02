@@ -1,0 +1,57 @@
+---------------------------------------------------------------
+[ 2019-11-29T16:58:07+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8192]Non-static method app\common\model\News::instance() should not be called statically[/opt/web/thing/application/v1/service/Workservice.php:37]
+---------------------------------------------------------------
+[ 2019-11-29T16:58:59+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [0]致命错误: Access to undeclared static property: app\common\model\News::$readInstance[/opt/web/thing/application/common/model/News.php:29]
+---------------------------------------------------------------
+[ 2019-11-29T16:59:45+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'keyword' in 'where clause'[/opt/web/thing/thinkphp/library/think/db/Connection.php:390]
+---------------------------------------------------------------
+[ 2019-11-29T17:00:48+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'keyword' in 'where clause'[/opt/web/thing/thinkphp/library/think/db/Connection.php:390]
+---------------------------------------------------------------
+[ 2019-11-29T17:00:51+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'keyword' in 'where clause'[/opt/web/thing/thinkphp/library/think/db/Connection.php:390]
+---------------------------------------------------------------
+[ 2019-11-29T17:09:40+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8]未定义数组索引: is_del[/opt/web/thing/thinkphp/library/think/Collection.php:366]
+---------------------------------------------------------------
+[ 2019-11-29T17:24:27+08:00 ] 172.26.2.252 POST /v1/work/works/add.html
+[ error ] [8]未定义数组索引: desc[/opt/web/thing/application/v1/controller/work/Works.php:45]
+---------------------------------------------------------------
+[ 2019-11-29T17:24:31+08:00 ] 172.26.2.252 POST /v1/work/works/add.html
+[ error ] [8]未定义数组索引: desc[/opt/web/thing/application/v1/controller/work/Works.php:45]
+---------------------------------------------------------------
+[ 2019-11-29T17:31:04+08:00 ] 172.26.2.252 POST /v1/work/works/add.html
+[ error ] [8]未定义数组索引: pic[/opt/web/thing/application/v1/controller/work/Works.php:45]
+---------------------------------------------------------------
+[ 2019-11-29T17:32:42+08:00 ] 172.26.2.252 POST /v1/work/works/add.html
+[ error ] [0]数据表字段不存在:[pic][/opt/web/thing/thinkphp/library/think/db/Builder.php:111]
+---------------------------------------------------------------
+[ 2019-11-29T17:47:18+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8]A non well formed numeric value encountered[/opt/web/thing/application/v1/controller/work/Works.php:30]
+---------------------------------------------------------------
+[ 2019-11-29T17:48:44+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8]A non well formed numeric value encountered[/opt/web/thing/application/v1/controller/work/Works.php:31]
+---------------------------------------------------------------
+[ 2019-11-29T17:49:05+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8]A non well formed numeric value encountered[/opt/web/thing/application/v1/controller/work/Works.php:31]
+---------------------------------------------------------------
+[ 2019-11-29T17:49:14+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8]A non well formed numeric value encountered[/opt/web/thing/application/v1/controller/work/Works.php:31]
+---------------------------------------------------------------
+[ 2019-11-29T17:49:43+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [2]Cannot use a scalar value as an array[/opt/web/thing/application/v1/controller/work/Works.php:24]
+---------------------------------------------------------------
+[ 2019-11-29T17:50:35+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8]未定义变量: itme[/opt/web/thing/runtime/temp/6f3ad837280fe1f7875187b48d825efa.php:266]
+---------------------------------------------------------------
+[ 2019-11-29T17:51:33+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8]未定义变量: item[/opt/web/thing/runtime/temp/6f3ad837280fe1f7875187b48d825efa.php:266]
+---------------------------------------------------------------
+[ 2019-11-29T17:52:40+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8]未定义变量: item[/opt/web/thing/runtime/temp/6f3ad837280fe1f7875187b48d825efa.php:266]
+---------------------------------------------------------------
+[ 2019-11-29T17:52:41+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [8]未定义变量: item[/opt/web/thing/runtime/temp/6f3ad837280fe1f7875187b48d825efa.php:266]
