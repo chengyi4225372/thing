@@ -49,3 +49,6 @@
 ---------------------------------------------------------------
 [ 2019-12-02T09:32:47+08:00 ] 172.26.2.252 GET /
 [ error ] [0]致命错误: Call to undefined method app\v1\service\Workservice::three()[/opt/web/thing/application/home/controller/Index.php:20]
+---------------------------------------------------------------
+[ 2019-12-02T14:52:30+08:00 ] 172.26.2.252 GET /v1/work/works/successcase.html
+[ error ] [0]致命错误: Call to a member function toArray() on array[/opt/web/thing/application/v1/service/Workservice.php:266]

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:66:"/opt/web/thing/public/../application/v1/view/work/works/index.html";i:1575248279;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575010826;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575267077;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:72:"/opt/web/thing/public/../application/v1/view/work/works/successcase.html";i:1575277523;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575277666;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575267077;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
 <!DOCTYPE>
 <html lang="zh-CN">
 <head>
@@ -235,7 +235,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-info btn_search"  type="button"  data-url="<?php echo url('/v1/work/works/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info btn_search"  type="button"  data-url="<?php echo url('/v1/work/works/successcase'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
                 </div>
@@ -251,8 +251,8 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addwork" data-url="<?php echo url('/v1/work/works/add'); ?>">
-                <i class="fa fa-plus-circle">添加新闻</i></button>
+                    id="addwork" data-url="<?php echo url('/v1/work/works/addcase'); ?>">
+                <i class="fa fa-plus-circle">添加案例</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
@@ -260,35 +260,35 @@
                 <th class="td-align td-width-40px">
                     <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
                 </th>
-                <th class="text-center">行业新闻标题</th>
-                <th class="text-center">行业新闻图片</th>
+                <th class="text-center">案例标题</th>
+                <th class="text-center">案例图片</th>
+                <th class="text-center">案例详情</th>
                 <th class="text-center">创建时间</th>
-                <th class="text-center">修改时间</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-                    <tr>
-                        <td class="td-align td-padding">
-                            <input type="checkbox" name="box_checked" data-id="<?php echo $item['id']; ?>" class="data-check_box">
-                        </td>
-                        <td class="text-center"><?php echo $item['title']; ?></td>
+                <?php if(is_array($data['list']['data']) || $data['list']['data'] instanceof \think\Collection || $data['list']['data'] instanceof \think\Paginator): $i = 0; $__LIST__ = $data['list']['data'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
+                <tr>
+                    <td class="td-align td-padding">
+                        <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
+                    </td>
+                    <td class="text-center"><?php echo isset($list['title']) ? $list['title'] : ''; ?></td>
 
-                        <td class="text-center">
-                            <img src="<?php echo $item['pic']; ?>" alt="" style="width: 100px;height:100px;">
-                        </td>
-                        <td class="text-center"><?php echo $item['add_time']; ?></td>
-                        <td class="text-center"><?php echo $item['update_time']; ?></td>
-                        <td class="text-center">
-                            <span class="btn <?php if($item['status'] == 1): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$item['status']]; ?></span>
-                        </td>
-                        <td class="text-center">
-                            <input type="hidden" value="<?php echo $item['id']; ?>" id="mid">
-                            <a   class="btn btn-info editWork" data-url="<?php echo url('/v1/work/works/edit',['id' => $item['id']]); ?>">编辑</a>
-                            <a  onclick="delWork()" class="btn btn-danger">删除</a>
-                        </td>
-                    </tr>
+                    <td class="text-center">
+                        <img src="<?php echo isset($list['pic']) ? $list['pic'] : ''; ?>" alt="" style="width: 100px;height:100px;">
+                    </td>
+                    <td class="text-center"><?php echo $list['content']; ?></td>
+                    <td class="text-center"><?php echo date('Y-m-d H:i:s',$list['add_time']); ?></td>
+                    <td class="text-center">
+                        <span class="btn <?php if($list['status'] == 1): ?> btn-success <?php else: ?> btn-danger <?php endif; ?>"><?php echo isset($list['status']) ? $status[$list['status']] : ''; ?></span>
+                    </td>
+                    <td class="text-center">
+                        <input type="hidden" value="<?php echo isset($list['id']) ? $list['id'] : ''; ?>" id="mid">
+                        <a   class="btn btn-info editWork" data-url="<?php echo url('/v1/work/works/editcase',['id' => $list['id']]); ?>">编辑</a>
+                        <a  onclick="delCase(this)" data="<?php echo $list['id']; ?>" data-url="<?php echo url('/v1/work/works/delcase'); ?>" class="btn btn-danger">删除</a>
+                    </td>
+                </tr>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
 
 

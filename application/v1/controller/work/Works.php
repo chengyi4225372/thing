@@ -190,4 +190,111 @@ class Works extends AuthController
         }
     }
 
+    /**
+     * @DESC：惠灵工的成功案例的图片上传
+     * @author: jason
+     * @date: 2019-12-02 03:16:38
+     */
+    public function uploadCaseImg()
+    {
+        // 获取上传文件
+        $file = $this->request->file('file');
+        // 验证图片,并移动图片到框架目录下。
+        $path = ROOT_PATH . 'public/uploads/imgs/successcase/';
+
+        if (!is_dir($path)) {
+            mkdir($path, 0755);
+        }
+
+        $info = $file->move($path, false, true);
+        if ($info) {
+            $mes = $info->getSaveName();
+            $mes = str_replace("\\", '/', $mes);
+            return json(['code' => '200', 'msg' => '上传成功', 'path' => '/uploads/imgs/successcase/' . $mes]);
+        } else {
+            // 文件上传失败后的错误信息
+            $mes = $file->getError();
+            return json(['code' => '400', 'msg' => $mes]);
+        }
+    }
+
+    /**
+     * @DESC：成功案例首页
+     * @author: jason
+     * @date: 2019-12-02 02:11:53
+     */
+    public function successcase()
+    {
+        $status = Config::get('site.case');
+        $params = $_GET;
+        $info = Workservice::instance()->getCaseInfo($params);
+        $this->assign('status',$status);
+        $this->assign('data',$info);
+        return $this->fetch();
+    }
+
+    /**
+     * @DESC：添加惠灵工的成功案例
+     * @author: jason
+     * @date: 2019-12-02 03:13:06
+     */
+    public function addcase()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            if(empty($_POST)){
+                return json(['code' => '400', 'msg' => '添加失败']);
+            }
+            $res = Workservice::instance()->addcase($_POST);
+            if($res === false){
+                return json(['code' => '400', 'msg' => '添加失败']);
+            }
+            return json(['code' => '200', 'msg' => '添加成功']);
+        }
+        return $this->fetch();
+    }
+
+    /**
+     * @DESC：修改惠灵工的成功案例
+     * @return mixed|\think\response\Json|void
+     * @author: jason
+     * @date: 2019-12-02 04:39:56
+     */
+    public function editcase(){
+        if($this->request->isAjax() && $this->request->isPost()){
+            $res = Workservice::instance()->editcase($_POST);
+            if($res === false){
+                return json(['code' => '400', 'msg' => '修改失败']);
+            }
+            return json(['code' => '200', 'msg' => '修改成功']);
+        }
+        $id = input('get.id','','int');
+        if(empty($id)){
+            return;
+        }
+
+        $info = Workservice::instance()->getOneData(['id' => $id]);
+
+        $this->assign('list',$info);
+        return $this->fetch();
+    }
+
+    /**
+     * @DESC：删除惠灵工成功案例
+     * @author: jason
+     * @date: 2019-12-02 04:55:38
+     */
+    public function delcase()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $id = input('post.id','','int');
+            if(empty($id)){
+                return;
+            }
+            $res = Workservice::instance()->delcase(['id' => $id]);
+            if($res === false){
+                return json(['code' => '400', 'msg' => '删除失败']);
+            }
+            return json(['code' => '200', 'msg' => '删除成功']);
+        }
+    }
 }

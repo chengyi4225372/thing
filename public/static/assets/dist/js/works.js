@@ -199,6 +199,111 @@ function setSort(value,id){
             })
         }
     },'json')
-
 }
 
+//添加案例
+function addcases(objthis){
+    var url = $(objthis).attr('data-url');
+    var datas  = {};
+    datas.title = $('#title').val();
+    datas.pic    =$('#Images').val();
+    datas.content     = $('#contents').val();
+    if(datas.pic== '' || datas.pic == undefined){
+        layer.msg('请选择要上传的图片');
+        return false;
+    }
+
+    if(datas.title== '' || datas.title == undefined){
+        $('#title').focus();
+        layer.msg('请填写标题');
+        return false;
+    }
+
+    if(datas.content == '' || datas.content == undefined){
+        $('#content').focus();
+        layer.msg('请填写内容');
+        return false;
+    }
+
+    $.post(
+        url,
+        datas,
+        function (ret){
+            if(ret.code == 200){
+                layer.msg(ret.msg,{icon:6},function(){
+                    parent.location.reload();
+                })
+            }
+
+            if(ret.code == 400){
+                layer.msg(ret.msg,{icon:6})
+            }
+        },'json'
+    );
+}
+
+
+function editcases(objthis){
+    var url = $(objthis).attr('data-url');
+    var datas  = {};
+    datas.title = $('#title').val();
+    datas.pic    =$('#Images').val();
+    datas.content     = $('#contents').val();
+    datas.id     = $(objthis).attr('data');
+    if(datas.pic== '' || datas.pic == undefined){
+        layer.msg('请选择要上传的图片');
+        return false;
+    }
+
+    if(datas.title== '' || datas.title == undefined){
+        $('#title').focus();
+        layer.msg('请填写标题');
+        return false;
+    }
+
+    if(datas.content == '' || datas.content == undefined){
+        $('#content').focus();
+        layer.msg('请填写内容');
+        return false;
+    }
+
+    $.post(
+        url,
+        datas,
+        function (ret){
+            if(ret.code == 200){
+                layer.msg(ret.msg,{icon:6},function(){
+                    parent.location.reload();
+                })
+            }
+
+            if(ret.code == 400){
+                layer.msg(ret.msg,{icon:6})
+            }
+        },'json'
+    );
+}
+
+function delCase(objthis){
+    var url = $(objthis).attr('data-url');
+    var id = $(objthis).attr('data');
+    layer.confirm('您确定要删除？', {
+        btn: ['确定','点错了'] //按钮
+    }, function(){
+        $.post(url,{'id':id},function(ret){
+            if(ret.code ==  200){
+                layer.msg(ret.msg,{icon:6},function(){
+                    parent.location.reload();
+                })
+            }
+
+            if(ret.code == 400){
+                layer.msg(ret.msg,{icon:5},function(){
+                    parent.location.reload();
+                })
+            }
+        },'json')
+    }, function(){
+        parent.layer.closeAll();
+    });
+}
