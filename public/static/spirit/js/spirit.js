@@ -239,4 +239,11 @@ function is_login(objthis){
     }
 }
 
+function members_click(objthis){
+    var login_url2 = $(objthis).attr('login_url');
+    var loca_url2 = $(objthis).attr('loca_url');
+    var loca_url = encodeURIComponent(loca_url2);
+    var login_url = login_url2+'?artId='+loca_url;
+    location.href = login_url;
+}
 

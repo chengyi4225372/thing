@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575014377;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575252890;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -48,7 +48,14 @@
                         <li><a href="javascript:;">客户案例</a></li>
                         <li><a href="javascript:;">行业新闻资讯</a></li>
                         <li>
-                            <a href="<?php if($userinfo['userType'] == 'C' || empty($userinfo['userType'])): ?>javascript:void(0)<?php else: ?><?php echo config('curl.redirect_url'); ?>/task/task<?php endif; ?>">会员通道</a>
+                            <?php if(empty($userinfo['userType'])): ?>
+                            <a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>
+                            <?php elseif($userinfo['userType'] == 'C'): ?>
+                            <a href="javascript:void(0)">会员通道</a>
+                            <?php else: ?>
+                            <a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>
+                            <?php endif; ?>
+
                         </li>
                     </ul>
                 </div>

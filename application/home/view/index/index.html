@@ -47,7 +47,14 @@
                         <li><a href="javascript:;">客户案例</a></li>
                         <li><a href="javascript:;">行业新闻资讯</a></li>
                         <li>
-                            <a href="{if $userinfo['userType'] == 'C' || empty($userinfo['userType'])}javascript:void(0){else /}{:config('curl.redirect_url')}/task/task{/if}">会员通道</a>
+                            {if empty($userinfo['userType'])}
+                            <a href="javascript:void(0)" login_url="{:config('curl.login_url')}" loca_url="{:config('curl.hlg')}" onclick="members_click(this)">会员通道</a>
+                            {elseif $userinfo['userType'] == 'C' /}
+                            <a href="javascript:void(0)">会员通道</a>
+                            {else /}
+                            <a href="{:config('curl.redirect_url')}/task/task">会员通道</a>
+                            {/if}
+
                         </li>
                     </ul>
                 </div>
