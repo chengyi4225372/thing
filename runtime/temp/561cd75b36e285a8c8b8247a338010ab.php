@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:66:"/opt/web/thing/public/../application/v1/view/work/works/index.html";i:1575287949;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575277666;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575293314;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:69:"/opt/web/thing/public/../application/v1/view/work/works/solution.html";i:1575292794;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575277666;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575293314;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
 <!DOCTYPE>
 <html lang="zh-CN">
 <head>
@@ -243,7 +243,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-info btn_search"  type="button"  data-url="<?php echo url('/v1/work/works/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info btn_search"  type="button"  data-url="<?php echo url('/v1/work/works/successcase'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
                 </div>
@@ -259,47 +259,53 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addwork" data-url="<?php echo url('/v1/work/works/add'); ?>">
-                <i class="fa fa-plus-circle">添加新闻</i></button>
+                    id="addwork" data-url="<?php echo url('/v1/work/works/addsolution'); ?>">
+                <i class="fa fa-plus-circle">添加方案</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="col-xs-1" >排序</th>
-                <th class="text-center">新闻标题</th>
-                <th class="text-center">新闻展示图</th>
-                <th class="text-center">新闻关键字</th>
-                <th class="text-center">创建时间</th>
+                <th class="td-align td-width-40px">
+                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
+                </th>
+                <th class="text-center">标题</th>
+                <th class="text-center">内容</th>
+                <th class="text-center">添加时间</th>
+                <th class="text-center">添加人</th>
+                <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-                <?php if(empty($list) || (($list instanceof \think\Collection || $list instanceof \think\Paginator ) && $list->isEmpty())): else: if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+
+                <?php if(is_array($data['list']['data']) || $data['list']['data'] instanceof \think\Collection || $data['list']['data'] instanceof \think\Paginator): $i = 0; $__LIST__ = $data['list']['data'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td class="col-xs-1">
-                      <input type="number"  onblur="setSort($(this).val(),$(this).attr('data-id'))" class="form-control" data-id="<?php echo $vo['id']; ?>" value="<?php echo (isset($vo['sort']) && ($vo['sort'] !== '')?$vo['sort']:'0'); ?>"  />
+                    <td class="td-align td-padding">
+                        <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
                     </td>
-                    <td class="text-center"><?php echo (isset($vo['title']) && ($vo['title'] !== '')?$vo['title']:''); ?></td>
+                    <td class="text-center"><?php echo isset($list['title']) ? $list['title'] : ''; ?></td>
 
                     <td class="text-center">
-                        <a href="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:'/static/default.png'); ?>">
-                        <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="" style="width: 100px;height:100px;">
-                        </a>
+                        <textarea cols="40" rows="5"><?php echo isset($list['title']) ? $list['title'] : ''; ?></textarea>
                     </td>
-                    <td class="text-center"><?php echo (isset($vo['keyword']) && ($vo['keyword'] !== '')?$vo['keyword']:''); ?></td>
-                    <td class="text-center"><?php echo (isset($vo['create_time']) && ($vo['create_time'] !== '')?$vo['create_time']:''); ?></td>
-
+                    <td class="text-center"><?php echo date('Y-m-d H:i:s',$list['add_time']); ?></td>
+                    <td class="text-center"><?php echo $list['add_user']; ?></td>
                     <td class="text-center">
-
-                        <a   class="btn btn-info editWork" data-url="<?php echo url('/v1/work/works/edit',['id' => $vo['id']]); ?>" >编辑</a>
-                        <a  onclick="delWork('<?php echo $vo['id']; ?>')" class="btn btn-danger">删除</a>
-
+                        <span class="btn <?php if($list['status'] == 1): ?> btn-success <?php else: ?> btn-danger <?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
+                    </td>
+                    <td class="text-center">
+                        <input type="hidden" value="<?php echo $list['id']; ?>" id="mid">
+                        <a   class="btn btn-info editsolution" data-url="<?php echo url('/v1/work/works/editsolution',['id' => $list['id']]); ?>">编辑</a>
+                        <a  onclick="delSolution(this)" data="<?php echo $list['id']; ?>" data-url="<?php echo url('/v1/work/works/delsolution'); ?>" class="btn btn-danger">删除</a>
                     </td>
                 </tr>
-                 <?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+
+
+
                 </tbody>
             </table>
             <div class="pages">
-                <?php echo $list->render(); ?>
+
             </div>
         </div>
     </div>

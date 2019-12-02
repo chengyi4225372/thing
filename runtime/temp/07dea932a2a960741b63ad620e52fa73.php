@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575252890;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575281307;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -47,61 +47,32 @@
                         <li><a href="javascript:;">行业解决方案</a></li>
                         <li><a href="javascript:;">客户案例</a></li>
                         <li><a href="javascript:;">行业新闻资讯</a></li>
-                        <li>
-                            <?php if(empty($userinfo['userType'])): ?>
-                            <a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>
-                            <?php elseif($userinfo['userType'] == 'C'): ?>
-                            <a href="javascript:void(0)">会员通道</a>
-                            <?php else: ?>
-                            <a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>
-                            <?php endif; ?>
+                        <!--<li>-->
+                            <!--<?php if(empty($userinfo['userType'])): ?>-->
+                            <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
+                            <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
+                            <!--<a href="javascript:void(0)">会员通道</a>-->
+                            <!--<?php else: ?>-->
+                            <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
+                            <!--<?php endif; ?>-->
 
-                        </li>
+                        <!--</li>-->
                     </ul>
                 </div>
-                <!-- 企业入口 -->
 
-                <!-- <a class="enterprise" href="<?php if($userinfo['userType'] == 'C'): ?>javascript:void(0)<?php else: ?><?php echo config('curl.redirect_url'); ?>/task/task<?php endif; ?>">
-                    <div class="enterprise-portal">
-                        企业入口
-                    </div>
-                </a> -->
-                <!--               <?php if(empty($userinfo['userType']) || (($userinfo['userType'] instanceof \think\Collection || $userinfo['userType'] instanceof \think\Paginator ) && $userinfo['userType']->isEmpty())): ?>
-                <a class="enterprise" href="<?php echo config('curl.login_url'); ?>">
-                    <div class="enterprise-portal">
-                        企业入口
-                    </div>
-                </a>
-                <?php else: if($userinfo['userType'] == 'c'): ?>
-
-                   <a class="enterprise" href="">
-                    <div class="enterprise-portal">
-                        企业入口
-                    </div>
-                    </a>
-
-                   <?php else: ?>
-
-                   <a class="enterprise" href="<?php echo config('curl.redirect_url'); ?>/personTask/myTask">
-                    <div class="enterprise-portal">
-                        企业入口
-                    </div>
-                    </a>
-
-                   <?php endif; endif; ?>-->
 
 
                 <!-- 登陆注册 -->
-                <?php if(empty($userinfo['mobile'])): ?>
-                <div class="loging clearfix">
-                    <div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">
-                        登录
-                    </a></div>
-                    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
-                </div>
-                <?php else: ?>
-                <div class="u_info">
-                    <?php if(empty($userinfo['mobile'])): ?>
+                <!--<?php if(empty($userinfo['mobile'])): ?>-->
+                <!--<div class="loging clearfix">-->
+                    <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
+                        <!--登录-->
+                    <!--</a></div>-->
+                    <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
+                <!--</div>-->
+                <!--<?php else: ?>-->
+                <!--<div class="u_info">-->
+                    <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
         登陆
@@ -117,9 +88,9 @@
         <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
-<?php endif; ?>
-                </div>
-                <?php endif; ?>
+<?php endif; ?>-->
+                <!--</div>-->
+                <!--<?php endif; ?>-->
             </div>
 
         </div>
@@ -395,7 +366,8 @@
                             </div>
                             <div class="consulting-item-btn-box">
                                 <div class="consulting-item-btn">
-                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>/home/index/informationlist" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
+                                    <!--<a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>/home/index/informationlist" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>-->
+                                    <a href="<?php echo config('curl.hlg'); ?>/home/index/informationlist">了解更多</a>
                                 </div>
                             </div>
                         </li>
@@ -423,30 +395,30 @@
                 </div>
                 <div class='parter_catefories'>
                     <dl>
-                        <dt><a href="#">服务产品</a></dt>
-                        <dd><a href="#">服务型税筹</a></dd>
-                        <dd><a href="#">门户型税筹</a></dd>
-                        <dd><a href="#">人力资源</a></dd>
+                        <dt><a href="javascript:void(0)">服务产品</a></dt>
+                        <dd><a href="javascript:void(0)">服务型税筹</a></dd>
+                        <dd><a href="javascript:void(0)">门户型税筹</a></dd>
+                        <dd><a href="javascript:void(0)">人力资源</a></dd>
                     </dl>
                     <dl>
-                        <dt><a href="#">招商政策</a></dt>
-                        <dd><a href="#">招商政策网</a></dd>
+                        <dt><a href="javascript:void(0)">招商政策</a></dt>
+                        <dd><a href="javascript:void(0)">招商政策网</a></dd>
                     </dl>
                     <dl>
-                        <dt><a href="#">合作</a></dt>
-                        <dd><a href="#">代理合作</a></dd>
+                        <dt><a href="javascript:void(0)">合作</a></dt>
+                        <dd><a href="javascript:void(0)">代理合作</a></dd>
                     </dl>
                     <dl>
-                        <dt><a href="#">公司信息</a></dt>
-                        <dd><a href="#">瑟维斯有限公司</a></dd>
-                        <dd><a href="#">惠创优产业联盟</a></dd>
-                        <dd><a href="#">中兴瑞华有限公司</a></dd>
+                        <dt><a href="javascript:void(0)">公司信息</a></dt>
+                        <dd><a href="javascript:void(0)">瑟维斯有限公司</a></dd>
+                        <dd><a href="javascript:void(0)">惠创优产业联盟</a></dd>
+                        <dd><a href="javascript:void(0)">中兴瑞华有限公司</a></dd>
                     </dl>
                     <dl>
-                        <dt><a href="#">联系我们</a></dt>
-                        <dd><a href="#">400-150-9896</a></dd>
-                        <dd><a href="#">hcylm008@dingtalk.com</a></dd>
-                        <dd><a href="#">武汉市硚口区南国大武汉H座18楼</a></dd>
+                        <dt><a href="javascript:void(0)">联系我们</a></dt>
+                        <dd><a href="javascript:void(0)">400-150-9896</a></dd>
+                        <dd><a href="javascript:void(0)">hcylm008@dingtalk.com</a></dd>
+                        <dd><a href="javascript:void(0)">武汉市硚口区南国大武汉H座18楼</a></dd>
                     </dl>
 
                 </div>

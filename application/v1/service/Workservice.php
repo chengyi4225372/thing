@@ -1,10 +1,12 @@
 <?php
 namespace app\v1\service;
-use app\common\model\Work;
+use app\common\model\Work;;
 use app\common\model\News;
 use app\common\model\Cases;
+use app\common\model\Solution;
 use think\Cache;
 use think\Config;
+use think\Cookie;
 
 class Workservice
 {
@@ -24,27 +26,6 @@ class Workservice
         return self::$instance;
     }
 
-
-    /**
-     * title string
-     *获取资讯列表
-     */
-    public function getNewList($title){
-        if(!empty($title) && isset($title)){
-            $where['title'] = ['like','%'.$title.'%'];
-        }
-        $where['status'] = ['EQ',1];
-
-        $list  = News::instance()->where($where)->order(['id'=>'desc','update_time'=>'desc'])->paginate(8);
-        $lists = $list->toArray();
-        $page = $list->render();
-        $return_data = [
-            'list' => $lists,
-            'page' => $page
-        ];
-        return  $return_data;
-    }
-
     /**
      * 前台获取最高的3条信息
      */
@@ -56,12 +37,33 @@ class Workservice
 
 
     /**
+     * title string
+     *获取资讯列表
+     */
+    public function getNewList($title){
+        if(empty($title) || !isset($title)){
+
+            $where = ['del_time'=>0];
+        }else {
+
+            $where =[
+                'del_time'=>0,
+                'title|keyword'=>['like','%'.$title.'%'],
+            ];
+        }
+
+        $list  = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->paginate(15);
+        return  $list;
+    }
+
+
+    /**
      * array array
      *
      * 添加 数据
      */
     public function setAddArray($array){
-        $ret = News::instance()->data($array)->save();
+        $ret = Work::instance()->data($array)->save();
         return $ret;
     }
 
@@ -83,7 +85,7 @@ class Workservice
             return  false;
         }
 
-        $ret =  News::instance()->where($w)->update($array);
+        $ret =  Work::instance()->where($w)->update($array);
         return $ret;
     }
 
@@ -96,9 +98,9 @@ class Workservice
         if(empty($id) || $id <=0){
             return false;
         }
-       $w    = ['id'=>$id];
-       $info = News::instance()->where($w)->find()->toArray();
-       return $info;
+        $w    = ['id'=>$id];
+        $info = Work::instance()->where($w)->find();
+        return $info;
     }
 
     /**
@@ -112,7 +114,7 @@ class Workservice
         }
 
         $w   = ['id'=>$id];
-        $c   = ['status'=>2];
+        $c   = ['del_time'=>time()];
         $ret = Work::instance()->where($w)->update($c);
         return $ret;
     }
@@ -152,21 +154,21 @@ class Workservice
      * return array|null
      */
     public function getTop($id){
-       if(empty($id) || !isset($id)){
-           return false;
-       }
-       $where = [
-           'id'=>['<',$id],
+        if(empty($id) || !isset($id)){
+            return false;
+        }
+        $where = [
+            'id'=>['<',$id],
             'del_time'=>0
-       ];
+        ];
 
-       $info = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->find();
+        $info = Work::instance()->where($where)->order(['sort'=>'desc','create_time'=>'desc'])->find();
 
-       if(empty($info)){
-           return  $info ='';
-       }else{
-           return  $info;
-       }
+        if(empty($info)){
+            return  $info ='';
+        }else{
+            return  $info;
+        }
 
     }
 
@@ -235,7 +237,7 @@ class Workservice
 
         $next = 10;
         if(empty($page)){
-          $page = 0;
+            $page = 0;
         }else {
             $page= $next * $page;
         }
@@ -248,10 +250,11 @@ class Workservice
     /**
      * 获取有效数据总条数
      */
-     public function getWorkCount(){
-         $count = Work::instance()->where(['del_time'=>0])->count();
-         return $count;
-     }
+    public function getWorkCount(){
+        $count = Work::instance()->where(['del_time'=>0])->count();
+        return $count;
+    }
+
 
     /**
      * @DESC：查询惠灵工的成功案例
@@ -373,6 +376,140 @@ class Workservice
     public function delcase($params)
     {
         $res = Cases::instance()->where(['id' => $params['id']])->update(['status' => 2]);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
+
+    /**
+     * @DESC：行业解决方案首页
+     * @author: jason
+     * @date: 2019-12-02 08:13:40
+     */
+    public function getSolutionInfo($params)
+    {
+        $where = [];
+        //每页显示的数量
+        $page_size = !empty($params['ps']) ? $params['ps'] : 20;
+        //当前页
+        $current_page = (!empty($params['page']) && intval($params['page']) > 0) ? $params['page'] : 1;
+        //分页起始值
+        $start = $page_size * ($current_page - 1);
+
+        if(isset($params['title']) && !empty($params['title'])){
+            //将中文逗号替换成英文逗号
+            if(strpos($params['title'],'，')){
+                $params['title'] = str_replace('，',',',$params['title']);
+            }
+            //将空格替换成英文逗号
+            $params['title'] = preg_replace('/\s{1,}/',' ',$params['title']);
+            $params['title'] = str_replace(' ',',',$params['title']);
+            $params['title'] = explode(',',$params['title']);
+
+            $params['title'] = array_filter($params['title'],function ($params){
+                return !empty($params);
+            });
+            $caseArr = array_map(function($par){
+                return '%'.$par.'%';
+            },$params['title']);
+
+            $where['title'] = ['LIKE',$caseArr,'OR'];
+        }
+        $where['status'] = 1;
+        //分页url参数
+        $config = [
+            'query' => request()->param(),
+        ];
+        $solutionInfo = Solution::instance()->where($where)
+            ->limit($start,$page_size)
+            ->order('id', 'desc')
+            ->paginate($page_size, false, $config);
+        $page = $solutionInfo->render();
+
+        $return_data = [
+            'list' => $solutionInfo->toArray(),
+            'page' => $page,
+        ];
+        return $return_data;
+    }
+
+
+    /**
+     * @DESC：添加行业解决方案
+     * @author: jason
+     * @date: 2019-12-02 08:44:36
+     */
+    public function addsolution($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        $add = [];
+        $add['title'] = $params['title'];
+        $add['content'] = $params['content'];
+        $add['status'] = 1;
+        $add['add_time'] = time();
+        $add['add_user'] = Cookie('username');
+        $res = Solution::instance()->insert($add);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @DESC：编辑行业解决方案
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-02 09:12:38
+     */
+    public function editsolution($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        if(empty($params['id']) || !isset($params['id'])){
+            return false;
+        }
+        $add = [];
+        $add['title'] = $params['title'];
+        $add['content'] = $params['content'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Solution::instance()->where($where)->update($add);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @DESC：查询一条数据出来
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-02 09:18:31
+     */
+    public function getOneSolution($params)
+    {
+
+
+        if(empty($params)){
+            return false;
+        }
+        $where = [];
+        $where['status'] = 1;
+        $where['id'] = $params['id'];
+        $return_data = Solution::instance()->where($where)->find();
+        return $return_data;
+    }
+
+    public function delsolution($params)
+    {
+        $res = Solution::instance()->where(['id' => $params['id']])->update(['status' => 2]);
         if($res === false){
             return false;
         }

@@ -35,45 +35,47 @@
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
-                </th>
-                <th class="text-center">行业新闻标题</th>
-                <th class="text-center">行业新闻图片</th>
+                <th class="col-xs-1" >排序</th>
+                <th class="text-center">新闻标题</th>
+                <th class="text-center">新闻展示图</th>
+                <th class="text-center">新闻关键字</th>
                 <th class="text-center">创建时间</th>
-                <th class="text-center">修改时间</th>
-                <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-                {volist name="list" id="item"}
-                    <tr>
-                        <td class="td-align td-padding">
-                            <input type="checkbox" name="box_checked" data-id="{$item.id}" class="data-check_box">
-                        </td>
-                        <td class="text-center">{$item.title}</td>
+                {empty name="list"}
 
-                        <td class="text-center">
-                            <img src="{$item.pic}" alt="" style="width: 100px;height:100px;">
-                        </td>
-                        <td class="text-center">{$item.add_time}</td>
-                        <td class="text-center">{$item.update_time}</td>
-                        <td class="text-center">
-                            <span class="btn {if $item['status'] == 1}btn-success{else /}btn-danger{/if}">{$status[$item['status']]}</span>
-                        </td>
-                        <td class="text-center">
-                            <input type="hidden" value="{$item['id']}" id="mid">
-                            <a   class="btn btn-info editWork" data-url="{:url('/v1/work/works/edit',['id' => $item['id']])}">编辑</a>
-                            <a  onclick="delWork()" class="btn btn-danger">删除</a>
-                        </td>
-                    </tr>
-                {/volist}
+                {else /}
 
+                {volist name="list" id="vo"}
+                <tr>
+                    <td class="col-xs-1">
+                      <input type="number"  onblur="setSort($(this).val(),$(this).attr('data-id'))" class="form-control" data-id="{$vo.id}" value="{$vo.sort|default='0'}"  />
+                    </td>
+                    <td class="text-center">{$vo.title|default=''}</td>
 
+                    <td class="text-center">
+                        <a href="{$vo.imgs|default='__PUBLIC__/default.png'}">
+                        <img src="{$vo.imgs|default=''}" alt="" style="width: 100px;height:100px;">
+                        </a>
+                    </td>
+                    <td class="text-center">{$vo.keyword|default=''}</td>
+                    <td class="text-center">{$vo.create_time|default=''}</td>
+
+                    <td class="text-center">
+
+                        <a   class="btn btn-info editWork" data-url="{:url('/v1/work/works/edit',['id' => $vo['id']])}" >编辑</a>
+                        <a  onclick="delWork('{$vo.id}')" class="btn btn-danger">删除</a>
+
+                    </td>
+                </tr>
+                 {/volist}
+
+                {/empty}
                 </tbody>
             </table>
             <div class="pages">
-
+                {$list->render()}
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:61:"/opt/web/thing/public/../application/v1/view/index/index.html";i:1573636141;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575010826;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575015290;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:61:"/opt/web/thing/public/../application/v1/view/index/index.html";i:1573636141;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575277666;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575267077;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
 <!DOCTYPE>
 <html lang="zh-CN">
 <head>
@@ -188,7 +188,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/work/works/index'): ?> active <?php endif; ?> " >
+            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase'): ?> active <?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
@@ -199,6 +199,14 @@
                     <li class="<?php if($paths == '/v1/work/works/index'): ?> active <?php endif; ?>">
                         <a href="<?php echo url('/v1/work/works/index'); ?>">
                             <i class="glyphicon glyphicon-user"></i> <span>行业新闻资讯</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="<?php if($paths == '/v1/work/works/successcase'): ?> active <?php endif; ?>">
+                        <a href="<?php echo url('/v1/work/works/successcase'); ?>">
+                            <i class="glyphicon glyphicon-user"></i> <span>成功案例</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>

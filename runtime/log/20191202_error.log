@@ -52,3 +52,45 @@
 ---------------------------------------------------------------
 [ 2019-12-02T14:52:30+08:00 ] 172.26.2.252 GET /v1/work/works/successcase.html
 [ error ] [0]致命错误: Call to a member function toArray() on array[/opt/web/thing/application/v1/service/Workservice.php:266]
+---------------------------------------------------------------
+[ 2019-12-02T19:41:59+08:00 ] 172.26.2.252 GET /v1/work/works/index.html
+[ error ] [0]类的属性不存在:app\common\model\Work->pic[/opt/web/thing/thinkphp/library/think/Model.php:624]
+---------------------------------------------------------------
+[ 2019-12-02T20:50:29+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:50:32+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:50:40+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:50:41+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:50:41+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:52:39+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:52:46+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:52:47+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:52:48+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:52:48+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:52:48+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:52:49+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]
+---------------------------------------------------------------
+[ 2019-12-02T20:52:49+08:00 ] 172.26.2.252 POST /v1/work/works/addsolution.html
+[ error ] [8]未定义数组索引: status[/opt/web/thing/application/v1/service/Workservice.php:452]

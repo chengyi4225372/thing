@@ -66,33 +66,46 @@ $('.addworks').click(function(){
     var data = {};
 
     data.title = $('#title').val();
-    data.pic    =$('#Images').val();
-
-    if(data.pic== '' || data.pic == undefined){
-        layer.msg('请上传新闻图片');
-        return false;
-    }
+    data.desc  = $('#desc').val();
+    data.sort  = $('#sort').val();
+    data.keyword = $('#keyword').val();
+    data.content = ue.getContent();//取得html文本
+    data.imgs    =$('#Images').val();
 
     if(data.title== '' || data.title == undefined){
-        $('#title').focus();
         layer.msg('请输入新闻标题');
         return false;
     }
 
+    if(data.imgs== '' || data.imgs == undefined){
+        layer.msg('请上传新闻图片');
+        return false;
+    }
 
 
-   $.post(urlk,data,function(ret){
+    if(data.desc== '' || data.desc == undefined){
+        layer.msg('请输入新闻描述');
+        return false;
+    }
+
+    if(data.content== '' || data.content == undefined){
+        layer.msg('请填写新闻详情');
+        return false;
+    }
+
+    $.post(urlk,data,function(ret){
         if(ret.code == 200){
             layer.msg(ret.msg,function(){
-                parent.layer.close();
-                parent.location.reload();
+                parent.location.href='index';
             })
         }
 
-       if(ret.code == 400){
-           layer.msg(ret.msg)
-       }
-   },'json')
+        if(ret.code == 400){
+            layer.msg(ret.msg,function(){
+                parent.location.href='index';
+            })
+        }
+    },'json')
 
 })
 
@@ -115,7 +128,11 @@ $('#editWorks').click(function(){
 
     var datas  = {};
     datas.title = $('#title').val();
-    datas.pic    =$('#Images').val();
+    datas.desc  = $('#desc').val();
+    datas.sort  = $('#sort').val();
+    datas.keyword = $('#keyword').val();
+    datas.content = ue.getContent();//取得html文本
+    datas.imgs    =$('#Images').val();
     datas.id     = $('#mid').val();
 
 
@@ -123,29 +140,39 @@ $('#editWorks').click(function(){
         return false;
     }
 
-    if(datas.pic== '' || datas.pic == undefined){
-        layer.msg('请上传新闻图片');
-        return false;
-    }
-
     if(datas.title== '' || datas.title == undefined){
-        $('#title').focus();
         layer.msg('请填写新闻标题');
         return false;
     }
 
+    if(datas.imgs== '' || datas.imgs == undefined){
+        layer.msg('请上传新闻图片');
+        return false;
+    }
+
+
+    if(datas.desc== '' || datas.desc == undefined){
+        layer.msg('请填写新闻描述');
+        return false;
+    }
+
+    if(datas.content== '' || datas.content == undefined){
+        layer.msg('请填写新闻详情');
+        return false;
+    }
 
     $.post(urle,datas,function(ret){
 
         if(ret.code == 200){
             layer.msg(ret.msg,function(){
-                parent.layer.close();
-                parent.location.reload();
+                parent.location.href='index';
             })
         }
 
         if(ret.code == 400){
-            layer.msg(ret.msg)
+            layer.msg(ret.msg,function(){
+                parent.location.href='index';
+            })
         }
     },'json')
 });
@@ -174,7 +201,7 @@ function delWork(id){
             }
         },'json')
     }, function(){
-       parent.layer.closeAll();
+        parent.layer.closeAll();
     });
 
 
@@ -199,6 +226,7 @@ function setSort(value,id){
             })
         }
     },'json')
+
 }
 
 //添加案例
@@ -285,6 +313,111 @@ function editcases(objthis){
 }
 
 function delCase(objthis){
+    var url = $(objthis).attr('data-url');
+    var id = $(objthis).attr('data');
+    layer.confirm('您确定要删除？', {
+        btn: ['确定','点错了'] //按钮
+    }, function(){
+        $.post(url,{'id':id},function(ret){
+            if(ret.code ==  200){
+                layer.msg(ret.msg,{icon:6},function(){
+                    parent.location.reload();
+                })
+            }
+
+            if(ret.code == 400){
+                layer.msg(ret.msg,{icon:5},function(){
+                    parent.location.reload();
+                })
+            }
+        },'json')
+    }, function(){
+        parent.layer.closeAll();
+    });
+}
+
+//行业解决方案
+$('.addsolution').click(function(){
+    var urlk  = $(this).attr('data-url');
+    var data = {};
+
+    data.title = $('#title').val();
+    data.content = ue.getContent();//取得html文本
+
+    if(data.title== '' || data.title == undefined){
+        $('#title').focus();
+        layer.msg('请输入标题');
+        return false;
+    }
+
+    if(data.content== '' || data.content == undefined){
+        layer.msg('请填写相关内容');
+        return false;
+    }
+
+    $.post(urlk,data,function(ret){
+        if(ret.code == 200){
+            layer.msg(ret.msg,function(){
+                parent.location.reload();
+            })
+        }
+
+        if(ret.code == 400){
+            layer.msg(ret.msg)
+        }
+    },'json')
+
+});
+
+
+//编辑
+$(".editsolution").click(function(){
+    var urls = $(this).attr("data-url");
+
+    layer.open({
+        type: 2,
+        title: '编辑方案',
+        shadeClose: true,
+        shade: 0.8,
+        area: ['50%', '50%'],
+        content: urls, //iframe的url
+    })
+})
+//编辑行业解决方案
+function editsolution(objthis){
+    var urlk  = $(objthis).attr('data-url');
+    var id = $(objthis).attr('data');
+    var data = {};
+
+    data.title = $('#title').val();
+    data.id = id;
+    data.content = ue.getContent();//取得html文本
+
+    if(data.title== '' || data.title == undefined){
+        $('#title').focus();
+        layer.msg('请输入标题');
+        return false;
+    }
+
+    if(data.content== '' || data.content == undefined){
+        layer.msg('请填写相关内容');
+        return false;
+    }
+
+    $.post(urlk,data,function(ret){
+        if(ret.code == 200){
+            layer.msg(ret.msg,function(){
+                parent.location.reload();
+            })
+        }
+
+        if(ret.code == 400){
+            layer.msg(ret.msg)
+        }
+    },'json')
+}
+
+function delSolution(objthis){
     var url = $(objthis).attr('data-url');
     var id = $(objthis).attr('data');
     layer.confirm('您确定要删除？', {
