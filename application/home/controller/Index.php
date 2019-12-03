@@ -125,6 +125,9 @@ class Index extends BaseController
             $this->redirect(url('/home/optimal/index'));return;
         }
         $data = Workservice::instance()->getcasedetail(['id' => $id]);
+        if($data == false){
+            $this->redirect(url('/home/optimal/index'));return;
+        }
 //        echo '<pre>';print_r($data);exit;
         $this->assign('list',$data);
         return $this->fetch();
