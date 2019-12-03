@@ -30,6 +30,7 @@
 .clearfix {
     *zoom: 1;
 }
+
 /* 分成120等分 */
 html {
     font-size: 16px;
@@ -89,9 +90,11 @@ dd {
     padding: 0;
     list-style: none;
 }
+
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
+
 a {
     text-decoration: none;
 }
@@ -280,6 +283,7 @@ a {
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
 }
+
 .bread_title a:hover {
     color: #2F80ED;
     cursor: pointer;
@@ -368,11 +372,23 @@ a {
 }
 
 .page {
+    position: relative;
     margin-top: 16.25rem;
     font-size: .875rem;
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: rgba(51, 51, 51, 1);
+}
+
+.page::after {
+    content: "";
+    top: -3.3125rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 65.625rem;
+    height: 1px;
+    background: rgba(245, 245, 245, 1);
 }
 
 .page div {
@@ -607,7 +623,7 @@ a {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     content: '';
-    width: 100%!important;
+    width: 100% !important;
     height: 2px;
     background-color: #fff;
 }

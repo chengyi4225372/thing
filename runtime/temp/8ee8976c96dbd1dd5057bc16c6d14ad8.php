@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575372950;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575373094;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -117,7 +117,7 @@
                             <input type='hidden' id='source' value='惠灵工'>
                             <input type='hidden' id='identification' value='灵活用工'>
                         </div>
-                        <div class="header-right-btn" onclick="btnErp()">获取方案</div>
+                        <div class="header-right-btn" style="cursor:pointer;" onclick="btnErp()">获取方案</div>
                         <!-- 提交成果后弹窗 -->
                         <div class="mask-box">
                             <span></span>

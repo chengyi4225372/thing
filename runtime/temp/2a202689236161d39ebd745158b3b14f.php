@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1575372695;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
+=======
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1575370754;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+>>>>>>> ed0290b16dabc30ff857d8c487f8b845458d5fb2
 <!DOCTYPE >
 <html lang="en">
 
