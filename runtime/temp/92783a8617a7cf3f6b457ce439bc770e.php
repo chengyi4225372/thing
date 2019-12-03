@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1575339561;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,16 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{$title|default=''}</title>
-    <link rel="stylesheet" href="__SPI__/css/base.css">
-    <link rel="stylesheet" href="__SPI__/css/clientcase.css">
+    <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
+    <link rel="stylesheet" href="/static/spirit/css/base.css">
+    <link rel="stylesheet" href="/static/spirit/css/clientcase.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="__SPI__/js/clamp.js"></script>
-    <script src='__SPI__/js/clientcase.js'></script>
+    <script src="/static/spirit/js/clamp.js"></script>
+    <script src='/static/spirit/js/clientcase.js'></script>
 
-    <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
-    <script src="__SPI__/js/spirit.js"></script>
-    <script src='__PUBLIC__/common/js/public.js'></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
+    <script src="/static/spirit/js/spirit.js"></script>
+    <script src='/static/common/js/public.js'></script>
 </head>
 
 <body>
@@ -26,32 +27,32 @@
                 <!-- logo图 -->
                 <div class="logo">
                     <h1>
-                        <img src="__SPI__/images/logo2x.png">
+                        <img src="/static/spirit/images/logo2x.png">
                     </h1>
                 </div>
                 <!-- nav部分 -->
                 <div class="nav">
                     <ul class="clearfix">
-                        <!-- <li><a href="{:config('curl.website')}">首页</a></li>
-                    <li><a href="{:url('/home/optimal/index')}">惠优税</a></li>
-                    <li class="nav-active"><a href="{:url('/home/index/index')}">惠灵工</a></li>
-                    <li><a href="{:url('/home/many/index')}">惠多薪</a></li>
-                    <li><a href="{:url('/home/business/index')}">惠创业</a></li>
-                    <li><a href="{:config('curl.hzs')}">惠找事</a></li>
-                    <li><a href="{:url('/home/launch/index')}">惠企动</a></li> -->
-                        <li class="nav-active"><a href="{:url('/home/index/index')}">首页</a></li>
+                        <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
+                    <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                    <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                    <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
+                    <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                    <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
+                    <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
+                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
                         <li><a href="javascript:;">产品服务</a></li>
                         <li><a href="javascript:;">行业解决方案</a></li>
                         <li><a href="javascript:;">客户案例</a></li>
                         <li><a href="javascript:;">行业新闻资讯</a></li>
                         <!--<li>-->
-                        <!--{if empty($userinfo['userType'])}-->
-                        <!--<a href="javascript:void(0)" login_url="{:config('curl.login_url')}" loca_url="{:config('curl.hlg')}" onclick="members_click(this)">会员通道</a>-->
-                        <!--{elseif $userinfo['userType'] == 'C' /}-->
+                        <!--<?php if(empty($userinfo['userType'])): ?>-->
+                        <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
+                        <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
                         <!--<a href="javascript:void(0)">会员通道</a>-->
-                        <!--{else /}-->
-                        <!--<a href="{:config('curl.redirect_url')}/task/task">会员通道</a>-->
-                        <!--{/if}-->
+                        <!--<?php else: ?>-->
+                        <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
+                        <!--<?php endif; ?>-->
 
                         <!--</li>-->
                     </ul>
@@ -60,18 +61,34 @@
 
 
                 <!-- 登陆注册 -->
-                <!--{if empty($userinfo['mobile'])}-->
+                <!--<?php if(empty($userinfo['mobile'])): ?>-->
                 <!--<div class="loging clearfix">-->
-                <!--<div class="register-btn"><a href="javascript:void(0)" login_url="{:config('curl.login_url')}" loca_url="{:config('curl.hlg')}" onclick="login_btn(this)">-->
+                <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
                 <!--登录-->
                 <!--</a></div>-->
-                <!--<div class="loging-btn"><a href="{:url('/home/login/register')}">注册</a></div>-->
+                <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
                 <!--</div>-->
-                <!--{else /}-->
+                <!--<?php else: ?>-->
                 <!--<div class="u_info">-->
-                <!--{include file="common/login"}-->
+                <!--<?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
+        登陆
+    </a></div>
+    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <img src="/static/spirit/images/user_img.png"
+         style="width:30px;height:30px; vertical-align: middle;">
+    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?>-->
                 <!--</div>-->
-                <!--{/if}-->
+                <!--<?php endif; ?>-->
             </div>
 
         </div>
@@ -92,7 +109,7 @@
             <div class="tabBox w">
                 <ul class="clearfix">
                     <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
+                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
                         <div class="item-content">
                             <p>
                                 中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
@@ -104,7 +121,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
+                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
                         <div class="item-content">
                             <p>
                                 中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
@@ -116,7 +133,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
+                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
                         <div class="item-content">
                             <p>
                                 中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
@@ -128,7 +145,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
+                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
                         <div class="item-content">
                             <p>
                                 中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
@@ -140,7 +157,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
+                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
                         <div class="item-content">
                             <p>
                                 中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
@@ -152,7 +169,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
+                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
                         <div class="item-content">
                             <p>
                                 中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
@@ -203,9 +220,9 @@
 
             </div>
             <div class='concat_icon clearfix'>
-                <div><img src="__SPI__/images/bo.png" alt=""></div>
-                <div><img src="__SPI__/images/wx.png" alt=""></div>
-                <div><img src="__SPI__/images/tie.png" alt=""></div>
+                <div><img src="/static/spirit/images/bo.png" alt=""></div>
+                <div><img src="/static/spirit/images/wx.png" alt=""></div>
+                <div><img src="/static/spirit/images/tie.png" alt=""></div>
             </div>
             <div class="fotter-line"></div>
             <div>© Copyright 2019 惠企动（湖北）科技有限公司 . All Rights Reserved</div>
@@ -242,7 +259,7 @@
       </div> -->
     <!-- 返回顶部 -->
     <!-- <div class='goTop' id="goTop">
-        <div><img src="__HOME__/images/top@2x.png" alt=""></div>
+        <div><img src="/static/home/images/top@2x.png" alt=""></div>
         <div>顶部</div>
       </div>
     </div> -->
@@ -267,7 +284,7 @@
         })
 
         $('.tab ul li').on('click', function () {
-            $('.tabCon img').attr('src', `__SPI__/images/${$(this).index()}case.png`)
+            $('.tabCon img').attr('src', `/static/spirit/images/${$(this).index()}case.png`)
             $('.tabTitle').html($(this).children().html())
             $(this).addClass('activeTab').siblings().removeClass('activeTab')
         })
