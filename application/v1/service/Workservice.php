@@ -495,8 +495,6 @@ class Workservice
      */
     public function getOneSolution($params)
     {
-
-
         if(empty($params)){
             return false;
         }
@@ -514,5 +512,18 @@ class Workservice
             return false;
         }
         return true;
+    }
+
+    /**
+     * @DESC：获取客户案例=====>前端用
+     * @author: jason
+     * @date: 2019-12-03 10:48:43
+     */
+    public function getclientcase()
+    {
+        $where = [];
+        $where['status'] = 1;
+        $info = collection(Cases::instance()->where($where)->select())->toArray();
+        return $info;
     }
 }

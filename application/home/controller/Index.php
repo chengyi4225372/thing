@@ -93,6 +93,7 @@ class Index extends BaseController
      */
     public function solution()
     {
+        $this->assign('title','行业解决方案');
         return $this->fetch();
     }
 
@@ -104,6 +105,9 @@ class Index extends BaseController
      */
     public function clientcase()
     {
+        $this->assign('title','客户案例');
+        $data = Workservice::instance()->getclientcase();
+        $this->assign('list',$data);
         return $this->fetch();
     }
 
@@ -115,6 +119,7 @@ class Index extends BaseController
      */
     public function casedetail()
     {
+        $this->assign('title','客户案例详情');
         return $this->fetch();
     }
 
@@ -125,6 +130,7 @@ class Index extends BaseController
      */
     public function productservice()
     {
+        $this->assign('title','产品服务');
         return $this->fetch();
     }
 
