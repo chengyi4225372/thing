@@ -1,14 +1,14 @@
 //搜索
-function search(objthis){
+function search(objthis) {
     var keyword = $('#keyword').val();
 
     var url = $(objthis).attr('data-url');
-    if(keyword== '' || keyword==undefined){
+    if (keyword == '' || keyword == undefined) {
         layer.msg('请输入搜索内容');
         return false;
     }
 
-    window.location.href= url+'?keyword='+keyword;
+    window.location.href = url + '?keyword=' + keyword;
 }
 
 //手机验证
@@ -26,13 +26,13 @@ var gurl = "http://172.26.3.8:8089";
 
 var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
 
-function btnErp(){
+function btnErp() {
 
     var datas = {};
 
-    datas.contactName =$.trim($("#Name").val());//联系姓名
+    datas.contactName = $.trim($("#Name").val());//联系姓名
     datas.companyName = $.trim($("#cName").val()); //公司
-    datas.contactMobile =$.trim($("#Mobile").val());//手机
+    datas.contactMobile = $.trim($("#Mobile").val());//手机
     datas.source = $("#source").val(); //渠道
     datas.identification = $("#identification").val();//标识
 
@@ -67,10 +67,12 @@ function btnErp(){
         success: function (ret) {
 
             if (ret.status == 200 && ret.rel == true) {
-                $('.mask-box').show();
-                $('.mask-box').hide(3000,function(){
-                    window.location.reload();
-                });
+                $('.mask-box').fadeIn(1000);
+                window.setTimeout(function () {
+                    $('.mask-box').fadeOut(1000, function () {
+                        window.location.reload();
+                    });
+                }, 3000)
             }
 
             //201 号码已经存在
@@ -94,24 +96,24 @@ function btnErp(){
 }
 
 //弹窗
-function GetErp(){
+function GetErp() {
     $('#popbox').show();
 }
 
 //关闭
-function turnoff(){
+function turnoff() {
     $('#popbox').hide();
 }
 
 
 
 //提交公海
-function form_btn(){
+function form_btn() {
     var data = {};
 
     data.contactName = $.trim($("#contactName").val());//联系姓名
     data.companyName = $.trim($("#companyName").val()); //公司
-    data.contactMobile =$.trim($("#contactMobile").val());//手机
+    data.contactMobile = $.trim($("#contactMobile").val());//手机
     data.source = $("#sources").val(); //渠道
     data.identification = $("#identifications").val();//标识
 
@@ -147,11 +149,12 @@ function form_btn(){
 
 
             if (ret.status == 200 && ret.rel == true) {
-                $('.mask-box').show();
-                $('.mask-box').hide(1500,function(){
-                    window.location.reload();
-                });
-
+                $('.mask-box').fadeIn(1000);
+                window.setTimeout(function () {
+                    $('.mask-box').fadeOut(1000, function () {
+                        window.location.reload();
+                    });
+                }, 3000)
             }
 
             //201 号码已经存在
@@ -176,66 +179,66 @@ function form_btn(){
 
 
 //分页
-function getMore(keyword,i,objthis){
-   var urls = $(objthis).attr('data-url');
+function getMore(keyword, i, objthis) {
+    var urls = $(objthis).attr('data-url');
 
-   var hrefs=$(objthis).attr('data-href');
-   $.get(urls,{'keyword':keyword,'page':i},function(ret){
-         if(ret.code == 200){
-             var html= '';
-             $.each(ret.data,function(i,item){
-                html+= "<li>";
-                html+= "<a href= '"+hrefs+"?mid="+item.id+"'>";
-                html+= "<div class='tabs-items-img'><img src="+item.imgs+" alt=''></div>";
-                html+= "<div class='tabs-items-content'><div class='tabs-items-content-title figcaption'>";
-                html+=  "<p>"+ item.title +"</p></div>";
-                html+= "<div class='tabs-items-content-text figcaption'>";
-                html+= "<p>"+item.desc+"</p></div>";
-                html+=" <div class='tabs-items-content-time'>" ;
-                html+="<span><img src='/static/spirit/images/shijian2x.png' alt=''></span>";
-                html+="<span>"+item.create_time +"</span></div></div>";
-                html+= "</a>";
-                html+="</li>";
-             });
-             console.log(html);
-             $('#content').append(html).html();
-             $('#page').val(++i);
-         }
+    var hrefs = $(objthis).attr('data-href');
+    $.get(urls, { 'keyword': keyword, 'page': i }, function (ret) {
+        if (ret.code == 200) {
+            var html = '';
+            $.each(ret.data, function (i, item) {
+                html += "<li>";
+                html += "<a href= '" + hrefs + "?mid=" + item.id + "'>";
+                html += "<div class='tabs-items-img'><img src=" + item.imgs + " alt=''></div>";
+                html += "<div class='tabs-items-content'><div class='tabs-items-content-title figcaption'>";
+                html += "<p>" + item.title + "</p></div>";
+                html += "<div class='tabs-items-content-text figcaption'>";
+                html += "<p>" + item.desc + "</p></div>";
+                html += " <div class='tabs-items-content-time'>";
+                html += "<span><img src='/static/spirit/images/shijian2x.png' alt=''></span>";
+                html += "<span>" + item.create_time + "</span></div></div>";
+                html += "</a>";
+                html += "</li>";
+            });
+            console.log(html);
+            $('#content').append(html).html();
+            $('#page').val(++i);
+        }
 
-         if(ret.code == 404){
-             layer.msg(ret.msg);
-             return false;
-         }
-   },'json')
+        if (ret.code == 404) {
+            layer.msg(ret.msg);
+            return false;
+        }
+    }, 'json')
 
 }
 
 
 //回到惠灵工
-function go_work(obj){
-    var urls  = $(obj).attr('data-url');
-    window.location.href= urls;
+function go_work(obj) {
+    var urls = $(obj).attr('data-url');
+    window.location.href = urls;
 }
 
 //回惠灵工新闻列表
-function go_news(obj){
-    var urlk  = $(obj).attr('data-url');
-    window.location.href= urlk;
+function go_news(obj) {
+    var urlk = $(obj).attr('data-url');
+    window.location.href = urlk;
 }
 
 
 //登录了才能查看了解更多
-function is_login(objthis){
+function is_login(objthis) {
     var data_url = $(objthis).attr('data-url');
     var is_login = $(objthis).attr('mobile-phone');
     var login_url2 = $(objthis).attr('login_url');
     var loca_url2 = $(objthis).attr('loca_url');
     var loca_url = encodeURIComponent(loca_url2);
-    var login_url = login_url2+'?artId='+loca_url;
-    if(is_login == '' || is_login == undefined){
-        window.location.href=login_url;
-    }else{
-        window.location.href=data_url;
+    var login_url = login_url2 + '?artId=' + loca_url;
+    if (is_login == '' || is_login == undefined) {
+        window.location.href = login_url;
+    } else {
+        window.location.href = data_url;
     }
 }
 
