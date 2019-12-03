@@ -116,10 +116,10 @@ a {
 }
 
 .logo {
-    margin-left: .75rem;
+    /* margin-left: .75rem; */
     width: 7.75rem;
     height: 3.375rem;
-    background-image: url('../images/logo.png');
+    /* background-image: url('../images/logo.png'); */
     background-size: 100% 100%;
 }
 
@@ -264,6 +264,7 @@ a {
     width: 100%;
     /* height: 1852px; */
     background: rgba(245, 249, 255, 1);
+    margin-top: 6.25rem;
 }
 
 .content_middle {
@@ -278,6 +279,10 @@ a {
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
+}
+.bread_title a:hover {
+    color: #2F80ED;
+    cursor: pointer;
 }
 
 .pic_total {
@@ -554,19 +559,18 @@ a {
     left: 0;
     width: 100%;
     height: 6.25rem;
-    background: rgba(24, 24, 24, 1);
+    background: #2F80ED;
     z-index: 999;
 }
 
 .nav-container {
-    padding-top: 1.25rem;
+    padding-top: .75rem;
 }
 
 .nav-container .logo {
     float: left;
-    width: 7.75rem;
-    height: 3.375rem;
-    margin-top: .3125rem;
+    width: 5.375rem;
+    height: 4.75rem;
 }
 
 .nav-container h1 {
@@ -579,12 +583,12 @@ a {
 
 .nav-container .nav {
     float: left;
-    margin-left: 11.625rem;
+    margin-left: 11.5rem;
 }
 
 .nav-container .nav ul {
     list-style: none;
-    margin: 1.25rem 0 0 0;
+    margin: 1.875rem 0 0 0;
     padding: 0;
 }
 
@@ -613,7 +617,7 @@ a {
 
 .nav-active::after {
     position: absolute;
-    bottom: -2.3125rem;
+    bottom: -2.1875rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -681,7 +685,6 @@ a {
     text-align: center;
     line-height: 2.625rem;
     margin-top: .625rem;
-
     cursor: pointer;
 }
 
