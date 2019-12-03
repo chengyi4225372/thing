@@ -1398,6 +1398,7 @@ span:nth-child(4) {
     line-height: 3.75rem;
     padding-left: 7.375rem;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 
