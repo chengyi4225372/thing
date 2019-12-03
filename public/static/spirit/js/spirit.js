@@ -68,7 +68,7 @@ function btnErp(){
 
             if (ret.status == 200 && ret.rel == true) {
                 $('.mask-box').show();
-                $('.mask-box').hide(1500,function(){
+                $('.mask-box').hide(3000,function(){
                     window.location.reload();
                 });
             }
