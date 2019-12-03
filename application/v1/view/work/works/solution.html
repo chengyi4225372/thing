@@ -55,7 +55,7 @@
                     <td class="text-center">{:isset($list['title']) ? $list['title'] : ''}</td>
 
                     <td class="text-center">
-                        <textarea cols="40" rows="5">{:isset($list['title']) ? $list['title'] : ''}</textarea>
+                        <textarea cols="40" rows="5">{:isset($list['content']) ? $list['content'] : ''}</textarea>
                     </td>
                     <td class="text-center">{:date('Y-m-d H:i:s',$list['add_time'])}</td>
                     <td class="text-center">{$list['add_user']}</td>

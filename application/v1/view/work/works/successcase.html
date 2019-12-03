@@ -56,7 +56,9 @@
                     <td class="text-center">
                         <img src="{:isset($list['pic']) ? $list['pic'] : ''}" alt="" style="width: 100px;height:100px;">
                     </td>
-                    <td class="text-center">{$list['content']}</td>
+                    <td class="text-center">
+                        <textarea cols="40" rows="5">{:isset($list['content']) ? $list['content'] : ''}</textarea>
+                    </td>
                     <td class="text-center">{:date('Y-m-d H:i:s',$list['add_time'])}</td>
                     <td class="text-center">
                         <span class="btn {if $list['status'] == 1} btn-success {else /} btn-danger {/if}">{:isset($list['status']) ? $status[$list['status']] : ''}</span>

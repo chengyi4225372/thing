@@ -235,7 +235,7 @@ function addcases(objthis){
     var datas  = {};
     datas.title = $('#title').val();
     datas.pic    =$('#Images').val();
-    datas.content     = $('#contents').val();
+    datas.content = ue.getContent();//取得html文本
     if(datas.pic== '' || datas.pic == undefined){
         layer.msg('请选择要上传的图片');
         return false;
@@ -276,7 +276,7 @@ function editcases(objthis){
     var datas  = {};
     datas.title = $('#title').val();
     datas.pic    =$('#Images').val();
-    datas.content     = $('#contents').val();
+    datas.content = ue.getContent();//取得html文本
     datas.id     = $(objthis).attr('data');
     if(datas.pic== '' || datas.pic == undefined){
         layer.msg('请选择要上传的图片');
