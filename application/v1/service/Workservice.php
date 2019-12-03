@@ -339,6 +339,7 @@ class Workservice
         $add['title'] = $params['title'];
         $add['content'] = $params['content'];
         $add['pic'] = $params['pic'];
+        $add['describe'] = $params['describe'];
         $add['status'] = 1;
         $add['add_time'] = time();
         $add['update_time'] = time();
@@ -360,6 +361,7 @@ class Workservice
         $add['title'] = $params['title'];
         $add['content'] = $params['content'];
         $add['pic'] = $params['pic'];
+        $add['describe'] = $params['describe'];
         $add['update_time'] = time();
         $res = Cases::instance()->where(['id' => $params['id']])->update($add);
         if($res === false){
@@ -495,8 +497,6 @@ class Workservice
      */
     public function getOneSolution($params)
     {
-
-
         if(empty($params)){
             return false;
         }
@@ -514,5 +514,38 @@ class Workservice
             return false;
         }
         return true;
+    }
+
+    /**
+     * @DESC：获取客户案例=====>前端用
+     * @author: jason
+     * @date: 2019-12-03 10:48:43
+     */
+    public function getclientcase()
+    {
+        $where = [];
+        $where['status'] = 1;
+        $info = collection(Cases::instance()->where($where)->select())->toArray();
+        return $info;
+    }
+
+    /**
+     * @DESC：查询客户案例详情
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-03 11:28:31
+     */
+    public function getcasedetail($params)
+    {
+        if(empty($params['id']) || !isset($params['id'])){
+            return false;
+        }
+        $id = $params['id'];
+        $where = [];
+        $where['id'] = $id;
+        $where['status'] = 1;
+        $return_data = Cases::instance()->where($where)->find();
+        return $return_data;
     }
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575281307;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575336123;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -44,9 +44,9 @@
                         <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
                         <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
                         <li><a href="javascript:;">产品服务</a></li>
-                        <li><a href="javascript:;">行业解决方案</a></li>
-                        <li><a href="javascript:;">客户案例</a></li>
-                        <li><a href="javascript:;">行业新闻资讯</a></li>
+                        <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
+                        <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
+                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
                         <!--<li>-->
                             <!--<?php if(empty($userinfo['userType'])): ?>-->
                             <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
