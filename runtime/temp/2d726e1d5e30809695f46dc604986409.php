@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1575348650;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1575367745;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
+<!DOCTYPE >
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -88,25 +88,42 @@
       <div class='header-box'></div>
   
       <!-- 选项卡 -->
-      <div class="w bg_tab">
-        <div class="tabBox">
-          <div class="tab">
-            <ul>
-              <li><a href="javascript:;">外卖行业行业整体解决方案</a></li>
-              <li><a href="javascript:;">新物流行业整体解决方案</a></li>
-              <li class="activeTab"><a href="javascript:;">新零售行业整体解决方案</a></li>
-              <li><a href="javascript:;">制造业整体解决方案</a></li>
-              <li><a href="javascript:;">咨询培训平台整体解决方案</a></li>
-            </ul>
-            <div class="tabCon">
-              <img src="/static/spirit/images/2case.png" alt="">
+      <!--<div class="w bg_tab">-->
+        <!--<div class="tabBox">-->
+          <!--<div class="tab">-->
+            <!--<ul>-->
+              <!--<li><a href="javascript:;">外卖行业行业整体解决方案</a></li>-->
+              <!--<li><a href="javascript:;">新物流行业整体解决方案</a></li>-->
+              <!--<li class="activeTab"><a href="javascript:;">新零售行业整体解决方案</a></li>-->
+              <!--<li><a href="javascript:;">制造业整体解决方案</a></li>-->
+              <!--<li><a href="javascript:;">咨询培训平台整体解决方案</a></li>-->
+            <!--</ul>-->
+            <!--<div class="tabCon">-->
+              <!--<img src="/static/spirit/images/2case.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="tabTitle">-->
+              <!--O2O服务模式(共享经济)-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+        <input type="hidden" id="data_url" value="<?php echo url('/home/index/getAllSolution'); ?>">
+        <input type="hidden" id="one_data_url" value="<?php echo url('/home/index/ajaxOneSolution'); ?>">
+        <div class="w bg_tab">
+            <div class="tabBox">
+                <div class="tab">
+                    <ul id="ul_solution"></ul>
+                    <div class="tabCon">
+
+                    </div>
+                    <div class="tabTitle">
+
+                    </div>
+                </div>
             </div>
-            <div class="tabTitle">
-              O2O服务模式(共享经济)
-            </div>
-          </div>
         </div>
-      </div>
+
   
     </div>
   
@@ -116,30 +133,30 @@
       <div class="w fotter">
         <div class='parter_catefories'>
           <dl>
-            <dt><a href="#">服务产品</a></dt>
-            <dd><a href="#">服务型税筹</a></dd>
-            <dd><a href="#">门户型税筹</a></dd>
-            <dd><a href="#">人力资源</a></dd>
+            <dt><a href="javascript:;">服务产品</a></dt>
+            <dd><a href="javascript:;">服务型税筹</a></dd>
+            <dd><a href="javascript:;">门户型税筹</a></dd>
+            <dd><a href="javascript:;">人力资源</a></dd>
           </dl>
           <dl>
-            <dt><a href="#">招商政策</a></dt>
-            <dd><a href="#">招商政策网</a></dd>
+            <dt><a href="javascript:;">招商政策</a></dt>
+            <dd><a href="javascript:;">招商政策网</a></dd>
           </dl>
           <dl>
-            <dt><a href="#">合作</a></dt>
-            <dd><a href="#">代理合作</a></dd>
+            <dt><a href="javascript:;">合作</a></dt>
+            <dd><a href="javascript:;">代理合作</a></dd>
           </dl>
           <dl>
-            <dt><a href="#">公司信息</a></dt>
-            <dd><a href="#">瑟维斯有限公司</a></dd>
-            <dd><a href="#">惠创优产业联盟</a></dd>
-            <dd><a href="#">中兴瑞华有限公司</a></dd>
+            <dt><a href="javascript:;">公司信息</a></dt>
+            <dd><a href="javascript:;">瑟维斯有限公司</a></dd>
+            <dd><a href="javascript:;">惠创优产业联盟</a></dd>
+            <dd><a href="javascript:;">中兴瑞华有限公司</a></dd>
           </dl>
           <dl>
-            <dt><a href="#">联系我们</a></dt>
-            <dd><a href="#">400-150-9896</a></dd>
-            <dd><a href="#">hcylm008@dingtalk.com</a></dd>
-            <dd><a href="#">武汉市硚口区南国大武汉H座18楼</a></dd>
+            <dt><a href="javascript:;">联系我们</a></dt>
+            <dd><a href="javascript:;">400-150-9896</a></dd>
+            <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
+            <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
           </dl>
   
         </div>
@@ -207,11 +224,59 @@
           $('.chosenPage').addClass('nav-active')
       })
   
-      $('.tab ul li').on('click', function () {
-        $('.tabCon img').attr('src', `/static/spirit/images/${$(this).index()}case.png`)
-        $('.tabTitle').html($(this).children().html())
-        $(this).addClass('activeTab').siblings().removeClass('activeTab')
-      })
+//      $('.tab ul li').on('click', function () {
+//        $('.tabCon img').attr('src', `/static/spirit/images/${$(this).index()}case.png`)
+//        $('.tabTitle').html($(this).children().html())
+//        $(this).addClass('activeTab').siblings().removeClass('activeTab')
+//      })
+
+
+        //查询出所有的解决方案
+
+        get_all_solution();
+        function get_all_solution(){
+            var url = $('#data_url').val();
+            $.post(
+                    url,
+                    '',
+                    function (ret){
+                        if(ret.data.length > 0){
+                            var _html = '';
+                            var _html2 = '';
+                            $.each(ret.data,function (index,item){
+                                if(index == 3){
+                                    _html += '<li class="activeTab"><a href="javascript:void(0)" data-id="'+item.id+'">'+item.title+'</a></li>';
+                                    _html2 += '<img src="'+item.pic+'" alt="">';
+                                    $('.tabTitle').html(item.title);
+                                }else{
+                                    _html += '<li><a href="javascript:void(0)"  data-id="'+item.id+'">'+item.title+'</a></li>';
+                                }
+
+                            });
+                            $('.tabCon').append('').html(_html2);
+                            $('#ul_solution').append('').html(_html);
+                        }
+                    },'json'
+            );
+        }
+
+        $('.tab ul').on('click','li',function (e){
+            var id = $(e.target).attr('data-id');
+            var url = $('#one_data_url').val();
+            $.post(
+                    url,
+                    {id:id},
+                    function (ret){
+                        if(ret.data != null){
+                            $('.tabCon').append('').html('<img src="'+ret.data.pic+'" alt="">');
+                            $('.tabTitle').html(ret.data.title);
+
+                        }
+                    },'json'
+            );
+            $(this).addClass('activeTab').siblings().removeClass('activeTab');
+
+        });
     })
   </script>
 </html>

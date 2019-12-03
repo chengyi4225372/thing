@@ -102,8 +102,6 @@ input:-webkit-autofill {
 }
 
 
-/* nav部分 */
-
 .container {
     min-width: 75rem;
 }
@@ -114,7 +112,7 @@ input:-webkit-autofill {
     left: 0;
     width: 100%;
     height: 6.25rem;
-    background: #2F80ED;
+    background: #181818;
     z-index: 999;
 }
 
@@ -124,8 +122,10 @@ input:-webkit-autofill {
 
 .nav-container .logo {
     float: left;
-    width: 5.375rem;
+    width:  7.75rem;
     height: 4.75rem;
+    display: flex;
+    align-items: center;
 }
 
 .nav-container h1 {
@@ -180,7 +180,7 @@ input:-webkit-autofill {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     content: '';
-    width: 100% !important;
+    width: 100%!important;
     height: 2px;
     background-color: #fff;
 }
