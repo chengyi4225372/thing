@@ -75,7 +75,7 @@
         <!-- 面包屑 -->
         <div class="crumbs">
             <div class="crumbs-box w">
-                <span><a href="#">惠灵工></a></span>
+                <span><a href="{:url('/home/index/index')}">惠灵工></a></span>
                 <span> 客户案例</span>
             </div>
         </div>
@@ -84,78 +84,22 @@
         <div class="bg_tab">
             <div class="tabBox w">
                 <ul class="clearfix">
+                    {volist name="list" id="item" empty="暂时没有数据"}
                     <li>
                         <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
                         <div class="item-content">
                             <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
+                                {$item.title}
                             </p>
                             <p>
-                                创新管理方法、人工智能、
+                                {$item.describe}
                             </p>
-                            <a href="./casedetail.html">查看案例>></a>
+                            <a href="{:url('/home/index/casedetail',['id' => $item['id']])}"> 查看案例>> </a>
                         </div>
                     </li>
-                    <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="__SPI__/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
+                    {/volist}
+
+
                 </ul>
             </div>
         </div>

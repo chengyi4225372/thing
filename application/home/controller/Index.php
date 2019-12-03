@@ -120,6 +120,13 @@ class Index extends BaseController
     public function casedetail()
     {
         $this->assign('title','客户案例详情');
+        $id = input('id','','int');
+        if(empty($id) || !isset($id)){
+            $this->redirect(url('/home/optimal/index'));return;
+        }
+        $data = Workservice::instance()->getcasedetail(['id' => $id]);
+//        echo '<pre>';print_r($data);exit;
+        $this->assign('list',$data);
         return $this->fetch();
     }
 

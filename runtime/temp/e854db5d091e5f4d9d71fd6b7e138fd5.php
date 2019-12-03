@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/clientcase.html";i:1575340940;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/clientcase.html";i:1575343046;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +34,7 @@
                 <div class="nav">
                     <ul class="clearfix">
                         <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-                        <li><a href="javascript:;">产品服务</a></li>
+                        <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
                         <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
                         <li class="nav-active"><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
                         <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
@@ -92,7 +92,7 @@
         <!-- 面包屑 -->
         <div class="crumbs">
             <div class="crumbs-box w">
-                <span><a href="#">惠灵工></a></span>
+                <span><a href="<?php echo url('/home/index/index'); ?>">惠灵工></a></span>
                 <span> 客户案例</span>
             </div>
         </div>
@@ -101,78 +101,22 @@
         <div class="bg_tab">
             <div class="tabBox w">
                 <ul class="clearfix">
+                    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
                     <li>
                         <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
                         <div class="item-content">
                             <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
+                                <?php echo $item['title']; ?>
                             </p>
                             <p>
-                                创新管理方法、人工智能、
+                                <?php echo $item['describe']; ?>
                             </p>
-                            <a href="./casedetail.html">查看案例>></a>
+                            <a href="<?php echo url('/home/index/casedetail',['id' => $item['id']]); ?>"> 查看案例>> </a>
                         </div>
                     </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
+                    <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
+
+
                 </ul>
             </div>
         </div>

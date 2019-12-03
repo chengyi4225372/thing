@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"/opt/web/thing/public/../application/v1/view/work/works/editcase.html";i:1575337783;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575277692;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"/opt/web/thing/public/../application/v1/view/work/works/editcase.html";i:1575338899;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575277692;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
 <!DOCTYPE>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -74,6 +74,14 @@
                         <span class="red-color">*</span>案例标题：</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control form-control-sm" id="title" value="<?php echo $list['title']; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="describe" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>描述：</label>
+                    <div class="col-sm-9">
+                        <textarea id="describe" class="form-control form-control-sm" cols="40" rows="5"><?php echo $list['describe']; ?></textarea>
                     </div>
                 </div>
 
