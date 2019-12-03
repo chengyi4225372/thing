@@ -550,4 +550,32 @@ class Workservice
         $return_data = Cases::instance()->where($where)->find();
         return $return_data;
     }
+
+    /**
+     * @DESC：获取所有的行业解决方案
+     * @return array
+     * @author: jason
+     * @date: 2019-12-03 02:27:09
+     */
+    public function getAllSolution()
+    {
+        $return_data = collection(Solution::instance()->where(['status' => 1])->field('id,title,pic,content')->select())->toArray();
+        return $return_data;
+    }
+
+    /**
+     * @DESC：ajax获取一条解决方案
+     * @return mixed
+     * @author: jason
+     * @date: 2019-12-03 02:29:28
+     */
+    public function ajaxOneSolution($params)
+    {
+        $where = [];
+        $where['status'] = 1;
+        $where['id'] = $params['id'];
+        $return_data = Solution::instance()->where($where)->field('id,title,pic,content')->find();
+        return $return_data;
+    }
+
 }

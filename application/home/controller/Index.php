@@ -134,6 +134,34 @@ class Index extends BaseController
     }
 
     /**
+     * @DESC：ajax查询出所有的行业解决方案
+     * @return \think\response\Json
+     * @author: jason
+     * @date: 2019-12-03 02:18:00
+     */
+    public function getAllSolution()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $info = Workservice::instance()->getAllSolution();
+            return json(['data' => $info]);
+        }
+    }
+
+    /**
+     * @DESC：获取单个行业解决方案
+     * @return \think\response\Json
+     * @author: jason
+     * @date: 2019-12-03 02:26:41
+     */
+    public function ajaxOneSolution()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $id = input('post.id','','int');
+            $info = Workservice::instance()->ajaxOneSolution(['id' => $id]);
+            return json(['data' => $info]);
+        }
+    }
+    /**
      * @DESC：产品服务
      * @author: jason
      * @date: 2019-12-03 10:02:58
@@ -143,6 +171,8 @@ class Index extends BaseController
         $this->assign('title','产品服务');
         return $this->fetch();
     }
+
+
 
      /**
       * 分页接口

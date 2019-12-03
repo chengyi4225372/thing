@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575336123;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575348725;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -29,7 +29,7 @@
                 <!-- logo图 -->
                 <div class="logo">
                     <h1>
-                        <img src="/static/spirit/images/logo2x.png">
+                        <img src="/static/spirit/images/logo2xx.png">
                     </h1>
                 </div>
                 <!-- nav部分 -->
@@ -43,7 +43,7 @@
                         <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
                         <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
                         <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-                        <li><a href="javascript:;">产品服务</a></li>
+                        <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
                         <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
                         <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
                         <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>

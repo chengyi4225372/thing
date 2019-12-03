@@ -48,3 +48,12 @@
 ---------------------------------------------------------------
 [ 2019-12-03T11:49:59+08:00 ] 172.26.2.252 GET /v1/work/works/editsolution.html?id=1
 [ error ] [0]类的属性不存在:app\common\model\Solution->pic[/opt/web/thing/thinkphp/library/think/Model.php:624]
+---------------------------------------------------------------
+[ 2019-12-03T14:02:05+08:00 ] 172.26.2.252 GET /home/index/solution.html
+[ error ] [0]类型错误: Too few arguments to function think\db\Query::where(), 0 passed and at least 1 expected[/opt/web/thing/thinkphp/library/think/db/Query.php:995]
+---------------------------------------------------------------
+[ 2019-12-03T14:06:55+08:00 ] 172.26.2.252 GET /home/index/solution.html
+[ error ] [8]未定义变量: info[/opt/web/thing/runtime/temp/d48e520c29d785a72126b2c3870f4118.php:116]
+---------------------------------------------------------------
+[ 2019-12-03T14:20:19+08:00 ] 172.26.2.252 GET /home/index/solution.html
+[ error ] [8]未定义变量: data_list[/opt/web/thing/runtime/temp/d48e520c29d785a72126b2c3870f4118.php:236]
