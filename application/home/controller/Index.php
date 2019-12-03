@@ -85,6 +85,39 @@ class Index extends BaseController
      }
 
 
+    /**
+     * @DESC：行业解决方案首页
+     * @return mixed
+     * @author: jason
+     * @date: 2019-12-03 09:07:51
+     */
+    public function solution()
+    {
+        return $this->fetch();
+    }
+
+    /**
+     * @DESC：客户案例首页
+     * @return mixed
+     * @author: jason
+     * @date: 2019-12-03 09:17:31
+     */
+    public function clientcase()
+    {
+        return $this->fetch();
+    }
+
+    /**
+     * @DESC：客户案例详情
+     * @return mixed
+     * @author: jason
+     * @date: 2019-12-03 09:18:23
+     */
+    public function casedetail()
+    {
+        return $this->fetch();
+    }
+
      /**
       * 分页接口
       */
