@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1575341783;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1575348057;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?php echo $title; ?></title>
-  <meta name="keywords" content="<?php echo (isset($info['keyword']) && ($info['keyword'] !== '')?$info['keyword']:''); ?>" />
   <link rel="stylesheet" href="/static/spirit/css/base.css">
-  <link rel="stylesheet" href="/static/spirit/css/detail.css">
+  <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
+  <script src="/static/spirit/js/clamp.js"></script>
+  <script src='/static/spirit/js/Informationlist.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script src='/static/spirit/js/spirit.js'></script>
@@ -17,22 +18,37 @@
 </head>
 
 <body>
+
   <div class='container'>
-    <!--<div class='header'>
-      <div class=header_content>
-        <div class='logo'>
-          <a href="/"></a>
-        </div>
-        <ul class='titile'>
-          <li ><a href="<?php echo config('work.hqy_url'); ?>">首页</a></li>
-          <li><a href="#">惠优税</a></li>
-          <li class="nav-active"><a href="/">惠灵工</a></li>
-          <li><a href="#">惠多薪</a></li>
-          <li><a href="#">惠创业</a></li>
-          <li><a href="#">惠找事</a></li>
-          <li><a href="#">惠启动</a></li>
-        </ul>
-        <?php if(empty($userinfo['mobile'])): ?>
+
+    <!-- 导航部分 -->
+    <!--<div class="nav-box">-->
+      <!--<div class="w nav-container clearfix">-->
+        <!--&lt;!&ndash; logo图 &ndash;&gt;-->
+        <!--<div class="logo">-->
+          <!--<h1>-->
+            <!--<a href="<?php echo url('/home/spirit/index'); ?>"><img src="/static/spirit/images/logo2x.png"></a>-->
+          <!--</h1>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; nav部分 &ndash;&gt;-->
+        <!--<div class="nav">-->
+          <!--<ul class="clearfix">-->
+            <!--&lt;!&ndash;<li ><a href="<?php echo config('curl.website'); ?>">首页</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>&ndash;&gt;-->
+            <!--<li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>-->
+            <!--<li><a href="javascript:;">产品服务</a></li>-->
+            <!--<li><a href="javascript:;">行业解决方案</a></li>-->
+            <!--<li><a href="javascript:;">客户案例</a></li>-->
+            <!--<li><a href="javascript:;">行业新闻资讯</a></li>-->
+          <!--</ul>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; 登陆注册 &ndash;&gt;-->
+        <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
         登陆
@@ -48,9 +64,10 @@
         <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
-<?php endif; ?>
-      </div>
-    </div>-->
+<?php endif; ?>-->
+      <!--</div>-->
+
+    <!--</div>-->
 
     <div class="nav-box">
       <div class="w nav-container clearfix">
@@ -117,33 +134,64 @@
     </div>
 
 
-    <div class='main_content'>
-      <div class='content_middle'>
-        <div class='bread_title'><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a> > <a onclick="go_news(this)" data-url="<?php echo url('/home/spirit/informationList'); ?>">资讯</a> > 新闻详情</div>
-        <div class='pic_total'>
-          <div class='pic_title'><?php echo $info['title']; ?></div>
-          <div class='time'><?php echo $info['create_time']; ?></div>
-          <div class='line'></div>
-          <div class='tuwen'>
-            <div class='wenzi'>
-              <?php echo $info['content']; ?>
-             </div>
 
-            <!-- <div class='page'>
-              <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
-              <div><span>上一篇:</span><a href="#">已经是第一篇了</a></div>
-              <?php else: ?>
-              <div><span>上一篇:</span><a href="<?php echo url('/home/index/detail',['mid'=>$top['id']]); ?>"><?php echo $top['title']; ?></a></div>
-              <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
-              <div><span>下一篇:</span><a href="#">已经是最后一篇</a></div>
-              <?php else: ?>
-              <div><span>下一篇:</span><a href="<?php echo url('/home/index/detail',['mid'=>$next['id']]); ?>"><?php echo $next['title']; ?></a></div>
-              <?php endif; ?>
-            </div> -->
+    <!-- 面包屑导航 -->
+    <div class="content-box">
+      <div class="w content">
+        <div class="bread-crumbs">
+          <span><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></span> > <span><a onclick="go_news(this)" data-url="<?php echo url('/home/spirit/informationList'); ?>">资讯</a></span> ><span></span>
+        </div>
+        <div class="information-list">
+          <div class="tabs clearfix">
+            <ul class="clearfix fl">
+              <li class="li-active"><a href="<?php echo url('/home/index/informationList'); ?>">行业资讯</a></li>
+             <!--  <li>招标信息</li>-->
+            </ul>
+            <div class="search-box fr">
+              <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
+              <div onclick="search(this)" data-url="<?php echo url('/home/index/informationList'); ?>">搜索</div>
+            </div>
           </div>
+          <div class="tabs-items show">
+            <ul id="content">
+              <?php if(empty($list) || (($list instanceof \think\Collection || $list instanceof \think\Paginator ) && $list->isEmpty())): ?>
+              <li>
+                  <div class="tabs-items-content">
+                    <div class="tabs-items-content-text figcaption">
+                      <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
+                    </div>
+                  </div>
+              </li>
+              <?php else: if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+              <li>
+                <a href="<?php echo url('/home/index/detail',['mid'=>$vo['id']]); ?>">
+                  <div class="tabs-items-img">
+                    <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
+                  </div>
+                  <div class="tabs-items-content">
+                    <div class="tabs-items-content-title figcaption">
+                      <p><?php echo $vo['title']; ?></p>
+                    </div>
+                    <div class="tabs-items-content-text figcaption">
+                      <p><?php echo $vo['desc']; ?></p>
+                    </div>
+                    <div class="tabs-items-content-time"><span><img src="/static/spirit/images/shijian2x.png"
+                          alt=""></span><span><?php echo $vo['create_time']; ?></span></div>
+                  </div>
+                </a>
+              </li>
+              <?php endforeach; endif; else: echo "" ;endif; endif; ?>
+
+            </ul>
+            <input type="hidden" value="<?php echo \think\Request::instance()->get('keyword'); ?>" id="sid">
+            <input type="hidden" value="1" id="page">
+            <div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val(),this)" data-href="<?php echo url('/home/index/detail'); ?>" data-url="<?php echo url('/home/index/getpageInfo'); ?>">查看更多</div>
+          </div>
+
         </div>
       </div>
     </div>
+
     <!-- 底部 -->
     <div class="fotter-box">
       <div class="w fotter">

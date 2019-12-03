@@ -8,6 +8,11 @@
 [ 2019-12-03T10:19:38+08:00 ] 127.0.0.1 GET /home/index/casedetail.html
 [ error ] [8]未定义变量: title[C:\phpEnv\www\thing\runtime\temp\858b74820c4b410e45709df2e6e0d47b.php:9]
 ---------------------------------------------------------------
+[ 2019-12-03T11:50:57+08:00 ] 127.0.0.1 GET /home/index/casedetail.html
+[ error ] [8]未定义变量: title[C:\phpEnv\www\thing\runtime\temp\858b74820c4b410e45709df2e6e0d47b.php:9]
+---------------------------------------------------------------
+[ 2019-12-03T12:34:27+08:00 ] 127.0.0.1 GET /home/index/detail.html
+[ error ] [0]variable type error： boolean[C:\phpEnv\www\thing\thinkphp\library\think\Response.php:316]
 [ 2019-12-03T10:22:25+08:00 ] 172.26.2.252 GET /home/index/casedetail.html
 [ error ] [8]未定义变量: title[/opt/web/thing/runtime/temp/48c9be3152b16f81761f6f8343db40bd.php:9]
 ---------------------------------------------------------------
