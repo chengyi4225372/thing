@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/casedetail.html";i:1575344255;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/casedetail.html";i:1575348696;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -171,7 +171,7 @@
     })
     $('.nav-box').on('mouseleave', function() {
       $('.nav ul li').removeClass('nav-active')
-      if ($('.chosenPage').length < 1) $('.nav ul li').eq().addClass('chosenPage')
+      if ($('.chosenPage').length < 1) $('.nav ul li').eq(3).addClass('chosenPage')
 
       $('.chosenPage').addClass('nav-active')
     })

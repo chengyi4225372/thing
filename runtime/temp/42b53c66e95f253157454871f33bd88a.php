@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"/opt/web/thing/public/../application/v1/view/work/works/addsolution.html";i:1575290370;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575277692;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"/opt/web/thing/public/../application/v1/view/work/works/addsolution.html";i:1575345286;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575277692;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
 <!DOCTYPE>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -61,15 +61,24 @@
             <div class="col-md-9">
 
                 <div class="form-group">
-                    <label for="username" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻标题：</label>
+                    <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>方案展示图：</label>
+                    <div class="col-sm-9">
+                        <input type="file"  onchange="upload_solution(this)" data-url="<?php echo url('/v1/work/works/uploadSolutionImg'); ?>" style="display:none;" class="form-control form-control-sm" id="file">
+                        <img id="imgs" src="/static/default.png" style="width:90px;height:80px;">
+                        <input type="hidden" id="Images" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>标题：</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control form-control-sm" id="title">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="content" class="col-sm-3 control-label">新闻详情：</label>
+                    <label for="content" class="col-sm-3 control-label">内容：</label>
                     <div class="col-sm-9">
                         <script id="content" name="content" type="text/plain"></script>
                     </div>

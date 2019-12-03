@@ -451,6 +451,7 @@ class Workservice
         $add = [];
         $add['title'] = $params['title'];
         $add['content'] = $params['content'];
+        $add['pic'] = $params['pic'];
         $add['status'] = 1;
         $add['add_time'] = time();
         $add['add_user'] = Cookie('username');
@@ -479,6 +480,7 @@ class Workservice
         $add = [];
         $add['title'] = $params['title'];
         $add['content'] = $params['content'];
+        $add['pic'] = $params['pic'];
         $where = [];
         $where['id'] = $params['id'];
         $res = Solution::instance()->where($where)->update($add);

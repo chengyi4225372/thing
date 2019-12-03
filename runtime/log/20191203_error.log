@@ -45,3 +45,6 @@
 ---------------------------------------------------------------
 [ 2019-12-03T11:32:31+08:00 ] 172.26.2.252 GET /home/index/casedetail.html?id=1
 [ error ] [8]未定义数组索引: title[/opt/web/thing/runtime/temp/48c9be3152b16f81761f6f8343db40bd.php:90]
+---------------------------------------------------------------
+[ 2019-12-03T11:49:59+08:00 ] 172.26.2.252 GET /v1/work/works/editsolution.html?id=1
+[ error ] [0]类的属性不存在:app\common\model\Solution->pic[/opt/web/thing/thinkphp/library/think/Model.php:624]
