@@ -27,7 +27,7 @@ var gurl = "http://172.26.3.8:8089";
 var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
 
 function btnErp() {
-
+    $('.form-btn').attr('disabled', "true");
     var datas = {};
 
     datas.contactName = $.trim($("#Name").val());//联系姓名
@@ -71,6 +71,7 @@ function btnErp() {
                 window.setTimeout(function () {
                     $('.mask-box').fadeOut(1000, function () {
                         window.location.reload();
+                        $('.form-btn').attr('disabled', "false");
                     });
                 }, 3000)
             }
@@ -109,6 +110,7 @@ function turnoff() {
 
 //提交公海
 function form_btn() {
+    $('.form-btn').attr('disabled', "true");
     var data = {};
 
     data.contactName = $.trim($("#contactName").val());//联系姓名
@@ -153,6 +155,7 @@ function form_btn() {
                 window.setTimeout(function () {
                     $('.mask-box').fadeOut(1000, function () {
                         window.location.reload();
+                        $('.form-btn').attr('disabled', "false");
                     });
                 }, 3000)
             }
