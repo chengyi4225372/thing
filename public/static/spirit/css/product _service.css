@@ -1,0 +1,755 @@
+/* 版心 */
+
+.w {
+    width: 75rem;
+    margin: 0 auto;
+}
+
+
+/* 浮动 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* 分成120等分 */
+
+html {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1280px) {
+    html {
+        font-size: 10.666px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    html {
+        font-size: 11.38333333333333px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 13.3333333333px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    margin: 0
+}
+
+ul,
+li,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+
+/* nav部分 */
+
+.container {
+    min-width: 75rem;
+}
+
+.nav-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6.25rem;
+    background: #2F80ED;
+    z-index: 999;
+}
+
+.nav-container {
+    padding-top: .75rem;
+}
+
+.nav-container .logo {
+    float: left;
+    width: 5.375rem;
+    height: 4.75rem;
+}
+
+.nav-container h1 {
+    margin: 0;
+}
+
+.nav-container h1 img {
+    width: 100%;
+}
+
+.nav-container .nav {
+    float: left;
+    margin-left: 11.5rem;
+}
+
+.nav-container .nav ul {
+    list-style: none;
+    margin: 1.875rem 0 0 0;
+    padding: 0;
+}
+
+.nav-container .nav ul li {
+    float: left;
+    margin-right: 1.875rem;
+}
+
+.nav-container .nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav-container .nav ul li a {
+    display: block;
+    width: 100%;
+    /*height: 100%;*/
+    font-size: 1.25rem;
+    font-family: "PingFang-SC-Medium";
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.nav-active {
+    position: relative;
+}
+
+.nav-active::after {
+    position: absolute;
+    bottom: -2.1875rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    content: '';
+    width: 100% !important;
+    height: 2px;
+    background-color: #fff;
+}
+
+.nav-container .loging {
+    float: right;
+    margin: .75rem 0 0 4.375rem;
+}
+
+.nav-container .loging div {
+    float: left;
+    width: 5.375rem;
+    height: 2.375rem;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(191, 191, 191, 1);
+    text-align: center;
+    line-height: 2.375rem;
+}
+
+.nav-container .loging div a {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    font-size: 1rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 2.5rem;
+}
+
+.nav-container .loging div:nth-child(1) {
+    border-right: 0;
+    border-radius: .25rem 0px 0px .25rem;
+}
+
+.nav-container .loging div:nth-child(2) {
+    border-left: 0;
+    border-radius: 0 .25rem .25rem 0;
+    background-color: #fff;
+    color: #2F80ED;
+}
+
+.nav-container .loging div:nth-child(2) a {
+    color: #2F80ED;
+}
+
+.enterprise-portal {
+    float: left;
+    width: 7.5rem;
+    height: 2.625rem;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    font-size: 1rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 2.625rem;
+    margin-top: .625rem;
+    cursor: pointer;
+}
+
+.enterprise {
+    color: #fff;
+}
+
+
+/* 头部部分 */
+
+.header-box {
+    margin-top: 6.25rem;
+    height: 37.5rem;
+    width: 100%;
+}
+
+.header-box img {
+    display: block;
+    vertical-align: bottom;
+    width: 100%;
+    height: 100%;
+}
+
+/* 共享经济平台 */
+.serves-box {
+    height: 95.5rem;
+    background: url('../images/fuwupingtaibg.png') no-repeat;
+    background-position: left bottom;
+}
+
+.serves-box .serves>div:nth-child(1) {
+    height: 48rem;
+}
+
+.serves-box .serves>div:nth-child(2) {
+    height: 47.5rem;
+}
+
+.serves-box .serves>div img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 为什么选择我们 */
+
+.difficulty-box {
+    height: 62.625rem;
+    background: url('../images/xuanzewomenbg.png') no-repeat;
+    background-position: left bottom;
+}
+
+.difficulty-box2 {
+    height: 31.9375rem;
+}
+
+.difficulty-box div {
+    height: 100%;
+}
+
+.difficulty-box div img {
+    display: block;
+    width: 100%;
+}
+
+/* 应用场景 */
+
+.project-box {
+    height: 76.25rem;
+}
+
+.project-box div {
+    height: 100%;
+}
+
+.project-box div img {
+    display: block;
+    width: 100%;
+}
+
+/* 客服电话 */
+.reason-box {
+    height: 28.125rem;
+    background: url('../images/kefubg.png') no-repeat;
+    background-position: left bottom;
+}
+
+.reason-box div {
+    height: 100%;
+}
+
+.reason-box div img {
+    display: block;
+    width: 100%;
+}
+
+/* 底部 */
+
+.fotter-box {
+    /* border-radius: 3.125rem 3.125rem 0px 0px; */
+    background-color: #272939;
+    padding-bottom: 2.375rem;
+}
+
+.fotter-box .fotter {}
+
+
+.parter_catefories {
+    padding-top: 5rem;
+    overflow: hidden;
+    font-size: .6875rem;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
+    font-weight: 300;
+    color: rgba(220, 220, 220, 1);
+}
+
+.parter_catefories>dl {
+    float: left;
+}
+
+.parter_catefories>dl:nth-of-type(2) {
+    margin: 0 8.125rem 0 9.375rem;
+}
+
+.parter_catefories>dl:nth-of-type(3) {
+    margin-right: 8.375rem;
+}
+
+.parter_catefories>dl:nth-of-type(5) {
+    float: right;
+}
+
+.parter_catefories dl dt {
+    margin-bottom: 3.3125rem;
+
+}
+
+.parter_catefories dl dd {
+    margin-top: 1.8125rem;
+}
+
+.parter_catefories dl dt>a {
+    font-size: 1.125rem;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.parter_catefories dl dd>a {
+    font-size: 1.125rem;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
+    font-weight: 400;
+    color: #DCDCDC;
+}
+
+.concat_icon {
+    text-align: right;
+    margin-top: 1.75rem;
+    margin-right: 4.875rem;
+}
+
+.concat_icon div {
+    display: inline-block;
+    width: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 2.375rem;
+    height: 2.375rem;
+    text-align: center;
+    margin-left: 1.5rem;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+
+.concat_icon img {
+    width: 100%;
+}
+
+.concat_icon div:nth-of-type(2) {
+    background-color: #67CE0B;
+}
+
+.partener_total {
+    position: relative;
+}
+
+.fotter-line {
+    margin-top: 3.5625rem;
+    height: 1px;
+    background: rgba(122, 122, 122, 1);
+}
+
+.fotter div:nth-child(4) {
+    margin-top: 1.1875rem;
+    text-align: center;
+    font-size: .875rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: rgba(195, 195, 195, 1);
+}
+
+
+
+
+/* 返回顶部 */
+
+.goTop {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 8.4375rem;
+    width: 4.375rem;
+    height: 3.875rem;
+    text-align: center;
+    line-height: 1.875rem;
+    z-index: 999;
+    background-color: #fff;
+    padding-top: .625rem;
+    display: none;
+    cursor: pointer
+}
+
+.goTop i {
+    overflow: hidden;
+    /* float: right; */
+    display: inline-block;
+    width: 1.4375rem;
+    height: 1.625rem;
+    background-size: contain;
+    background-image: url('../images/goback.png');
+}
+
+.goTop div {
+    font-size: 0.5625rem;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
+    font-weight: 400;
+    color: rgba(50, 50, 50, 1);
+}
+
+
+/* 弹出框 */
+
+.pop-up-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+    z-index: 9999;
+}
+
+.pop-up-box .form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 37.5rem;
+    height: 35.625rem;
+}
+
+.form-titile {
+    position: relative;
+    height: 7.5rem;
+    background: url('../images/tanchuang2x.png') no-repeat;
+}
+
+.turnoff {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url('../images/guanbi2x.png') no-repeat 100% 100%;
+}
+
+.form-titile p {
+    position: relative;
+    text-align: center;
+    font-size: 1.875rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 6.25rem;
+}
+
+.form-titile p::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 1.25rem;
+    width: 3.375rem;
+    height: 0.25rem;
+    background: rgba(255, 255, 255, 1);
+}
+
+.form-content {
+    padding: 6.1875rem 6.1875rem 0 6.1875rem;
+    background: rgba(245, 247, 254, 1);
+    border-radius: 0px 0px 4px 4px;
+    height: 28.125rem;
+    box-sizing: border-box;
+}
+
+.form-content div {
+    height: 2.5rem;
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 2.5625rem;
+    line-height: 2.75rem;
+}
+
+.form-content div:nth-child(3) {
+    margin-bottom: 3.875rem;
+}
+
+.form-content div .title {
+    display: inline-block;
+    width: 6.25rem;
+    height: 2.5rem;
+    margin-right: 1.25rem;
+    font-size: .875rem;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    line-height: 2.875rem;
+}
+
+.form-content div input {
+    width: 25rem;
+    padding-left: 1.875rem;
+    height: 100%;
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(229, 229, 229, 1);
+    border-radius: 2px;
+}
+
+.form-content .form-btn {
+    width: 20rem;
+    height: 3.5rem;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
+    font-weight: 400;
+    /* text-align: center; */
+    color: rgba(255, 255, 255, 1);
+    line-height: 3.75rem;
+    padding-left: 7.375rem;
+    box-sizing: border-box;
+}
+
+
+/* 用户信息 */
+
+.u_info {
+    position: relative;
+    float: right;
+    margin-top: .625rem;
+    padding-left: 1.25rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+.u_info_content {
+    display: none;
+    width: 5.625rem;
+    height: 2.6875rem;
+    position: absolute;
+    bottom: -12px;
+    left: -0.5625rem;
+    background-color: pink;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: .875rem;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 10px 0px rgba(11, 32, 64, 0.1);
+    border-radius: 2px;
+}
+
+.u_info_content .u_out {
+    font-size: .875rem;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
+    color: #333;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*padding: 1.0625rem .875rem;*/
+    box-sizing: border-box;
+    line-height: 2.75rem;
+}
+
+.u_info_content .u_out:hover {
+    background: #f0f7fe;
+    cursor: pointer;
+}
+
+.u_info_content::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1.25rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-top: .625rem solid transparent;
+    border-right: .625rem solid transparent;
+    border-bottom: .625rem solid #fffF;
+    border-left: .625rem solid transparent;
+}
+
+.u_info:hover .u_info_content {
+    display: block
+}
+
+
+/* 提交成果弹出框 */
+
+.mask-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*display: -webkit-box;*/
+    /*!* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. *!*/
+    /*display: -moz-box;*/
+    /*!* 老版本语法: Firefox (buggy) *!*/
+    /*display: -ms-flexbox;*/
+    /*!* 混合版本语法: IE 10 *!*/
+    /*display: -webkit-flex;*/
+    /*!* 新版本语法: Chrome 21+ *!*/
+    /*display: flex;*/
+    /*-webkit-flex-direction: column;*/
+    /*-moz-flex-direction: column;*/
+    /*-ms-flex-direction: column;*/
+    /*-o-flex-direction: column;*/
+    /*flex-direction: column;*/
+    /*-webkit-justify-content: center;*/
+    /*-moz-justify-content: center;*/
+    /*-ms-justify-content: center;*/
+    /*-o-justify-content: center;*/
+    /*justify-content: center;*/
+    /*-webkit-align-items: center;*/
+    /*-moz-align-items: center;*/
+    /*-ms-align-items: center;*/
+    /*-o-align-items: center;*/
+    /*align-items: center;*/
+    width: 16.25rem;
+    height: 10rem;
+    background: rgba(0, 0, 0, 1);
+    opacity: 0.7;
+    border-radius: .75rem;
+    display: none;
+}
+
+.mask-box span {
+    display: block;
+    width: 2.625rem;
+    height: 2.625rem;
+    background: url('../images/success2x.png') no-repeat;
+    margin: 1.125rem auto;
+}
+
+.mask-box .mask-box-title {
+    text-align: center;
+    font-size: 1.125rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    margin: 0 0 1.25rem 0;
+}
+
+.mask-box .mask-box-content {
+    text-align: center;
+    font-size: .875rem;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
