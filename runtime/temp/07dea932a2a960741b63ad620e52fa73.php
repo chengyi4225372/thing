@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575348725;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575371046;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -117,7 +117,7 @@
                             <input type='hidden' id='source' value='惠灵工'>
                             <input type='hidden' id='identification' value='灵活用工'>
                         </div>
-                        <div class="header-right-btn" onclick="btnErp()">获取方案</div>
+                        <div class="header-right-btn" style="cursor:pointer;" onclick="btnErp()">获取方案</div>
                         <!-- 提交成果后弹窗 -->
                         <div class="mask-box">
                             <span></span>
@@ -389,7 +389,8 @@
         <!-- 底部 -->
         <div class="fotter-box">
             <div class="w fotter">
-                <div class='partener_titile'>用智“慧”创造优“惠”</div>
+                <!-- <div class='partener_titile'>用智“慧”创造优“惠”</div> -->
+                <div class='partener_titile'></div>
                 <div class='parterne_info'>
                     深耕税筹行业多年，合作企业多达几千家。专业为个人和企业解决税务难题。为您提供一站式金融、税务和人力外包服务，以及专业的税筹划分析，最安全、高效、合理的节税措施。我们有最成熟的专家团队和各行业实操经验！作为国内领先的标准化税筹服务互联网平台，我们得到了上海、安徽、江西、湖北等各地政府的大力支持，为企业节税保驾护航！
                 </div>
