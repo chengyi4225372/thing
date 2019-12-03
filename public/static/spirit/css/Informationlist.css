@@ -30,6 +30,11 @@
 .clearfix {
     *zoom: 1;
 }
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px rgba(246, 246, 246, 1) inset;
+}
+
 /* 分成120等分 */
 html {
     font-size: 16px;
@@ -70,6 +75,7 @@ html {
         font-size: 16px;
     }
 }
+
 body {
     background: rgba(245, 249, 255, 1);
     -webkit-font-smoothing: antialiased;
@@ -379,7 +385,7 @@ a {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     content: '';
-    width: 100%!important;
+    width: 100% !important;
     height: 2px;
     background-color: #fff;
 }
@@ -532,7 +538,8 @@ a {
     color: #999999;
     cursor: pointer;
 }
-.bread-crumbs span:hover{
+
+.bread-crumbs span:hover {
     color: rgba(64, 145, 255, 1)
 }
 
@@ -571,6 +578,7 @@ a {
     font-weight: 400;
     color: rgba(64, 145, 255, 1);
 }
+
 .tabs ul .li-active a {
     color: rgba(64, 145, 255, 1);
 }
@@ -594,22 +602,22 @@ a {
 
 .search-box input {
     width: 13.75rem;
-    height: 1.875rem;
+    height: 2rem;
     padding-left: 1.5rem;
     background: rgba(246, 246, 246, 1);
     border-radius: .1875rem 0px 0px .1875rem;
 }
 
- .search-box>div::after {
+/* .search-box>div::after {
     content: '';
     position: absolute;
     left: -1.25rem;
     top: .625rem;
     width: .875rem;
-    height: .875rem;
-   /* background: url('../images/guanbi.png') no-repeat 100% 100%; */
-    cursor: pointer;
-}
+    height: .875rem; */
+/* background: url('../images/guanbi.png') no-repeat 100% 100%; */
+/* cursor: pointer;
+} */
 
 
 
@@ -625,6 +633,7 @@ a {
     border-radius: 0px 0.1875rem 0.1875rem 0px;
     line-height: 2rem;
     text-align: center;
+    cursor: pointer;
 }
 
 .tabs-items {
@@ -674,6 +683,7 @@ a {
 
 .tabs-items-content {
     width: 48.125rem;
+    border-bottom: 1px solid #F5F5F5;
 }
 
 .tabs-items-content-title {
@@ -939,7 +949,7 @@ a {
     margin-top: .6875rem;
 }
 
-.register > a {
+.register>a {
     text-decoration: none;
     display: inline-block;
     color: #fff;
@@ -950,7 +960,7 @@ a {
 
 }
 
-.register > span {
+.register>span {
     height: 2.125rem;
     width: 1px;
     background-color: #ccc;
@@ -960,7 +970,7 @@ a {
 
 .register a {
     font-size: 1rem;
-    font-family: "Source Han Sans CN","Microsoft YaHei", "微软雅黑";
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
 }
