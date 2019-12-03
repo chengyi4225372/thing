@@ -239,5 +239,5 @@ function is_login(objthis){
     }
 }
 
-fun
+
 
