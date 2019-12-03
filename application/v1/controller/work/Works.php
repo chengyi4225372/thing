@@ -202,6 +202,30 @@ class Works extends  AuthController
         }
     }
 
+
+    public function uploadSolutionImg()
+    {
+        // 获取上传文件
+        $file = $this->request->file('file');
+        // 验证图片,并移动图片到框架目录下。
+        $path = ROOT_PATH . 'public/uploads/imgs/solution/';
+
+        if (!is_dir($path)) {
+            mkdir($path, 0755);
+        }
+
+        $info = $file->move($path, false, true);
+        if ($info) {
+            $mes = $info->getSaveName();
+            $mes = str_replace("\\", '/', $mes);
+            return json(['code' => '200', 'msg' => '上传成功', 'path' => '/uploads/imgs/solution/' . $mes]);
+        } else {
+            // 文件上传失败后的错误信息
+            $mes = $file->getError();
+            return json(['code' => '400', 'msg' => $mes]);
+        }
+    }
+
     /**
      * @DESC：成功案例首页
      * @author: jason
@@ -326,9 +350,9 @@ class Works extends  AuthController
         if($this->request->isAjax() && $this->request->isPost()){
             $res = Workservice::instance()->editsolution($_POST);
             if($res == false){
-                return json(['code' => '400', 'msg' => '添加失败']);
+                return json(['code' => '400', 'msg' => '修改失败']);
             }
-            return json(['code' => '200', 'msg' => '添加成功']);
+            return json(['code' => '200', 'msg' => '修改成功']);
         }
         $id = input('id','','int');
         if(empty($id) || !isset($id)){

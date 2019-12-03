@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"/opt/web/thing/public/../application/v1/view/work/works/editsolution.html";i:1575293215;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575277692;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"/opt/web/thing/public/../application/v1/view/work/works/editsolution.html";i:1575344986;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575277692;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
 <!DOCTYPE>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -59,6 +59,15 @@
     <form class="form-horizontal dialog-form" id="form">
         <div class="row">
             <div class="col-md-9">
+
+                <div class="form-group">
+                    <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>方案展示图：</label>
+                    <div class="col-sm-9">
+                        <input type="file"  onchange="upload_files(this)" data-url="<?php echo url('/v1/work/works/uploadSolutionImg'); ?>" style="display:none;" class="form-control form-control-sm" id="file">
+                        <img id="imgs" src="<?php echo $list['pic']; ?>" style="width:90px;height:80px;">
+                        <input type="hidden" id="Images" value="<?php echo $list['pic']; ?>">
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <label for="title" class="col-sm-3 control-label">

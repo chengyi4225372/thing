@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:69:"/opt/web/thing/public/../application/v1/view/work/works/solution.html";i:1575337854;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575277666;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575337397;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:69:"/opt/web/thing/public/../application/v1/view/work/works/solution.html";i:1575348238;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575277666;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575337397;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
 <!DOCTYPE>
 <html lang="zh-CN">
 <head>
@@ -270,6 +270,7 @@
                 </th>
                 <th class="text-center">标题</th>
                 <th class="text-center">内容</th>
+                <th class="text-center">图片</th>
                 <th class="text-center">添加时间</th>
                 <th class="text-center">添加人</th>
                 <th class="text-center">状态</th>
@@ -283,9 +284,11 @@
                         <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
                     </td>
                     <td class="text-center"><?php echo isset($list['title']) ? $list['title'] : ''; ?></td>
-
                     <td class="text-center">
                         <textarea cols="40" rows="5"><?php echo isset($list['content']) ? $list['content'] : ''; ?></textarea>
+                    </td>
+                    <td class="text-center">
+                        <img src="<?php echo $list['pic']; ?>" style="width:50px;height:50px;">
                     </td>
                     <td class="text-center"><?php echo date('Y-m-d H:i:s',$list['add_time']); ?></td>
                     <td class="text-center"><?php echo $list['add_user']; ?></td>

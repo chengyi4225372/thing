@@ -356,7 +356,13 @@ $('.addsolution').click(function(){
     var data = {};
 
     data.title = $('#title').val();
+    data.pic = $('#Images').val();
     data.content = ue.getContent();//取得html文本
+
+    if(data.pic== '' || data.pic == undefined){
+        layer.msg('请选择图片');
+        return false;
+    }
 
     if(data.title== '' || data.title == undefined){
         $('#title').focus();
@@ -405,7 +411,13 @@ function editsolution(objthis){
 
     data.title = $('#title').val();
     data.id = id;
+    data.pic = $('#Images').val();
     data.content = ue.getContent();//取得html文本
+
+    if(data.pic== '' || data.pic == undefined){
+        layer.msg('请选择图片');
+        return false;
+    }
 
     if(data.title== '' || data.title == undefined){
         $('#title').focus();
@@ -453,4 +465,34 @@ function delSolution(objthis){
     }, function(){
         parent.layer.closeAll();
     });
+}
+
+
+function upload_solution(objthis){
+    var formData =new FormData();
+    formData.append("file",$("#file")[0].files[0]);
+
+    var urls = $(objthis).attr('data-url');
+
+    $.ajax({
+        url: urls,
+        type: "post",
+        data: formData,
+        async:false,
+        dataType: 'json',
+        cache: false,
+        processData : false,
+        contentType : false,
+        success: function (ret) {
+            if (ret.code == 200) {
+                $("#imgs").attr('src', ret.path);
+                $("#Images").val(ret.path);
+                layer.msg(ret.msg,{icon:6});
+            } else {
+                layer.msg(ret.msg);
+            }
+        },
+
+    });
+    return false;
 }
