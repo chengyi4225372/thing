@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1575348057;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1575355443;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -81,7 +81,7 @@
         <div class="nav">
           <ul class="clearfix">
             <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-            <li><a href="javascript:;">产品服务</a></li>
+            <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
             <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
             <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
             <li  class="nav-active"><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
@@ -195,7 +195,8 @@
     <!-- 底部 -->
     <div class="fotter-box">
       <div class="w fotter">
-        <div class='partener_titile'>用智“慧”创造优“惠”</div>
+        <!-- <div class='partener_titile'>用智“慧”创造优“惠”</div> -->
+        <div class='partener_titile'></div>
         <div class='parterne_info'>
           深耕税筹行业多年，合作企业多达几千家。专业为个人和企业解决税务难题。为您提供一站式金融、税务和人力外包服务，以及专业的税筹划分析，最安全、高效、合理的节税措施。我们有最成熟的专家团队和各行业实操经验！作为国内领先的标准化税筹服务互联网平台，我们得到了上海、安徽、江西、湖北等各地政府的大力支持，为企业节税保驾护航！
         </div>

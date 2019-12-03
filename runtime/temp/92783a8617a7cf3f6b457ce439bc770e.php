@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1575341790;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1575348650;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,18 +33,11 @@
                 <!-- nav部分 -->
                 <div class="nav">
                     <ul class="clearfix">
-                        <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
-                    <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
-                    <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                    <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
-                    <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                    <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
-                    <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
-                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-                        <li><a href="javascript:;">产品服务</a></li>
-                        <li><a href="javascript:;">行业解决方案</a></li>
-                        <li><a href="javascript:;">客户案例</a></li>
-                        <li><a href="javascript:;">行业新闻资讯</a></li>
+                        <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                        <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
+                        <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
+                        <li class="nav-active"><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
+                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
                         <!--<li>-->
                         <!--<?php if(empty($userinfo['userType'])): ?>-->
                         <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
@@ -99,7 +92,7 @@
         <!-- 面包屑 -->
         <div class="crumbs">
             <div class="crumbs-box w">
-                <span><a href="#">惠灵工></a></span>
+                <span><a href="<?php echo url('/home/index/index'); ?>">惠灵工></a></span>
                 <span> 客户案例</span>
             </div>
         </div>
@@ -108,78 +101,22 @@
         <div class="bg_tab">
             <div class="tabBox w">
                 <ul class="clearfix">
+                    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
                     <li>
                         <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
                         <div class="item-content">
                             <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
+                                <?php echo $item['title']; ?>
                             </p>
                             <p>
-                                创新管理方法、人工智能、
+                                <?php echo $item['describe']; ?>
                             </p>
-                            <a href="./casedetail.html">查看案例>></a>
+                            <a href="<?php echo url('/home/index/casedetail',['id' => $item['id']]); ?>"> 查看案例>> </a>
                         </div>
                     </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                中科招商客户案例案例案例倒户案例案例案例…例案例案例…例案例案例…
-                            </p>
-                            <p>
-                                创新管理方法、人工智能、
-                            </p>
-                            <a href="#">查看案例>></a>
-                        </div>
-                    </li>
+                    <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
+
+
                 </ul>
             </div>
         </div>
@@ -192,30 +129,30 @@
         <div class="w fotter">
             <div class='parter_catefories'>
                 <dl>
-                    <dt><a href="#">服务产品</a></dt>
-                    <dd><a href="#">服务型税筹</a></dd>
-                    <dd><a href="#">门户型税筹</a></dd>
-                    <dd><a href="#">人力资源</a></dd>
+                    <dt><a href="javascript:;">服务产品</a></dt>
+                    <dd><a href="javascript:;">服务型税筹</a></dd>
+                    <dd><a href="javascript:;">门户型税筹</a></dd>
+                    <dd><a href="javascript:;">人力资源</a></dd>
                 </dl>
                 <dl>
-                    <dt><a href="#">招商政策</a></dt>
-                    <dd><a href="#">招商政策网</a></dd>
+                    <dt><a href="javascript:;">招商政策</a></dt>
+                    <dd><a href="javascript:;">招商政策网</a></dd>
                 </dl>
                 <dl>
-                    <dt><a href="#">合作</a></dt>
-                    <dd><a href="#">代理合作</a></dd>
+                    <dt><a href="javascript:;">合作</a></dt>
+                    <dd><a href="javascript:;">代理合作</a></dd>
                 </dl>
                 <dl>
-                    <dt><a href="#">公司信息</a></dt>
-                    <dd><a href="#">瑟维斯有限公司</a></dd>
-                    <dd><a href="#">惠创优产业联盟</a></dd>
-                    <dd><a href="#">中兴瑞华有限公司</a></dd>
+                    <dt><a href="javascript:;">公司信息</a></dt>
+                    <dd><a href="javascript:;">瑟维斯有限公司</a></dd>
+                    <dd><a href="javascript:;">惠创优产业联盟</a></dd>
+                    <dd><a href="javascript:;">中兴瑞华有限公司</a></dd>
                 </dl>
                 <dl>
-                    <dt><a href="#">联系我们</a></dt>
-                    <dd><a href="#">400-150-9896</a></dd>
-                    <dd><a href="#">hcylm008@dingtalk.com</a></dd>
-                    <dd><a href="#">武汉市硚口区南国大武汉H座18楼</a></dd>
+                    <dt><a href="javascript:;">联系我们</a></dt>
+                    <dd><a href="javascript:;">400-150-9896</a></dd>
+                    <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
+                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
                 </dl>
 
             </div>
@@ -278,7 +215,7 @@
         })
         $('.nav-box').on('mouseleave', function () {
             $('.nav ul li').removeClass('nav-active')
-            if ($('.chosenPage').length < 1) $('.nav ul li').eq(0).addClass('chosenPage')
+            if ($('.chosenPage').length < 1) $('.nav ul li').eq(3).addClass('chosenPage')
 
             $('.chosenPage').addClass('nav-active')
         })
