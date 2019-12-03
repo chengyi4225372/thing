@@ -214,6 +214,7 @@ class Works extends  AuthController
         $info = Workservice::instance()->getCaseInfo($params);
         $this->assign('status',$status);
         $this->assign('data',$info);
+        $this->assign('title','成功案例');
         return $this->fetch();
     }
 
@@ -294,6 +295,7 @@ class Works extends  AuthController
         $info = Workservice::instance()->getSolutionInfo($params);
         $this->assign('status',$status);
         $this->assign('data',$info);
+        $this->assign('title','行业解决方案');
         return $this->fetch();
     }
 

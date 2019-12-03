@@ -28,10 +28,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="contents" class="col-sm-3 control-label">
+                    <label for="describe" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>描述：</label>
+                    <div class="col-sm-9">
+                        <textarea id="describe" class="form-control form-control-sm" cols="40" rows="5">{$list.describe}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="content" class="col-sm-3 control-label">
                         <span class="red-color">*</span>内容：</label>
                     <div class="col-sm-9">
-                        <textarea  id="contents" class="form-control form-control-sm" cols="5" rows="6">{$list.content}</textarea>
+                        <script id="content" name="content" type="text/plain">{$list.content}</script>
                     </div>
                 </div>
 

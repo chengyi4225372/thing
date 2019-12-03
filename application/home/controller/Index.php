@@ -118,6 +118,16 @@ class Index extends BaseController
         return $this->fetch();
     }
 
+    /**
+     * @DESC：产品服务
+     * @author: jason
+     * @date: 2019-12-03 10:02:58
+     */
+    public function productservice()
+    {
+        return $this->fetch();
+    }
+
      /**
       * 分页接口
       */

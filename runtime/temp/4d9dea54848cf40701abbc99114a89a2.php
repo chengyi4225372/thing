@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1575283387;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1575336197;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -82,8 +82,8 @@
           <ul class="clearfix">
             <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
             <li><a href="javascript:;">产品服务</a></li>
-            <li><a href="javascript:;">行业解决方案</a></li>
-            <li><a href="javascript:;">客户案例</a></li>
+            <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
+            <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
             <li  class="nav-active"><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
             <!--<li>-->
             <!--<?php if(empty($userinfo['userType'])): ?>-->

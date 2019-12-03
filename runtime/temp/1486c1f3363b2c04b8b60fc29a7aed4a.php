@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"/opt/web/thing/public/../application/v1/view/work/works/editcase.html";i:1575275391;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575271316;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"/opt/web/thing/public/../application/v1/view/work/works/editcase.html";i:1575337783;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575277692;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
+<!DOCTYPE>
 <html lang="<?php echo $config['language']; ?>">
 <head>
     <!-- 加载样式及META信息 -->
@@ -78,10 +78,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="contents" class="col-sm-3 control-label">
+                    <label for="content" class="col-sm-3 control-label">
                         <span class="red-color">*</span>内容：</label>
                     <div class="col-sm-9">
-                        <textarea  id="contents" class="form-control form-control-sm" cols="5" rows="6"><?php echo $list['content']; ?></textarea>
+                        <script id="content" name="content" type="text/plain"><?php echo $list['content']; ?></script>
                     </div>
                 </div>
 
