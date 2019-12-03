@@ -40,6 +40,7 @@
                 </th>
                 <th class="text-center">案例标题</th>
                 <th class="text-center">案例图片</th>
+                <th class="text-center">案例描述</th>
                 <th class="text-center">案例详情</th>
                 <th class="text-center">创建时间</th>
                 <th class="text-center">状态</th>
@@ -55,6 +56,9 @@
 
                     <td class="text-center">
                         <img src="{:isset($list['pic']) ? $list['pic'] : ''}" alt="" style="width: 100px;height:100px;">
+                    </td>
+                    <td class="text-center">
+                        <textarea cols="40" rows="5">{:isset($list['describe']) ? $list['describe'] : ''}</textarea>
                     </td>
                     <td class="text-center">
                         <textarea cols="40" rows="5">{:isset($list['content']) ? $list['content'] : ''}</textarea>

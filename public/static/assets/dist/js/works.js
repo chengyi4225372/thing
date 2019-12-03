@@ -26,7 +26,7 @@ $("#addwork").click(function(){
         title: '添加新闻',
         shadeClose: true,
         shade: 0.8,
-        area: ['50%', '75%'],
+        area: ['50%', '80%'],
         content: url, //iframe的url
     })
 })
@@ -118,7 +118,7 @@ $(".editWork").click(function(){
         title: '编辑新闻',
         shadeClose: true,
         shade: 0.8,
-        area: ['50%', '75%'],
+        area: ['50%', '80%'],
         content: urls, //iframe的url
     })
 })
@@ -235,6 +235,7 @@ function addcases(objthis){
     var datas  = {};
     datas.title = $('#title').val();
     datas.pic    =$('#Images').val();
+    datas.describe    =$('#describe').val();
     datas.content = ue.getContent();//取得html文本
     if(datas.pic== '' || datas.pic == undefined){
         layer.msg('请选择要上传的图片');
@@ -244,6 +245,12 @@ function addcases(objthis){
     if(datas.title== '' || datas.title == undefined){
         $('#title').focus();
         layer.msg('请填写标题');
+        return false;
+    }
+
+    if(datas.describe == '' || datas.describe == undefined){
+        $('#describe').focus();
+        layer.msg('请填写描述');
         return false;
     }
 
@@ -276,6 +283,7 @@ function editcases(objthis){
     var datas  = {};
     datas.title = $('#title').val();
     datas.pic    =$('#Images').val();
+    datas.describe    =$('#describe').val();
     datas.content = ue.getContent();//取得html文本
     datas.id     = $(objthis).attr('data');
     if(datas.pic== '' || datas.pic == undefined){
@@ -286,6 +294,12 @@ function editcases(objthis){
     if(datas.title== '' || datas.title == undefined){
         $('#title').focus();
         layer.msg('请填写标题');
+        return false;
+    }
+
+    if(datas.describe == '' || datas.describe == undefined){
+        $('#describe').focus();
+        layer.msg('请填写描述');
         return false;
     }
 
@@ -379,7 +393,7 @@ $(".editsolution").click(function(){
         title: '编辑方案',
         shadeClose: true,
         shade: 0.8,
-        area: ['50%', '50%'],
+        area: ['60%', '80%'],
         content: urls, //iframe的url
     })
 })
