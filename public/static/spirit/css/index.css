@@ -1404,13 +1404,10 @@ span:nth-child(4) {
     /* line-height: 3.75rem;
     padding-left: 7.375rem; */
     box-sizing: border-box;
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
     align-items: center;
-=======
     cursor: pointer;
->>>>>>> ed0290b16dabc30ff857d8c487f8b845458d5fb2
 }
 
 
