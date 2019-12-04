@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1575372186;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1575425189;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 <head>
@@ -92,7 +92,7 @@
         <!--<div class="tabBox">-->
           <!--<div class="tab">-->
             <!--<ul>-->
-              <!--<li><a href="javascript:;">外卖行业行业整体解决方案</a></li>-->
+              <!--<li><a href="javascript:;">外卖行业整体解决方案</a></li>-->
               <!--<li><a href="javascript:;">新物流行业整体解决方案</a></li>-->
               <!--<li class="activeTab"><a href="javascript:;">新零售行业整体解决方案</a></li>-->
               <!--<li><a href="javascript:;">制造业整体解决方案</a></li>-->
