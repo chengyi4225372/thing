@@ -124,7 +124,7 @@ input:-webkit-autofill {
 
 .nav-container .logo {
     float: left;
-    width:  7.75rem;
+    width: 7.75rem;
     height: 4.75rem;
     display: flex;
     align-items: center;
@@ -182,7 +182,7 @@ input:-webkit-autofill {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     content: '';
-    width: 100%!important;
+    width: 100% !important;
     height: 2px;
     background-color: #fff;
 }
@@ -432,6 +432,7 @@ span:nth-child(4) {
     height: 5rem;
     margin-left: 2.25rem;
 }
+
 .serve-item .firstImg {
     width: 7.25rem;
     height: 5rem;
@@ -1186,6 +1187,7 @@ span:nth-child(4) {
     font-weight: 400;
     color: #DCDCDC;
 }
+
 /* #social{
     display: flex;
     justify-content: flex-start;
@@ -1509,7 +1511,8 @@ span:nth-child(4) {
 
 /* 提交成果弹出框 */
 
-.mask-box {
+.mask-box1,
+.mask-box2 {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -1550,7 +1553,8 @@ span:nth-child(4) {
     display: none;
 }
 
-.mask-box span {
+.mask-box1 span,
+.mask-box2 span {
     display: block;
     width: 2.625rem;
     height: 2.625rem;
@@ -1559,7 +1563,8 @@ span:nth-child(4) {
     margin: 1.125rem auto;
 }
 
-.mask-box .mask-box-title {
+.mask-box1 .mask-box-title,
+.mask-box2 .mask-box-title {
     text-align: center;
     font-size: 1.125rem;
     font-family: PingFang SC;
@@ -1568,7 +1573,8 @@ span:nth-child(4) {
     margin: 0 0 1.25rem 0;
 }
 
-.mask-box .mask-box-content {
+.mask-box1 .mask-box-content,
+.mask-box2 .mask-box-content {
     text-align: center;
     font-size: .875rem;
     font-family: PingFang SC;

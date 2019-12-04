@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575431842;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575444989;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -119,7 +119,7 @@
                         </div>
                         <div class="header-right-btn" style="cursor:pointer;" onclick="btnErp()">获取方案</div>
                         <!-- 提交成果后弹窗 -->
-                        <div class="mask-box">
+                        <div class="mask-box1">
                             <span></span>
                             <p class="mask-box-title">提交成功</p>
                             <p class="mask-box-content">我们会在一个工作日内联系您</p>
@@ -452,7 +452,7 @@
                     <div class="form-btn" onclick="form_btn()">获取方案</div>
                 </div>
                 <!-- 提交成果后弹窗 -->
-                <div class="mask-box">
+                <div class="mask-box2">
                     <span></span>
                     <p class="mask-box-title">提交成功</p>
                     <p class="mask-box-content">我们会在一个工作日内联系您</p>

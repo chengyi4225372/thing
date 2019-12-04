@@ -67,9 +67,9 @@ function btnErp() {
         success: function (ret) {
 
             if (ret.status == 200 && ret.rel == true) {
-                $('.mask-box').fadeIn(1000);
+                $('.mask-box1').fadeIn(1000);
                 window.setTimeout(function () {
-                    $('.mask-box').fadeOut(1000, function () {
+                    $('.mask-box1').fadeOut(1000, function () {
                         window.location.reload();
                         $('.form-btn').attr('disabled', "false");
                     });
@@ -151,9 +151,9 @@ function form_btn() {
 
 
             if (ret.status == 200 && ret.rel == true) {
-                $('.mask-box').fadeIn(1000);
+                $('.mask-box2').fadeIn(1000);
                 window.setTimeout(function () {
-                    $('.mask-box').fadeOut(1000, function () {
+                    $('.mask-box2').fadeOut(1000, function () {
                         window.location.reload();
                         $('.form-btn').attr('disabled', "false");
                     });
