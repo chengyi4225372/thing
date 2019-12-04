@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\index\index.html";i:1573626193;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1573627203;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1573626286;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1571899026;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\index\index.html";i:1573626193;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1574064055;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1575372375;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1571899026;}*/ ?>
+<!DOCTYPE>
 <html lang="zh-CN">
 <head>
     <!-- 加载样式及META信息 -->
@@ -188,8 +188,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/users/user/index' || $paths == '/v1/index/index'): ?> active <?php endif; ?> " >
-
+            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase' ||  $paths == '/v1/work/works/solution'): ?> active <?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
@@ -198,35 +197,28 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="<?php if($paths == '/v1/work/works/index'): ?> active <?php endif; ?>">
-                        <a href="<?php echo url('/v1/index/index'); ?>">
-                            <i class="glyphicon glyphicon-user"></i> <span>后台首页</span>
-                            <span class="pull-right-container">
-                              <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li class="<?php if($paths == '/v1/work/works/index'): ?> active <?php endif; ?>">
                         <a href="<?php echo url('/v1/work/works/index'); ?>">
-                            <i class="glyphicon glyphicon-user"></i> <span>行业资讯</span>
+                            <i class="glyphicon glyphicon-user"></i> <span>行业新闻资讯</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                     </li>
-
-                    <li class="<?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
-                        <a href="#">
-                            <i class="glyphicon glyphicon-user"></i> <span>用户管理</span>
+                    <li class="<?php if($paths == '/v1/work/works/solution'): ?> active <?php endif; ?>">
+                        <a href="<?php echo url('/v1/work/works/solution'); ?>">
+                            <i class="glyphicon glyphicon-user"></i> <span>行业解决方案</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
-                            <li class="<?php if($paths == '/v1/users/user/index'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/users/user/index'); ?>"><i class="fa fa-circle-o"></i>用户列表</a>
-                            </li>
-                        </ul>
+                    </li>
+                    <li class="<?php if($paths == '/v1/work/works/successcase'): ?> active <?php endif; ?>">
+                        <a href="<?php echo url('/v1/work/works/successcase'); ?>">
+                            <i class="glyphicon glyphicon-user"></i> <span>成功案例</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
                     </li>
                 </ul>
             </li>

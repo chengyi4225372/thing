@@ -1,6 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1573721378;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1573722221;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1575422697;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1574064055;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,58 +29,50 @@
                 <!-- logo图 -->
                 <div class="logo">
                     <h1>
-                        <img src="/static/spirit/images/logo2x.png">
+                        <img src="/static/spirit/images/logo2xx.png">
                     </h1>
                 </div>
                 <!-- nav部分 -->
                 <div class="nav">
                     <ul class="clearfix">
-                        <li><a href="<?php echo config('work.hqy_url'); ?>">首页</a></li>
-                        <li><a href="#">惠优税</a></li>
-                        <li class="nav-active"><a href="/">惠灵工</a></li>
-                        <li><a href="#">惠多薪</a></li>
-                        <li><a href="#">惠创业</a></li>
-                        <li><a href="#">惠找事</a></li>
-                        <li><a href="#">惠企动</a></li>
+                        <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
+                        <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                        <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
+                        <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                        <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
+                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
+                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                        <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
+                        <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
+                        <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
+                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
+                        <!--<li>-->
+                            <!--<?php if(empty($userinfo['userType'])): ?>-->
+                            <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
+                            <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
+                            <!--<a href="javascript:void(0)">会员通道</a>-->
+                            <!--<?php else: ?>-->
+                            <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
+                            <!--<?php endif; ?>-->
+
+                        <!--</li>-->
                     </ul>
                 </div>
-                <!-- 企业入口 -->
-               <?php if(empty($userinfo['userType']) || (($userinfo['userType'] instanceof \think\Collection || $userinfo['userType'] instanceof \think\Paginator ) && $userinfo['userType']->isEmpty())): ?>
-                <a class="enterprise" href="http://172.26.3.12:8009/#/login" target="_blank">
-                    <div class="enterprise-portal">
-                        企业入口
-                    </div>
-                </a>
-                <?php else: if($userinfo['userType'] == 'c'): ?>
 
-                   <a class="enterprise" href="http://172.26.3.12:8009/#/task/task" target="_blank">
-                    <div class="enterprise-portal">
-                        企业入口
-                    </div>
-                    </a>
-
-                   <?php else: ?>
-
-                   <a class="enterprise" href="http://172.26.3.12:8009/#/personTask/myTask" target="_blank">
-                    <div class="enterprise-portal">
-                        企业入口
-                    </div>
-                    </a>
-
-                   <?php endif; endif; ?>
 
 
                 <!-- 登陆注册 -->
-                <?php if(empty($userinfo['mobile'])): ?>
-                <div class="loging clearfix">
-                    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-                        登陆
-                    </a></div>
-                    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
-                </div>
-                <?php else: ?>
-                <div class="u_info">
-                    <?php if(empty($userinfo['mobile'])): ?>
+                <!--<?php if(empty($userinfo['mobile'])): ?>-->
+                <!--<div class="loging clearfix">-->
+                    <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
+                        <!--登录-->
+                    <!--</a></div>-->
+                    <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
+                <!--</div>-->
+                <!--<?php else: ?>-->
+                <!--<div class="u_info">-->
+                    <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
         登陆
@@ -90,14 +83,14 @@
 <div class="u_info">
     <img src="/static/spirit/images/user_img.png"
          style="width:30px;height:30px; vertical-align: middle;">
-    <p style="display:inline-block;color:#fff;"><?php echo $userinfo['mobile']; ?></p>
+    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
     <div class="u_info_content" id="u_info_content">
         <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
-<?php endif; ?>
-                </div>
-                <?php endif; ?>
+<?php endif; ?>-->
+                <!--</div>-->
+                <!--<?php endif; ?>-->
             </div>
 
         </div>
@@ -124,7 +117,7 @@
                             <input type='hidden' id='source' value='惠灵工'>
                             <input type='hidden' id='identification' value='灵活用工'>
                         </div>
-                        <div class="header-right-btn" onclick="btnErp()">获取方案</div>
+                        <div class="header-right-btn" style="cursor:pointer;" onclick="btnErp()">获取方案</div>
                         <!-- 提交成果后弹窗 -->
                         <div class="mask-box">
                             <span></span>
@@ -133,12 +126,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="focus-icon">
+                <!-- <div class="focus-icon">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -146,7 +139,7 @@
         <div class="serves-box">
             <div class="w serves clearfix">
                 <div class="serve-item fl">
-                    <div class="serve-item-img">
+                    <div class="serve-item-img firstImg">
                         <img src="/static/spirit/images/yonghu2x.png" alt="">
                     </div>
                     <div class="serve-item-text">
@@ -241,14 +234,13 @@
         </div>
 
         <!-- 解决方案 -->
-        <div class="project-box" >
+        <div class="project-box">
             <div class="w project">
                 <div class="project-title">
                     <p>我们的解决方案</p>
                 </div>
                 <div class="project-text">
-                    将共享经济引入人力资源灵活用工行业,变革企业的用工模式，将“企业和员工之间的雇佣关系”，转变为“企业与个人间的业务合作关系”
-                    通过平台一站式完成任务派发、费用结算支付、开票和完税，合法合规的进行灵活用工、结算支付和财税优化。
+                    将共享经济引入人力资源灵活用工行业,变革企业的用工模式，将“企业和员工之间的雇佣关系”，转变为“企业与个人间的业务合作关系” 通过平台一站式完成任务派发、费用结算支付、开票和完税，合法合规的进行灵活用工、结算支付和财税优化。
                 </div>
                 <!-- tab栏切换 -->
                 <div class="project-items">
@@ -338,7 +330,7 @@
                     <p>方案流程</p>
                 </div>
                 <div class="process-text">
-                    惠用工服务体系业务逻辑流程图
+                    惠灵工服务体系业务逻辑流程图
                 </div>
                 <div class="process-img">
                     <img src="/static/spirit/images/liucheng2x.png" alt="">
@@ -374,7 +366,8 @@
                             </div>
                             <div class="consulting-item-btn-box">
                                 <div class="consulting-item-btn">
-                                    <a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>
+                                    <!--<a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>/home/index/informationlist" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>-->
+                                    <a href="<?php echo config('curl.hlg'); ?>/home/index/informationlist">了解更多</a>
                                 </div>
                             </div>
                         </li>
@@ -393,49 +386,47 @@
             </div>
         </div>
 
-        <!-- 底部 -->
-        <div class="fotter-box">
+         <!-- 底部 -->
+         <div class="fotter-box">
             <div class="w fotter">
-                <div class='partener_titile'>用智“慧”创造优“惠”</div>
-                <div class='parterne_info'>
-                    深耕税筹行业多年，合作企业多达几千家。专业为个人和企业解决税务难题。为您提供一站式金融、税务和人力外包服务，以及专业的税筹划分析，最安全、高效、合理的节税措施。我们有最成熟的专家团队和各行业实操经验！作为国内领先的标准化税筹服务互联网平台，我们得到了上海、安徽、江西、湖北等各地政府的大力支持，为企业节税保驾护航！
-                </div>
-                <div class='parter_catefories'>
-                    <dl>
-                        <dt><a href="#">服务产品</a></dt>
-                        <dd><a href="#">服务型税筹</a></dd>
-                        <dd><a href="#">门户型税筹</a></dd>
-                        <dd><a href="#">人力资源</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="#">招商政策</a></dt>
-                        <dd><a href="#">招商政策网</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="#">合作</a></dt>
-                        <dd><a href="#">代理合作</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="#">公司信息</a></dt>
-                        <dd><a href="#">瑟维斯有限公司</a></dd>
-                        <dd><a href="#">惠创优产业联盟</a></dd>
-                        <dd><a href="#">中兴瑞华有限公司</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="#">联系我们</a></dt>
-                        <dd><a href="#">400-150-9896</a></dd>
-                        <dd><a href="#">hcylm008@dingtalk.com</a></dd>
-                        <dd><a href="#">武汉市硚口区南国大武汉H座18楼</a></dd>
-                    </dl>
-
-                </div>
-                <div class='concat_icon clearfix'>
-                    <div><img src="/static/spirit/images/tie.png" alt=""></div>
-                    <div><img src="/static/spirit/images/wx.png" alt=""></div>
-                    <div><img src="/static/spirit/images/bo.png" alt=""></div>
-                </div>
+              <div class='parter_catefories'>
+                <dl>
+                  <dt><a href="javascript:;">服务产品</a></dt>
+                  <dd><a href="javascript:;">服务型税筹</a></dd>
+                  <dd><a href="javascript:;">门户型税筹</a></dd>
+                  <dd><a href="javascript:;">人力资源</a></dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">招商政策</a></dt>
+                  <dd><a href="javascript:;">招商政策网</a></dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">合作</a></dt>
+                  <dd><a href="javascript:;">代理合作</a></dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">公司信息</a></dt>
+                  <dd><a href="javascript:;">瑟维斯有限公司</a></dd>
+                  <dd><a href="javascript:;">惠创优产业联盟</a></dd>
+                  <dd><a href="javascript:;">中兴瑞华有限公司</a></dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">联系我们</a></dt>
+                  <dd><a href="javascript:;">400-150-9896</a></dd>
+                  <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
+                  <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
+                </dl>
+        
+              </div>
+              <div class='concat_icon clearfix'>
+                <div><img src="/static/spirit/images/bo.png" alt=""></div>
+                <div><img src="/static/spirit/images/wx.png" alt=""></div>
+                <div><img src="/static/spirit/images/tie.png" alt=""></div>
+              </div>
+              <div class="fotter-line"></div>
+              <div>© Copyright 2019 惠企动（湖北）科技有限公司 . All Rights Reserved</div>
             </div>
-        </div>
+          </div>
 
         <!-- 返回顶部 -->
         <div class='goTop' id="goTop">
@@ -472,5 +463,19 @@
     </div>
 
 </body>
+<script>
+    $('.nav ul li').on('click', function() {
+        $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
+    })
+    $('.nav ul li').on('mouseenter', function() {
+        $(this).addClass('nav-active').siblings().removeClass('nav-active')
+    })
+    $('.nav-box').on('mouseleave', function() {
+        $('.nav ul li').removeClass('nav-active')
+        if ($('.chosenPage').length < 1) $('.nav ul li').eq(0).addClass('chosenPage')
+
+        $('.chosenPage').addClass('nav-active')
+    })
+</script>
 
 </html>
