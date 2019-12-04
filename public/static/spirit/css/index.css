@@ -1186,6 +1186,25 @@ span:nth-child(4) {
     font-weight: 400;
     color: #DCDCDC;
 }
+/* #social{
+    display: flex;
+    justify-content: flex-start;
+
+}
+#social div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.375rem;
+    height: 2.375rem;
+    border: 1px solid #EAF2FF;
+    box-sizing: border-box;
+    margin-right: 2.375rem;
+    border-radius: 50%;
+}
+#social div:nth-child(2){
+    background: #67CE0B;
+} */
 
 .concat_icon {
     display: -webkit-box;

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1575431289;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1575431814;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -189,8 +189,7 @@
 
     <div class='main_content'>
       <div class='content_middle'>
-        <div class='bread_title'><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a> > <a
-            onclick="go_news(this)" data-url="<?php echo url('/home/index/clientcase'); ?>">客户案例</a> > 案例详情</div>
+        <div class='bread_title'><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a> > <a onclick="go_news(this)" data-url="<?php echo url('/home/index/clientcase'); ?>">客户案例</a> > <span class="current">案例详情</span></div>
         <div class='pic_total'>
           <div class='pic_title'><?php echo $list['title']; ?></div>
           <div class='time'><?php echo date('Y-m-d H:i:s',$list['add_time']); ?></div>
@@ -246,7 +245,7 @@
             <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
             <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
           </dl>
-
+  
         </div>
         <div class='concat_icon clearfix'>
           <div><img src="/static/spirit/images/bo.png" alt=""></div>
