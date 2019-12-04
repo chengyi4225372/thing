@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575373186;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575431279;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -48,13 +48,13 @@
                         <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
                         <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
                         <!--<li>-->
-                            <!--<?php if(empty($userinfo['userType'])): ?>-->
-                            <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
-                            <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
-                            <!--<a href="javascript:void(0)">会员通道</a>-->
-                            <!--<?php else: ?>-->
-                            <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
-                            <!--<?php endif; ?>-->
+                        <!--<?php if(empty($userinfo['userType'])): ?>-->
+                        <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
+                        <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
+                        <!--<a href="javascript:void(0)">会员通道</a>-->
+                        <!--<?php else: ?>-->
+                        <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
+                        <!--<?php endif; ?>-->
 
                         <!--</li>-->
                     </ul>
@@ -65,14 +65,14 @@
                 <!-- 登陆注册 -->
                 <!--<?php if(empty($userinfo['mobile'])): ?>-->
                 <!--<div class="loging clearfix">-->
-                    <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
-                        <!--登录-->
-                    <!--</a></div>-->
-                    <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
+                <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
+                <!--登录-->
+                <!--</a></div>-->
+                <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
                 <!--</div>-->
                 <!--<?php else: ?>-->
                 <!--<div class="u_info">-->
-                    <!--<?php if(empty($userinfo['mobile'])): ?>
+                <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
         登陆
@@ -240,7 +240,8 @@
                     <p>我们的解决方案</p>
                 </div>
                 <div class="project-text">
-                    将共享经济引入人力资源灵活用工行业,变革企业的用工模式，将“企业和员工之间的雇佣关系”，转变为“企业与个人间的业务合作关系” 通过平台一站式完成任务派发、费用结算支付、开票和完税，合法合规的进行灵活用工、结算支付和财税优化。
+                    将共享经济引入人力资源灵活用工行业,变革企业的用工模式，将“企业和员工之间的雇佣关系”，转变为“企业与个人间的业务合作关系”
+                    通过平台一站式完成任务派发、费用结算支付、开票和完税，合法合规的进行灵活用工、结算支付和财税优化。
                 </div>
                 <!-- tab栏切换 -->
                 <div class="project-items">
@@ -330,7 +331,7 @@
                     <p>方案流程</p>
                 </div>
                 <div class="process-text">
-                    惠用工服务体系业务逻辑流程图
+                    惠灵工服务体系业务逻辑流程图
                 </div>
                 <div class="process-img">
                     <img src="/static/spirit/images/liucheng2x.png" alt="">
@@ -386,47 +387,47 @@
             </div>
         </div>
 
-         <!-- 底部 -->
-         <div class="fotter-box">
+        <!-- 底部 -->
+        <div class="fotter-box">
             <div class="w fotter">
-              <div class='parter_catefories'>
-                <dl>
-                  <dt><a href="javascript:;">服务产品</a></dt>
-                  <dd><a href="javascript:;">服务型税筹</a></dd>
-                  <dd><a href="javascript:;">门户型税筹</a></dd>
-                  <dd><a href="javascript:;">人力资源</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="javascript:;">招商政策</a></dt>
-                  <dd><a href="javascript:;">招商政策网</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="javascript:;">合作</a></dt>
-                  <dd><a href="javascript:;">代理合作</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="javascript:;">公司信息</a></dt>
-                  <dd><a href="javascript:;">瑟维斯有限公司</a></dd>
-                  <dd><a href="javascript:;">惠创优产业联盟</a></dd>
-                  <dd><a href="javascript:;">中兴瑞华有限公司</a></dd>
-                </dl>
-                <dl>
-                  <dt><a href="javascript:;">联系我们</a></dt>
-                  <dd><a href="javascript:;">400-150-9896</a></dd>
-                  <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
-                  <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
-                </dl>
-        
-              </div>
-              <div class='concat_icon clearfix'>
-                <div><img src="/static/spirit/images/bo.png" alt=""></div>
-                <div><img src="/static/spirit/images/wx.png" alt=""></div>
-                <div><img src="/static/spirit/images/tie.png" alt=""></div>
-              </div>
-              <div class="fotter-line"></div>
-              <div>© Copyright 2019 惠企动（湖北）科技有限公司 . All Rights Reserved</div>
+                <div class='parter_catefories'>
+                    <dl>
+                        <dt><a href="javascript:;">服务产品</a></dt>
+                        <dd><a href="javascript:;">服务型税筹</a></dd>
+                        <dd><a href="javascript:;">门户型税筹</a></dd>
+                        <dd><a href="javascript:;">人力资源</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="javascript:;">招商政策</a></dt>
+                        <dd><a href="javascript:;">招商政策网</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="javascript:;">合作</a></dt>
+                        <dd><a href="javascript:;">代理合作</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="javascript:;">公司信息</a></dt>
+                        <dd><a href="javascript:;">瑟维斯有限公司</a></dd>
+                        <dd><a href="javascript:;">惠创优产业联盟</a></dd>
+                        <dd><a href="javascript:;">中兴瑞华有限公司</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="javascript:;">联系我们</a></dt>
+                        <dd><a href="javascript:;">400-150-9896</a></dd>
+                        <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
+                        <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
+                    </dl>
+
+                </div>
+                <div class='concat_icon clearfix'>
+                    <div><img src="/static/spirit/images/bo.png" alt=""></div>
+                    <div><img src="/static/spirit/images/wx.png" alt=""></div>
+                    <div><img src="/static/spirit/images/tie.png" alt=""></div>
+                </div>
+                <div class="fotter-line"></div>
+                <div>© Copyright 2019 惠企动（湖北）科技有限公司 . All Rights Reserved</div>
             </div>
-          </div>
+        </div>
 
         <!-- 返回顶部 -->
         <div class='goTop' id="goTop">
@@ -443,7 +444,8 @@
                 </div>
                 <div class="form-content">
                     <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
-                    <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式"></div>
+                    <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                    </div>
                     <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
                     <input type='hidden' id='sources' value='惠灵工'>
                     <input type='hidden' id='identifications' value='灵活用工'>
@@ -464,13 +466,13 @@
 
 </body>
 <script>
-    $('.nav ul li').on('click', function() {
+    $('.nav ul li').on('click', function () {
         $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
     })
-    $('.nav ul li').on('mouseenter', function() {
+    $('.nav ul li').on('mouseenter', function () {
         $(this).addClass('nav-active').siblings().removeClass('nav-active')
     })
-    $('.nav-box').on('mouseleave', function() {
+    $('.nav-box').on('mouseleave', function () {
         $('.nav ul li').removeClass('nav-active')
         if ($('.chosenPage').length < 1) $('.nav ul li').eq(0).addClass('chosenPage')
 
