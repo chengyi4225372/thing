@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575373186;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575428153;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -415,6 +415,11 @@
                   <dd><a href="javascript:;">400-150-9896</a></dd>
                   <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
                   <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
+                  <!-- <dd id="social">
+                    <div><img src="/static/spirit/images/bo.png" alt=""></div>
+                    <div><img src="/static/spirit/images/wx.png" alt=""></div>
+                    <div><img src="/static/spirit/images/tie.png" alt=""></div>
+                  </dd> -->
                 </dl>
         
               </div>

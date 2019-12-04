@@ -456,7 +456,7 @@ a {
 .tabCon {
     width: 53.75rem;
     height: 54.25rem;
-    /* background: skyblue; */
+    background: url('../images/bgCase.png');
 }
 
 .tabCon img {
