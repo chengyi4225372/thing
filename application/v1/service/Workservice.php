@@ -3,7 +3,6 @@ namespace app\v1\service;
 
 use app\common\model\Work;
 
-;
 use app\common\model\News;
 use app\common\model\Cases;
 use app\common\model\Solution;
