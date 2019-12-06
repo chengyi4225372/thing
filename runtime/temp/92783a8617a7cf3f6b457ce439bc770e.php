@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1575367745;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1575431061;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -103,7 +103,7 @@
                 <ul class="clearfix">
                     <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
                     <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
+                        <div class="item-img"><img src="<?php echo $item['pic']; ?>" alt=""></div>
                         <div class="item-content">
                             <p>
                                 <?php echo $item['title']; ?>

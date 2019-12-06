@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575428153;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575431061;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -330,7 +330,7 @@
                     <p>方案流程</p>
                 </div>
                 <div class="process-text">
-                    惠用工服务体系业务逻辑流程图
+                    惠灵工服务体系业务逻辑流程图
                 </div>
                 <div class="process-img">
                     <img src="/static/spirit/images/liucheng2x.png" alt="">

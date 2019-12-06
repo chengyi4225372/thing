@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1575372921;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1575431061;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
