@@ -9,13 +9,11 @@ $('.cancle').click(function(){
 
 //搜索
 $(".btn_search").click(function(){
-    var url   =  $(this).attr('data-url');
-    var title =  $("#keyword").val();
-    if(title=='' || title == undefined){
-        layer.msg("请输入搜索的文章标题");
-        return ;
-    }
-   window.location.href= url +"?title="+title;
+    var url   = $(this).attr('data-url');
+    var searchField = $('#searchField').val();//搜索字段
+    var searchValue = $('#searchValue').val();//搜索值
+
+    window.location.href = url+"?searchField="+searchField+'&searchValue='+searchValue;
 })
 
 //弹窗

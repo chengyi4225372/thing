@@ -468,6 +468,14 @@ a {
 }
 
 .concat_icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
     text-align: right;
     margin-top: 1.75rem;
     margin-right: 4.875rem;

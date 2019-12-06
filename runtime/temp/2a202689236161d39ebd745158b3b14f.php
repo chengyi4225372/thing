@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1575431061;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1575614009;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,7 +139,7 @@
     <div class="content-box">
       <div class="w content">
         <div class="bread-crumbs">
-          <span><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></span> > <span><a onclick="go_news(this)" data-url="<?php echo url('/home/spirit/informationList'); ?>">资讯</a></span> ><span></span>
+          <span><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></span> > <span><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">资讯</a></span> ><span></span>
         </div>
         <div class="information-list">
           <div class="tabs clearfix">

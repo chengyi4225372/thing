@@ -11,8 +11,16 @@ class Works extends  AuthController
     public function index()
     {
         if($this->request->isGet()){
-            $title = input('get.title','','trim');
-            $list = Workservice::instance()->getNewList($title);
+            $searchField = input('get.searchField', '', 'trim');
+            $searchValue = input('get.searchValue', '', 'trim');
+            $category = input('get.category', '', 'trim');
+
+            $params = [];
+            $params['searchField'] = !empty($searchField) ? $searchField : '';
+            $params['searchValue'] = !empty($searchValue) ? $searchValue : '';
+            $params['category'] = !empty($category) ? $category : '';
+            $list = Workservice::instance()->getNewList($params);
+            $this->assign('params', $params);
             $this->assign('list',$list);
             $this->assign('title','行业资讯');
             return $this->fetch();

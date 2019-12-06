@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1575373136;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1575421450;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
