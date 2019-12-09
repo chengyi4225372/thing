@@ -36,9 +36,27 @@ html {
     font-size: 16px;
 }
 
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 6.66666666666667px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 8.53333333333333px;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    html {
+        font-size: 9.58333333333333px;
+    }
+}
+
 @media screen and (min-width: 1280px) {
     html {
-        font-size: 10.666px;
+        font-size: 10.6666666666667px;
     }
 }
 
@@ -288,6 +306,7 @@ a {
     color: #2F80ED;
     cursor: pointer;
 }
+
 /* .bread_title .current{
     color: #2F80ED;
 } */
@@ -525,31 +544,39 @@ a {
 
 .goTop {
     position: fixed;
-    bottom: 1.25rem;
+    bottom: 6.25rem;
     right: 8.4375rem;
-    width: 3.125rem;
-    height: 2.8125rem;
+    width: 5rem;
+    height: 5rem;
     text-align: center;
     z-index: 999;
+    /* float: right; */
+    /* background-color: red; */
     background-color: #fff;
-    padding-top: 0.3125rem;
     display: none;
-    cursor: pointer
+    padding-top: 0.4375rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 .goTop i {
     overflow: hidden;
     /* float: right; */
     display: inline-block;
-    width: 1.4375rem;
-    height: 1.625rem;
+    width: 2.1875rem;
+    height: 2.5625rem;
     background-size: contain;
     background-image: url('../images/goback.png');
+    margin-bottom: .2875rem;
 }
 
 .goTop div {
-    font-size: 0.5625rem;
-    font-family: Source Han Sans CN;
+    font-size: .875rem;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 400;
     color: rgba(50, 50, 50, 1);
 }
@@ -576,7 +603,7 @@ a {
 
 .nav-container .logo {
     float: left;
-    width:  7.75rem;
+    width: 7.75rem;
     height: 4.75rem;
     display: flex;
     align-items: center;

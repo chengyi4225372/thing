@@ -17,6 +17,7 @@ class Index extends BaseController
     {
 
         if($this->request->isGet()){
+    
             //行业资讯
             $data = Workservice::instance()->three();
 
