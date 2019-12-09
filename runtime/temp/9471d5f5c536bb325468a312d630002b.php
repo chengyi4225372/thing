@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1575428258;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1575614009;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -187,7 +187,7 @@
 
     <div class='main_content'>
       <div class='content_middle'>
-        <div class='bread_title'><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a> > <a onclick="go_news(this)" data-url="<?php echo url('/home/spirit/informationList'); ?>">资讯</a> > 新闻详情</div>
+        <div class='bread_title'><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a> > <a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">资讯</a> > 新闻详情</div>
         <div class='pic_total'>
           <div class='pic_title'><?php echo $info['title']; ?></div>
           <div class='time'><?php echo $info['create_time']; ?></div>

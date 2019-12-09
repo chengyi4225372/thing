@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:72:"/opt/web/thing/public/../application/v1/view/work/works/successcase.html";i:1575339571;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575277666;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575337397;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
-<!DOCTYPE>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:72:"/opt/web/thing/public/../application/v1/view/work/works/successcase.html";i:1575463857;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575465336;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1575463857;}*/ ?>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <!-- 加载样式及META信息 -->

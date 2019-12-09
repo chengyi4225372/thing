@@ -1,11 +1,15 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575444989;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1575855524;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/index.css">
@@ -351,26 +355,31 @@
                 <div class="consulting-items">
                     <ul>
                         <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                        <li class="consulting-item">
-                            <div class="consulting-item-img">
-                                <div class="shade"></div>
-                                <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
+                        <li class="industryItem">
+                            <div class="itemImg">
+                                <div class="shadow"></div>
+
+                                    <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
+                               
                             </div>
-                            <div class="consulting-item-content-box">
-                                <div class="consulting-item-content">
-                                    <p class="consulting-item-content-title"><?php echo $vo['title']; ?></p>
-                                    <p class="consulting-item-content-time"><?php echo $vo['create_time']; ?></p>
-                                    <p class="consulting-item-content-details">
-                                        <?php echo $vo['desc']; ?>
-                                    </p>
+                           
+
+                            <div class="itemContent">
+                                    <div class="bottomContent">
+                                        <p class="conTitle"><?php echo $vo['title']; ?></p>
+                                        <p class="conTime"><?php echo $vo['create_time']; ?></p>
+                                        <p class="conDetail">
+                                            <?php echo $vo['desc']; ?>
+                                        </p>
+                                    </div>
+                                    <div class="separate"></div>
                                 </div>
-                            </div>
-                            <div class="consulting-item-btn-box">
-                                <div class="consulting-item-btn">
-                                    <!--<a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>/home/index/informationlist" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>-->
-                                    <a href="<?php echo config('curl.hlg'); ?>/home/index/informationlist">了解更多</a>
+                                <div class="conBtn">
+                                    <div class="more">
+                                        <a href="<?php echo config('curl.hlg'); ?>/home/index/informationlist">了解更多</a>
+                                    </div>
                                 </div>
-                            </div>
+                             
                         </li>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
                     </ul>

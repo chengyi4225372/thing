@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:66:"/opt/web/thing/public/../application/v1/view/work/works/index.html";i:1575287949;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575277666;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1573636141;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575293314;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
-<!DOCTYPE>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:66:"/opt/web/thing/public/../application/v1/view/work/works/index.html";i:1575538783;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575465336;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1575463857;}*/ ?>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <!-- 加载样式及META信息 -->
@@ -188,7 +188,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase'): ?> active <?php endif; ?> " >
+            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase' ||  $paths == '/v1/work/works/solution'): ?> active <?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
@@ -239,7 +239,18 @@
                     <div class="panel-heading">
 
                         <div class="form-group">
-                            <input type="text"  class="form-control" id="keyword"  value="<?php echo \think\Request::instance()->get('title'); ?>" placeholder="请输入标题或关键字搜索....">
+                            <div class="col-sm-4">
+                                <select class="selectpicker show-tick" title="" id="searchField" name="searchField"
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['searchField'] == 1): ?>selected='selected'<?php endif; ?>>新闻标题</option>
+                                    <option value="2" <?php if($params['searchField'] == 2): ?>selected='selected'<?php endif; ?>>新闻关键字</option>
+                                    <option value="3" <?php if($params['searchField'] == 3): ?>selected='selected'<?php endif; ?>>新闻描述</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" style="width:248px;" type="text" value="<?php echo $params['searchValue']; ?>" name="searchValue" id="searchValue" placeholder="多个关键字用空格或逗号隔开">
+                            </div>
                         </div>
 
                         <div class="form-group">
