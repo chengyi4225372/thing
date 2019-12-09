@@ -1,11 +1,14 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1575431814;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1575856993;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title><?php echo $title; ?></title>
   <meta name="keywords" content="<?php echo (isset($info['keyword']) && ($info['keyword'] !== '')?$info['keyword']:''); ?>" />
   <link rel="stylesheet" href="/static/spirit/css/base.css">
@@ -189,7 +192,9 @@
 
     <div class='main_content'>
       <div class='content_middle'>
-        <div class='bread_title'><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a> > <a onclick="go_news(this)" data-url="<?php echo url('/home/index/clientcase'); ?>">客户案例</a> > <span class="current">案例详情</span></div>
+        <div class='bread_title'><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a> > <a
+            onclick="go_news(this)" data-url="<?php echo url('/home/index/clientcase'); ?>">客户案例</a> > <span
+            class="current">案例详情</span></div>
         <div class='pic_total'>
           <div class='pic_title'><?php echo $list['title']; ?></div>
           <div class='time'><?php echo date('Y-m-d H:i:s',$list['add_time']); ?></div>
@@ -245,7 +250,7 @@
             <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
             <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
           </dl>
-  
+
         </div>
         <div class='concat_icon clearfix'>
           <div><img src="/static/spirit/images/bo.png" alt=""></div>
