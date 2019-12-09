@@ -1,4 +1,14 @@
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T09:40:59+08:00 ] 172.26.2.252 GET /static/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T09:25:57+08:00 ] 127.0.0.1 GET /
 [ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'del_time' in 'where clause'
 ---------------------------------------------------------------
@@ -877,10 +887,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 9fba5e4aa4b998f5ca5987118e1e848140c9635a
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T10:43:09+08:00 ] 172.26.2.252 GET /v1/info/infos/index.html
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T10:38:39+08:00 ] 127.0.0.1 GET /uploads/imgs/successcase/dcf633ae25a7f11daa9492473376f8ca4ea3d02830c46-zihX03.jpg
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -889,10 +910,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 9fba5e4aa4b998f5ca5987118e1e848140c9635a
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T10:43:10+08:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T10:38:39+08:00 ] 127.0.0.1 GET /uploads/imgs/successcase/d1ef7aeff0cf0135641561666236c4fa1fd5d0b71e63b-XDswb5.jpg
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -901,10 +933,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 9fba5e4aa4b998f5ca5987118e1e848140c9635a
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T10:43:10+08:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T10:38:39+08:00 ] 127.0.0.1 GET /uploads/imgs/successcase/5c099bc39c0252d65a9acc90d996c0a12aec09ff57ed1-ScCJoZ.jpg
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -913,10 +956,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 9fba5e4aa4b998f5ca5987118e1e848140c9635a
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T10:43:13+08:00 ] 172.26.2.252 GET /static/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T10:38:39+08:00 ] 127.0.0.1 GET /uploads/imgs/successcase/96812456cbd6807c227917eeb85e8e550e26061a543fd-X1u63N.jpg
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -925,6 +979,7 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 9fba5e4aa4b998f5ca5987118e1e848140c9635a
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
