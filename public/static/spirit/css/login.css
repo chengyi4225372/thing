@@ -169,9 +169,21 @@ a {
 
 
 .header_content {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
     justify-content: space-between;
     padding: 1.625rem 0 0 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
     width: 75rem;
@@ -193,6 +205,10 @@ a {
 
 .header_content .a_href {
     padding-top: 1.625rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -216,19 +232,39 @@ a {
     height: 43.75rem;
     margin: 0 auto;
     padding-top: 5.625rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .login_box {
     width: 40rem;
     height: 43.75rem;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
     flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
     align-items: center;
     background: rgba(255, 255, 255, 1);
     box-shadow: -0.125rem 0px 0.625rem 0px rgba(44, 44, 44, 0.1);
     border-radius: .25rem;
     /* padding: 59px 130px 56px 130px; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -311,7 +347,15 @@ a {
 
 .phone_box,
 .code_box {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
     align-items: center;
     width: 26.25rem;
     height: 3rem;
@@ -370,6 +414,10 @@ select::-ms-expand {
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
     padding-left: 1.0625rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     width: 13rem;
     height: 97%;
@@ -384,6 +432,10 @@ select::-ms-expand {
     color: rgba(47, 128, 237, 1);
     line-height: 1.875rem;
     margin-left: 3.875rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -424,7 +476,15 @@ select::-ms-expand {
 /* 账号登陆 */
 .accout_name,
 .password {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
     align-items: center;
     width: 26.25rem;
     height: 3.125rem;
@@ -432,6 +492,10 @@ select::-ms-expand {
     border: 1px solid rgba(194, 194, 194, 1);
     border-radius: .125rem;
     padding-left: .9375rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -464,6 +528,10 @@ select::-ms-expand {
     width: 19.1125rem;
     height: 97%;
     padding-left: 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 1rem;
     font-family: Microsoft YaHei;

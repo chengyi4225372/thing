@@ -131,7 +131,15 @@ a {
 .header_content {
     width: 75rem;
     margin: 0 auto;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
     justify-content: space-between;
     padding: 2rem 0 .875rem 0;
 }
@@ -152,6 +160,10 @@ a {
 
 .titile {
     list-style: none;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     /* margin: 0px 0px 0 129px; */
     height: 2.75rem;
@@ -203,12 +215,20 @@ a {
 
 .titile li {
     padding-top: .75rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 
 }
 
 .titile li:nth-of-type(1) {
     padding-top: 0.5625rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -233,6 +253,10 @@ a {
     left: -0.5625rem;
     background-color: pink;
     text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     font-size: .875rem;
     font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
@@ -251,6 +275,10 @@ a {
     width: 100%;
     height: 100%;
     /*padding: 1.0625rem .875rem;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     line-height: 2.75rem;
 }
@@ -312,6 +340,10 @@ a {
     /* height: 1780px; */
     background: rgba(255, 255, 255, 1);
     padding: 2rem 5.25rem 0 3.375rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -431,15 +463,15 @@ a {
     background-color: #fff;
     display: none;
     padding-top: 0.4375rem;
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
-  }
-  
-  .goTop i {
+}
+
+.goTop i {
     overflow: hidden;
     /* float: right; */
     display: inline-block;
@@ -448,14 +480,14 @@ a {
     background-size: contain;
     background-image: url('../images/goback.png');
     margin-bottom: .2875rem;
-  }
-  
-  .goTop div {
+}
+
+.goTop div {
     font-size: .875rem;
     font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 400;
     color: rgba(50, 50, 50, 1);
-  }
+}
 
 
 /* nav部分 */
@@ -664,9 +696,10 @@ a {
 }
 
 .concat_icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -687,6 +720,10 @@ a {
     text-align: center;
     margin-left: 1.5rem;
     padding: .5rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
