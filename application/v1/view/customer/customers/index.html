@@ -63,6 +63,7 @@
                 <th class="text-center" style="width:21%">内容</th>
                 <th class="text-center" style="width:21%">创建时间</th>
                 <th class="text-center">创建人</th>
+                <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
@@ -81,6 +82,14 @@
                     </td>
                     <td class="text-center">{:date('Y-m-d H:i:s',$vo['add_time'])}</td>
                     <td class="text-center">{$vo.add_user}</td>
+
+                    <td class="text-center">
+                        {if $vo['status'] == 1}
+                        <span class="btn btn-success" onclick="admin_module.status_sort(this)" data-url="{:url('/v1/customer/customers/changestatus')}" data-id="{$vo['id']}" data="2">{$status[$vo['status']]}</span>
+                        {else/}
+                        <span class="btn btn-danger" onclick="admin_module.status_sort(this)" data-url="{:url('/v1/customer/customers/changestatus')}" data-id="{$vo['id']}" data="1">{$status[$vo['status']]}</span>
+                        {/if}
+                    </td>
 
                     <td class="text-center">
                         <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="{:url('/v1/customer/customers/edit',['id'=>$vo.id])}">编辑</a>

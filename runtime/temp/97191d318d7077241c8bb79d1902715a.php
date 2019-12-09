@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/thing/public/../application/v1/view/customer/customers/index.html";i:1575875547;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575465336;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575860939;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/thing/public/../application/v1/view/customer/customers/index.html";i:1575883761;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575465336;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575860939;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1575463857;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -301,6 +301,7 @@
                 <th class="text-center" style="width:21%">内容</th>
                 <th class="text-center" style="width:21%">创建时间</th>
                 <th class="text-center">创建人</th>
+                <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
@@ -319,6 +320,14 @@
                     </td>
                     <td class="text-center"><?php echo date('Y-m-d H:i:s',$vo['add_time']); ?></td>
                     <td class="text-center"><?php echo $vo['add_user']; ?></td>
+
+                    <td class="text-center">
+                        <?php if($vo['status'] == 1): ?>
+                        <span class="btn btn-success" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/customer/customers/changestatus'); ?>" data-id="<?php echo $vo['id']; ?>" data="2"><?php echo $status[$vo['status']]; ?></span>
+                        <?php else: ?>
+                        <span class="btn btn-danger" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/customer/customers/changestatus'); ?>" data-id="<?php echo $vo['id']; ?>" data="1"><?php echo $status[$vo['status']]; ?></span>
+                        <?php endif; ?>
+                    </td>
 
                     <td class="text-center">
                         <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="<?php echo url('/v1/customer/customers/edit',['id'=>$vo['id']]); ?>">编辑</a>

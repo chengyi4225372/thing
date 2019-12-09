@@ -988,6 +988,34 @@ var admin_module = (function (){
             },'json'
         );
     };
+
+    //排序
+    var status_sort = function status_sort(objthis){
+        var status = $(objthis).attr('data');
+        var url = $(objthis).attr('data-url');
+        var id = $(objthis).attr('data-id');
+        $.post(
+            url,
+            {status:status,id:id},
+            function (ret){
+                if(ret.status == 200){
+                    if(status == 2){
+                        $(objthis).removeClass('btn-success');
+                        $(objthis).addClass('btn-danger');
+                        $(objthis).attr('data',1);
+                        $(objthis).html('已禁用');
+                    }
+                    if(status == 1){
+                        $(objthis).removeClass('btn-danger');
+                        $(objthis).addClass('btn-success');
+                        $(objthis).attr('data',2);
+                        $(objthis).html('已启用');
+                    }
+                }
+            },'json'
+        );
+    };
+
     return {
         changepas: changepas,
         change_password: change_password,
@@ -1017,6 +1045,7 @@ var admin_module = (function (){
         add_hlg_customer:add_hlg_customer,
         edit_hlg_customer:edit_hlg_customer,
         change_sort:change_sort,
+        status_sort:status_sort,
     }
 
 })();

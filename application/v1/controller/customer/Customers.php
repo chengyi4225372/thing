@@ -94,6 +94,23 @@ class Customers extends AuthController
      * @DESC：启用或禁用轮播图
      * @return \think\response\Json
      * @author: jason
+     * @date: 2019-12-09 05:31:16
+     */
+    public function changestatus()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $return_data = Customerservice::instance()->changestatus($_POST);
+            if($return_data == false){
+                return json(['status' => 400,'msg' => '操作失败']);
+            }
+            return json(['status' => 200,'msg' => '操作成功']);
+        }
+    }
+
+    /**
+     * @DESC：排序
+     * @return \think\response\Json
+     * @author: jason
      * @date: 2019-12-09 01:59:31
      */
     public function changesort()

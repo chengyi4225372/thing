@@ -2220,3 +2220,6 @@ Stack trace:
 #6 {main}
   thrown
 >>>>>>> 38d9041b67ab3bdd1f5253bbf62729696d25e6ce
+---------------------------------------------------------------
+[ 2019-12-09T17:24:25+08:00 ] 172.26.2.252 POST /v1/customer/customers/changesort.html
+[ error ] [8]未定义数组索引: sort[/opt/web/thing/application/v1/service/Customerservice.php:79]

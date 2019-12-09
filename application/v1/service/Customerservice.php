@@ -63,8 +63,32 @@ class Customerservice
         return $return;
     }
 
+
     /**
      * @DESC：启用或禁用轮播图
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-09 05:32:31
+     */
+    public function changestatus($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $save['status'] = $params['status'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Customer::instance()->where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @DESC：排序
      * @param $params
      * @return bool
      * @author: jason
