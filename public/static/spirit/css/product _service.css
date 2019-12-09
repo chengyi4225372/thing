@@ -38,9 +38,27 @@ html {
     font-size: 16px;
 }
 
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 6.66666666666667px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 8.53333333333333px;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    html {
+        font-size: 9.58333333333333px;
+    }
+}
+
 @media screen and (min-width: 1280px) {
     html {
-        font-size: 10.666px;
+        font-size: 10.6666666666667px;
     }
 }
 
@@ -122,7 +140,7 @@ input:-webkit-autofill {
 
 .nav-container .logo {
     float: left;
-    width:  7.75rem;
+    width: 7.75rem;
     height: 4.75rem;
     display: flex;
     align-items: center;
@@ -180,7 +198,7 @@ input:-webkit-autofill {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     content: '';
-    width: 100%!important;
+    width: 100% !important;
     height: 2px;
     background-color: #fff;
 }

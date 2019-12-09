@@ -32,9 +32,27 @@ html {
     font-size: 16px;
 }
 
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 6.66666666666667px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 8.53333333333333px;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    html {
+        font-size: 9.58333333333333px;
+    }
+}
+
 @media screen and (min-width: 1280px) {
     html {
-        font-size: 10.666px;
+        font-size: 10.6666666666667px;
     }
 }
 
@@ -67,6 +85,7 @@ html {
         font-size: 16px;
     }
 }
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -121,6 +140,7 @@ textarea {
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
+
 textarea {
     resize: none;
 }
@@ -390,7 +410,7 @@ select::-ms-expand {
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
-    cursor:pointer;
+    cursor: pointer;
 
 }
 

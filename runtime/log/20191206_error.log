@@ -1,0 +1,57 @@
+---------------------------------------------------------------
+[ 2019-12-06T09:17:16+08:00 ] 127.0.0.1 GET /
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'del_time' in 'where clause'
+---------------------------------------------------------------
+[ 2019-12-06T09:17:16+08:00 ] 127.0.0.1 GET /assets/dist/img/error.svg
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
+Stack trace:
+#0 C:\phpEnv\www\thing\thinkphp\library\think\View.php(163): think\view\driver\Think->fetch('C:\\phpEnv\\www\\t...', Array, Array)
+#1 C:\phpEnv\www\thing\thinkphp\library\think\response\View.php(36): think\View->fetch('C:\\phpEnv\\www\\t...', Array, Array)
+#2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
+#3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
+#4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
+---------------------------------------------------------------
+[ 2019-12-06T09:17:45+08:00 ] 127.0.0.1 GET /
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'del_time' in 'where clause'
+---------------------------------------------------------------
+[ 2019-12-06T09:17:45+08:00 ] 127.0.0.1 GET /assets/dist/img/error.svg
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
+Stack trace:
+#0 C:\phpEnv\www\thing\thinkphp\library\think\View.php(163): think\view\driver\Think->fetch('C:\\phpEnv\\www\\t...', Array, Array)
+#1 C:\phpEnv\www\thing\thinkphp\library\think\response\View.php(36): think\View->fetch('C:\\phpEnv\\www\\t...', Array, Array)
+#2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
+#3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
+#4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
+---------------------------------------------------------------
+[ 2019-12-06T10:10:18+08:00 ] 127.0.0.1 GET /
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'del_time' in 'where clause'
+---------------------------------------------------------------
+[ 2019-12-06T10:10:18+08:00 ] 127.0.0.1 GET /assets/dist/img/error.svg
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
+Stack trace:
+#0 C:\phpEnv\www\thing\thinkphp\library\think\View.php(163): think\view\driver\Think->fetch('C:\\phpEnv\\www\\t...', Array, Array)
+#1 C:\phpEnv\www\thing\thinkphp\library\think\response\View.php(36): think\View->fetch('C:\\phpEnv\\www\\t...', Array, Array)
+#2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
+#3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
+#4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
+---------------------------------------------------------------
+[ 2019-12-06T10:10:18+08:00 ] 127.0.0.1 GET /assets/img/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
+Stack trace:
+#0 C:\phpEnv\www\thing\thinkphp\library\think\View.php(163): think\view\driver\Think->fetch('C:\\phpEnv\\www\\t...', Array, Array)
+#1 C:\phpEnv\www\thing\thinkphp\library\think\response\View.php(36): think\View->fetch('C:\\phpEnv\\www\\t...', Array, Array)
+#2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
+#3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
+#4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
