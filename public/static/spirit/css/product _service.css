@@ -315,6 +315,10 @@ input:-webkit-autofill {
     height: 31.9375rem;
 }
 
+.difficulty-box2 img {
+    width: 100%;
+}
+
 .difficulty-box div {
     height: 100%;
 }
@@ -475,35 +479,42 @@ input:-webkit-autofill {
 
 .goTop {
     position: fixed;
-    bottom: 1.25rem;
+    bottom: 6.25rem;
     right: 8.4375rem;
-    width: 4.375rem;
-    height: 3.875rem;
+    width: 5rem;
+    height: 5rem;
     text-align: center;
-    line-height: 1.875rem;
     z-index: 999;
+    /* float: right; */
+    /* background-color: red; */
     background-color: #fff;
-    padding-top: .625rem;
     display: none;
-    cursor: pointer
-}
-
-.goTop i {
+    padding-top: 0.4375rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .goTop i {
     overflow: hidden;
     /* float: right; */
     display: inline-block;
-    width: 1.4375rem;
-    height: 1.625rem;
+    width: 2.1875rem;
+    height: 2.5625rem;
     background-size: contain;
     background-image: url('../images/goback.png');
-}
-
-.goTop div {
-    font-size: 0.5625rem;
+    margin-bottom: .2875rem;
+  }
+  
+  .goTop div {
+    font-size: .875rem;
     font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 400;
     color: rgba(50, 50, 50, 1);
-}
+  }
 
 
 /* 弹出框 */

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1575431061;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575367745;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1575856395;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -198,8 +198,8 @@
     <!-- <div class='goTop' id="goTop">
         <div><img src="/static/home/images/top@2x.png" alt=""></div>
         <div>顶部</div>
-      </div>
     </div> -->
+    <!-- </div>  -->
 
 
 </body>
