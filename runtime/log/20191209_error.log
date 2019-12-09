@@ -1,0 +1,60 @@
+---------------------------------------------------------------
+[ 2019-12-09T09:40:59+08:00 ] 172.26.2.252 GET /static/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
+---------------------------------------------------------------
+[ 2019-12-09T10:43:09+08:00 ] 172.26.2.252 GET /v1/info/infos/index.html
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
+---------------------------------------------------------------
+[ 2019-12-09T10:43:10+08:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
+---------------------------------------------------------------
+[ 2019-12-09T10:43:10+08:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
+---------------------------------------------------------------
+[ 2019-12-09T10:43:13+08:00 ] 172.26.2.252 GET /static/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+#5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
+#6 {main}
+  thrown
