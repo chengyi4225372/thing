@@ -1,11 +1,14 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/clientcase.html";i:1575361269;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/clientcase.html";i:1575860065;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/clientcase.css">
@@ -103,7 +106,7 @@
                 <ul class="clearfix">
                     <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
                     <li>
-                        <div class="item-img"><img src="/static/spirit/images/anli1.png" alt=""></div>
+                        <div class="item-img"><img src="<?php echo $item['pic']; ?>" alt=""></div>
                         <div class="item-content">
                             <p>
                                 <?php echo $item['title']; ?>
@@ -198,8 +201,8 @@
     <!-- <div class='goTop' id="goTop">
         <div><img src="/static/home/images/top@2x.png" alt=""></div>
         <div>顶部</div>
-      </div>
     </div> -->
+    <!-- </div>  -->
 
 
 </body>

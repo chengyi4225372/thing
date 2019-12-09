@@ -206,6 +206,8 @@ function getMore(keyword, i, objthis) {
                 });
                 $('#content').append(html).html();
                 $('#page').val(++i);
+            }else{
+                layer.msg('已经没有更多数据了',{icon:5,time:1500});
             }
         }
 
