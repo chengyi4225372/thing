@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575860065;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575958783;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
