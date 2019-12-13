@@ -36,9 +36,27 @@ html {
     font-size: 16px;
 }
 
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 6.66666666666667px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 8.53333333333333px;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    html {
+        font-size: 9.58333333333333px;
+    }
+}
+
 @media screen and (min-width: 1280px) {
     html {
-        font-size: 10.666px;
+        font-size: 10.6666666666667px;
     }
 }
 
@@ -113,15 +131,23 @@ a {
 .header_content {
     width: 75rem;
     margin: 0 auto;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
     justify-content: space-between;
     padding: 2rem 0 .875rem 0;
 }
 
 .logo {
     /* margin-left: .75rem; */
-    width: 7.75rem;
-    height: 3.375rem;
+    width: 7.8125rem;
+    height: 2.875rem;
     /* background-image: url('../images/logo.png'); */
     background-size: 100% 100%;
 }
@@ -134,6 +160,10 @@ a {
 
 .titile {
     list-style: none;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     /* margin: 0px 0px 0 129px; */
     height: 2.75rem;
@@ -163,8 +193,9 @@ a {
     font-size: 1.25rem;
     font-family: Microsoft YaHei;
     font-weight: 400;
-    color: #fff;
+    /* color: #fff; */
     text-decoration: none;
+    color: #03053A;
 }
 
 .nav-active {
@@ -180,17 +211,25 @@ a {
     content: '';
     width: 2.375rem;
     height: 2px;
-    background: rgba(255, 255, 255, 1);
+    background: #2F80ED;
 }
 
 .titile li {
     padding-top: .75rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 
 }
 
 .titile li:nth-of-type(1) {
     padding-top: 0.5625rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -215,6 +254,10 @@ a {
     left: -0.5625rem;
     background-color: pink;
     text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     font-size: .875rem;
     font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
@@ -233,6 +276,10 @@ a {
     width: 100%;
     height: 100%;
     /*padding: 1.0625rem .875rem;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     line-height: 2.75rem;
 }
@@ -289,11 +336,19 @@ a {
     cursor: pointer;
 }
 
+/* .bread_title .current{
+    color: #2F80ED;
+} */
+
 .pic_total {
     width: 75rem;
     /* height: 1780px; */
     background: rgba(255, 255, 255, 1);
     padding: 2rem 5.25rem 0 3.375rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -465,6 +520,15 @@ a {
 }
 
 .concat_icon {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
     text-align: right;
     margin-top: 1.75rem;
     margin-right: 4.875rem;
@@ -480,6 +544,10 @@ a {
     text-align: center;
     margin-left: 1.5rem;
     padding: .5rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -514,31 +582,39 @@ a {
 
 .goTop {
     position: fixed;
-    bottom: 1.25rem;
+    bottom: 6.25rem;
     right: 8.4375rem;
-    width: 3.125rem;
-    height: 2.8125rem;
+    width: 5rem;
+    height: 5rem;
     text-align: center;
     z-index: 999;
+    /* float: right; */
+    /* background-color: red; */
     background-color: #fff;
-    padding-top: 0.3125rem;
     display: none;
-    cursor: pointer
+    padding-top: 0.4375rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 .goTop i {
     overflow: hidden;
     /* float: right; */
     display: inline-block;
-    width: 1.4375rem;
-    height: 1.625rem;
+    width: 2.1875rem;
+    height: 2.5625rem;
     background-size: contain;
     background-image: url('../images/goback.png');
+    margin-bottom: .2875rem;
 }
 
 .goTop div {
-    font-size: 0.5625rem;
-    font-family: Source Han Sans CN;
+    font-size: .875rem;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 400;
     color: rgba(50, 50, 50, 1);
 }
@@ -554,20 +630,44 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 6.25rem;
-    background: #181818;
+    height: 3.75rem;
+    /* background: #181818; */
+    background: #fff;
+    z-index: 999;
+}
+
+.container {
+    min-width: 75rem;
+}
+
+.nav-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.75rem;
+    /* background: #181818; */
+    background: #FFFFFF;
     z-index: 999;
 }
 
 .nav-container {
-    padding-top: .75rem;
+    padding-top: .625rem;
 }
 
 .nav-container .logo {
     float: left;
-    width:  7.75rem;
-    height: 4.75rem;
+    width: 7.8125rem;
+    height: 2.875rem;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
     align-items: center;
 }
 
@@ -586,7 +686,7 @@ a {
 
 .nav-container .nav ul {
     list-style: none;
-    margin: 1.875rem 0 0 0;
+    margin: .9375rem 0 0 0;
     padding: 0;
 }
 
@@ -603,10 +703,11 @@ a {
     display: block;
     width: 100%;
     /*height: 100%;*/
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-family: "PingFang-SC-Medium";
     font-weight: 500;
-    color: rgba(255, 255, 255, 1);
+    /* color: rgba(255, 255, 255, 1); */
+    color: #03053A;
 }
 
 .nav-active {
@@ -615,7 +716,7 @@ a {
 
 .nav-active::after {
     position: absolute;
-    bottom: -2.1875rem;
+    bottom: -0.9375rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -624,8 +725,8 @@ a {
     transform: translateX(-50%);
     content: '';
     width: 100% !important;
-    height: 2px;
-    background-color: #fff;
+    height: 4px;
+    background-color: #2F80ED;
 }
 
 .nav-container .loging {

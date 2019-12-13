@@ -15,7 +15,9 @@ class Index extends BaseController
      */
     public function  index()
     {
+
         if($this->request->isGet()){
+    
             //行业资讯
             $data = Workservice::instance()->three();
 

@@ -1,11 +1,14 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"/opt/web/thing/public/../application/home/view/index/productservice.html";i:1575360107;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
-<!DOCTYPE>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"/opt/web/thing/public/../application/home/view/index/productservice.html";i:1575860065;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/product _service.css">
@@ -23,56 +26,56 @@
 
     <div class='container'>
 
-        <!-- 导航部分 -->
-        <div class="nav-box">
-            <div class="w nav-container clearfix">
-                <!-- logo图 -->
-                <div class="logo">
-                    <h1>
-                        <img src="/static/spirit/images/logo2xx.png">
-                    </h1>
-                </div>
-                <!-- nav部分 -->
-                <div class="nav">
-                    <ul class="clearfix">
-                        <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
-                        <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
-                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                        <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
-                        <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                        <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
-                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
-                        <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-                        <li class="nav-active"><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
-                        <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
-                        <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
-                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
-                        <!--<li>-->
-                        <!--<?php if(empty($userinfo['userType'])): ?>-->
-                        <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
-                        <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
-                        <!--<a href="javascript:void(0)">会员通道</a>-->
-                        <!--<?php else: ?>-->
-                        <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
-                        <!--<?php endif; ?>-->
-
-                        <!--</li>-->
-                    </ul>
-                </div>
-
-
-
-                <!-- 登陆注册 -->
-                <!--<?php if(empty($userinfo['mobile'])): ?>-->
-                <!--<div class="loging clearfix">-->
-                <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
-                <!--登录-->
-                <!--</a></div>-->
-                <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
-                <!--</div>-->
-                <!--<?php else: ?>-->
-                <!--<div class="u_info">-->
-                <!--<?php if(empty($userinfo['mobile'])): ?>
+             <!-- 导航部分 -->
+             <div class="nav-box">
+                <div class="w nav-container clearfix">
+                    <!-- logo图 -->
+                    <div class="logo">
+                        <h1>
+                            <img src="/static/spirit/images/logo2xx.png">
+                        </h1>
+                    </div>
+                    <!-- nav部分 -->
+                    <div class="nav">
+                        <ul class="clearfix">
+                            <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
+                            <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                            <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                            <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
+                            <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                            <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
+                            <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
+                            <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                            <li class="nav-active"><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
+                            <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
+                            <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
+                            <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
+                            <!--<li>-->
+                                <!--<?php if(empty($userinfo['userType'])): ?>-->
+                                <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
+                                <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
+                                <!--<a href="javascript:void(0)">会员通道</a>-->
+                                <!--<?php else: ?>-->
+                                <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
+                                <!--<?php endif; ?>-->
+    
+                            <!--</li>-->
+                        </ul>
+                    </div>
+    
+    
+    
+                    <!-- 登陆注册 -->
+                    <!--<?php if(empty($userinfo['mobile'])): ?>-->
+                    <!--<div class="loging clearfix">-->
+                        <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
+                            <!--登录-->
+                        <!--</a></div>-->
+                        <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
+                    <!--</div>-->
+                    <!--<?php else: ?>-->
+                    <!--<div class="u_info">-->
+                        <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
         登陆
@@ -89,11 +92,11 @@
     </div>
 </div>
 <?php endif; ?>-->
-                <!--</div>-->
-                <!--<?php endif; ?>-->
+                    <!--</div>-->
+                    <!--<?php endif; ?>-->
+                </div>
+    
             </div>
-
-        </div>
 
 
         <!-- 头部 -->

@@ -1,11 +1,14 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575371046;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1573799660;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575958783;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/index.css">
@@ -48,13 +51,13 @@
                         <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
                         <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
                         <!--<li>-->
-                            <!--<?php if(empty($userinfo['userType'])): ?>-->
-                            <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
-                            <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
-                            <!--<a href="javascript:void(0)">会员通道</a>-->
-                            <!--<?php else: ?>-->
-                            <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
-                            <!--<?php endif; ?>-->
+                        <!--<?php if(empty($userinfo['userType'])): ?>-->
+                        <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
+                        <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
+                        <!--<a href="javascript:void(0)">会员通道</a>-->
+                        <!--<?php else: ?>-->
+                        <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
+                        <!--<?php endif; ?>-->
 
                         <!--</li>-->
                     </ul>
@@ -65,14 +68,14 @@
                 <!-- 登陆注册 -->
                 <!--<?php if(empty($userinfo['mobile'])): ?>-->
                 <!--<div class="loging clearfix">-->
-                    <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
-                        <!--登录-->
-                    <!--</a></div>-->
-                    <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
+                <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
+                <!--登录-->
+                <!--</a></div>-->
+                <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
                 <!--</div>-->
                 <!--<?php else: ?>-->
                 <!--<div class="u_info">-->
-                    <!--<?php if(empty($userinfo['mobile'])): ?>
+                <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
         登陆
@@ -119,19 +122,19 @@
                         </div>
                         <div class="header-right-btn" style="cursor:pointer;" onclick="btnErp()">获取方案</div>
                         <!-- 提交成果后弹窗 -->
-                        <div class="mask-box">
+                        <div class="mask-box1">
                             <span></span>
                             <p class="mask-box-title">提交成功</p>
                             <p class="mask-box-content">我们会在一个工作日内联系您</p>
                         </div>
                     </div>
                 </div>
-                <div class="focus-icon">
+                <!-- <div class="focus-icon">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -139,7 +142,7 @@
         <div class="serves-box">
             <div class="w serves clearfix">
                 <div class="serve-item fl">
-                    <div class="serve-item-img">
+                    <div class="serve-item-img firstImg">
                         <img src="/static/spirit/images/yonghu2x.png" alt="">
                     </div>
                     <div class="serve-item-text">
@@ -240,7 +243,8 @@
                     <p>我们的解决方案</p>
                 </div>
                 <div class="project-text">
-                    将共享经济引入人力资源灵活用工行业,变革企业的用工模式，将“企业和员工之间的雇佣关系”，转变为“企业与个人间的业务合作关系” 通过平台一站式完成任务派发、费用结算支付、开票和完税，合法合规的进行灵活用工、结算支付和财税优化。
+                    将共享经济引入人力资源灵活用工行业,变革企业的用工模式，将“企业和员工之间的雇佣关系”，转变为“企业与个人间的业务合作关系”
+                    通过平台一站式完成任务派发、费用结算支付、开票和完税，合法合规的进行灵活用工、结算支付和财税优化。
                 </div>
                 <!-- tab栏切换 -->
                 <div class="project-items">
@@ -330,7 +334,7 @@
                     <p>方案流程</p>
                 </div>
                 <div class="process-text">
-                    惠用工服务体系业务逻辑流程图
+                    惠灵工服务体系业务逻辑流程图
                 </div>
                 <div class="process-img">
                     <img src="/static/spirit/images/liucheng2x.png" alt="">
@@ -350,26 +354,31 @@
                 <div class="consulting-items">
                     <ul>
                         <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                        <li class="consulting-item">
-                            <div class="consulting-item-img">
-                                <div class="shade"></div>
-                                <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
+                        <li class="industryItem">
+                            <div class="itemImg">
+                                <div class="shadow"></div>
+
+                                    <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
+                               
                             </div>
-                            <div class="consulting-item-content-box">
-                                <div class="consulting-item-content">
-                                    <p class="consulting-item-content-title"><?php echo $vo['title']; ?></p>
-                                    <p class="consulting-item-content-time"><?php echo $vo['create_time']; ?></p>
-                                    <p class="consulting-item-content-details">
-                                        <?php echo $vo['desc']; ?>
-                                    </p>
+                           
+
+                            <div class="itemContent">
+                                    <div class="bottomContent">
+                                        <p class="conTitle"><?php echo $vo['title']; ?></p>
+                                        <p class="conTime"><?php echo $vo['create_time']; ?></p>
+                                        <p class="conDetail">
+                                            <?php echo $vo['desc']; ?>
+                                        </p>
+                                    </div>
+                                    <div class="separate"></div>
                                 </div>
-                            </div>
-                            <div class="consulting-item-btn-box">
-                                <div class="consulting-item-btn">
-                                    <!--<a href="javascript:void(0)" onclick="is_login(this)" login_url="<?php echo config('work.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>/home/index/informationlist" data-url="<?php echo url('/home/index/informationlist'); ?>" mobile-phone="<?php echo $userinfo['mobile']; ?>">了解更多</a>-->
-                                    <a href="<?php echo config('curl.hlg'); ?>/home/index/informationlist">了解更多</a>
+                                <div class="conBtn">
+                                    <div class="more">
+                                        <a href="<?php echo config('curl.hlg'); ?>/home/index/informationlist">了解更多</a>
+                                    </div>
                                 </div>
-                            </div>
+                             
                         </li>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
                     </ul>
@@ -389,45 +398,42 @@
         <!-- 底部 -->
         <div class="fotter-box">
             <div class="w fotter">
-                <!-- <div class='partener_titile'>用智“慧”创造优“惠”</div> -->
-                <div class='partener_titile'></div>
-                <div class='parterne_info'>
-                    深耕税筹行业多年，合作企业多达几千家。专业为个人和企业解决税务难题。为您提供一站式金融、税务和人力外包服务，以及专业的税筹划分析，最安全、高效、合理的节税措施。我们有最成熟的专家团队和各行业实操经验！作为国内领先的标准化税筹服务互联网平台，我们得到了上海、安徽、江西、湖北等各地政府的大力支持，为企业节税保驾护航！
-                </div>
                 <div class='parter_catefories'>
                     <dl>
-                        <dt><a href="javascript:void(0)">服务产品</a></dt>
-                        <dd><a href="javascript:void(0)">服务型税筹</a></dd>
-                        <dd><a href="javascript:void(0)">门户型税筹</a></dd>
-                        <dd><a href="javascript:void(0)">人力资源</a></dd>
+                        <dt><a href="javascript:;">服务产品</a></dt>
+                        <dd><a href="javascript:;">服务型税筹</a></dd>
+                        <dd><a href="javascript:;">门户型税筹</a></dd>
+                        <dd><a href="javascript:;">人力资源</a></dd>
                     </dl>
                     <dl>
-                        <dt><a href="javascript:void(0)">招商政策</a></dt>
-                        <dd><a href="javascript:void(0)">招商政策网</a></dd>
+                        <dt><a href="javascript:;">招商政策</a></dt>
+                        <dd><a href="javascript:;">招商政策网</a></dd>
                     </dl>
                     <dl>
-                        <dt><a href="javascript:void(0)">合作</a></dt>
-                        <dd><a href="javascript:void(0)">代理合作</a></dd>
+                        <dt><a href="javascript:;">合作</a></dt>
+                        <dd><a href="javascript:;">代理合作</a></dd>
                     </dl>
                     <dl>
-                        <dt><a href="javascript:void(0)">公司信息</a></dt>
-                        <dd><a href="javascript:void(0)">瑟维斯有限公司</a></dd>
-                        <dd><a href="javascript:void(0)">惠创优产业联盟</a></dd>
-                        <dd><a href="javascript:void(0)">中兴瑞华有限公司</a></dd>
+                        <dt><a href="javascript:;">公司信息</a></dt>
+                        <dd><a href="javascript:;">瑟维斯有限公司</a></dd>
+                        <dd><a href="javascript:;">惠创优产业联盟</a></dd>
+                        <dd><a href="javascript:;">中兴瑞华有限公司</a></dd>
                     </dl>
                     <dl>
-                        <dt><a href="javascript:void(0)">联系我们</a></dt>
-                        <dd><a href="javascript:void(0)">400-150-9896</a></dd>
-                        <dd><a href="javascript:void(0)">hcylm008@dingtalk.com</a></dd>
-                        <dd><a href="javascript:void(0)">武汉市硚口区南国大武汉H座18楼</a></dd>
+                        <dt><a href="javascript:;">联系我们</a></dt>
+                        <dd><a href="javascript:;">400-150-9896</a></dd>
+                        <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
+                        <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
                     </dl>
 
                 </div>
                 <div class='concat_icon clearfix'>
-                    <div><img src="/static/spirit/images/tie.png" alt=""></div>
-                    <div><img src="/static/spirit/images/wx.png" alt=""></div>
                     <div><img src="/static/spirit/images/bo.png" alt=""></div>
+                    <div><img src="/static/spirit/images/wx.png" alt=""></div>
+                    <div><img src="/static/spirit/images/tie.png" alt=""></div>
                 </div>
+                <div class="fotter-line"></div>
+                <div>© Copyright 2019 惠企动（湖北）科技有限公司 . All Rights Reserved</div>
             </div>
         </div>
 
@@ -446,14 +452,15 @@
                 </div>
                 <div class="form-content">
                     <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
-                    <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式"></div>
+                    <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                    </div>
                     <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
                     <input type='hidden' id='sources' value='惠灵工'>
                     <input type='hidden' id='identifications' value='灵活用工'>
                     <div class="form-btn" onclick="form_btn()">获取方案</div>
                 </div>
                 <!-- 提交成果后弹窗 -->
-                <div class="mask-box">
+                <div class="mask-box2">
                     <span></span>
                     <p class="mask-box-title">提交成功</p>
                     <p class="mask-box-content">我们会在一个工作日内联系您</p>
@@ -467,13 +474,13 @@
 
 </body>
 <script>
-    $('.nav ul li').on('click', function() {
+    $('.nav ul li').on('click', function () {
         $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
     })
-    $('.nav ul li').on('mouseenter', function() {
+    $('.nav ul li').on('mouseenter', function () {
         $(this).addClass('nav-active').siblings().removeClass('nav-active')
     })
-    $('.nav-box').on('mouseleave', function() {
+    $('.nav-box').on('mouseleave', function () {
         $('.nav ul li').removeClass('nav-active')
         if ($('.chosenPage').length < 1) $('.nav ul li').eq(0).addClass('chosenPage')
 
