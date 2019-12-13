@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576227437;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576227655;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,7 +91,16 @@
         </div>
 
         <!-- 头部 -->
-        <div class='header-box'></div>
+        <div class='header-box'>
+            <div class="w header">
+                <div>客户案例</div>
+                <div></div>
+                <p>
+                    不同行业的业务特点和管理要求差别很大，但无论是哪个行业的企业，都会有三个基本诉求：<br>
+                    经营合法合规、 降低企业成本、 规避意外风险!
+                </p>
+            </div>
+        </div>
 
         <!-- 面包屑 -->
         <div class="crumbs">
