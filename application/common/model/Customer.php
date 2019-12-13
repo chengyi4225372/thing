@@ -15,7 +15,7 @@ class Customer extends Model
     //静态对象
     protected static $readInstance = null;
     //表名
-    protected $table='h_hys_customer';
+    protected $table='h_hlg_carousel';
 
     /**
      * @DESC：单例

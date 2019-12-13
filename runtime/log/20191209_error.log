@@ -984,6 +984,16 @@ Stack trace:
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T11:07:01+08:00 ] 172.26.2.252 GET /static/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T10:55:25+08:00 ] 127.0.0.1 GET /Uploads/imgs/20191024/49679a83a7bdaedce3088ac3f3d96f46.png
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -992,10 +1002,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 38d9041b67ab3bdd1f5253bbf62729696d25e6ce
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T11:07:19+08:00 ] 172.26.2.252 GET /static/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T10:55:26+08:00 ] 127.0.0.1 GET /uploads/imgs/works/chengxuyuan.png
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -1004,10 +1025,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 38d9041b67ab3bdd1f5253bbf62729696d25e6ce
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T11:07:25+08:00 ] 172.26.2.252 GET /static/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T11:22:27+08:00 ] 127.0.0.1 GET /uploads/imgs/works/chengxuyuan.png
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -1016,10 +1048,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 38d9041b67ab3bdd1f5253bbf62729696d25e6ce
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T11:09:03+08:00 ] 172.26.2.252 GET /static/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T11:22:28+08:00 ] 127.0.0.1 GET /Uploads/imgs/20191024/49679a83a7bdaedce3088ac3f3d96f46.png
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -1028,10 +1071,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 38d9041b67ab3bdd1f5253bbf62729696d25e6ce
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T11:09:04+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T13:40:39+08:00 ] 127.0.0.1 GET /uploads/imgs/successcase/d1ef7aeff0cf0135641561666236c4fa1fd5d0b71e63b-XDswb5.jpg
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -1040,10 +1094,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 38d9041b67ab3bdd1f5253bbf62729696d25e6ce
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T11:09:05+08:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T13:40:40+08:00 ] 127.0.0.1 GET /uploads/imgs/successcase/dcf633ae25a7f11daa9492473376f8ca4ea3d02830c46-zihX03.jpg
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -1052,10 +1117,21 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 38d9041b67ab3bdd1f5253bbf62729696d25e6ce
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T11:09:05+08:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:/opt/web/thing/public/../application/404.html in /opt/web/thing/thinkphp/library/think/view/driver/Think.php:82
+Stack trace:
+#0 /opt/web/thing/thinkphp/library/think/View.php(163): think\view\driver\Think->fetch('/opt/web/thing/...', Array, Array)
+#1 /opt/web/thing/thinkphp/library/think/response/View.php(36): think\View->fetch('/opt/web/thing/...', Array, Array)
+#2 /opt/web/thing/thinkphp/library/think/Response.php(309): think\response\View->output('/opt/web/thing/...')
+#3 /opt/web/thing/thinkphp/library/think/Response.php(94): think\Response->getContent()
+#4 /opt/web/thing/thinkphp/library/think/Error.php(52): think\Response->send()
+=======
 [ 2019-12-09T13:40:40+08:00 ] 127.0.0.1 GET /uploads/imgs/successcase/96812456cbd6807c227917eeb85e8e550e26061a543fd-X1u63N.jpg
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -1064,10 +1140,66 @@ Stack trace:
 #2 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(309): think\response\View->output('C:\\phpEnv\\www\\t...')
 #3 C:\phpEnv\www\thing\thinkphp\library\think\Response.php(94): think\Response->getContent()
 #4 C:\phpEnv\www\thing\thinkphp\library\think\Error.php(52): think\Response->send()
+>>>>>>> 38d9041b67ab3bdd1f5253bbf62729696d25e6ce
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
 ---------------------------------------------------------------
+<<<<<<< HEAD
+[ 2019-12-09T11:11:20+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [0]模板文件不存在:/opt/web/thing/public/../application/v1/view/customer/customers/index.html[/opt/web/thing/thinkphp/library/think/view/driver/Think.php:82]
+---------------------------------------------------------------
+[ 2019-12-09T11:11:43+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [0]模板文件不存在:/opt/web/thing/public/../application/v1/view/customer/customers/index.html[/opt/web/thing/thinkphp/library/think/view/driver/Think.php:82]
+---------------------------------------------------------------
+[ 2019-12-09T11:11:52+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [0]模板文件不存在:/opt/web/thing/public/../application/v1/view/customer/customers/index.html[/opt/web/thing/thinkphp/library/think/view/driver/Think.php:82]
+---------------------------------------------------------------
+[ 2019-12-09T11:12:59+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [8]未定义变量: data[/opt/web/thing/runtime/temp/97191d318d7077241c8bb79d1902715a.php:292]
+---------------------------------------------------------------
+[ 2019-12-09T11:29:59+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sort' in 'order clause'[/opt/web/thing/thinkphp/library/think/db/Connection.php:390]
+---------------------------------------------------------------
+[ 2019-12-09T13:36:14+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [8]未定义变量: list[/opt/web/thing/runtime/temp/97191d318d7077241c8bb79d1902715a.php:309]
+---------------------------------------------------------------
+[ 2019-12-09T13:36:36+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [8]未定义变量: list[/opt/web/thing/runtime/temp/97191d318d7077241c8bb79d1902715a.php:344]
+---------------------------------------------------------------
+[ 2019-12-09T13:37:03+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [0]致命错误: Call to a member function render() on array[/opt/web/thing/runtime/temp/97191d318d7077241c8bb79d1902715a.php:344]
+---------------------------------------------------------------
+[ 2019-12-09T13:40:56+08:00 ] 172.26.2.252 GET /v1/customer/customers/index.html
+[ error ] [0]致命错误: Call to undefined method think\Collection::render()[/opt/web/thing/runtime/temp/97191d318d7077241c8bb79d1902715a.php:344]
+---------------------------------------------------------------
+[ 2019-12-09T14:44:37+08:00 ] 172.26.2.252 POST /v1/customer/customers/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/v1/service/Customerservice.php:131]
+---------------------------------------------------------------
+[ 2019-12-09T14:49:34+08:00 ] 172.26.2.252 POST /v1/customer/customers/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/v1/service/Customerservice.php:131]
+---------------------------------------------------------------
+[ 2019-12-09T14:50:48+08:00 ] 172.26.2.252 POST /v1/customer/customers/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/v1/service/Customerservice.php:131]
+---------------------------------------------------------------
+[ 2019-12-09T14:50:51+08:00 ] 172.26.2.252 POST /v1/customer/customers/uploadimg.html
+[ error ] [8]未定义数组索引: file[/opt/web/thing/application/v1/controller/customer/Customers.php:88]
+---------------------------------------------------------------
+[ 2019-12-09T14:56:16+08:00 ] 172.26.2.252 POST /v1/customer/customers/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/v1/service/Customerservice.php:131]
+---------------------------------------------------------------
+[ 2019-12-09T15:01:13+08:00 ] 172.26.2.252 POST /v1/customer/customers/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/v1/service/Customerservice.php:150]
+---------------------------------------------------------------
+[ 2019-12-09T15:01:49+08:00 ] 172.26.2.252 POST /v1/customer/customers/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/v1/service/Customerservice.php:150]
+---------------------------------------------------------------
+[ 2019-12-09T15:57:35+08:00 ] 172.26.2.252 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[/opt/web/thing/application/v1/service/Systems.php:48]
+---------------------------------------------------------------
+[ 2019-12-09T16:04:11+08:00 ] 172.26.2.252 GET /v1/customer/customers/edit.html?id=2
+[ error ] [8]未定义变量: status[/opt/web/thing/runtime/temp/b9bf041b5e5e838042e42e463dfc16a3.php:98]
+=======
 [ 2019-12-09T13:40:40+08:00 ] 127.0.0.1 GET /uploads/imgs/successcase/5c099bc39c0252d65a9acc90d996c0a12aec09ff57ed1-ScCJoZ.jpg
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
 Stack trace:
@@ -2087,6 +2219,7 @@ Stack trace:
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
+<<<<<<< HEAD
 ---------------------------------------------------------------
 [ 2019-12-09T14:48:33+08:00 ] 127.0.0.1 GET /uploads/imgs/works/chengxuyuan.png
 [ error ] [1]Uncaught think\exception\TemplateNotFoundException: template not exists:C:\phpEnv\www\thing\public/../application/404.html in C:\phpEnv\www\thing\thinkphp\library\think\view\driver\Think.php:82
@@ -2183,3 +2316,9 @@ Stack trace:
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
+=======
+>>>>>>> 38d9041b67ab3bdd1f5253bbf62729696d25e6ce
+---------------------------------------------------------------
+[ 2019-12-09T17:24:25+08:00 ] 172.26.2.252 POST /v1/customer/customers/changesort.html
+[ error ] [8]未定义数组索引: sort[/opt/web/thing/application/v1/service/Customerservice.php:79]
+>>>>>>> 13cc51510daee63dfdb8ea7db90bd0001c2454d1

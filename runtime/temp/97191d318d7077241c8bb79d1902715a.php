@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:69:"/opt/web/thing/public/../application/v1/view/work/works/solution.html";i:1575463857;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575465336;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575860939;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/thing/public/../application/v1/view/customer/customers/index.html";i:1575883761;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575465336;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575860939;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1575463857;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -242,16 +242,38 @@
     <div class="row">
         <div class="col-md-12">
             <form class="form-inline"  id="form">
-
                 <div class="panel panel-default panel-btn">
                     <div class="panel-heading">
-
                         <div class="form-group">
-                            <input type="text"  class="form-control" id="keyword"  value="<?php echo \think\Request::instance()->get('title'); ?>" placeholder="请输入标题或关键字搜索....">
+                            <div class="col-sm-4">
+                                <select class="selectpicker show-tick" title="" id="searchField" name="searchField"
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['searchField'] == 1): ?>selected='selected'<?php endif; ?>>标题</option>
+                                    <option value="2" <?php if($params['searchField'] == 2): ?>selected='selected'<?php endif; ?>>内容</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" style="width:248px;" type="text" value="<?php echo $params['searchValue']; ?>" name="searchValue" id="searchValue" placeholder="多个关键字用空格或逗号隔开">
+                            </div>
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-info btn_search"  type="button"  data-url="<?php echo url('/v1/work/works/successcase'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <div class="col-sm-5">
+                                <label for="status" class="control-label">状态：</label>
+                            </div>
+                            <div class="col-sm-7">
+                                <select class="selectpicker show-tick" title="" id="status" name="status "
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['status'] == 1): ?>selected='selected'<?php endif; ?>>已启用</option>
+                                    <option value="2" <?php if($params['status'] == 2): ?>selected='selected'<?php endif; ?>>已禁用</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btn_search" type="button"  data-url="<?php echo url('/v1/info/infos/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
                 </div>
@@ -267,57 +289,55 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addwork" data-url="<?php echo url('/v1/work/works/addsolution'); ?>">
-                <i class="fa fa-plus-circle">添加方案</i></button>
+                    id="infosadd" data-url="<?php echo url('/v1/customer/customers/add'); ?>">
+                <i class="fa fa-plus-circle">添加轮播图</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
-                </th>
-                <th class="text-center">标题</th>
-                <th class="text-center">内容</th>
-                <th class="text-center">图片</th>
-                <th class="text-center">添加时间</th>
-                <th class="text-center">添加人</th>
+                <th class="text-center" style="width:5%;">排序</th>
+                <th class="text-center" style="width:10%;">标题</th>
+                <th class="text-center">展示图</th>
+                <th class="text-center" style="width:21%">内容</th>
+                <th class="text-center" style="width:21%">创建时间</th>
+                <th class="text-center">创建人</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
 
-                <?php if(is_array($data['list']['data']) || $data['list']['data'] instanceof \think\Collection || $data['list']['data'] instanceof \think\Paginator): $i = 0; $__LIST__ = $data['list']['data'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
+                <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td class="td-align td-padding">
-                        <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
-                    </td>
-                    <td class="text-center"><?php echo isset($list['title']) ? $list['title'] : ''; ?></td>
                     <td class="text-center">
-                        <textarea cols="40" rows="5"><?php echo isset($list['content']) ? $list['content'] : ''; ?></textarea>
+                        <input class="form-control form-control-sm" type="number" value="<?php echo $vo['sort']; ?>"  onblur="admin_module.change_sort(this)" data-url="<?php echo url('/v1/customer/customers/changesort'); ?>" data="<?php echo $vo['id']; ?>">
                     </td>
+                    <td class="text-center"><?php echo $vo['title']; ?></td>
                     <td class="text-center">
-                        <img src="<?php echo $list['pic']; ?>" style="width:50px;height:50px;">
-                    </td>
-                    <td class="text-center"><?php echo date('Y-m-d H:i:s',$list['add_time']); ?></td>
-                    <td class="text-center"><?php echo $list['add_user']; ?></td>
-                    <td class="text-center">
-                        <span class="btn <?php if($list['status'] == 1): ?> btn-success <?php else: ?> btn-danger <?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
+                        <img src="<?php echo $vo['pic']; ?>" style="width:50px;height:50px;">
                     </td>
                     <td class="text-center">
-                        <input type="hidden" value="<?php echo $list['id']; ?>" id="mid">
-                        <a   class="btn btn-info editsolution" data-url="<?php echo url('/v1/work/works/editsolution',['id' => $list['id']]); ?>">编辑</a>
-                        <a  onclick="delSolution(this)" data="<?php echo $list['id']; ?>" data-url="<?php echo url('/v1/work/works/delsolution'); ?>" class="btn btn-danger">删除</a>
+                        <textarea rows="6" cols="30"><?php echo $vo['content']; ?></textarea>
                     </td>
+                    <td class="text-center"><?php echo date('Y-m-d H:i:s',$vo['add_time']); ?></td>
+                    <td class="text-center"><?php echo $vo['add_user']; ?></td>
+
+                    <td class="text-center">
+                        <?php if($vo['status'] == 1): ?>
+                        <span class="btn btn-success" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/customer/customers/changestatus'); ?>" data-id="<?php echo $vo['id']; ?>" data="2"><?php echo $status[$vo['status']]; ?></span>
+                        <?php else: ?>
+                        <span class="btn btn-danger" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/customer/customers/changestatus'); ?>" data-id="<?php echo $vo['id']; ?>" data="1"><?php echo $status[$vo['status']]; ?></span>
+                        <?php endif; ?>
+                    </td>
+
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="<?php echo url('/v1/customer/customers/edit',['id'=>$vo['id']]); ?>">编辑</a>
+                    </td>
+
                 </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-
-
-
+                <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
                 </tbody>
             </table>
-            <div class="pages">
-
-            </div>
+            <div class="pages"><?php echo $data->render();; ?></div>
         </div>
     </div>
 

@@ -869,6 +869,153 @@ var admin_module = (function (){
         );
     };
 
+    //添加惠灵工的轮播图
+    var add_hlg_customer = function add_hlg_customer(objthis){
+        var data = {};
+        var urls = $(objthis).attr('data-url');
+        var title = $('#title').val();
+        var contents = $('#contents').val();
+        var Images = $('#Images').val();
+        var url = $('#url').val();
+        var status = $('#status').val();
+        var sort = $('#sort').val();
+        if(title == '' || title == undefined){
+            $('#title').focus();
+            layer.msg('请输入标题');return;
+        }
+        if(contents == '' || contents == undefined){
+            $('#contents').focus();
+            layer.msg('请输入内容');return;
+        }
+        if(Images == '' || Images == undefined){
+            layer.msg('请选择要上传的图片');return;
+        }
+        if(url == '' || url == undefined){
+            layer.msg('输入要上传的url地址');return
+        }
+        data.title = title;
+        data.content = contents;
+        data.pic = Images;
+        data.url = url;
+        data.status = status;
+        data.sort = sort;
+        $.post(
+            urls,
+            data,
+            function (ret){
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }
+            }
+        );
+    };
+
+    //编辑惠灵工的轮播图
+    var edit_hlg_customer = function edit_hlg_customer(objthis){
+        var data = {};
+        var urls = $(objthis).attr('data-url');
+        var id = $(objthis).attr('data');
+        var title = $('#title').val();
+        var contents = $('#contents').val();
+        var Images = $('#Images').val();
+        var url = $('#url').val();
+        var status = $('#status').val();
+        var sort = $('#sort').val();
+        if(id == '' || id == undefined){
+            layer.msg('请确定');return;
+        }
+        if(title == '' || title == undefined){
+            $('#title').focus();
+            layer.msg('请输入标题');return;
+        }
+        if(contents == '' || contents == undefined){
+            $('#contents').focus();
+            layer.msg('请输入内容');return;
+        }
+        if(Images == '' || Images == undefined){
+            layer.msg('请选择要上传的图片');return;
+        }
+        if(url == '' || url == undefined){
+            layer.msg('输入要上传的url地址');return
+        }
+        data.id = id;
+        data.title = title;
+        data.content = contents;
+        data.pic = Images;
+        data.url = url;
+        data.status = status;
+        data.sort = sort;
+        $.post(
+            urls,
+            data,
+            function (ret){
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.layer.close();
+                        parent.location.reload();
+                    });
+                }
+            }
+        );
+    };
+
+    //排序
+    var change_sort = function change_sort(objthis){
+        var url = $(objthis).attr('data-url');
+        var id = $(objthis).attr('data');
+        var sort = $(objthis).val();
+        $.post(
+            url,
+            {id:id,sort:sort},
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.location.reload();
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
+
+    //排序
+    var status_sort = function status_sort(objthis){
+        var status = $(objthis).attr('data');
+        var url = $(objthis).attr('data-url');
+        var id = $(objthis).attr('data-id');
+        $.post(
+            url,
+            {status:status,id:id},
+            function (ret){
+                if(ret.status == 200){
+                    if(status == 2){
+                        $(objthis).removeClass('btn-success');
+                        $(objthis).addClass('btn-danger');
+                        $(objthis).attr('data',1);
+                        $(objthis).html('已禁用');
+                    }
+                    if(status == 1){
+                        $(objthis).removeClass('btn-danger');
+                        $(objthis).addClass('btn-success');
+                        $(objthis).attr('data',2);
+                        $(objthis).html('已启用');
+                    }
+                }
+            },'json'
+        );
+    };
+
     return {
         changepas: changepas,
         change_password: change_password,
@@ -895,6 +1042,10 @@ var admin_module = (function (){
         add_case:add_case,
         edit_case:edit_case,
         case_edit:case_edit,
+        add_hlg_customer:add_hlg_customer,
+        edit_hlg_customer:edit_hlg_customer,
+        change_sort:change_sort,
+        status_sort:status_sort,
     }
 
 })();
