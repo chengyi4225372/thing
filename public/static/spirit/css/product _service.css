@@ -129,19 +129,35 @@ input:-webkit-autofill {
     top: 0;
     left: 0;
     width: 100%;
-    height: 6.25rem;
-    background: #181818;
+    height: 3.75rem;
+    /* background: #181818; */
+    background: #fff;
+    z-index: 999;
+}
+
+.container {
+    min-width: 75rem;
+}
+
+.nav-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.75rem;
+    /* background: #181818; */
+    background: #FFFFFF;
     z-index: 999;
 }
 
 .nav-container {
-    padding-top: .75rem;
+    padding-top: .625rem;
 }
 
 .nav-container .logo {
     float: left;
-    width: 7.75rem;
-    height: 4.75rem;
+    width: 7.8125rem;
+    height: 2.875rem;
     display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
@@ -169,7 +185,7 @@ input:-webkit-autofill {
 
 .nav-container .nav ul {
     list-style: none;
-    margin: 1.875rem 0 0 0;
+    margin: .9375rem 0 0 0;
     padding: 0;
 }
 
@@ -186,10 +202,11 @@ input:-webkit-autofill {
     display: block;
     width: 100%;
     /*height: 100%;*/
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-family: "PingFang-SC-Medium";
     font-weight: 500;
-    color: rgba(255, 255, 255, 1);
+    /* color: rgba(255, 255, 255, 1); */
+    color: #03053A;
 }
 
 .nav-active {
@@ -198,7 +215,7 @@ input:-webkit-autofill {
 
 .nav-active::after {
     position: absolute;
-    bottom: -2.1875rem;
+    bottom: -0.9375rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -207,8 +224,8 @@ input:-webkit-autofill {
     transform: translateX(-50%);
     content: '';
     width: 100% !important;
-    height: 2px;
-    background-color: #fff;
+    height: 4px;
+    background-color: #2F80ED;
 }
 
 .nav-container .loging {
@@ -277,7 +294,7 @@ input:-webkit-autofill {
 /* 头部部分 */
 
 .header-box {
-    margin-top: 6.25rem;
+    margin-top: 3.75rem;
     height: 37.5rem;
     width: 100%;
 }

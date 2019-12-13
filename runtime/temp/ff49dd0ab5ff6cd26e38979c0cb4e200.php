@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1575857039;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576138428;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +32,7 @@
                     <!-- logo图 -->
                     <div class="logo">
                         <h1>
-                            <img src="/static/spirit/images/logo2xx.png">
+                            <img src="/static/spirit/images/logo2xxx.png">
                         </h1>
                     </div>
                     <!-- nav部分 -->

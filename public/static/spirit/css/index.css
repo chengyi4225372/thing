@@ -131,19 +131,20 @@ input:-webkit-autofill {
     top: 0;
     left: 0;
     width: 100%;
-    height: 6.25rem;
-    background: #181818;
+    height: 3.75rem;
+    /* background: #181818; */
+    background: #FFFFFF;
     z-index: 999;
 }
 
 .nav-container {
-    padding-top: .75rem;
+    padding-top: .625rem;
 }
 
 .nav-container .logo {
     float: left;
-    width: 7.75rem;
-    height: 4.75rem;
+    width: 7.8125rem;
+    height: 2.875rem;
     display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
@@ -161,6 +162,7 @@ input:-webkit-autofill {
 }
 
 .nav-container h1 img {
+    display: block;
     width: 100%;
 }
 
@@ -171,7 +173,7 @@ input:-webkit-autofill {
 
 .nav-container .nav ul {
     list-style: none;
-    margin: 1.875rem 0 0 0;
+    margin: .9375rem 0 0 0;
     padding: 0;
 }
 
@@ -188,10 +190,11 @@ input:-webkit-autofill {
     display: block;
     width: 100%;
     /*height: 100%;*/
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-family: "PingFang-SC-Medium";
     font-weight: 500;
-    color: rgba(255, 255, 255, 1);
+    /* color: rgba(255, 255, 255, 1); */
+    color: #03053A;
 }
 
 .nav-active {
@@ -200,7 +203,7 @@ input:-webkit-autofill {
 
 .nav-active::after {
     position: absolute;
-    bottom: -2.1875rem;
+    bottom: -0.9375rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -209,8 +212,8 @@ input:-webkit-autofill {
     transform: translateX(-50%);
     content: '';
     width: 100% !important;
-    height: 2px;
-    background-color: #fff;
+    height: 4px;
+    background-color: #2F80ED;
 }
 
 .nav-container .loging {
@@ -275,18 +278,63 @@ input:-webkit-autofill {
     color: #fff;
 }
 
+/* 轮播图部分 */
+.carousel {
+    margin-top: 3.75rem;
+    height: 40rem !important;
+}
+
+.carousel>.carousel-img-box {
+    width: 360rem;
+    height: 100%;
+}
+
+.carousel>.carousel-img-box>div {
+    float: left;
+    width: 120rem;
+}
+
+.carousel>.carousel-img-box>div img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .focus-icon {
+    position: absolute;
+    left: 50%;
+    bottom: -4.0625rem;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.carousel .focus-icon span {
+    display: inline-block;
+    width: 3rem;
+    height: 0.25rem;
+    background: rgba(255, 255, 255, .2);
+}
+
+.carousel .focus-icon span:nth-child(4) {
+    background: linear-gradient(-90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
+}
 
 /* 头部部分 */
 
 .header-box {
     height: 37.5rem;
-    background: url('../images/beijing12x.png') no-repeat 100% 100%;
-    margin-top: 6.25rem;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    margin-top: 3.75rem;
 }
 
 .header-box .header-container {
-    position: relative;
-    height: 100%;
+
     padding: .625rem;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -295,45 +343,6 @@ input:-webkit-autofill {
     box-sizing: border-box;
 }
 
-.header-container .header-text-left {
-    margin-top: -0.375rem;
-    margin-left: 1.3125rem;
-}
-
-.header-text-left .header-left-title {
-    font-size: 3rem;
-    font-family: "PingFang SC";
-    font-weight: 800;
-    color: rgba(255, 255, 255, 1);
-    letter-spacing: 3px;
-    margin-top: 9.9375rem;
-    margin-bottom: 2.625rem;
-}
-
-.header-text-left .linestyle {
-    width: 7.5rem;
-    height: 0.25rem;
-    background: linear-gradient(-90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
-    margin-bottom: 2.5rem;
-}
-
-.header-text-left .header-left-title2 {
-    font-size: 1.875rem;
-    font-family: "PingFang SC", "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    margin-bottom: 1.75rem;
-}
-
-.header-text-left .header-left-title3 {
-    width: 19.4375rem;
-    height: 3.0625rem;
-    font-size: 1.125rem;
-    font-family: "PingFang SC", "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    line-height: 1.6875rem;
-}
 
 .header-container .header-form-right {
     position: relative;
@@ -424,27 +433,7 @@ input::-ms-input-placeholder {
     cursor: pointer;
 }
 
-.focus-icon {
-    position: absolute;
-    left: 50%;
-    bottom: 2.9375rem;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
 
-span {
-    display: inline-block;
-    width: 3rem;
-    height: 0.25rem;
-    background: rgba(255, 255, 255, .2);
-}
-
-span:nth-child(4) {
-    background: linear-gradient(-90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
-}
 
 
 /* 服务分类 */
@@ -474,8 +463,14 @@ span:nth-child(4) {
     /* background-color: pink; */
 }
 
-.serves-box .serves .serve-item:nth-child(2) {
+.serves-box .serves .serve-item:hover {
     background-color: #DADEFE;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .serve-item .serve-item-img {
@@ -1384,7 +1379,8 @@ span:nth-child(4) {
 
 .salary-box {
     height: 15rem;
-    background: url('../images/07.jpg') no-repeat;
+    background: url('../images/07.png') no-repeat;
+    background-size: cover;
 }
 
 .salary-box .salary {
