@@ -418,6 +418,34 @@ a {
     margin-top: 3.75rem;
 }
 
+.header-box .header {
+    padding-top: 7.8rem;
+    text-align: left;
+
+}
+
+.header-box .header div:nth-of-type(1) {
+    font-size: 3rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 2.625rem;
+}
+
+.header-box .header div:nth-of-type(2) {
+    width: 7.5rem;
+    height: 4px;
+    background: linear-gradient(-90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
+    margin-bottom: 2.5rem;
+}
+.header-box .header p:nth-of-type(1) {
+    font-size:1.125rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    line-height: 1.8;
+}
+
 /* 面包屑 */
 
 .crumbs {
