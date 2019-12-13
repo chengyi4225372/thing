@@ -248,5 +248,10 @@ function is_login(objthis) {
     }
 }
 
+//立即咨询
+function showSearch(){
+    $('#popbox').css('display','block');
+}
+
 
 
