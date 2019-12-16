@@ -7,7 +7,7 @@ window.onload = function () {
     // 返回顶部
     window.onscroll = function () {
         var top = document.body.scrollTop || document.documentElement.scrollTop;
-        console.log(top);
+        // console.log(top);
 
         if (top >= 400) {
 
@@ -63,9 +63,10 @@ window.onload = function () {
     // 折叠栏
     let statusBtn = document.querySelectorAll('.status-industry-wm-item-title .status-btn')
     let itemContents = document.querySelectorAll('.status-industry-wm-item .status-industry-wm-item-content')
+    let wmImgs = document.querySelectorAll('.status-industry-wm-imgs img')
     for (let i = 0; i < statusBtn.length; i++) {
         statusBtn[i].onclick = function (e) {
-            console.log(e.target.id)
+            // console.log(e.target.id)
             for (let k = 0; k < statusBtn.length; k++) {
                 statusBtn[k].style.background = "url('../../static/spirit/images/zhankai.png') no-repeat"
             }
@@ -74,6 +75,10 @@ window.onload = function () {
                 itemContents[j].classList.remove('wm-item-show')
             }
             itemContents[Number(e.target.id)].classList.add('wm-item-show')
+            for (let l = 0; l < wmImgs.length; l++) {
+                wmImgs[l].classList.remove('wm-img-active')
+            }
+            wmImgs[Number(e.target.id)].classList.add('wm-img-active')
         }
 
 

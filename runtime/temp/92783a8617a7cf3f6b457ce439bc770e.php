@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576227655;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576456591;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +41,7 @@
                         <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
                         <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
                         <li class="nav-active"><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
-                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
+                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
                         <!--<li>-->
                         <!--<?php if(empty($userinfo['userType'])): ?>-->
                         <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
@@ -129,7 +129,7 @@
                     </li>
                     <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?> -->
                     <li>
-                        <a href="">
+                        <a href="<?php echo url('/home/index/casedetail'); ?>">
                             <div class="item-img">
                                 <img src="/static/spirit/images/clientcaseitem1.png" alt="">
                             </div>
