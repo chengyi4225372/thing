@@ -5,6 +5,7 @@ use app\common\controller\BaseController;
 use app\common\model\Work;
 use think\Controller;
 use app\v1\service\Workservice;
+use app\v1\service\Exampleservice;
 use think\Cookie;
 class Index extends BaseController
 {
@@ -108,7 +109,13 @@ class Index extends BaseController
     public function clientcase()
     {
         $this->assign('title','客户案例');
+        /*
         $data = Workservice::instance()->getclientcase();
+        $this->assign('list',$data);
+        */
+        $title = input('get.title','','trim');
+        $title  = $title?$title:'';
+        $data = Exampleservice::instance()->getalllist($title);
         $this->assign('list',$data);
         return $this->fetch();
     }
@@ -122,20 +129,21 @@ class Index extends BaseController
     public function casedetail()
     {
         $this->assign('title','客户案例详情');
-        $id = input('id','','int');
- 
+        $id = input('get.id','','int');
+        $data = Exampleservice::instance()->getoneinfo($id);
         /*  todo
         if(empty($id) || !isset($id)){
             $this->redirect(url('/home/optimal/index'));return;
         }
         */
-        $data = Workservice::instance()->getcasedetail(['id' => $id]);
+        //注释成功案例
+        ///$data = Workservice::instance()->getcasedetail(['id' => $id]);
         /* todo
         if($data == false){
             $this->redirect(url('/home/optimal/index'));return;
         }
         */
-//        echo '<pre>';print_r($data);exit;
+
   
         $this->assign('list',$data);
       

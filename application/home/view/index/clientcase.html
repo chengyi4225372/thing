@@ -97,37 +97,25 @@
         <div class="bg_tab">
             <div class="tabBox w">
                 <ul class="clearfix">
-                    <!-- {volist name="list" id="item" empty="暂时没有数据"}
+
+                    {volist name='list' id='vo' empty='暂时没有数据'}
                     <li>
-                        <div class="item-img"><img src="{$item['pic']}" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                {$item.title}
-                            </p>
-                            <p>
-                                {$item.describe}
-                            </p>
-                            <a href="{:url('/home/index/casedetail',['id' => $item['id']])}"> 查看案例>> </a>
-                        </div>
-                    </li>
-                    {/volist} -->
-                    <li>
-                        <a href="{:url('/home/index/casedetail')}">
+                        <a href="{:url('/home/index/casedetail',['id'=>$vo.id])}">
                             <div class="item-img">
-                                <img src="__SPI__/images/clientcaseitem1.png" alt="">
+                                <img src="{$vo.imgs?$vo.imgs:''}" alt="">
                             </div>
                             <div class="item-content">
-                                <p>
-                                    直销类企业如何避免税务合规风险，提升企业劳动力效能风险，提升企业劳动力效能？
-                                </p>
-                                <p>
-                                    随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始风险，提升企业劳动力效能元化用工方式。
-                                </p>
-
+                                <p>{$vo.title}</p>
+                                <p>{$vo.describes|mb_substr='0','38','utf-8'}</p>
                                 <div>查看详情</div>
                             </div>
                         </a>
                     </li>
+                    {/volist}
+
+
+
+                    <!--
                     <li>
                         <a href="">
                             <div class="item-img">
@@ -264,6 +252,7 @@
                             </div>
                         </a>
                     </li>
+                    -->
                 </ul>
             </div>
         </div>

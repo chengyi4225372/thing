@@ -1,11 +1,15 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:118:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\information_list.html";i:1575372375;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1574064055;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:118:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\information_list.html";i:1576459724;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1574064055;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title><?php echo $title; ?></title>
   <link rel="stylesheet" href="/static/spirit/css/base.css">
   <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
@@ -21,60 +25,13 @@
 
   <div class='container'>
 
-    <!-- 导航部分 -->
-    <!--<div class="nav-box">-->
-      <!--<div class="w nav-container clearfix">-->
-        <!--&lt;!&ndash; logo图 &ndash;&gt;-->
-        <!--<div class="logo">-->
-          <!--<h1>-->
-            <!--<a href="<?php echo url('/home/spirit/index'); ?>"><img src="/static/spirit/images/logo2x.png"></a>-->
-          <!--</h1>-->
-        <!--</div>-->
-        <!--&lt;!&ndash; nav部分 &ndash;&gt;-->
-        <!--<div class="nav">-->
-          <!--<ul class="clearfix">-->
-            <!--&lt;!&ndash;<li ><a href="<?php echo config('curl.website'); ?>">首页</a></li>&ndash;&gt;-->
-            <!--&lt;!&ndash;<li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>&ndash;&gt;-->
-            <!--&lt;!&ndash;<li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>&ndash;&gt;-->
-            <!--&lt;!&ndash;<li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>&ndash;&gt;-->
-            <!--&lt;!&ndash;<li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>&ndash;&gt;-->
-            <!--&lt;!&ndash;<li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>&ndash;&gt;-->
-            <!--&lt;!&ndash;<li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>&ndash;&gt;-->
-            <!--<li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>-->
-            <!--<li><a href="javascript:;">产品服务</a></li>-->
-            <!--<li><a href="javascript:;">行业解决方案</a></li>-->
-            <!--<li><a href="javascript:;">客户案例</a></li>-->
-            <!--<li><a href="javascript:;">行业新闻资讯</a></li>-->
-          <!--</ul>-->
-        <!--</div>-->
-        <!--&lt;!&ndash; 登陆注册 &ndash;&gt;-->
-        <!--<?php if(empty($userinfo['mobile'])): ?>
-<div class="loging clearfix">
-    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-        登陆
-    </a></div>
-    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
-</div>
-<?php else: ?>
-<div class="u_info">
-    <img src="/static/spirit/images/user_img.png"
-         style="width:30px;height:30px; vertical-align: middle;">
-    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
-    <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
-    </div>
-</div>
-<?php endif; ?>-->
-      <!--</div>-->
-
-    <!--</div>-->
-
+    <!-- nav部分 -->
     <div class="nav-box">
       <div class="w nav-container clearfix">
         <!-- logo图 -->
         <div class="logo">
           <h1>
-            <img src="/static/spirit/images/logo2xx.png">
+            <img src="/static/spirit/images/logo2xxx.png">
           </h1>
         </div>
         <!-- nav部分 -->
@@ -84,7 +41,7 @@
             <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
             <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
             <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
-            <li  class="nav-active"><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
+            <li class="nav-active"><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
             <!--<li>-->
             <!--<?php if(empty($userinfo['userType'])): ?>-->
             <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
@@ -133,34 +90,51 @@
 
     </div>
 
+    <!-- 头部部分 -->
+    <div class='header-box'>
+      <div class="w header">
+        <div>新闻资讯</div>
+        <div></div>
+        <p>
+          不同行业的业务特点和管理要求差别很大，但无论是哪个行业的企业，都会有三个基本诉求：<br>
+          经营合法合规、 降低企业成本、 规避意外风险!
+        </p>
+      </div>
+    </div>
+
 
 
     <!-- 面包屑导航 -->
     <div class="content-box">
       <div class="w content">
         <div class="bread-crumbs">
-          <span><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></span> > <span><a onclick="go_news(this)" data-url="<?php echo url('/home/spirit/informationList'); ?>">资讯</a></span> ><span></span>
+            <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
+            <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b> >
+            <b>
+              搜索结果共11条
+            </b>
         </div>
         <div class="information-list">
           <div class="tabs clearfix">
-            <ul class="clearfix fl">
+            <!-- <ul class="clearfix fl">
               <li class="li-active"><a href="<?php echo url('/home/index/informationList'); ?>">行业资讯</a></li>
-             <!--  <li>招标信息</li>-->
-            </ul>
+               <li>招标信息</li>
+            </ul> -->
             <div class="search-box fr">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
               <div onclick="search(this)" data-url="<?php echo url('/home/index/informationList'); ?>">搜索</div>
+              <span></span>
             </div>
           </div>
           <div class="tabs-items show">
             <ul id="content">
               <?php if(empty($list) || (($list instanceof \think\Collection || $list instanceof \think\Paginator ) && $list->isEmpty())): ?>
               <li>
-                  <div class="tabs-items-content">
-                    <div class="tabs-items-content-text figcaption">
-                      <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
-                    </div>
+                <div class="tabs-items-content">
+                  <div class="tabs-items-content-text figcaption">
+                    <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
                   </div>
+                </div>
               </li>
               <?php else: if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
               <li>
@@ -185,7 +159,8 @@
             </ul>
             <input type="hidden" value="<?php echo \think\Request::instance()->get('keyword'); ?>" id="sid">
             <input type="hidden" value="1" id="page">
-            <div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val(),this)" data-href="<?php echo url('/home/index/detail'); ?>" data-url="<?php echo url('/home/index/getpageInfo'); ?>">查看更多</div>
+            <div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val(),this)"
+              data-href="<?php echo url('/home/index/detail'); ?>" data-url="<?php echo url('/home/index/getpageInfo'); ?>">查看更多</div>
           </div>
 
         </div>
@@ -193,49 +168,66 @@
     </div>
 
     <!-- 底部 -->
-    <div class="fotter-box">
-      <div class="w fotter">
-        <!-- <div class='partener_titile'>用智“慧”创造优“惠”</div> -->
-        <div class='partener_titile'></div>
-        <div class='parterne_info'>
-          深耕税筹行业多年，合作企业多达几千家。专业为个人和企业解决税务难题。为您提供一站式金融、税务和人力外包服务，以及专业的税筹划分析，最安全、高效、合理的节税措施。我们有最成熟的专家团队和各行业实操经验！作为国内领先的标准化税筹服务互联网平台，我们得到了上海、安徽、江西、湖北等各地政府的大力支持，为企业节税保驾护航！
-        </div>
-        <div class='parter_catefories'>
-          <dl>
-            <dt><a href="#">服务产品</a></dt>
-            <dd><a href="#">服务型税筹</a></dd>
-            <dd><a href="#">门户型税筹</a></dd>
-            <dd><a href="#">人力资源</a></dd>
-          </dl>
-          <dl>
-            <dt><a href="#">招商政策</a></dt>
-            <dd><a href="#">招商政策网</a></dd>
-          </dl>
-          <dl>
-            <dt><a href="#">合作</a></dt>
-            <dd><a href="#">代理合作</a></dd>
-          </dl>
-          <dl>
-            <dt><a href="#">公司信息</a></dt>
-            <dd><a href="#">瑟维斯有限公司</a></dd>
-            <dd><a href="#">惠创优产业联盟</a></dd>
-            <dd><a href="#">中兴瑞华有限公司</a></dd>
-          </dl>
-          <dl>
-            <dt><a href="#">联系我们</a></dt>
-            <dd><a href="#">400-150-9896</a></dd>
-            <dd><a href="#">hcylm008@dingtalk.com</a></dd>
-            <dd><a href="#">武汉市硚口区南国大武汉H座18楼</a></dd>
-          </dl>
+    <div class="bottomBox">
+        <div class="w bottom">
+            <div class="aboutUs">
+                <span>关于我们</span>
+                <p>
+                    惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！
+                </p>
+            </div>
+            <div class="w navBottom">
+                <div class="navList">
+                    <dl>
+                        <dt>惠企云旗下产品</dt>
+                        <dd><a href="javascript:;">惠灵工</a></dd>
+                        <dd><a href="javascript:;">惠优税</a></dd>
+                        <dd><a href="javascript:;">惠多薪</a></dd>
+                        <dd><a href="javascript:;">惠创业</a></dd>
+                        <dd><a href="javascript:;">惠找事</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>资讯信息</dt>
+                        <dd><a href="javascript:;">行业资讯</a></dd>
+                        <dd><a href="javascript:;">招商政策</a></dd>
+                        <dd><a href="javascript:;">招标信息</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>招商合作</dt>
+                        <dd><a href="javascript:;">招募合伙人</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>联系我们</dt>
+                        <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
+                        <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
+                        <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
+                        <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
+                        <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
+                    </dl>
+                </div>
 
+                <ul class="qrCode">
+                    <li>
+                        <div class="pic">
+                            <img src="/static/spirit/images/weixincode.png" alt="">
+                        </div>
+                        <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                        <i>及时获一手财税信息</i>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="/static/spirit/images/weibocode.png" alt="">
+                        </div>
+                        <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                        <!-- <i>及时获一手财税信息</i> -->
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class='concat_icon clearfix'>
-          <div><img src="/static/spirit/images/tie.png" alt=""></div>
-          <div><img src="/static/spirit/images/wx.png" alt=""></div>
-          <div><img src="/static/spirit/images/bo.png" alt=""></div>
-        </div>
-        <div class="partener_fotter">© Copyright 2019 惠企动（湖北）科技有限公司 . All Rights Reserved</div>
-      </div>
+        <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights Reserved&nbsp;ICP证
+            :
+            鄂ICP备16008680号-3</div>
+
     </div>
 
     <!-- 返回顶部 -->
@@ -246,13 +238,13 @@
 
   </div>
   <script>
-    $('.nav ul li').on('click', function() {
+    $('.nav ul li').on('click', function () {
       $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
     })
-    $('.nav ul li').on('mouseenter', function() {
+    $('.nav ul li').on('mouseenter', function () {
       $(this).addClass('nav-active').siblings().removeClass('nav-active')
     })
-    $('.nav-box').on('mouseleave', function() {
+    $('.nav-box').on('mouseleave', function () {
       $('.nav ul li').removeClass('nav-active')
       if ($('.chosenPage').length < 1) $('.nav ul li').eq(4).addClass('chosenPage')
 

@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\index.html";i:1572228317;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1574064055;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1575372375;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1571899026;}*/ ?>
-<!DOCTYPE>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\index.html";i:1576227854;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1576463186;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1576463434;}*/ ?>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <!-- 加载样式及META信息 -->
@@ -188,7 +188,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase' ||  $paths == '/v1/work/works/solution'): ?> active <?php endif; ?> " >
+            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase' ||  $paths == '/v1/work/works/solution' || $paths == '/v1/customer/customers/index' || $paths =='/v1/cases/example/index'): ?> active <?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
@@ -220,6 +220,22 @@
                             </span>
                         </a>
                     </li>
+                    <li class="<?php if($paths == '/v1/customer/customers/index'): ?> active <?php endif; ?>">
+                        <a href="<?php echo url('/v1/customer/customers/index'); ?>">
+                            <i class="glyphicon glyphicon-book"></i> <span>首页轮播图</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="<?php if($paths == '/v1/cases/example/index'): ?> active <?php endif; ?>">
+                        <a href="<?php echo url('/v1/cases/example/index'); ?>">
+                            <i class="glyphicon glyphicon-th-list"></i> <span>客户案例</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </li>
 
@@ -239,7 +255,18 @@
                     <div class="panel-heading">
 
                         <div class="form-group">
-                            <input type="text"  class="form-control" id="keyword"  value="<?php echo \think\Request::instance()->get('title'); ?>" placeholder="请输入标题或关键字搜索....">
+                            <div class="col-sm-4">
+                                <select class="selectpicker show-tick" title="" id="searchField" name="searchField"
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['searchField'] == 1): ?>selected='selected'<?php endif; ?>>新闻标题</option>
+                                    <option value="2" <?php if($params['searchField'] == 2): ?>selected='selected'<?php endif; ?>>新闻关键字</option>
+                                    <option value="3" <?php if($params['searchField'] == 3): ?>selected='selected'<?php endif; ?>>新闻描述</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" style="width:248px;" type="text" value="<?php echo $params['searchValue']; ?>" name="searchValue" id="searchValue" placeholder="多个关键字用空格或逗号隔开">
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -360,6 +387,7 @@
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
 <script src="/static/assets/dist/js/works.js"></script>
+<script src="/static/assets/dist/js/example.js"></script>
 <script>
     admin_module.changepas();
 </script>

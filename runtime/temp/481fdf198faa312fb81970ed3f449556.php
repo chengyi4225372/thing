@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\login\index.html";i:1575372375;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1571899026;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:113:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\editcase.html";i:1575372375;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\dialog.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1576463434;}*/ ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="<?php echo $config['language']; ?>">
 <head>
     <!-- 加载样式及META信息 -->
     <meta charset="utf-8">
@@ -43,44 +43,68 @@
   <script src="/static/assets/dist/js/respond.min.js"></script>
 <![endif]-->
 
+    
+    <!-- 用来添加自定义的 样式 -->
+    
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
-    <div class="login-logo">
-        <a href="javascript:void(0);"><b>后台管理</b></a>
-    </div>
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
-        <form id="loginForm" action="<?php echo url('/v1/login/check'); ?>" login-action="<?php echo url('/index/login', ['url' => '']); ?>" method="post">
-            <div class="usernamelogin">
-                <div class="form-group has-feedback">
-                    <input type="text" class="form-control" id="pd-form-username" placeholder="<?php echo __('Username'); ?>" name="username" autocomplete="off" value=""
-                           data-rule="required;"/>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" class="form-control" id="pd-form-password" placeholder="<?php echo __('Password'); ?>" name="password" autocomplete="off" value=""
-                           data-rule="<?php echo __('Password'); ?>:required;password"/>
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
-            </div>
-            <div class="social-auth-links text-center">
-                <p>- TO -</p>
-                <button type="submit" id="submit" class="btn bg-purple btn-block btn-flat">Sign In</button>
-            </div>
-            <div class="alert alert-warning alert-dismissible margin-top10">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <i class="fa fa-fw fa-thumbs-o-down"></i><span> Please enter your name and password</span></div>
+<body class="hold-transition skin-purple-light sidebar-mini">
+<div class="container-fluid">
+    
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{right:39%;top:82%;margin-left:30%;}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
 
-        </form>
-    </div>
-    <div class="lockscreen-footer text-center">
-        Copyright &copy; 2019-2025 <b>慧企云</b><br>
-        All rights reserved
-    </div>
-    <!-- /.login-box-body -->
+                <div class="form-group">
+                    <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>案例展示图：</label>
+                    <div class="col-sm-9">
+                        <input type="file"  onchange="upload_files(this)" data-url="<?php echo url('/v1/work/works/uploadCaseImg'); ?>" style="display:none;" class="form-control form-control-sm" id="file">
+                        <img id="imgs" src="<?php echo $list['pic']; ?>" style="width:90px;height:80px;">
+                        <input type="hidden" id="Images" value="<?php echo $list['pic']; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>案例标题：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title" value="<?php echo $list['title']; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="describe" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>描述：</label>
+                    <div class="col-sm-9">
+                        <textarea id="describe" class="form-control form-control-sm" cols="40" rows="5"><?php echo $list['describe']; ?></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="content" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>内容：</label>
+                    <div class="col-sm-9">
+                        <script id="content" name="content" type="text/plain"><?php echo $list['content']; ?></script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="td-align dialog-footer">
+            <button class="btn btn-warning cancle"> <i class="fa fa-close"></i> 取消</button>
+            <button class="btn btn-primary" type="button" onclick="editcases(this)" data="<?php echo $list['id']; ?>" data-url="<?php echo url('/v1/work/works/editcase'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+        </div>
+    </form>
 </div>
+
+</div>
+
 <!-- 加载JS脚本 -->
 <!-- jQuery 3 -->
 <script src="/static/assets/components/jquery/dist/jquery.min.js"></script>
@@ -125,12 +149,14 @@
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
 <script src="/static/assets/dist/js/works.js"></script>
+<script src="/static/assets/dist/js/example.js"></script>
 <script>
     admin_module.changepas();
 </script>
 <!--<script src="/static/assets/dist/js/common.js"></script>-->
 
 
-<script src="/static/assets/dist/js/login.js"></script>
+
+
 </body>
 </html>
