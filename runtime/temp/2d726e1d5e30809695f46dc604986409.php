@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576223142;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576458465;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -134,8 +134,10 @@
 
               </div>
               <div class="status-industry-wm">
-                <div class="status-industry-wm-img">
-                  <img src="/static/spirit/images/waimai.png" alt="">
+                <div class="status-industry-wm-imgs">
+                  <img class="wm-img-active" src="/static/spirit/images/waimai1.png" alt="">
+                  <img src="/static/spirit/images/waimai2.png" alt="">
+                  <img src="/static/spirit/images/waimai3.png" alt="">
                 </div>
                 <!-- 折叠 -->
                 <div class="status-industry-wm-content" lay-accordion>
@@ -238,8 +240,12 @@
               </div>
             </div>
           </div>
-          <div class="layui-tab-item">内容2</div>
-          <div class="layui-tab-item">内容3</div>
+          <div class="layui-tab-item">
+            <div class="w">内容2</div>
+          </div>
+          <div class="layui-tab-item">
+            <div class="w">内容3</div>
+          </div>
 
 
           <div class="layui-tab-item">
@@ -272,7 +278,7 @@
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
                       <h3>成本增加</h3>
-                      <div><img src="/static/spirit/images/zhizaoyexianzhuan1.png" alt=""></div>
+                      <div><img src="/static/spirit/images/zhizaoyexianzhuan2.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
                       <h3>成本增加</h3>
@@ -379,7 +385,9 @@
             </div>
 
           </div>
-          <div class="layui-tab-item">内容5</div>
+          <div class="layui-tab-item">
+            <div class="w">内容5</div>
+          </div>
         </div>
       </div>
     </div>

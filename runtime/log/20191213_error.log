@@ -2542,3 +2542,6 @@ Stack trace:
 #5 [internal function]: think\Error::appException(Object(think\exception\HttpException))
 #6 {main}
   thrown
+---------------------------------------------------------------
+[ 2019-12-13T17:16:36+08:00 ] 127.0.0.1 GET /home/index/casedetail.html
+[ error ] [8]未定义变量: list[C:\phpEnv\www\thing\runtime\temp\858b74820c4b410e45709df2e6e0d47b.php:199]

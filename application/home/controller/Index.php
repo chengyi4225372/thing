@@ -123,15 +123,22 @@ class Index extends BaseController
     {
         $this->assign('title','客户案例详情');
         $id = input('id','','int');
+ 
+        /*  todo
         if(empty($id) || !isset($id)){
             $this->redirect(url('/home/optimal/index'));return;
         }
+        */
         $data = Workservice::instance()->getcasedetail(['id' => $id]);
+        /* todo
         if($data == false){
             $this->redirect(url('/home/optimal/index'));return;
         }
+        */
 //        echo '<pre>';print_r($data);exit;
+  
         $this->assign('list',$data);
+      
         return $this->fetch();
     }
 
