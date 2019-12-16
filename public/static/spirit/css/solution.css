@@ -898,7 +898,8 @@ a {
 
 .layui-tab-item .status-industry .status-industry-content {
     text-align: center;
-    width: 45.375rem;
+    /* width: 60.375rem; */
+    width: 100%;
     margin: 0 auto;
     line-height: 1.8;
     margin-bottom: 3.75rem;
@@ -1176,7 +1177,7 @@ a {
 .layui-tab-item .solution .solution-content,
 .layui-tab-item .solution .solution-footer {
     text-align: center;
-    width: 44.375rem;
+    /* width: 44.375rem; */
     margin: 0 auto;
     line-height: 1.8;
     /* margin-bottom: 3.75rem; */

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576465187;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576498960;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,6 +121,7 @@
           <li>咨询培训平台</li>
         </ul>
         <div class="layui-tab-content" style="height: 100px;">
+          <!-- 外卖行业 -->
           <div class="layui-tab-item layui-show">
             <!-- 行业现状 -->
             <div class="w status-industry">
@@ -131,10 +132,9 @@
                 国内外卖行业服务人群与服务场景外延渐成趋势，外卖竞争已上升到本地生活层面。<br>
                 外卖配送企业一般代理外卖平台的配送业务,外卖配送企业面临着配送员的劳动关系合规和财税合规问题等用工挑战。<br>
                 惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
-
               </div>
               <div class="status-industry-wm">
-                <div class="status-industry-wm-imgs">
+                <div class="status-industry-wm-imgs status-industry-wm-imgs-icon">
                   <img class="wm-img-active" src="/static/spirit/images/waimai1.png" alt="">
                   <img src="/static/spirit/images/waimai2.png" alt="">
                   <img src="/static/spirit/images/waimai3.png" alt="">
@@ -142,23 +142,28 @@
                 <!-- 折叠 -->
                 <div class="status-industry-wm-content" lay-accordion>
                   <div class="status-industry-wm-item">
-                    <h2 class="status-industry-wm-item-title"><p>模式不规范</p><span class="status-btn status-btnone" id="0"></span>
+                    <h2 class="status-industry-wm-item-title status-industry-wm-item-title-icon">
+                      <p>模式不规范</p><span class="status-btn status-btnone" id="0"></span>
                     </h2>
-                    <div class="status-industry-wm-item-content wm-item-show">
+                    <div class="status-industry-wm-item-content status-industry-wm-item-content-icon  wm-item-show">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
-                    <h2 class="status-industry-wm-item-title"><p>用工成本高</p><span class="status-btn" id="1"></span></h2>
-                    <div class="status-industry-wm-item-content">
+                    <h2 class="status-industry-wm-item-title status-industry-wm-item-title-icon">
+                      <p>用工成本高</p><span class="status-btn" id="1"></span>
+                    </h2>
+                    <div class="status-industry-wm-item-content status-industry-wm-item-content-icon">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
-                    <h2 class="status-industry-wm-item-title"><p>周期不固定</p><span class="status-btn" id="2"></span></h2>
-                    <div class="status-industry-wm-item-content">
+                    <h2 class="status-industry-wm-item-title status-industry-wm-item-title-icon">
+                      <p>周期不固定</p><span class="status-btn" id="2"></span>
+                    </h2>
+                    <div class="status-industry-wm-item-content status-industry-wm-item-content-icon">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
@@ -203,10 +208,10 @@
                       <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
                       <p>降低企业成本</p>
                       <div>
-                        个人（骑手）在线简单操作<br>
-                        流程科学高效<br>
-                        降低个税扣除<br>
-                        增加个人收入<br>
+                        <p>个人（骑手）在线简单操作</p>
+                        <p>流程科学高效</p>
+                        <p>降低个税扣除</p>
+                        <p>增加个人收入</p>
                       </div>
                     </div>
                   </li>
@@ -215,10 +220,10 @@
                       <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
                       <p>提高个人收入</p>
                       <div>
-                        个人（骑手）在线简单操作<br>
-                        流程科学高效<br>
-                        降低个税扣除<br>
-                        增加个人收入<br>
+                        <p>个人（骑手）在线简单操作</p>
+                        <p>流程科学高效</p>
+                        <p>降低个税扣除</p>
+                        <p>增加个人收入</p>
                       </div>
                     </div>
 
@@ -228,10 +233,10 @@
                       <div><img src="/static/spirit/images/plan-advantage4.png" alt=""></div>
                       <p>规避用工风险</p>
                       <div>
-                        个人（骑手）在线简单操作<br>
-                        流程科学高效<br>
-                        降低个税扣除<br>
-                        增加个人收入<br>
+                        <p>个人（骑手）在线简单操作</p>
+                        <p>流程科学高效</p>
+                        <p>降低个税扣除</p>
+                        <p>增加个人收入</p>
                       </div>
                     </div>
 
@@ -240,14 +245,270 @@
               </div>
             </div>
           </div>
+          <!-- 新物流行业 -->
           <div class="layui-tab-item">
-            <div class="w">内容2</div>
+            <!-- 行业现状 -->
+            <div class="w status-industry">
+              <div class="status-industry-title">
+                <h2>行业现状</h2>
+              </div>
+              <div class="status-industry-content">
+                以数字经济为基础发展起来的新物流产业逐渐迈进第二发展阶段，继续呈现爆发式增长，快递物流企业布局全国，<br>
+                但是人员流行性较大，人口缺口大，人员成本不断增加。新物流企业面临着与物流业员工之间的的劳动关系合规和财税合规问题等用工挑战。<br>
+                惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+              </div>
+              <div class="status-industry-items">
+                <ul class="clearfix">
+                  <li class="status-industry-item">
+                    <div class="status-industry-item-box1">
+                      <h3>模式不规范</h3>
+                      <div><img src="/static/spirit/images/xingWuLiuHangYe1.png" alt=""></div>
+                    </div>
+                    <div class="status-industry-item-box2">
+                      <h3>劳动力短缺</h3>
+                      <div>
+                        <p>
+                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求
+                        </p>
+                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="status-industry-item">
+                    <div class="status-industry-item-box1">
+                      <h3>用工成本高</h3>
+                      <div><img src="/static/spirit/images/xingWuLiuHangYe1.png" alt=""></div>
+                    </div>
+                    <div class="status-industry-item-box2">
+                      <h3>成本增加</h3>
+                      <div>
+                        <p>
+                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求
+                        </p>
+                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="status-industry-item">
+                    <div class="status-industry-item-box1">
+                      <h3>全球经济疲软</h3>
+                      <div><img src="/static/spirit/images/xingWuLiuHangYe3.png" alt=""></div>
+                    </div>
+                    <div class="status-industry-item-box2">
+                      <h3>全球经济疲软</h3>
+                      <div>
+                        <p>
+                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求
+                        </p>
+                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 行业解决方案 -->
+            <div class="solution">
+              <div class="solution-title">
+                <h2>解决方案</h2>
+              </div>
+
+              <div class="solution-content">
+                新物流企业和惠灵工平台达成合作，企业将业务标准化后发布平台实现精准匹配，<br>
+                结算费用通过惠灵工平台下发并为灵活用工人员代开增值税普通发票，<br>
+                同时惠灵工平台帮助物流企业基层客服与前端配送等灵活用工人员转化为创客身份，享受国家税收优惠政策并具备自行购买社保资格。
+              </div>
+              <div class="solution-flow-chart">
+                <div>
+                  <img src="/static/spirit/images/zhizaoyedongtu.png" alt="">
+                </div>
+              </div>
+              <div class="solution-footer">
+                通过惠零工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
+                为制造业企业合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
+              </div>
+            </div>
+            <!-- 方案优势 -->
+            <div class="w plan-advantage">
+              <div class="plan-advantage-title">
+                <h2>方案优势</h2>
+              </div>
+
+              <div class="plan-advantage-content">
+
+                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+
+              </div>
+              <div class="plan-advantage-items">
+                <ul class="clearfix">
+                  <li class="plan-advantage-item">
+                    <div class="plan-advantage-item-img">
+                      <img src="/static/spirit/images/plan-advantage1.png" alt="">
+                    </div>
+                    <p class="plan-advantage-item-title">降低企业成本</p>
+                    <p class="plan-advantage-item-content">
+                      基于国家减税降赋政策，优化企业人力架构方案
+                      有效匹配实际业务需求进行资源优化，实现科学
+                      合理用工
+                    </p>
+                  </li>
+                  <li>
+                    <div class="plan-advantage-item-img">
+                      <img src="/static/spirit/images/plan-advantage4.png" alt="">
+                    </div>
+                    <p class="plan-advantage-item-title">规避用工风险</p>
+                    <p class="plan-advantage-item-content">
+                      将工作任务由传统的按职位划分转变为按项目划分
+                      平台化规范管理，合理降低企业用工风险
+                    </p>
+                  </li>
+                  <li>
+                    <div class="plan-advantage-item-img">
+                      <img src="/static/spirit/images/plan-advantage2.png" alt="">
+                    </div>
+                    <p class="plan-advantage-item-title">提高个人收入</p>
+                    <p class="plan-advantage-item-content">
+
+                      个人（运送人员）在线简单操作，流程
+                      科学高效，降低个税扣除，增加个人收入
+
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <!-- 新零售行业 -->
           <div class="layui-tab-item">
-            <div class="w">内容3</div>
-          </div>
+            <!-- 行业现状 -->
+            <div class="w status-industry">
+              <div class="status-industry-title">
+                <h2>行业现状</h2>
+              </div>
+              <div class="status-industry-content">
+
+                中国的零售企业一方面面临市场竞争的压力，另一方面又面临人力成本上升的压力，要维持合理的毛利率以及人均销售额，<br>
+                是各个零售厂商都要面对的挑战，很多传统企业寻求转型，选择通过社会化营销人员来分销，但是目前行业市场混乱,利润也被逐渐拉低，<br>
+                让劳动力转换成企业的竞争力是每个零售企业的核心目标之一。惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+
+              </div>
+              <div class="status-industry-wm">
+                <div class="status-industry-wm-imgs status-industry-xls-imgs-icon">
+                  <img class="wm-img-active" src="/static/spirit/images/xingLingShou1.png" alt="">
+                  <img src="/static/spirit/images/waimai2.png" alt="">
+                  <img src="/static/spirit/images/waimai3.png" alt="">
+                </div>
+                <!-- 折叠 -->
+                <div class="status-industry-wm-content" lay-accordion>
+                  <div class="status-industry-wm-item">
+                    <h2 class="status-industry-wm-item-title status-industry-xls-item-title-icon">
+                      <p>劳动力短缺</p><span class="status-btn status-btnone" id="3"></span>
+                    </h2>
+                    <div class="status-industry-wm-item-content status-industry-xls-item-content-icon wm-item-show">
+                      <p>零售业岗位结构相对单一、工作门槛低、成长空间有限，人员流动性大。</p>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
+                    </div>
+                  </div>
+                  <div class="status-industry-wm-item">
+                    <h2 class="status-industry-wm-item-title status-industry-xls-item-title-icon">
+                      <p>用工成本高</p><span class="status-btn" id="4"></span>
+                    </h2>
+                    <div class="status-industry-wm-item-content status-industry-xls-item-content-icon">
+                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大112。</p>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
+                    </div>
+                  </div>
+                  <div class="status-industry-wm-item">
+                    <h2 class="status-industry-wm-item-title status-industry-xls-item-title-icon">
+                      <p>管理无标准</p><span class="status-btn" id="5"></span>
+                    </h2>
+                    <div class="status-industry-wm-item-content status-industry-xls-item-content-icon">
+                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 行业解决方案 -->
+            <div class="solution">
+              <div class="solution-title">
+                <h2>解决方案</h2>
+              </div>
+
+              <div class="solution-content">
 
 
+                零售机构和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
+                平台将为零售机构开具增值税专用发票，同时惠灵工平台帮助社会化营销人员（例微商、kol等）转化为创客身份，<br>
+                享受国家税收优惠政策并具备自行购买社保资格。
+
+
+              </div>
+              <div class="solution-flow-wm-chart">
+                <div>
+                  <img src="/static/spirit/images/wmdongt.png" alt="">
+                </div>
+              </div>
+              <div class="solution-footer">
+
+                通过惠零工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
+                为咨询培训平台合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
+
+              </div>
+            </div>
+            <!-- 方案优势 -->
+            <div class="w plan-advantage">
+              <div class="plan-advantage-title">
+                <h2>方案优势</h2>
+              </div>
+
+              <div class="plan-advantage-content">
+                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+
+              </div>
+              <div class="plan-advantage-wm-items">
+                <ul class="clearfix">
+                  <li class="plan-advantage-wm-item">
+                    <div class="plan-advantage-wm-item-one">
+                      <div><img src="/static/spirit/images/plan-advantage4.png" alt=""></div>
+                      <p>降低企业成本</p>
+                      <div>
+                        <p>将工作任务由传统的按职位划分转变</p>
+                        <p>为按项目划分平台化规范管理</p>
+                        <p>合理降低企业用工风险</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="plan-advantage-wm-item">
+                    <div class="plan-advantage-wm-item-one">
+                      <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
+                      <p>优化用工管理</p>
+                      <div>
+                        <p>将工作任务由传统的按职位划分转变</p>
+                        <p>为按项目划分平台化规范管理</p>
+                        <p>合理降低企业用工风险</p>
+                      </div>
+                    </div>
+
+                  </li>
+                  <li class="plan-advantage-wm-item">
+                    <div class="plan-advantage-wm-item-one">
+                      <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
+                      <p>简单高效安全</p>
+                      <div>
+                        <p>将工作任务由传统的按职位划分转变</p>
+                        <p>为按项目划分平台化规范管理</p>
+                        <p>合理降低企业用工风险</p>
+                      </div>
+                    </div>
+
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 制造业 -->
           <div class="layui-tab-item">
             <!-- 行业现状 -->
             <div class="w status-industry">
@@ -271,7 +532,7 @@
                         <p>
                           我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
                         </p>
-                        <div><a href="javascript:;"  onclick="showSearch()">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -385,8 +646,137 @@
             </div>
 
           </div>
+          <!-- 资讯平台服务 -->
           <div class="layui-tab-item">
-            <div class="w">内容5</div>
+            <!-- 行业现状 -->
+            <div class="w status-industry">
+              <div class="status-industry-title">
+                <h2>行业现状</h2>
+              </div>
+              <div class="status-industry-content">
+
+                中国的零售企业一方面面临市场竞争的压力，另一方面又面临人力成本上升的压力，要维持合理的毛利率以及人均销售额，<br>
+                是各个零售厂商都要面对的挑战，很多传统企业寻求转型，选择通过社会化营销人员来分销，但是目前行业市场混乱,利润也被逐渐拉低，<br>
+                让劳动力转换成企业的竞争力是每个零售企业的核心目标之一。惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+
+              </div>
+              <div class="status-industry-wm">
+                <div class="status-industry-wm-imgs status-industry-zx-imgs-icon">
+                  <img class="wm-img-active" src="/static/spirit/images/ziXunPingTai1.png" alt="">
+                  <img src="/static/spirit/images/waimai2.png" alt="">
+                  <img src="/static/spirit/images/waimai3.png" alt="">
+                </div>
+                <!-- 折叠 -->
+                <div class="status-industry-wm-content" lay-accordion>
+                  <div class="status-industry-wm-item">
+                    <h2 class="status-industry-wm-item-title status-industry-zx-item-title-icon">
+                      <p>劳动力短缺</p><span class="status-btn status-btnone" id="6"></span>
+                    </h2>
+                    <div class="status-industry-wm-item-content status-industry-zx-item-content-icon wm-item-show">
+                      <p>零售业岗位结构相对单一、工作门槛低、成长空间有限，人员流动性大</p>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
+                    </div>
+                  </div>
+                  <div class="status-industry-wm-item">
+                    <h2 class="status-industry-wm-item-title status-industry-zx-item-title-icon">
+                      <p>用工成本高</p><span class="status-btn" id="7"></span>
+                    </h2>
+                    <div class="status-industry-wm-item-content status-industry-zx-item-content-icon">
+                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大112。</p>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
+                    </div>
+                  </div>
+                  <div class="status-industry-wm-item">
+                    <h2 class="status-industry-wm-item-title status-industry-zx-item-title-icon">
+                      <p>管理无标准</p><span class="status-btn" id="8"></span>
+                    </h2>
+                    <div class="status-industry-wm-item-content status-industry-zx-item-content-icon">
+                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 行业解决方案 -->
+            <div class="solution">
+              <div class="solution-title">
+                <h2>解决方案</h2>
+              </div>
+
+              <div class="solution-content">
+
+
+                零售机构和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
+                平台将为零售机构开具增值税专用发票，同时惠灵工平台帮助社会化营销人员（例微商、kol等）转化为创客身份，<br>
+                享受国家税收优惠政策并具备自行购买社保资格。
+
+
+              </div>
+              <div class="solution-flow-wm-chart">
+                <div>
+                  <img src="/static/spirit/images/wmdongt.png" alt="">
+                </div>
+              </div>
+              <div class="solution-footer">
+
+
+                通过惠零工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
+                为零售机构合规避免劳动用工风险，为社会化营销人员提升劳动收益和服务保障。
+
+
+              </div>
+            </div>
+            <!-- 方案优势 -->
+            <div class="w plan-advantage">
+              <div class="plan-advantage-title">
+                <h2>方案优势</h2>
+              </div>
+
+              <div class="plan-advantage-content">
+                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+
+              </div>
+              <div class="plan-advantage-wm-items">
+                <ul class="clearfix">
+                  <li class="plan-advantage-wm-item">
+                    <div class="plan-advantage-wm-item-one">
+                      <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
+                      <p>规避用工风险</p>
+                      <div>
+                          <p>将工作任务由传统的按职位划分转变</p>
+                          <p>为按项目划分平台化规范管理</p>
+                          <p>合理降低企业用工风险</p>      
+                      </div>
+                    </div>
+                  </li>
+                  <li class="plan-advantage-wm-item">
+                    <div class="plan-advantage-wm-item-one">
+                      <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
+                      <p>降低企业成本</p>
+                      <div>
+                        <p>将工作任务由传统的按职位划分转变</p>
+                        <p>为按项目划分平台化规范管理</p>
+                        <p>合理降低企业用工风险</p>                                 
+                      </div>
+                    </div>
+
+                  </li>
+                  <li class="plan-advantage-wm-item">
+                    <div class="plan-advantage-wm-item-one">
+                      <div><img src="/static/spirit/images/plan-advantage3.png" alt=""></div>
+                      <p>提高个人收入</p>
+                      <div>
+                          <p>将工作任务由传统的按职位划分转变</p>
+                          <p>为按项目划分平台化规范管理</p>
+                          <p>合理降低企业用工风险</p>      
+                      </div>
+                    </div>
+
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
