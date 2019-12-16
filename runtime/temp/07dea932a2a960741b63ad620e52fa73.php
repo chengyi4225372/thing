@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576223813;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576483356;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +12,14 @@
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
+    <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
     <link rel="stylesheet" href="/static/spirit/css/index.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/spirit/js/clamp.js"></script>
-    <script src='/static/spirit/js/index.js'></script>
-
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src="/static/spirit/js/spirit.js"></script>
     <script src='/static/common/js/public.js'></script>
+    <script src='/static/spirit/js/index.js'></script>
 
 </head>
 
@@ -94,7 +94,7 @@
 
 
         <!-- 轮播图 -->
-        <div class="carousel">
+        <!-- <div class="carousel">
             <div class="carousel-img-box">
                 <div><img src="/static/spirit/images/BANNER01.png" alt=""></div>
                 <div><img src="/static/spirit/images/BANNER02.png" alt=""></div>
@@ -108,9 +108,17 @@
             </div>
             <span></span>
             <span></span>
+        </div> -->
+        <div class="layui-carousel" id="swiper">
+            <div carousel-item="">
+                <div><img src="/static/spirit/images/BANNER01.png"></div>
+                <div><img src="/static/spirit/images/BANNER02.png"></div>
+                <div><img src="/static/spirit/images/BANNER03.png"></div>
+            </div>
         </div>
+
         <!-- 头部 -->
-        <div class='w header-box'>
+        <div class='header-box'>
             <!-- 头部图标 -->
             <div class='header-container clearfix'>
                 <div>
@@ -149,9 +157,9 @@
                         <img src="/static/spirit/images/yonghu2x.png" alt="">
                     </div>
                     <div class="serve-item-text">
-                        <p>共享用工服务</p>
-                        <p>良性优化用工类型</p>
-                        <p>用工场景合法合规</p>
+                        <p>领先平台</p>
+                        <p>良性优化用工场景</p>
+                        <p>税收优惠合法合规</p>
                         <div class="serve-item-btn">
                             <div class="btn" onclick="GetErp()">获取方案</div>
                         </div>
@@ -162,9 +170,9 @@
                         <img src="/static/spirit/images/qianbao2X.png" alt="">
                     </div>
                     <div class="serve-item-text">
-                        <p>共享用工服务</p>
-                        <p>良性优化用工类型</p>
-                        <p>用工场景合法合规</p>
+                        <p>服务保证</p>
+                        <p>专家团队服务保障</p>
+                        <p>全方位定制解决方案</p>
                         <div class="serve-item-btn">
                             <div class="btn" onclick="GetErp()">获取方案</div>
                         </div>
@@ -175,9 +183,9 @@
                         <img src="/static/spirit/images/fuwuxing2x.png" alt="">
                     </div>
                     <div class="serve-item-text">
-                        <p>共享用工服务</p>
-                        <p>良性优化用工类型</p>
-                        <p>用工场景合法合规</p>
+                        <p>高效赋能</p>
+                        <p>人力结构管理升级</p>
+                        <p>全面赋能企业发展</p>
                         <div class="serve-item-btn">
                             <div class="btn" onclick="GetErp()">获取方案</div>
                         </div>
@@ -399,45 +407,67 @@
         </div>
 
         <!-- 底部 -->
-        <div class="fotter-box">
-            <div class="w fotter">
-                <div class='parter_catefories'>
-                    <dl>
-                        <dt><a href="javascript:;">服务产品</a></dt>
-                        <dd><a href="javascript:;">服务型税筹</a></dd>
-                        <dd><a href="javascript:;">门户型税筹</a></dd>
-                        <dd><a href="javascript:;">人力资源</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="javascript:;">招商政策</a></dt>
-                        <dd><a href="javascript:;">招商政策网</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="javascript:;">合作</a></dt>
-                        <dd><a href="javascript:;">代理合作</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="javascript:;">公司信息</a></dt>
-                        <dd><a href="javascript:;">瑟维斯有限公司</a></dd>
-                        <dd><a href="javascript:;">惠创优产业联盟</a></dd>
-                        <dd><a href="javascript:;">中兴瑞华有限公司</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="javascript:;">联系我们</a></dt>
-                        <dd><a href="javascript:;">400-150-9896</a></dd>
-                        <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
-                        <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
-                    </dl>
+        <div class="bottomBox">
+            <div class="w bottom">
+                <div class="aboutUs">
+                    <span>关于我们</span>
+                    <p>
+                        惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！
+                    </p>
+                </div>
+                <div class="w navBottom">
+                    <div class="navList">
+                        <dl>
+                            <dt>惠企云旗下产品</dt>
+                            <dd><a href="javascript:;">惠灵工</a></dd>
+                            <dd><a href="javascript:;">惠优税</a></dd>
+                            <dd><a href="javascript:;">惠多薪</a></dd>
+                            <dd><a href="javascript:;">惠创业</a></dd>
+                            <dd><a href="javascript:;">惠找事</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>资讯信息</dt>
+                            <dd><a href="javascript:;">行业资讯</a></dd>
+                            <dd><a href="javascript:;">招商政策</a></dd>
+                            <dd><a href="javascript:;">招标信息</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>招商合作</dt>
+                            <dd><a href="javascript:;">招募合伙人</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>联系我们</dt>
+                            <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
+                            <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
+                            <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
+                            <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
+                            <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
+                        </dl>
+                    </div>
 
+                    <ul class="qrCode">
+                        <li>
+                            <div class="pic">
+                                <img src="/static/spirit/images/weixincode.png" alt="">
+                            </div>
+                            <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                            <i>及时获一手财税信息</i>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="/static/spirit/images/weibocode.png" alt="">
+                            </div>
+                            <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                            <!-- <i>及时获一手财税信息</i> -->
+                        </li>
+                    </ul>
                 </div>
-                <div class='concat_icon clearfix'>
-                    <div><img src="/static/spirit/images/bo.png" alt=""></div>
-                    <div><img src="/static/spirit/images/wx.png" alt=""></div>
-                    <div><img src="/static/spirit/images/tie.png" alt=""></div>
-                </div>
-                <div class="fotter-line"></div>
-                <div>© Copyright 2019 惠企动（湖北）科技有限公司 . All Rights Reserved</div>
             </div>
+            <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+                Reserved&nbsp;ICP证
+                :
+                鄂ICP备16008680号-3</div>
+
         </div>
 
         <!-- 返回顶部 -->
