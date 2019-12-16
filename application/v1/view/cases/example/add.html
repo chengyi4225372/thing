@@ -1,0 +1,59 @@
+{extend name="layout/dialog" /}
+{block name='content'}
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:95%}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label">标题：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title"  value="" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="file" class="col-sm-3 control-label">图片：</label>
+                    <div class="col-sm-9">
+                        <input type="file"  onchange="upload_files(this)" data-url="{:url('/v1/cases/example/uploadimg')}" style="display:none;" class="form-control form-control-sm" id="file">
+                        <img id="imgs" src="__PUBLIC__/default.png" style="width:150px;height:100px;">
+                        <input type="hidden" id="Images" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="sorts" class="col-sm-3 control-label">排序：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="sort" class="form-control form-control-sm"  min="0" placeholder="数字越大，排名越靠前..." value=""/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contents" class="col-sm-3 control-label">新闻简介：</label>
+                    <div class="col-sm-9">
+                        <textarea  id="describes" class="form-control form-control-sm"  rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="content" class="col-sm-3 control-label">新闻内容：</label>
+                    <div class="col-sm-9">
+                        <script id="content" name="content" type="text/plain"></script>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="td-align dialog-footer">
+            <button class="btn btn-warning cancle" > <i class="fa fa-close"></i> 取消</button>
+
+            <button class="btn btn-primary example_add" type="button"  data-url="{:url('/v1/cases/example/add')}"><i class="fa fa-save"></i> 确定提交</button>
+        </div>
+    </form>
+</div>
+{/block}

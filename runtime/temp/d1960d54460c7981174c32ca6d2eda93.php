@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\login\index.html";i:1575372375;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1571899026;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:117:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\customer\customers\edit.html";i:1576227854;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\dialog.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1571899026;}*/ ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="<?php echo $config['language']; ?>">
 <head>
     <!-- 加载样式及META信息 -->
     <meta charset="utf-8">
@@ -43,44 +43,84 @@
   <script src="/static/assets/dist/js/respond.min.js"></script>
 <![endif]-->
 
+    
+    <!-- 用来添加自定义的 样式 -->
+    
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
-    <div class="login-logo">
-        <a href="javascript:void(0);"><b>后台管理</b></a>
-    </div>
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
-        <form id="loginForm" action="<?php echo url('/v1/login/check'); ?>" login-action="<?php echo url('/index/login', ['url' => '']); ?>" method="post">
-            <div class="usernamelogin">
-                <div class="form-group has-feedback">
-                    <input type="text" class="form-control" id="pd-form-username" placeholder="<?php echo __('Username'); ?>" name="username" autocomplete="off" value=""
-                           data-rule="required;"/>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+<body class="hold-transition skin-purple-light sidebar-mini">
+<div class="container-fluid">
+    
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label">标题：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title" value="<?php echo $data['title']; ?>">
+                    </div>
                 </div>
-                <div class="form-group has-feedback">
-                    <input type="password" class="form-control" id="pd-form-password" placeholder="<?php echo __('Password'); ?>" name="password" autocomplete="off" value=""
-                           data-rule="<?php echo __('Password'); ?>:required;password"/>
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <div class="form-group">
+                    <label for="contents" class="col-sm-3 control-label">描述：</label>
+                    <div class="col-sm-9">
+                        <textarea  id="contents" class="form-control form-control-sm"  rows="5"><?php echo $data['content']; ?></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="social-auth-links text-center">
-                <p>- TO -</p>
-                <button type="submit" id="submit" class="btn bg-purple btn-block btn-flat">Sign In</button>
-            </div>
-            <div class="alert alert-warning alert-dismissible margin-top10">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <i class="fa fa-fw fa-thumbs-o-down"></i><span> Please enter your name and password</span></div>
 
-        </form>
-    </div>
-    <div class="lockscreen-footer text-center">
-        Copyright &copy; 2019-2025 <b>慧企云</b><br>
-        All rights reserved
-    </div>
-    <!-- /.login-box-body -->
+                <div class="form-group">
+                    <label for="file" class="col-sm-3 control-label">图片：</label>
+                    <div class="col-sm-9">
+                        <input type="file"  onchange="upload_files(this)" data-url="<?php echo url('/v1/customer/customers/uploadimg'); ?>" style="display:none;" class="form-control form-control-sm" id="file">
+                        <img id="imgs" src="<?php echo $data['pic']; ?>" style="width:90px;height:80px;">
+                        <input type="hidden" id="Images" value="<?php echo $data['pic']; ?>">
+                    </div>
+                    <script>
+
+                    </script>
+                </div>
+
+                <div class="form-group">
+                    <label for="url" class="col-sm-3 control-label">URL：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="url" class="form-control form-control-sm" name="url" value="<?php echo $data['url']; ?>"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="status" class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select id="status" name="status" class="form-control form-control-sm">
+                            <?php if(is_array($status) || $status instanceof \think\Collection || $status instanceof \think\Paginator): $i = 0; $__LIST__ = $status;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$status_list): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $key; ?>" <?php if($status_list == $data['status']): ?>selected="selected"<?php endif; ?>><?php echo $status_list; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="status" class="col-sm-3 control-label">排序：</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control form-control-sm" id="sort" value="<?php echo $data['sort']; ?>" placeholder="数字越大，排名越靠前...">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="td-align dialog-footer">
+            <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
+            <input type="hidden" name="site_id" id="site_id" value="">
+            <button class="btn btn-primary" type="button" onclick="admin_module.edit_hlg_customer(this)" data="<?php echo $data['id']; ?>" data-url="<?php echo url('/v1/customer/customers/edit'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+        </div>
+    </form>
 </div>
+
+</div>
+
 <!-- 加载JS脚本 -->
 <!-- jQuery 3 -->
 <script src="/static/assets/components/jquery/dist/jquery.min.js"></script>
@@ -131,6 +171,7 @@
 <!--<script src="/static/assets/dist/js/common.js"></script>-->
 
 
-<script src="/static/assets/dist/js/login.js"></script>
+
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/clientcase.html";i:1576228576;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\clientcase.html";i:1576482695;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1574064055;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +41,7 @@
                         <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
                         <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
                         <li class="nav-active"><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
-                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
+                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
                         <!--<li>-->
                         <!--<?php if(empty($userinfo['userType'])): ?>-->
                         <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
@@ -114,37 +114,23 @@
         <div class="bg_tab">
             <div class="tabBox w">
                 <ul class="clearfix">
-                    <!-- <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+
+                    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                     <li>
-                        <div class="item-img"><img src="<?php echo $item['pic']; ?>" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                <?php echo $item['title']; ?>
-                            </p>
-                            <p>
-                                <?php echo $item['describe']; ?>
-                            </p>
-                            <a href="<?php echo url('/home/index/casedetail',['id' => $item['id']]); ?>"> 查看案例>> </a>
-                        </div>
-                    </li>
-                    <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?> -->
-                    <li>
-                        <a href="">
+                        <a href="<?php echo url('/home/index/casedetail',['id'=>$vo['id']]); ?>">
                             <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem1.png" alt="">
+                                <img src="<?php echo !empty($vo['imgs'])?$vo['imgs']:''; ?>" alt="">
                             </div>
                             <div class="item-content">
-                                <p>
-                                    直销类企业如何避免税务合规风险，提升企业劳动力效能风险，提升企业劳动力效能？
-                                </p>
-                                <p>
-                                    随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始风险，提升企业劳动力效能元化用工方式。
-                                </p>
-
+                                <p><?php echo $vo['title']; ?></p>
+                                <p><?php echo mb_substr($vo['describes'],'0','38','utf-8'); ?></p>
                                 <div>查看详情</div>
                             </div>
                         </a>
                     </li>
+                    <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
+
+                    <!--
                     <li>
                         <a href="">
                             <div class="item-img">
@@ -157,9 +143,8 @@
                                 <p>
                                     公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
                                 </p>
-
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
                         </a>
                     </li>
                     <li>
@@ -175,8 +160,9 @@
                                     最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
                                 </p>
 
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
+
                         </a>
                     </li>
                     <li>
@@ -191,9 +177,9 @@
                                 <p>
                                     随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始倾向多元化用工方式。
                                 </p>
-
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
+
                         </a>
                     </li>
                     <li>
@@ -208,9 +194,9 @@
                                 <p>
                                     公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
                                 </p>
-
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
+
                         </a>
                     </li>
                     <li>
@@ -225,9 +211,9 @@
                                 <p>
                                     最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
                                 </p>
-
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
+
                         </a>
                     </li>
                     <li>
@@ -242,9 +228,9 @@
                                 <p>
                                     随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始倾向多元化用工方式。
                                 </p>
-
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
+
                         </a>
                     </li>
                     <li>
@@ -259,9 +245,9 @@
                                 <p>
                                     公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
                                 </p>
-
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
+
                         </a>
                     </li>
                     <li>
@@ -276,11 +262,12 @@
                                 <p>
                                     最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
                                 </p>
-
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
+
                         </a>
                     </li>
+                    -->
                 </ul>
             </div>
         </div>

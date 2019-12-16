@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\index.html";i:1576227854;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1576463186;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1576463434;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:113:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\cases\example\index.html";i:1576482771;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1576463186;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1576463434;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -251,26 +251,17 @@
         <div class="col-md-12">
             <form class="form-inline"  id="form">
 
+
                 <div class="panel panel-default panel-btn">
                     <div class="panel-heading">
-
                         <div class="form-group">
-                            <div class="col-sm-4">
-                                <select class="selectpicker show-tick" title="" id="searchField" name="searchField"
-                                        data-live-search="true">
-                                    <option value="">全部</option>
-                                    <option value="1" <?php if($params['searchField'] == 1): ?>selected='selected'<?php endif; ?>>新闻标题</option>
-                                    <option value="2" <?php if($params['searchField'] == 2): ?>selected='selected'<?php endif; ?>>新闻关键字</option>
-                                    <option value="3" <?php if($params['searchField'] == 3): ?>selected='selected'<?php endif; ?>>新闻描述</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-8">
-                                <input class="form-control" style="width:248px;" type="text" value="<?php echo $params['searchValue']; ?>" name="searchValue" id="searchValue" placeholder="多个关键字用空格或逗号隔开">
-                            </div>
+                            <input type="text"  class="form-control" id="keywords" value="<?php echo \think\Request::instance()->get('title'); ?>" placeholder="请输入标题或者描述进行查询...">
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-info btn_search"  type="button"  data-url="<?php echo url('/v1/work/works/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info" id="btn_search" type="button"  data-url="<?php echo url('/v1/cases/example/index'); ?>">
+                                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -286,48 +277,45 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addwork" data-url="<?php echo url('/v1/work/works/add'); ?>">
-                <i class="fa fa-plus-circle">添加新闻</i></button>
+                    id="examadd" data-url="<?php echo url('/v1/cases/example/add'); ?>">
+                <i class="fa fa-plus-circle">添加客户案例</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="col-xs-1" >排序</th>
-                <th class="text-center">新闻标题</th>
-                <th class="text-center">新闻展示图</th>
-                <th class="text-center">新闻关键字</th>
-                <th class="text-center">创建时间</th>
+                <th class="text-center" style="width:5%;">排序</th>
+                <th class="text-center" style="width:10%;">标题</th>
+                <th class="text-center">展示图</th>
+                <th class="text-center">简介内容</th>
+                <th class="text-center" style="width:21%">创建时间</th>
+                <th class="text-center">操作人</th>
                 <th class="text-center">操作</th>
                 </thead>
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "数据暂时为空" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tbody>
-                <?php if(empty($list) || (($list instanceof \think\Collection || $list instanceof \think\Paginator ) && $list->isEmpty())): else: if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td class="col-xs-1">
-                      <input type="number"  onblur="setSort($(this).val(),$(this).attr('data-id'))" class="form-control" data-id="<?php echo $vo['id']; ?>" value="<?php echo (isset($vo['sort']) && ($vo['sort'] !== '')?$vo['sort']:'0'); ?>"  />
-                    </td>
-                    <td class="text-center"><?php echo (isset($vo['title']) && ($vo['title'] !== '')?$vo['title']:''); ?></td>
-
                     <td class="text-center">
-                        <a href="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:'/static/default.png'); ?>">
-                        <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="" style="width: 100px;height:100px;">
+                        <input class="form-control form-control-sm" type="number" value="<?php echo $vo['sort']; ?>"  onblur="setsort(this)" data-url="<?php echo url('/v1/cases/example/changesort'); ?>" data-id="<?php echo $vo['id']; ?>">
+                    </td>
+                    <td class="text-center"><?php echo $vo['title']; ?></td>
+                    <td class="text-center">
+                        <a href="<?php echo $vo['imgs']; ?>" target="_blank">
+                         <img src="<?php echo $vo['imgs']; ?>" style="width:150px;height:100px;">
                         </a>
                     </td>
-                    <td class="text-center"><?php echo (isset($vo['keyword']) && ($vo['keyword'] !== '')?$vo['keyword']:''); ?></td>
-                    <td class="text-center"><?php echo (isset($vo['create_time']) && ($vo['create_time'] !== '')?$vo['create_time']:''); ?></td>
-
+                    <td class="text-center"><?php echo $vo['describes']; ?></td>
+                    <td class="text-center"><?php echo $vo['create_time']; ?></td>
+                    <td class="text-center"><?php echo $vo['addUser']; ?></td>
                     <td class="text-center">
-
-                        <a   class="btn btn-info editWork" data-url="<?php echo url('/v1/work/works/edit',['id' => $vo['id']]); ?>" >编辑</a>
-                        <a  onclick="delWork('<?php echo $vo['id']; ?>')" class="btn btn-danger">删除</a>
-
+                        <a href="javascript:void(0)" class="btn btn-info example_edit" data-url="<?php echo url('/v1/cases/example/edit',['id'=>$vo['id']]); ?>">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-danger example_dels" data-url="<?php echo url('/v1/cases/example/dels',['id'=>$vo['id']]); ?>">删除</a>
                     </td>
                 </tr>
-                 <?php endforeach; endif; else: echo "" ;endif; endif; ?>
                 </tbody>
+                <?php endforeach; endif; else: echo "数据暂时为空" ;endif; ?>
+
             </table>
-            <div class="pages">
-                <?php echo $list->render(); ?>
-            </div>
+            <div class="pages"><?php echo $list->render(); ?></div>
         </div>
     </div>
 
