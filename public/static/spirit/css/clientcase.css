@@ -513,7 +513,9 @@ a {
     width: 100%;
     height: 16.25rem;
 }
-
+.tabBox li {
+    position: relative;
+}
 .tabBox .item-img img {
     display: block;
     width: 100%;
@@ -560,7 +562,7 @@ a {
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: rgba(0, 0, 0, 1);
-    margin-bottom: 1.25rem;
+    /* margin-bottom: 1.25rem; */
     line-height: 1.5;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -569,11 +571,14 @@ a {
     -webkit-box-orient: vertical;
 }
 
-.tabBox .item-content div:nth-of-type(1) {
+.tabBox .item-comtent-more {
+    position: absolute;
+    left: 1.375rem;
+    bottom: 1.125rem;
     width: 8.75rem;
     height: 2.5rem;
     background: linear-gradient(90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
-    border-radius: 20px;
+    border-radius: 1.25rem;
     font-size: 1rem;
     font-family: PingFang SC;
     font-weight: bold;

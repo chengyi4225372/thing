@@ -42,54 +42,68 @@ html {
     html {
         font-size: 6.66666666666667px;
     }
+
 }
 
 @media screen and (min-width: 1024px) {
     html {
         font-size: 8.53333333333333px;
     }
+
 }
 
 @media screen and (min-width: 1152px) {
     html {
         font-size: 9.58333333333333px;
     }
+    .difficulty1 li .difficulty1-left>div:nth-child(3){
+
+    }
+
 }
 
 @media screen and (min-width: 1280px) {
     html {
         font-size: 10.6666666666667px;
     }
+
+
 }
 
 @media screen and (min-width: 1366px) {
     html {
         font-size: 11.38333333333333px;
     }
+
 }
 
 @media screen and (min-width: 1440px) {
     html {
         font-size: 12px;
     }
+
 }
 
 @media screen and (min-width: 1600px) {
     html {
         font-size: 13.3333333333px;
     }
+
 }
 
 @media screen and (min-width: 1680px) {
     html {
         font-size: 14px;
     }
+
+
 }
 
 @media screen and (min-width: 1920px) {
     html {
         font-size: 16px;
     }
+
 }
 
 body {
@@ -519,6 +533,7 @@ input:-webkit-autofill {
     font-weight: 400;
     color: rgba(0, 0, 0, 1);
     line-height: 2;
+
 }
 
 .difficulty1-items {

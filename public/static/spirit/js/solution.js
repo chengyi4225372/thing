@@ -7,7 +7,7 @@ window.onload = function () {
     // 返回顶部
     window.onscroll = function () {
         var top = document.body.scrollTop || document.documentElement.scrollTop;
-        // console.log(top);
+        console.log(top);
 
         if (top >= 400) {
 
@@ -33,7 +33,7 @@ window.onload = function () {
                     }
                 });
             }
-            if (top >= 1600) {
+            if (top >= 1200) {
                 console.log('进来了');
                 for (var i = 0; i < itemImg.length; i++) {
                     itemImg[i].classList.add('item-imgbg-active')
@@ -69,8 +69,10 @@ window.onload = function () {
             // console.log(e.target.id)
             for (let k = 0; k < statusBtn.length; k++) {
                 statusBtn[k].style.background = "url('../../static/spirit/images/zhankai.png') no-repeat"
+                statusBtn[k].style.backgroundSize = "100% 100%"
             }
             statusBtn[Number(e.target.id)].style.background = "url('../../static/spirit/images/shouqi.png') no-repeat"
+            statusBtn[Number(e.target.id)].style.backgroundSize = "100% 100%"
             for (let j = 0; j < itemContents.length; j++) {
                 itemContents[j].classList.remove('wm-item-show')
             }
