@@ -48,48 +48,56 @@ html {
     html {
         font-size: 8.53333333333333px;
     }
+
 }
 
 @media screen and (min-width: 1152px) {
     html {
         font-size: 9.58333333333333px;
     }
+
 }
 
 @media screen and (min-width: 1280px) {
     html {
         font-size: 10.6666666666667px;
     }
+
 }
 
 @media screen and (min-width: 1366px) {
     html {
         font-size: 11.38333333333333px;
     }
+
 }
 
 @media screen and (min-width: 1440px) {
     html {
         font-size: 12px;
     }
+
 }
 
 @media screen and (min-width: 1600px) {
     html {
         font-size: 13.3333333333px;
     }
+
 }
 
 @media screen and (min-width: 1680px) {
     html {
         font-size: 14px;
     }
+
 }
 
 @media screen and (min-width: 1920px) {
     html {
         font-size: 16px;
     }
+
 }
 
 body {
@@ -508,6 +516,7 @@ input::-ms-input-placeholder {
 }
 
 .serve-item .serve-item-text {
+    position: relative;
     height: 100%;
     padding-top: 1.25rem;
     margin-left: 2.125rem;
@@ -543,6 +552,10 @@ input::-ms-input-placeholder {
 }
 
 .serve-item .serve-item-text .serve-item-btn {
+    position: absolute;
+    left: 0;
+    /* bottom: 1.25rem; */
+    bottom: 0.45rem;
     width: 7.5rem;
     height: 2rem;
     border-radius: 1rem;
@@ -559,7 +572,6 @@ input::-ms-input-placeholder {
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-    margin-top: 1.25rem;
     cursor: pointer
 }
 
@@ -696,7 +708,14 @@ input::-ms-input-placeholder {
 }
 
 .project-box .project {
-    padding-top: .625rem
+    position: relative;
+    padding-top: .625rem;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .project .project-title {
@@ -785,10 +804,14 @@ input::-ms-input-placeholder {
     font-weight: 500;
     color: rgba(255, 255, 255, 1);
     line-height: 1.625rem;
-    margin-bottom: 4.1875rem;
+    /* margin-bottom: 4.1875rem; */
 }
 
 .project-btn {
+    position: absolute;
+    left: 5.625rem;
+    /* bottom: 2.5rem; */
+    bottom: 2rem;
     width: 8.75rem;
     height: 2.5rem;
     background: linear-gradient(90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
