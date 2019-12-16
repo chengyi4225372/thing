@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576458465;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576458720;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +17,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/static/spirit/js/clamp.js"></script>
   <script src='/static/spirit/js/solution.js'></script>
-  <script src="/static/assets/plugins/layui/layui.js"></script>
+  <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script src="/static/spirit/js/spirit.js"></script>
   <script src='/static/common/js/public.js'></script>
 </head>
@@ -105,7 +105,7 @@
     <!-- 面包屑 -->
     <div class="crumbs-box">
       <div class="w crumbs">
-        <b><a href="#">首页</a> ></b>
+        <b><a href="<?php echo url('/v1/home/index/index'); ?>">首页</a> ></b>
         <b>行业解决方案</b>
       </div>
     </div>
@@ -146,21 +146,21 @@
                     </h2>
                     <div class="status-industry-wm-item-content wm-item-show">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
-                      <div><span>立即咨询</span></div>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
                     <h2 class="status-industry-wm-item-title">用工成本高<span class="status-btn" id="1"></span></h2>
                     <div class="status-industry-wm-item-content">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
-                      <div><span>立即咨询</span></div>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
                     <h2 class="status-industry-wm-item-title">周期不固定<span class="status-btn" id="2"></span></h2>
                     <div class="status-industry-wm-item-content">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
-                      <div><span>立即咨询</span></div>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                 </div>
@@ -271,7 +271,7 @@
                         <p>
                           我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
                         </p>
-                        <div><a href="javascript:;">了解更多</a></div>
+                        <div><a href="javascript:;"  onclick="showSearch()">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -286,7 +286,7 @@
                         <p>
                           我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
                         </p>
-                        <div><a href="javascript:;">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -301,7 +301,7 @@
                         <p>
                           我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
                         </p>
-                        <div><a href="javascript:;">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -459,14 +459,14 @@
       <div>
         <div class="bottom-title">惠家族产品</div>
         <div class="bottom-item">
-          <div class="hqy"><a href="#">惠企云</a></div>
+          <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
           <ul>
-            <li><a href="/">惠优税</a></li>
-            <li><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></li>
-            <li><a href="<?php echo config('curl.hdx'); ?>">惠多薪</a></li>
+            <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+            <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+            <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
             <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
-            <li><a href="<?php echo config('curl.hcy'); ?>">惠创业</a></li>
-            <li><a href="<?php echo config('curl.hqd'); ?>">惠企动</a></li>
+            <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+            <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
           </ul>
         </div>
       </div>

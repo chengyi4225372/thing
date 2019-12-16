@@ -482,7 +482,7 @@ a {
 }
 
 .bg_tab ul {
-    width: 80rem;
+    /* width: 80rem; */
 }
 
 .bg_tab ul li {
@@ -499,6 +499,9 @@ a {
     -o-box-sizing: border-box;
     box-sizing: border-box;
 
+}
+.bg_tab ul li:nth-child(3n+3){
+    margin-right: 0;
 }
 
 .bg_tab ul li:hover {
@@ -552,12 +555,12 @@ a {
 }
 
 .tabBox .item-content p:nth-of-type(2) {
-    height: 4rem;
+    height: 4.5rem;
     font-size: .875rem;
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: rgba(0, 0, 0, 1);
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
     line-height: 1.5;
     overflow: hidden;
     text-overflow: ellipsis;
