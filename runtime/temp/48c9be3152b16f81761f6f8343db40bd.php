@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/casedetail.html";i:1575860065;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/casedetail.html";i:1576223813;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,7 +123,7 @@
         <!-- logo图 -->
         <div class="logo">
           <h1>
-            <img src="/static/spirit/images/logo2xx.png">
+            <img src="/static/spirit/images/logo2xxx.png">
           </h1>
         </div>
         <!-- nav部分 -->

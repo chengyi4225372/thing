@@ -16,7 +16,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="__SPI__/js/clamp.js"></script>
   <script src='__SPI__/js/solution.js'></script>
-  <script src="__PUBLIC__/assets/plugins/layui/layui.js"></script>
+  <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
   <script src="__SPI__/js/spirit.js"></script>
   <script src='__PUBLIC__/common/js/public.js'></script>
 </head>
@@ -88,7 +88,7 @@
     <!-- 面包屑 -->
     <div class="crumbs-box">
       <div class="w crumbs">
-        <b><a href="#">首页</a> ></b>
+        <b><a href="{:url('/v1/home/index/index')}">首页</a> ></b>
         <b>行业解决方案</b>
       </div>
     </div>
@@ -129,21 +129,21 @@
                     </h2>
                     <div class="status-industry-wm-item-content wm-item-show">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
-                      <div><span>立即咨询</span></div>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
                     <h2 class="status-industry-wm-item-title">用工成本高<span class="status-btn" id="1"></span></h2>
                     <div class="status-industry-wm-item-content">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
-                      <div><span>立即咨询</span></div>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
                     <h2 class="status-industry-wm-item-title">周期不固定<span class="status-btn" id="2"></span></h2>
                     <div class="status-industry-wm-item-content">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
-                      <div><span>立即咨询</span></div>
+                      <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                 </div>
@@ -254,7 +254,7 @@
                         <p>
                           我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
                         </p>
-                        <div><a href="javascript:;">了解更多</a></div>
+                        <div><a href="javascript:;"  onclick="showSearch()">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -269,7 +269,7 @@
                         <p>
                           我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
                         </p>
-                        <div><a href="javascript:;">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -284,7 +284,7 @@
                         <p>
                           我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
                         </p>
-                        <div><a href="javascript:;">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -442,14 +442,14 @@
       <div>
         <div class="bottom-title">惠家族产品</div>
         <div class="bottom-item">
-          <div class="hqy"><a href="#">惠企云</a></div>
+          <div class="hqy"><a href="{:config('curl.website')}">惠企云</a></div>
           <ul>
-            <li><a href="/">惠优税</a></li>
-            <li><a href="{:config('curl.hlg')}">惠灵工</a></li>
-            <li><a href="{:config('curl.hdx')}">惠多薪</a></li>
+            <li><a href="{:url('/home/optimal/index')}">惠优税</a></li>
+            <li><a href="{:url('/home/index/index')}">惠灵工</a></li>
+            <li><a href="{:url('/home/launch/index')}">惠多薪</a></li>
             <li><a href="{:url('/home/searches/index')}">惠找事</a></li>
-            <li><a href="{:config('curl.hcy')}">惠创业</a></li>
-            <li><a href="{:config('curl.hqd')}">惠企动</a></li>
+            <li><a href="{:url('/home/business/index')}">惠创业</a></li>
+            <li><a href="{:url('/home/launch/index')}">惠企动</a></li>
           </ul>
         </div>
       </div>

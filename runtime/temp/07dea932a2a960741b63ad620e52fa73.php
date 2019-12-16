@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1575958783;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576223813;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +8,8 @@
     <meta name="force-rendering" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/index.css">
@@ -32,24 +33,17 @@
                 <!-- logo图 -->
                 <div class="logo">
                     <h1>
-                        <img src="/static/spirit/images/logo2xx.png">
+                        <img src="/static/spirit/images/logo2xxx.png">
                     </h1>
                 </div>
                 <!-- nav部分 -->
                 <div class="nav">
                     <ul class="clearfix">
-                        <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
-                        <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
-                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                        <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
-                        <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                        <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
-                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
                         <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
                         <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
                         <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
                         <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
-                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
+                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
                         <!--<li>-->
                         <!--<?php if(empty($userinfo['userType'])): ?>-->
                         <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
@@ -99,18 +93,27 @@
         </div>
 
 
+        <!-- 轮播图 -->
+        <div class="carousel">
+            <div class="carousel-img-box">
+                <div><img src="/static/spirit/images/BANNER01.png" alt=""></div>
+                <div><img src="/static/spirit/images/BANNER02.png" alt=""></div>
+                <div><img src="/static/spirit/images/BANNER03.png" alt=""></div>
+            </div>
+            <div class="focus-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span></span>
+            <span></span>
+        </div>
         <!-- 头部 -->
-        <div class='header-box'>
+        <div class='w header-box'>
             <!-- 头部图标 -->
-            <div class='w header-container clearfix'>
+            <div class='header-container clearfix'>
                 <div>
-                    <div class="header-text-left fl">
-                        <p class="header-left-title">共享经济双创支撑云平台</p>
-                        <div class="linestyle"></div>
-                        <p class="header-left-title2">合法合规 / 财税优化 / 高效结算</p>
-                        <p class="header-left-title3">依托于互联网力量的综合税优服务体系 打造分散产能整合共享的灵活用工平台
-                        </p>
-                    </div>
                     <div class="header-form-right fr">
                         <p class="header-right-title">想拥有更专业的方案吗？</p>
                         <div class="header-right-input">
@@ -256,17 +259,17 @@
                     </ul>
                     <div class="project-tabs-items show">
                         <p>转变灵活用工方式合理提高个人收益，规避企业风险</p>
-                        <p>企业内部组织变革，重构企业与个人的关系。个人一键创业成为创客，以灵活用工方式与企业形成合作关系，合理解除用工劳动关系风险</p>
+                        <p>企业内部组织变革，重构企业与个人的关系。个人一键创业成为创客，以灵活用工方式与企业形成合作关系，合理解除用工劳动关系风险。</p>
                         <div class="project-btn" onclick="GetErp()">立即咨询</div>
                     </div>
                     <div class="project-tabs-items">
                         <p>合理开出可用于进项抵扣的增值税专票</p>
-                        <p>个人通过平台承包项目，按项目服务效果获取服务费，即“项目应收款”，而非雇佣关系下的薪酬工资。平台给发包方企业开6%增值税专票，可用于进项抵扣和费用抵减。</p>
+                        <p>个人通过平台承包项目，按项目服务效果获取服务费，即“项目应收款”，而非雇佣关系下的薪酬工资。平台给发包方企业提供增值税专票，可用于进项抵扣和费用抵减。</p>
                         <div class="project-btn" onclick="GetErp()">立即咨询</div>
                     </div>
                     <div class="project-tabs-items">
                         <p>达到标准后付费，保障企业权益</p>
-                        <p>企业通过平台将业务形成一个个标准件外包出去，并按服务效果付费，通过每个标准件的盈利最终达到企业所有业务均盈利的目的</p>
+                        <p>企业通过平台将业务形成一个个标准件外包出去，并按服务效果付费，通过每个标准件的盈利最终达到企业所有业务均盈利的目的。</p>
                         <div class="project-btn" onclick="GetErp()">立即咨询</div>
                     </div>
                     <div class="project-tabs-items">
@@ -358,27 +361,27 @@
                             <div class="itemImg">
                                 <div class="shadow"></div>
 
-                                    <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
-                               
+                                <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
+
                             </div>
-                           
+
 
                             <div class="itemContent">
-                                    <div class="bottomContent">
-                                        <p class="conTitle"><?php echo $vo['title']; ?></p>
-                                        <p class="conTime"><?php echo $vo['create_time']; ?></p>
-                                        <p class="conDetail">
-                                            <?php echo $vo['desc']; ?>
-                                        </p>
-                                    </div>
-                                    <div class="separate"></div>
+                                <div class="bottomContent">
+                                    <p class="conTitle"><?php echo $vo['title']; ?></p>
+                                    <p class="conTime"><?php echo $vo['create_time']; ?></p>
+                                    <p class="conDetail">
+                                        <?php echo $vo['desc']; ?>
+                                    </p>
                                 </div>
-                                <div class="conBtn">
-                                    <div class="more">
-                                        <a href="<?php echo config('curl.hlg'); ?>/home/index/informationlist">了解更多</a>
-                                    </div>
+                                <div class="separate"></div>
+                            </div>
+                            <div class="conBtn">
+                                <div class="more">
+                                    <a href="<?php echo config('curl.hlg'); ?>/home/index/informationlist">了解更多</a>
                                 </div>
-                             
+                            </div>
+
                         </li>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
                     </ul>
