@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\clientcase.html";i:1576482625;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1574064055;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\clientcase.html";i:1576482695;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1574064055;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -129,8 +129,6 @@
                         </a>
                     </li>
                     <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
-
-
 
                     <!--
                     <li>
