@@ -13,7 +13,7 @@
                 <div class="form-group">
                     <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>新闻展示图：</label>
                     <div class="col-sm-9">
-                        <input type="file"  onchange="upload_files()" style="display:none;" class="form-control form-control-sm" id="file">
+                        <input type="file"  onchange="upload_files(this)" style="display:none;"  data-url="{:url('/v1/work/works/uploadImgs')}" class="form-control form-control-sm" id="file">
                         <img id="imgs" src="{$info.imgs|default='__PUBLIC__/default.png'}" style="width:90px;height:80px;">
                         <input type="hidden" id="Images" value="{$info.imgs|default=''}">
                     </div>
