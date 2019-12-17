@@ -24,4 +24,14 @@ class Optimal extends BaseController
     public function index(){
         return $this->fetch();
     }
+
+    /**
+     * @DESC：招商合作
+     * @author: jason
+     * @date: 2019-12-17 03:54:07
+     */
+    public function cooperation()
+    {
+        return $this->fetch();
+    }
 }

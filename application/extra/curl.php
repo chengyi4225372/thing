@@ -4,7 +4,7 @@ return [
     'hlg' => 'http://hui0g.hui7y.com',//惠灵工
 
 //    'website' => 'http://172.26.3.13:8008/index.php',//官网
-    'website' => 'http://www.hqyonline.com/',//官网
+    'website' => 'https://www.hui7y.com',//官网
 
 //    'hzs' => 'http://172.26.3.13:8010/index.php',//会找事
     'hzs' => 'http://www.35serve.com',//会找事
