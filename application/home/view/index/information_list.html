@@ -92,7 +92,7 @@
       <div class="w content">
         <div class="bread-crumbs">
             <b><a onclick="go_work(this)" data-url="{:url('/home/index/index')}">惠灵工</a></b> >
-            <b><a onclick="go_news(this)" data-url="{:url('/home/index/informationlist')}">新闻资讯</a></b> 
+            <b class="current">新闻资讯</b>
         </div>
         <div class="information-list">
           <div class="tabs clearfix">
@@ -103,7 +103,7 @@
             <div class="search-box fr">
               <input type="text" id="keyword" value="{$Think.get.keyword}" placeholder="请输入关键字">
               <div onclick="search(this)" data-url="{:url('/home/index/informationList')}">搜索</div>
-              <span></span>
+              <span onclick="onclick_close()"></span>
             </div>
           </div>
           <div class="tabs-items show">
