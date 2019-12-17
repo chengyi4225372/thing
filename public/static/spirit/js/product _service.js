@@ -8,7 +8,7 @@ window.onload = function(){
         // console.log(document.body.scrollTop);
         // console.log(document.documentElement.scrollTop);
 
-        if (top >= 400) {
+        if (top >= 1080) {
             let goTop = document.getElementById('goTop')
             goTop.style.display = "block"
 
@@ -31,7 +31,7 @@ window.onload = function(){
                     }
                 });
             }
-        } else if (top < 400) {
+        } else if (top < 1080) {
 
             // 返回顶部样式
             let goTop = document.getElementById('goTop')

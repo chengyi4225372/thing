@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1576562040;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1576566230;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,7 +109,7 @@
       <div class="w content">
         <div class="bread-crumbs">
           <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
-          <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b>
+          <b class="current">新闻资讯</b>
         </div>
         <div class="information-list">
           <div class="tabs clearfix">
@@ -120,7 +120,7 @@
             <div class="search-box fr">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
               <div onclick="search(this)" data-url="<?php echo url('/home/index/informationList'); ?>">搜索</div>
-              <span></span>
+              <span onclick="onclick_close()"></span>
             </div>
           </div>
           <div class="tabs-items show">
@@ -192,14 +192,14 @@
             </dl>
             <dl>
               <dt>客服热线</dt>
-              <dd><a href="javascript:;">400-150-9896</a></dd>
-              <dd><a href="javascript:;">18186194461</a></dd>
+              <dd>400-150-9896</dd>
+              <dd>18186194461</dd>
             </dl>
             <dl>
               <dt>办公地址</dt>
-              <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
-              <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
-              <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
+              <dd>武汉市硚口区南国大武汉H座</dd>
+              <dd>深圳市福田区第一世界广场A座</dd>
+              <dd>北京市西城区贵都国际中心B座</dd>
             </dl>
           </div>
 
@@ -228,11 +228,46 @@
 
     </div>
 
+    <!-- 侧边栏bottom资讯 -->
+    <div class="bottom-left">
+      <div>
+        <div class="bottom-title">惠家族产品</div>
+        <div class="bottom-item">
+          <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
+          <ul>
+            <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+            <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+            <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+            <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
+            <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+            <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="bottom-title2">联系我们</div>
+        <div class="bottom-item2">
+          <div>
+            <p>立即预约咨询</p>
+            <p>181-8619-4461</p>
+          </div>
+          <div>
+            <p>获取税筹方案</p>
+            <p>400-150-9898</p>
+          </div>
+        </div>
+      </div>
+      <!-- 返回顶部 -->
+      <div class='goTop' id="goTop">
+        <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
+        <div>顶部</div>
+      </div>
+    </div>
     <!-- 返回顶部 -->
-    <div class='goTop' id="goTop">
+    <!-- <div class='goTop' id="goTop">
       <i></i>
       <div>返回顶部</div>
-    </div>
+    </div> -->
 
   </div>
   <script>

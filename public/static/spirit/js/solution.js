@@ -7,9 +7,9 @@ window.onload = function () {
     // 返回顶部
     window.onscroll = function () {
         var top = document.body.scrollTop || document.documentElement.scrollTop;
-        console.log(top);
+        // console.log(top);
 
-        if (top >= 400) {
+        if (top >= 1080) {
 
             goTop.style.display = "block"
             navBox.style.display = "none"
@@ -44,7 +44,7 @@ window.onload = function () {
                     itemImg[i].classList.remove('item-imgbg-active')
                 }
             }
-        } else if (top < 400) {
+        } else if (top < 1080) {
 
             // 返回顶部样式
             goTop.style.display = "none"
