@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576568606;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576569837;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -419,18 +419,18 @@
                     <div class="navList">
                         <dl>
                             <dt>惠企云旗下产品</dt>
-                            <dd><a href="javascript:;">惠灵工</a></dd>
-                            <dd><a href="javascript:;">惠优税</a></dd>
-                            <dd><a href="javascript:;">惠多薪</a></dd>
-                            <dd><a href="javascript:;">惠创业</a></dd>
-                            <dd><a href="javascript:;">惠找事</a></dd>
+                            <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
+                            <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
+                            <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
+                            <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
+                            <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
                         </dl>
                         <dl>
                             <dt>惠灵工</dt>
-                            <dd><a href="javascript:;">行业解决方案</a></dd>
-                            <dd><a href="javascript:;">产品服务</a></dd>
-                            <dd><a href="javascript:;">客户案例</a></dd>
-                            <dd><a href="javascript:;">招商合作</a></dd>
+                            <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
+                            <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
+                            <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
+                            <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
                         </dl>
                         <dl>
                             <dt>客服热线</dt>

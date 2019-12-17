@@ -826,34 +826,18 @@ a {
     line-height: 1.125rem;
 }
 
-.bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(1) a:hover,
-.bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(2) a:hover {
+.bottomBox .bottom .navBottom .navList dl:first-child dd a:hover {
     color: rgba(220, 220, 220, 1);
     cursor: pointer;
-
-}
-
-.bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(3) a,
-.bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(4) a,
-.bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(5) a {
-    color: rgba(220, 220, 220, 0.5);
-    cursor: default;
 }
 
 .bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(5) {
     margin: 0;
 }
 
-.bottomBox .bottom .navBottom .navList dl:nth-child(2) dd:nth-of-type(1) a:hover,
-.bottomBox .bottom .navBottom .navList dl:nth-child(2) dd:nth-of-type(2) a:hover,
-.bottomBox .bottom .navBottom .navList dl:nth-child(2) dd:nth-of-type(3) a:hover {
+.bottomBox .bottom .navBottom .navList dl:nth-child(2) dd a:hover {
     color: rgba(220, 220, 220, 1);
     cursor: pointer;
-}
-
-.bottomBox .bottom .navBottom .navList dl:nth-child(2) dd:nth-of-type(4) a:hover {
-    color: rgba(220, 220, 220, 0.5);
-    cursor: default;
 }
 
 .bottomBox .bottom .navBottom .navList dl:nth-child(3) dd,
