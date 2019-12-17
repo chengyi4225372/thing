@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"/opt/web/thing/public/../application/home/view/index/productservice.html";i:1576483356;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"/opt/web/thing/public/../application/home/view/index/productservice.html";i:1576568153;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +19,7 @@
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src="/static/spirit/js/spirit.js"></script>
     <script src='/static/common/js/public.js'></script>
-    <script src='/static/spirit/js/product_service.js'></script>
+    <script src='/static/spirit/js/product _service.js'></script>
     <script src='/static/spirit/js/spirit.js'></script>
 
 </head>
@@ -319,7 +319,7 @@
                 <div class="aboutUs">
                     <span>关于我们</span>
                     <p>
-                        惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！
+                        惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
                     </p>
                 </div>
                 <div class="w navBottom">
@@ -333,22 +333,22 @@
                             <dd><a href="javascript:;">惠找事</a></dd>
                         </dl>
                         <dl>
-                            <dt>资讯信息</dt>
-                            <dd><a href="javascript:;">行业资讯</a></dd>
-                            <dd><a href="javascript:;">招商政策</a></dd>
-                            <dd><a href="javascript:;">招标信息</a></dd>
+                            <dt>惠灵工</dt>
+                            <dd><a href="javascript:;">行业解决方案</a></dd>
+                            <dd><a href="javascript:;">产品服务</a></dd>
+                            <dd><a href="javascript:;">客户案例</a></dd>
+                            <dd><a href="javascript:;">招商合作</a></dd>
                         </dl>
                         <dl>
-                            <dt>招商合作</dt>
-                            <dd><a href="javascript:;">招募合伙人</a></dd>
+                            <dt>客服热线</dt>
+                            <dd>400-150-9896</dd>
+                            <dd>18186194461</dd>
                         </dl>
                         <dl>
-                            <dt>联系我们</dt>
-                            <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
-                            <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
-                            <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
-                            <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
-                            <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
+                            <dt>办公地址</dt>
+                            <dd>武汉市硚口区南国大武汉H座</dd>
+                            <dd>深圳市福田区第一世界广场A座</dd>
+                            <dd>北京市西城区贵都国际中心B座</dd>
                         </dl>
                     </div>
 
@@ -377,11 +377,47 @@
 
         </div>
 
+        <!-- 侧边栏bottom资讯 -->
+        <div class="bottom-left">
+            <div>
+                <div class="bottom-title">惠家族产品</div>
+                <div class="bottom-item">
+                    <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
+                    <ul>
+                        <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                        <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                        <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
+                        <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="bottom-title2">联系我们</div>
+                <div class="bottom-item2">
+                    <div>
+                        <p>立即预约咨询</p>
+                        <p>181-8619-4461</p>
+                    </div>
+                    <div>
+                        <p>获取税筹方案</p>
+                        <p>400-150-9898</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 返回顶部 -->
+            <div class='goTop' id="goTop">
+                <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
+                <div>顶部</div>
+            </div>
+        </div>
+
         <!-- 返回顶部 -->
-        <div class='goTop' id="goTop">
+        <!-- <div class='goTop' id="goTop">
             <i></i>
             <div>返回顶部</div>
-        </div>
+        </div> -->
 
         <!-- 弹框 -->
         <div class="pop-up-box" id="popbox">
