@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1576231840;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1576499076;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +47,7 @@
             <li><a href="javascript:;">产品服务</a></li>
             <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
             <li class="nav-active"><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
-            <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
+            <li><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
             <!--<li>-->
             <!--<?php if(empty($userinfo['userType'])): ?>-->
             <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
@@ -116,7 +116,7 @@
           <b class="current">案例详情</b></div>
         <div class='pic_total'>
           <div class='pic_title'><?php echo $list['title']; ?></div>
-          <div class='time'><?php echo date('Y-m-d H:i:s',$list['add_time']); ?></div>
+          <div class='time'><?php echo $list['create_time']; ?></div>
           <div class='line'></div>
           <div class='tuwen'>
             <div class='wenzi'>

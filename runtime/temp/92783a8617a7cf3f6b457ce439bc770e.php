@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576476343;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576562049;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,36 +114,23 @@
         <div class="bg_tab">
             <div class="tabBox w">
                 <ul class="clearfix">
-                    <!-- <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+
+                    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                     <li>
-                        <div class="item-img"><img src="<?php echo $item['pic']; ?>" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                <?php echo $item['title']; ?>
-                            </p>
-                            <p>
-                                <?php echo $item['describe']; ?>
-                            </p>
-                            <a href="<?php echo url('/home/index/casedetail',['id' => $item['id']]); ?>"> 查看案例>> </a>
-                        </div>
-                    </li>
-                    <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?> -->
-                    <li>
-                        <a href="<?php echo url('/home/index/casedetail'); ?>">
+                        <a href="<?php echo url('/home/index/casedetail',['id'=>$vo['id']]); ?>">
                             <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem1.png" alt="">
+                                <img src="<?php echo !empty($vo['imgs'])?$vo['imgs']:''; ?>" alt="">
                             </div>
                             <div class="item-content">
-                                <p>
-                                    直销类企业如何避免税务合规风险，提升企业劳动力效能风险，提升企业劳动力效能？
-                                </p>
-                                <p>
-                                    随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始风险，提升企业劳动力效能元化用工方式。
-                                </p>
+                                <p><?php echo $vo['title']; ?></p>
+                                <p><?php echo mb_substr($vo['describes'],'0','38','utf-8'); ?></p>
+                                <div>查看详情</div>
                             </div>
-                            <div class="item-comtent-more">查看详情</div>
                         </a>
                     </li>
+                    <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
+
+                    <!--
                     <li>
                         <a href="">
                             <div class="item-img">
@@ -280,6 +267,7 @@
 
                         </a>
                     </li>
+                    -->
                 </ul>
             </div>
         </div>
@@ -293,7 +281,7 @@
             <div class="aboutUs">
                 <span>关于我们</span>
                 <p>
-                    惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！
+                    惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
                 </p>
             </div>
             <div class="w navBottom">
@@ -307,22 +295,22 @@
                         <dd><a href="javascript:;">惠找事</a></dd>
                     </dl>
                     <dl>
-                        <dt>资讯信息</dt>
-                        <dd><a href="javascript:;">行业资讯</a></dd>
-                        <dd><a href="javascript:;">招商政策</a></dd>
-                        <dd><a href="javascript:;">招标信息</a></dd>
+                        <dt>惠灵工</dt>
+                        <dd><a href="javascript:;">行业解决方案</a></dd>
+                        <dd><a href="javascript:;">产品服务</a></dd>
+                        <dd><a href="javascript:;">客户案例</a></dd>
+                        <dd><a href="javascript:;">招商合作</a></dd>
                     </dl>
                     <dl>
-                        <dt>招商合作</dt>
-                        <dd><a href="javascript:;">招募合伙人</a></dd>
+                        <dt>客服热线</dt>
+                        <dd><a href="javascript:;">400-150-9896</a></dd>
+                        <dd><a href="javascript:;">18186194461</a></dd>
                     </dl>
                     <dl>
-                        <dt>联系我们</dt>
-                        <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
-                        <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
-                        <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
-                        <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
-                        <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
+                        <dt>办公地址</dt>
+                        <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
+                        <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
+                        <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
                     </dl>
                 </div>
 
@@ -344,7 +332,8 @@
                 </ul>
             </div>
         </div>
-        <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights Reserved&nbsp;ICP证
+        <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+            Reserved&nbsp;ICP证
             :
             鄂ICP备16008680号-3</div>
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576456706;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576563295;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="/static/spirit/css/product _service.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/spirit/js/clamp.js"></script>
-    <script src="/static/assets/plugins/layui/layui.js"></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src="/static/spirit/js/spirit.js"></script>
     <script src='/static/common/js/public.js'></script>
-    <script src='/static/spirit/js/product _service.js'></script>
+    <script src='/static/spirit/js/product_service.js'></script>
+    <script src='/static/spirit/js/spirit.js'></script>
 
 </head>
 
@@ -308,7 +309,7 @@
         <!-- 联系我们 -->
         <div class="cellme-box">
             <div class="w cellme">
-                <div>立即咨询</div>
+                <div onclick="GetErp()">立即咨询</div>
             </div>
         </div>
 
@@ -318,7 +319,7 @@
                 <div class="aboutUs">
                     <span>关于我们</span>
                     <p>
-                        惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！
+                        惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
                     </p>
                 </div>
                 <div class="w navBottom">
@@ -332,22 +333,22 @@
                             <dd><a href="javascript:;">惠找事</a></dd>
                         </dl>
                         <dl>
-                            <dt>资讯信息</dt>
-                            <dd><a href="javascript:;">行业资讯</a></dd>
-                            <dd><a href="javascript:;">招商政策</a></dd>
-                            <dd><a href="javascript:;">招标信息</a></dd>
+                            <dt>惠灵工</dt>
+                            <dd><a href="javascript:;">行业解决方案</a></dd>
+                            <dd><a href="javascript:;">产品服务</a></dd>
+                            <dd><a href="javascript:;">客户案例</a></dd>
+                            <dd><a href="javascript:;">招商合作</a></dd>
                         </dl>
                         <dl>
-                            <dt>招商合作</dt>
-                            <dd><a href="javascript:;">招募合伙人</a></dd>
+                            <dt>客服热线</dt>
+                            <dd>400-150-9896</dd>
+                            <dd>18186194461</dd>
                         </dl>
                         <dl>
-                            <dt>联系我们</dt>
-                            <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
-                            <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
-                            <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
-                            <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
-                            <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
+                            <dt>办公地址</dt>
+                            <dd>武汉市硚口区南国大武汉H座</dd>
+                            <dd>深圳市福田区第一世界广场A座</dd>
+                            <dd>北京市西城区贵都国际中心B座</dd>
                         </dl>
                     </div>
 
