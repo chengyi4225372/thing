@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576567432;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576639614;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,7 +124,7 @@
         <div class="serves-box">
             <div class="w serves">
                 <div class="serves-title">
-                    <h2>共享经济服务平台</h2>
+                    <h2>惠灵工-共享经济新浪潮&nbsp开启灵活用工新模式</h2>
                 </div>
                 <div class="serves-title-content">
                     <p>创新灵活用工、财税优化解决方案-打通应用工具与服务，提升企业劳动力管<br>理能力-打造国内领先标准化灵活用工综合服务体系</p>
@@ -358,7 +358,7 @@
                                 <img src="/static/spirit/images/weixincode.png" alt="">
                             </div>
                             <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                            <i>及时获一手财税信息</i>
+                            <i>及时获知一手财税信息</i>
                         </li>
                         <li>
                             <div class="pic">
