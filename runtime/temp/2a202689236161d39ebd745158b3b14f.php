@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1576638536;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1576650666;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576650303;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,8 +96,7 @@
         <div>新闻资讯</div>
         <div></div>
         <p>
-          不同行业的业务特点和管理要求差别很大，但无论是哪个行业的企业，都会有三个基本诉求：<br>
-          经营合法合规、 降低企业成本、 规避意外风险!
+          共享经济新浪潮 开启灵活用工新模式
         </p>
       </div>
     </div>

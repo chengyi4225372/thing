@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576647794;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576650578;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576650303;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,8 +96,7 @@
         <h2>行业解决方案</h2>
         <p></p>
         <p>
-          不同行业的业务特点和管理要求差别很大，但无论是哪个行业的企业，都会有三个基本诉求：<br>
-          经营合法合规、 降低企业成本、 规避意外风险，惠灵工针对不同行业需求提出定制解决方案，帮助企业从容应对行业挑战。
+          创新灵活用工的财税优化解决方案，打造全国领先一站式互联网专业平台
         </p>
       </div>
     </div>
@@ -195,11 +194,11 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案优势</h2>
+                <h2>方案价值</h2>
               </div>
 
               <div class="plan-advantage-content">
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
               </div>
               <div class="plan-advantage-wm-items">
                 <ul class="clearfix">
@@ -330,12 +329,12 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案优势</h2>
+                <h2>方案价值</h2>
               </div>
 
               <div class="plan-advantage-content">
 
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
 
               </div>
               <div class="plan-advantage-items">
@@ -463,7 +462,7 @@
               </div>
 
               <div class="plan-advantage-content">
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
 
               </div>
               <div class="plan-advantage-wm-items">
@@ -577,11 +576,9 @@
               </div>
 
               <div class="solution-content">
-
                 制造业企业和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
                 平台为零售机构开具增值税专用发票，同时惠灵工平台帮助灵活用工人员、新招聘员工等转化为创客身份，<br>
                 平衡制造业企业的季节性用工需求，也为用工低谷期的劳务人员提供更多行业选择。
-
               </div>
               <div class="solution-flow-chart">
                 <div>
@@ -598,12 +595,12 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案优势</h2>
+                <h2>方案价值</h2>
               </div>
 
               <div class="plan-advantage-content">
 
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
 
               </div>
               <div class="plan-advantage-items">
@@ -738,7 +735,7 @@
               </div>
 
               <div class="plan-advantage-content">
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
 
               </div>
               <div class="plan-advantage-wm-items">

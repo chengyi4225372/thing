@@ -437,7 +437,8 @@ input:-webkit-autofill {
 
 .nav-container .loging {
     float: right;
-    margin: .75rem 0 0 4.375rem;
+    margin: .1875rem 0 0 4.375rem;
+    /* margin: 0 0 0 4.375rem; */
 }
 
 .nav-container .loging div {
@@ -457,7 +458,7 @@ input:-webkit-autofill {
     font-size: 1rem;
     font-family: Source Han Sans CN;
     font-weight: 400;
-    color: rgba(255, 255, 255, 1);
+    color: #03053A;
     line-height: 2.5rem;
 }
 
@@ -469,12 +470,12 @@ input:-webkit-autofill {
 .nav-container .loging div:nth-child(2) {
     border-left: 0;
     border-radius: 0 .25rem .25rem 0;
-    background-color: #fff;
-    color: #2F80ED;
+    background-color: #03053A;
+    /* color: #03053A; */
 }
 
 .nav-container .loging div:nth-child(2) a {
-    color: #2F80ED;
+    color: #FFFFFF;
 }
 
 .enterprise-portal {
