@@ -22,7 +22,7 @@ function checkPhone(phone) {
 }
 
 //接口 公海
-var gurl = "http://47.105.48.137:8089";
+var gurl = "http://172.26.3.8:8089";
 
 var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
 
@@ -255,7 +255,7 @@ function showSearch(){
 
 //清除关键字
 function onclick_close(){
-    $('#keyword').val('');
+    $('#').html('');
 }
 
 
