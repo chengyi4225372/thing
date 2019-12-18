@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576666558;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576660953;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576666558;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576671216;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576666558;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,40 +59,20 @@
 
 
 
-        <!-- 登陆注册 -->
-        <!--<?php if(empty($userinfo['mobile'])): ?>-->
-        <!-- <div class="loging clearfix">
+         <!--登陆注册-->
+        <?php if(empty($userinfo['mobile'])): ?>
+         <div class="loging clearfix">
           <div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>"
               loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">
               登录
             </a></div>
           <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
-        </div> -->
-        <!--<?php else: ?>-->
-        <!--<div>-->
-        <!--<?php if(empty($userinfo['mobile'])): ?>
-<div class="loging clearfix">
-    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-            登陆
-        </a></div>
-    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
-</div>
-<?php else: ?>
-<div class="u_info">
-    <div>
-        <div class="u_info_img">
-            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
         </div>
-        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
-    </div>
-    <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
-            location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
-    </div>
-</div>
-<?php endif; ?>-->
-        <!--</div>-->
-        <!--<?php endif; ?>-->
+        <?php else: ?>
+        <div>
+          <?php echo $userinfo['mobile']; ?>
+        </div>
+        <?php endif; ?>
       </div>
 
     </div>

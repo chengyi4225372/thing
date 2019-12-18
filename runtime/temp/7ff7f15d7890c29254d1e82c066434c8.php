@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"/opt/web/thing/public/../application/home/view/index/productservice.html";i:1576651404;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576651713;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"/opt/web/thing/public/../application/home/view/index/productservice.html";i:1576660953;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576660953;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576666558;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,21 +76,25 @@
                 <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
                 <!--</div>-->
                 <!--<?php else: ?>-->
-                <!--<div class="u_info">-->
+                <!--<div>-->
                 <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-        登陆
-    </a></div>
+            登陆
+        </a></div>
     <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
 </div>
 <?php else: ?>
 <div class="u_info">
-    <img src="/static/spirit/images/user_img.png"
-         style="width:30px;height:30px; vertical-align: middle;">
-    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
     <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?>-->
@@ -124,7 +128,7 @@
         <div class="serves-box">
             <div class="w serves">
                 <div class="serves-title">
-                    <h2>惠灵工-共享经济新浪潮&nbsp开启灵活用工新模式</h2>
+                    <h2>共享经济服务平台</h2>
                 </div>
                 <div class="serves-title-content">
                     <p>创新灵活用工、财税优化解决方案-打通应用工具与服务，提升企业劳动力管<br>理能力-打造国内领先标准化灵活用工综合服务体系</p>
@@ -197,8 +201,7 @@
         <div class="difficulty-box2">
             <div class="w difficulty-box2-content">
                 <div><img src="/static/spirit/images/difficulty-box2Icon.png" alt=""></div>
-                <div>企业将业务标准化后发布至惠灵工灵活用工服务平台，个人通过平台认证转变为创客身份
-                    平台将为企业和个人（创客）提供自动审核申报、高效结算等智能化服务</div>
+                <div>企业将业务标准化后发布至惠灵工灵活用工服务平台，个人通过平台认证转变为创客身份<br>平台将为企业和个人（创客）提供自动审核申报、高效结算等智能化服务</div>
             </div>
         </div>
 
@@ -241,11 +244,11 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/weiShangHangye.png" alt="">
+                                <img src="/static/spirit/images/waiMaiHangYe.png" alt="">
                             </div>
                             <div class="reason-content-text">
-                                <h3>微商行业</h3>
-                                <p>微商采取的差价/抽佣模式是个人代理关系</p>
+                                <h3>外卖行业</h3>
+                                <p>商家平台和运送员之间是个人合作关系</p>
                             </div>
                         </li>
                         <li>
@@ -272,7 +275,7 @@
                             </div>
                             <div class="reason-content-text">
                                 <h3>新物流行业</h3>
-                                <p>物流平台与运送人员（例外卖员）是个人合作关系</p>
+                                <p>物流平台与运送人员是个人合作关系</p>
                             </div>
                         </li>
                         <li>
@@ -290,7 +293,7 @@
                             </div>
                             <div class="reason-content-text">
                                 <h3>新零售行业</h3>
-                                <p>零售机构与社会营销人员是个人合作关系 </p>
+                                <p>零售机构与社会营销人员是个人合作关系</p>
                             </div>
                         </li>
                         <li>
@@ -359,7 +362,7 @@
                         <img src="/static/spirit/images/weixincode.png" alt="">
                     </div>
                     <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                    <i>及时获知一手财税消息</i>
+                    <i>及时获知一手财税信息</i>
                 </li>
                 <li>
                     <div class="pic">

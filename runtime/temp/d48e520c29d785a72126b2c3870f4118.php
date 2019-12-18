@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"/opt/web/thing/public/../application/home/view/index/solution.html";i:1576652093;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576651713;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"/opt/web/thing/public/../application/home/view/index/solution.html";i:1576666558;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576660953;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576666558;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,21 +66,25 @@
         <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
         <!--</div>-->
         <!--<?php else: ?>-->
-        <!--<div class="u_info">-->
+        <!--<div>-->
         <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-        登陆
-    </a></div>
+            登陆
+        </a></div>
     <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
 </div>
 <?php else: ?>
 <div class="u_info">
-    <img src="/static/spirit/images/user_img.png"
-         style="width:30px;height:30px; vertical-align: middle;">
-    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
     <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?>-->
@@ -128,9 +132,11 @@
                 <h2>行业现状</h2>
               </div>
               <div class="status-industry-content">
+
                 国内外卖行业服务人群与服务场景外延渐成趋势，外卖竞争已上升到本地生活层面。<br>
                 外卖配送企业一般代理外卖平台的配送业务,外卖配送企业面临着配送员的劳动关系合规和财税合规问题等用工挑战。<br>
                 惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+
               </div>
               <div class="status-industry-wm">
                 <div class="status-industry-wm-imgs status-industry-wm-imgs-icon">
@@ -187,14 +193,14 @@
                 </div>
               </div>
               <div class="solution-footer">
-                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
                 为外卖配送企业合规避免劳动用工风险，为配送行业人员提升劳动收益和服务保障。
               </div>
             </div>
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -322,14 +328,16 @@
                 </div>
               </div>
               <div class="solution-footer">
-                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
-                为制造业企业合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
+
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
+                为新物流企业合规避免劳动用工风险，为物流行业人员提升劳动收益和服务保障
+
               </div>
             </div>
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -345,9 +353,7 @@
                     </div>
                     <p class="plan-advantage-item-title">降低企业成本</p>
                     <p class="plan-advantage-item-content">
-                      基于国家减税降赋政策，优化企业人力架构方案
-                      有效匹配实际业务需求进行资源优化，实现科学
-                      合理用工
+                      基于国家减税降赋政策，优化企业人力架构方案有效匹配实际业务需求进行资源优化，实现科学合理用工
                     </p>
                   </li>
                   <li>
@@ -356,8 +362,7 @@
                     </div>
                     <p class="plan-advantage-item-title">规避用工风险</p>
                     <p class="plan-advantage-item-content">
-                      将工作任务由传统的按职位划分转变为按项目划分
-                      平台化规范管理，合理降低企业用工风险
+                      将工作任务由传统的按职位划分转变为按项目划分平台化规范管理，合理降低企业用工风险
                     </p>
                   </li>
                   <li>
@@ -367,8 +372,7 @@
                     <p class="plan-advantage-item-title">提高个人收入</p>
                     <p class="plan-advantage-item-content">
 
-                      个人（运送人员）在线简单操作，流程
-                      科学高效，降低个税扣除，增加个人收入
+                      个人（运送人员）在线简单操作，流程科学高效，降低个税扣除，增加个人收入
 
                     </p>
                   </li>
@@ -385,9 +389,11 @@
               </div>
               <div class="status-industry-content">
 
+
                 中国的零售企业一方面面临市场竞争的压力，另一方面又面临人力成本上升的压力，要维持合理的毛利率以及人均销售额，<br>
                 是各个零售厂商都要面对的挑战，很多传统企业寻求转型，选择通过社会化营销人员来分销，但是目前行业市场混乱,利润也被逐渐拉低，<br>
                 让劳动力转换成企业的竞争力是每个零售企业的核心目标之一。惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+
 
               </div>
               <div class="status-industry-wm">
@@ -437,9 +443,11 @@
               <div class="solution-content">
 
 
+
                 零售机构和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
                 平台将为零售机构开具增值税专用发票，同时惠灵工平台帮助社会化营销人员（例微商、kol等）转化为创客身份，<br>
                 享受国家税收优惠政策并具备自行购买社保资格。
+
 
 
               </div>
@@ -450,15 +458,17 @@
               </div>
               <div class="solution-footer">
 
-                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
-                为咨询培训平台合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
+
+                通过惠灵工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
+                为零售机构合规避免劳动用工风险，为社会化营销人员提升劳动收益和服务保障。
+
 
               </div>
             </div>
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -517,7 +527,9 @@
                 <h2>行业现状</h2>
               </div>
               <div class="status-industry-content">
-                劳动力短缺、成本增加、产能过剩及全球经济的疲软制约了制造业企业的发展，中国的工业运营和生产企业面临着来自劳动力管理越来越多的挑战。<br>企业需要提高劳动力生产效率，符合劳动力法规要求，并降低劳动力管理成本，以便在当今竞争激烈的全球市场上取得成功。<br>惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+                劳动力短缺、成本增加、产能过剩及全球经济的疲软制约了制造业企业的发展，<br>
+                中国的工业运营和生产企业面临着来自劳动力管理越来越多的挑战。企业需要提高劳动力生产效率，符合劳动力法规要求，并降低劳动力管理成本，<br>
+                以便在当今竞争激烈的全球市场上取得成功。惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
               </div>
               <div class="status-industry-items">
                 <ul class="clearfix">
@@ -560,7 +572,7 @@
                       <h3>模式不规范</h3>
                       <div>
                         <p>
-                          行业多种模式并存，主体关系混乱（全职、临时工等），统一标准化合同缺乏，企业用工风险高。
+                          行业多种模式并存，主体关系混乱（全职、临时工等），统一标准化合同缺乏，企业用工风险高。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -576,8 +588,8 @@
               </div>
 
               <div class="solution-content">
-                制造业企业和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
-                平台为零售机构开具增值税专用发票，同时惠灵工平台帮助灵活用工人员、新招聘员工等转化为创客身份，<br>
+                制造业企业和惠灵工平台达成合作，结算费用通过惠灵工平台下发，平台为零售机构开具增值税专用发票，<br>
+                同时惠灵工平台帮助灵活用工人员、新招聘员工等转化为创客身份，<br>
                 平衡制造业企业的季节性用工需求，也为用工低谷期的劳务人员提供更多行业选择。
               </div>
               <div class="solution-flow-chart">
@@ -595,7 +607,7 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -611,8 +623,7 @@
                     </div>
                     <p class="plan-advantage-item-title">降低企业成本</p>
                     <p class="plan-advantage-item-content">
-                      基于国家减税降赋政策，优化企业人力架构方案
-                      依托平台共享海量人才，为企业降本增效
+                      基于国家减税降赋政策，优化企业人力架构方案依托平台共享海量人才，为企业降本增效
                     </p>
                   </li>
                   <li>
@@ -622,8 +633,7 @@
                     <p class="plan-advantage-item-title">提高个人收入</p>
                     <p class="plan-advantage-item-content">
 
-                      在线简单操作，流程科学高效
-                      提升个人待遇，保障个人收入
+                      在线简单操作，流程科学高效提升个人待遇，保障个人收入
 
                     </p>
                   </li>
@@ -634,8 +644,7 @@
                     <p class="plan-advantage-item-title">优化用工管理</p>
                     <p class="plan-advantage-item-content">
 
-                      建立基础用工保障，打破松散的工人组织
-                      平台化规范管理，合理降低企业用工风险
+                      建立基础用工保障，打破松散的工人组织平台化规范管理，合理降低企业用工风险
 
                     </p>
                   </li>
@@ -722,8 +731,10 @@
               <div class="solution-footer">
 
 
-                通过惠灵工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
-                为零售机构合规避免劳动用工风险，为社会化营销人员提升劳动收益和服务保障。
+
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
+                为咨询培训平台合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
+
 
 
               </div>
@@ -731,7 +742,7 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -747,7 +758,7 @@
                       <div>
                         <p>基于国家减税降赋政策</p>
                         <p>优化企业人力架构方案</p>
-                        <p>依托平台共享&nbsp海量人才</p>
+                        <p>依托平台共享海量人才</p>
                         <p>为企业降本增效</p>
                       </div>
                     </div>
@@ -757,8 +768,8 @@
                       <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
                       <p>优化用工管理</p>
                       <div>
-                        <p>将工作任务由传统的按职位划分转变为按项目划分</p>
-                        <p>平台化规范管理</p>
+                        <p>将工作任务由传统的按职位划分转变</p>
+                        <p>为按项目划分平台化规范管理</p>
                         <p>合理降低企业用工风险</p>
                       </div>
                     </div>
@@ -830,7 +841,7 @@
                         <img src="/static/spirit/images/weixincode.png" alt="">
                     </div>
                     <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                    <i>及时获知一手财税消息</i>
+                    <i>及时获知一手财税信息</i>
                 </li>
                 <li>
                     <div class="pic">
@@ -848,7 +859,7 @@
         鄂ICP备16008680号-3</div>
 
 </div>
-    
+
 
 
     <!-- 侧边栏bottom资讯 -->

@@ -448,7 +448,7 @@ a {
     width: 5.375rem;
     height: 2.375rem;
     background: rgba(255, 255, 255, 0);
-    border: 1px solid rgba(191, 191, 191, 1);
+    /*border: 1px solid rgba(191, 191, 191, 1);*/
     text-align: center;
     line-height: 2.375rem;
 }
@@ -465,11 +465,13 @@ a {
 }
 
 .nav-container .loging div:nth-child(1) {
+    border: 1px solid rgba(191, 191, 191, 1);
     border-right: 0;
     border-radius: .25rem 0px 0px .25rem;
 }
 
 .nav-container .loging div:nth-child(2) {
+    border: 1px solid #03053A;
     border-left: 0;
     border-radius: 0 .25rem .25rem 0;
     background-color: #03053A;

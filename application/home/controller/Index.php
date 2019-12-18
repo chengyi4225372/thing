@@ -114,7 +114,7 @@ class Index extends BaseController
         $this->assign('list',$data);
         */
         $title = input('get.title','','trim');
-        $title  = !empty($title)?$title:'';
+        $title  = $title?$title:'';
         $data = Exampleservice::instance()->getalllist($title);
         $this->assign('list',$data);
         return $this->fetch();
