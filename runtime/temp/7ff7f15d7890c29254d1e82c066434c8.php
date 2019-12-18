@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"/opt/web/thing/public/../application/home/view/index/productservice.html";i:1576568153;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"/opt/web/thing/public/../application/home/view/index/productservice.html";i:1576651404;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576651713;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,7 +124,7 @@
         <div class="serves-box">
             <div class="w serves">
                 <div class="serves-title">
-                    <h2>共享经济服务平台</h2>
+                    <h2>惠灵工-共享经济新浪潮&nbsp开启灵活用工新模式</h2>
                 </div>
                 <div class="serves-title-content">
                     <p>创新灵活用工、财税优化解决方案-打通应用工具与服务，提升企业劳动力管<br>理能力-打造国内领先标准化灵活用工综合服务体系</p>
@@ -146,7 +146,7 @@
                                 <p>合作平台化</p>
                             </div>
                             <div></div>
-                            <div>转型传统雇佣模式， 企业和个人（创客）分别与平台签订协议，责任职责明确</div>
+                            <div>转型传统雇佣模式， 企业和个人（创客）分别与平台签订协议，责任职责明确。</div>
                         </div>
                         <div class="difficulty1-right">
                             <img src="/static/spirit/images/imgHZPT.png" alt="">
@@ -159,7 +159,7 @@
                                 <p>系统智能化</p>
                             </div>
                             <div></div>
-                            <div>专业智能系统满足订单接发、身份查验等操作，在线获取专业财税服务，助力企业发展</div>
+                            <div>专业智能系统满足订单接发、身份查验等操作，在线获取专业财税服务，助力企业发展。</div>
                         </div>
                         <div class="difficulty1-right">
                             <img src="/static/spirit/images/imgXTZNH.png" alt="">
@@ -172,7 +172,7 @@
                                 <p>服务合规化</p>
                             </div>
                             <div></div>
-                            <div>基于诚信纳税法律义务，个人（创客）享受更低个税核定，企业取得合规发票，劳务成本转为项目承包费用，项目外包转移风险，解决社保问题</div>
+                            <div>基于诚信纳税法律义务，个人（创客）享受更低个税核定，企业取得合规发票，劳务成本转为项目承包费用，项目外包转移风险，解决社保问题。</div>
                         </div>
                         <div class="difficulty1-right">
                             <img src="/static/spirit/images/imgFWHGH.png" alt="">
@@ -185,7 +185,7 @@
                                 <p>运营高效化</p>
                             </div>
                             <div></div>
-                            <div>资深法务、税筹专家一对一，服务流、资金流、发票流一站式解决，释放职能部门，聚焦业务，提升企业效能</div>
+                            <div>资深法务、税筹专家一对一，服务流、资金流、发票流一站式解决，释放职能部门，聚焦业务，提升企业效能。</div>
                         </div>
                         <div class="difficulty1-right">
                             <img src="/static/spirit/images/imgYYGXH.png" alt="">
@@ -197,7 +197,8 @@
         <div class="difficulty-box2">
             <div class="w difficulty-box2-content">
                 <div><img src="/static/spirit/images/difficulty-box2Icon.png" alt=""></div>
-                <div>企业将业务标准化后发布至惠灵工灵活用工服务平台，个人通过平台认证转变为创客身份<br>平台将为企业和个人（创客）提供自动审核申报、高效结算等智能化服务</div>
+                <div>企业将业务标准化后发布至惠灵工灵活用工服务平台，个人通过平台认证转变为创客身份
+                    平台将为企业和个人（创客）提供自动审核申报、高效结算等智能化服务</div>
             </div>
         </div>
 
@@ -294,7 +295,7 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/zhiXiaoHangye.png" alt="">
+                                <img src="/static/spirit/images/zhiZaoHangYe.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>制造行业</h3>
@@ -315,109 +316,105 @@
 
         <!-- 底部 -->
         <div class="bottomBox">
-            <div class="w bottom">
-                <div class="aboutUs">
-                    <span>关于我们</span>
-                    <p>
-                        惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
-                    </p>
-                </div>
-                <div class="w navBottom">
-                    <div class="navList">
-                        <dl>
-                            <dt>惠企云旗下产品</dt>
-                            <dd><a href="javascript:;">惠灵工</a></dd>
-                            <dd><a href="javascript:;">惠优税</a></dd>
-                            <dd><a href="javascript:;">惠多薪</a></dd>
-                            <dd><a href="javascript:;">惠创业</a></dd>
-                            <dd><a href="javascript:;">惠找事</a></dd>
-                        </dl>
-                        <dl>
-                            <dt>惠灵工</dt>
-                            <dd><a href="javascript:;">行业解决方案</a></dd>
-                            <dd><a href="javascript:;">产品服务</a></dd>
-                            <dd><a href="javascript:;">客户案例</a></dd>
-                            <dd><a href="javascript:;">招商合作</a></dd>
-                        </dl>
-                        <dl>
-                            <dt>客服热线</dt>
-                            <dd>400-150-9896</dd>
-                            <dd>18186194461</dd>
-                        </dl>
-                        <dl>
-                            <dt>办公地址</dt>
-                            <dd>武汉市硚口区南国大武汉H座</dd>
-                            <dd>深圳市福田区第一世界广场A座</dd>
-                            <dd>北京市西城区贵都国际中心B座</dd>
-                        </dl>
-                    </div>
-
-                    <ul class="qrCode">
-                        <li>
-                            <div class="pic">
-                                <img src="/static/spirit/images/weixincode.png" alt="">
-                            </div>
-                            <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                            <i>及时获一手财税信息</i>
-                        </li>
-                        <li>
-                            <div class="pic">
-                                <img src="/static/spirit/images/weibocode.png" alt="">
-                            </div>
-                            <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
-                            <!-- <i>及时获一手财税信息</i> -->
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
-                Reserved&nbsp;ICP证
-                :
-                鄂ICP备16008680号-3</div>
-
+    <div class="w bottom">
+        <div class="aboutUs">
+            <span>关于我们</span>
+            <p>
+                惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+            </p>
         </div>
+        <div class="w navBottom">
+            <div class="navList">
+                <dl>
+                    <dt>惠企云旗下产品</dt>
+                    <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
+                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
+                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
+                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                </dl>
+                <dl>
+                    <dt>惠灵工</dt>
+                    <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
+                    <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
+                    <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
+                </dl>
+                <dl>
+                    <dt>客服热线</dt>
+                    <dd>400-150-9896</dd>
+                    <dd>18186194461</dd>
+                </dl>
+                <dl>
+                    <dt>办公地址</dt>
+                    <dd>武汉市硚口区南国大武汉H座</dd>
+                    <dd>深圳市福田区第一世界广场A座</dd>
+                    <dd>北京市西城区贵都国际中心B座</dd>
+                </dl>
+            </div>
+
+            <ul class="qrCode">
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weixincode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                    <i>及时获知一手财税消息</i>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weibocode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                    <!-- <i>及时获一手财税信息</i> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+        Reserved&nbsp;ICP证
+        :
+        鄂ICP备16008680号-3</div>
+
+</div>
+
+
 
         <!-- 侧边栏bottom资讯 -->
         <div class="bottom-left">
+    <div>
+        <div class="bottom-title">惠家族产品</div>
+        <div class="bottom-item">
+            <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
+            <ul>
+                <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
+                <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div class="bottom-title2">联系我们</div>
+        <div class="bottom-item2">
             <div>
-                <div class="bottom-title">惠家族产品</div>
-                <div class="bottom-item">
-                    <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
-                    <ul>
-                        <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
-                        <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
-                        <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
-                        <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
-                    </ul>
-                </div>
+                <p>立即预约咨询</p>
+                <p>181-8619-4461</p>
             </div>
             <div>
-                <div class="bottom-title2">联系我们</div>
-                <div class="bottom-item2">
-                    <div>
-                        <p>立即预约咨询</p>
-                        <p>181-8619-4461</p>
-                    </div>
-                    <div>
-                        <p>获取税筹方案</p>
-                        <p>400-150-9898</p>
-                    </div>
-                </div>
-            </div>
-            <!-- 返回顶部 -->
-            <div class='goTop' id="goTop">
-                <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
-                <div>顶部</div>
+                <p>获取税筹方案</p>
+                <p>400-150-9898</p>
             </div>
         </div>
-
-        <!-- 返回顶部 -->
-        <!-- <div class='goTop' id="goTop">
-            <i></i>
-            <div>返回顶部</div>
-        </div> -->
+    </div>
+    <!-- 返回顶部 -->
+    <div class='goTop' id="goTop">
+        <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
+        <div>顶部</div>
+    </div>
+</div>
 
         <!-- 弹框 -->
         <div class="pop-up-box" id="popbox">

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/thing/public/../application/home/view/index/solution.html";i:1576549533;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"/opt/web/thing/public/../application/home/view/index/solution.html";i:1576652093;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576651713;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,8 +96,7 @@
         <h2>行业解决方案</h2>
         <p></p>
         <p>
-          不同行业的业务特点和管理要求差别很大，但无论是哪个行业的企业，都会有三个基本诉求：<br>
-          经营合法合规、 降低企业成本、 规避意外风险，惠灵工针对不同行业需求提出定制解决方案，帮助企业从容应对行业挑战。
+          创新灵活用工的财税优化解决方案，打造全国领先一站式互联网专业平台
         </p>
       </div>
     </div>
@@ -155,7 +154,7 @@
                       <p>用工成本高</p><span class="status-btn" id="1"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-wm-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <p>外卖配送业务属刚需业务，但是门槛低，准入要求不高，员工素质参差不齐，员工流动性大。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -164,7 +163,7 @@
                       <p>周期不固定</p><span class="status-btn" id="2"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-wm-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <p>配送平台打款周期不定、存在多卡发薪等不合规的形式，影响骑手正常务工保障。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -184,22 +183,22 @@
               </div>
               <div class="solution-flow-wm-chart">
                 <div>
-                  <img src="/static/spirit/images/wmdongt.png" alt="">
+                  <img src="/static/spirit/images/wmdongt.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
-                通过惠零工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，
                 为外卖配送企业合规避免劳动用工风险，为配送行业人员提升劳动收益和服务保障。
               </div>
             </div>
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案优势</h2>
+                <h2>方案价值</h2>
               </div>
 
               <div class="plan-advantage-content">
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
               </div>
               <div class="plan-advantage-wm-items">
                 <ul class="clearfix">
@@ -208,10 +207,10 @@
                       <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
                       <p>降低企业成本</p>
                       <div>
-                        <p>个人（骑手）在线简单操作</p>
-                        <p>流程科学高效</p>
-                        <p>降低个税扣除</p>
-                        <p>增加个人收入</p>
+                        <p>基于国家减税降赋政策</p>
+                        <p>优化企业人力架构方案</p>
+                        <p>依托平台共享海量人才</p>
+                        <p>为企业降本增效</p>
                       </div>
                     </div>
                   </li>
@@ -233,10 +232,9 @@
                       <div><img src="/static/spirit/images/plan-advantage4.png" alt=""></div>
                       <p>规避用工风险</p>
                       <div>
-                        <p>个人（骑手）在线简单操作</p>
-                        <p>流程科学高效</p>
-                        <p>降低个税扣除</p>
-                        <p>增加个人收入</p>
+                        <p>将工作任务由传统的按职位划分转变为按项目划分</p>
+                        <p>平台化规范管理</p>
+                        <p>合理降低企业用工风险</p>
                       </div>
                     </div>
 
@@ -265,10 +263,25 @@
                       <div><img src="/static/spirit/images/xingWuLiuHangYe1.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
+                      <h3>模式不规范</h3>
+                      <div>
+                        <p>
+                          行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，用工风险盲区凸显，机构责任压力巨大。
+                        </p>
+                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="status-industry-item">
+                    <div class="status-industry-item-box1">
+                      <h3>劳动力短缺</h3>
+                      <div><img src="/static/spirit/images/xingWuLiuHangYe2.png" alt=""></div>
+                    </div>
+                    <div class="status-industry-item-box2">
                       <h3>劳动力短缺</h3>
                       <div>
                         <p>
-                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求
+                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -277,28 +290,13 @@
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
                       <h3>用工成本高</h3>
-                      <div><img src="/static/spirit/images/xingWuLiuHangYe1.png" alt=""></div>
-                    </div>
-                    <div class="status-industry-item-box2">
-                      <h3>成本增加</h3>
-                      <div>
-                        <p>
-                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求
-                        </p>
-                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="status-industry-item">
-                    <div class="status-industry-item-box1">
-                      <h3>全球经济疲软</h3>
                       <div><img src="/static/spirit/images/xingWuLiuHangYe3.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
-                      <h3>全球经济疲软</h3>
+                      <h3>用工成本高</h3>
                       <div>
                         <p>
-                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求
+                          物流务工人员准入要求不高，员工素质参差不齐，员工流动性大。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -320,23 +318,23 @@
               </div>
               <div class="solution-flow-chart">
                 <div>
-                  <img src="/static/spirit/images/zhizaoyedongtu.png" alt="">
+                  <img src="/static/spirit/images/xingWuLiuDongTu.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
-                通过惠零工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
                 为制造业企业合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
               </div>
             </div>
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案优势</h2>
+                <h2>方案价值</h2>
               </div>
 
               <div class="plan-advantage-content">
 
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
 
               </div>
               <div class="plan-advantage-items">
@@ -395,8 +393,8 @@
               <div class="status-industry-wm">
                 <div class="status-industry-wm-imgs status-industry-xls-imgs-icon">
                   <img class="wm-img-active" src="/static/spirit/images/xingLingShou1.png" alt="">
-                  <img src="/static/spirit/images/waimai2.png" alt="">
-                  <img src="/static/spirit/images/waimai3.png" alt="">
+                  <img src="/static/spirit/images/xingLingShou2.png" alt="">
+                  <img src="/static/spirit/images/xingLingShou3.png" alt="">
                 </div>
                 <!-- 折叠 -->
                 <div class="status-industry-wm-content" lay-accordion>
@@ -414,7 +412,7 @@
                       <p>用工成本高</p><span class="status-btn" id="4"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-xls-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大112。</p>
+                      <p>线下店面的业务配置大量员工，五险一金和福利，企业用工成本高。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -423,7 +421,7 @@
                       <p>管理无标准</p><span class="status-btn" id="5"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-xls-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <p>分销人员缺乏统一管理，统一标准化合同缺乏，企业面临用工风险、财税合规等问题。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -447,12 +445,12 @@
               </div>
               <div class="solution-flow-wm-chart">
                 <div>
-                  <img src="/static/spirit/images/wmdongt.png" alt="">
+                  <img src="/static/spirit/images/wmdongt.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
 
-                通过惠零工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
                 为咨询培训平台合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
 
               </div>
@@ -460,11 +458,11 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案优势</h2>
+                <h2>方案价值</h2>
               </div>
 
               <div class="plan-advantage-content">
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
 
               </div>
               <div class="plan-advantage-wm-items">
@@ -472,10 +470,10 @@
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
                       <div><img src="/static/spirit/images/plan-advantage4.png" alt=""></div>
-                      <p>降低企业成本</p>
+                      <p>规避用工风险</p>
                       <div>
-                        <p>将工作任务由传统的按职位划分转变</p>
-                        <p>为按项目划分平台化规范管理</p>
+                        <p>将工作任务由传统的按职位划分转变为按项目划分</p>
+                        <p>平台化规范管理</p>
                         <p>合理降低企业用工风险</p>
                       </div>
                     </div>
@@ -483,11 +481,13 @@
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
                       <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
-                      <p>优化用工管理</p>
+                      <p>降低企业成本</p>
                       <div>
-                        <p>将工作任务由传统的按职位划分转变</p>
-                        <p>为按项目划分平台化规范管理</p>
-                        <p>合理降低企业用工风险</p>
+                        <p>基于国家减税降赋政策</p>
+                        <p>优化企业人力架构方案</p>
+                        <p>依托平台共享海量人才</p>
+                        <p>为企业降本增效</p>
+
                       </div>
                     </div>
 
@@ -495,11 +495,12 @@
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
                       <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
-                      <p>简单高效安全</p>
+                      <p>提高个人收入</p>
                       <div>
-                        <p>将工作任务由传统的按职位划分转变</p>
-                        <p>为按项目划分平台化规范管理</p>
-                        <p>合理降低企业用工风险</p>
+                        <p>个人（社会化营销人员）在线简单操作</p>
+                        <p>流程科学高效</p>
+                        <p>降低个税扣除</p>
+                        <p>增加个人收入</p>
                       </div>
                     </div>
 
@@ -516,8 +517,7 @@
                 <h2>行业现状</h2>
               </div>
               <div class="status-industry-content">
-                部分用人单位对技工“挑肥拣瘦”的现象屡见不鲜，我国工业化进入中后期和居民收入水平的不断提高，<br>
-                订单数量减少与产能过剩的危机，让我国的制造业出现了不稳定的情况
+                劳动力短缺、成本增加、产能过剩及全球经济的疲软制约了制造业企业的发展，中国的工业运营和生产企业面临着来自劳动力管理越来越多的挑战。<br>企业需要提高劳动力生产效率，符合劳动力法规要求，并降低劳动力管理成本，以便在当今竞争激烈的全球市场上取得成功。<br>惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
               </div>
               <div class="status-industry-items">
                 <ul class="clearfix">
@@ -530,7 +530,7 @@
                       <h3>劳动力短缺</h3>
                       <div>
                         <p>
-                          我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
+                          企业用工季节性需求波动大，劳动力市场匹配度较差。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -538,14 +538,14 @@
                   </li>
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
-                      <h3>成本增加</h3>
+                      <h3>用工成本高</h3>
                       <div><img src="/static/spirit/images/zhizaoyexianzhuan2.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
-                      <h3>成本增加</h3>
+                      <h3>用工成本高</h3>
                       <div>
                         <p>
-                          我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
+                          企业人员规模大、区域多且分散，集中管控难，流程和制度的标准化比较差。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -553,14 +553,14 @@
                   </li>
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
-                      <h3>全球经济疲软</h3>
+                      <h3>模式不规范</h3>
                       <div><img src="/static/spirit/images/zhizaoyexianzhuan3.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
-                      <h3>全球经济疲软</h3>
+                      <h3>模式不规范</h3>
                       <div>
                         <p>
-                          我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
+                          行业多种模式并存，主体关系混乱（全职、临时工等），统一标准化合同缺乏，企业用工风险高。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -576,20 +576,18 @@
               </div>
 
               <div class="solution-content">
-
                 制造业企业和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
                 平台为零售机构开具增值税专用发票，同时惠灵工平台帮助灵活用工人员、新招聘员工等转化为创客身份，<br>
                 平衡制造业企业的季节性用工需求，也为用工低谷期的劳务人员提供更多行业选择。
-
               </div>
               <div class="solution-flow-chart">
                 <div>
-                  <img src="/static/spirit/images/zhizaoyedongtu.png" alt="">
+                  <img src="/static/spirit/images/xingWuLiuDongTu.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
 
-                通过惠零工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
                 为制造业企业合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
 
               </div>
@@ -597,12 +595,12 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案优势</h2>
+                <h2>方案价值</h2>
               </div>
 
               <div class="plan-advantage-content">
 
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
 
               </div>
               <div class="plan-advantage-items">
@@ -655,43 +653,45 @@
               </div>
               <div class="status-industry-content">
 
-                中国的零售企业一方面面临市场竞争的压力，另一方面又面临人力成本上升的压力，要维持合理的毛利率以及人均销售额，<br>
-                是各个零售厂商都要面对的挑战，很多传统企业寻求转型，选择通过社会化营销人员来分销，但是目前行业市场混乱,利润也被逐渐拉低，<br>
-                让劳动力转换成企业的竞争力是每个零售企业的核心目标之一。惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+
+                无论从中国的经济发展阶段，人口结构特征，还是从技术革命对社会的重构，整个教育的大环境都发生了翻天覆地的变化，<br>
+                咨询培训平台必须高度契合市场需要并不断适应市场的变化，而高比例企业所得税和因个税高而导致的人员波动都是平台发展面临的挑战。<br>
+                惠灵工定制解决方案能帮助咨询培训平台应对这些挑战，规避用工风险，提升用工效能。
+
 
               </div>
               <div class="status-industry-wm">
                 <div class="status-industry-wm-imgs status-industry-zx-imgs-icon">
                   <img class="wm-img-active" src="/static/spirit/images/ziXunPingTai1.png" alt="">
-                  <img src="/static/spirit/images/waimai2.png" alt="">
-                  <img src="/static/spirit/images/waimai3.png" alt="">
+                  <img src="/static/spirit/images/ziXunPingTai2.png" alt="">
+                  <img src="/static/spirit/images/ziXunPingTai3.png" alt="">
                 </div>
                 <!-- 折叠 -->
                 <div class="status-industry-wm-content" lay-accordion>
                   <div class="status-industry-wm-item">
                     <h2 class="status-industry-wm-item-title status-industry-zx-item-title-icon">
-                      <p>劳动力短缺</p><span class="status-btn status-btnone" id="6"></span>
+                      <p>模式不规范</p><span class="status-btn status-btnone" id="6"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-zx-item-content-icon wm-item-show">
-                      <p>零售业岗位结构相对单一、工作门槛低、成长空间有限，人员流动性大</p>
+                      <p>目前教育培训行业多种模式并存，主体关系混乱，统一的标准化制式合同缺乏，企业面临用工合规问题</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
                     <h2 class="status-industry-wm-item-title status-industry-zx-item-title-icon">
-                      <p>用工成本高</p><span class="status-btn" id="7"></span>
+                      <p>劳动力短缺</p><span class="status-btn" id="7"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-zx-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大112。</p>
+                      <p>平台专家顾问等高收入人群个税高，人员波动大，与平台粘性低。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
                     <h2 class="status-industry-wm-item-title status-industry-zx-item-title-icon">
-                      <p>管理无标准</p><span class="status-btn" id="8"></span>
+                      <p>用工成本高</p><span class="status-btn" id="8"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-zx-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <p>大量兼职用工等形式，劳动力变化频繁，用工事务繁杂程度。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -707,21 +707,22 @@
               <div class="solution-content">
 
 
-                零售机构和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
-                平台将为零售机构开具增值税专用发票，同时惠灵工平台帮助社会化营销人员（例微商、kol等）转化为创客身份，<br>
-                享受国家税收优惠政策并具备自行购买社保资格。
+                咨询培训平台和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
+                平台将为咨询培训平台开具增值税专用发票，同时惠灵工平台帮助咨询培训专家等灵活用工人员转化为创客身份，<br>
+                享受国家税收优惠政策进行合理降税。
+
 
 
               </div>
               <div class="solution-flow-wm-chart">
                 <div>
-                  <img src="/static/spirit/images/wmdongt.png" alt="">
+                  <img src="/static/spirit/images/wmdongt.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
 
 
-                通过惠零工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
+                通过惠灵工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
                 为零售机构合规避免劳动用工风险，为社会化营销人员提升劳动收益和服务保障。
 
 
@@ -730,11 +731,11 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案优势</h2>
+                <h2>方案价值</h2>
               </div>
 
               <div class="plan-advantage-content">
-                惠灵工平台帮助制造业企业将灵活用工人员、新招聘员工那个等转化为创客。
+                分散产能&nbsp整合共享
 
               </div>
               <div class="plan-advantage-wm-items">
@@ -742,22 +743,23 @@
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
                       <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
-                      <p>规避用工风险</p>
+                      <p>降低企业成本</p>
                       <div>
-                          <p>将工作任务由传统的按职位划分转变</p>
-                          <p>为按项目划分平台化规范管理</p>
-                          <p>合理降低企业用工风险</p>      
+                        <p>基于国家减税降赋政策</p>
+                        <p>优化企业人力架构方案</p>
+                        <p>依托平台共享&nbsp海量人才</p>
+                        <p>为企业降本增效</p>
                       </div>
                     </div>
                   </li>
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
                       <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
-                      <p>降低企业成本</p>
+                      <p>优化用工管理</p>
                       <div>
-                        <p>将工作任务由传统的按职位划分转变</p>
-                        <p>为按项目划分平台化规范管理</p>
-                        <p>合理降低企业用工风险</p>                                 
+                        <p>将工作任务由传统的按职位划分转变为按项目划分</p>
+                        <p>平台化规范管理</p>
+                        <p>合理降低企业用工风险</p>
                       </div>
                     </div>
 
@@ -765,11 +767,12 @@
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
                       <div><img src="/static/spirit/images/plan-advantage3.png" alt=""></div>
-                      <p>提高个人收入</p>
+                      <p>简单高效安全</p>
                       <div>
-                          <p>将工作任务由传统的按职位划分转变</p>
-                          <p>为按项目划分平台化规范管理</p>
-                          <p>合理降低企业用工风险</p>      
+                        <p>在线简单高效操作、统一发放报酬、统一报税</p>
+                        <p>保证资金运行安全</p>
+                        <p>提高资金运行效率</p>
+                        <p>自动高效结算</p>
                       </div>
                     </div>
 
@@ -784,101 +787,105 @@
 
     <!-- 底部 -->
     <div class="bottomBox">
-      <div class="w bottom">
+    <div class="w bottom">
         <div class="aboutUs">
-          <span>关于我们</span>
-          <p>
-            惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！
-          </p>
+            <span>关于我们</span>
+            <p>
+                惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+            </p>
         </div>
         <div class="w navBottom">
-          <div class="navList">
-            <dl>
-              <dt>惠企云旗下产品</dt>
-              <dd><a href="javascript:;">惠灵工</a></dd>
-              <dd><a href="javascript:;">惠优税</a></dd>
-              <dd><a href="javascript:;">惠多薪</a></dd>
-              <dd><a href="javascript:;">惠创业</a></dd>
-              <dd><a href="javascript:;">惠找事</a></dd>
-            </dl>
-            <dl>
-              <dt>资讯信息</dt>
-              <dd><a href="javascript:;">行业资讯</a></dd>
-              <dd><a href="javascript:;">招商政策</a></dd>
-              <dd><a href="javascript:;">招标信息</a></dd>
-            </dl>
-            <dl>
-              <dt>招商合作</dt>
-              <dd><a href="javascript:;">招募合伙人</a></dd>
-            </dl>
-            <dl>
-              <dt>联系我们</dt>
-              <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
-              <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
-              <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
-              <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
-              <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
-            </dl>
-          </div>
+            <div class="navList">
+                <dl>
+                    <dt>惠企云旗下产品</dt>
+                    <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
+                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
+                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
+                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                </dl>
+                <dl>
+                    <dt>惠灵工</dt>
+                    <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
+                    <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
+                    <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
+                </dl>
+                <dl>
+                    <dt>客服热线</dt>
+                    <dd>400-150-9896</dd>
+                    <dd>18186194461</dd>
+                </dl>
+                <dl>
+                    <dt>办公地址</dt>
+                    <dd>武汉市硚口区南国大武汉H座</dd>
+                    <dd>深圳市福田区第一世界广场A座</dd>
+                    <dd>北京市西城区贵都国际中心B座</dd>
+                </dl>
+            </div>
 
-          <ul class="qrCode">
-            <li>
-              <div class="pic">
-                <img src="/static/spirit/images/weixincode.png" alt="">
-              </div>
-              <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-              <i>及时获一手财税信息</i>
-            </li>
-            <li>
-              <div class="pic">
-                <img src="/static/spirit/images/weibocode.png" alt="">
-              </div>
-              <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
-              <!-- <i>及时获一手财税信息</i> -->
-            </li>
-          </ul>
+            <ul class="qrCode">
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weixincode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                    <i>及时获知一手财税消息</i>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weibocode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                    <!-- <i>及时获一手财税信息</i> -->
+                </li>
+            </ul>
         </div>
-      </div>
-      <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights Reserved&nbsp;ICP证 :
+    </div>
+    <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+        Reserved&nbsp;ICP证
+        :
         鄂ICP备16008680号-3</div>
 
-    </div>
+</div>
+    
+
 
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-      <div>
+    <div>
         <div class="bottom-title">惠家族产品</div>
         <div class="bottom-item">
-          <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
-          <ul>
-            <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
-            <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-            <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
-            <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
-            <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-            <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
-          </ul>
+            <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
+            <ul>
+                <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
+                <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+            </ul>
         </div>
-      </div>
-      <div>
+    </div>
+    <div>
         <div class="bottom-title2">联系我们</div>
         <div class="bottom-item2">
-          <div>
-            <p>立即预约咨询</p>
-            <p>181-8619-4461</p>
-          </div>
-          <div>
-            <p>获取税筹方案</p>
-            <p>400-150-9898</p>
-          </div>
+            <div>
+                <p>立即预约咨询</p>
+                <p>181-8619-4461</p>
+            </div>
+            <div>
+                <p>获取税筹方案</p>
+                <p>400-150-9898</p>
+            </div>
         </div>
-      </div>
-      <!-- 返回顶部 -->
-      <div class='goTop' id="goTop">
+    </div>
+    <!-- 返回顶部 -->
+    <div class='goTop' id="goTop">
         <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
         <div>顶部</div>
-      </div>
     </div>
+</div>
 
     <!-- 弹框 -->
     <div class="pop-up-box" id="popbox">
