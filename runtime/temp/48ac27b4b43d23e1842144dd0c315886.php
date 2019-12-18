@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:61:"/opt/web/thing/public/../application/v1/view/index/index.html";i:1575463857;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575465336;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1575860939;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:61:"/opt/web/thing/public/../application/v1/view/index/index.html";i:1575463857;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575958790;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1576483356;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1576483356;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -188,7 +188,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase' ||  $paths == '/v1/work/works/solution' || $paths == '/v1/customer/customers/index'): ?> active <?php endif; ?> " >
+            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase' ||  $paths == '/v1/work/works/solution' || $paths == '/v1/customer/customers/index' || $paths =='/v1/cases/example/index'): ?> active <?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
@@ -222,7 +222,15 @@
                     </li>
                     <li class="<?php if($paths == '/v1/customer/customers/index'): ?> active <?php endif; ?>">
                         <a href="<?php echo url('/v1/customer/customers/index'); ?>">
-                            <i class="glyphicon glyphicon-user"></i> <span>首页轮播图</span>
+                            <i class="glyphicon glyphicon-book"></i> <span>首页轮播图</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="<?php if($paths == '/v1/cases/example/index'): ?> active <?php endif; ?>">
+                        <a href="<?php echo url('/v1/cases/example/index'); ?>">
+                            <i class="glyphicon glyphicon-th-list"></i> <span>客户案例</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -351,6 +359,7 @@
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
 <script src="/static/assets/dist/js/works.js"></script>
+<script src="/static/assets/dist/js/example.js"></script>
 <script>
     admin_module.changepas();
 </script>
