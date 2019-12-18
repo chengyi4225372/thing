@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576650313;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576650303;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576651570;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576652340;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,9 +68,9 @@
             </a></div>
           <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
         </div>
-        <?php else: ?>
+        <?php else: ?>-->
         <div class="u_info">
-          <?php if(empty($userinfo['mobile'])): ?>
+          <!-- <?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
         登陆
@@ -86,9 +86,27 @@
         <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
-<?php endif; ?>
+<?php endif; ?> -->
+
+<!-- <?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
+        登陆
+    </a></div>
+    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
+</div>
+<?php else: ?> -->
+<div class="u_info">
+    <img src="/static/spirit/images/user_img.png"
+         style="width:30px;height:30px; vertical-align: middle;">
+    <p style="display:inline-block;color:#fff;"  id="mobile_phone">133****4567</p>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<!-- <?php endif; ?> -->
         </div>
-        <?php endif; ?> -->
+        <!-- <?php endif; ?> -->
       </div>
 
     </div>

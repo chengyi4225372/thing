@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576643641;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576643641;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576650303;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
