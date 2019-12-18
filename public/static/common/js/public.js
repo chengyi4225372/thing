@@ -1,8 +1,9 @@
-var baseUrl = 'http://172.26.3.12:8089';
+var baseUrl = 'http://47.105.48.137:8040';
 function user_logout(objthis){
 
     //var url = $(objthis).attr('data-url');
-    var url = baseUrl + '/api/huser/goOut';;
+    var url = baseUrl + '/api/huser/goOut';
+
     var url2 = $(objthis).attr('location_url');
     var url3 = $(objthis).attr('data-url');
     var tokens = $(objthis).attr('data-token');

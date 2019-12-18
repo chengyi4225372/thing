@@ -6,6 +6,7 @@
  * Time: 11:32
  */
 namespace app\common\controller;
+use app\common\controller\UserController;
 use think\Config;
 use think\Controller;
 use think\Cookie;
@@ -29,11 +30,13 @@ class BaseController extends Controller
      */
     public function _initialize()
     {
-        $mobile = Cookie('mobile');
+        $userController = new UserController();
 
-        $token = Cookie('token');
-        $userName = Cookie('userName');
-        $userType = Cookie('userType'); //c 个人 b 企业
+        $mobile = $userController->get('mobile');
+
+        $token = $userController->get('token');
+        $userName = $userController->get('userName');
+        $userType = $userController->get('userType');//c 个人 b 企业
         $mobile = !empty($mobile) ? $mobile :'';
         $token = !empty($token) ? $token : '';
         $userName = !empty($userName) ? $userName : '';

@@ -5,3 +5,6 @@
 ---------------------------------------------------------------
 [ 2019-12-18T20:39:21+08:00 ] 172.26.2.252 GET /
 [ error ] [0]方法参数错误:cache_dir[/opt/web/thing/thinkphp/library/think/App.php:431]
+---------------------------------------------------------------
+[ 2019-12-18T22:24:32+08:00 ] 172.26.2.252 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/common/controller/UserController.php:36]

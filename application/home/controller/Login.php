@@ -93,12 +93,13 @@ class Login extends  BaseController{
      * @date: 2019-10-31 10:38:54
      */
     public function logout(){
+        $userController = new UserController();
         header("Access-Control-Allow-Origin:*");
         $website_url = Config::get('curl.website');
         $hzs_url = Config::get('curl.hzs');
-        Cookie::clear('mobile');
-        Cookie::clear('token');
-        Cookie::clear('userType');
+        $userController->delete('mobile');
+        $userController->delete('token');
+        $userController->delete('userType');
         //官网退出
         $res = curl_get($website_url.'/home/login/apilogout');
         $res2 = curl_get($hzs_url.'/home/login/apilogout');
@@ -112,10 +113,11 @@ class Login extends  BaseController{
      */
     public function apilogout()
     {
+        $userController = new UserController();
         header("Access-Control-Allow-Origin:*");
-        Cookie::clear('mobile');
-        Cookie::clear('token');
-        Cookie::clear('userType');
+        $userController->delete('mobile');
+        $userController->delete('token');
+        $userController->delete('userType');
         return json(['status' => 200,'message' => 'success']);
     }
 }
