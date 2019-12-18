@@ -253,10 +253,7 @@ function showSearch(){
     $('#popbox').css('display','block');
 }
 
-//清除关键字
-function onclick_close(){
-    $('#keyword').val('');
-}
+
 
 
 
