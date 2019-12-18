@@ -194,11 +194,11 @@ class Workservice
             return false;
         }
         $where = [
-            'id' => ['<', $id],
+            'id' => ['LT', $id],
             'status' => 1
         ];
 
-        $info = Work::instance()->where($where)->order('sort desc,create_time')->find();
+        $info = Work::instance()->where($where)->order('sort desc,create_time asc')->find();
 
         if (empty($info)) {
             return $info = '';
@@ -220,7 +220,7 @@ class Workservice
         }
 
         $where = [
-            'id' => ['>', $id],
+            'id' => ['GT', $id],
             'status' => 1
         ];
         $info = Work::instance()->where($where)->order('sort desc,create_time desc')->find();

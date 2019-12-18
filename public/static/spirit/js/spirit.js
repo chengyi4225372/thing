@@ -253,10 +253,14 @@ function showSearch(){
     $('#popbox').css('display','block');
 }
 
+<<<<<<< HEAD
+
+=======
 //清除关键字
 function onclick_close(){
     $('#').html('');
 }
+>>>>>>> 8978f687f8d383072800ac3bb451c2d2668c8d92
 
 
 
