@@ -377,170 +377,6 @@ a {
     color: rgba(224, 224, 224, 1) !important;
 }
 
-/* nav部分 */
-
-
-/*.container {
-    min-width: 75rem;
-}
-
-.nav-box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6.25rem;
-    background: rgba(24, 24, 24, 1);
-    z-index: 999;
-}
-
-.nav-container {
-    height: 5rem;
-    padding-top: 1.25rem;
-}
-
-.nav-container .logo {
-    float: left;
-    width: 7.75rem;
-    height: 3.375rem;
-    margin-top: 0.3125rem;
-    margin-left: 1.25rem;
-}
-
-.nav-container .logo a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.nav-container h1 {
-    height: 100%;
-    margin: 0;
-}
-
-.nav-container h1 img {
-    width: 100%;
-}
-
-.nav-container .nav {
-    height: 100%;
-    float: left;
-    margin-left: 10rem;
-}
-
-.nav-container .nav ul {
-    display: flex;
-    align-items: flex-end;
-    list-style: none;
-    margin: 1.25rem 0 0 0;
-    padding: 0;
-}
-
-.nav-container .nav ul li {
-    margin-right: 2.625rem;
-}
-
-.nav-container .nav ul li a {
-    display: block;
-    width: 100%;
-    !*height: 100%;*!
-    font-size: 1.25rem;
-    font-family: "PingFang SC";
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-}
-
-.nav-active {
-    position: relative;
-}
-
-.nav-active a {
-    font-size: 1.5rem !important;
-}
-
-.nav-active::after {
-    position: absolute;
-    bottom: -0.9375rem;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    content: '';
-    width: 60%;
-    height: 0.125rem;
-    background-color: #fff;
-}
-.nav-container{
-    position:relative;
-}
-.nav-container .loging {
-    float: right;
-    margin: .75rem 0 0 .625rem;
-}
-
-.nav-container .loging div {
-    float: left;
-    width: 5.375rem;
-    height: 2.375rem;
-    background: rgba(255, 255, 255, 0);
-    border: 1px solid rgba(191, 191, 191, 1);
-    text-align: center;
-    line-height: 2.375rem;
-}
-
-.nav-container .loging div a {
-    display: block;
-    width: 100%;
-    height: 2.375rem;
-    font-size: 1rem;
-    font-family: Source Han Sans CN;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 1);
-    line-height: 2.5rem;
-}
-.register {
-    position:absolute;
-    top: 1.625rem;
-    right:0;
-    border: 1px solid #ccc;
-    margin-top: .6875rem;
-}
-
-.content .register > a {
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    width: 5.375rem;
-    height: 2.125rem;
-    line-height: 2.125rem;
-    text-align: center;
-
-}
-
-.register > span {
-    height: 2.125rem;
-    width: 1px;
-    background-color: #ccc;
-    position: absolute;
-    right: 5.5rem;
-}
-.nav-container .loging div:nth-child(1) {
-    border-right: 0;
-    border-radius: 0.25rem 0px 0px 0.25rem;
-}
-
-.nav-container .loging div:nth-child(2) {
-    border-left: 0;
-    border-radius: 0 0.25rem 0.25rem 0;
-    background-color: #fff;
-    color: #2F80ED;
-}
-
-.nav-container .loging div:nth-child(2) a {
-    color: #2F80ED;
-}*/
 
 
 /* nav部分 */
@@ -639,9 +475,11 @@ a {
     background-color: #2F80ED;
 }
 
+/* 登陆注册 */
 .nav-container .loging {
     float: right;
-    margin: .75rem 0 0 4.375rem;
+    margin: .1875rem 0 0 4.375rem;
+    /* margin: 0 0 0 4.375rem; */
 }
 
 .nav-container .loging div {
@@ -661,7 +499,7 @@ a {
     font-size: 1rem;
     font-family: Source Han Sans CN;
     font-weight: 400;
-    color: rgba(255, 255, 255, 1);
+    color: #03053A;
     line-height: 2.5rem;
 }
 
@@ -673,12 +511,12 @@ a {
 .nav-container .loging div:nth-child(2) {
     border-left: 0;
     border-radius: 0 .25rem .25rem 0;
-    background-color: #fff;
-    color: #2F80ED;
+    background-color: #03053A;
+    /* color: #03053A; */
 }
 
 .nav-container .loging div:nth-child(2) a {
-    color: #2F80ED;
+    color: #FFFFFF;
 }
 
 .enterprise-portal {
@@ -708,10 +546,34 @@ a {
 .u_info {
     position: relative;
     float: right;
-    margin-top: 1.0625rem;
+    /* margin-top: .625rem; */
     padding-left: 1.25rem;
-    height: 5rem;
+    height: 3.125rem;
+    padding-bottom: .375rem;
     cursor: pointer;
+}
+
+.u_info>div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.u_info>div:nth-child(1)>.u_info_img {
+    width: 1.875rem;
+    height: 1.875rem;
+    margin-right: .3125rem;
+}
+
+.u_info>div:nth-child(1)>.u_info_img img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.u_info>div:nth-child(1)>P {
+    display: inline-block;
+    color: #03053A;
 }
 
 .u_info_content {
@@ -719,9 +581,8 @@ a {
     width: 5.625rem;
     height: 2.6875rem;
     position: absolute;
-    bottom: -12px;
+    bottom: -2.5125rem;
     left: -0.5625rem;
-    background-color: pink;
     text-align: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -732,9 +593,9 @@ a {
     font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
     font-weight: 500;
     color: rgba(51, 51, 51, 1);
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 0.625rem 0px rgba(11, 32, 64, 0.1);
-    border-radius: .125rem;
+    background: #F5F7FE;
+    box-shadow: 0px 0px 10px 0px rgba(11, 32, 64, 0.1);
+    border-radius: 2px;
 }
 
 .u_info_content .u_out {
@@ -744,7 +605,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    /*padding: 1.0625rem 0.875rem;*/
+    /*padding: 1.0625rem .875rem;*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -754,7 +615,8 @@ a {
 }
 
 .u_info_content .u_out:hover {
-    background: #f0f7fe;
+    /* background: #f0f7fe; */
+    background: #fff;
     cursor: pointer;
 }
 
@@ -771,7 +633,7 @@ a {
     transform: translateX(-50%);
     border-top: .625rem solid transparent;
     border-right: .625rem solid transparent;
-    border-bottom: .625rem solid #fffF;
+    border-bottom: .625rem solid #fff;
     border-left: .625rem solid transparent;
 }
 

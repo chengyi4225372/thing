@@ -436,9 +436,11 @@ a {
     background-color: #2F80ED;
 }
 
+/* 登陆注册 */
 .nav-container .loging {
     float: right;
-    margin: .75rem 0 0 4.375rem;
+    margin: .1875rem 0 0 4.375rem;
+    /* margin: 0 0 0 4.375rem; */
 }
 
 .nav-container .loging div {
@@ -458,7 +460,7 @@ a {
     font-size: 1rem;
     font-family: Source Han Sans CN;
     font-weight: 400;
-    color: rgba(255, 255, 255, 1);
+    color: #03053A;
     line-height: 2.5rem;
 }
 
@@ -470,12 +472,12 @@ a {
 .nav-container .loging div:nth-child(2) {
     border-left: 0;
     border-radius: 0 .25rem .25rem 0;
-    background-color: #fff;
-    color: #2F80ED;
+    background-color: #03053A;
+    /* color: #03053A; */
 }
 
 .nav-container .loging div:nth-child(2) a {
-    color: #2F80ED;
+    color: #FFFFFF;
 }
 
 .enterprise-portal {
@@ -504,10 +506,34 @@ a {
 .u_info {
     position: relative;
     float: right;
-    margin-top: .3625rem;
+    /* margin-top: .625rem; */
     padding-left: 1.25rem;
-    height: 5rem;
+    height: 3.125rem;
+    padding-bottom: .375rem;
     cursor: pointer;
+}
+
+.u_info>div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.u_info>div:nth-child(1)>.u_info_img {
+    width: 1.875rem;
+    height: 1.875rem;
+    margin-right: .3125rem;
+}
+
+.u_info>div:nth-child(1)>.u_info_img img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.u_info>div:nth-child(1)>P {
+    display: inline-block;
+    color: #03053A;
 }
 
 .u_info_content {
@@ -515,9 +541,8 @@ a {
     width: 5.625rem;
     height: 2.6875rem;
     position: absolute;
-    bottom: -12px;
+    bottom: -2.5125rem;
     left: -0.5625rem;
-    background-color: pink;
     text-align: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -528,7 +553,7 @@ a {
     font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
     font-weight: 500;
     color: rgba(51, 51, 51, 1);
-    background: rgba(255, 255, 255, 1);
+    background: #F5F7FE;
     box-shadow: 0px 0px 10px 0px rgba(11, 32, 64, 0.1);
     border-radius: 2px;
 }
@@ -550,7 +575,8 @@ a {
 }
 
 .u_info_content .u_out:hover {
-    background: #f0f7fe;
+    /* background: #f0f7fe; */
+    background: #fff;
     cursor: pointer;
 }
 
@@ -567,13 +593,15 @@ a {
     transform: translateX(-50%);
     border-top: .625rem solid transparent;
     border-right: .625rem solid transparent;
-    border-bottom: .625rem solid #fffF;
+    border-bottom: .625rem solid #fff;
     border-left: .625rem solid transparent;
 }
 
 .u_info:hover .u_info_content {
     display: block
 }
+
+/* 用户信息end */
 
 .main_content {
     width: 100%;
@@ -656,7 +684,7 @@ a {
 
 .wenzi {
     font-size: .875rem;
-    font-family: Microsoft YaHei;
+    font-family: 'Microsoft YaHei', "微软雅黑";
     font-weight: 400;
     line-height: 1.5rem;
     margin: .875rem 0;

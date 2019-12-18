@@ -84,7 +84,7 @@ html {
     }
 
     .tabBox .item-content p:nth-of-type(2) {
-        height: 4.5rem!important;
+        height: 4.5rem !important;
         word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 2 !important;
@@ -121,6 +121,7 @@ html {
     html {
         font-size: 9.58333333333333px;
     }
+
     /* 客户案例列表 */
     .tabBox .item-content p:nth-of-type(1) {
         height: 3.5rem !important;
@@ -132,7 +133,7 @@ html {
     }
 
     .tabBox .item-content p:nth-of-type(2) {
-        height: 4rem!important;
+        height: 4rem !important;
         word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 2 !important;
@@ -181,7 +182,7 @@ html {
     }
 
     .tabBox .item-content p:nth-of-type(2) {
-        height: 3.5rem!important;
+        height: 3.5rem !important;
         word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 2 !important;
@@ -231,7 +232,7 @@ html {
     }
 
     .tabBox .item-content p:nth-of-type(2) {
-        height: 4.7rem!important;
+        height: 4.7rem !important;
         word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 3 !important;
@@ -281,7 +282,7 @@ html {
     }
 
     .tabBox .item-content p:nth-of-type(2) {
-        height: 4.7rem!important;
+        height: 4.7rem !important;
         word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 3 !important;
@@ -330,7 +331,7 @@ html {
     }
 
     .tabBox .item-content p:nth-of-type(2) {
-        height: 4.2rem!important;
+        height: 4.2rem !important;
         word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 3 !important;
@@ -367,6 +368,7 @@ html {
     html {
         font-size: 14px;
     }
+
     /* 客户案例列表 */
     .tabBox .item-content p:nth-of-type(1) {
         height: 3.2rem !important;
@@ -378,7 +380,7 @@ html {
     }
 
     .tabBox .item-content p:nth-of-type(2) {
-        height: 4.2rem!important;
+        height: 4.2rem !important;
         word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 3 !important;
@@ -415,6 +417,7 @@ html {
     html {
         font-size: 16px;
     }
+
     /* 客户案例列表 */
     .tabBox .item-content p:nth-of-type(1) {
         height: 3.2rem !important;
@@ -426,7 +429,7 @@ html {
     }
 
     .tabBox .item-content p:nth-of-type(2) {
-        height: 4.2rem!important;
+        height: 4.2rem !important;
         word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 3 !important;
@@ -593,9 +596,11 @@ a {
     background-color: #2F80ED;
 }
 
+/* 登陆注册 */
 .nav-container .loging {
     float: right;
-    margin: .75rem 0 0 4.375rem;
+    margin: .1875rem 0 0 4.375rem;
+    /* margin: 0 0 0 4.375rem; */
 }
 
 .nav-container .loging div {
@@ -615,7 +620,7 @@ a {
     font-size: 1rem;
     font-family: Source Han Sans CN;
     font-weight: 400;
-    color: rgba(255, 255, 255, 1);
+    color: #03053A;
     line-height: 2.5rem;
 }
 
@@ -627,12 +632,12 @@ a {
 .nav-container .loging div:nth-child(2) {
     border-left: 0;
     border-radius: 0 .25rem .25rem 0;
-    background-color: #fff;
-    color: #2F80ED;
+    background-color: #03053A;
+    /* color: #03053A; */
 }
 
 .nav-container .loging div:nth-child(2) a {
-    color: #2F80ED;
+    color: #FFFFFF;
 }
 
 .enterprise-portal {
@@ -656,88 +661,86 @@ a {
 }
 
 
+/* 用户信息 */
 
-
-/* 登陆注册 */
-
-.nav-container .loging {
-    float: right;
-    margin: 1.25rem 0 0 0;
-}
-
-.nav-container .loging div {
-    float: left;
-    width: 3.5rem;
-    height: 1.625rem;
-    text-align: center;
-    line-height: 1.625rem;
-    background: url('../images/login-bg.png') no-repeat;
-    background-size: 100% 100%;
-}
-
-.nav-container .loging div a {
-    display: block;
-    width: 100%;
-    height: 1.625rem;
-    font-size: 1rem;
-    font-family: 'Source Han Sans CN', "Microsoft YaHei", "微软雅黑";
-    font-weight: 400;
-    color: #E8341E;
-    line-height: 1.625rem;
-}
-
-.nav-container .loging div:nth-child(2) {
-    margin-left: 1.25rem;
-    margin-right: 2.5625rem
-}
-
-
-/* 头像部分 */
-
-.nav-container .user-icon-box {
+.u_info {
     position: relative;
     float: right;
-    text-align: center;
-    height: 3rem;
-    margin-top: 1.05rem;
+    /* margin-top: .625rem; */
     padding-left: 1.25rem;
-    /* margin-right: 2.5625rem; */
+    height: 3.125rem;
+    padding-bottom: .375rem;
     cursor: pointer;
-    /* background-color: pink; */
 }
 
-.nav-container .user-icon-box .user-icon {
-    width: 2rem;
-    height: 2rem;
-    vertical-align: bottom;
-    border: 1px solid #ccc;
-    border-radius: 50%;
+.u_info>div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-.nav-container .user-icon-box .phone {
-    height: 23px;
+.u_info>div:nth-child(1)>.u_info_img {
+    width: 1.875rem;
+    height: 1.875rem;
+    margin-right: .3125rem;
+}
+
+.u_info>div:nth-child(1)>.u_info_img img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.u_info>div:nth-child(1)>P {
     display: inline-block;
+    color: #03053A;
 }
 
-
-/* 登陆退出 */
-
-.login-out {
+.u_info_content {
     display: none;
-    position: absolute;
     width: 5.625rem;
-    bottom: -38px;
-    left: -0.425rem;
+    height: 2.6875rem;
+    position: absolute;
+    bottom: -2.5125rem;
+    left: -0.5625rem;
     text-align: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: .125rem;
+    font-size: .875rem;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    background: #F5F7FE;
+    box-shadow: 0px 0px 10px 0px rgba(11, 32, 64, 0.1);
+    border-radius: 2px;
 }
 
-.login-out::after {
+.u_info_content .u_out {
+    font-size: .875rem;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
+    color: #333;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*padding: 1.0625rem .875rem;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 2.75rem;
+}
+
+.u_info_content .u_out:hover {
+    /* background: #f0f7fe; */
+    background: #fff;
+    cursor: pointer;
+}
+
+.u_info_content::after {
     content: '';
     display: block;
     position: absolute;
@@ -750,32 +753,15 @@ a {
     transform: translateX(-50%);
     border-top: .625rem solid transparent;
     border-right: .625rem solid transparent;
-    border-bottom: .625rem solid #333;
+    border-bottom: .625rem solid #fff;
     border-left: .625rem solid transparent;
 }
 
-.login-out ul {}
-
-.login-out ul li {
-    height: 2.5rem;
-    line-height: 2.5rem;
-    background-color: #333;
+.u_info:hover .u_info_content {
+    display: block
 }
 
-.login-out ul li a {
-    font-size: .875rem;
-    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
-    font-weight: 500;
-    color: #fff;
-}
-
-.login-out ul li:hover {
-    background-color: #FE0B0C;
-}
-
-.nav-container .user-icon-box:hover .login-out {
-    display: block;
-}
+/* 用户信息end */
 
 /* 头部部分 */
 .header-box {
