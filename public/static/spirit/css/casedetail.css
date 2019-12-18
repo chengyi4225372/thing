@@ -110,11 +110,11 @@ html {
     }
 
     .bottom-left>div>.bottom-item2 div:nth-child(1) {
-        padding: .8375rem 0 0 0rem !important;
+        padding: .8375rem 0 0 0.7rem !important;
     }
 
     .bottom-left>div>.bottom-item2 div:nth-child(2) {
-        padding: .475rem 0 0 0rem !important;
+        padding: .675rem 0 0 0.7rem !important;
     }
 
     .bottom-left>div>.bottom-item2 div p:nth-child(1) {
@@ -122,7 +122,7 @@ html {
     }
 
     .bottom-left>div>.bottom-item2 div p:nth-child(2) {
-        margin-bottom: .175rem !important;
+        margin-bottom: .375rem !important;
     }
 }
 

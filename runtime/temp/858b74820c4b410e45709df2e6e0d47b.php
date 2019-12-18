@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1576567528;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1576650699;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576650303;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,8 +102,7 @@
         <div>客户案例</div>
         <div></div>
         <p>
-          不同行业的业务特点和管理要求差别很大，但无论是哪个行业的企业，都会有三个基本诉求：<br>
-          经营合法合规、 降低企业成本、 规避意外风险!
+          优化财税管理，助力企业全速发展
         </p>
       </div>
     </div>
@@ -184,7 +183,7 @@
                 <img src="/static/spirit/images/weixincode.png" alt="">
               </div>
               <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-              <i>及时获一手财税信息</i>
+              <i>及时获知一手财税信息</i>
             </li>
             <li>
               <div class="pic">
@@ -250,7 +249,7 @@
     window.onscroll = function () {
       var top = document.body.scrollTop || document.documentElement.scrollTop;
 
-      if (top >= 400) {
+      if (top >= 1080) {
         let goTop = document.getElementById('goTop')
         goTop.style.display = "block"
 
@@ -273,7 +272,7 @@
             }
           });
         }
-      } else if (top < 400) {
+      } else if (top < 1080) {
 
         // 返回顶部样式
         let goTop = document.getElementById('goTop')

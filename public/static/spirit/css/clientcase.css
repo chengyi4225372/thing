@@ -73,6 +73,25 @@ html {
         font-size: 8.53333333333333px;
     }
 
+    /* 客户案例列表 */
+    .tabBox .item-content p:nth-of-type(1) {
+        height: 4.125rem !important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .tabBox .item-content p:nth-of-type(2) {
+        height: 4.5rem!important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
     .bottom-left>div>.bottom-item .hqy {
         padding-left: 1.5rem !important;
     }
@@ -82,19 +101,19 @@ html {
     }
 
     .bottom-left>div>.bottom-item2 div:nth-child(1) {
-        padding: .8375rem 0 0 0rem !important;
+        padding: 1rem 0 0 0.3rem !important;
     }
 
     .bottom-left>div>.bottom-item2 div:nth-child(2) {
-        padding: .475rem 0 0 0rem !important;
+        padding: .675rem 0 0 0.3rem !important;
     }
 
     .bottom-left>div>.bottom-item2 div p:nth-child(1) {
-        margin-bottom: .175rem !important;
+        margin-bottom: .375rem !important;
     }
 
     .bottom-left>div>.bottom-item2 div p:nth-child(2) {
-        margin-bottom: .175rem !important;
+        margin-bottom: .375rem !important;
     }
 }
 
@@ -102,6 +121,24 @@ html {
     html {
         font-size: 9.58333333333333px;
     }
+    /* 客户案例列表 */
+    .tabBox .item-content p:nth-of-type(1) {
+        height: 3.5rem !important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .tabBox .item-content p:nth-of-type(2) {
+        height: 4rem!important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
 
     .bottom-left>div>.bottom-item .hqy {
         padding-left: 1.5rem !important;
@@ -112,11 +149,11 @@ html {
     }
 
     .bottom-left>div>.bottom-item2 div:nth-child(1) {
-        padding: .8375rem 0 0 0rem !important;
+        padding: .8375rem 0 0 0.7rem !important;
     }
 
     .bottom-left>div>.bottom-item2 div:nth-child(2) {
-        padding: .475rem 0 0 0rem !important;
+        padding: .675rem 0 0 0.7rem !important;
     }
 
     .bottom-left>div>.bottom-item2 div p:nth-child(1) {
@@ -124,13 +161,32 @@ html {
     }
 
     .bottom-left>div>.bottom-item2 div p:nth-child(2) {
-        margin-bottom: .175rem !important;
+        margin-bottom: .375rem !important;
     }
 }
 
 @media screen and (min-width: 1280px) {
     html {
         font-size: 10.6666666666667px;
+    }
+
+    /* 客户案例列表 */
+    .tabBox .item-content p:nth-of-type(1) {
+        height: 3.2rem !important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .tabBox .item-content p:nth-of-type(2) {
+        height: 3.5rem!important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .bottom-left>div>.bottom-item .hqy {
@@ -164,6 +220,25 @@ html {
         font-size: 11.38333333333333px;
     }
 
+    /* 客户案例列表 */
+    .tabBox .item-content p:nth-of-type(1) {
+        height: 3.2rem !important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .tabBox .item-content p:nth-of-type(2) {
+        height: 4.7rem!important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 3 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
     .bottom-left>div>.bottom-item .hqy {
         padding-left: 2rem !important;
     }
@@ -193,6 +268,25 @@ html {
 @media screen and (min-width: 1440px) {
     html {
         font-size: 12px;
+    }
+
+    /* 客户案例列表 */
+    .tabBox .item-content p:nth-of-type(1) {
+        height: 3.2rem !important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .tabBox .item-content p:nth-of-type(2) {
+        height: 4.7rem!important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 3 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .bottom-left>div>.bottom-item .hqy {
@@ -225,6 +319,25 @@ html {
         font-size: 13.3333333333px;
     }
 
+    /* 客户案例列表 */
+    .tabBox .item-content p:nth-of-type(1) {
+        height: 3.2rem !important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .tabBox .item-content p:nth-of-type(2) {
+        height: 4.2rem!important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 3 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
     .bottom-left>div>.bottom-item .hqy {
         padding-left: 2rem !important;
     }
@@ -253,6 +366,24 @@ html {
 @media screen and (min-width: 1680px) {
     html {
         font-size: 14px;
+    }
+    /* 客户案例列表 */
+    .tabBox .item-content p:nth-of-type(1) {
+        height: 3.2rem !important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .tabBox .item-content p:nth-of-type(2) {
+        height: 4.2rem!important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 3 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .bottom-left>div>.bottom-item .hqy {
@@ -283,6 +414,24 @@ html {
 @media screen and (min-width: 1920px) {
     html {
         font-size: 16px;
+    }
+    /* 客户案例列表 */
+    .tabBox .item-content p:nth-of-type(1) {
+        height: 3.2rem !important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .tabBox .item-content p:nth-of-type(2) {
+        height: 4.2rem!important;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 3 !important;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .bottom-left>div>.bottom-item .hqy {
@@ -657,11 +806,12 @@ a {
     background: linear-gradient(-90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
     margin-bottom: 2.5rem;
 }
+
 .header-box .header p:nth-of-type(1) {
-    font-size:1.125rem;
-    font-family:PingFang SC;
-    font-weight:500;
-    color:rgba(255,255,255,1);
+    font-size: 1.125rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
     line-height: 1.8;
 }
 
@@ -718,7 +868,8 @@ a {
     box-sizing: border-box;
 
 }
-.bg_tab ul li:nth-child(3n+3){
+
+.bg_tab ul li:nth-child(3n+3) {
     margin-right: 0;
 }
 
@@ -731,9 +882,11 @@ a {
     width: 100%;
     height: 16.25rem;
 }
+
 .tabBox li {
     position: relative;
 }
+
 .tabBox .item-img img {
     display: block;
     width: 100%;
@@ -756,6 +909,7 @@ a {
     -ms-user-select: none;
     user-select: none;
     transition: all 1s;
+    /* height: 16rem; */
 }
 
 .tabBox .item-content p:nth-of-type(1) {

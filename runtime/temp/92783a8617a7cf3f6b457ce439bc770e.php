@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576565995;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576650624;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576650303;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,8 +96,7 @@
                 <div>客户案例</div>
                 <div></div>
                 <p>
-                    不同行业的业务特点和管理要求差别很大，但无论是哪个行业的企业，都会有三个基本诉求：<br>
-                    经营合法合规、 降低企业成本、 规避意外风险!
+                    优化财税管理，助力企业全速发展
                 </p>
             </div>
         </div>
@@ -124,8 +123,8 @@
                             <div class="item-content">
                                 <p><?php echo $vo['title']; ?></p>
                                 <p><?php echo mb_substr($vo['describes'],'0','38','utf-8'); ?></p>
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
                         </a>
                     </li>
                     <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
@@ -320,7 +319,7 @@
                             <img src="/static/spirit/images/weixincode.png" alt="">
                         </div>
                         <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                        <i>及时获一手财税信息</i>
+                        <i>及时获知一手财税信息</i>
                     </li>
                     <li>
                         <div class="pic">
