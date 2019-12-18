@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576660445;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576656349;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576652467;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576652467;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576666241;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576656349;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576652467;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576652467;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -132,11 +132,11 @@
                 <h2>行业现状</h2>
               </div>
               <div class="status-industry-content">
-                
+
                 国内外卖行业服务人群与服务场景外延渐成趋势，外卖竞争已上升到本地生活层面。<br>
                 外卖配送企业一般代理外卖平台的配送业务,外卖配送企业面临着配送员的劳动关系合规和财税合规问题等用工挑战。<br>
                 惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
-                                            
+
               </div>
               <div class="status-industry-wm">
                 <div class="status-industry-wm-imgs status-industry-wm-imgs-icon">
@@ -328,10 +328,10 @@
                 </div>
               </div>
               <div class="solution-footer">
-               
+
                 通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
                 为新物流企业合规避免劳动用工风险，为物流行业人员提升劳动收益和服务保障
-                                            
+
               </div>
             </div>
             <!-- 方案优势 -->
@@ -353,9 +353,7 @@
                     </div>
                     <p class="plan-advantage-item-title">降低企业成本</p>
                     <p class="plan-advantage-item-content">
-                      基于国家减税降赋政策，优化企业人力架构方案
-                      有效匹配实际业务需求进行资源优化，实现科学
-                      合理用工
+                      基于国家减税降赋政策，优化企业人力架构方案有效匹配实际业务需求进行资源优化，实现科学合理用工
                     </p>
                   </li>
                   <li>
@@ -364,8 +362,7 @@
                     </div>
                     <p class="plan-advantage-item-title">规避用工风险</p>
                     <p class="plan-advantage-item-content">
-                      将工作任务由传统的按职位划分转变为按项目划分
-                      平台化规范管理，合理降低企业用工风险
+                      将工作任务由传统的按职位划分转变为按项目划分平台化规范管理，合理降低企业用工风险
                     </p>
                   </li>
                   <li>
@@ -375,8 +372,7 @@
                     <p class="plan-advantage-item-title">提高个人收入</p>
                     <p class="plan-advantage-item-content">
 
-                      个人（运送人员）在线简单操作，流程
-                      科学高效，降低个税扣除，增加个人收入
+                      个人（运送人员）在线简单操作，流程科学高效，降低个税扣除，增加个人收入
 
                     </p>
                   </li>
@@ -393,11 +389,11 @@
               </div>
               <div class="status-industry-content">
 
-                
+
                 中国的零售企业一方面面临市场竞争的压力，另一方面又面临人力成本上升的压力，要维持合理的毛利率以及人均销售额，<br>
                 是各个零售厂商都要面对的挑战，很多传统企业寻求转型，选择通过社会化营销人员来分销，但是目前行业市场混乱,利润也被逐渐拉低，<br>
                 让劳动力转换成企业的竞争力是每个零售企业的核心目标之一。惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
-                                            
+
 
               </div>
               <div class="status-industry-wm">
@@ -447,11 +443,11 @@
               <div class="solution-content">
 
 
-                
+
                 零售机构和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
                 平台将为零售机构开具增值税专用发票，同时惠灵工平台帮助社会化营销人员（例微商、kol等）转化为创客身份，<br>
                 享受国家税收优惠政策并具备自行购买社保资格。
-                                            
+
 
 
               </div>
@@ -462,10 +458,10 @@
               </div>
               <div class="solution-footer">
 
-                
+
                 通过惠灵工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
                 为零售机构合规避免劳动用工风险，为社会化营销人员提升劳动收益和服务保障。
-                                            
+
 
               </div>
             </div>
@@ -627,8 +623,7 @@
                     </div>
                     <p class="plan-advantage-item-title">降低企业成本</p>
                     <p class="plan-advantage-item-content">
-                      基于国家减税降赋政策，优化企业人力架构方案
-                      依托平台共享海量人才，为企业降本增效
+                      基于国家减税降赋政策，优化企业人力架构方案依托平台共享海量人才，为企业降本增效
                     </p>
                   </li>
                   <li>
@@ -638,8 +633,7 @@
                     <p class="plan-advantage-item-title">提高个人收入</p>
                     <p class="plan-advantage-item-content">
 
-                      在线简单操作，流程科学高效
-                      提升个人待遇，保障个人收入
+                      在线简单操作，流程科学高效提升个人待遇，保障个人收入
 
                     </p>
                   </li>
@@ -650,8 +644,7 @@
                     <p class="plan-advantage-item-title">优化用工管理</p>
                     <p class="plan-advantage-item-content">
 
-                      建立基础用工保障，打破松散的工人组织
-                      平台化规范管理，合理降低企业用工风险
+                      建立基础用工保障，打破松散的工人组织平台化规范管理，合理降低企业用工风险
 
                     </p>
                   </li>
