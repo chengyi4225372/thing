@@ -1048,7 +1048,7 @@ input::-ms-input-placeholder {
 .project .project-title p {}
 
 .project .project-text {
-    width: 61.25rem;
+    width: 60rem;
     margin: 0 auto;
     font-size: 1rem;
     font-family: "PingFang SC", "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";

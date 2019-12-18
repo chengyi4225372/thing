@@ -162,6 +162,7 @@ html {
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
+
     .reason-content-text {
         padding: 1.475rem 2.0625rem 0 2.0625rem !important;
     }
@@ -218,6 +219,7 @@ html {
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
+
     .reason-content-text {
         padding: 1.875rem 2.0625rem 0 2.0625rem !important;
     }
@@ -264,6 +266,7 @@ html {
     .bottom-left>div>.bottom-item2 div p:nth-child(2) {
         margin-bottom: .675rem !important;
     }
+
     /* 产品服务 */
     .difficulty1 li .difficulty1-left>div:nth-child(3) {
         height: 10.25rem !important;
@@ -273,6 +276,7 @@ html {
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
+
     .reason-content-text {
         padding: 1.875rem 2.0625rem 0 2.0625rem !important;
     }
@@ -612,6 +616,7 @@ input:-webkit-autofill {
 .enterprise {
     color: #fff;
 }
+
 /* 用户信息 */
 
 .u_info {
@@ -724,9 +729,14 @@ input:-webkit-autofill {
 }
 
 .header-box .header {
+    padding-left: 4rem;
     padding-top: 7.8rem;
     text-align: left;
-
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .header-box .header div:nth-of-type(1) {
@@ -1156,6 +1166,7 @@ input:-webkit-autofill {
     -o-box-sizing: border-box;
     box-sizing: border-box; */
 }
+
 /* .reason-content li:hover {
     border: 1px solid rgba(235, 242, 250, 1);
     box-shadow: 0px 4px 13px 0px rgba(11, 32, 64, 0.5);

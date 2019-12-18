@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576650624;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576650303;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576656531;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576656349;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576652467;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576652467;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,21 +66,25 @@
                 <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
                 <!--</div>-->
                 <!--<?php else: ?>-->
-                <!--<div class="u_info">-->
+                <!--<div>-->
                 <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-        登陆
-    </a></div>
+            登陆
+        </a></div>
     <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
 </div>
 <?php else: ?>
 <div class="u_info">
-    <img src="/static/spirit/images/user_img.png"
-         style="width:30px;height:30px; vertical-align: middle;">
-    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
     <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?>-->
@@ -276,138 +280,106 @@
 
     <!-- 底部 -->
     <div class="bottomBox">
-        <div class="w bottom">
-            <div class="aboutUs">
-                <span>关于我们</span>
-                <p>
-                    惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
-                </p>
-            </div>
-            <div class="w navBottom">
-                <div class="navList">
-                    <dl>
-                        <dt>惠企云旗下产品</dt>
-                        <dd><a href="javascript:;">惠灵工</a></dd>
-                        <dd><a href="javascript:;">惠优税</a></dd>
-                        <dd><a href="javascript:;">惠多薪</a></dd>
-                        <dd><a href="javascript:;">惠创业</a></dd>
-                        <dd><a href="javascript:;">惠找事</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>惠灵工</dt>
-                        <dd><a href="javascript:;">行业解决方案</a></dd>
-                        <dd><a href="javascript:;">产品服务</a></dd>
-                        <dd><a href="javascript:;">客户案例</a></dd>
-                        <dd><a href="javascript:;">招商合作</a></dd>
-                    </dl>
-                    <dl>
-                        <dt>客服热线</dt>
-                        <dd>400-150-9896</dd>
-                        <dd>18186194461</dd>
-                    </dl>
-                    <dl>
-                        <dt>办公地址</dt>
-                        <dd>武汉市硚口区南国大武汉H座</dd>
-                        <dd>深圳市福田区第一世界广场A座</dd>
-                        <dd>北京市西城区贵都国际中心B座</dd>
-                    </dl>
-                </div>
-
-                <ul class="qrCode">
-                    <li>
-                        <div class="pic">
-                            <img src="/static/spirit/images/weixincode.png" alt="">
-                        </div>
-                        <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                        <i>及时获知一手财税信息</i>
-                    </li>
-                    <li>
-                        <div class="pic">
-                            <img src="/static/spirit/images/weibocode.png" alt="">
-                        </div>
-                        <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
-                        <!-- <i>及时获一手财税信息</i> -->
-                    </li>
-                </ul>
-            </div>
+    <div class="w bottom">
+        <div class="aboutUs">
+            <span>关于我们</span>
+            <p>
+                惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+            </p>
         </div>
-        <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
-            Reserved&nbsp;ICP证
-            :
-            鄂ICP备16008680号-3</div>
+        <div class="w navBottom">
+            <div class="navList">
+                <dl>
+                    <dt>惠企云旗下产品</dt>
+                    <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
+                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
+                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
+                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                </dl>
+                <dl>
+                    <dt>惠灵工</dt>
+                    <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
+                    <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
+                    <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
+                </dl>
+                <dl>
+                    <dt>客服热线</dt>
+                    <dd>400-150-9896</dd>
+                    <dd>18186194461</dd>
+                </dl>
+                <dl>
+                    <dt>办公地址</dt>
+                    <dd>武汉市硚口区南国大武汉H座</dd>
+                    <dd>深圳市福田区第一世界广场A座</dd>
+                    <dd>北京市西城区贵都国际中心B座</dd>
+                </dl>
+            </div>
 
+            <ul class="qrCode">
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weixincode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                    <i>及时获知一手财税消息</i>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weibocode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                    <!-- <i>及时获一手财税信息</i> -->
+                </li>
+            </ul>
+        </div>
     </div>
+    <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+        Reserved&nbsp;ICP证
+        :
+        鄂ICP备16008680号-3</div>
+
+</div>
+
 
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-        <div>
-            <div class="bottom-title">惠家族产品</div>
-            <div class="bottom-item">
-                <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
-                <ul>
-                    <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
-                    <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                    <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
-                    <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
-                    <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                    <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <div class="bottom-title2">联系我们</div>
-            <div class="bottom-item2">
-                <div>
-                    <p>立即预约咨询</p>
-                    <p>181-8619-4461</p>
-                </div>
-                <div>
-                    <p>获取税筹方案</p>
-                    <p>400-150-9898</p>
-                </div>
-            </div>
-        </div>
-        <!-- 返回顶部 -->
-        <div class='goTop' id="goTop">
-            <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
-            <div>顶部</div>
+    <div>
+        <div class="bottom-title">惠家族产品</div>
+        <div class="bottom-item">
+            <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
+            <ul>
+                <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
+                <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+            </ul>
         </div>
     </div>
-
-    <!-- 侧边栏bottom资讯 -->
-    <!-- <div class="bottom"> -->
-    <!-- <div>
-        <div class="bottom-title">立即预约咨询</div>
-        <div class="bottom-item2 order">
-          <div>
-            <p>专家服务电话</p>
-            <p>181-8619-4461</p>
-          </div>
-          <div>
-            <p>获取税筹方案</p>
-            <p>400-150-9898</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="bottom-title">联系我们</div>
+    <div>
+        <div class="bottom-title2">联系我们</div>
         <div class="bottom-item2">
-          <div>
-            <p>专家服务电话</p>
-            <p>181-8619-4461</p>
-          </div>
-          <div>
-            <p>获取税筹方案</p>
-            <p>400-150-9898</p>
-          </div>
+            <div>
+                <p>立即预约咨询</p>
+                <p>181-8619-4461</p>
+            </div>
+            <div>
+                <p>获取税筹方案</p>
+                <p>400-150-9898</p>
+            </div>
         </div>
-      </div> -->
+    </div>
     <!-- 返回顶部 -->
-    <!-- <div class='goTop' id="goTop">
-        <div><img src="/static/home/images/top@2x.png" alt=""></div>
+    <div class='goTop' id="goTop">
+        <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
         <div>顶部</div>
-    </div> -->
-    <!-- </div>  -->
+    </div>
+</div>
+
+
 
 
 </body>

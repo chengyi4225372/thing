@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576650578;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576650303;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576660445;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576656349;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576652467;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576652467;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,21 +66,25 @@
         <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
         <!--</div>-->
         <!--<?php else: ?>-->
-        <!--<div class="u_info">-->
+        <!--<div>-->
         <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-        登陆
-    </a></div>
+            登陆
+        </a></div>
     <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
 </div>
 <?php else: ?>
 <div class="u_info">
-    <img src="/static/spirit/images/user_img.png"
-         style="width:30px;height:30px; vertical-align: middle;">
-    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
     <div class="u_info_content" id="u_info_content">
-        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)"  data-token="<?php echo $userinfo['token']; ?>" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?>-->
@@ -128,9 +132,11 @@
                 <h2>行业现状</h2>
               </div>
               <div class="status-industry-content">
+                
                 国内外卖行业服务人群与服务场景外延渐成趋势，外卖竞争已上升到本地生活层面。<br>
                 外卖配送企业一般代理外卖平台的配送业务,外卖配送企业面临着配送员的劳动关系合规和财税合规问题等用工挑战。<br>
                 惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+                                            
               </div>
               <div class="status-industry-wm">
                 <div class="status-industry-wm-imgs status-industry-wm-imgs-icon">
@@ -187,14 +193,14 @@
                 </div>
               </div>
               <div class="solution-footer">
-                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
                 为外卖配送企业合规避免劳动用工风险，为配送行业人员提升劳动收益和服务保障。
               </div>
             </div>
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -322,14 +328,16 @@
                 </div>
               </div>
               <div class="solution-footer">
-                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
-                为制造业企业合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
+               
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
+                为新物流企业合规避免劳动用工风险，为物流行业人员提升劳动收益和服务保障
+                                            
               </div>
             </div>
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -385,9 +393,11 @@
               </div>
               <div class="status-industry-content">
 
+                
                 中国的零售企业一方面面临市场竞争的压力，另一方面又面临人力成本上升的压力，要维持合理的毛利率以及人均销售额，<br>
                 是各个零售厂商都要面对的挑战，很多传统企业寻求转型，选择通过社会化营销人员来分销，但是目前行业市场混乱,利润也被逐渐拉低，<br>
                 让劳动力转换成企业的竞争力是每个零售企业的核心目标之一。惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+                                            
 
               </div>
               <div class="status-industry-wm">
@@ -437,9 +447,11 @@
               <div class="solution-content">
 
 
+                
                 零售机构和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
                 平台将为零售机构开具增值税专用发票，同时惠灵工平台帮助社会化营销人员（例微商、kol等）转化为创客身份，<br>
                 享受国家税收优惠政策并具备自行购买社保资格。
+                                            
 
 
               </div>
@@ -450,15 +462,17 @@
               </div>
               <div class="solution-footer">
 
-                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
-                为咨询培训平台合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
+                
+                通过惠灵工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
+                为零售机构合规避免劳动用工风险，为社会化营销人员提升劳动收益和服务保障。
+                                            
 
               </div>
             </div>
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -517,7 +531,9 @@
                 <h2>行业现状</h2>
               </div>
               <div class="status-industry-content">
-                劳动力短缺、成本增加、产能过剩及全球经济的疲软制约了制造业企业的发展，中国的工业运营和生产企业面临着来自劳动力管理越来越多的挑战。<br>企业需要提高劳动力生产效率，符合劳动力法规要求，并降低劳动力管理成本，以便在当今竞争激烈的全球市场上取得成功。<br>惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
+                劳动力短缺、成本增加、产能过剩及全球经济的疲软制约了制造业企业的发展，<br>
+                中国的工业运营和生产企业面临着来自劳动力管理越来越多的挑战。企业需要提高劳动力生产效率，符合劳动力法规要求，并降低劳动力管理成本，<br>
+                以便在当今竞争激烈的全球市场上取得成功。惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
               </div>
               <div class="status-industry-items">
                 <ul class="clearfix">
@@ -560,7 +576,7 @@
                       <h3>模式不规范</h3>
                       <div>
                         <p>
-                          行业多种模式并存，主体关系混乱（全职、临时工等），统一标准化合同缺乏，企业用工风险高。
+                          行业多种模式并存，主体关系混乱（全职、临时工等），统一标准化合同缺乏，企业用工风险高。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -576,8 +592,8 @@
               </div>
 
               <div class="solution-content">
-                制造业企业和惠灵工平台达成合作，结算费用通过惠灵工平台下发，<br>
-                平台为零售机构开具增值税专用发票，同时惠灵工平台帮助灵活用工人员、新招聘员工等转化为创客身份，<br>
+                制造业企业和惠灵工平台达成合作，结算费用通过惠灵工平台下发，平台为零售机构开具增值税专用发票，<br>
+                同时惠灵工平台帮助灵活用工人员、新招聘员工等转化为创客身份，<br>
                 平衡制造业企业的季节性用工需求，也为用工低谷期的劳务人员提供更多行业选择。
               </div>
               <div class="solution-flow-chart">
@@ -595,7 +611,7 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -722,8 +738,10 @@
               <div class="solution-footer">
 
 
-                通过惠灵工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
-                为零售机构合规避免劳动用工风险，为社会化营销人员提升劳动收益和服务保障。
+
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
+                为咨询培训平台合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
+
 
 
               </div>
@@ -731,7 +749,7 @@
             <!-- 方案优势 -->
             <div class="w plan-advantage">
               <div class="plan-advantage-title">
-                <h2>方案价值</h2>
+                <h2>方案优势</h2>
               </div>
 
               <div class="plan-advantage-content">
@@ -747,7 +765,7 @@
                       <div>
                         <p>基于国家减税降赋政策</p>
                         <p>优化企业人力架构方案</p>
-                        <p>依托平台共享&nbsp海量人才</p>
+                        <p>依托平台共享海量人才</p>
                         <p>为企业降本增效</p>
                       </div>
                     </div>
@@ -757,8 +775,8 @@
                       <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
                       <p>优化用工管理</p>
                       <div>
-                        <p>将工作任务由传统的按职位划分转变为按项目划分</p>
-                        <p>平台化规范管理</p>
+                        <p>将工作任务由传统的按职位划分转变</p>
+                        <p>为按项目划分平台化规范管理</p>
                         <p>合理降低企业用工风险</p>
                       </div>
                     </div>
@@ -787,103 +805,105 @@
 
     <!-- 底部 -->
     <div class="bottomBox">
-      <div class="w bottom">
+    <div class="w bottom">
         <div class="aboutUs">
-          <span>关于我们</span>
-          <p>
-            惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
-          </p>
+            <span>关于我们</span>
+            <p>
+                惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+            </p>
         </div>
         <div class="w navBottom">
-          <div class="navList">
-            <dl>
-              <dt>惠企云旗下产品</dt>
-              <dd><a href="javascript:;">惠灵工</a></dd>
-              <dd><a href="javascript:;">惠优税</a></dd>
-              <dd><a href="javascript:;">惠多薪</a></dd>
-              <dd><a href="javascript:;">惠创业</a></dd>
-              <dd><a href="javascript:;">惠找事</a></dd>
-            </dl>
-            <dl>
-              <dt>惠灵工</dt>
-              <dd><a href="javascript:;">行业解决方案</a></dd>
-              <dd><a href="javascript:;">产品服务</a></dd>
-              <dd><a href="javascript:;">客户案例</a></dd>
-              <dd><a href="javascript:;">招商合作</a></dd>
-            </dl>
-            <dl>
-              <dt>客服热线</dt>
-              <dd>400-150-9896</dd>
-              <dd>18186194461</dd>
-            </dl>
-            <dl>
-              <dt>办公地址</dt>
-              <dd>武汉市硚口区南国大武汉H座</dd>
-              <dd>深圳市福田区第一世界广场A座</dd>
-              <dd>北京市西城区贵都国际中心B座</dd>
-            </dl>
-          </div>
+            <div class="navList">
+                <dl>
+                    <dt>惠企云旗下产品</dt>
+                    <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
+                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
+                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
+                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                </dl>
+                <dl>
+                    <dt>惠灵工</dt>
+                    <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
+                    <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
+                    <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
+                </dl>
+                <dl>
+                    <dt>客服热线</dt>
+                    <dd>400-150-9896</dd>
+                    <dd>18186194461</dd>
+                </dl>
+                <dl>
+                    <dt>办公地址</dt>
+                    <dd>武汉市硚口区南国大武汉H座</dd>
+                    <dd>深圳市福田区第一世界广场A座</dd>
+                    <dd>北京市西城区贵都国际中心B座</dd>
+                </dl>
+            </div>
 
-          <ul class="qrCode">
-            <li>
-              <div class="pic">
-                <img src="/static/spirit/images/weixincode.png" alt="">
-              </div>
-              <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-              <i>及时获知一手财税信息</i>
-            </li>
-            <li>
-              <div class="pic">
-                <img src="/static/spirit/images/weibocode.png" alt="">
-              </div>
-              <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
-              <!-- <i>及时获一手财税信息</i> -->
-            </li>
-          </ul>
+            <ul class="qrCode">
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weixincode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                    <i>及时获知一手财税消息</i>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weibocode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                    <!-- <i>及时获一手财税信息</i> -->
+                </li>
+            </ul>
         </div>
-      </div>
-      <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+    </div>
+    <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
         Reserved&nbsp;ICP证
         :
         鄂ICP备16008680号-3</div>
 
-    </div>
+</div>
+
+
 
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-      <div>
+    <div>
         <div class="bottom-title">惠家族产品</div>
         <div class="bottom-item">
-          <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
-          <ul>
-            <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
-            <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-            <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
-            <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
-            <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-            <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
-          </ul>
+            <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
+            <ul>
+                <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
+                <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+            </ul>
         </div>
-      </div>
-      <div>
+    </div>
+    <div>
         <div class="bottom-title2">联系我们</div>
         <div class="bottom-item2">
-          <div>
-            <p>立即预约咨询</p>
-            <p>181-8619-4461</p>
-          </div>
-          <div>
-            <p>获取税筹方案</p>
-            <p>400-150-9898</p>
-          </div>
+            <div>
+                <p>立即预约咨询</p>
+                <p>181-8619-4461</p>
+            </div>
+            <div>
+                <p>获取税筹方案</p>
+                <p>400-150-9898</p>
+            </div>
         </div>
-      </div>
-      <!-- 返回顶部 -->
-      <div class='goTop' id="goTop">
+    </div>
+    <!-- 返回顶部 -->
+    <div class='goTop' id="goTop">
         <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
         <div>顶部</div>
-      </div>
     </div>
+</div>
 
     <!-- 弹框 -->
     <div class="pop-up-box" id="popbox">
