@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:118:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\information_list.html";i:1576483407;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1574064055;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:118:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\information_list.html";i:1576666157;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1574064055;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,7 +109,7 @@
       <div class="w content">
         <div class="bread-crumbs">
             <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
-            <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b> 
+            <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b>
         </div>
         <div class="information-list">
           <div class="tabs clearfix">
@@ -120,7 +120,7 @@
             <div class="search-box fr">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
               <div onclick="search(this)" data-url="<?php echo url('/home/index/informationList'); ?>">搜索</div>
-              <span></span>
+              <span onclick="window.location.href=$(this).attr('data-url')" data-url="<?php echo url('/home/index/informationList'); ?>"></span>
             </div>
           </div>
           <div class="tabs-items show">
