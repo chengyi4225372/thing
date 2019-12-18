@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\thing\public/../application/home\view\optimal\index.html";i:1576458720;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\business\index.html";i:1576458720;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +14,7 @@
 
 <div>
     <div class="fourzerofour">
-        <img src="/static/hys_error.png">
+        <img src="/static/hcy_error.png">
     </div>
     <div class="goHome">
         <span><i class="clock">3</i>秒后返回首页</span>

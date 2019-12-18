@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/thing/public/../application/home/view/index/clientcase.html";i:1576223813;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"/opt/web/thing/public/../application/home/view/index/clientcase.html";i:1576652049;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1575463857;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576651713;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +8,8 @@
     <meta name="force-rendering" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/clientcase.css">
@@ -40,7 +41,7 @@
                         <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
                         <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
                         <li class="nav-active"><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
-                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">行业新闻资讯</a></li>
+                        <li><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
                         <!--<li>-->
                         <!--<?php if(empty($userinfo['userType'])): ?>-->
                         <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
@@ -90,13 +91,21 @@
         </div>
 
         <!-- 头部 -->
-        <div class='header-box'></div>
+        <div class='header-box'>
+            <div class="w header">
+                <div>客户案例</div>
+                <div></div>
+                <p>
+                    优化财税管理，助力企业全速发展
+                </p>
+            </div>
+        </div>
 
         <!-- 面包屑 -->
         <div class="crumbs">
             <div class="crumbs-box w">
-                <span><a href="<?php echo url('/home/index/index'); ?>">惠灵工></a></span>
-                <span> 客户案例</span>
+                <b><a href="<?php echo url('/home/index/index'); ?>">惠灵工></a></b>
+                <b> 客户案例</b>
             </div>
         </div>
 
@@ -104,22 +113,160 @@
         <div class="bg_tab">
             <div class="tabBox w">
                 <ul class="clearfix">
-                    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+
+                    <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                     <li>
-                        <div class="item-img"><img src="<?php echo $item['pic']; ?>" alt=""></div>
-                        <div class="item-content">
-                            <p>
-                                <?php echo $item['title']; ?>
-                            </p>
-                            <p>
-                                <?php echo $item['describe']; ?>
-                            </p>
-                            <a href="<?php echo url('/home/index/casedetail',['id' => $item['id']]); ?>"> 查看案例>> </a>
-                        </div>
+                        <a href="<?php echo url('/home/index/casedetail',['id'=>$vo['id']]); ?>">
+                            <div class="item-img">
+                                <img src="<?php echo !empty($vo['imgs'])?$vo['imgs']:''; ?>" alt="">
+                            </div>
+                            <div class="item-content">
+                                <p><?php echo $vo['title']; ?></p>
+                                <p><?php echo mb_substr($vo['describes'],'0','38','utf-8'); ?></p>
+                            </div>
+                            <div class="item-comtent-more">查看详情</div>
+                        </a>
                     </li>
                     <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
 
+                    <!--
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="/static/spirit/images/clientcaseitem2.png" alt="">
+                            </div>
+                            <div class="item-content">
+                                <p>
+                                    揭秘网红一哥李佳琦千万收入的合理避税方案
+                                </p>
+                                <p>
+                                    公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
+                                </p>
+                            </div>
+                            <div class="item-comtent-more">查看详情</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="/static/spirit/images/clientcaseitem3.png" alt="">
+                            </div>
+                            <div class="item-content">
+                                <p>
+                                    灵活用工市场潜力爆发,惠灵工让青年白领用工更加高效
+                                </p>
+                                <p>
+                                    最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
+                                </p>
 
+                            </div>
+                            <div class="item-comtent-more">查看详情</div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="/static/spirit/images/clientcaseitem4.png" alt="">
+                            </div>
+                            <div class="item-content">
+                                <p>
+                                    直销类企业如何避免税务合规风险，提升企业劳动力效能？
+                                </p>
+                                <p>
+                                    随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始倾向多元化用工方式。
+                                </p>
+                            </div>
+                            <div class="item-comtent-more">查看详情</div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="/static/spirit/images/clientcaseitem5.png" alt="">
+                            </div>
+                            <div class="item-content">
+                                <p>
+                                    揭秘网红一哥李佳琦千万收入的合理避税方案
+                                </p>
+                                <p>
+                                    公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
+                                </p>
+                            </div>
+                            <div class="item-comtent-more">查看详情</div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="/static/spirit/images/clientcaseitem6.png" alt="">
+                            </div>
+                            <div class="item-content">
+                                <p>
+                                    灵活用工市场潜力爆发,惠灵工让青年白领用工更加高效
+                                </p>
+                                <p>
+                                    最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
+                                </p>
+                            </div>
+                            <div class="item-comtent-more">查看详情</div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="/static/spirit/images/clientcaseitem7.png" alt="">
+                            </div>
+                            <div class="item-content">
+                                <p>
+                                    直销类企业如何避免税务合规风险，提升企业劳动力效能？
+                                </p>
+                                <p>
+                                    随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始倾向多元化用工方式。
+                                </p>
+                            </div>
+                            <div class="item-comtent-more">查看详情</div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="/static/spirit/images/clientcaseitem8.png" alt="">
+                            </div>
+                            <div class="item-content">
+                                <p>
+                                    揭秘网红一哥李佳琦千万收入的合理避税方案
+                                </p>
+                                <p>
+                                    公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
+                                </p>
+                            </div>
+                            <div class="item-comtent-more">查看详情</div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="item-img">
+                                <img src="/static/spirit/images/clientcaseitem9.png" alt="">
+                            </div>
+                            <div class="item-content">
+                                <p>
+                                    灵活用工市场潜力爆发,惠灵工让青年白领用工更加高效
+                                </p>
+                                <p>
+                                    最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
+                                </p>
+                            </div>
+                            <div class="item-comtent-more">查看详情</div>
+
+                        </a>
+                    </li>
+                    -->
                 </ul>
             </div>
         </div>
@@ -128,81 +275,107 @@
 
 
     <!-- 底部 -->
-    <div class="fotter-box">
-        <div class="w fotter">
-            <div class='parter_catefories'>
+    <div class="bottomBox">
+    <div class="w bottom">
+        <div class="aboutUs">
+            <span>关于我们</span>
+            <p>
+                惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+            </p>
+        </div>
+        <div class="w navBottom">
+            <div class="navList">
                 <dl>
-                    <dt><a href="javascript:;">服务产品</a></dt>
-                    <dd><a href="javascript:;">服务型税筹</a></dd>
-                    <dd><a href="javascript:;">门户型税筹</a></dd>
-                    <dd><a href="javascript:;">人力资源</a></dd>
+                    <dt>惠企云旗下产品</dt>
+                    <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
+                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
+                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
+                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
                 </dl>
                 <dl>
-                    <dt><a href="javascript:;">招商政策</a></dt>
-                    <dd><a href="javascript:;">招商政策网</a></dd>
+                    <dt>惠灵工</dt>
+                    <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
+                    <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
+                    <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
+                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
                 </dl>
                 <dl>
-                    <dt><a href="javascript:;">合作</a></dt>
-                    <dd><a href="javascript:;">代理合作</a></dd>
+                    <dt>客服热线</dt>
+                    <dd>400-150-9896</dd>
+                    <dd>18186194461</dd>
                 </dl>
                 <dl>
-                    <dt><a href="javascript:;">公司信息</a></dt>
-                    <dd><a href="javascript:;">瑟维斯有限公司</a></dd>
-                    <dd><a href="javascript:;">惠创优产业联盟</a></dd>
-                    <dd><a href="javascript:;">中兴瑞华有限公司</a></dd>
+                    <dt>办公地址</dt>
+                    <dd>武汉市硚口区南国大武汉H座</dd>
+                    <dd>深圳市福田区第一世界广场A座</dd>
+                    <dd>北京市西城区贵都国际中心B座</dd>
                 </dl>
-                <dl>
-                    <dt><a href="javascript:;">联系我们</a></dt>
-                    <dd><a href="javascript:;">400-150-9896</a></dd>
-                    <dd><a href="javascript:;">hcylm008@dingtalk.com</a></dd>
-                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座18楼</a></dd>
-                </dl>
+            </div>
 
-            </div>
-            <div class='concat_icon clearfix'>
-                <div><img src="/static/spirit/images/bo.png" alt=""></div>
-                <div><img src="/static/spirit/images/wx.png" alt=""></div>
-                <div><img src="/static/spirit/images/tie.png" alt=""></div>
-            </div>
-            <div class="fotter-line"></div>
-            <div>© Copyright 2019 惠企动（湖北）科技有限公司 . All Rights Reserved</div>
+            <ul class="qrCode">
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weixincode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                    <i>及时获知一手财税消息</i>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weibocode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                    <!-- <i>及时获一手财税信息</i> -->
+                </li>
+            </ul>
         </div>
     </div>
+    <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+        Reserved&nbsp;ICP证
+        :
+        鄂ICP备16008680号-3</div>
+
+</div>
+
 
     <!-- 侧边栏bottom资讯 -->
-    <!-- <div class="bottom"> -->
-    <!-- <div>
-        <div class="bottom-title">立即预约咨询</div>
-        <div class="bottom-item2 order">
-          <div>
-            <p>专家服务电话</p>
-            <p>181-8619-4461</p>
-          </div>
-          <div>
-            <p>获取税筹方案</p>
-            <p>400-150-9898</p>
-          </div>
+    <div class="bottom-left">
+    <div>
+        <div class="bottom-title">惠家族产品</div>
+        <div class="bottom-item">
+            <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
+            <ul>
+                <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
+                <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+            </ul>
         </div>
-      </div>
-      <div>
-        <div class="bottom-title">联系我们</div>
+    </div>
+    <div>
+        <div class="bottom-title2">联系我们</div>
         <div class="bottom-item2">
-          <div>
-            <p>专家服务电话</p>
-            <p>181-8619-4461</p>
-          </div>
-          <div>
-            <p>获取税筹方案</p>
-            <p>400-150-9898</p>
-          </div>
+            <div>
+                <p>立即预约咨询</p>
+                <p>181-8619-4461</p>
+            </div>
+            <div>
+                <p>获取税筹方案</p>
+                <p>400-150-9898</p>
+            </div>
         </div>
-      </div> -->
+    </div>
     <!-- 返回顶部 -->
-    <!-- <div class='goTop' id="goTop">
-        <div><img src="/static/home/images/top@2x.png" alt=""></div>
+    <div class='goTop' id="goTop">
+        <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
         <div>顶部</div>
-    </div> -->
-    <!-- </div>  -->
+    </div>
+</div>
+
+
 
 
 </body>

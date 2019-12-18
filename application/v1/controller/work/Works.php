@@ -33,10 +33,6 @@ class Works extends  AuthController
      */
     public function add()
     {
-        if($this->request->isGet()){
-            return $this->fetch();
-        }
-
         if($this->request->isPost()){
             $data = $this->request->param();
 
@@ -63,6 +59,7 @@ class Works extends  AuthController
             }
 
         }
+        return $this->fetch();
     }
 
     /**
