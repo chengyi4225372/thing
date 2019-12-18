@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1576567528;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1576567549;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -250,7 +250,7 @@
     window.onscroll = function () {
       var top = document.body.scrollTop || document.documentElement.scrollTop;
 
-      if (top >= 400) {
+      if (top >= 1080) {
         let goTop = document.getElementById('goTop')
         goTop.style.display = "block"
 
@@ -273,7 +273,7 @@
             }
           });
         }
-      } else if (top < 400) {
+      } else if (top < 1080) {
 
         // 返回顶部样式
         let goTop = document.getElementById('goTop')

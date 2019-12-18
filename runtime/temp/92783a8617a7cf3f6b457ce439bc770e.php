@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576565995;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576575859;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,8 +124,8 @@
                             <div class="item-content">
                                 <p><?php echo $vo['title']; ?></p>
                                 <p><?php echo mb_substr($vo['describes'],'0','38','utf-8'); ?></p>
-                                <div>查看详情</div>
                             </div>
+                            <div class="item-comtent-more">查看详情</div>
                         </a>
                     </li>
                     <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>

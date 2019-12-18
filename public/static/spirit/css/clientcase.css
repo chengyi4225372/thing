@@ -756,6 +756,7 @@ a {
     -ms-user-select: none;
     user-select: none;
     transition: all 1s;
+    /* height: 16rem; */
 }
 
 .tabBox .item-content p:nth-of-type(1) {

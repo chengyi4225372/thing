@@ -9,7 +9,7 @@ window.onload = function () {
         var top = document.body.scrollTop || document.documentElement.scrollTop;
         // console.log(top);
 
-        if (top >= 1080) {
+        if (top >= 900) {
 
             goTop.style.display = "block"
             navBox.style.display = "none"
@@ -34,7 +34,7 @@ window.onload = function () {
                 });
             }
             if (top >= 1200) {
-                console.log('进来了');
+                // console.log('进来了');
                 for (var i = 0; i < itemImg.length; i++) {
                     itemImg[i].classList.add('item-imgbg-active')
                 }
@@ -44,7 +44,7 @@ window.onload = function () {
                     itemImg[i].classList.remove('item-imgbg-active')
                 }
             }
-        } else if (top < 1080) {
+        } else if (top < 900) {
 
             // 返回顶部样式
             goTop.style.display = "none"
@@ -58,13 +58,34 @@ window.onload = function () {
     // 标签页
     layui.use('element', function () {
         var element = layui.element;
+        element.on('tab(docDemoTabBrief)', function (data) {
+            // console.log(this); //当前Tab标题所在的原始DOM元素
+            var timer = null;
+            cancelAnimationFrame(timer);
+            //获取当前毫秒数
+            var startTime = +new Date();
+            //获取当前页面的滚动高度
+            var b = document.body.scrollTop || document.documentElement.scrollTop;
+            var d = 400;
+            var c = b;
+            timer = requestAnimationFrame(function func() {
+                var t = d - Math.max(0, startTime - (+new Date()) + d);
+                document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+                timer = requestAnimationFrame(func);
+                if (t == d) {
+                    cancelAnimationFrame(timer);
+                }
+            });
+
+        });
     });
+
 
     // 折叠栏wm
     let statusBtnwm = document.querySelectorAll('.status-industry-wm-item-title-icon .status-btn')
     let itemContentswm = document.querySelectorAll('.status-industry-wm-item .status-industry-wm-item-content-icon')
     let wmImgswm = document.querySelectorAll('.status-industry-wm-imgs-icon img')
-    console.log(wmImgswm, itemContentswm, statusBtnwm);
+    // console.log(wmImgswm, itemContentswm, statusBtnwm);
 
     for (let i = 0; i < statusBtnwm.length; i++) {
         statusBtnwm[i].onclick = function (e) {
@@ -90,7 +111,7 @@ window.onload = function () {
     let statusBtnxls = document.querySelectorAll('.status-industry-xls-item-title-icon .status-btn')
     let itemContentsxls = document.querySelectorAll('.status-industry-wm-item .status-industry-xls-item-content-icon')
     let wmImgsxls = document.querySelectorAll('.status-industry-xls-imgs-icon img')
-    console.log(wmImgsxls, itemContentsxls, statusBtnxls);
+    // console.log(wmImgsxls, itemContentsxls, statusBtnxls);
 
     for (let i = 0; i < statusBtnxls.length; i++) {
         statusBtnxls[i].onclick = function (e) {
@@ -128,7 +149,7 @@ window.onload = function () {
     let statusBtnzx = document.querySelectorAll('.status-industry-zx-item-title-icon .status-btn')
     let itemContentszx = document.querySelectorAll('.status-industry-wm-item .status-industry-zx-item-content-icon')
     let wmImgszx = document.querySelectorAll('.status-industry-zx-imgs-icon img')
-    console.log(wmImgszx, itemContentszx, statusBtnzx);
+    // console.log(wmImgszx, itemContentszx, statusBtnzx);
 
     for (let i = 0; i < statusBtnzx.length; i++) {
         statusBtnzx[i].onclick = function (e) {
