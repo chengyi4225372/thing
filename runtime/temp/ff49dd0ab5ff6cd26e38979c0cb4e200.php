@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576639614;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576643641;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -146,7 +146,7 @@
                                 <p>合作平台化</p>
                             </div>
                             <div></div>
-                            <div>转型传统雇佣模式， 企业和个人（创客）分别与平台签订协议，责任职责明确</div>
+                            <div>转型传统雇佣模式， 企业和个人（创客）分别与平台签订协议，责任职责明确。</div>
                         </div>
                         <div class="difficulty1-right">
                             <img src="/static/spirit/images/imgHZPT.png" alt="">
@@ -159,7 +159,7 @@
                                 <p>系统智能化</p>
                             </div>
                             <div></div>
-                            <div>专业智能系统满足订单接发、身份查验等操作，在线获取专业财税服务，助力企业发展</div>
+                            <div>专业智能系统满足订单接发、身份查验等操作，在线获取专业财税服务，助力企业发展。</div>
                         </div>
                         <div class="difficulty1-right">
                             <img src="/static/spirit/images/imgXTZNH.png" alt="">
@@ -172,7 +172,7 @@
                                 <p>服务合规化</p>
                             </div>
                             <div></div>
-                            <div>基于诚信纳税法律义务，个人（创客）享受更低个税核定，企业取得合规发票，劳务成本转为项目承包费用，项目外包转移风险，解决社保问题</div>
+                            <div>基于诚信纳税法律义务，个人（创客）享受更低个税核定，企业取得合规发票，劳务成本转为项目承包费用，项目外包转移风险，解决社保问题。</div>
                         </div>
                         <div class="difficulty1-right">
                             <img src="/static/spirit/images/imgFWHGH.png" alt="">
@@ -185,7 +185,7 @@
                                 <p>运营高效化</p>
                             </div>
                             <div></div>
-                            <div>资深法务、税筹专家一对一，服务流、资金流、发票流一站式解决，释放职能部门，聚焦业务，提升企业效能</div>
+                            <div>资深法务、税筹专家一对一，服务流、资金流、发票流一站式解决，释放职能部门，聚焦业务，提升企业效能。</div>
                         </div>
                         <div class="difficulty1-right">
                             <img src="/static/spirit/images/imgYYGXH.png" alt="">
@@ -197,7 +197,8 @@
         <div class="difficulty-box2">
             <div class="w difficulty-box2-content">
                 <div><img src="/static/spirit/images/difficulty-box2Icon.png" alt=""></div>
-                <div>企业将业务标准化后发布至惠灵工灵活用工服务平台，个人通过平台认证转变为创客身份<br>平台将为企业和个人（创客）提供自动审核申报、高效结算等智能化服务</div>
+                <div>企业将业务标准化后发布至惠灵工灵活用工服务平台，个人通过平台认证转变为创客身份
+                    平台将为企业和个人（创客）提供自动审核申报、高效结算等智能化服务</div>
             </div>
         </div>
 
@@ -294,7 +295,7 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/zhiXiaoHangye.png" alt="">
+                                <img src="/static/spirit/images/zhiZaoHangYe.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>制造行业</h3>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576634182;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576647794;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -155,7 +155,7 @@
                       <p>用工成本高</p><span class="status-btn" id="1"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-wm-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <p>外卖配送业务属刚需业务，但是门槛低，准入要求不高，员工素质参差不齐，员工流动性大。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -164,7 +164,7 @@
                       <p>周期不固定</p><span class="status-btn" id="2"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-wm-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <p>配送平台打款周期不定、存在多卡发薪等不合规的形式，影响骑手正常务工保障。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -188,7 +188,7 @@
                 </div>
               </div>
               <div class="solution-footer">
-                通过惠零工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，
                 为外卖配送企业合规避免劳动用工风险，为配送行业人员提升劳动收益和服务保障。
               </div>
             </div>
@@ -208,10 +208,10 @@
                       <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
                       <p>降低企业成本</p>
                       <div>
-                        <p>个人（骑手）在线简单操作</p>
-                        <p>流程科学高效</p>
-                        <p>降低个税扣除</p>
-                        <p>增加个人收入</p>
+                        <p>基于国家减税降赋政策</p>
+                        <p>优化企业人力架构方案</p>
+                        <p>依托平台共享海量人才</p>
+                        <p>为企业降本增效</p>
                       </div>
                     </div>
                   </li>
@@ -233,10 +233,9 @@
                       <div><img src="/static/spirit/images/plan-advantage4.png" alt=""></div>
                       <p>规避用工风险</p>
                       <div>
-                        <p>个人（骑手）在线简单操作</p>
-                        <p>流程科学高效</p>
-                        <p>降低个税扣除</p>
-                        <p>增加个人收入</p>
+                        <p>将工作任务由传统的按职位划分转变为按项目划分</p>
+                        <p>平台化规范管理</p>
+                        <p>合理降低企业用工风险</p>
                       </div>
                     </div>
 
@@ -268,7 +267,7 @@
                       <h3>模式不规范</h3>
                       <div>
                         <p>
-                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求
+                          行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，用工风险盲区凸显，机构责任压力巨大。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -283,7 +282,7 @@
                       <h3>劳动力短缺</h3>
                       <div>
                         <p>
-                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求
+                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -298,7 +297,7 @@
                       <h3>用工成本高</h3>
                       <div>
                         <p>
-                          劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求
+                          物流务工人员准入要求不高，员工素质参差不齐，员工流动性大。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -324,7 +323,7 @@
                 </div>
               </div>
               <div class="solution-footer">
-                通过惠零工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
                 为制造业企业合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
               </div>
             </div>
@@ -414,7 +413,7 @@
                       <p>用工成本高</p><span class="status-btn" id="4"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-xls-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大112。</p>
+                      <p>线下店面的业务配置大量员工，五险一金和福利，企业用工成本高。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -423,7 +422,7 @@
                       <p>管理无标准</p><span class="status-btn" id="5"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-xls-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <p>分销人员缺乏统一管理，统一标准化合同缺乏，企业面临用工风险、财税合规等问题。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -452,7 +451,7 @@
               </div>
               <div class="solution-footer">
 
-                通过惠零工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非个人合作关系，<br>
                 为咨询培训平台合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
 
               </div>
@@ -474,10 +473,9 @@
                       <div><img src="/static/spirit/images/plan-advantage4.png" alt=""></div>
                       <p>规避用工风险</p>
                       <div>
-                        <p>基于国家减税降赋政策</p>
-                        <p>优化企业人力架构方案</p>
-                        <p>依托平台共享海量人才</p>
-                        <p>为企业降本增效</p>
+                        <p>将工作任务由传统的按职位划分转变为按项目划分</p>
+                        <p>平台化规范管理</p>
+                        <p>合理降低企业用工风险</p>
                       </div>
                     </div>
                   </li>
@@ -500,10 +498,10 @@
                       <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
                       <p>提高个人收入</p>
                       <div>
-                        <p>基于国家减税降赋政策</p>
-                        <p>优化企业人力架构方案</p>
-                        <p>依托平台共享海量人才</p>
-                        <p>为企业降本增效</p>
+                        <p>个人（社会化营销人员）在线简单操作</p>
+                        <p>流程科学高效</p>
+                        <p>降低个税扣除</p>
+                        <p>增加个人收入</p>
                       </div>
                     </div>
 
@@ -520,8 +518,7 @@
                 <h2>行业现状</h2>
               </div>
               <div class="status-industry-content">
-                部分用人单位对技工“挑肥拣瘦”的现象屡见不鲜，我国工业化进入中后期和居民收入水平的不断提高，<br>
-                订单数量减少与产能过剩的危机，让我国的制造业出现了不稳定的情况
+                劳动力短缺、成本增加、产能过剩及全球经济的疲软制约了制造业企业的发展，中国的工业运营和生产企业面临着来自劳动力管理越来越多的挑战。<br>企业需要提高劳动力生产效率，符合劳动力法规要求，并降低劳动力管理成本，以便在当今竞争激烈的全球市场上取得成功。<br>惠灵工定制解决方案能帮助企业应对这些挑战，规避用工风险，提升用工效能。
               </div>
               <div class="status-industry-items">
                 <ul class="clearfix">
@@ -534,7 +531,7 @@
                       <h3>劳动力短缺</h3>
                       <div>
                         <p>
-                          我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
+                          企业用工季节性需求波动大，劳动力市场匹配度较差。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -542,14 +539,14 @@
                   </li>
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
-                      <h3>成本增加</h3>
+                      <h3>用工成本高</h3>
                       <div><img src="/static/spirit/images/zhizaoyexianzhuan2.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
-                      <h3>成本增加</h3>
+                      <h3>用工成本高</h3>
                       <div>
                         <p>
-                          我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
+                          企业人员规模大、区域多且分散，集中管控难，流程和制度的标准化比较差。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -557,14 +554,14 @@
                   </li>
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
-                      <h3>全球经济疲软</h3>
+                      <h3>模式不规范</h3>
                       <div><img src="/static/spirit/images/zhizaoyexianzhuan3.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
-                      <h3>全球经济疲软</h3>
+                      <h3>模式不规范</h3>
                       <div>
                         <p>
-                          我国制造业发展中面临的挑战在于经济效率与产业附加值相对比较低。部分领域的核心技术、关键设备和零部件在一定程度上还依赖进口。随着我国工业化进入中后期和居民收入水平的不断提高，制造业市场需求结构发生了根本性的变化，需要适应。
+                          行业多种模式并存，主体关系混乱（全职、临时工等），统一标准化合同缺乏，企业用工风险高。
                         </p>
                         <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
                       </div>
@@ -593,7 +590,7 @@
               </div>
               <div class="solution-footer">
 
-                通过惠零工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
+                通过惠灵工平台形成企业-平台-创客之间商务合作关系而非劳动雇佣关系，<br>
                 为制造业企业合规避免劳动用工风险，为灵活用工人员提升劳动收益和服务保障。
 
               </div>
@@ -688,7 +685,7 @@
                       <p>劳动力短缺</p><span class="status-btn" id="7"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-zx-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大112。</p>
+                      <p>平台专家顾问等高收入人群个税高，人员波动大，与平台粘性低。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -697,7 +694,7 @@
                       <p>用工成本高</p><span class="status-btn" id="8"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-zx-item-content-icon">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <p>大量兼职用工等形式，劳动力变化频繁，用工事务繁杂程度。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -728,7 +725,7 @@
               <div class="solution-footer">
 
 
-                通过惠零工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
+                通过惠灵工平台形成企业-平台-创客之间的商务合作关系而个人代理关系，<br>
                 为零售机构合规避免劳动用工风险，为社会化营销人员提升劳动收益和服务保障。
 
 
@@ -751,9 +748,10 @@
                       <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
                       <p>降低企业成本</p>
                       <div>
-                        <p>将工作任务由传统的按职位划分转变</p>
-                        <p>为按项目划分平台化规范管理</p>
-                        <p>合理降低企业用工风险</p>
+                        <p>基于国家减税降赋政策</p>
+                        <p>优化企业人力架构方案</p>
+                        <p>依托平台共享&nbsp海量人才</p>
+                        <p>为企业降本增效</p>
                       </div>
                     </div>
                   </li>
@@ -762,8 +760,8 @@
                       <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
                       <p>优化用工管理</p>
                       <div>
-                        <p>将工作任务由传统的按职位划分转变</p>
-                        <p>为按项目划分平台化规范管理</p>
+                        <p>将工作任务由传统的按职位划分转变为按项目划分</p>
+                        <p>平台化规范管理</p>
                         <p>合理降低企业用工风险</p>
                       </div>
                     </div>
@@ -774,9 +772,10 @@
                       <div><img src="/static/spirit/images/plan-advantage3.png" alt=""></div>
                       <p>简单高效安全</p>
                       <div>
-                        <p>将工作任务由传统的按职位划分转变</p>
-                        <p>为按项目划分平台化规范管理</p>
-                        <p>合理降低企业用工风险</p>
+                        <p>在线简单高效操作、统一发放报酬、统一报税</p>
+                        <p>保证资金运行安全</p>
+                        <p>提高资金运行效率</p>
+                        <p>自动高效结算</p>
                       </div>
                     </div>
 
@@ -834,7 +833,7 @@
                 <img src="/static/spirit/images/weixincode.png" alt="">
               </div>
               <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-              <i>及时获一手财税信息</i>
+              <i>及时获知一手财税信息</i>
             </li>
             <li>
               <div class="pic">

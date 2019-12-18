@@ -710,7 +710,7 @@ input:-webkit-autofill {
     bottom: -1rem;
     left: 50%;
     transform: translate(-50%);
-    width: 100%;
+    width: 200%;
     font-size: 2.625rem;
     font-family: Alibaba-PuHuiTi-R, Alibaba-PuHuiTi;
     font-weight: normal;
@@ -1048,8 +1048,17 @@ input:-webkit-autofill {
     margin-right: 2.75rem;
     margin-bottom: 2rem;
     background: #F5F5F5;
+    /* border: 1px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; */
 }
-
+/* .reason-content li:hover {
+    border: 1px solid rgba(235, 242, 250, 1);
+    box-shadow: 0px 4px 13px 0px rgba(11, 32, 64, 0.5);
+} */
 .reason-content-img {
     height: 11.5rem;
 
