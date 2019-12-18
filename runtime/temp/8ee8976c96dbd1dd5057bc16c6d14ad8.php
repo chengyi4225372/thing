@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576569837;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576638530;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -451,7 +451,7 @@
                                 <img src="/static/spirit/images/weixincode.png" alt="">
                             </div>
                             <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                            <i>及时获一手财税信息</i>
+                            <i>及时获知一手财税信息</i>
                         </li>
                         <li>
                             <div class="pic">

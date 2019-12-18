@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576565062;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576634182;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1575280539;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -184,7 +184,7 @@
               </div>
               <div class="solution-flow-wm-chart">
                 <div>
-                  <img src="/static/spirit/images/wmdongt.png" alt="">
+                  <img src="/static/spirit/images/wmdongt.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
@@ -320,7 +320,7 @@
               </div>
               <div class="solution-flow-chart">
                 <div>
-                  <img src="/static/spirit/images/xingWuLiuDongTu.jpg" alt="">
+                  <img src="/static/spirit/images/xingWuLiuDongTu.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
@@ -447,7 +447,7 @@
               </div>
               <div class="solution-flow-wm-chart">
                 <div>
-                  <img src="/static/spirit/images/wmdongt.png" alt="">
+                  <img src="/static/spirit/images/wmdongt.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
@@ -588,7 +588,7 @@
               </div>
               <div class="solution-flow-chart">
                 <div>
-                  <img src="/static/spirit/images/zhizaoyedongtu.png" alt="">
+                  <img src="/static/spirit/images/xingWuLiuDongTu.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
@@ -722,7 +722,7 @@
               </div>
               <div class="solution-flow-wm-chart">
                 <div>
-                  <img src="/static/spirit/images/wmdongt.png" alt="">
+                  <img src="/static/spirit/images/wmdongt.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
