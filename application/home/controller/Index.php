@@ -21,6 +21,7 @@ class Index extends BaseController
             $redirect_url = Config::get('curl.redirect_url');
             //行业资讯
             $data = Workservice::instance()->three();
+            //todo 这个暂时先这样，后面还要改
             if(isset($_GET['line']) && isset($_GET['userType']) && isset($_GET['ttttt']) && $_GET['location'] == 'yes'){
                 $mobile = $_GET['line'];
                 $userType = $_GET['userType'];
@@ -36,6 +37,7 @@ class Index extends BaseController
                 $this->redirect($redirect_url.'/task/task');
                 $this->assign('userinfo',$arr);
             }
+            //todo 这个暂时先这样，后面还要改
             $this->assign('data',$data);
 
             $this->assign('title','惠灵工');
@@ -50,7 +52,6 @@ class Index extends BaseController
      * 慧灵工 列表页
      */
      public function informationList(){
-
          if($this->request->isGet()){
 
 //             if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){

@@ -91,13 +91,12 @@ class Login extends  BaseController{
      * @date: 2019-10-31 10:38:54
      */
     public function logout(){
-        $userController = new UserController();
         header("Access-Control-Allow-Origin:*");
         $website_url = Config::get('curl.website');
         $hzs_url = Config::get('curl.hzs');
-        $userController->delete('mobile');
-        $userController->delete('token');
-        $userController->delete('userType');
+        Cookie::set('mobile','');
+        Cookie::set('token','');
+        Cookie::set('userType','');
         //官网退出
         $res = curl_get($website_url.'/home/login/apilogout');
         $res2 = curl_get($hzs_url.'/home/login/apilogout');
