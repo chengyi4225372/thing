@@ -30,7 +30,6 @@ class BaseController extends Controller
      */
     public function _initialize()
     {
-        $userController = new UserController();
 
         $mobile = Cookie::get('mobile');
 

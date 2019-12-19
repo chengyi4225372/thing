@@ -14,4 +14,5 @@ return [
 
     'redirect_url' => 'http://hlg_pub.hui7y.com/#',//登录重定向地址
     'login_url' => 'http://hlg_pub.hui7y.com/#/login',//登录地址
+    'register_url' => 'http://hlg_pub.hui7y.com/#/register',//注册地址
 ];
