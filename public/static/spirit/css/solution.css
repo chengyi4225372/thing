@@ -1026,6 +1026,7 @@ a {
     /* width: 60.375rem; */
     width: 100%;
     margin: 0 auto;
+    font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 3.75rem;
 }
@@ -1305,6 +1306,7 @@ a {
     text-align: center;
     /* width: 44.375rem; */
     margin: 0 auto;
+    font-size: 1rem;
     line-height: 1.8;
     /* margin-bottom: 3.75rem; */
 }
@@ -1383,6 +1385,7 @@ a {
     text-align: center;
     width: 44.375rem;
     margin: 0 auto;
+    font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 3.75rem;
 }

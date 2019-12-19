@@ -297,3 +297,6 @@
 ---------------------------------------------------------------
 [ 2019-12-19T14:24:21+08:00 ] 127.0.0.1 GET /home/index/index.html
 [ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:38:24+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2006]SQLSTATE[HY000] [2006] MySQL server has gone away[C:\phpEnv\www\thing\thinkphp\library\think\db\Connection.php:295]

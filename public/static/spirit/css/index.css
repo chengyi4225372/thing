@@ -1182,8 +1182,8 @@ input::-ms-input-placeholder {
     font-size: 1rem;
     font-family: "PingFang SC", "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 500;
-    color: rgba(0, 0, 0, .6);
-    opacity: 0.6;
+    /* color: rgba(0, 0, 0, .6)*/
+    color: #333;
     text-align: center;
     line-height: 1.875rem;
 }
@@ -1299,8 +1299,8 @@ input::-ms-input-placeholder {
     font-size: 1rem;
     font-family: "PingFang SC", "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 500;
-    color: rgba(0, 0, 0, .6);
-    opacity: 0.6;
+    /* color: rgba(0, 0, 0, .6); */
+    color: #333;
     text-align: center;
     margin-bottom: 3.5rem;
 }
@@ -1344,8 +1344,8 @@ input::-ms-input-placeholder {
     font-size: 1rem;
     font-family: "PingFang SC", "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 500;
-    color: rgba(0, 0, 0, .6);
-    opacity: 0.6;
+    /* color: rgba(0, 0, 0, .6); */
+    color: #333;
     text-align: center;
     margin-bottom: 3.5rem;
 }
@@ -1540,7 +1540,7 @@ input::-ms-input-placeholder {
 }
 
 .conBtn {
-    height: 51px;
+    height: 3.875rem;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;

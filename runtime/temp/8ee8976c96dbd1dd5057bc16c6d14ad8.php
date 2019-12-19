@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576734796;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576723016;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576726279;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576723016;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576736726;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576736726;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576736726;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576726279;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576723016;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,10 +32,13 @@
       <div class="w nav-container clearfix">
         <!-- logo图 -->
         <div class="logo">
-          <h1>
+    <h1>
+        <a href="<?php echo url('/home/index/index'); ?>">
             <img src="/static/spirit/images/logo2xxx.png">
-          </h1>
-        </div>
+        </a>
+
+    </h1>
+</div>
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
@@ -65,7 +68,7 @@
     <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
             登录
         </a></div>
-    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
 </div>
 <?php else: ?>
 <div class="u_info">
