@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576723016;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576723016;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576726279;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576723016;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576734796;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576723016;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576726279;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576723016;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -482,9 +482,6 @@
         <div>顶部</div>
     </div>
 </div>
-
-
-
 
 
 

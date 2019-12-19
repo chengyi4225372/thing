@@ -240,3 +240,60 @@
 ---------------------------------------------------------------
 [ 2019-12-19T11:35:11+08:00 ] 127.0.0.1 GET /home/index/index.html
 [ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T13:58:46+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T13:58:50+08:00 ] 127.0.0.1 GET /home/optimal/cooperation.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T13:58:55+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:00:01+08:00 ] 127.0.0.1 GET /home/optimal/cooperation.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:00:06+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:16:07+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:20:02+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:03+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:06+08:00 ] 127.0.0.1 GET /home/index/productservice.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:10+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:13+08:00 ] 127.0.0.1 GET /home/index/productservice.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:14+08:00 ] 127.0.0.1 GET /home/index/solution.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:16+08:00 ] 127.0.0.1 GET /home/index/clientcase.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:20+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:25+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:33+08:00 ] 127.0.0.1 GET /home/optimal/cooperation.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:23:40+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:24:16+08:00 ] 127.0.0.1 GET /home/index/productservice.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]
+---------------------------------------------------------------
+[ 2019-12-19T14:24:21+08:00 ] 127.0.0.1 GET /home/index/index.html
+[ error ] [2]mkdir(): File exists[C:\phpEnv\www\thing\application\common\controller\UserController.php:36]

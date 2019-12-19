@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576723016;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576723016;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576723016;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576723016;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576723016;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576723016;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576726279;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576723016;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -292,7 +292,7 @@
                 <dl>
                     <dt>惠企云旗下产品</dt>
                     <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
-                    <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
+                    <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
                     <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
                     <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
                     <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
