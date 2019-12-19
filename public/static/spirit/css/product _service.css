@@ -823,7 +823,7 @@ input:-webkit-autofill {
     bottom: -1rem;
     left: 50%;
     transform: translate(-50%);
-    width: 200%;
+    width: 100%;
     font-size: 2.625rem;
     font-family: Alibaba-PuHuiTi-R, Alibaba-PuHuiTi;
     font-weight: normal;
