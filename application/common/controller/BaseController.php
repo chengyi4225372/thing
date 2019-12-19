@@ -32,7 +32,7 @@ class BaseController extends Controller
     {
         $userController = new UserController();
 
-        $mobile = $userController->get('mobile');
+        $mobile = Cookie::get('mobile');
 
         $token = Cookie::get('token');
         $userName = Cookie::get('userName');
@@ -60,7 +60,6 @@ class BaseController extends Controller
         $modulename = $this->request->module();
         $controllername = strtolower($this->request->controller());
         $actionname = strtolower($this->request->action());
-
         // 当前路径
         $path = '/'.$modulename . '/' . str_replace('.', '/', $controllername) . '/' . $actionname;
         $this->assign('path',$path);

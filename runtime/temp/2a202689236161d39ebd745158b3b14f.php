@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1576656805;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576656349;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576652467;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576652467;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1576723016;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576723016;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576723016;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576723016;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,8 +69,8 @@
         <!-- <div> -->
         <!-- <?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
-    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-            登陆
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
         </a></div>
     <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
 </div>
@@ -111,8 +111,9 @@
     <div class="content-box">
       <div class="w content">
         <div class="bread-crumbs">
-          <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
-          <b class="current">新闻资讯</b>
+            <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
+            <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b>
+
         </div>
         <div class="information-list">
           <div class="tabs clearfix">
@@ -123,7 +124,7 @@
             <div class="search-box fr">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
               <div onclick="search(this)" data-url="<?php echo url('/home/index/informationList'); ?>">搜索</div>
-              <span onclick="onclick_close()"></span>
+              <span onclick="window.location.href=$(this).attr('data-url');" data-url="<?php echo url('/home/index/informationList'); ?>"></span>
             </div>
           </div>
           <div class="tabs-items show">
@@ -212,7 +213,7 @@
                         <img src="/static/spirit/images/weixincode.png" alt="">
                     </div>
                     <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                    <i>及时获知一手财税消息</i>
+                    <i>及时获知一手财税信息</i>
                 </li>
                 <li>
                     <div class="pic">
@@ -241,7 +242,7 @@
         <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
             <ul>
-                <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
                 <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
                 <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
