@@ -3,11 +3,11 @@
 namespace app\home\controller;
 use app\common\controller\BaseController;
 use app\common\controller\UserController;
+use app\common\model\Loginlog;
 use  think\Controller;
 use think\Cookie;
 use think\Cache;
 use think\Config;
-use think\session\driver\Redis;
 class Login extends  BaseController{
     public function login(){
         if(isset($_GET['id']) && !empty($_GET['id'])){
@@ -73,14 +73,27 @@ class Login extends  BaseController{
     {
         //允许跨域
         header("Access-Control-Allow-Origin:*");
-        $mobile = $_POST['mobile'];
-        $token = $_POST['token'];
-        $userType = $_POST['userType'];
-
-        Cookie::set('mobile',$mobile);
-        Cookie::set('token',$token);
-        Cookie::set('userType',$userType);
-        return json(['status' => 200,'message' => Cookie::get()]);
+        $loginlogModel = new Loginlog();
+        $mobile = isset($_POST['mobile']) ? $_POST['mobile'] : '';
+        $token = isset($_POST['token']) ? $_POST['token'] : '';
+        $userType = isset($_POST['userType']) ? $_POST['userType'] : '';
+        $where = [];
+        if(!empty($mobile)){
+            $add = [];
+            $add['mobile'] = $mobile;
+            $add['token'] = $token;
+            $add['userType'] = $userType;
+            $add['add_time'] = time();
+            $where['mobile'] = $mobile;
+            $info = $loginlogModel::instance()->where($where)->find();
+            if(count($info) > 0){
+                $loginlogModel::instance()->where($where['mobile'])->delete();
+                $loginlogModel::instance()->insert($add);
+            }else{
+                $loginlogModel::instance()->insert($add);
+            }
+        }
+        return json(['status' => 200,'message' => 'success']);
     }
 
 
