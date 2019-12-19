@@ -7,6 +7,7 @@ use  think\Controller;
 use think\Cookie;
 use think\Cache;
 use think\Config;
+use think\session\driver\Redis;
 class Login extends  BaseController{
     public function login(){
         if(isset($_GET['id']) && !empty($_GET['id'])){
@@ -72,17 +73,14 @@ class Login extends  BaseController{
     {
         //允许跨域
         header("Access-Control-Allow-Origin:*");
-        $userController = new UserController();
         $mobile = $_POST['mobile'];
         $token = $_POST['token'];
         $userType = $_POST['userType'];
-        $userController->set('mobile',$mobile);
-        $userController->set('token',$token);
-        $userController->set('userType',$userType);
-//        $this->set('mobile',$mobile,86400);
-//        $this->set('token',$token,86400);
-//        $this->set('userType',$userType,86400);
-        return json(['status' => 200,'message' => 'success']);
+
+        Cookie::set('mobile',$mobile);
+        Cookie::set('token',$token);
+        Cookie::set('userType',$userType);
+        return json(['status' => 200,'message' => Cookie::get()]);
     }
 
 

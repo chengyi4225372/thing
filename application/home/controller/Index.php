@@ -7,6 +7,7 @@ use think\Controller;
 use app\v1\service\Workservice;
 use app\v1\service\Exampleservice;
 use think\Cookie;
+use think\Config;
 class Index extends BaseController
 {
 
@@ -16,12 +17,25 @@ class Index extends BaseController
      */
     public function  index()
     {
-
         if($this->request->isGet()){
-    
+            $redirect_url = Config::get('curl.redirect_url');
             //行业资讯
             $data = Workservice::instance()->three();
+            if(isset($_GET['line']) && isset($_GET['userType']) && isset($_GET['ttttt']) && $_GET['location'] == 'yes'){
+                $mobile = $_GET['line'];
+                $userType = $_GET['userType'];
+                $arr = [];
+                $arr['mobile'] = $mobile;
+                $arr['token'] = $_GET['ttttt'];
+                $arr['userName'] = '';
+                $arr['userType'] = $userType;
 
+                Cookie::set('mobile',$mobile);
+                Cookie::set('token',$_GET['ttttt']);
+                Cookie::set('userType',$userType);
+                $this->redirect($redirect_url.'/task/task');
+                $this->assign('userinfo',$arr);
+            }
             $this->assign('data',$data);
 
             $this->assign('title','惠灵工');

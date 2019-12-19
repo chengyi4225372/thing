@@ -34,9 +34,9 @@ class BaseController extends Controller
 
         $mobile = $userController->get('mobile');
 
-        $token = $userController->get('token');
-        $userName = $userController->get('userName');
-        $userType = $userController->get('userType');//c 个人 b 企业
+        $token = Cookie::get('token');
+        $userName = Cookie::get('userName');
+        $userType = Cookie::get('userType');//c 个人 b 企业
         $mobile = !empty($mobile) ? $mobile :'';
         $token = !empty($token) ? $token : '';
         $userName = !empty($userName) ? $userName : '';
@@ -56,7 +56,7 @@ class BaseController extends Controller
             $is_nginx = '/index.php';
         }
 
-        $base_url = COnfig::get('curl.login_url');
+        $base_url = Config::get('curl.login_url');
         $modulename = $this->request->module();
         $controllername = strtolower($this->request->controller());
         $actionname = strtolower($this->request->action());
