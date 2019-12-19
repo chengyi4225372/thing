@@ -34,7 +34,14 @@ class Index extends BaseController
                 Cookie::set('mobile',$mobile);
                 Cookie::set('token',$_GET['ttttt']);
                 Cookie::set('userType',$userType);
-                $this->redirect($redirect_url.'/task/task');
+                //企业
+                if ($userType == 'B') {
+                    $this->redirect(config::get('curl.redirect_url') . '/task/task');return;
+                }
+                //个人
+                if ($userType == 'C') {
+                    $this->redirect(config::get('curl.redirect_url') . '/personTask/myTask');return;
+                }
                 $this->assign('userinfo',$arr);
             }
             //todo 这个暂时先这样，后面还要改

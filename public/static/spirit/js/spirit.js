@@ -253,9 +253,18 @@ function showSearch(){
     $('#popbox').css('display','block');
 }
 
-
+//惠灵工登录跳转
 function click_login(objthis){
     var login_url2 = $(objthis).attr('login_url');
+    var loca_url2 = $(objthis).attr('location_url');
+    var loca_url = encodeURIComponent(loca_url2);
+    var login_url = login_url2+'?artId='+loca_url;
+    location.href = login_url;
+}
+
+//惠灵工注册跳转
+function click_register(objthis){
+    var login_url2 = $(objthis).attr('register_url');
     var loca_url2 = $(objthis).attr('location_url');
     var loca_url = encodeURIComponent(loca_url2);
     var login_url = login_url2+'?artId='+loca_url;
