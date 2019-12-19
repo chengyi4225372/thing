@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576726065;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576726252;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576722200;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576683080;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576736731;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576722200;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576683080;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +34,7 @@
         <div class="logo">
     <h1>
         <a href="<?php echo url('/home/index/index'); ?>">
-            <img src="/static/spirit/images/logo2xxx.png">
+            <img src="/static/spirit/images/logo2xxxx.png">
         </a>
 
     </h1>
@@ -485,9 +485,6 @@
         <div>顶部</div>
     </div>
 </div>
-
-
-
 
 
 

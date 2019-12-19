@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1576667358;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576660953;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576666558;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576582309;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1576726107;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576726252;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576722200;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576683080;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,10 +30,13 @@
       <div class="w nav-container clearfix">
         <!-- logo图 -->
         <div class="logo">
-          <h1>
+    <h1>
+        <a href="<?php echo url('/home/index/index'); ?>">
             <img src="/static/spirit/images/logo2xxx.png">
-          </h1>
-        </div>
+        </a>
+
+    </h1>
+</div>
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
@@ -69,10 +72,10 @@
         <!-- <div> -->
         <!-- <?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
-    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-            登陆
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
         </a></div>
-    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
 </div>
 <?php else: ?>
 <div class="u_info">
@@ -182,7 +185,7 @@
                 <dl>
                     <dt>惠企云旗下产品</dt>
                     <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
-                    <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
+                    <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
                     <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
                     <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
                     <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
@@ -242,7 +245,7 @@
         <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
             <ul>
-                <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
                 <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
                 <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
