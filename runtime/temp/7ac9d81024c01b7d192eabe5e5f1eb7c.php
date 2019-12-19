@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"/opt/web/thing/public/../application/home/view/optimal/cooperation.html";i:1576727190;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"/opt/web/thing/public/../application/home/view/optimal/cooperation.html";i:1576735448;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576726252;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>招募合伙人</title>
+    <title>招商合作</title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/optimal.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -16,10 +16,13 @@
         <div class="w nav-container clearfix">
             <!-- logo图 -->
             <div class="logo">
-                <h1>
-                    <img src="/static/spirit/images/logo2xxx.png">
-                </h1>
-            </div>
+    <h1>
+        <a href="<?php echo url('/home/index/index'); ?>">
+            <img src="/static/spirit/images/logo2xxx.png">
+        </a>
+
+    </h1>
+</div>
             <!-- nav部分 -->
             <div class="nav">
                 <ul class="clearfix">
@@ -81,20 +84,20 @@
     </div>
 </body>
 
-<script>
-    $(function () {
-        var count = 3;
-        var timer = setInterval(function () {
-            $('.clock').html(count);
-            count--;
-            if (count < 0) {
-                clearInterval(timer)
-                location.href = "<?php echo url('/home/index/index'); ?>"
-            }
-        }, 1000)
+<!--<script>-->
+    <!--$(function () {-->
+        <!--var count = 3;-->
+        <!--var timer = setInterval(function () {-->
+            <!--$('.clock').html(count);-->
+            <!--count&#45;&#45;;-->
+            <!--if (count < 0) {-->
+                <!--clearInterval(timer)-->
+                <!--location.href = "<?php echo url('/home/index/index'); ?>"-->
+            <!--}-->
+        <!--}, 1000)-->
 
-    })
-</script>
+    <!--})-->
+<!--</script>-->
 <script>
     $('.nav ul li').on('click', function () {
         $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')

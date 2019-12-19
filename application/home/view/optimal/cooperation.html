@@ -56,20 +56,20 @@
     </div>
 </body>
 
-<script>
-    $(function () {
-        var count = 3;
-        var timer = setInterval(function () {
-            $('.clock').html(count);
-            count--;
-            if (count < 0) {
-                clearInterval(timer)
-                location.href = "{:url('/home/index/index')}"
-            }
-        }, 1000)
+<!--<script>-->
+    <!--$(function () {-->
+        <!--var count = 3;-->
+        <!--var timer = setInterval(function () {-->
+            <!--$('.clock').html(count);-->
+            <!--count&#45;&#45;;-->
+            <!--if (count < 0) {-->
+                <!--clearInterval(timer)-->
+                <!--location.href = "{:url('/home/index/index')}"-->
+            <!--}-->
+        <!--}, 1000)-->
 
-    })
-</script>
+    <!--})-->
+<!--</script>-->
 <script>
     $('.nav ul li').on('click', function () {
         $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
