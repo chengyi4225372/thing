@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576749781;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576749781;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576749781;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576749781;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576749781;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576749781;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +35,7 @@
                 <div class="logo">
     <h1>
         <a href="<?php echo url('/home/index/index'); ?>">
-            <img src="/static/spirit/images/logo2xxx.png">
+            <img src="/static/spirit/images/logo2xxxx.png">
         </a>
 
     </h1>
@@ -395,7 +395,7 @@
             <ul>
                 <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
                 <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
                 <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
                 <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
