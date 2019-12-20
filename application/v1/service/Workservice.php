@@ -205,7 +205,7 @@ class Workservice
              'sort'=>['GT',$top['sort']],
         ];
 
-        $info = Work::instance()->where($where)->order('sort desc ,create_time asc')->find();
+        $info = Work::instance()->where($where)->order('sort asc ,create_time asc')->find();
 
         if (empty($info)) {
             return $info = '';

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:118:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\information_list.html";i:1576806779;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1576806779;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1576723960;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1576806779;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:118:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\information_list.html";i:1576806779;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1576806779;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1576808013;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1576806779;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -186,7 +186,7 @@
                     <dt>惠企云旗下产品</dt>
                     <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
                     <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
+                    <dd><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dd>
                     <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
                     <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
                 </dl>
