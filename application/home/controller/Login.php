@@ -1,6 +1,7 @@
 <?php
 
 namespace app\home\controller;
+
 use app\common\controller\BaseController;
 use app\common\controller\UserController;
 use app\common\model\Loginlog;
@@ -8,30 +9,34 @@ use  think\Controller;
 use think\Cookie;
 use think\Cache;
 use think\Config;
-class Login extends  BaseController{
-    public function login(){
-        if(isset($_GET['id']) && !empty($_GET['id'])){
+
+class Login extends BaseController
+{
+    public function login()
+    {
+        if (isset($_GET['id']) && !empty($_GET['id'])) {
             $id = intval($_GET['id']);
-        }else{
+        } else {
             $id = '0';
         }
-        if(isset($_GET['type']) && !empty($_GET['type'])){
+        if (isset($_GET['type']) && !empty($_GET['type'])) {
             $type = intval($_GET['type']);
-        }else{
+        } else {
             $type = '0';
         }
-        $this->assign('web_type',$type);
-        $this->assign('data_id',$id);
+        $this->assign('web_type', $type);
+        $this->assign('data_id', $id);
         return $this->fetch();
     }
 
-    public  function register(){
-        if(isset($_GET['id']) && !empty($_GET['id'])){
+    public function register()
+    {
+        if (isset($_GET['id']) && !empty($_GET['id'])) {
             $id = intval($_GET['id']);
-        }else{
+        } else {
             $id = '';
         }
-        $this->assign('data_id',$id);
+        $this->assign('data_id', $id);
         return $this->fetch();
     }
 
@@ -45,22 +50,22 @@ class Login extends  BaseController{
     {
         //允许跨域
         header("Access-Control-Allow-Origin:*");
-        if($this->request->isPost() && $this->request->isAjax()){
-            if(empty($_POST)){
-                return json(['status' => false,'message' => '请确认用户或密码是否正确']);
+        if ($this->request->isPost() && $this->request->isAjax()) {
+            if (empty($_POST)) {
+                return json(['status' => false, 'message' => '请确认用户或密码是否正确']);
             }
             $mobile = $_POST['mobile'];
             $token = $_POST['token'];
             $userName = $_POST['userName'];
             $userType = $_POST['userType'];
-            Cookie::set('mobile',$mobile);
-            Cookie::set('token',$token);
-            Cookie::set('userName',$userName);
-            Cookie::set('userType',$userType);
-            Cache::set($mobile,$mobile);
-            return json(['status' => true,'message' => '登录成功']);
-        }else{
-            return json(['status' => false,'message' => '请确认用户或密码是否正确']);
+            Cookie::set('mobile', $mobile);
+            Cookie::set('token', $token);
+            Cookie::set('userName', $userName);
+            Cookie::set('userType', $userType);
+            Cache::set($mobile, $mobile);
+            return json(['status' => true, 'message' => '登录成功']);
+        } else {
+            return json(['status' => false, 'message' => '请确认用户或密码是否正确']);
         }
     }
 
@@ -78,7 +83,7 @@ class Login extends  BaseController{
         $token = isset($_POST['token']) ? $_POST['token'] : '';
         $userType = isset($_POST['userType']) ? $_POST['userType'] : '';
         $where = [];
-        if(!empty($mobile)){
+        if (!empty($mobile)) {
             $add = [];
             $add['mobile'] = $mobile;
             $add['token'] = $token;
@@ -86,14 +91,14 @@ class Login extends  BaseController{
             $add['add_time'] = time();
             $where['mobile'] = $mobile;
             $info = $loginlogModel::instance()->where($where)->find();
-            if(count($info) > 0){
+            if (count($info) > 0) {
                 $loginlogModel::instance()->where($where['mobile'])->delete();
                 $loginlogModel::instance()->insert($add);
-            }else{
+            } else {
                 $loginlogModel::instance()->insert($add);
             }
         }
-        return json(['status' => 200,'message' => 'success']);
+        return json(['status' => 200, 'message' => 'success']);
     }
 
 
@@ -103,17 +108,18 @@ class Login extends  BaseController{
      * @author: jason
      * @date: 2019-10-31 10:38:54
      */
-    public function logout(){
+    public function logout()
+    {
         header("Access-Control-Allow-Origin:*");
         $website_url = Config::get('curl.website');
         $hzs_url = Config::get('curl.hzs');
-        Cookie::set('mobile','');
-        Cookie::set('token','');
-        Cookie::set('userType','');
+        Cookie::set('mobile', '');
+        Cookie::set('token', '');
+        Cookie::set('userType', '');
         //官网退出
-        $res = curl_get($website_url.'/home/login/apilogout');
-        $res2 = curl_get($hzs_url.'/home/login/apilogout');
-        return json(['status' => 200,'message' => 'success']);
+        $res = curl_get($website_url . '/home/login/apilogout');
+        $res2 = curl_get($hzs_url . '/home/login/apilogout');
+        return json(['status' => 200, 'message' => 'success']);
     }
 
     /**
@@ -125,14 +131,11 @@ class Login extends  BaseController{
     {
         $userController = new UserController();
         header("Access-Control-Allow-Origin:*");
-        Cookie::set('mobile','');
-        Cookie::set('token','');
-        Cookie::set('userType','');
-        return json(['status' => 200,'message' => 'success']);
+        Cookie::set('mobile', '');
+        Cookie::set('token', '');
+        Cookie::set('userType', '');
+        return json(['status' => 200, 'message' => 'success']);
     }
-
-
-
 
 
     /**
@@ -149,7 +152,7 @@ class Login extends  BaseController{
         $token = isset($_POST['token']) ? $_POST['token'] : '';
         $userType = isset($_POST['userType']) ? $_POST['userType'] : '';
         $where = [];
-        if(!empty($mobile)){
+        if (!empty($mobile)) {
             $add = [];
             $add['mobile'] = $mobile;
             $add['token'] = $token;
@@ -157,13 +160,24 @@ class Login extends  BaseController{
             $add['add_time'] = time();
             $where['mobile'] = $mobile;
             $info = $loginlogModel::instance()->where($where)->find();
-            if(count($info) > 0){
+            if (count($info) > 0) {
                 $loginlogModel::instance()->where($where['mobile'])->delete();
                 $loginlogModel::instance()->insert($add);
-            }else{
+            } else {
                 $loginlogModel::instance()->insert($add);
             }
         }
-        return json(['status' => 200,'message' => 'success']);
+        return json(['status' => 200, 'message' => 'success']);
+    }
+
+    public function eachdata()
+    {
+        $loginlogModel = new Loginlog();
+        $info = $loginlogModel::instance()->select();
+        if (count($info) > 0) {
+            foreach ($info as $key => $value) {
+
+            }
+        }
     }
 }
