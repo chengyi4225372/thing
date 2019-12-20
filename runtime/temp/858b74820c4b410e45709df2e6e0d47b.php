@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1576656417;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576656349;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576652467;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576652467;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\casedetail.html";i:1576811652;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576812129;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +14,7 @@
   <meta name="keywords" content="<?php echo (isset($info['keyword']) && ($info['keyword'] !== '')?$info['keyword']:''); ?>" />
   <link rel="stylesheet" href="/static/spirit/css/base.css">
   <link rel="stylesheet" href="/static/spirit/css/casedetail.css">
+  <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script src='/static/spirit/js/spirit.js'></script>
@@ -29,10 +30,13 @@
       <div class="w nav-container clearfix">
         <!-- logo图 -->
         <div class="logo">
-          <h1>
-            <img src="/static/spirit/images/logo2xxx.png">
-          </h1>
-        </div>
+    <h1>
+        <a href="<?php echo url('/home/index/index'); ?>">
+            <img src="/static/spirit/images/logo2xxxx.png">
+        </a>
+
+    </h1>
+</div>
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
@@ -75,10 +79,10 @@
         <!--<div>-->
         <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
-    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-            登陆
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
         </a></div>
-    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
 </div>
 <?php else: ?>
 <div class="u_info">
@@ -156,28 +160,28 @@
                 <dl>
                     <dt>惠企云旗下产品</dt>
                     <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
-                    <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
-                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
-                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
-                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                    <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
+                    <dd><a href="javascript:;">惠多薪</a></dd>
+                    <dd><a href="javascript:;">惠创业</a></dd>
+                    <dd><a href="javascript:;">惠找事</a></dd>
                 </dl>
                 <dl>
                     <dt>惠灵工</dt>
                     <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
                     <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
                     <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
-                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
+                    <dd><a href="javascript:;">招商合作</a></dd>
                 </dl>
                 <dl>
                     <dt>客服热线</dt>
-                    <dd>400-150-9896</dd>
-                    <dd>18186194461</dd>
+                    <dd><a href="javascript:;">400-150-9896</a></dd>
+                    <dd><a href="javascript:;">18186194461</a></dd>
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
-                    <dd>武汉市硚口区南国大武汉H座</dd>
-                    <dd>深圳市福田区第一世界广场A座</dd>
-                    <dd>北京市西城区贵都国际中心B座</dd>
+                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
+                    <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
+                    <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
                 </dl>
             </div>
 
@@ -187,7 +191,7 @@
                         <img src="/static/spirit/images/weixincode.png" alt="">
                     </div>
                     <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                    <i>及时获知一手财税消息</i>
+                    <i>及时获知一手财税信息</i>
                 </li>
                 <li>
                     <div class="pic">
@@ -215,9 +219,9 @@
         <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
             <ul>
-                <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
                 <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
                 <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
                 <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>

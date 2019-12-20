@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576749781;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576749781;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576818354;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576812129;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/static/spirit/css/base.css">
   <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
   <link rel="stylesheet" href="/static/spirit/css/solution.css">
+  <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/static/spirit/js/clamp.js"></script>
   <script src='/static/spirit/js/solution.js'></script>
@@ -667,7 +668,7 @@
 
 
                 无论从中国的经济发展阶段，人口结构特征，还是从技术革命对社会的重构，整个教育的大环境都发生了翻天覆地的变化，<br>
-                咨询培训平台必须高度契合市场需要并不断适应市场的变化，而高比例企业所得税和因个税高而导致的人员波动都是平台发展面临的挑战。<br>
+                咨询培训平台必须高度契合市场并不断适应市场的变化，而高比例企业所得税和因个税高而导致的人员波动都是平台发展面临的挑战。<br>
                 惠灵工定制解决方案能帮助咨询培训平台应对这些挑战，规避用工风险，提升用工效能。
 
 
@@ -814,27 +815,27 @@
                     <dt>惠企云旗下产品</dt>
                     <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
                     <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
-                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
-                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                    <dd><a href="javascript:;">惠多薪</a></dd>
+                    <dd><a href="javascript:;">惠创业</a></dd>
+                    <dd><a href="javascript:;">惠找事</a></dd>
                 </dl>
                 <dl>
                     <dt>惠灵工</dt>
                     <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
                     <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
                     <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
-                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
+                    <dd><a href="javascript:;">招商合作</a></dd>
                 </dl>
                 <dl>
                     <dt>客服热线</dt>
-                    <dd>400-150-9896</dd>
-                    <dd>18186194461</dd>
+                    <dd><a href="javascript:;">400-150-9896</a></dd>
+                    <dd><a href="javascript:;">18186194461</a></dd>
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
-                    <dd>武汉市硚口区南国大武汉H座</dd>
-                    <dd>深圳市福田区第一世界广场A座</dd>
-                    <dd>北京市西城区贵都国际中心B座</dd>
+                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
+                    <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
+                    <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
                 </dl>
             </div>
 
