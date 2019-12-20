@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576818501;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576812129;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576839418;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576839219;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576839219;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576848261;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576843605;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +13,7 @@
   <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
   <link rel="stylesheet" href="/static/spirit/css/base.css">
   <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
+  <link rel="stylesheet" href="/static/spirit/font/syht.css">
   <link rel="stylesheet" href="/static/spirit/css/index.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -358,7 +359,7 @@
                   <p class="conTitle limit1"><?php echo $vo['title']; ?></p>
                   <p class="conTime"><?php echo $vo['create_time']; ?></p>
                   <p class="conDetail limit2">
-                    <?php echo $vo['desc']; ?>
+                    <?php echo mb_substr($vo['desc'],0,70,'utf-8'); ?>...
                   </p>
                 </div>
                 <div class="separate"></div>
@@ -392,7 +393,7 @@
         <div class="aboutUs">
             <span>关于我们</span>
             <p>
-                惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+                惠企云旗下【惠灵工】，立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
             </p>
         </div>
         <div class="w navBottom">

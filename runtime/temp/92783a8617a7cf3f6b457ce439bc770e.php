@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576811661;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576811986;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576841809;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576839219;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576839219;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576848293;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576843605;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +12,7 @@
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
+    <link rel="stylesheet" href="/static/spirit/font/syht.css">
     <link rel="stylesheet" href="/static/spirit/css/clientcase.css">
     <link rel="stylesheet" href="/static/spirit/css/footer.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -130,7 +131,7 @@
                             </div>
                             <div class="item-content">
                                 <p class="limit1"><?php echo $vo['title']; ?></p>
-                                <p class="limit2"><?php echo mb_substr($vo['describes'],'0','38','utf-8'); ?></p>
+                                <p class="limit2"><?php echo mb_substr($vo['describes'],'0','35','utf-8'); ?>...</p>
                             </div>
                             <div class="item-comtent-more">查看详情</div>
                         </a>
@@ -288,7 +289,7 @@
         <div class="aboutUs">
             <span>关于我们</span>
             <p>
-                惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+                惠企云旗下【惠灵工】，立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
             </p>
         </div>
         <div class="w navBottom">
@@ -315,9 +316,9 @@
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
-                    <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
-                    <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
-                    <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
+                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
+                    <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
+                    <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
                 </dl>
             </div>
 

@@ -19,7 +19,7 @@
     font-size: 1.5rem;
     line-height: 1.5rem;
     color: #fff;
-    font-family: "Noto Sans SC";
+    font-family: "PingFang-SC","syht";
     font-weight: 500;
   }
   
@@ -27,6 +27,7 @@
     margin-top: 2.125rem;
     line-height: 1.75rem;
     vertical-align: top;
+    font-size: 1rem;
   }
   
   .bottomBox .bottom .navBottom {
@@ -78,7 +79,7 @@
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.125rem;
-    font-family: "Noto Sans SC";
+    font-family: "PingFang-SC","syht";
     margin-bottom: 3.25rem;
   }
   
@@ -88,7 +89,7 @@
   }
   
   .bottomBox .bottom .navBottom .navList dl dd a {
-    font-family: "Noto Sans SC";
+    font-family: "PingFang-SC","syht";
     display: block;
     color: #dcdcdc;
     font-size: 1.125rem;

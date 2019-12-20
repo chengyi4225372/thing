@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1576811664;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576811986;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1576841816;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576839219;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576839219;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576839219;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576843605;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +13,7 @@
   <title><?php echo $title; ?></title>
   <meta name="keywords" content="<?php echo (isset($info['keyword']) && ($info['keyword'] !== '')?$info['keyword']:''); ?>" />
   <link rel="stylesheet" href="/static/spirit/css/base.css">
+  <link rel="stylesheet" href="/static/spirit/font/syht.css">
   <link rel="stylesheet" href="/static/spirit/css/detail.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -174,9 +175,9 @@
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
-                    <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
-                    <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
-                    <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
+                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
+                    <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
+                    <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
                 </dl>
             </div>
 
