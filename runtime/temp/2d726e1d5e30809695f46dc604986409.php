@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576736726;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576736726;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576736726;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576726279;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576723016;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576749781;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576749781;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576749781;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576749781;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1065,17 +1065,21 @@ input::-ms-input-placeholder {
 
 .project-items {
     margin-top: 2.8125rem;
-    padding-left: 4rem;
+    padding-left: 5rem;
 }
 
 .project-items ul {
+    width: 62.5rem;
     border-bottom: 2px solid rgba(206, 209, 221, .3);
 }
 
 .project-items .project-tabs {
     float: left;
-    padding: 1.25rem 4.9375rem;
+    /* padding: 1.25rem 4.9375rem; */
+    padding: 1.25rem 0;
+    width: 15.625rem;
     font-size: 1.5rem;
+    text-align: center;
     font-family: "PingFang SC", "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 500;
     color: rgba(255, 255, 255, 1);
@@ -1099,7 +1103,7 @@ input::-ms-input-placeholder {
 
 .project-tabs-items {
     display: none;
-    padding-left: 1.875rem;
+    /* padding-left: 1.875rem; */
 }
 
 .project-tabs-items p:nth-child(1) {
@@ -1123,9 +1127,9 @@ input::-ms-input-placeholder {
 
 .project-btn {
     position: absolute;
-    left: 5.625rem;
+    left: 5.25rem;
     /* bottom: 2.5rem; */
-    bottom: 2rem;
+    bottom: 3rem;
     width: 8.75rem;
     height: 2.5rem;
     background: linear-gradient(90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));

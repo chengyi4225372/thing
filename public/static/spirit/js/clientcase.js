@@ -1,4 +1,4 @@
-window.onload = function(){
+window.onload = function () {
 
 
     // 返回顶部
@@ -40,5 +40,6 @@ window.onload = function(){
         }
     }
 
-} 
     
+
+}

@@ -74,7 +74,7 @@ html {
     }
 
     /* 客户案例列表 */
-    .tabBox .item-content p:nth-of-type(1) {
+    /* .tabBox .item-content p:nth-of-type(1) {
         height: 4.125rem !important;
         word-break: break-all;
         display: -webkit-box;
@@ -90,7 +90,7 @@ html {
         -webkit-line-clamp: 2 !important;
         -webkit-box-orient: vertical;
         overflow: hidden;
-    }
+    } */
 
     .bottom-left>div>.bottom-item .hqy {
         padding-left: 1.5rem !important;

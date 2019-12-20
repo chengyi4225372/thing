@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576736726;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576736726;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576736726;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576726279;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576723016;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1576755777;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576749781;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576749781;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576749781;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -128,8 +128,8 @@
                                 <img src="<?php echo !empty($vo['imgs'])?$vo['imgs']:''; ?>" alt="">
                             </div>
                             <div class="item-content">
-                                <p><?php echo $vo['title']; ?></p>
-                                <p><?php echo mb_substr($vo['describes'],'0','38','utf-8'); ?></p>
+                                <p class="limit1"><?php echo $vo['title']; ?></p>
+                                <p class="limit2"><?php echo mb_substr($vo['describes'],'0','38','utf-8'); ?></p>
                             </div>
                             <div class="item-comtent-more">查看详情</div>
                         </a>
@@ -407,6 +407,18 @@
             $('.tabCon img').attr('src', `/static/spirit/images/${$(this).index()}case.png`)
             $('.tabTitle').html($(this).children().html())
             $(this).addClass('activeTab').siblings().removeClass('activeTab')
+        })
+
+        $('.limit1').each(function () {
+            if ($(this).text().length > 31) {
+                $(this).text($(this).text().slice(0, 31) + '...');
+            }
+        })
+
+        $('.limit2').each(function () {
+            if ($(this).text().length > 63) {
+                $(this).text($(this).text().slice(0, 63) + '...');
+            }
         })
     })
 </script>

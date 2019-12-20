@@ -100,8 +100,8 @@
                                 <img src="{$vo.imgs?$vo.imgs:''}" alt="">
                             </div>
                             <div class="item-content">
-                                <p>{$vo.title}</p>
-                                <p>{$vo.describes|mb_substr='0','38','utf-8'}</p>
+                                <p class="limit1">{$vo.title}</p>
+                                <p class="limit2">{$vo.describes|mb_substr='0','38','utf-8'}</p>
                             </div>
                             <div class="item-comtent-more">查看详情</div>
                         </a>
@@ -285,6 +285,18 @@
             $('.tabCon img').attr('src', `__SPI__/images/${$(this).index()}case.png`)
             $('.tabTitle').html($(this).children().html())
             $(this).addClass('activeTab').siblings().removeClass('activeTab')
+        })
+
+        $('.limit1').each(function () {
+            if ($(this).text().length > 31) {
+                $(this).text($(this).text().slice(0, 31) + '...');
+            }
+        })
+
+        $('.limit2').each(function () {
+            if ($(this).text().length > 63) {
+                $(this).text($(this).text().slice(0, 63) + '...');
+            }
         })
     })
 </script>
