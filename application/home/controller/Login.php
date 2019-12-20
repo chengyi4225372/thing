@@ -145,12 +145,15 @@ class Login extends BaseController
      */
     public function savetokens2()
     {
+        session_start();
+        echo '<pre>';print_r($_COOKIE);exit;
         //允许跨域
         header("Access-Control-Allow-Origin:*");
         $loginlogModel = new Loginlog();
         $mobile = isset($_POST['mobile']) ? $_POST['mobile'] : '';
         $token = isset($_POST['token']) ? $_POST['token'] : '';
         $userType = isset($_POST['userType']) ? $_POST['userType'] : '';
+        $session_id = isset($_POST['session_id']) ? $_POST['session_id'] : '';
         $where = [];
         if (!empty($mobile)) {
             $add = [];
