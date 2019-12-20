@@ -146,7 +146,6 @@ class Login extends BaseController
     public function savetokens2()
     {
         session_start();
-        echo '<pre>';print_r($_COOKIE);exit;
         //允许跨域
         header("Access-Control-Allow-Origin:*");
         $loginlogModel = new Loginlog();
@@ -160,8 +159,9 @@ class Login extends BaseController
             $add['mobile'] = $mobile;
             $add['token'] = $token;
             $add['userType'] = $userType;
+            $add['cookieid'] = $session_id;
             $add['add_time'] = time();
-            $where['mobile'] = $mobile;
+            $where['cookieid'] = $session_id;
             $info = $loginlogModel::instance()->where($where)->find();
             if (count($info) > 0) {
                 $loginlogModel::instance()->where($where['mobile'])->delete();
@@ -173,14 +173,20 @@ class Login extends BaseController
         return json(['status' => 200, 'message' => 'success']);
     }
 
-    public function eachdata()
+    /**
+     * @DESC：测试单点登录
+     * @author: jason
+     * @date: 2019-12-20 04:05:35
+     */
+    public function savetokens3()
     {
-        $loginlogModel = new Loginlog();
-        $info = $loginlogModel::instance()->select();
-        if (count($info) > 0) {
-            foreach ($info as $key => $value) {
-
-            }
+        $url = Config::get('curl.website');
+        $mobile = Cookie::get('mobile');
+        $token = Cookie::get('token');
+        $userType = Cookie::get('userType');
+        if(empty($mobile)){
+            $res = curl_get($url);
+            echo '<pre>';print_r($res);exit;
         }
     }
 }
