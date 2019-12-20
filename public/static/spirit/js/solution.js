@@ -12,8 +12,10 @@ window.onload = function () {
         if (top >= 900) {
 
             goTop.style.display = "block"
-            navBox.style.display = "none"
-            layuiTabTitle.classList.add('tab-fixed')
+            window.setTimeout(() => {
+                navBox.style.display = "none"
+                layuiTabTitle.classList.add('tab-fixed')
+            }, 200)
 
             var timer = null;
             goTop.onclick = function () {
@@ -44,14 +46,15 @@ window.onload = function () {
                     itemImg[i].classList.remove('item-imgbg-active')
                 }
             }
-        } else if (top < 900) {
+        } else if (top < 800) {
 
             // 返回顶部样式
             goTop.style.display = "none"
+            window.setTimeout(() => {
+                layuiTabTitle.classList.remove('tab-fixed')
+                navBox.style.display = "block"
+            }, 200)
 
-            navBox.style.display = "block"
-
-            layuiTabTitle.classList.remove('tab-fixed')
 
         }
     }
