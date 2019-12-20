@@ -193,12 +193,19 @@ class Workservice
         if (empty($id) || !isset($id)) {
             return false;
         }
-        $where = [
-            'id' => ['LT', $id],
+        $w = [
+            'id' =>$id,
             'status' => 1
         ];
 
-        $info = Work::instance()->where($where)->order('sort desc,create_time asc')->find();
+        $top = Work::instance()->where($w)->field('sort')->order('sort desc ,create_time asc')->find();
+
+        $where = [
+             'status'=>1,
+             'sort'=>['GT',$top['sort']],
+        ];
+
+        $info = Work::instance()->where($where)->order('sort asc ,create_time asc')->find();
 
         if (empty($info)) {
             return $info = '';
@@ -219,10 +226,18 @@ class Workservice
             return false;
         }
 
-        $where = [
-            'id' => ['GT', $id],
+        $w = [
+            'id' =>$id,
             'status' => 1
         ];
+
+        $next = Work::instance()->where($w)->field('sort')->order('sort desc ,create_time asc')->find();
+
+        $where = [
+            'status'=>1,
+            'sort'=>['LT',$next['sort']],
+        ];
+
         $info = Work::instance()->where($where)->order('sort desc,create_time desc')->find();
 
         if (empty($info)) {
