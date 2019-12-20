@@ -1,0 +1,6 @@
+---------------------------------------------------------------
+[ 2019-12-20T14:53:59+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [2]Missing argument 1 for session(), called in C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php on line 16 and defined[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\helper.php:294]
+---------------------------------------------------------------
+[ 2019-12-20T14:55:07+08:00 ] 127.0.0.1 GET /v1/work/works/index.html
+[ error ] [0]致命错误: Function name must be a string[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:16]

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\detail.html";i:1576806779;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1576806779;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1576808013;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1576806779;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\detail.html";i:1576806779;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1576806779;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1576808670;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1576806779;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -155,16 +155,16 @@
                     <dt>惠企云旗下产品</dt>
                     <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
                     <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-                    <dd><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dd>
-                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
-                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                    <dd><a href="javascript:;">惠多薪</a></dd>
+                    <dd><a href="javascript:;">惠创业</a></dd>
+                    <dd><a href="javascript:;">惠找事</a></dd>
                 </dl>
                 <dl>
                     <dt>惠灵工</dt>
                     <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
                     <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
                     <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
-                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
+                    <dd><a href="javascript:;">招商合作</a></dd>
                 </dl>
                 <dl>
                     <dt>客服热线</dt>

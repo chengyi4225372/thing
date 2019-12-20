@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\edit.html";i:1576666305;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\dialog.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1576463434;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\add.html";i:1576811918;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\dialog.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1576463434;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -63,9 +63,9 @@
                 <div class="form-group">
                     <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>新闻展示图：</label>
                     <div class="col-sm-9">
-                        <input type="file"  onchange="upload_files(this)" style="display:none;"  data-url="<?php echo url('/v1/work/works/uploadImgs'); ?>" class="form-control form-control-sm" id="file">
-                        <img id="imgs" src="<?php echo (isset($info['imgs']) && ($info['imgs'] !== '')?$info['imgs']:'/static/default.png'); ?>" style="width:90px;height:80px;">
-                        <input type="hidden" id="Images" value="<?php echo (isset($info['imgs']) && ($info['imgs'] !== '')?$info['imgs']:''); ?>">
+                        <input type="file"  onchange="upload_files(this)" style="display:none;" data-url="<?php echo url('/v1/work/works/uploadImgs'); ?>" class="form-control form-control-sm" id="file">
+                        <img id="imgs" src="/static/default.png" style="width:90px;height:80px;">
+                        <input type="hidden" id="Images" value="">
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
                     <label for="username" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻标题：</label>
                     <div class="col-sm-9">
-                        <input type="text" value="<?php echo (isset($info['title']) && ($info['title'] !== '')?$info['title']:''); ?>" class="form-control form-control-sm" id="title">
+                        <input type="text" class="form-control form-control-sm" id="title">
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@
                     <label for="sort" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻排序：</label>
                     <div class="col-sm-9">
-                        <input type="number"   value="<?php echo (isset($info['sort']) && ($info['sort'] !== '')?$info['sort']:''); ?>" class="form-control form-control-sm" id="sort">
+                        <input type="number" class="form-control form-control-sm" id="sort">
                     </div>
                 </div>
 
@@ -90,7 +90,7 @@
                     <label for="keyword" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻关键字：</label>
                     <div class="col-sm-9">
-                        <input type="text" value="<?php echo (isset($info['keyword']) && ($info['keyword'] !== '')?$info['keyword']:''); ?>" class="form-control form-control-sm" id="keyword">
+                        <input type="text" class="form-control form-control-sm" id="keyword">
                     </div>
                 </div>
 
@@ -98,23 +98,22 @@
                     <label for="username" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻重点描述：</label>
                     <div class="col-sm-9">
-                        <textarea  id="desc" class="form-control form-control-sm"  rows="5" ><?php echo $info['desc']; ?></textarea>
+                        <textarea  id="desc" class="form-control form-control-sm"  rows="5"></textarea>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="content" class="col-sm-3 control-label">新闻详情：</label>
                     <div class="col-sm-9">
-                        <script id="content" name="content" type="text/plain"><?php echo (isset($info['content']) && ($info['content'] !== '')?$info['content']:''); ?></script>
+                        <script id="content" name="content" type="text/plain"></script>
                     </div>
                 </div>
             </div>
         </div>
 
-        <input type="hidden" id="mid" value="<?php echo $info['id']; ?>">
         <div class="td-align dialog-footer">
             <button class="btn btn-warning cancle"> <i class="fa fa-close"></i> 取消</button>
-            <button class="btn btn-primary" id="editWorks" type="button"  data-url="<?php echo url('/v1/work/works/edit'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-primary addworks" type="button"  data-url="<?php echo url('/v1/work/works/add'); ?>"><i class="fa fa-save"></i> 确定提交</button>
         </div>
     </form>
 </div>

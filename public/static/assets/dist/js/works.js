@@ -1,6 +1,6 @@
 
 //富文本
-var ue = UE.getEditor('content',{initialFrameWidth:'90%',initialFrameHeight:300,charset:"utf-8"});
+var ue = UE.getEditor('content',{initialFrameWidth:'100%',initialFrameHeight:500,charset:"utf-8"});
 
 //取消
 $('.cancle').click(function(){
@@ -24,7 +24,7 @@ $("#addwork").click(function(){
         title: '添加新闻',
         shadeClose: true,
         shade: 0.8,
-        area: ['50%', '80%'],
+        area: ['90%', '95%'],
         content: url, //iframe的url
     })
 })
@@ -116,7 +116,7 @@ $(".editWork").click(function(){
         title: '编辑新闻',
         shadeClose: true,
         shade: 0.8,
-        area: ['50%', '80%'],
+        area: ['80%', '95%'],
         content: urls, //iframe的url
     })
 })
@@ -397,7 +397,7 @@ $(".editsolution").click(function(){
         title: '编辑方案',
         shadeClose: true,
         shade: 0.8,
-        area: ['60%', '80%'],
+        area: ['80%', '95%'],
         content: urls, //iframe的url
     })
 })
