@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576811683;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576812129;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1576818354;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576812129;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -668,7 +668,7 @@
 
 
                 无论从中国的经济发展阶段，人口结构特征，还是从技术革命对社会的重构，整个教育的大环境都发生了翻天覆地的变化，<br>
-                咨询培训平台必须高度契合市场需要并不断适应市场的变化，而高比例企业所得税和因个税高而导致的人员波动都是平台发展面临的挑战。<br>
+                咨询培训平台必须高度契合市场并不断适应市场的变化，而高比例企业所得税和因个税高而导致的人员波动都是平台发展面临的挑战。<br>
                 惠灵工定制解决方案能帮助咨询培训平台应对这些挑战，规避用工风险，提升用工效能。
 
 

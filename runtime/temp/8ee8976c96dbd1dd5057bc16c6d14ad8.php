@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576811173;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576812129;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1576818501;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576806158;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576749781;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576812129;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576806158;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -264,7 +264,7 @@
           </div>
           <div class="project-tabs-items">
             <p>合理享受各项政策，让企业减负前行</p>
-            <p>平台注册的创客享受国家税收优惠政策，政府支持，企业认可，创客欢迎。平台能力对外开放且有严格的风控制度，综合性服务让企业安心、省心。</p>
+            <p>平台注册的创客享受国家税收优惠政策，政府支持，企业认可，创客欢迎。平台对外开放且有严格的风控制度，综合性服务让企业安心、省心。</p>
             <div class="project-btn" onclick="GetErp()">立即咨询</div>
           </div>
         </div>
