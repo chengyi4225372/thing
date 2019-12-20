@@ -125,9 +125,9 @@ class Login extends  BaseController{
     {
         $userController = new UserController();
         header("Access-Control-Allow-Origin:*");
-        $userController->delete('mobile');
-        $userController->delete('token');
-        $userController->delete('userType');
+        Cookie::set('mobile','');
+        Cookie::set('token','');
+        Cookie::set('userType','');
         return json(['status' => 200,'message' => 'success']);
     }
 }
