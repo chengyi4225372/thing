@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\detail.html";i:1576666305;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1576666305;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1576666305;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1576666305;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\detail.html";i:1576806779;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1576806779;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1576723960;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1576806779;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,20 +28,16 @@
       <div class="w nav-container clearfix">
         <!-- logo图 -->
         <div class="logo">
-          <h1>
-            <img src="/static/spirit/images/logo2xxx.png">
-          </h1>
-        </div>
+    <h1>
+        <a href="<?php echo url('/home/index/index'); ?>">
+            <img src="/static/spirit/images/logo2xxxx.png">
+        </a>
+
+    </h1>
+</div>
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
-            <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
-                    <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
-                    <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                    <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
-                    <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                    <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
-                    <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
             <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
             <li><a href="javascript:;">产品服务</a></li>
             <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
@@ -74,10 +70,10 @@
         <!--<div>-->
         <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
-    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
-            登陆
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
         </a></div>
-    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
 </div>
 <?php else: ?>
 <div class="u_info">
@@ -158,7 +154,7 @@
                 <dl>
                     <dt>惠企云旗下产品</dt>
                     <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
-                    <dd><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dd>
+                    <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
                     <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
                     <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
                     <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
@@ -189,7 +185,7 @@
                         <img src="/static/spirit/images/weixincode.png" alt="">
                     </div>
                     <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                    <i>及时获知一手财税消息</i>
+                    <i>及时获知一手财税信息</i>
                 </li>
                 <li>
                     <div class="pic">
@@ -216,9 +212,9 @@
         <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
             <ul>
-                <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
                 <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
                 <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
                 <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
