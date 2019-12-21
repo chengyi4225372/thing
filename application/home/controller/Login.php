@@ -145,32 +145,9 @@ class Login extends BaseController
      */
     public function savetokens2()
     {
-        session_start();
-        //允许跨域
-        header("Access-Control-Allow-Origin:*");
-        $loginlogModel = new Loginlog();
-        $mobile = isset($_POST['mobile']) ? $_POST['mobile'] : '';
-        $token = isset($_POST['token']) ? $_POST['token'] : '';
-        $userType = isset($_POST['userType']) ? $_POST['userType'] : '';
-        $session_id = isset($_POST['session_id']) ? $_POST['session_id'] : '';
-        $where = [];
-        if (!empty($mobile)) {
-            $add = [];
-            $add['mobile'] = $mobile;
-            $add['token'] = $token;
-            $add['userType'] = $userType;
-            $add['cookieid'] = $session_id;
-            $add['add_time'] = time();
-            $where['cookieid'] = $session_id;
-            $info = $loginlogModel::instance()->where($where)->find();
-            if (count($info) > 0) {
-                $loginlogModel::instance()->where($where['mobile'])->delete();
-                $loginlogModel::instance()->insert($add);
-            } else {
-                $loginlogModel::instance()->insert($add);
-            }
-        }
-        return json(['status' => 200, 'message' => 'success']);
+        $url = Config::get('curl.website');
+        $hlg_url = Config::get('curl.hlg');
+        $this->redirect($url.'/home/login/hlg_local');
     }
 
     /**
@@ -180,13 +157,8 @@ class Login extends BaseController
      */
     public function savetokens3()
     {
-        $url = Config::get('curl.website');
-        $mobile = Cookie::get('mobile');
-        $token = Cookie::get('token');
-        $userType = Cookie::get('userType');
-        if(empty($mobile)){
-            $res = curl_get($url);
-            echo '<pre>';print_r($res);exit;
-        }
+        Cookie::set('mobile', '');
+        Cookie::set('token', '');
+        Cookie::set('userType', '');
     }
 }

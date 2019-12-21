@@ -884,6 +884,7 @@ input:-webkit-autofill {
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
     line-height: 1.5;
+    flex: 1;
 }
 
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576736731;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576722200;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576683080;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576829479;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576812256;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576740883;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/static/spirit/css/base.css">
   <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
   <link rel="stylesheet" href="/static/spirit/css/index.css">
+  <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/static/spirit/js/clamp.js"></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
@@ -263,7 +264,7 @@
           </div>
           <div class="project-tabs-items">
             <p>合理享受各项政策，让企业减负前行</p>
-            <p>平台注册的创客享受国家税收优惠政策，政府支持，企业认可，创客欢迎。平台能力对外开放且有严格的风控制度，综合性服务让企业安心、省心。</p>
+            <p>平台注册的创客享受国家税收优惠政策，政府支持，企业认可，创客欢迎。平台对外开放且有严格的风控制度，综合性服务让企业安心、省心。</p>
             <div class="project-btn" onclick="GetErp()">立即咨询</div>
           </div>
         </div>
@@ -354,10 +355,10 @@
 
               <div class="itemContent">
                 <div class="bottomContent">
-                  <p class="conTitle"><?php echo $vo['title']; ?></p>
+                  <p class="conTitle limit1"><?php echo $vo['title']; ?></p>
                   <p class="conTime"><?php echo $vo['create_time']; ?></p>
-                  <p class="conDetail">
-                    <?php echo $vo['desc']; ?>
+                  <p class="conDetail limit2">
+                    <?php echo mb_substr($vo['desc'],0,70,'utf-8'); ?>...
                   </p>
                 </div>
                 <div class="separate"></div>
@@ -400,27 +401,27 @@
                     <dt>惠企云旗下产品</dt>
                     <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
                     <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
-                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
-                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                    <dd><a href="javascript:;">惠多薪</a></dd>
+                    <dd><a href="javascript:;">惠创业</a></dd>
+                    <dd><a href="javascript:;">惠找事</a></dd>
                 </dl>
                 <dl>
                     <dt>惠灵工</dt>
                     <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
                     <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
                     <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
-                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
+                    <dd><a href="javascript:;">招商合作</a></dd>
                 </dl>
                 <dl>
                     <dt>客服热线</dt>
-                    <dd>400-150-9896</dd>
-                    <dd>18186194461</dd>
+                    <dd><a href="javascript:;">400-150-9896</a></dd>
+                    <dd><a href="javascript:;">18186194461</a></dd>
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
-                    <dd>武汉市硚口区南国大武汉H座</dd>
-                    <dd>深圳市福田区第一世界广场A座</dd>
-                    <dd>北京市西城区贵都国际中心B座</dd>
+                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
+                    <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
+                    <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
                 </dl>
             </div>
 
@@ -459,7 +460,7 @@
             <ul>
                 <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
+                <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
                 <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
                 <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
                 <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
