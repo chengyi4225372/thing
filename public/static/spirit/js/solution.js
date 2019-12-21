@@ -12,7 +12,7 @@ window.onload = function () {
         if (top >= 900) {
 
             goTop.style.display = "block"
-            window.setTimeout(() => {
+            setTimeout(function() {
                 navBox.style.display = "none"
                 layuiTabTitle.classList.add('tab-fixed')
             }, 200)
@@ -50,7 +50,7 @@ window.onload = function () {
 
             // 返回顶部样式
             goTop.style.display = "none"
-            window.setTimeout(() => {
+            window.setTimeout(function() {
                 layuiTabTitle.classList.remove('tab-fixed')
                 navBox.style.display = "block"
             }, 200)

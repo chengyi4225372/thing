@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576829479;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576812256;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576740883;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1576860287;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576860287;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576856992;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +13,7 @@
   <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
   <link rel="stylesheet" href="/static/spirit/css/base.css">
   <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
+  <link rel="stylesheet" href="/static/spirit/font/syht.css">
   <link rel="stylesheet" href="/static/spirit/css/index.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -392,7 +393,7 @@
         <div class="aboutUs">
             <span>关于我们</span>
             <p>
-                惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+                惠企云旗下【惠灵工】，立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
             </p>
         </div>
         <div class="w navBottom">
@@ -460,10 +461,10 @@
             <ul>
                 <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
-                <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
-                <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠多薪</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠找事</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
             </ul>
         </div>
     </div>
