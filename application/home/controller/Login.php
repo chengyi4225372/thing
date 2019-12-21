@@ -138,17 +138,7 @@ class Login extends BaseController
     }
 
 
-    /**
-     * @DESC：测试单点登录
-     * @author: jason
-     * @date: 2019-10-29 11:09:49
-     */
-    public function savetokens2()
-    {
-        $url = Config::get('curl.website');
-        $hlg_url = Config::get('curl.hlg');
-        $this->redirect($url.'/home/login/hlg_local');
-    }
+
 
     /**
      * @DESC：测试单点登录
