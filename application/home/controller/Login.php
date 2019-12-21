@@ -161,4 +161,55 @@ class Login extends BaseController
         Cookie::set('token', '');
         Cookie::set('userType', '');
     }
+
+
+    /**
+     * @DESC：测试单点登录001
+     * @author: jason
+     * @date: 2019-12-21 01:51:34
+     */
+    public function index1()
+    {
+//        $token = Cookie::get('mobile');
+//        $token = Cookie::get('token');
+//        $userName = Cookie::get('userName');
+//        $userType = Cookie::get('userType');//c 个人 b 企业
+        $mobile = Cookie::get('mobile');
+        if(empty($mobile)){
+            $url = Config::get('curl.website').'/home/login/hlg_local';
+
+            echo "<script>location.href='".$url."'</script>";exit;
+        }
+    }
+
+    /**
+     * @DESC：测试单点登录002
+     * @author: jason
+     * @date: 2019-12-21 01:56:50
+     */
+    public function index2()
+    {
+        if(isset($_GET['line']) && isset($_GET['userType']) && isset($_GET['ttttt']) && $_GET['location'] == 'yes'){
+            Cookie::set('mobile', $_GET['line']);
+            Cookie::set('userType', $_GET['userType']);
+            Cookie::set('token', $_GET['ttttt']);
+            $url = Config::get('curl.hlg').'/home/index/index';
+
+            echo "<script>location.href='".$url."'</script>";
+        }
+
+    }
+
+    /**
+     * @DESC：测试单点登录003
+     * @author: jason
+     * @date: 2019-12-21 02:23:17
+     */
+    public function index3()
+    {
+        $url = Config::get('curl.hlg').'/home/index/index';
+
+        echo "<script>location.href='".$url."'</script>";
+    }
+
 }

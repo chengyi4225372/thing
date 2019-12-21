@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1576726107;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576726252;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576722200;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576683080;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1576860287;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576860287;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576856992;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,9 @@
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title><?php echo $title; ?></title>
   <link rel="stylesheet" href="/static/spirit/css/base.css">
+  <link rel="stylesheet" href="/static/spirit/font/syht.css">
   <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
+  <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <script src="/static/spirit/js/clamp.js"></script>
   <script src='/static/spirit/js/Informationlist.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -32,7 +34,7 @@
         <div class="logo">
     <h1>
         <a href="<?php echo url('/home/index/index'); ?>">
-            <img src="/static/spirit/images/logo2xxx.png">
+            <img src="/static/spirit/images/logo2xxxx.png">
         </a>
 
     </h1>
@@ -177,7 +179,7 @@
         <div class="aboutUs">
             <span>关于我们</span>
             <p>
-                惠企云旗下【惠灵工】,立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+                惠企云旗下【惠灵工】，立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
             </p>
         </div>
         <div class="w navBottom">
@@ -186,27 +188,27 @@
                     <dt>惠企云旗下产品</dt>
                     <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
                     <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-                    <dd><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></dd>
-                    <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
-                    <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                    <dd><a href="javascript:;">惠多薪</a></dd>
+                    <dd><a href="javascript:;">惠创业</a></dd>
+                    <dd><a href="javascript:;">惠找事</a></dd>
                 </dl>
                 <dl>
                     <dt>惠灵工</dt>
                     <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
                     <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
                     <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
-                    <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">招商合作</a></dd>
+                    <dd><a href="javascript:;">招商合作</a></dd>
                 </dl>
                 <dl>
                     <dt>客服热线</dt>
-                    <dd>400-150-9896</dd>
-                    <dd>18186194461</dd>
+                    <dd><a href="javascript:;">400-150-9896</a></dd>
+                    <dd><a href="javascript:;">18186194461</a></dd>
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
-                    <dd>武汉市硚口区南国大武汉H座</dd>
-                    <dd>深圳市福田区第一世界广场A座</dd>
-                    <dd>北京市西城区贵都国际中心B座</dd>
+                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
+                    <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
+                    <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
                 </dl>
             </div>
 
@@ -247,10 +249,10 @@
             <ul>
                 <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="<?php echo url('/home/launch/index'); ?>">惠多薪</a></li>
-                <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
-                <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠多薪</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠找事</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
             </ul>
         </div>
     </div>
