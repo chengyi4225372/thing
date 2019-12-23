@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577066505;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"C:\phpEnv\www\thing\public/../application/home\view\index\clientcase.html";i:1577068813;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577068736;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -350,7 +350,7 @@
 
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-    <div>
+    <div  onclick="GetErp()">
         <div class="bottom-title">咨询方案</div>
         <!-- <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
