@@ -881,6 +881,8 @@ a {
     font-family: "PingFang-SC", "syht";
     font-weight: 500;
     color: rgba(0, 0, 0, 1);
+    width: 100%;
+    text-align: center;
 }
 
 .layui-tab-item .status-industry .status-industry-content {
@@ -1161,6 +1163,8 @@ a {
     font-family: "PingFang-SC", "syht";
     font-weight: 500;
     color: rgba(0, 0, 0, 1);
+    width: 100%;
+    text-align: center;
 }
 
 .layui-tab-item .solution .solution-content,

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1576841826;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576839219;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576839219;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576848293;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576843605;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577066505;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -391,18 +391,18 @@
         <!-- 侧边栏bottom资讯 -->
         <div class="bottom-left">
     <div>
-        <div class="bottom-title">惠家族产品</div>
-        <div class="bottom-item">
+        <div class="bottom-title">咨询方案</div>
+        <!-- <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
             <ul>
                 <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
-                <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
-                <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠多薪</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠找事</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
             </ul>
-        </div>
+        </div> -->
     </div>
     <div>
         <div class="bottom-title2">联系我们</div>
