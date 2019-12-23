@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577068736;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577071907;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577071907;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/static/spirit/font/syht.css">
   <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
+  <link rel="stylesheet" href="/static/spirit/css/alert.css">
   <script src="/static/spirit/js/clamp.js"></script>
   <script src='/static/spirit/js/Informationlist.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -242,7 +243,11 @@
 
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
+<<<<<<< HEAD
     <div  onclick="GetErp()">
+=======
+    <div onclick="GetErp();">
+>>>>>>> 7a54d37fab053cba3753074e0af8104367225ae2
         <div class="bottom-title">咨询方案</div>
         <!-- <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
@@ -274,6 +279,33 @@
         <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
         <div>顶部</div>
     </div>
+</div>
+
+    <!-- 弹窗 -->
+    
+<div class="pop-up-box" id="popbox">
+    <div class="form">
+        <div class="form-titile">
+            <p>方案咨询</p>
+            <span class="turnoff" onclick="turnoff()"></span>
+        </div>
+        <div class="form-content">
+            <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+            <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+            </div>
+            <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+            <input type='hidden' id='sources' value='惠灵工'>
+            <input type='hidden' id='identifications' value='灵活用工'>
+            <div class="form-btn" onclick="form_btn()">获取方案</div>
+        </div>
+        <!-- 提交成果后弹窗 -->
+        <div class="mask-box2">
+            <span></span>
+            <p class="mask-box-title">提交成功</p>
+            <p class="mask-box-content">我们会在一个工作日内联系您</p>
+        </div>
+    </div>
+
 </div>
 
   </div>
