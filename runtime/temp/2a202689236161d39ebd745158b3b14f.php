@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577071907;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577071907;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577089324;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577087694;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577087727;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -117,20 +117,39 @@
     <div class="content-box">
       <div class="w content">
         <div class="bread-crumbs">
-            <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
-            <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b>
+          <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
+          <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b>
 
         </div>
         <div class="information-list">
-          <div class="tabs clearfix">
-            <!-- <ul class="clearfix fl">
-              <li class="li-active"><a href="<?php echo url('/home/index/informationList'); ?>">行业资讯</a></li>
-               <li>招标信息</li>
-            </ul> -->
-            <div class="search-box fr">
+          <div class="hotWord">
+            <div class="bgHot">
+              <span>热门关键词</span>
+              <ul>
+                <li>
+                  <span>热门关键词</span>
+                  <span class="close">✕</span>
+                </li>
+                <li>
+                  <span>热门关键词</span>
+                  <span class="close">✕</span>
+                </li>
+                <li>
+                  <span>热门关键词</span>
+                  <span class="close">✕</span>
+                </li>
+                <li>
+                  <span>热门关键词</span>
+                  <span class="close">✕</span>
+                </li>
+                
+              </ul>
+            </div>
+            <div class="search-box">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
               <div onclick="search(this)" data-url="<?php echo url('/home/index/informationList'); ?>">搜索</div>
-              <span onclick="window.location.href=$(this).attr('data-url');" data-url="<?php echo url('/home/index/informationList'); ?>"></span>
+              <span onclick="window.location.href=$(this).attr('data-url');"
+                data-url="<?php echo url('/home/index/informationList'); ?>"></span>
             </div>
           </div>
           <div class="tabs-items show">
@@ -152,12 +171,17 @@
                   <div class="tabs-items-content">
                     <div class="tabs-items-content-title figcaption">
                       <p><?php echo $vo['title']; ?></p>
+                      <div class="tabs-items-content-time"><span><img src="/static/spirit/images/shijian2x.png"
+                            alt=""></span><span><?php echo $vo['create_time']; ?></span></div>
                     </div>
                     <div class="tabs-items-content-text figcaption">
                       <p><?php echo $vo['desc']; ?></p>
                     </div>
-                    <div class="tabs-items-content-time"><span><img src="/static/spirit/images/shijian2x.png"
-                          alt=""></span><span><?php echo $vo['create_time']; ?></span></div>
+                    <div class="tabs-items-content-label">
+                      <span>节税</span>
+                      <span>企业节税</span>
+                      <span>企业利润节税方案</span>
+                    </div>
                   </div>
                 </a>
               </li>
@@ -203,7 +227,7 @@
                 <dl>
                     <dt>客服热线</dt>
                     <dd><a href="javascript:;">400-150-9896</a></dd>
-                    <dd><a href="javascript:;">18186194461</a></dd>
+                    <dd><a href="javascript:;">181-8619-4461</a></dd>
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
@@ -243,11 +267,7 @@
 
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-<<<<<<< HEAD
-    <div  onclick="GetErp()">
-=======
     <div onclick="GetErp();">
->>>>>>> 7a54d37fab053cba3753074e0af8104367225ae2
         <div class="bottom-title">咨询方案</div>
         <!-- <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
@@ -270,7 +290,7 @@
             </div>
             <div>
                 <p>获取税筹方案</p>
-                <p>400-150-9898</p>
+                <p>400-150-9896</p>
             </div>
         </div>
     </div>
@@ -321,6 +341,15 @@
       if ($('.chosenPage').length < 1) $('.nav ul li').eq(4).addClass('chosenPage')
 
       $('.chosenPage').addClass('nav-active')
+    })
+    /* 选择热词 */
+    $('.hotWord ul li').click(function (e) {
+      if ($(this).hasClass('chosen')) {
+        $(this).removeClass('chosen')
+      } else {
+        $(this).addClass('chosen')
+        $(this).siblings().removeClass('chosen')
+      }
     })
   </script>
 </body>

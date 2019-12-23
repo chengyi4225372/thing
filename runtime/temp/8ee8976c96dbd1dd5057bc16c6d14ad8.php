@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1577064757;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577062600;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1577064723;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1577071907;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577087694;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1577087744;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="/static/spirit/font/syht.css">
   <link rel="stylesheet" href="/static/spirit/css/index.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
+  <link rel="stylesheet" href="/static/spirit/css/alert.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/static/spirit/js/clamp.js"></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
@@ -416,7 +417,7 @@
                 <dl>
                     <dt>客服热线</dt>
                     <dd><a href="javascript:;">400-150-9896</a></dd>
-                    <dd><a href="javascript:;">18186194461</a></dd>
+                    <dd><a href="javascript:;">181-8619-4461</a></dd>
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
@@ -477,7 +478,7 @@
             </div>
             <div>
                 <p>获取税筹方案</p>
-                <p>400-150-9898</p>
+                <p>400-150-9896</p>
             </div>
         </div>
     </div>
@@ -488,34 +489,32 @@
     </div>
 </div>
 
-
-
-
-    <!-- 弹框 -->
-    <div class="pop-up-box" id="popbox">
-      <div class="form">
+    <!-- 弹窗 -->
+    
+<div class="pop-up-box" id="popbox">
+    <div class="form">
         <div class="form-titile">
-          <p>方案咨询</p>
-          <span class="turnoff" onclick="turnoff()"></span>
+            <p>方案咨询</p>
+            <span class="turnoff" onclick="turnoff()"></span>
         </div>
         <div class="form-content">
-          <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
-          <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
-          </div>
-          <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
-          <input type='hidden' id='sources' value='惠灵工'>
-          <input type='hidden' id='identifications' value='灵活用工'>
-          <div class="form-btn" onclick="form_btn()">获取方案</div>
+            <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+            <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+            </div>
+            <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+            <input type='hidden' id='sources' value='惠灵工'>
+            <input type='hidden' id='identifications' value='灵活用工'>
+            <div class="form-btn" onclick="form_btn()">获取方案</div>
         </div>
         <!-- 提交成果后弹窗 -->
         <div class="mask-box2">
-          <span></span>
-          <p class="mask-box-title">提交成功</p>
-          <p class="mask-box-content">我们会在一个工作日内联系您</p>
+            <span></span>
+            <p class="mask-box-title">提交成功</p>
+            <p class="mask-box-content">我们会在一个工作日内联系您</p>
         </div>
-      </div>
-
     </div>
+
+</div>
   </div>
 
 </body>

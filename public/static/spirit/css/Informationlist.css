@@ -220,7 +220,7 @@ a {
 ::-webkit-input-placeholder {
     /* WebKit browsers */
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(224, 224, 224, 1);
 }
@@ -228,7 +228,7 @@ a {
 :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(224, 224, 224, 1);
 }
@@ -236,7 +236,7 @@ a {
 ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(224, 224, 224, 1);
 }
@@ -244,7 +244,7 @@ a {
 :-ms-input-placeholder {
     /* Internet Explorer 10+ */
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(224, 224, 224, 1) !important;
 }
@@ -296,6 +296,7 @@ a {
     display: block;
     width: 100%;
 }
+
 .nav-container .nav {
     float: left;
     margin-left: 11.5rem;
@@ -361,7 +362,7 @@ a {
     width: 100%;
     height: 2.375rem;
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: #03053A;
     line-height: 2.5rem;
@@ -392,7 +393,7 @@ a {
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 2px;
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 500;
     color: rgba(255, 255, 255, 1);
     text-align: center;
@@ -456,7 +457,7 @@ a {
     -o-box-sizing: border-box;
     box-sizing: border-box;
     font-size: .875rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 500;
     color: rgba(51, 51, 51, 1);
     background: #F5F7FE;
@@ -466,7 +467,7 @@ a {
 
 .u_info_content .u_out {
     font-size: .875rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     color: #333;
     display: block;
     width: 100%;
@@ -529,7 +530,7 @@ a {
 
 .header-box .header div:nth-of-type(1) {
     font-size: 3rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: bold;
     color: rgba(255, 255, 255, 1);
     margin-bottom: 2.625rem;
@@ -544,7 +545,7 @@ a {
 
 .header-box .header p:nth-of-type(1) {
     font-size: 1.125rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 500;
     color: rgba(255, 255, 255, 1);
     line-height: 1.8;
@@ -583,54 +584,134 @@ a {
     background: rgba(255, 255, 255, 1);
 }
 
-/* .tabs {
-    border-bottom: 1px solid rgba(245, 245, 245, 1)
-} */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/* .tabs ul {
+
+
+
+
+/* 热搜 */
+.hotWord {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
 }
 
-.tabs ul li {
-    position: relative;
-    padding: 1.25rem 0;
-    margin-right: 2.375rem;
-    font-size: 1rem;
-    font-family: Source Han Sans CN;
-    font-weight: 400;
-    color: rgba(153, 153, 153, 1);
+.hotWord .bgHot {
+    padding-top: .3125rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+}
+
+.hotWord .bgHot>span {
+    padding-top: .3125rem;
+    white-space: nowrap;
+    margin-right: 1.25rem;
+    color: #4091FF;
+    font-size: .875rem;
+}
+
+.hotWord ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.hotWord ul li {
+    box-sizing: border-box;
+    white-space: nowrap;
+    height: 1.625rem;
+    font-size: .875rem;
+    padding: 0 1.3125rem;
+    background: #f6f6f6;
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem;
+    margin-right: 1.25rem !important;
     cursor: pointer;
+    font-size: .875rem;
+    color: #333;
+    margin-bottom: .625rem;
+    line-height: 1.625rem;
+    text-align: center;
+    position: relative;
+}
+.bgHot ul li:hover {
+    background: #E8F1FF;
+    color: #4091FF;
+
+}
+.hotWord ul li>span:nth-of-type(1){
+    margin-right: .3125rem;
 }
 
-.tabs ul li:last-child {
-    margin-right: 0;
-}
-
-.tabs ul .li-active {
-    font-size: 1rem;
-    font-family: Source Han Sans CN;
-    font-weight: 400;
-    color: rgba(64, 145, 255, 1);
-}
-
-.tabs ul .li-active a {
-    color: rgba(64, 145, 255, 1);
-}
-
-.tabs ul .li-active::after {
+.hotWord ul li .close {
+    display: none;
     position: absolute;
-    bottom: -1px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: .125rem;
-    background: rgba(64, 145, 255, 1);
+    color: #fff;
+    top: 0;
+    right: .375rem;
+    /* -webkit-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s;  */
+}
 
-} */
+/* .hotWord ul li .close:hover {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg); } */
+
+.chosen {
+    background: #4091FF !important;
+    color: #fff !important;
+}
+.chosen .close{
+    display: block!important;
+}
+
+.hotwords {
+    background: #F75236 !important;
+    color: #fff !important;
+}
+
+/* 搜索 */
 
 .search-box {
     position: relative;
@@ -640,7 +721,7 @@ a {
     display: -webkit-flex;
     display: flex;
     border-radius: .1875rem;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 
 .search-box input {
@@ -672,7 +753,7 @@ a {
     height: 2rem;
     background: rgba(64, 145, 255, 1);
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(245, 249, 255, 1);
     border-radius: 0px 0.1875rem 0.1875rem 0px;
@@ -683,7 +764,7 @@ a {
 
 .search-box>span {
     position: absolute;
-    top: 1.375rem;
+    top: 0.375rem;
     right: 4.375rem;
     width: 1.25rem;
     height: 1.25rem;
@@ -758,43 +839,45 @@ a {
 .tabs-items-content {
     width: 48.125rem;
     border-bottom: 1px solid #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .tabs-items-content-title {
-    height: 1.125rem;
+    display: flex;
+    justify-content: space-between;
+    /* height: 1.125rem; */
     font-size: 1.125rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(25, 38, 60, 1);
-    padding-top: .8125rem;
-    margin-bottom: 1.5rem;
-    text-overflow: -o-ellipsis-lastline;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    -moz-line-clamp: 1;
-    -moz-box-orient: vertical;
-    -o-line-clamp: 1;
-    -o-box-orient: vertical;
-    -ms-line-clamp: 1;
-    -ms-box-orient: vertical;
-    line-clamp: 1;
-    box-orient: vertical;
+    /* padding-top: .8125rem; */
+    /* margin-bottom: 1.5rem; */
 }
 
-.tabs-items-content-title p {
-    line-height: 1.125rem;
+.tabs-items-content-title>p {
+    /* line-height: 1.125rem; */
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
 }
 
 .tabs-items-content-text {
-    height: 2.625rem;
+    /* height: 2.625rem; */
     font-size: .75rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
-    margin-bottom: 1.625rem;
+    /* margin-bottom: 1.625rem; */
+}
+
+.tabs-items-content-text p {
+    /* line-height: 1.3125rem; */
+    font-size: .875rem;
+    line-height: 1.4;
     text-overflow: -o-ellipsis-lastline;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -811,10 +894,6 @@ a {
     box-orient: vertical;
 }
 
-.tabs-items-content-text p {
-    line-height: 1.3125rem;
-}
-
 .tabs-items-content-time {
     display: -webkit-box;
     display: -moz-box;
@@ -826,6 +905,7 @@ a {
     -ms-align-items: center;
     -o-align-items: center;
     align-items: center;
+    width: 136px;
 }
 
 
@@ -837,15 +917,37 @@ a {
 }
 
 .tabs-items-content-time span:nth-child(1) img {
+    display: block;
     width: 100%;
     height: 100%;
 }
 
 .tabs-items-content-time span:nth-child(2) {
     font-size: .75rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
+}
+
+.tabs-items-content-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tabs-items-content-label>span {
+    padding: 3px 13px;
+    background: rgba(245, 245, 245, 1);
+    border-radius: 4px;
+    font-size: .75rem;
+    font-family: "PingFang-SC", "syht";
+    font-weight: 400;
+    color: rgba(102, 102, 102, 1);
+    margin-right: 1.25rem;
+}
+
+.tabs-items-content-label>span:last-child {
+    margin-right: 0;
 }
 
 .tabs-items .more-btn {
@@ -856,7 +958,7 @@ a {
     border-radius: .1875rem;
     margin: 0 auto;
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(64, 145, 255, 1);
     text-align: center;
@@ -1098,7 +1200,7 @@ a {
 
 .goTop div:nth-child(2) {
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
 }
@@ -1132,7 +1234,7 @@ a {
 
 .register a {
     font-size: 1rem;
-    font-family: "PingFang-SC","syht";
+    font-family: "PingFang-SC", "syht";
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
 }

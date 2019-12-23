@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1576841816;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1576839219;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1576839219;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1576848293;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1576843605;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1577071907;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577062600;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577072926;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="/static/spirit/font/syht.css">
   <link rel="stylesheet" href="/static/spirit/css/detail.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
+  <link rel="stylesheet" href="/static/spirit/css/alert.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script src='/static/spirit/js/spirit.js'></script>
@@ -209,19 +210,19 @@
 
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-    <div>
-        <div class="bottom-title">惠家族产品</div>
-        <div class="bottom-item">
+    <div onclick="GetErp();">
+        <div class="bottom-title">咨询方案</div>
+        <!-- <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
             <ul>
                 <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
                 <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
-                <li><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></li>
-                <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
-                <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠多薪</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠找事</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
             </ul>
-        </div>
+        </div> -->
     </div>
     <div>
         <div class="bottom-title2">联系我们</div>
@@ -241,6 +242,33 @@
         <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
         <div>顶部</div>
     </div>
+</div>
+
+    <!-- 弹窗 -->
+    
+<div class="pop-up-box" id="popbox">
+    <div class="form">
+        <div class="form-titile">
+            <p>方案咨询</p>
+            <span class="turnoff" onclick="turnoff()"></span>
+        </div>
+        <div class="form-content">
+            <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+            <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+            </div>
+            <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+            <input type='hidden' id='sources' value='惠灵工'>
+            <input type='hidden' id='identifications' value='灵活用工'>
+            <div class="form-btn" onclick="form_btn()">获取方案</div>
+        </div>
+        <!-- 提交成果后弹窗 -->
+        <div class="mask-box2">
+            <span></span>
+            <p class="mask-box-title">提交成功</p>
+            <p class="mask-box-content">我们会在一个工作日内联系您</p>
+        </div>
+    </div>
+
 </div>
 
   </div>
