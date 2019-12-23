@@ -116,6 +116,7 @@ class Login extends BaseController
         Cookie::set('mobile', '');
         Cookie::set('token', '');
         Cookie::set('userType', '');
+        Cookie::set('is_empty','');
         //官网退出
         $res = curl_get($website_url . '/home/login/apilogout');
         $res2 = curl_get($hzs_url . '/home/login/apilogout');
@@ -134,6 +135,7 @@ class Login extends BaseController
         Cookie::set('mobile', '');
         Cookie::set('token', '');
         Cookie::set('userType', '');
+        Cookie::set('is_empty','');
         return json(['status' => 200, 'message' => 'success']);
     }
 
@@ -150,6 +152,7 @@ class Login extends BaseController
         Cookie::set('mobile', '');
         Cookie::set('token', '');
         Cookie::set('userType', '');
+        Cookie::set('is_empty', '');
     }
 
 
@@ -183,11 +186,18 @@ class Login extends BaseController
             Cookie::set('mobile', $_GET['line']);
             Cookie::set('userType', $_GET['userType']);
             Cookie::set('token', $_GET['ttttt']);
-            $url = Config::get('curl.hlg').'/home/index/index';
+            Cookie::set('is_empty', $_GET['is_empty']);
+        }
+        $mobile = Cookie::get('mobile');
+        $is_empty = Cookie::get('is_empty');
+
+        //如果是第一次进惠灵工首页要先跳到慧企云页面获取用户的信息
+        if(empty($mobile) && empty($is_empty)){
+            $url = Config::get('curl.website').'/home/login/hlg_local';
 
             echo "<script>location.href='".$url."'</script>";
         }
-
+        return $this->fetch();
     }
 
     /**

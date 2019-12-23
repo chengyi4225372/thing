@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{$title|default=''}</title>
+    <link rel="stylesheet" href="__SPI__/css/base.css">
+    <link rel="stylesheet" href="__PUBLIC__/assets/plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="__SPI__/font/syht.css">
+    <link rel="stylesheet" href="__SPI__/css/index.css">
+    <link rel="stylesheet" href="__SPI__/css/footer.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="__SPI__/js/clamp.js"></script>
+    <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
+    <script src="__SPI__/js/spirit.js"></script>
+    <script src='__PUBLIC__/common/js/public.js'></script>
+    <script src='__SPI__/js/index.js'></script>
+
+</head>
+
+<body>
+
+    <div>惠灵工首页</div>
+
+</body>
+<script>
+    $('.nav ul li').on('click', function () {
+        $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
+    })
+    $('.nav ul li').on('mouseenter', function () {
+        $(this).addClass('nav-active').siblings().removeClass('nav-active')
+    })
+    $('.nav-box').on('mouseleave', function () {
+        $('.nav ul li').removeClass('nav-active')
+        if ($('.chosenPage').length < 1) $('.nav ul li').eq(0).addClass('chosenPage')
+
+        $('.chosenPage').addClass('nav-active')
+    })
+</script>
+
+</html>
