@@ -1,4 +1,3 @@
-
 <div class="pop-up-box" id="popbox">
     <div class="form">
         <div class="form-titile">
@@ -6,13 +5,15 @@
             <span class="turnoff" onclick="turnoff()"></span>
         </div>
         <div class="form-content">
-            <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
-            <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+            <div>
+                <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                </div>
+                <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                <input type='hidden' id='sources' value='惠灵工'>
+                <input type='hidden' id='identifications' value='灵活用工'>
+                <div class="form-btn" onclick="form_btn()">获取方案</div>
             </div>
-            <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
-            <input type='hidden' id='sources' value='惠灵工'>
-            <input type='hidden' id='identifications' value='灵活用工'>
-            <div class="form-btn" onclick="form_btn()">获取方案</div>
         </div>
         <!-- 提交成果后弹窗 -->
         <div class="mask-box2">

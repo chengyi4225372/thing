@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577089324;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577087694;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577087727;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577153286;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577149479;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577173287;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <link rel="stylesheet" href="/static/spirit/css/alert.css">
+  <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
+  <link rel="stylesheet" href="/static/spirit/css/left.css">
   <script src="/static/spirit/js/clamp.js"></script>
   <script src='/static/spirit/js/Informationlist.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -90,7 +92,7 @@
     </div>
     <div class="u_info_content" id="u_info_content">
         <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
-            location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?> -->
@@ -123,6 +125,7 @@
         </div>
         <div class="information-list">
           <div class="hotWord">
+
             <div class="bgHot">
               <span>热门关键词</span>
               <ul>
@@ -142,9 +145,11 @@
                   <span>热门关键词</span>
                   <span class="close">✕</span>
                 </li>
-                
+
               </ul>
+
             </div>
+
             <div class="search-box">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
               <div onclick="search(this)" data-url="<?php echo url('/home/index/informationList'); ?>">搜索</div>
@@ -263,8 +268,6 @@
 </div>
 
 
-
-
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
     <div onclick="GetErp();">
@@ -302,21 +305,22 @@
 </div>
 
     <!-- 弹窗 -->
-    
-<div class="pop-up-box" id="popbox">
+    <div class="pop-up-box" id="popbox">
     <div class="form">
         <div class="form-titile">
             <p>方案咨询</p>
             <span class="turnoff" onclick="turnoff()"></span>
         </div>
         <div class="form-content">
-            <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
-            <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+            <div>
+                <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                </div>
+                <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                <input type='hidden' id='sources' value='惠灵工'>
+                <input type='hidden' id='identifications' value='灵活用工'>
+                <div class="form-btn" onclick="form_btn()">获取方案</div>
             </div>
-            <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
-            <input type='hidden' id='sources' value='惠灵工'>
-            <input type='hidden' id='identifications' value='灵活用工'>
-            <div class="form-btn" onclick="form_btn()">获取方案</div>
         </div>
         <!-- 提交成果后弹窗 -->
         <div class="mask-box2">
@@ -344,12 +348,13 @@
     })
     /* 选择热词 */
     $('.hotWord ul li').click(function (e) {
-      if ($(this).hasClass('chosen')) {
-        $(this).removeClass('chosen')
-      } else {
+      if (!$(this).hasClass('chosen')) {
         $(this).addClass('chosen')
-        $(this).siblings().removeClass('chosen')
       }
+    })
+    $('.hotWord ul li .close').click(function (e) {
+      e.stopPropagation()
+      $(this).parent().removeClass("chosen")
     })
   </script>
 </body>

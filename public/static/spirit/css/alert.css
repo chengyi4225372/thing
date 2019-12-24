@@ -67,7 +67,11 @@
 }
 
 .form-content {
-    padding: 6.1875rem 6.1875rem 0 6.1875rem;
+    /* padding: 6.1875rem 6.1875rem 0 6.1875rem; */
+    padding-top: 6.1875rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
     background: rgba(245, 247, 254, 1);
     border-radius: 0px 0px 4px 4px;
     height: 28.125rem;
@@ -78,7 +82,11 @@
     box-sizing: border-box;
 }
 
-.form-content div {
+.form-content>div {
+    width: 25rem;
+}
+
+.form-content>div>div {
     height: 2.5rem;
     display: -webkit-flex;
     display: -webkit-box;
@@ -100,7 +108,8 @@
 
 .form-content div .title {
     display: inline-block;
-    width: 6.25rem;
+    /* width: 6.25rem; */
+    width: auto;
     height: 2.5rem;
     margin-right: 1.25rem;
     font-size: .875rem;
@@ -111,7 +120,8 @@
 }
 
 .form-content div input {
-    width: 25rem;
+    /* width: 25rem; */
+    flex: 1;
     padding-left: 1.875rem;
     height: 100%;
     outline: none;
