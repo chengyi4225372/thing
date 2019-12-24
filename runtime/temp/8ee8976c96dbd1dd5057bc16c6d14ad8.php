@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1577071907;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577087694;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1577087744;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1577071907;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1577090140;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 

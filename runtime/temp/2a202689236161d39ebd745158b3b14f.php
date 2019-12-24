@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577089324;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577087694;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577087727;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577093618;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577062600;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -142,7 +142,7 @@
                   <span>热门关键词</span>
                   <span class="close">✕</span>
                 </li>
-                
+
               </ul>
             </div>
             <div class="search-box">
@@ -329,6 +329,7 @@
 </div>
 
   </div>
+
   <script>
     $('.nav ul li').on('click', function () {
       $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
@@ -342,14 +343,22 @@
 
       $('.chosenPage').addClass('nav-active')
     })
+
     /* 选择热词 */
     $('.hotWord ul li').click(function (e) {
-      if ($(this).hasClass('chosen')) {
-        $(this).removeClass('chosen')
-      } else {
+
+      if (!$(this).hasClass('chosen')) {
+        // console.log(111);
+
         $(this).addClass('chosen')
-        $(this).siblings().removeClass('chosen')
+      } else {
+        // console.log(222);
       }
+    })
+    $('.hotWord ul li .close').click(function (e) {
+      console.log($(this).parent());
+      e.stopPropagation()
+      $(this).parent().removeClass("chosen")
     })
   </script>
 </body>

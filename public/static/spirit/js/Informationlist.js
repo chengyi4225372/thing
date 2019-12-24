@@ -1,5 +1,5 @@
 window.onload = function () {
-
+    
     var liArr = document.querySelectorAll(".tabs ul li");
     var spanArr = document.querySelectorAll(".tabs-items");
 
