@@ -97,7 +97,46 @@ class Workservice
         $ret = Work::instance()->data($array)->save();
         return $ret;
     }
+    
+    /**
+     * 通过关键字搜索
+     * @title 搜索关键字
+     * @page  当前页
+     * @Size  每页显示条数
+     */
+     public function getkeywordjson($title,$pages,$size){
+        if(empty($title)){
+            
+            $array['status'] = 1;
+        }else{
+        $new_title = explode(',',$title); 
+        $arr_title = array_filter($new_title,function ($params){
+            return !empty($params);
+        });
 
+        $arr_w = array_map(function ($pa){
+            return '%'.$pa.'%';
+        },$arr_title);
+
+        $array['status'] = 1;
+        $array['keyword'] = ['like',$arr_w,'OR'];
+      }
+        if($pages ==1 || $pages ==''){
+            $pages = 0;
+        }else {
+            $pages = $pages*$size;
+        }
+
+        $arr = Work::instance()->where($array)->order('sort desc,create_time desc')->limit($pages,$size)->select();
+       
+        foreach($arr as $k =>$val){
+            $arr[$k]['keyword'] = explode(',',$arr[$k]['keyword']); 
+            $arr[$k]['desc']    = mb_substr($arr[$k]['desc'],0,110,'utf-8'); 
+        }
+       
+        return $arr?$arr:'';
+        
+     } 
 
     /**
      * 通过id 更新
@@ -297,6 +336,11 @@ class Workservice
         }
 
         $list = Work::instance()->where($where)->order('sort desc,create_time desc')->limit($page, $next)->select();
+        
+        foreach($list as $k =>$val){
+            $list[$k]['keyword'] = explode(',',$list[$k]['keyword']); 
+            $list[$k]['desc']    = mb_substr($list[$k]['desc'],0,110,'utf-8'); 
+        }
         return $list;
     }
 

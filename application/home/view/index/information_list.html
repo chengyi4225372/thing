@@ -101,23 +101,14 @@
             <div class="bgHot">
               <span>热门关键词</span>
               <ul>
+                {volist name='keylist' id='kwords'}
                 <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
+                  <span onclick="hotsearch(this)" data-url="{:url('home/index/getinfoapi')}" data-href="{:url('/home/index/detail')}" 
+                   data-title='{$kwords.title}'>{$kwords.title}</span>
+                  <span class="close" onclick='nullhot(this)' data-href="{:url('/home/index/detail')}"
+                   data-url="{:url('home/index/getinfoapi')}">✕</span>
                 </li>
-                <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
-                </li>
-                <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
-                </li>
-                <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
-                </li>
-
+                {/volist}
               </ul>
 
             </div>
@@ -156,9 +147,9 @@
                       <p>{$vo.desc}</p>
                     </div>
                     <div class="tabs-items-content-label">
-                      <span>节税</span>
-                      <span>企业节税</span>
-                      <span>企业利润节税方案</span>
+                     {volist name='$vo.keyword' id='ko'}
+                      <span>{$ko}</span>
+                      {/volist}
                     </div>
                   </div>
                 </a>

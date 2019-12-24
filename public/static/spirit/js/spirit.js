@@ -191,18 +191,22 @@ function getMore(keyword, i, objthis) {
             var html = '';
             if(ret.data.length > 0){
                 $.each(ret.data, function (i, item) {
-                    html += "<li>";
-                    html += "<a href= '" + hrefs + "?mid=" + item.id + "'>";
-                    html += "<div class='tabs-items-img'><img src=" + item.imgs + " alt=''></div>";
-                    html += "<div class='tabs-items-content'><div class='tabs-items-content-title figcaption'>";
-                    html += "<p>" + item.title + "</p></div>";
-                    html += "<div class='tabs-items-content-text figcaption'>";
-                    html += "<p>" + item.desc + "</p></div>";
-                    html += " <div class='tabs-items-content-time'>";
-                    html += "<span><img src='/static/spirit/images/shijian2x.png' alt=''></span>";
-                    html += "<span>" + item.create_time + "</span></div></div>";
-                    html += "</a>";
-                    html += "</li>";
+                    html+="<li><a href="+hrefs+'?mid='+item.id+">";
+                         html+= "<div class='tabs-items-img'>";
+                         html+= "<img src="+item.imgs+" ></div>";
+                         html+= "<div class='tabs-items-content'>";
+                         html+= "<div class='tabs-items-content-title figcaption'>";
+                         html+= "<p>"+item.title+"</p>";
+                         html+= "<div class='tabs-items-content-time'>";
+                         html+= "<span><img src='/static/spirit/images/shijian2x.png'>";
+                         html+= "</span><span>"+item.create_time+"</span></div></div>";
+                         html+= "<div class='tabs-items-content-text figcaption'>";
+                         html+= "<p>"+item.desc+"</p></div>";
+                         html+= "<div class='tabs-items-content-label'>";
+                         for(var j =0;j<item.keyword.length;j++){
+                            html+= "<span>"+item.keyword[j]+"</span>";
+                         } 
+                         html+="</div></div></a></li>";
                 });
                 $('#content').append(html).html();
                 $('#page').val(++i);
@@ -217,6 +221,145 @@ function getMore(keyword, i, objthis) {
         }
     }, 'json')
 
+}
+
+
+//根据关键字搜索
+var title = []; //需要搜索关键字
+function hotsearch(obj){
+    var key = $(obj).attr('data-title');//获取当前搜索的关键字
+     
+    //判断当前数组中是否已经存在
+    var index = $.inArray(key,title);
+   
+    if(index >=0){
+         title.pop(title); //移除并且返回新数组
+     }
+
+    title.push(key); //往数组中添加
+    
+    
+    console.log(title);
+    var urls = $(obj).attr('data-url'); //ajax请求地址
+    var hrefs= $(obj).attr('data-href');//详情页地址
+    
+    $.post(urls,{'title':JSON.stringify(title)},function(ret){
+           if(ret.code== 200){
+               $('#content li').remove();  //清空原有li
+                if(ret.data.length > 0){
+                    var html = '';
+                    $.each(ret.data, function (i, item) {
+                         html+="<li><a href="+hrefs+'?mid='+item.id+">";
+                         html+= "<div class='tabs-items-img'>";
+                         html+= "<img src="+item.imgs+" ></div>";
+                         html+= "<div class='tabs-items-content'>";
+                         html+= "<div class='tabs-items-content-title figcaption'>";
+                         html+= "<p>"+item.title+"</p>";
+                         html+= "<div class='tabs-items-content-time'>";
+                         html+= "<span><img src='/static/spirit/images/shijian2x.png'>";
+                         html+= "</span><span>"+item.create_time+"</span></div></div>";
+                         html+= "<div class='tabs-items-content-text figcaption'>";
+                         html+= "<p>"+item.desc+"</p></div>";
+                         html+= "<div class='tabs-items-content-label'>";
+                         for(var j =0;j<item.keyword.length;j++){
+                            html+= "<span>"+item.keyword[j]+"</span>";
+                         }
+                    
+                         html+="</div></div></a></li>";
+                    });
+                    console.log(html);
+                    $('#content').append(html).html();
+                    $('#page').val('1');
+               }else {
+                  var arr ='';
+                  arr  +="<li>";
+                  arr  +="<div class='tabs-items-content'>";
+                  arr  += "<div class='tabs-items-content-text figcaption'>";
+                  arr  += "<p style='color: #ff2222'>抱歉，没有找到相关结果。</p>";
+                  arr  += "</div></div></li>"; 
+                  $('#content').append(arr).html(); 
+               }
+           }
+
+           if(ret.code == 400){
+             var arr ='';
+             arr  +="<li>";
+             arr  +="<div class='tabs-items-content'>";
+             arr  += "<div class='tabs-items-content-text figcaption'>";
+             arr  += "<p style='color: #ff2222'>抱歉，没有找到相关结果。</p>";
+             arr  += "</div></div></li>"; 
+             $('#content').append(arr).html();
+           }
+
+    },'json');
+}
+
+//清除关键字搜索
+function nullhot(obj){
+    var keys = $(obj).attr('data-title');//获取当前搜索的关键字
+     
+    //判断当前数组中是否已经存在
+    var index = $.inArray(keys,title);
+   
+    if(index >=0){
+         title.pop(title); //移除并且返回新数组
+     }
+
+    title.pop(keys); //往数组中移除
+    
+    console.log(title);
+    var urls = $(obj).attr('data-url'); //ajax请求地址
+    var hrefs= $(obj).attr('data-href');//详情页地址
+
+    $.post(urls,{'title':JSON.stringify(title)},function(ret){
+        if(ret.code== 200){
+            $('#content li').remove();  //清空原有li
+             if(ret.data.length > 0){
+                 var html = '';
+                 $.each(ret.data, function (i, item) {
+                      html+="<li><a href="+hrefs+'?mid='+item.id+">";
+                      html+= "<div class='tabs-items-img'>";
+                      html+= "<img src="+item.imgs+" ></div>";
+                      html+= "<div class='tabs-items-content'>";
+                      html+= "<div class='tabs-items-content-title figcaption'>";
+                      html+= "<p>"+item.title+"</p>";
+                      html+= "<div class='tabs-items-content-time'>";
+                      html+= "<span><img src='/static/spirit/images/shijian2x.png'>";
+                      html+= "</span><span>"+item.create_time+"</span></div></div>";
+                      html+= "<div class='tabs-items-content-text figcaption'>";
+                      html+= "<p>"+item.desc+"</p></div>";
+                      html+= "<div class='tabs-items-content-label'>";
+                      for(var j =0;j<item.keyword.length;j++){
+                         html+= "<span>"+item.keyword[j]+"</span>";
+                      }
+                 
+                      html+="</div></div></a></li>";
+                 });
+                 console.log(html);
+                 $('#content').append(html).html();
+                 $('#page').val('1');
+            }else {
+               var arr ='';
+               arr  +="<li>";
+               arr  +="<div class='tabs-items-content'>";
+               arr  += "<div class='tabs-items-content-text figcaption'>";
+               arr  += "<p style='color: #ff2222'>抱歉，没有找到相关结果。</p>";
+               arr  += "</div></div></li>"; 
+               $('#content').append(arr).html(); 
+            }
+        }
+
+        if(ret.code == 400){
+          var arr ='';
+          arr  +="<li>";
+          arr  +="<div class='tabs-items-content'>";
+          arr  += "<div class='tabs-items-content-text figcaption'>";
+          arr  += "<p style='color: #ff2222'>抱歉，没有找到相关结果。</p>";
+          arr  += "</div></div></li>"; 
+          $('#content').append(arr).html();
+        }
+
+ },'json');
 }
 
 

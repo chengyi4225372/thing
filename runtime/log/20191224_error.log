@@ -22,3 +22,159 @@
 ---------------------------------------------------------------
 [ 2019-12-24T15:56:07+08:00 ] 127.0.0.1 GET /v1/keys/keywords/edit.html?mid=/v1/keys/keywords/edit.html
 [ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2019-12-24T16:29:06+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\controller\Index.php:20]
+---------------------------------------------------------------
+[ 2019-12-24T16:29:07+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\controller\Index.php:20]
+---------------------------------------------------------------
+[ 2019-12-24T16:29:35+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\controller\Index.php:20]
+---------------------------------------------------------------
+[ 2019-12-24T16:29:36+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\controller\Index.php:20]
+---------------------------------------------------------------
+[ 2019-12-24T16:29:49+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\controller\Index.php:20]
+---------------------------------------------------------------
+[ 2019-12-24T16:29:49+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\controller\Index.php:20]
+---------------------------------------------------------------
+[ 2019-12-24T16:42:31+08:00 ] 127.0.0.1 GET /v1/work/works/add.html
+[ error ] [0]致命错误: Class 'app\v1\service\keywordsservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:63]
+---------------------------------------------------------------
+[ 2019-12-24T16:43:04+08:00 ] 127.0.0.1 GET /v1/work/works/add.html
+[ error ] [0]致命错误: Class 'app\v1\service\keywordsservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:63]
+---------------------------------------------------------------
+[ 2019-12-24T16:43:58+08:00 ] 127.0.0.1 GET /v1/work/works/add.html
+[ error ] [0]致命错误: Class 'app\v1\service\keywordsservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:64]
+---------------------------------------------------------------
+[ 2019-12-24T17:29:27+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [8]未定义变量: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\ffa9b840d055665e266a2b7355fb9b20.php:135]
+---------------------------------------------------------------
+[ 2019-12-24T17:47:42+08:00 ] 127.0.0.1 POST /home/index/getinfoapi.html
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-24T17:59:11+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [0]语法解析错误: syntax error, unexpected ';'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\controller\Index.php:98]
+---------------------------------------------------------------
+[ 2019-12-24T18:00:05+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [0]语法解析错误: syntax error, unexpected '}'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:115]
+---------------------------------------------------------------
+[ 2019-12-24T18:00:07+08:00 ] 127.0.0.1 GET /home/index/informationlist.html
+[ error ] [0]语法解析错误: syntax error, unexpected '}'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:115]
+---------------------------------------------------------------
+[ 2019-12-24T18:14:23+08:00 ] 127.0.0.1 POST /home/index/getinfoapi.html
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-24T18:14:45+08:00 ] 127.0.0.1 POST /home/index/getinfoapi.html
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-24T18:15:03+08:00 ] 127.0.0.1 POST /home/index/getinfoapi.html
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-24T18:19:39+08:00 ] 127.0.0.1 POST /home/index/getinfoapi.html
+[ error ] [2]explode() expects parameter 2 to be string, array given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:109]
+---------------------------------------------------------------
+[ 2019-12-24T18:21:46+08:00 ] 127.0.0.1 POST /home/index/getinfoapi.html
+[ error ] [2]explode() expects parameter 2 to be string, array given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:109]
+---------------------------------------------------------------
+[ 2019-12-24T18:22:03+08:00 ] 127.0.0.1 POST /home/index/getinfoapi.html
+[ error ] [2]explode() expects parameter 2 to be string, array given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:109]
+---------------------------------------------------------------
+[ 2019-12-24T18:22:40+08:00 ] 127.0.0.1 POST /home/index/getinfoapi.html
+[ error ] [2]explode() expects parameter 2 to be string, array given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:109]
+---------------------------------------------------------------
+[ 2019-12-24T18:22:53+08:00 ] 127.0.0.1 POST /home/index/getinfoapi.html
+[ error ] [2]explode() expects parameter 2 to be string, array given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:109]
+---------------------------------------------------------------
+[ 2019-12-24T19:02:25+08:00 ] 127.0.0.1 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:94]
+---------------------------------------------------------------
+[ 2019-12-24T19:02:28+08:00 ] 127.0.0.1 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:94]
+---------------------------------------------------------------
+[ 2019-12-24T19:02:32+08:00 ] 127.0.0.1 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:94]
+---------------------------------------------------------------
+[ 2019-12-24T19:02:47+08:00 ] 127.0.0.1 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:94]
+---------------------------------------------------------------
+[ 2019-12-24T19:02:49+08:00 ] 127.0.0.1 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:94]
+---------------------------------------------------------------
+[ 2019-12-24T19:02:50+08:00 ] 127.0.0.1 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:94]
+---------------------------------------------------------------
+[ 2019-12-24T19:02:50+08:00 ] 127.0.0.1 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:94]
+---------------------------------------------------------------
+[ 2019-12-24T19:02:58+08:00 ] 127.0.0.1 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:94]
+---------------------------------------------------------------
+[ 2019-12-24T19:06:22+08:00 ] 127.0.0.1 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\work\Works.php:94]
+---------------------------------------------------------------
+[ 2019-12-24T19:20:25+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]未定义变量: keywords[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:97]
+---------------------------------------------------------------
+[ 2019-12-24T19:20:37+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]未定义变量: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:97]
+---------------------------------------------------------------
+[ 2019-12-24T19:22:07+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]未定义变量: keyword[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:97]
+---------------------------------------------------------------
+[ 2019-12-24T19:23:55+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [2]in_array() expects parameter 2 to be array, object given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:97]
+---------------------------------------------------------------
+[ 2019-12-24T19:24:38+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [2]in_array() expects parameter 2 to be array, string given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:97]
+---------------------------------------------------------------
+[ 2019-12-24T19:26:33+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:27:08+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:27:13+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:27:43+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:28:30+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:30:28+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:30:48+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:31:04+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:32:48+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [0]语法解析错误: syntax error, unexpected ':'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:97]
+---------------------------------------------------------------
+[ 2019-12-24T19:33:17+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [0]语法解析错误: syntax error, unexpected ':'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:97]
+---------------------------------------------------------------
+[ 2019-12-24T19:33:50+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:34:17+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [2]implode(): Invalid arguments passed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:175]
+---------------------------------------------------------------
+[ 2019-12-24T19:34:41+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [0]语法解析错误: syntax error, unexpected ':'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:97]
+---------------------------------------------------------------
+[ 2019-12-24T19:34:56+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:95]
+---------------------------------------------------------------
+[ 2019-12-24T19:35:09+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [2]implode(): Invalid arguments passed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:175]
+---------------------------------------------------------------
+[ 2019-12-24T19:35:20+08:00 ] 127.0.0.1 GET /v1/work/works/edit.html?id=20
+[ error ] [2]in_array() expects parameter 2 to be array, string given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\84ba02abf8c0dff05315b7dbcba79128.php:97]

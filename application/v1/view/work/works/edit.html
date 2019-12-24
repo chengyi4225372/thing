@@ -4,6 +4,9 @@
     .dialog-content{margin:20px;}
     .dialog-footer{right:39%;top:82%;margin-left:30%;}
     .red-color{color:red;}
+       /* 修改原有下拉框*/
+    .bootstrap-select .btn {max-width: 550px;}
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {width: 550px;}
 </style>
 <div class="dialog-content">
     <form class="form-horizontal dialog-form" id="form">
@@ -37,10 +40,13 @@
 
 
                 <div class="form-group">
-                    <label for="keyword" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻关键字：</label>
-                    <div class="col-sm-9">
-                        <input type="text" value="{$info.keyword|default=''}" class="form-control form-control-sm" id="keyword">
+                    <label for="keywords" class="col-sm-3 control-label">新闻关键字列表：</label>
+                    <div class="col-sm-9" >
+                        <select id="keyword" class="selectpicker" multiple  title="{$info.keyword}" >
+                            {volist name='list' id='ko'}
+                            <option value="{$ko.title}" data-width="100%" >{$ko.title}</option>
+                            {/volist}
+                        </select>
                     </div>
                 </div>
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:118:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\information_list.html";i:1577150403;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577069294;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:118:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\information_list.html";i:1577185893;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577175962;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <link rel="stylesheet" href="/static/spirit/css/alert.css">
+  <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
+  <link rel="stylesheet" href="/static/spirit/css/left.css">
   <script src="/static/spirit/js/clamp.js"></script>
   <script src='/static/spirit/js/Informationlist.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -127,23 +129,14 @@
             <div class="bgHot">
               <span>热门关键词</span>
               <ul>
+                <?php if(is_array($keylist) || $keylist instanceof \think\Collection || $keylist instanceof \think\Paginator): $i = 0; $__LIST__ = $keylist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$kwords): $mod = ($i % 2 );++$i;?>
                 <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
+                  <span onclick="hotsearch(this)" data-url="<?php echo url('home/index/getinfoapi'); ?>" data-href="<?php echo url('/home/index/detail'); ?>" 
+                   data-title='<?php echo $kwords['title']; ?>'><?php echo $kwords['title']; ?></span>
+                  <span class="close" onclick='nullhot(this)' data-href="<?php echo url('/home/index/detail'); ?>"
+                   data-url="<?php echo url('home/index/getinfoapi'); ?>">✕</span>
                 </li>
-                <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
-                </li>
-                <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
-                </li>
-                <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
-                </li>
-
+                <?php endforeach; endif; else: echo "" ;endif; ?>
               </ul>
 
             </div>
@@ -181,9 +174,9 @@
                       <p><?php echo $vo['desc']; ?></p>
                     </div>
                     <div class="tabs-items-content-label">
-                      <span>节税</span>
-                      <span>企业节税</span>
-                      <span>企业利润节税方案</span>
+                     <?php if(is_array($vo['keyword']) || $vo['keyword'] instanceof \think\Collection || $vo['keyword'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['keyword'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ko): $mod = ($i % 2 );++$i;?>
+                      <span><?php echo $ko; ?></span>
+                      <?php endforeach; endif; else: echo "" ;endif; ?>
                     </div>
                   </div>
                 </a>
@@ -266,8 +259,6 @@
 </div>
 
 
-
-
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
     <div onclick="GetErp();">
@@ -305,21 +296,22 @@
 </div>
 
     <!-- 弹窗 -->
-    
-<div class="pop-up-box" id="popbox">
+    <div class="pop-up-box" id="popbox">
     <div class="form">
         <div class="form-titile">
             <p>方案咨询</p>
             <span class="turnoff" onclick="turnoff()"></span>
         </div>
         <div class="form-content">
-            <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
-            <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+            <div>
+                <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                </div>
+                <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                <input type='hidden' id='sources' value='惠灵工'>
+                <input type='hidden' id='identifications' value='灵活用工'>
+                <div class="form-btn" onclick="form_btn()">获取方案</div>
             </div>
-            <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
-            <input type='hidden' id='sources' value='惠灵工'>
-            <input type='hidden' id='identifications' value='灵活用工'>
-            <div class="form-btn" onclick="form_btn()">获取方案</div>
         </div>
         <!-- 提交成果后弹窗 -->
         <div class="mask-box2">

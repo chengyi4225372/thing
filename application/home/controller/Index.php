@@ -6,6 +6,7 @@ use app\common\model\Work;
 use think\Controller;
 use app\v1\service\Workservice;
 use app\v1\service\Exampleservice;
+use app\v1\service\Keywordsservice;
 use think\Cookie;
 use think\Config;
 class Index extends BaseController
@@ -17,11 +18,8 @@ class Index extends BaseController
      */
     public function  index()
     {
-<<<<<<< HEAD
         //$redirect_url = Config::get('curl.redirect_url');
-=======
-        // $redirect_url = Config::get('curl.redirect_url');
->>>>>>> 87c535a99fc83b08472f40f7aaec99f58a5c9916
+
         //行业资讯
         $data = Workservice::instance()->three();
         if((isset($_GET['line']) && !empty($_GET['line'])) && (isset($_GET['ttttt']) && !empty($_GET['ttttt']))){
@@ -34,27 +32,22 @@ class Index extends BaseController
             $arr['token'] = $_GET['ttttt'];
             $this->assign('userinfo',$arr);
         }
+        
         $is_empty = '';
         if(isset($_GET['is_empty']) && !empty($_GET['is_empty'])){
             $is_empty = $_GET['is_empty'];
         }
         $mobile = Cookie::get('mobile');
-
+           
         //如果是第一次进惠灵工首页要先跳到慧企云页面获取用户的信息
-<<<<<<< HEAD
+
         
         /*if(empty($mobile) && empty($is_empty)){
             $url = Config::get('curl.website').'/home/login/hlg_local';
 
             echo "<script>location.href='".$url."'</script>";
         }*/
-=======
-        // if(empty($mobile) && empty($is_empty)){
-        //     $url = Config::get('curl.website').'/home/login/hlg_local';
 
-        //     echo "<script>location.href='".$url."'</script>";
-        // }
->>>>>>> 87c535a99fc83b08472f40f7aaec99f58a5c9916
 
         $this->assign('data',$data);
 
@@ -79,6 +72,9 @@ class Index extends BaseController
 
            //$total = Workservice::instance()->getCount($keyword);
           // $this->assign('total',$total);
+          //关键字列表
+           $keylist = Keywordsservice::instance()->getlist('');
+           $this->assign('keylist',$keylist);
 
            $this->assign('list',$list);
            $this->assign('title','惠灵工新闻资讯');
@@ -87,6 +83,35 @@ class Index extends BaseController
          }
          return false;
      }
+
+     /**
+      * 惠灵工 新闻资讯接口
+      * @title 关键字
+      */  
+     public function getinfoapi(){
+           if($this->request->isPost()){
+              $keyword = json_decode(input('post.title','','trim')); 
+              $page  = input('post.page','','int');
+              $pages = $page?$page :'1' ;   //当前页
+              $size  = 15; //每页显示条数
+              $keyword = implode(',',$keyword);
+              $list = Workservice::instance()->getkeywordjson($keyword,$pages,$size);
+        
+              if(!empty($list) || isset($list)){
+                  return json(['code'=>200,'data'=>$list,'msg'=>'success']);
+              }
+
+              if(empty($list)){
+                return json(['code'=>400,'msg'=>'error']);
+              }
+
+           }
+           return false;
+     } 
+
+
+
+
 
      /**
       * 惠灵工详情页

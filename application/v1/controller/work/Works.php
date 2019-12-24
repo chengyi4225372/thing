@@ -3,6 +3,7 @@ namespace app\v1\controller\work;
 use app\common\controller\AuthController;
 use think\Config;
 use app\common\model\Work;
+use app\v1\service\Keywordsservice;
 use app\v1\service\Workservice;
 
 class Works extends  AuthController
@@ -59,6 +60,8 @@ class Works extends  AuthController
             }
 
         }
+        $list = Keywordsservice::instance()->getlist('');
+        $this->assign('list',$list);
         return $this->fetch();
     }
 
@@ -74,8 +77,10 @@ class Works extends  AuthController
                 return false;
             }
             $info = Workservice::instance()->getIdInfo($id);
-
             $this->assign('info',$info);
+            //关键字列表
+            $list = Keywordsservice::instance()->getlist('');
+            $this->assign('list',$list);
             return $this->fetch();
         }
 
@@ -87,12 +92,13 @@ class Works extends  AuthController
 
             $arr= array(
                 'title'=>$data['title'],
-                'keyword'=>$data['keyword'],
+                'keyword'=>implode(',',$data['keyword']), //修改
                 'desc'=>$data['desc'],
                 'content'=>$data['content'],
                 'imgs'=>$data['imgs'],
                 'sort'=>$data['sort'],
             );
+
             $ret = Workservice::instance()->updateByArray($arr,$data['id']);
 
             if($ret){

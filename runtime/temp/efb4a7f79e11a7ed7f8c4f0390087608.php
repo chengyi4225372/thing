@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\add.html";i:1576811918;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\dialog.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1576463434;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:108:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\add.html";i:1577177137;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\dialog.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1577156400;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -54,6 +54,9 @@
     .dialog-content{margin:20px;}
     .dialog-footer{right:39%;top:82%;margin-left:30%;}
     .red-color{color:red;}
+     /* 修改原有下拉框*/
+     .bootstrap-select .btn {max-width: 550px;}
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {width: 550px;}
 </style>
 <div class="dialog-content">
     <form class="form-horizontal dialog-form" id="form">
@@ -85,12 +88,24 @@
                     </div>
                 </div>
 
-
+                <!--
                 <div class="form-group">
                     <label for="keyword" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻关键字：</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control form-control-sm" id="keyword">
+                    </div>
+                </div>
+                -->
+
+                <div class="form-group">
+                    <label for="keywords" class="col-sm-3 control-label">新闻关键字列表：</label>
+                    <div class="col-sm-9" >
+                        <select id="keyword" class="selectpicker" multiple  title="请选择..." >
+                            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ko): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $ko['title']; ?>" data-width="100%"><?php echo $ko['title']; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </select>
                     </div>
                 </div>
 
@@ -165,6 +180,7 @@
 <script src="/static/assets/dist/js/partners.js"></script>
 <script src="/static/assets/dist/js/works.js"></script>
 <script src="/static/assets/dist/js/example.js"></script>
+<script src="/static/assets/dist/js/keys.js"></script>
 <script>
     admin_module.changepas();
 </script>

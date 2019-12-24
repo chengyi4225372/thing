@@ -647,7 +647,8 @@ a {
     -ms-align-items: center;
     -o-align-items: center;
     align-items: center;
-    width: 136px;
+    /* width: 136px; */
+    width: auto;
 }
 
 
