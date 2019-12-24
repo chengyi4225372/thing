@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\solution.html";i:1577069840;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1576806779;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1576848615;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1577068758;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577069294;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\solution.html";i:1577090558;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1576806779;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577069294;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -157,7 +157,7 @@
                       <p>模式不规范</p><span class="status-btn status-btnone" id="0"></span>
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-wm-item-content-icon  wm-item-show">
-                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防 范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
+                      <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
                       <div><span onclick="showSearch()">立即咨询</span></div>
                     </div>
                   </div>
@@ -831,7 +831,7 @@
                 <dl>
                     <dt>客服热线</dt>
                     <dd><a href="javascript:;">400-150-9896</a></dd>
-                    <dd><a href="javascript:;">18186194461</a></dd>
+                    <dd><a href="javascript:;">181-8619-4461</a></dd>
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
@@ -891,7 +891,7 @@
             </div>
             <div>
                 <p>获取税筹方案</p>
-                <p>400-150-9898</p>
+                <p>400-150-9896</p>
             </div>
         </div>
     </div>

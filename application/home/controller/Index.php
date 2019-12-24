@@ -17,41 +17,37 @@ class Index extends BaseController
      */
     public function  index()
     {
-        if($this->request->isGet()){
-            $redirect_url = Config::get('curl.redirect_url');
-            //行业资讯
-            $data = Workservice::instance()->three();
-            //todo 这个暂时先这样，后面还要改
-            if(isset($_GET['line']) && isset($_GET['userType']) && isset($_GET['ttttt']) && $_GET['location'] == 'yes'){
-                $mobile = $_GET['line'];
-                $userType = $_GET['userType'];
-                $arr = [];
-                $arr['mobile'] = $mobile;
-                $arr['token'] = $_GET['ttttt'];
-                $arr['userName'] = '';
-                $arr['userType'] = $userType;
-
-                Cookie::set('mobile',$mobile);
-                Cookie::set('token',$_GET['ttttt']);
-                Cookie::set('userType',$userType);
-                //企业
-                if ($userType == 'B') {
-                    $this->redirect(config::get('curl.redirect_url') . '/task/task');return;
-                }
-                //个人
-                if ($userType == 'C') {
-                    $this->redirect(config::get('curl.redirect_url') . '/personTask/myTask');return;
-                }
-                $this->assign('userinfo',$arr);
-            }
-            //todo 这个暂时先这样，后面还要改
-            $this->assign('data',$data);
-
-            $this->assign('title','惠灵工');
-
-            return  $this->fetch();
+        // $redirect_url = Config::get('curl.redirect_url');
+        //行业资讯
+        $data = Workservice::instance()->three();
+        if((isset($_GET['line']) && !empty($_GET['line'])) && (isset($_GET['ttttt']) && !empty($_GET['ttttt']))){
+            Cookie::set('mobile', $_GET['line']);
+            Cookie::set('userType', $_GET['userType']);
+            Cookie::set('token', $_GET['ttttt']);
+            $arr = [];
+            $arr['mobile'] = $_GET['line'];
+            $arr['userType'] = $_GET['userType'];
+            $arr['token'] = $_GET['ttttt'];
+            $this->assign('userinfo',$arr);
         }
-        return false;
+        $is_empty = '';
+        if(isset($_GET['is_empty']) && !empty($_GET['is_empty'])){
+            $is_empty = $_GET['is_empty'];
+        }
+        $mobile = Cookie::get('mobile');
+
+        //如果是第一次进惠灵工首页要先跳到慧企云页面获取用户的信息
+        // if(empty($mobile) && empty($is_empty)){
+        //     $url = Config::get('curl.website').'/home/login/hlg_local';
+
+        //     echo "<script>location.href='".$url."'</script>";
+        // }
+
+        $this->assign('data',$data);
+
+        $this->assign('title','惠灵工');
+
+        return  $this->fetch();
     }
 
 
