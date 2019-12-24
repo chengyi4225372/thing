@@ -1,0 +1,24 @@
+---------------------------------------------------------------
+[ 2019-12-24T10:14:48+08:00 ] 127.0.0.1 GET /v1/keys/keywords/index.html
+[ error ] [8]未定义变量: path[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\9acd234a08e07e9728af8bcb8e2bf5d1.php:191]
+---------------------------------------------------------------
+[ 2019-12-24T11:09:21+08:00 ] 127.0.0.1 GET /v1/keys/keywords/index.html
+[ error ] [0]语法解析错误: syntax error, unexpected '}'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\keys\Keywords.php:35]
+---------------------------------------------------------------
+[ 2019-12-24T11:09:22+08:00 ] 127.0.0.1 GET /v1/keys/keywords/index.html
+[ error ] [0]语法解析错误: syntax error, unexpected '}'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\keys\Keywords.php:35]
+---------------------------------------------------------------
+[ 2019-12-24T13:46:25+08:00 ] 127.0.0.1 GET /v1/keys/keywords/index.html
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sort' in 'order clause'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-12-24T15:10:49+08:00 ] 127.0.0.1 POST /v1/keys/keywords/add.html
+[ error ] [8]Undefined property: app\v1\controller\keys\Keywords::$userInfo[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\keys\Keywords.php:31]
+---------------------------------------------------------------
+[ 2019-12-24T15:52:39+08:00 ] 127.0.0.1 GET /v1/keys/keywords/edit.html?mid=/v1/keys/keywords/edit.html
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2019-12-24T15:53:17+08:00 ] 127.0.0.1 GET /v1/keys/keywords/edit.html?mid=/v1/keys/keywords/edit.html
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2019-12-24T15:56:07+08:00 ] 127.0.0.1 GET /v1/keys/keywords/edit.html?mid=/v1/keys/keywords/edit.html
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]

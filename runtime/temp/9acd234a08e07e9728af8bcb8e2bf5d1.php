@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:113:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\solution.html";i:1575372375;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1577153697;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1577156400;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:113:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\keys\keywords\index.html";i:1577174576;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1577153697;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1577156400;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -263,11 +263,11 @@
                     <div class="panel-heading">
 
                         <div class="form-group">
-                            <input type="text"  class="form-control" id="keyword"  value="<?php echo \think\Request::instance()->get('title'); ?>" placeholder="请输入标题或关键字搜索....">
+                            <input type="text"  class="form-control" id="keywords" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字进行搜索...">
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-info btn_search"  type="button"  data-url="<?php echo url('/v1/work/works/successcase'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info" id="btnsearch" type="button"  data-url="<?php echo url('/v1/keys/keywords/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
                 </div>
@@ -283,56 +283,37 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addwork" data-url="<?php echo url('/v1/work/works/addsolution'); ?>">
-                <i class="fa fa-plus-circle">添加方案</i></button>
+                    id="addkeys" data-url="<?php echo url('/v1/keys/keywords/add'); ?>">
+                <i class="fa fa-plus-circle">添加关键字</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
-                </th>
-                <th class="text-center">标题</th>
-                <th class="text-center">内容</th>
-                <th class="text-center">图片</th>
-                <th class="text-center">添加时间</th>
-                <th class="text-center">添加人</th>
-                <th class="text-center">状态</th>
+
+                <th class="text-center" style="width:10%">排序</th>
+                <th class="text-center">关键字</th>
+                <th class="text-center">操作人</th>
                 <th class="text-center">操作</th>
                 </thead>
+                 <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tbody>
-
-                <?php if(is_array($data['list']['data']) || $data['list']['data'] instanceof \think\Collection || $data['list']['data'] instanceof \think\Paginator): $i = 0; $__LIST__ = $data['list']['data'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td class="td-align td-padding">
-                        <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
+                    <td class="td-align">
+                       <input type="number" value='<?php echo (isset($vo['sort']) && ($vo['sort'] !== '')?$vo['sort']:'0'); ?>' id="" />
                     </td>
-                    <td class="text-center"><?php echo isset($list['title']) ? $list['title'] : ''; ?></td>
+                    <td class="text-center"><?php echo $vo['title']; ?></td>
+                    <td class="text-center"><?php echo $vo['operator']; ?></td>
+            
                     <td class="text-center">
-                        <textarea cols="40" rows="5"><?php echo isset($list['content']) ? $list['content'] : ''; ?></textarea>
-                    </td>
-                    <td class="text-center">
-                        <img src="<?php echo $list['pic']; ?>" style="width:50px;height:50px;">
-                    </td>
-                    <td class="text-center"><?php echo date('Y-m-d H:i:s',$list['add_time']); ?></td>
-                    <td class="text-center"><?php echo $list['add_user']; ?></td>
-                    <td class="text-center">
-                        <span class="btn <?php if($list['status'] == 1): ?> btn-success <?php else: ?> btn-danger <?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
-                    </td>
-                    <td class="text-center">
-                        <input type="hidden" value="<?php echo $list['id']; ?>" id="mid">
-                        <a   class="btn btn-info editsolution" data-url="<?php echo url('/v1/work/works/editsolution',['id' => $list['id']]); ?>">编辑</a>
-                        <a  onclick="delSolution(this)" data="<?php echo $list['id']; ?>" data-url="<?php echo url('/v1/work/works/delsolution'); ?>" class="btn btn-danger">删除</a>
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/keys/keywords/edit'); ?>" data-id='<?php echo $vo['id']; ?>' onclick="editkeys(this)">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-danger" data-url="<?php echo url('/v1/keys/keywords/del'); ?>" data-id='<?php echo $vo['id']; ?>' onclick="delkeys(this)">删除</a>  
                     </td>
                 </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-
-
-
                 </tbody>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
             </table>
             <div class="pages">
-
+                <?php echo $list->render();; ?>
             </div>
         </div>
     </div>

@@ -17,7 +17,7 @@ class Index extends BaseController
      */
     public function  index()
     {
-        $redirect_url = Config::get('curl.redirect_url');
+        //$redirect_url = Config::get('curl.redirect_url');
         //行业资讯
         $data = Workservice::instance()->three();
         if((isset($_GET['line']) && !empty($_GET['line'])) && (isset($_GET['ttttt']) && !empty($_GET['ttttt']))){
@@ -37,11 +37,12 @@ class Index extends BaseController
         $mobile = Cookie::get('mobile');
 
         //如果是第一次进惠灵工首页要先跳到慧企云页面获取用户的信息
-        if(empty($mobile) && empty($is_empty)){
+        
+        /*if(empty($mobile) && empty($is_empty)){
             $url = Config::get('curl.website').'/home/login/hlg_local';
 
             echo "<script>location.href='".$url."'</script>";
-        }
+        }*/
 
         $this->assign('data',$data);
 
@@ -68,7 +69,7 @@ class Index extends BaseController
           // $this->assign('total',$total);
 
            $this->assign('list',$list);
-           $this->assign('title','惠灵工行业资讯');
+           $this->assign('title','惠灵工新闻资讯');
 
            return $this->fetch();
          }

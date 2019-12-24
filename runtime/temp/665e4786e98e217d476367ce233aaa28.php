@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\index.html";i:1576227854;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1576463186;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1576463434;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\work\works\index.html";i:1576227854;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\default.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\header.html";i:1571727608;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\left.html";i:1577153697;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\footer.html";i:1571727608;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1577156400;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -188,7 +188,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase' ||  $paths == '/v1/work/works/solution' || $paths == '/v1/customer/customers/index' || $paths =='/v1/cases/example/index'): ?> active <?php endif; ?> " >
+            <li class="treeview <?php if($paths == '/v1/work/works/index' || $paths == '/v1/work/works/successcase' ||  $paths == '/v1/work/works/solution' || $paths == '/v1/customer/customers/index' || $paths =='/v1/cases/example/index' ||$paths == '/v1/keys/keywords/index'): ?> active <?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>惠灵工</span>
                     <span class="pull-right-container">
@@ -196,9 +196,17 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
+                    <li class="<?php if($paths == '/v1/keys/keywords/index'): ?> active <?php endif; ?>">
+                        <a href="<?php echo url('/v1/keys/keywords/index'); ?>">
+                            <i class="glyphicon glyphicon-star"></i> <span>新闻资讯关键字</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                    </li>
                     <li class="<?php if($paths == '/v1/work/works/index'): ?> active <?php endif; ?>">
                         <a href="<?php echo url('/v1/work/works/index'); ?>">
-                            <i class="glyphicon glyphicon-user"></i> <span>行业新闻资讯</span>
+                            <i class="glyphicon glyphicon-th-large"></i> <span>行业新闻资讯</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -388,6 +396,7 @@
 <script src="/static/assets/dist/js/partners.js"></script>
 <script src="/static/assets/dist/js/works.js"></script>
 <script src="/static/assets/dist/js/example.js"></script>
+<script src="/static/assets/dist/js/keys.js"></script>
 <script>
     admin_module.changepas();
 </script>

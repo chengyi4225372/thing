@@ -1,0 +1,68 @@
+{extend name="layout/default" /}
+{block name='content'}
+<div class="content" style="margin-bottom:0px;min-height:0px;">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline"  id="form">
+
+                <div class="panel panel-default panel-btn">
+                    <div class="panel-heading">
+
+                        <div class="form-group">
+                            <input type="text"  class="form-control" id="keywords" value="{$Think.get.keyword}" placeholder="请输入关键字进行搜索...">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btnsearch" type="button"  data-url="{:url('/v1/keys/keywords/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog"
+                    id="addkeys" data-url="{:url('/v1/keys/keywords/add')}">
+                <i class="fa fa-plus-circle">添加关键字</i></button>
+        </div>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+
+                <th class="text-center" style="width:10%">排序</th>
+                <th class="text-center">关键字</th>
+                <th class="text-center">操作人</th>
+                <th class="text-center">操作</th>
+                </thead>
+                 {volist name='list' id='vo'}
+                <tbody>
+                <tr>
+                    <td class="td-align">
+                       <input type="number" value='{$vo.sort|default='0'}' id="" />
+                    </td>
+                    <td class="text-center">{$vo.title}</td>
+                    <td class="text-center">{$vo.operator}</td>
+            
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/keys/keywords/edit')}" data-id='{$vo.id}' onclick="editkeys(this)">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-danger" data-url="{:url('/v1/keys/keywords/del')}" data-id='{$vo.id}' onclick="delkeys(this)">删除</a>  
+                    </td>
+                </tr>
+                </tbody>
+                {/volist}
+            </table>
+            <div class="pages">
+                {$list->render();}
+            </div>
+        </div>
+    </div>
+
+</section>
+{/block}
