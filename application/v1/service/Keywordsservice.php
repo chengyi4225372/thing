@@ -39,7 +39,7 @@ public static function instance()
      }else {
          $w = ['title'=>$title,'status'=>1];
      }
-     
+
      $list = Keys::instance()->where($w)->order('sort desc')->paginate(15);
 
      return $list?$list:'';

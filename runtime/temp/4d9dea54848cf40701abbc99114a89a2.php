@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1576860287;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576860287;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576856992;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:74:"/opt/web/thing/public/../application/home/view/index/information_list.html";i:1577234996;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1577084715;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1577091472;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1577091472;s:54:"/opt/web/thing/application/home/view/common/alert.html";i:1577234996;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="/static/spirit/font/syht.css">
   <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
+  <link rel="stylesheet" href="/static/spirit/css/alert.css">
+  <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
+  <link rel="stylesheet" href="/static/spirit/css/left.css">
   <script src="/static/spirit/js/clamp.js"></script>
   <script src='/static/spirit/js/Informationlist.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -89,7 +92,7 @@
     </div>
     <div class="u_info_content" id="u_info_content">
         <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
-            location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?> -->
@@ -116,20 +119,33 @@
     <div class="content-box">
       <div class="w content">
         <div class="bread-crumbs">
-            <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
-            <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b>
+          <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
+          <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b>
 
         </div>
         <div class="information-list">
-          <div class="tabs clearfix">
-            <!-- <ul class="clearfix fl">
-              <li class="li-active"><a href="<?php echo url('/home/index/informationList'); ?>">行业资讯</a></li>
-               <li>招标信息</li>
-            </ul> -->
-            <div class="search-box fr">
+          <div class="hotWord">
+
+            <div class="bgHot">
+              <span>热门关键词</span>
+              <ul>
+                <?php if(is_array($keylist) || $keylist instanceof \think\Collection || $keylist instanceof \think\Paginator): $i = 0; $__LIST__ = $keylist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$kwords): $mod = ($i % 2 );++$i;?>
+                <li>
+                  <span onclick="hotsearch(this)" data-url="<?php echo url('home/index/getinfoapi'); ?>" data-href="<?php echo url('/home/index/detail'); ?>" 
+                   data-title='<?php echo $kwords['title']; ?>'><?php echo $kwords['title']; ?></span>
+                  <span class="close" onclick='nullhot(this)' data-href="<?php echo url('/home/index/detail'); ?>"
+                   data-url="<?php echo url('home/index/getinfoapi'); ?>">✕</span>
+                </li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+              </ul>
+
+            </div>
+
+            <div class="search-box">
               <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
               <div onclick="search(this)" data-url="<?php echo url('/home/index/informationList'); ?>">搜索</div>
-              <span onclick="window.location.href=$(this).attr('data-url');" data-url="<?php echo url('/home/index/informationList'); ?>"></span>
+              <span onclick="window.location.href=$(this).attr('data-url');"
+                data-url="<?php echo url('/home/index/informationList'); ?>"></span>
             </div>
           </div>
           <div class="tabs-items show">
@@ -151,12 +167,17 @@
                   <div class="tabs-items-content">
                     <div class="tabs-items-content-title figcaption">
                       <p><?php echo $vo['title']; ?></p>
+                      <div class="tabs-items-content-time"><span><img src="/static/spirit/images/shijian2x.png"
+                            alt=""></span><span><?php echo $vo['create_time']; ?></span></div>
                     </div>
                     <div class="tabs-items-content-text figcaption">
                       <p><?php echo $vo['desc']; ?></p>
                     </div>
-                    <div class="tabs-items-content-time"><span><img src="/static/spirit/images/shijian2x.png"
-                          alt=""></span><span><?php echo $vo['create_time']; ?></span></div>
+                    <div class="tabs-items-content-label">
+                     <?php if(is_array($vo['keyword']) || $vo['keyword'] instanceof \think\Collection || $vo['keyword'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['keyword'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ko): $mod = ($i % 2 );++$i;?>
+                      <span><?php echo $ko; ?></span>
+                      <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </div>
                   </div>
                 </a>
               </li>
@@ -202,7 +223,7 @@
                 <dl>
                     <dt>客服热线</dt>
                     <dd><a href="javascript:;">400-150-9896</a></dd>
-                    <dd><a href="javascript:;">18186194461</a></dd>
+                    <dd><a href="javascript:;">181-8619-4461</a></dd>
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
@@ -238,13 +259,11 @@
 </div>
 
 
-
-
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-    <div>
-        <div class="bottom-title">惠家族产品</div>
-        <div class="bottom-item">
+    <div onclick="GetErp();">
+        <div class="bottom-title">咨询方案</div>
+        <!-- <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
             <ul>
                 <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
@@ -254,7 +273,7 @@
                 <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
                 <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
             </ul>
-        </div>
+        </div> -->
     </div>
     <div>
         <div class="bottom-title2">联系我们</div>
@@ -265,7 +284,7 @@
             </div>
             <div>
                 <p>获取税筹方案</p>
-                <p>400-150-9898</p>
+                <p>400-150-9896</p>
             </div>
         </div>
     </div>
@@ -274,6 +293,34 @@
         <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
         <div>顶部</div>
     </div>
+</div>
+
+    <!-- 弹窗 -->
+    <div class="pop-up-box" id="popbox">
+    <div class="form">
+        <div class="form-titile">
+            <p>方案咨询</p>
+            <span class="turnoff" onclick="turnoff()"></span>
+        </div>
+        <div class="form-content">
+            <div>
+                <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                </div>
+                <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                <input type='hidden' id='sources' value='惠灵工'>
+                <input type='hidden' id='identifications' value='灵活用工'>
+                <div class="form-btn" onclick="form_btn()">获取方案</div>
+            </div>
+        </div>
+        <!-- 提交成果后弹窗 -->
+        <div class="mask-box2">
+            <span></span>
+            <p class="mask-box-title">提交成功</p>
+            <p class="mask-box-content">我们会在一个工作日内联系您</p>
+        </div>
+    </div>
+
 </div>
 
   </div>
@@ -289,6 +336,16 @@
       if ($('.chosenPage').length < 1) $('.nav ul li').eq(4).addClass('chosenPage')
 
       $('.chosenPage').addClass('nav-active')
+    })
+    /* 选择热词 */
+    $('.hotWord ul li').click(function (e) {
+      if (!$(this).hasClass('chosen')) {
+        $(this).addClass('chosen')
+      }
+    })
+    $('.hotWord ul li .close').click(function (e) {
+      e.stopPropagation()
+      $(this).parent().removeClass("chosen")
     })
   </script>
 </body>
