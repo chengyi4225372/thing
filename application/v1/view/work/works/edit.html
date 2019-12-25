@@ -44,11 +44,7 @@
                     <div class="col-sm-9" >
                         <select id="keyword" class="selectpicker" multiple  title="" >
                             {volist name='list' id='ko'}
-<<<<<<< HEAD
-                            <option value="{$ko.title}" data-width="100%">{$ko.title}</option>
-=======
                             <option value="{$ko.title}" {if in_array($ko['title'],$info['keyword'])}selected="selected"{/if} data-width="100%" >{$ko.title}</option>
->>>>>>> f6bfe5fd527d1993ad5cdb78ee0cc0a1f3b90138
                             {/volist}
                         </select>
                     </div>
