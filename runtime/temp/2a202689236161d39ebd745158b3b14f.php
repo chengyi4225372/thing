@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577153286;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577149479;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577173287;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577434022;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577434000;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577173287;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,6 +98,28 @@
 <?php endif; ?> -->
         <!-- </div> -->
         <!--<?php endif; ?>-->
+        <!--登陆注册-->
+        <!-- <?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
+        </a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?> -->
       </div>
 
     </div>
@@ -129,23 +151,14 @@
             <div class="bgHot">
               <span>热门关键词</span>
               <ul>
+                <?php if(is_array($keylist) || $keylist instanceof \think\Collection || $keylist instanceof \think\Paginator): $i = 0; $__LIST__ = $keylist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$kwords): $mod = ($i % 2 );++$i;?>
                 <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
+                  <span onclick="hotsearch(this)" data-url="<?php echo url('home/index/getinfoapi'); ?>" data-href="<?php echo url('/home/index/detail'); ?>" 
+                   data-title='<?php echo $kwords['title']; ?>'><?php echo $kwords['title']; ?></span>
+                  <span class="close" onclick='nullhot(this)' data-href="<?php echo url('/home/index/detail'); ?>"
+                   data-url="<?php echo url('home/index/getinfoapi'); ?>">✕</span>
                 </li>
-                <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
-                </li>
-                <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
-                </li>
-                <li>
-                  <span>热门关键词</span>
-                  <span class="close">✕</span>
-                </li>
-
+                <?php endforeach; endif; else: echo "" ;endif; ?>
               </ul>
 
             </div>
@@ -183,9 +196,9 @@
                       <p><?php echo $vo['desc']; ?></p>
                     </div>
                     <div class="tabs-items-content-label">
-                      <span>节税</span>
-                      <span>企业节税</span>
-                      <span>企业利润节税方案</span>
+                     <?php if(is_array($vo['keyword']) || $vo['keyword'] instanceof \think\Collection || $vo['keyword'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['keyword'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ko): $mod = ($i % 2 );++$i;?>
+                      <span><?php echo $ko; ?></span>
+                      <?php endforeach; endif; else: echo "" ;endif; ?>
                     </div>
                   </div>
                 </a>

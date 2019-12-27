@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1577153307;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577149479;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577173287;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1577433577;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577433319;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577173287;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/static/spirit/css/footer.css">
     <link rel="stylesheet" href="/static/spirit/css/alert.css">
     <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
-  <link rel="stylesheet" href="/static/spirit/css/left.css">
+    <link rel="stylesheet" href="/static/spirit/css/left.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/spirit/js/clamp.js"></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
@@ -108,6 +108,28 @@
 <?php endif; ?>-->
                 <!--</div>-->
                 <!--<?php endif; ?>-->
+                <!--登陆注册-->
+                <?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
+        </a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?>
             </div>
 
         </div>
