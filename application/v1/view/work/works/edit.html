@@ -42,9 +42,9 @@
                 <div class="form-group">
                     <label for="keywords" class="col-sm-3 control-label">新闻关键字列表：</label>
                     <div class="col-sm-9" >
-                        <select id="keyword" class="selectpicker" multiple  title="{$info.keyword}" >
+                        <select id="keyword" class="selectpicker" multiple  title="" >
                             {volist name='list' id='ko'}
-                            <option value="{$ko.title}" data-width="100%" >{$ko.title}</option>
+                            <option value="{$ko.title}" {if in_array($ko['title'],$info['keyword'])}selected="selected"{/if} data-width="100%" >{$ko.title}</option>
                             {/volist}
                         </select>
                     </div>

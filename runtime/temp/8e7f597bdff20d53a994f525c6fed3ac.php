@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"/opt/web/thing/public/../application/v1/view/work/works/edit.html";i:1576564183;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575958789;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1576483356;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"/opt/web/thing/public/../application/v1/view/work/works/edit.html";i:1577237458;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575958789;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1577234997;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -54,6 +54,9 @@
     .dialog-content{margin:20px;}
     .dialog-footer{right:39%;top:82%;margin-left:30%;}
     .red-color{color:red;}
+       /* 修改原有下拉框*/
+    .bootstrap-select .btn {max-width: 550px;}
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {width: 550px;}
 </style>
 <div class="dialog-content">
     <form class="form-horizontal dialog-form" id="form">
@@ -87,10 +90,13 @@
 
 
                 <div class="form-group">
-                    <label for="keyword" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻关键字：</label>
-                    <div class="col-sm-9">
-                        <input type="text" value="<?php echo (isset($info['keyword']) && ($info['keyword'] !== '')?$info['keyword']:''); ?>" class="form-control form-control-sm" id="keyword">
+                    <label for="keywords" class="col-sm-3 control-label">新闻关键字列表：</label>
+                    <div class="col-sm-9" >
+                        <select id="keyword" class="selectpicker" multiple  title="" >
+                            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ko): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $ko['title']; ?>" <?php if(in_array($ko['title'],$info['keyword'])): ?>selected="selected"<?php endif; ?> data-width="100%" ><?php echo $ko['title']; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </select>
                     </div>
                 </div>
 
@@ -166,6 +172,7 @@
 <script src="/static/assets/dist/js/partners.js"></script>
 <script src="/static/assets/dist/js/works.js"></script>
 <script src="/static/assets/dist/js/example.js"></script>
+<script src="/static/assets/dist/js/keys.js"></script>
 <script>
     admin_module.changepas();
 </script>

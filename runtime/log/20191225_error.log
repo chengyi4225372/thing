@@ -1,0 +1,9 @@
+---------------------------------------------------------------
+[ 2019-12-25T09:28:59+08:00 ] 172.26.2.252 GET /v1/work/works/edit.html?id=4
+[ error ] [8]Array to string conversion[/opt/web/thing/runtime/temp/8e7f597bdff20d53a994f525c6fed3ac.php:79]
+---------------------------------------------------------------
+[ 2019-12-25T09:29:16+08:00 ] 172.26.2.252 GET /v1/work/works/edit.html?id=4
+[ error ] [8]Array to string conversion[/opt/web/thing/runtime/temp/8e7f597bdff20d53a994f525c6fed3ac.php:79]
+---------------------------------------------------------------
+[ 2019-12-25T09:29:33+08:00 ] 172.26.2.252 GET /v1/work/works/edit.html?id=4
+[ error ] [8]Array to string conversion[/opt/web/thing/runtime/temp/8e7f597bdff20d53a994f525c6fed3ac.php:79]

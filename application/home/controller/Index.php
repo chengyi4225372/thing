@@ -9,6 +9,7 @@ use app\v1\service\Exampleservice;
 use app\v1\service\Keywordsservice;
 use think\Cookie;
 use think\Config;
+
 class Index extends BaseController
 {
 
@@ -16,13 +17,13 @@ class Index extends BaseController
      * @return bool|mixed
      * 慧灵工 首页
      */
-    public function  index()
+    public function index()
     {
         //$redirect_url = Config::get('curl.redirect_url');
 
         //行业资讯
         $data = Workservice::instance()->three();
-        if((isset($_GET['line']) && !empty($_GET['line'])) && (isset($_GET['ttttt']) && !empty($_GET['ttttt']))){
+        if ((isset($_GET['line']) && !empty($_GET['line'])) && (isset($_GET['ttttt']) && !empty($_GET['ttttt']))) {
             Cookie::set('mobile', $_GET['line']);
             Cookie::set('userType', $_GET['userType']);
             Cookie::set('token', $_GET['ttttt']);
@@ -30,18 +31,18 @@ class Index extends BaseController
             $arr['mobile'] = $_GET['line'];
             $arr['userType'] = $_GET['userType'];
             $arr['token'] = $_GET['ttttt'];
-            $this->assign('userinfo',$arr);
+            $this->assign('userinfo', $arr);
         }
-        
+
         $is_empty = '';
-        if(isset($_GET['is_empty']) && !empty($_GET['is_empty'])){
+        if (isset($_GET['is_empty']) && !empty($_GET['is_empty'])) {
             $is_empty = $_GET['is_empty'];
         }
         $mobile = Cookie::get('mobile');
-           
+
         //如果是第一次进惠灵工首页要先跳到慧企云页面获取用户的信息
 
-        
+
         /*if(empty($mobile) && empty($is_empty)){
             $url = Config::get('curl.website').'/home/login/hlg_local';
 
@@ -49,99 +50,100 @@ class Index extends BaseController
         }*/
 
 
-        $this->assign('data',$data);
+        $this->assign('data', $data);
 
-        $this->assign('title','惠灵工');
+        $this->assign('title', '惠灵工');
 
-        return  $this->fetch();
+        return $this->fetch();
     }
 
 
     /**
      * 慧灵工 列表页
      */
-     public function informationList(){
-         if($this->request->isGet()){
+    public function informationList()
+    {
+        if ($this->request->isGet()) {
 
 //             if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //                 return $this->redirect('/home/spirit/index');
 //             }
 
-           $keyword = input('get.keyword','','trim');
-           $list  = Workservice::instance()->Getinfolist($keyword,'');
+            $keyword = input('get.keyword', '', 'trim');
+            $list = Workservice::instance()->Getinfolist($keyword, '');
 
-           //$total = Workservice::instance()->getCount($keyword);
-          // $this->assign('total',$total);
-          //关键字列表
-           $keylist = Keywordsservice::instance()->getlist('');
-           $this->assign('keylist',$keylist);
+            //$total = Workservice::instance()->getCount($keyword);
+            // $this->assign('total',$total);
+            //关键字列表
+            $keylist = Keywordsservice::instance()->getlist('');
+            
+            $this->assign('keylist', $keylist);
 
-           $this->assign('list',$list);
-           $this->assign('title','惠灵工新闻资讯');
+            $this->assign('list', $list);
+            $this->assign('title', '惠灵工新闻资讯');
 
-           return $this->fetch();
-         }
-         return false;
-     }
+            return $this->fetch();
+        }
+        return false;
+    }
 
-     /**
-      * 惠灵工 新闻资讯接口
-      * @title 关键字
-      */  
-     public function getinfoapi(){
-           if($this->request->isPost()){
-              $keyword = json_decode(input('post.title','','trim')); 
-              $page  = input('post.page','','int');
-              $pages = $page?$page :'1' ;   //当前页
-              $size  = 15; //每页显示条数
-              $keyword = implode(',',$keyword);
-              $list = Workservice::instance()->getkeywordjson($keyword,$pages,$size);
-        
-              if(!empty($list) || isset($list)){
-                  return json(['code'=>200,'data'=>$list,'msg'=>'success']);
-              }
+    /**
+     * 惠灵工 新闻资讯接口
+     * @title 关键字
+     */
+    public function getinfoapi()
+    {
+        if ($this->request->isPost()) {
+            $keyword = json_decode(input('post.title', '', 'trim'));
+            $page = input('post.page', '', 'int');
+            $pages = $page ? $page : '1';   //当前页
+            $size = 15; //每页显示条数
+            $keyword = implode(',', $keyword);
+            $list = Workservice::instance()->getkeywordjson($keyword, $pages, $size);
 
-              if(empty($list)){
-                return json(['code'=>400,'msg'=>'error']);
-              }
+            if (!empty($list) || isset($list)) {
+                return json(['code' => 200, 'data' => $list, 'msg' => 'success']);
+            }
 
-           }
-           return false;
-     } 
+            if (empty($list)) {
+                return json(['code' => 400, 'msg' => 'error']);
+            }
 
-
-
+        }
+        return false;
+    }
 
 
-     /**
-      * 惠灵工详情页
-      */
-     public function detail(){
+    /**
+     * 惠灵工详情页
+     */
+    public function detail()
+    {
 
-         if($this->request->isGet()){
+        if ($this->request->isGet()) {
 
 //             if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //                 return $this->redirect('/home/index/index');
 //             }
 
-           $id = input('get.mid','','int');
-           if(empty($id) || !isset($id)){
-               return false;
-           }
+            $id = input('get.mid', '', 'int');
+            if (empty($id) || !isset($id)) {
+                return false;
+            }
 
-           $info = Workservice::instance()->getIdInfo($id);
-           $top  = Workservice::instance()->getTop($id);
-           $next = Workservice::instance()->getNext($id);
+            $info = Workservice::instance()->getIdInfo($id);
+            $top = Workservice::instance()->getTop($id);
+            $next = Workservice::instance()->getNext($id);
 
-           $this->assign('top',$top);
-           $this->assign('next',$next);
+            $this->assign('top', $top);
+            $this->assign('next', $next);
 
-           $this->assign('info',$info);
-           $this->assign('title','资讯详情');
-           return $this->fetch();
-         }
-         return false;
-     }
+            $this->assign('info', $info);
+            $this->assign('title', '资讯详情');
+            return $this->fetch();
+        }
+        return false;
+    }
 
 
     /**
@@ -152,7 +154,7 @@ class Index extends BaseController
      */
     public function solution()
     {
-        $this->assign('title','行业解决方案');
+        $this->assign('title', '行业解决方案');
         return $this->fetch();
     }
 
@@ -164,15 +166,15 @@ class Index extends BaseController
      */
     public function clientcase()
     {
-        $this->assign('title','客户案例');
+        $this->assign('title', '客户案例');
         /*
         $data = Workservice::instance()->getclientcase();
         $this->assign('list',$data);
         */
-        $title = input('get.title','','trim');
-        $title  = $title?$title:'';
+        $title = input('get.title', '', 'trim');
+        $title = $title ? $title : '';
         $data = Exampleservice::instance()->getalllist($title);
-        $this->assign('list',$data);
+        $this->assign('list', $data);
         return $this->fetch();
     }
 
@@ -184,8 +186,8 @@ class Index extends BaseController
      */
     public function casedetail()
     {
-        $this->assign('title','客户案例详情');
-        $id = input('get.id','','int');
+        $this->assign('title', '客户案例详情');
+        $id = input('get.id', '', 'int');
         $data = Exampleservice::instance()->getoneinfo($id);
         /*  todo
         if(empty($id) || !isset($id)){
@@ -200,9 +202,9 @@ class Index extends BaseController
         }
         */
 
-  
-        $this->assign('list',$data);
-      
+
+        $this->assign('list', $data);
+
         return $this->fetch();
     }
 
@@ -214,7 +216,7 @@ class Index extends BaseController
      */
     public function getAllSolution()
     {
-        if($this->request->isAjax() && $this->request->isPost()){
+        if ($this->request->isAjax() && $this->request->isPost()) {
             $info = Workservice::instance()->getAllSolution();
             return json(['data' => $info]);
         }
@@ -228,12 +230,13 @@ class Index extends BaseController
      */
     public function ajaxOneSolution()
     {
-        if($this->request->isAjax() && $this->request->isPost()){
-            $id = input('post.id','','int');
+        if ($this->request->isAjax() && $this->request->isPost()) {
+            $id = input('post.id', '', 'int');
             $info = Workservice::instance()->ajaxOneSolution(['id' => $id]);
             return json(['data' => $info]);
         }
     }
+
     /**
      * @DESC：产品服务
      * @author: jason
@@ -241,29 +244,29 @@ class Index extends BaseController
      */
     public function productservice()
     {
-        $this->assign('title','产品服务');
+        $this->assign('title', '产品服务');
         return $this->fetch();
     }
 
 
+    /**
+     * 分页接口
+     */
+    public function getpageInfo()
+    {
+        $keyword = input('get.keyword', '', 'trim');
+        $page = input('get.page', '', 'int');
 
-     /**
-      * 分页接口
-      */
-     public function getpageInfo(){
-        $keyword = input('get.keyword','','trim');
-        $page    = input('get.page','','int');
+        $list = Workservice::instance()->Getinfolist($keyword, $page);
 
-        $list  = Workservice::instance()->Getinfolist($keyword,$page);
-
-        if(empty($list)){
-            return json(['code'=>404,'msg'=>'没有更多了']);
+        if (empty($list)) {
+            return json(['code' => 404, 'msg' => '没有更多了']);
         }
 
-        if($list){
-            return json(['code'=>200,'data'=>$list,'msg'=>'请求成功']);
+        if ($list) {
+            return json(['code' => 200, 'data' => $list, 'msg' => '请求成功']);
         }
 
-     }
+    }
 
 }
