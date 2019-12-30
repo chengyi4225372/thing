@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1577091472;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1577084715;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1577091472;s:58:"/opt/web/thing/application/home/view/common/leftIndex.html";i:1577091472;s:54:"/opt/web/thing/application/home/view/common/alert.html";i:1577234996;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1577675022;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1577084715;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1577091472;s:58:"/opt/web/thing/application/home/view/common/leftIndex.html";i:1577091472;s:54:"/opt/web/thing/application/home/view/common/alert.html";i:1577234996;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,13 +35,12 @@
       <div class="w nav-container clearfix">
         <!-- logo图 -->
         <div class="logo">
-    <h1>
-        <a href="<?php echo url('/home/index/index'); ?>">
-            <img src="/static/spirit/images/logo2xxxx.png">
-        </a>
-
-    </h1>
-</div>
+          <h1>
+            <a href="<?php echo url('/home/index/index'); ?>">
+              <img src="/static/spirit/images/logo2xxx.png">
+            </a>
+          </h1>
+        </div>
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
@@ -65,8 +64,8 @@
 
 
 
-         <!--登陆注册-->
-      <?php if(empty($userinfo['mobile'])): ?>
+        <!--登陆注册-->
+        <?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
             登录
