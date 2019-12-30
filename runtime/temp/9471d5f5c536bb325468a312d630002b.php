@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1577153303;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577149479;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577071907;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:69:"C:\phpEnv\www\thing\public/../application/home\view\index\detail.html";i:1577434018;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577434000;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577173287;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,6 +96,28 @@
 <?php endif; ?>-->
         <!--</div>-->
         <!--<?php endif; ?>-->
+        <!--登陆注册-->
+        <!-- <?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
+        </a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?> -->
       </div>
 
     </div>
@@ -247,21 +269,22 @@
 </div>
 
     <!-- 弹窗 -->
-    
-<div class="pop-up-box" id="popbox">
+    <div class="pop-up-box" id="popbox">
     <div class="form">
         <div class="form-titile">
             <p>方案咨询</p>
             <span class="turnoff" onclick="turnoff()"></span>
         </div>
         <div class="form-content">
-            <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
-            <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+            <div>
+                <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                </div>
+                <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                <input type='hidden' id='sources' value='惠灵工'>
+                <input type='hidden' id='identifications' value='灵活用工'>
+                <div class="form-btn" onclick="form_btn()">获取方案</div>
             </div>
-            <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
-            <input type='hidden' id='sources' value='惠灵工'>
-            <input type='hidden' id='identifications' value='灵活用工'>
-            <div class="form-btn" onclick="form_btn()">获取方案</div>
         </div>
         <!-- 提交成果后弹窗 -->
         <div class="mask-box2">

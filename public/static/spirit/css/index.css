@@ -226,13 +226,22 @@ input:-webkit-autofill {
 }
 
 .nav-container {
-    padding-top: .9375rem;
+    /* padding-top: .9375rem; */
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: space-between; */
+    position: relative;
+    height: 100%;
 }
 
 .nav-container .logo {
-    float: left;
-    width: 9.25rem;
-    height: 2.875rem;
+    /* float: left; */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8.9375rem;
+    height: 3rem;
     display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
@@ -255,22 +264,28 @@ input:-webkit-autofill {
 }
 
 .nav-container .nav {
-    float: left;
-    margin-left: 11.5rem;
-    height: 4.0625rem;
+    /* float: left; */
+    position: absolute;
+    left: 16.4375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    /* margin-left: 7.5rem; */
+    /* height: 4.0625rem; */
 }
 
 .nav-container .nav ul {
     list-style: none;
     padding: 0;
-    height: 4.0625rem;
-    line-height: 4.0625rem;
+    /* height: 4.0625rem; */
+    /* line-height: 4.0625rem; */
 }
 
 .nav-container .nav ul li {
-    height: 4.0625rem;
+    /* height: 4.0625rem; */
+    position: relative;
     float: left;
-    margin-right: 1.875rem;
+    margin-right: 3.125rem;
+    /* padding-bottom: .5rem; */
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -293,15 +308,26 @@ input:-webkit-autofill {
     color: #03053A;
 }
 
-.nav-active {
-    border-bottom: 4px solid #2F80ED;
+.nav-active::after {
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    content: '';
+    width: 100%;
+    height: .25rem;
+    background: #2F80ED;
+    /* border-bottom: 4px solid #2F80ED; */
 }
 
 /* 登陆注册 */
 .nav-container .loging {
-    float: right;
-    margin: .1875rem 0 0 4.375rem;
+    /* float: right; */
+    /* margin: .1875rem 0 0 4.375rem; */
     /* margin: 0 0 0 4.375rem; */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .nav-container .loging div {
@@ -366,12 +392,14 @@ input:-webkit-autofill {
 /* 用户信息 */
 
 .u_info {
-    position: relative;
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     /* margin-top: .625rem; */
-    padding-left: 1.25rem;
-    height: 3.125rem;
-    padding-bottom: .375rem;
+    /* padding-left: 1.25rem; */
+    height: 4.125rem;
+    /* padding-bottom: .375rem; */
     cursor: pointer;
 }
 
@@ -403,8 +431,8 @@ input:-webkit-autofill {
     width: 5.625rem;
     height: 2.6875rem;
     position: absolute;
-    bottom: -2.5125rem;
-    left: -0.5625rem;
+    bottom: -2.5rem;
+    left: -1.8rem;
     text-align: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -463,51 +491,9 @@ input:-webkit-autofill {
     display: block
 }
 
-/* 轮播图部分 */
-/* .carousel {
-    margin-top: 3.75rem;
-    height: 40rem !important;
-}
-
-.carousel>.carousel-img-box {
-    width: 360rem;
-    height: 100%;
-}
-
-.carousel>.carousel-img-box>div {
-    float: left;
-    width: 120rem;
-}
-
-.carousel>.carousel-img-box>div img {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel .focus-icon {
-    position: absolute;
-    left: 50%;
-    bottom: -4.0625rem;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
-.carousel .focus-icon span {
-    display: inline-block;
-    width: 3rem;
-    height: 0.25rem;
-    background: rgba(255, 255, 255, .2);
-}
-
-.carousel .focus-icon span:nth-child(4) {
-    background: linear-gradient(-90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
-} */
+/* 轮播图 */
 #swiper {
-    margin-top: 3.75rem;
+    margin-top: 5rem;
 }
 
 #swiper>div>div img {

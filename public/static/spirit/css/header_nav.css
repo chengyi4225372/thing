@@ -16,13 +16,22 @@
 }
 
 .nav-container {
-    padding-top: .625rem;
+    /* padding-top: .9375rem; */
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: space-between; */
+    position: relative;
+    height: 100%;
 }
 
 .nav-container .logo {
-    float: left;
-    width: 9.25rem;
-    height: 2.875rem;
+    /* float: left; */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8.0625rem;
+    height: 2.6875rem;
     display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
@@ -45,22 +54,28 @@
 }
 
 .nav-container .nav {
-    float: left;
-    margin-left: 11.5rem;
-    height: 3.125rem;
+    /* float: left; */
+    position: absolute;
+    left: 16.4375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    /* margin-left: 7.5rem; */
+    /* height: 4.0625rem; */
 }
 
 .nav-container .nav ul {
     list-style: none;
     padding: 0;
-    height: 3.125rem;
-    line-height: 3.125rem;
+    /* height: 4.0625rem; */
+    /* line-height: 4.0625rem; */
 }
 
 .nav-container .nav ul li {
-    height: 3.125rem;
+    /* height: 4.0625rem; */
+    position: relative;
     float: left;
-    margin-right: 1.875rem;
+    margin-right: 3.125rem;
+    /* padding-bottom: .5rem; */
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -83,15 +98,26 @@
     color: #03053A;
 }
 
-.nav-active {
-    border-bottom: 4px solid #2F80ED;
+.nav-active::after {
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    content: '';
+    width: 100%;
+    height: .25rem;
+    background: #2F80ED;
+    /* border-bottom: 4px solid #2F80ED; */
 }
 
 /* 登陆注册 */
 .nav-container .loging {
-    float: right;
-    margin: .1875rem 0 0 4.375rem;
+    /* float: right; */
+    /* margin: .1875rem 0 0 4.375rem; */
     /* margin: 0 0 0 4.375rem; */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .nav-container .loging div {
@@ -133,16 +159,37 @@
     color: #FFFFFF;
 }
 
+.enterprise-portal {
+    float: left;
+    width: 7.5rem;
+    height: 2.625rem;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    font-size: 1rem;
+    font-family: "PingFang-SC", "syht";
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 2.625rem;
+    margin-top: .625rem;
+    cursor: pointer;
+}
+
+.enterprise {
+    color: #fff;
+}
 
 /* 用户信息 */
 
 .u_info {
-    position: relative;
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     /* margin-top: .625rem; */
-    padding-left: 1.25rem;
-    height: 3.125rem;
-    padding-bottom: .375rem;
+    /* padding-left: 1.25rem; */
+    height: 4.125rem;
+    /* padding-bottom: .375rem; */
     cursor: pointer;
 }
 
@@ -174,8 +221,8 @@
     width: 5.625rem;
     height: 2.6875rem;
     position: absolute;
-    bottom: -2.5125rem;
-    left: -0.5625rem;
+    bottom: -2.5rem;
+    left: -1.8rem;
     text-align: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
