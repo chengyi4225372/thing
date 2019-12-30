@@ -1,4 +1,5 @@
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-12-30T10:36:47+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=4
 [ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
 ---------------------------------------------------------------
@@ -34,3 +35,10 @@
 ---------------------------------------------------------------
 [ 2019-12-30T10:58:58+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
 [ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+=======
+[ 2019-12-30T10:40:22+08:00 ] 172.26.2.252 GET /home/index/detail.html?mid=26
+[ error ] [0]致命错误: Call to a member function toArray() on null[/opt/web/thing/application/v1/service/Workservice.php:174]
+---------------------------------------------------------------
+[ 2019-12-30T10:41:58+08:00 ] 172.26.2.252 GET /home/index/detail.html?mid=26
+[ error ] [8]Trying to get property of non-object[/opt/web/thing/application/v1/service/Workservice.php:175]
+>>>>>>> 41408d13e7dc809d042d89fc73b608daf3654861

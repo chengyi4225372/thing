@@ -119,30 +119,22 @@ class Index extends BaseController
      */
     public function detail()
     {
-
-        if ($this->request->isGet()) {
-
-//             if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
-//                 return $this->redirect('/home/index/index');
-//             }
-
-            $id = input('get.mid', '', 'int');
-            if (empty($id) || !isset($id)) {
-                return false;
-            }
-
-            $info = Workservice::instance()->getIdInfo($id);
-            $top = Workservice::instance()->getTop($id);
-            $next = Workservice::instance()->getNext($id);
-
-            $this->assign('top', $top);
-            $this->assign('next', $next);
-
-            $this->assign('info', $info);
-            $this->assign('title', '资讯详情');
-            return $this->fetch();
+        $id = input('get.mid', '', 'int');
+        if (empty($id) || !isset($id)) {
+            return false;
         }
-        return false;
+
+//        if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//            return $this->redirect('/home/index/index');
+//        }
+        $info = Workservice::instance()->getIdInfo($id);
+        $top = Workservice::instance()->getTop($id);
+        $next = Workservice::instance()->getNext($id);
+        $this->assign('top', $top);
+        $this->assign('next', $next);
+        $this->assign('info', $info);
+        $this->assign('title', '资讯详情');
+        return $this->fetch();
     }
 
 

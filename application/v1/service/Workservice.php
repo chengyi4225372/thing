@@ -171,8 +171,14 @@ class Workservice
             return false;
         }
         $w = ['id' => $id];
-        $info = Work::instance()->where($w)->find()->toArray();
-        $info['keyword'] = explode(',',$info['keyword']);
+        $info = Work::instance()->where($w)->find();
+        if(count($info) > 0){
+            $info['keyword'] = explode(',',$info['keyword']);
+            $info['keyword2'] = $info['keyword'];
+        }else{
+            $info['keyword'] = [];
+            $info['keyword2'] = '';
+        }
         return $info;
     }
 
