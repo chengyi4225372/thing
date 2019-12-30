@@ -1,0 +1,36 @@
+---------------------------------------------------------------
+[ 2019-12-30T10:36:47+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=4
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+---------------------------------------------------------------
+[ 2019-12-30T10:47:09+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=4
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+---------------------------------------------------------------
+[ 2019-12-30T10:47:11+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=4
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+---------------------------------------------------------------
+[ 2019-12-30T10:47:14+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+---------------------------------------------------------------
+[ 2019-12-30T10:47:44+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+---------------------------------------------------------------
+[ 2019-12-30T10:50:08+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\controller\Index.php:136]
+---------------------------------------------------------------
+[ 2019-12-30T10:50:27+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
+[ error ] [2]explode() expects parameter 2 to be string, array given[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\controller\Index.php:136]
+---------------------------------------------------------------
+[ 2019-12-30T10:50:37+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+---------------------------------------------------------------
+[ 2019-12-30T10:50:38+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+---------------------------------------------------------------
+[ 2019-12-30T10:50:40+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+---------------------------------------------------------------
+[ 2019-12-30T10:58:56+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
+---------------------------------------------------------------
+[ 2019-12-30T10:58:58+08:00 ] 127.0.0.1 GET /home/index/detail.html?mid=1
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\8b95990977049ae5be437483b2b4d769.php:14]
