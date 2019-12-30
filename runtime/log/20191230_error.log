@@ -42,3 +42,9 @@
 [ 2019-12-30T10:41:58+08:00 ] 172.26.2.252 GET /home/index/detail.html?mid=26
 [ error ] [8]Trying to get property of non-object[/opt/web/thing/application/v1/service/Workservice.php:175]
 >>>>>>> 41408d13e7dc809d042d89fc73b608daf3654861
+---------------------------------------------------------------
+[ 2019-12-30T11:22:19+08:00 ] 172.26.2.252 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[/opt/web/thing/application/v1/controller/work/Works.php:95]
+---------------------------------------------------------------
+[ 2019-12-30T11:22:25+08:00 ] 172.26.2.252 POST /v1/work/works/edit.html
+[ error ] [8]未定义数组索引: keyword[/opt/web/thing/application/v1/controller/work/Works.php:95]

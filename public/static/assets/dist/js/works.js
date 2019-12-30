@@ -159,6 +159,10 @@ $('#editWorks').click(function(){
         return false;
     }
 
+    if(datas.keyword.length == 0){
+        layer.msg('请选择关键字');return;
+    }
+
     $.post(urle,datas,function(ret){
 
         if(ret.code == 200){
