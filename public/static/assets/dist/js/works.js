@@ -91,6 +91,10 @@ $('.addworks').click(function(){
         return false;
     }
 
+    if(data.keyword.length == 0){
+        layer.msg('请选择关键字');return;
+    }
+
     $.post(urlk,data,function(ret){
         if(ret.code == 200){
             layer.msg(ret.msg,function(){
@@ -157,6 +161,10 @@ $('#editWorks').click(function(){
     if(datas.content== '' || datas.content == undefined){
         layer.msg('请填写新闻详情');
         return false;
+    }
+
+    if(datas.keyword.length == 0){
+        layer.msg('请选择关键字');return;
     }
 
     $.post(urle,datas,function(ret){

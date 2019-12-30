@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"/opt/web/thing/public/../application/home/view/index/casedetail.html";i:1576860287;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1576724547;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1576860287;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1576856992;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"/opt/web/thing/public/../application/home/view/index/casedetail.html";i:1577675022;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1577084715;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1577091472;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1577091472;s:54:"/opt/web/thing/application/home/view/common/alert.html";i:1577234996;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="/static/spirit/font/syht.css">
   <link rel="stylesheet" href="/static/spirit/css/casedetail.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
+  <link rel="stylesheet" href="/static/spirit/css/alert.css">
+  <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
+  <link rel="stylesheet" href="/static/spirit/css/left.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script src='/static/spirit/js/spirit.js'></script>
@@ -95,12 +98,34 @@
     </div>
     <div class="u_info_content" id="u_info_content">
         <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
-            location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
 <?php endif; ?>-->
         <!--</div>-->
         <!--<?php endif; ?>-->
+        <!--登陆注册-->
+        <!-- <?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
+        </a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?> -->
       </div>
 
     </div>
@@ -176,7 +201,7 @@
                 <dl>
                     <dt>客服热线</dt>
                     <dd><a href="javascript:;">400-150-9896</a></dd>
-                    <dd><a href="javascript:;">18186194461</a></dd>
+                    <dd><a href="javascript:;">181-8619-4461</a></dd>
                 </dl>
                 <dl>
                     <dt>办公地址</dt>
@@ -215,9 +240,9 @@
 
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-    <div>
-        <div class="bottom-title">惠家族产品</div>
-        <div class="bottom-item">
+    <div onclick="GetErp();">
+        <div class="bottom-title">咨询方案</div>
+        <!-- <div class="bottom-item">
             <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
             <ul>
                 <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
@@ -227,7 +252,7 @@
                 <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
                 <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
             </ul>
-        </div>
+        </div> -->
     </div>
     <div>
         <div class="bottom-title2">联系我们</div>
@@ -238,7 +263,7 @@
             </div>
             <div>
                 <p>获取税筹方案</p>
-                <p>400-150-9898</p>
+                <p>400-150-9896</p>
             </div>
         </div>
     </div>
@@ -249,6 +274,33 @@
     </div>
 </div>
 
+    <!-- 弹窗 -->
+    <div class="pop-up-box" id="popbox">
+    <div class="form">
+        <div class="form-titile">
+            <p>方案咨询</p>
+            <span class="turnoff" onclick="turnoff()"></span>
+        </div>
+        <div class="form-content">
+            <div>
+                <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                </div>
+                <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                <input type='hidden' id='sources' value='惠灵工'>
+                <input type='hidden' id='identifications' value='灵活用工'>
+                <div class="form-btn" onclick="form_btn()">获取方案</div>
+            </div>
+        </div>
+        <!-- 提交成果后弹窗 -->
+        <div class="mask-box2">
+            <span></span>
+            <p class="mask-box-title">提交成功</p>
+            <p class="mask-box-content">我们会在一个工作日内联系您</p>
+        </div>
+    </div>
+
+</div>
   </div>
   <script>
     // 返回顶部
