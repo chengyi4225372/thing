@@ -91,6 +91,10 @@ $('.addworks').click(function(){
         return false;
     }
 
+    if(data.keyword.length == 0){
+        layer.msg('请选择关键字');return;
+    }
+
     $.post(urlk,data,function(ret){
         if(ret.code == 200){
             layer.msg(ret.msg,function(){
