@@ -1,0 +1,6 @@
+---------------------------------------------------------------
+[ 2019-12-30T10:40:22+08:00 ] 172.26.2.252 GET /home/index/detail.html?mid=26
+[ error ] [0]致命错误: Call to a member function toArray() on null[/opt/web/thing/application/v1/service/Workservice.php:174]
+---------------------------------------------------------------
+[ 2019-12-30T10:41:58+08:00 ] 172.26.2.252 GET /home/index/detail.html?mid=26
+[ error ] [8]Trying to get property of non-object[/opt/web/thing/application/v1/service/Workservice.php:175]
