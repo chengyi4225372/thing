@@ -51,3 +51,12 @@ function login_btn(objthis){
     var login_url = login_url2+'?artId='+loca_url;
     location.href = login_url;
 }
+
+
+var  _hmt  =  _hmt  ||  [];
+(function()  {
+    var  hm  =  document.createElement("script");
+    hm.src  =  "https://hm.baidu.com/hm.js?2e105842c8a6bceb1706730f2ecd1641";
+    var  s  =  document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm,  s);
+})();
