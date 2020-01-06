@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:66:"/opt/web/thing/public/../application/v1/view/work/works/index.html";i:1575538783;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575958790;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1577234997;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1577234997;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:66:"/opt/web/thing/public/../application/v1/view/work/works/index.html";i:1578293557;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575958790;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1577234997;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1577234997;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -304,6 +304,7 @@
                 <th class="text-center">新闻标题</th>
                 <th class="text-center">新闻展示图</th>
                 <th class="text-center">新闻关键字</th>
+                <th class="text-center">新闻SEO关键字</th>
                 <th class="text-center">创建时间</th>
                 <th class="text-center">操作</th>
                 </thead>
@@ -321,6 +322,7 @@
                         </a>
                     </td>
                     <td class="text-center"><?php echo (isset($vo['keyword']) && ($vo['keyword'] !== '')?$vo['keyword']:''); ?></td>
+                    <td class="text-center"><?php echo (isset($vo['seo_key']) && ($vo['seo_key'] !== '')?$vo['seo_key']:''); ?></td>
                     <td class="text-center"><?php echo (isset($vo['create_time']) && ($vo['create_time'] !== '')?$vo['create_time']:''); ?></td>
 
                     <td class="text-center">

@@ -67,10 +67,11 @@ $('.addworks').click(function(){
     data.desc  = $('#desc').val();
     data.sort  = $('#sort').val();
     data.keyword = $('#keyword').val();
+    data.seo_key = $('#seo_key').val();
     data.content = ue.getContent();//取得html文本
     data.imgs    =$('#Images').val();
-
     if(data.title== '' || data.title == undefined){
+        $('#title').focus();
         layer.msg('请输入新闻标题');
         return false;
     }
@@ -82,7 +83,13 @@ $('.addworks').click(function(){
 
 
     if(data.desc== '' || data.desc == undefined){
-        layer.msg('请输入新闻描述');
+        layer.msg('请输入新闻SEO描述');
+        return false;
+    }
+
+    if(data.seo_key== '' || data.seo_key == undefined){
+        $('#seo_key').focus();
+        layer.msg('请输入新闻SEO关键字');
         return false;
     }
 
@@ -133,6 +140,7 @@ $('#editWorks').click(function(){
     datas.desc  = $('#desc').val();
     datas.sort  = $('#sort').val();
     datas.keyword = $('#keyword').val();
+    datas.seo_key = $('#seo_key').val();
     datas.content = ue.getContent();//取得html文本
     datas.imgs    =$('#Images').val();
     datas.id     = $('#mid').val();
@@ -143,6 +151,7 @@ $('#editWorks').click(function(){
     }
 
     if(datas.title== '' || datas.title == undefined){
+        $('#title').focus();
         layer.msg('请填写新闻标题');
         return false;
     }
@@ -155,6 +164,12 @@ $('#editWorks').click(function(){
 
     if(datas.desc== '' || datas.desc == undefined){
         layer.msg('请填写新闻描述');
+        return false;
+    }
+
+    if(datas.seo_key== '' || datas.seo_key == undefined){
+        $('#seo_key').focus();
+        layer.msg('请输入新闻SEO关键字');
         return false;
     }
 
