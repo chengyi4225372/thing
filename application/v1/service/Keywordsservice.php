@@ -149,5 +149,16 @@ public static function instance()
         }
      }
 
+     /**
+      * 获取关键字接口
+      */
+     public function getkeywordlist(){
+
+         $w = ['status'=>1];
+
+         $list = Keys::instance()->where($w)->field('id,title,sort')->order('sort desc')->limit(0,6)->select();
+
+         return $list?$list:'';
+     }
 
 }

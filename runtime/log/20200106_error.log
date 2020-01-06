@@ -1,0 +1,36 @@
+---------------------------------------------------------------
+[ 2020-01-06T19:44:24+08:00 ] 127.0.0.1 GET /home/index/clientcase.html
+[ error ] [0]语法解析错误: syntax error, unexpected '$list' (T_VARIABLE)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Exampleservice.php:165]
+---------------------------------------------------------------
+[ 2020-01-06T19:54:10+08:00 ] 127.0.0.1 GET /api/index/customerlist
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2020-01-06T19:54:29+08:00 ] 127.0.0.1 POST /api/index/customerlist?page=0&size=0
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2020-01-06T19:55:04+08:00 ] 127.0.0.1 GET /api/index/customerlist
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2020-01-06T19:55:08+08:00 ] 127.0.0.1 POST /api/index/customerlist?page=0&size=0
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10,10' at line 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2020-01-06T19:55:44+08:00 ] 127.0.0.1 GET /api/index/customerlist
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2020-01-06T19:55:45+08:00 ] 127.0.0.1 GET /api/index/customerlist
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2020-01-06T20:05:10+08:00 ] 127.0.0.1 GET /api/index/customergetinfo?id=6
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2020-01-06T20:45:14+08:00 ] 127.0.0.1 POST /api/index/getkeywordlist
+[ error ] [0]语法解析错误: syntax error, unexpected '}', expecting ';'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\api\controller\Index.php:113]
+---------------------------------------------------------------
+[ 2020-01-06T20:45:45+08:00 ] 127.0.0.1 POST /api/index/getkeywordlist
+[ error ] [0]致命错误: Class 'app\v1\service\keywordsservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\api\controller\Index.php:109]
+---------------------------------------------------------------
+[ 2020-01-06T20:46:55+08:00 ] 127.0.0.1 POST /api/index/getkeywordlist
+[ error ] [0]致命错误: Class 'app\v1\service\keywordsservice' not found[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\api\controller\Index.php:109]
+---------------------------------------------------------------
+[ 2020-01-06T20:48:00+08:00 ] 127.0.0.1 POST /api/index/getkeywordlist
+[ error ] [8]Undefined property: think\db\Query::$select[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Keywordsservice.php:159]

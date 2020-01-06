@@ -680,4 +680,37 @@ class Workservice
         return $return_data;
     }
 
+
+    /**
+     *获取新闻列表
+     * @title 搜索关键字
+     * @page 当前页
+     * @size 每页显示条数
+     */
+     public function getworklist($title,$page,$size){
+          if(empty($title) || isset($title) || is_null($title)){
+              $w = ['status'=>1,];
+          }else {
+              $w = ['status'=>1, 'keyword|title|desc'=>['like','%'.$title.'%'],];
+          }
+
+          if(empty($page)||is_null($page) || $page <= 1 || !isset($page)){
+              $page =0;
+          }
+
+          $page = ($page -1) * $size;
+
+          if(empty($size) || !isset($size) || $page = 0){
+              $size = 10;
+          }
+
+         $list = Work::instance()->where($w)
+                 ->filed('id,title,keywords,desc,imgs,sort,create_time')
+                 ->order('sort desc ,create_time desc')
+                 ->limit($page,$size)
+                 ->select();
+
+          return $list?$list:'';
+     }
+
 }

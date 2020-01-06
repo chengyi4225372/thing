@@ -74,7 +74,6 @@ class Exampleservice
           $w = ['id'=>$id,'status'=>1];
 
           $ret = Example::instance()->where($w)->find();
-
           return  $ret?$ret:'';
       }
 
@@ -144,4 +143,46 @@ class Exampleservice
                return false;
            }
       }
+
+      /**
+       * 获取客户案例列表接口
+       * @page
+       * @size
+       */
+       public function getcustmoerlist($page,$size){
+            if(empty($page) || $page <=1 || is_null($page) || !isset($page)){
+                $page =0;
+            }else {
+                $page = ($page -1) * $size;
+            }
+            if(empty($size)||!isset($size)|| is_null($size)){
+                $size = 10;
+            }
+
+            $w = ['status'=>1];
+            $list = Example::instance()->where($w)
+                    ->field('id,sort,title,describes,imgs,content')
+                    ->order('sort desc,create_time desc')
+                    ->limit($page,$size)
+                    ->select();
+
+            return $list?$list:'';
+       }
+
+       /**
+        * 获取客户案例详情接口
+        * @id
+        */
+        public function getcustmoerbyid($id){
+            if(empty($id) || !isset($id) || is_null($id) || $id<= 0){
+                return false;
+            }
+
+            $w = ['id'=>$id,'status'=>1];
+
+            $ret = Example::instance()->where($w)
+                   ->field('id,sort,title,imgs,describes,content')
+                   ->find();
+            return  $ret?$ret:'';
+        }
 }
