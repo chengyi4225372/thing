@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"/opt/web/thing/public/../application/v1/view/work/works/edit.html";i:1577237458;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575958789;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1577234997;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"/opt/web/thing/public/../application/v1/view/work/works/edit.html";i:1578293730;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575958789;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1577234997;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -102,9 +102,17 @@
 
                 <div class="form-group">
                     <label for="username" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻重点描述：</label>
+                        <span class="red-color">*</span>新闻SEO重点描述：</label>
                     <div class="col-sm-9">
                         <textarea  id="desc" class="form-control form-control-sm"  rows="5" ><?php echo $info['desc']; ?></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>新闻SEO关键字：</label>
+                    <div class="col-sm-9">
+                        <input class="form-control form-control-sm" type="text" name="seo_key" id="seo_key" value="<?php echo $info['seo_key']; ?>">
                     </div>
                 </div>
 

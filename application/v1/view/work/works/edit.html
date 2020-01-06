@@ -52,9 +52,17 @@
 
                 <div class="form-group">
                     <label for="username" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻重点描述：</label>
+                        <span class="red-color">*</span>新闻SEO重点描述：</label>
                     <div class="col-sm-9">
                         <textarea  id="desc" class="form-control form-control-sm"  rows="5" >{$info.desc}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>新闻SEO关键字：</label>
+                    <div class="col-sm-9">
+                        <input class="form-control form-control-sm" type="text" name="seo_key" id="seo_key" value="{$info.seo_key}">
                     </div>
                 </div>
 

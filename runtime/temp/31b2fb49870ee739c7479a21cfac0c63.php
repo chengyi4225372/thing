@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:64:"/opt/web/thing/public/../application/v1/view/work/works/add.html";i:1575019198;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575010824;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1573636141;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1573636141;}*/ ?>
-<!DOCTYPE>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:64:"/opt/web/thing/public/../application/v1/view/work/works/add.html";i:1578292908;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575958789;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1577234997;}*/ ?>
+<!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
     <!-- 加载样式及META信息 -->
@@ -54,6 +54,9 @@
     .dialog-content{margin:20px;}
     .dialog-footer{right:39%;top:82%;margin-left:30%;}
     .red-color{color:red;}
+     /* 修改原有下拉框*/
+     .bootstrap-select .btn {max-width: 550px;}
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {width: 550px;}
 </style>
 <div class="dialog-content">
     <form class="form-horizontal dialog-form" id="form">
@@ -63,20 +66,71 @@
                 <div class="form-group">
                     <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>新闻展示图：</label>
                     <div class="col-sm-9">
-                        <input type="file"  onchange="upload_files(this)" data-url="<?php echo url('/v1/work/works/uploadImgs'); ?>" style="display:none;" class="form-control form-control-sm" id="file">
+                        <input type="file"  onchange="upload_files(this)" style="display:none;" data-url="<?php echo url('/v1/work/works/uploadImgs'); ?>" class="form-control form-control-sm" id="file">
                         <img id="imgs" src="/static/default.png" style="width:90px;height:80px;">
                         <input type="hidden" id="Images" value="">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="title" class="col-sm-3 control-label">
+                    <label for="username" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻标题：</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control form-control-sm" id="title">
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="sort" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>新闻排序：</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control form-control-sm" id="sort">
+                    </div>
+                </div>
+
+                <!--
+                <div class="form-group">
+                    <label for="keyword" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>新闻关键字：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="keyword">
+                    </div>
+                </div>
+                -->
+
+                <div class="form-group">
+                    <label for="keywords" class="col-sm-3 control-label">新闻关键字列表：</label>
+                    <div class="col-sm-9" >
+                        <select id="keyword" class="selectpicker" multiple  title="请选择..." >
+                            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ko): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $ko['title']; ?>" data-width="100%"><?php echo $ko['title']; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>新闻SEO重点描述：</label>
+                    <div class="col-sm-9">
+                        <textarea  id="desc" class="form-control form-control-sm"  rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>新闻SEO关键字：</label>
+                    <div class="col-sm-9">
+                        <input class="form-control form-control-sm" type="text" name="seo_key" id="seo_key" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="content" class="col-sm-3 control-label">新闻详情：</label>
+                    <div class="col-sm-9">
+                        <script id="content" name="content" type="text/plain"></script>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -133,6 +187,8 @@
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
 <script src="/static/assets/dist/js/works.js"></script>
+<script src="/static/assets/dist/js/example.js"></script>
+<script src="/static/assets/dist/js/keys.js"></script>
 <script>
     admin_module.changepas();
 </script>
