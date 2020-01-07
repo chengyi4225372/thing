@@ -181,7 +181,7 @@ class Exampleservice
             $w = ['id'=>$id,'status'=>1];
 
             $ret = Example::instance()->where($w)
-                   ->field('id,sort,title,imgs,describes,content')
+                   ->field('id,sort,title,imgs,describes,content,seokey')
                    ->find();
             return  $ret?$ret:'';
         }

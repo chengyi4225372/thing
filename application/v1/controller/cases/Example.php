@@ -43,6 +43,7 @@ class Example extends AuthController
           $data['describes']  = input('post.describes','','trim');
           $data['imgs']  = input('post.imgs','','trim');
           $data['content']  = input('post.content','','trim');
+          $data['seokey']  = input('post.seokey','','trim');
           $data['create_time'] = time();
           $data['addUser'] = Cookie('username');
           if(empty($data) && !is_array($data)){
@@ -86,6 +87,7 @@ class Example extends AuthController
           $data['describes']  = input('post.describes','','trim');
           $data['imgs']  = input('post.imgs','','trim');
           $data['content']  = input('post.content','','trim');
+          $data['seokey']  = input('post.seokey','','trim');
           $data['create_time'] = time();
           $data['addUser'] = Cookie('username');
           $id = input('post.id','','int');

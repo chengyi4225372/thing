@@ -47,6 +47,7 @@ $('.example_add').click(function(){
    var imgs  = $('#Images').val();
    var sort  = $('#sort').val();
    var describes = $('#describes').val();
+   var seokey    = $('#seokey').val();
    var content  = ue.getContent();
    var urls = $(this).attr('data-url');
 
@@ -60,6 +61,11 @@ $('.example_add').click(function(){
        return false;
    }
 
+   if(seokey == '' || seokey == undefined){
+       layer.msg('请输入新闻关键字');
+       return false;
+   }
+
    if(describes == '' || describes == undefined){
        layer.msg('请输入文章简介');
        return false;
@@ -70,7 +76,7 @@ $('.example_add').click(function(){
        return false;
    }
 
-   $.post(urls,{'title':title,'imgs':imgs,'sort':sort,'describes':describes,'content':content},function(ret){
+   $.post(urls,{'title':title,'imgs':imgs,'sort':sort,'describes':describes,'content':content,'seokey':seokey},function(ret){
        if(ret.code == 200){
            layer.msg(ret.msg,{icon:6},function(){
                parent.location.reload();
@@ -111,8 +117,10 @@ $('.example_edit_add').click(function(){
     var imgs  = $('#Images').val();
     var sort  = $('#sort').val();
     var describes = $('#describes').val();
+    var seokey    = $('#seokey').val();
     var content  = ue.getContent();
     var id  = $('#mid').val();
+
     var urls = $(this).attr('data-url');
 
     if(title =='' || title == undefined){
@@ -122,6 +130,11 @@ $('.example_edit_add').click(function(){
 
     if(imgs == '' || imgs == undefined){
         layer.msg('请上传图片');
+        return false;
+    }
+
+    if(seokey == '' || seokey == undefined){
+        layer.msg('请输入新闻关键字');
         return false;
     }
 
@@ -135,7 +148,7 @@ $('.example_edit_add').click(function(){
         return false;
     }
 
-    $.post(urls,{'id':id,'title':title,'sort':sort,'describes':describes,'imgs':imgs,'content':content},function(ret){
+    $.post(urls,{'id':id,'title':title,'sort':sort,'describes':describes,'imgs':imgs,'content':content,'seokey':seokey},function(ret){
           if(ret.code == 200){
                 layer.msg(ret.msg,{icon:6},function(){
                     parent.location.reload();

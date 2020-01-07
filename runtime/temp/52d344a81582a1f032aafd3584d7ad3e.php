@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\cases\example\edit.html";i:1576477884;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\dialog.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1576463434;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/v1\view\cases\example\edit.html";i:1578399670;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\layout\dialog.html";i:1576227854;s:95:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\meta.html";i:1572405618;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\view\common\script.html";i:1577156400;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -83,6 +83,13 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label">seo关键字：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="seokey"  value="<?php echo (isset($info['seokey']) && ($info['seokey'] !== '')?$info['seokey']:''); ?>" />
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="contents" class="col-sm-3 control-label">新闻简介：</label>
                     <div class="col-sm-9">
                         <textarea  id="describes" class="form-control form-control-sm"  rows="5">
@@ -158,6 +165,7 @@
 <script src="/static/assets/dist/js/partners.js"></script>
 <script src="/static/assets/dist/js/works.js"></script>
 <script src="/static/assets/dist/js/example.js"></script>
+<script src="/static/assets/dist/js/keys.js"></script>
 <script>
     admin_module.changepas();
 </script>
