@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1577069759;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:102:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\leftIndex.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577069294;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1577434481;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:102:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\leftIndex.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577175962;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,13 +35,12 @@
       <div class="w nav-container clearfix">
         <!-- logo图 -->
         <div class="logo">
-    <h1>
-        <a href="<?php echo url('/home/index/index'); ?>">
-            <img src="/static/spirit/images/logo2xxxx.png">
-        </a>
-
-    </h1>
-</div>
+          <h1>
+            <a href="<?php echo url('/home/index/index'); ?>">
+              <img src="/static/spirit/images/logo2xxx.png">
+            </a>
+          </h1>
+        </div>
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
@@ -65,8 +64,8 @@
 
 
 
-         <!--登陆注册-->
-      <?php if(empty($userinfo['mobile'])): ?>
+        <!--登陆注册-->
+        <?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
             登录
@@ -490,21 +489,22 @@
 </div>
 
     <!-- 弹窗 -->
-    
-<div class="pop-up-box" id="popbox">
+    <div class="pop-up-box" id="popbox">
     <div class="form">
         <div class="form-titile">
             <p>方案咨询</p>
             <span class="turnoff" onclick="turnoff()"></span>
         </div>
         <div class="form-content">
-            <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
-            <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+            <div>
+                <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                </div>
+                <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                <input type='hidden' id='sources' value='惠灵工'>
+                <input type='hidden' id='identifications' value='灵活用工'>
+                <div class="form-btn" onclick="form_btn()">获取方案</div>
             </div>
-            <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
-            <input type='hidden' id='sources' value='惠灵工'>
-            <input type='hidden' id='identifications' value='灵活用工'>
-            <div class="form-btn" onclick="form_btn()">获取方案</div>
         </div>
         <!-- 提交成果后弹窗 -->
         <div class="mask-box2">

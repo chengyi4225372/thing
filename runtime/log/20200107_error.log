@@ -1,0 +1,6 @@
+---------------------------------------------------------------
+[ 2020-01-07T10:59:05+08:00 ] 127.0.0.1 GET /api/index/customerlist
+[ error ] [0]variable type error： boolean[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\Response.php:316]
+---------------------------------------------------------------
+[ 2020-01-07T14:13:31+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id.keyword' in 'field list'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Connection.php:390]

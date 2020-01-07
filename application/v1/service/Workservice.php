@@ -713,4 +713,81 @@ class Workservice
           return $list?$list:'';
      }
 
+
+     /**
+      * 获取新闻详情
+      * @id string
+      */
+      public function getidbyinfo($id){
+          if(empty($id) || !isset($id)||is_null($id) || $id <=0){
+              return false;
+          }
+          $w = ['status'=>1,'id'=>$id];
+          $info = Work::instance()->where($w)->field('id,keyword,title,desc,sort,imgs,content,create_time,seo_key')->find();
+          return $info?$info:'';
+      }
+
+      /***
+       * 上一篇接口
+       * @id string|int
+       */
+      public function gettopapi($id){
+          if (empty($id) || !isset($id)) {
+              return false;
+          }
+          $w = [
+              'id' =>$id,
+              'status' => 1
+          ];
+
+          $top = Work::instance()->where($w)->field('sort')->order('sort desc ,create_time asc')->find();
+
+          $where = [
+              'status'=>1,
+              'sort'=>['GT',$top['sort']],
+          ];
+
+          $info = Work::instance()
+                  ->where($where)
+                  ->field('id,sort,title')
+                  ->order('sort asc ,create_time asc')->find();
+
+          if (empty($info)) {
+              return $info = '';
+          } else {
+              return $info;
+          }
+      }
+
+      /**
+       * 下一篇接口
+       * @id string|int
+       */
+       public function getnextapi($id){
+           if (empty($id) || !isset($id)) {
+               return false;
+           }
+
+           $w = [
+               'id' =>$id,
+               'status' =>1,
+           ];
+
+           $next = Work::instance()->where($w)->field('sort')->order('sort desc ,create_time asc')->find();
+           $where = [
+               'status'=>1,
+               'sort'=>['LT',$next['sort']],
+           ];
+
+           $info = Work::instance()
+                   ->where($where)
+                   ->field('id,sort,title')
+                   ->order('sort desc,create_time desc')->find();
+
+           if (empty($info) || !isset($info)) {
+               return $info = '';
+           } else {
+               return $info;
+           }
+       }
 }
