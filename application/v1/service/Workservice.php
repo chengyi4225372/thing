@@ -753,7 +753,7 @@ class Workservice
                   ->order('sort asc ,create_time asc')->find();
 
           if (empty($info)) {
-              return $info = '';
+              return $info = '这是第一篇了!';
           } else {
               return $info;
           }
@@ -785,7 +785,7 @@ class Workservice
                    ->order('sort desc,create_time desc')->find();
 
            if (empty($info) || !isset($info)) {
-               return $info = '';
+               return $info = '这是最后一篇了!';
            } else {
                return $info;
            }
