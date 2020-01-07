@@ -29,7 +29,7 @@ class Apis extends Controller{
              $this->check_token($header['authorization']);//接收token
              //todo  上线需要修改为Authorization
          }else{
-           die();
+             exit();
          }
      }
 
