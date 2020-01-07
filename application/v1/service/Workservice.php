@@ -689,7 +689,7 @@ class Workservice
      */
      public function getworklist($title,$page,$size){
           if(empty($title) || isset($title) || is_null($title)){
-              $w = ['status'=>1,];
+              $w = ['status'=>1];
           }else {
               $w = ['status'=>1, 'keyword|title|desc'=>['like','%'.$title.'%'],];
           }

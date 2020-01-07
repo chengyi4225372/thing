@@ -10,7 +10,6 @@ use app\v1\service\Keywordsservice;
 
 class Index extends Apis{
 
-
     /**
      * 客户案例
      * 测试
@@ -22,11 +21,11 @@ class Index extends Apis{
             $list = Exampleservice::instance()->getcustmoerlist($page,$size);
 
             if(!empty($list) || isset($list)){
-                $this->jsonMsg(2000,'success',$list);
+                $this->jsonMsg(200,'success',$list);
             }
 
             if(empty($list) || !isset($list)){
-                $this->jsonMsg(4000,'数据为空！');
+                $this->jsonMsg(400,'数据为空！');
             }
         }
         return false;
@@ -39,17 +38,18 @@ class Index extends Apis{
     public function customergetinfo(){
          if($this->request->isPost()){
              $id = input('post.id','','int');
+
              if(empty($id) || !isset($id) || is_null($id)||$id <=0){
-               $this->jsonMsg(4003,'数据请求不合法');
+               $this->jsonMsg(403,'数据请求不合法');
              }
 
              $info = Exampleservice::instance()->getcustmoerbyid($id);
 
              if(empty($info) || !isset($info)){
-                 $this->jsonMsg(['code'=>4000,'msg'=>'请求数据为空','data'=>null]);
+                 $this->jsonMsg(['code'=>400,'msg'=>'请求数据为空','data'=>null]);
              }
 
-             $this->jsonMsg(2000,'success',$info);
+             $this->jsonMsg(200,'success',$info);
          }
          return false;
     }
@@ -69,9 +69,9 @@ class Index extends Apis{
              $list = Workservice::instance()->getworklist($title,$page,$size);
 
              if(empty($list) || !isset($list)){
-                 $this->jsonMsg(4000,'请求数据为空');
+                 $this->jsonMsg(400,'请求数据为空');
              }
-            $this->jsonMsg(2000,'success',$list);
+            $this->jsonMsg(200,'success',$list);
 
         }
         return false;
@@ -83,7 +83,7 @@ class Index extends Apis{
            $id = input('post.id','','int');
 
            if(empty($id) || !isset($id) || is_null($id) || $id <= 0){
-               $this->jsonMsg(4003,'数据类型不合法！');
+               $this->jsonMsg(403,'数据类型不合法！');
            }
            $info = Workservice::instance()->getidbyinfo($id);
 
@@ -92,10 +92,10 @@ class Index extends Apis{
            $info['next'] = Workservice::instance()->getnextapi($id);//下一篇
 
            if(empty($info) || !isset($info)){
-               $this->jsonMsg(4000,'数据为空');
+               $this->jsonMsg(400,'数据为空');
            }
 
-           $this->jsonMsg(2000,'success',$info);
+           $this->jsonMsg(200,'success',$info);
         }
         return false;
     }
@@ -108,10 +108,10 @@ class Index extends Apis{
              $list = keywordsservice::instance()->getkeywordlist();
 
              if(empty($list) || !isset($list)){
-                 $this->jsonMsg(4000,'请求数据为空');
+                 $this->jsonMsg(400,'请求数据为空');
              }
 
-            $this->jsonMsg(2000,'success',$list);
+            $this->jsonMsg(200,'success',$list);
         }
 
         return false;

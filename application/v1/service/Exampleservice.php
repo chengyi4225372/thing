@@ -161,7 +161,7 @@ class Exampleservice
 
             $w = ['status'=>1];
             $list = Example::instance()->where($w)
-                    ->field('id,sort,title,describes,imgs,content')
+                    ->field('id,sort,title,describes,imgs')
                     ->order('sort desc,create_time desc')
                     ->limit($page,$size)
                     ->select();

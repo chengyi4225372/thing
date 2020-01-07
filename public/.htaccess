@@ -5,4 +5,6 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
+  # window 需要添加下面代码
+ SetEnvIf Authorization ^(.*) HTTP_AUTHORIZATION=$1
 </IfModule>

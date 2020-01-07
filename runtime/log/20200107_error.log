@@ -4,3 +4,12 @@
 ---------------------------------------------------------------
 [ 2020-01-07T14:13:31+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
 [ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id.keyword' in 'field list'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2020-01-07T18:16:50+08:00 ] 127.0.0.1 POST /api/index/customerlist
+[ error ] [0]语法解析错误: syntax error, unexpected '}'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\api\controller\Apis.php:30]
+---------------------------------------------------------------
+[ 2020-01-07T18:36:06+08:00 ] 127.0.0.1 POST /api/index/customerlist
+[ error ] [2]Missing argument 1 for dump(), called in C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\api\controller\Apis.php on line 26 and defined[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\helper.php:265]
+---------------------------------------------------------------
+[ 2020-01-07T18:42:16+08:00 ] 127.0.0.1 POST /api/index/customerlist
+[ error ] [8]未定义数组索引: Authorization[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\api\controller\Apis.php:27]
