@@ -165,6 +165,13 @@ class Exampleservice
                     ->order('sort desc,create_time desc')
                     ->limit($page,$size)
                     ->select();
+            if(empty($list) || !isset($list)){
+                return '';
+            }
+
+            foreach ($list as $key =>$val){
+                $list[$key]['imgs'] = $_SERVER['SERVER_NAME'].$val['imgs'];
+            }
 
             return $list?$list:'';
        }
@@ -181,8 +188,10 @@ class Exampleservice
             $w = ['id'=>$id,'status'=>1];
 
             $ret = Example::instance()->where($w)
-                   ->field('id,sort,title,imgs,describes,content,seokey')
+                   ->field('id,sort,title,imgs,describes,content,seokey,create_time as time')
                    ->find();
+            $ret['imgs'] = $_SERVER['SERVER_NAME'].$ret['imgs'];
+            $ret['time'] = date('Y-m-d,H:i:s',$ret['time']);
             return  $ret?$ret:'';
         }
 }
