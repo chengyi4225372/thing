@@ -688,11 +688,12 @@ class Workservice
      * @size 每页显示条数
      */
      public function getworklist($title,$page,$size){
-          if(empty($title) || isset($title) || is_null($title)){
+          if(empty($title) || !isset($title) || is_null($title)){
               $w = ['status'=>1];
           }else {
               $w = ['status'=>1, 'keyword|title|desc'=>['like','%'.$title.'%'],];
           }
+
 
           if(empty($page)||is_null($page) || $page <= 1 || !isset($page)){
               $page =0;
@@ -705,7 +706,7 @@ class Workservice
           }
 
          $list = Work::instance()->where($w)
-                 ->filed('id,title,keywords,desc,imgs,sort,create_time')
+                 ->field('id,title,keyword,desc,imgs,sort,create_time')
                  ->order('sort desc ,create_time desc')
                  ->limit($page,$size)
                  ->select();

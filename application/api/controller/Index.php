@@ -62,17 +62,16 @@ class Index extends Apis{
      */
     public function newslist(){
         if($this->request->isPost()){
-             $title = input('post.title','','int');
+             $title = input('post.title','','trim');
              $page  = input('post.page','','int');
              $size  = input('post.size','','int');
-
+             
              $list = Workservice::instance()->getworklist($title,$page,$size);
 
              if(empty($list) || !isset($list)){
                  $this->jsonMsg(400,'请求数据为空');
              }
             $this->jsonMsg(200,'success',$list);
-
         }
         return false;
     }

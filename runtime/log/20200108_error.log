@@ -1,0 +1,27 @@
+---------------------------------------------------------------
+[ 2020-01-08T11:22:32+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2020-01-08T11:23:48+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2020-01-08T11:24:02+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2020-01-08T11:24:03+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2020-01-08T11:24:17+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2020-01-08T11:25:05+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2020-01-08T11:25:21+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2020-01-08T11:25:22+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2020-01-08T11:26:08+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]

@@ -26,8 +26,7 @@ class Apis extends Controller{
 
          if($this->request->isPost()){
              $header = $this->request->header('');
-             $this->check_token($header['authorization']);//接收token
-             //todo  上线需要修改为Authorization
+             $this->check_token($header['authorization']);//测试接收token
          }else{
              exit();
          }
