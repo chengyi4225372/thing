@@ -128,7 +128,7 @@ class Exampleservice
       * @id
       * @sort
       */
-      public function changeidsort($id,$sort){
+       public function changeidsort($id,$sort){
 
            if(empty($id) || !isset($id) || is_null($id) || $id <= 0){
                return false;
@@ -166,21 +166,21 @@ class Exampleservice
                     ->limit($page,$size)
                     ->select();
             if(empty($list) || !isset($list)){
-                return '';
+                return $list ='';
             }
 
             foreach ($list as $key =>$val){
                 $list[$key]['imgs'] = config('curl.hzs').$val['imgs'];
             }
 
-            return $list?$list:'';
+            return $list;
        }
 
        /**
         * 获取客户案例详情接口
         * @id
         */
-        public function getcustmoerbyid($id){
+       public function getcustmoerbyid($id){
             if(empty($id) || !isset($id) || is_null($id) || $id<= 0){
                 return false;
             }
@@ -191,8 +191,25 @@ class Exampleservice
                    ->field('id,sort,title,imgs,describes,content,seokey,create_time as time')
                    ->find();
 
+            if(empty($ret) || !isset($ret)){
+                return $ret ='';
+            }
+
             $ret['imgs'] = config('curl.hzs').$ret['imgs'];
             $ret['time'] = date('Y-m-d H:i:s',$ret['time']);
-            return  $ret?$ret:'';
+
+            $ret['content'] = htmlspecialchars_decode($ret['content']);//html实体转标签
+            preg_match_all('/(?<=img.src=").*?(?=")/', $ret['content'], $out, PREG_PATTERN_ORDER);      //正则匹配img标签的src属性，返回二维数组
+
+            if (!empty($out)) {
+                foreach ($out as $v) {
+                    foreach ($v as $j) {
+                        $url = config('curl.hzs').$j;
+                        $info['content'] = str_replace($j, $url, $ret['content']);   //替换相对路径为绝对路径
+                    }
+                }
+            }
+
+            return  $ret;
         }
 }

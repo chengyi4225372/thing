@@ -733,8 +733,27 @@ class Workservice
               return false;
           }
           $w = ['status'=>1,'id'=>$id];
-          $info = Work::instance()->where($w)->field('id,keyword,title,desc,sort,imgs,content,create_time,seo_key')->find();
-          return $info?$info:'';
+          $info = Work::instance()->where($w)->field('id,keyword,title,desc,sort,content,seo_key,create_time as time')->find();
+
+          if(empty($info) || !isset($info)){
+            return $info ='';
+          }
+
+          $info['time'] = date('Y-m-d H:i:s',$info['time']);
+
+          $info['content'] = htmlspecialchars_decode($info['content']);//html实体转标签
+          preg_match_all('/(?<=img.src=").*?(?=")/', $info['content'], $out, PREG_PATTERN_ORDER);      //正则匹配img标签的src属性，返回二维数组
+
+          if (!empty($out)) {
+              foreach ($out as $v) {
+                  foreach ($v as $j) {
+                      $url = config('curl.hzs').$j;
+                      $info['content'] = str_replace($j, $url, $info['content']);   //替换相对路径为绝对路径
+                  }
+              }
+          }
+
+          return $info;
       }
 
       /***

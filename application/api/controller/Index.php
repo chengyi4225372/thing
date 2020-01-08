@@ -49,18 +49,6 @@ class Index extends Apis{
                  $this->jsonMsg(['code'=>400,'msg'=>'请求数据为空','data'=>null]);
              }
 
-             $info['content'] = htmlspecialchars_decode($info['content']);//html实体转标签
-             preg_match_all('/(?<=img.src=").*?(?=")/', $info['content'], $out, PREG_PATTERN_ORDER);      //正则匹配img标签的src属性，返回二维数组
-
-             if (!empty($out)) {
-                 foreach ($out as $v) {
-                     foreach ($v as $j) {
-                         $url = config('curl.hzs').$j;
-                         $info['content'] = str_replace($j, $url, $info['content']);   //替换相对路径为绝对路径
-                     }
-                 }
-             }
-
              $this->jsonMsg(200,'success',$info);
          }
          return false;
@@ -96,6 +84,7 @@ class Index extends Apis{
            if(empty($id) || !isset($id) || is_null($id) || $id <= 0){
                $this->jsonMsg(403,'数据类型不合法！');
            }
+
            $info = Workservice::instance()->getidbyinfo($id);
 
            $info['top'] = Workservice::instance()->gettopapi($id);//上一篇

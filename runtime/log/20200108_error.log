@@ -25,3 +25,24 @@
 ---------------------------------------------------------------
 [ 2020-01-08T11:26:08+08:00 ] 192.168.56.1 POST /api/index/newslist
 [ error ] [0]method not exist:think\db\Query->filed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Query.php:96]
+---------------------------------------------------------------
+[ 2020-01-08T15:30:40+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
+[ error ] [2]Illegal string offset 'imgs'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:741]
+---------------------------------------------------------------
+[ 2020-01-08T15:33:25+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
+[ error ] [2]Illegal string offset 'time'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:742]
+---------------------------------------------------------------
+[ 2020-01-08T15:34:43+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
+[ error ] [2]Illegal string offset 'time'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:742]
+---------------------------------------------------------------
+[ 2020-01-08T15:35:48+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
+[ error ] [2]Illegal string offset 'time'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:742]
+---------------------------------------------------------------
+[ 2020-01-08T15:36:54+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
+[ error ] [2]Illegal string offset 'time'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:742]
+---------------------------------------------------------------
+[ 2020-01-08T15:37:59+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
+[ error ] [2]Illegal string offset 'create_time'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:742]
+---------------------------------------------------------------
+[ 2020-01-08T15:40:29+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:742]
