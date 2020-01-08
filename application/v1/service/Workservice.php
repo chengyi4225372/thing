@@ -706,12 +706,21 @@ class Workservice
           }
 
          $list = Work::instance()->where($w)
-                 ->field('id,title,keyword,desc,imgs,sort,create_time')
+                 ->field('id,title,keyword,desc,imgs,sort,create_time as time')
                  ->order('sort desc ,create_time desc')
                  ->limit($page,$size)
                  ->select();
 
-          return $list?$list:'';
+          if(empty($list) || !isset($list)){
+              $list = '';
+          }
+
+          foreach ($list as $key =>$val){
+              $list[$key]['imgs'] = config('curl.hzs').$list[$key]['imgs'];
+              $list[$key]['time'] = date('Y-m-d H:i:s',$list[$key]['time']);
+          }
+
+          return $list;
      }
 
 

@@ -170,7 +170,7 @@ class Exampleservice
             }
 
             foreach ($list as $key =>$val){
-                $list[$key]['imgs'] = $_SERVER['SERVER_NAME'].$val['imgs'];
+                $list[$key]['imgs'] = config('curl.hzs').$val['imgs'];
             }
 
             return $list?$list:'';
@@ -190,8 +190,9 @@ class Exampleservice
             $ret = Example::instance()->where($w)
                    ->field('id,sort,title,imgs,describes,content,seokey,create_time as time')
                    ->find();
-            $ret['imgs'] = $_SERVER['SERVER_NAME'].$ret['imgs'];
-            $ret['time'] = date('Y-m-d,H:i:s',$ret['time']);
+
+            $ret['imgs'] = config('curl.hzs').$ret['imgs'];
+            $ret['time'] = date('Y-m-d H:i:s',$ret['time']);
             return  $ret?$ret:'';
         }
 }
