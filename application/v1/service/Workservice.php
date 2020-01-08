@@ -819,4 +819,29 @@ class Workservice
                return $info;
            }
        }
+
+       /**
+        * 惠灵工首页行业资讯接口
+        * 最新的三条
+        */
+       public function getnewthree(){
+           $w = ['status'=>1];
+
+           $newlist =  Work::instance()->where($w)
+               ->field('id,title,keyword,desc,imgs,sort,create_time as time')
+               ->order('sort desc ,create_time desc')
+               ->limit(0,3)
+               ->select();
+
+           if(empty($newlist) || !isset($newlist)){
+               return $newlist ='';
+           }
+
+           foreach ($newlist as $key =>$val){
+               $newlist[$key]['imgs'] = config('curl.hzs').$newlist[$key]['imgs'];
+               $newlist[$key]['time'] = date('Y-m-d H:i:s',$newlist[$key]['time']);
+           }
+
+           return $newlist;
+       }
 }

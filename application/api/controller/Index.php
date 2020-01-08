@@ -116,4 +116,20 @@ class Index extends Apis{
 
         return false;
     }
+
+
+    /**
+     * 行业资讯最新的三条
+     */
+    public function hnewthree(){
+        if($this->request->isPost()){
+           $list = Workservice::instance()->getnewthree();
+
+           if(empty($list) || !isset($list)){
+               $this->jsonMsg(400,'数据为空');
+           }
+
+           $this->jsonMsg(200,'success',$list);
+        }
+    }
 }
