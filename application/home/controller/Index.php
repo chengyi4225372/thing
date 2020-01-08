@@ -52,7 +52,7 @@ class Index extends BaseController
 
         $this->assign('data', $data);
 
-        $this->assign('title', '惠灵工');
+        $this->assign('title', '企业灵活用工税务筹划服务平台-惠灵工');
 
         return $this->fetch();
     }
