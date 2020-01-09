@@ -55,11 +55,13 @@ class Apis extends Controller{
        * @code 状态码
        * @msg  提示信息
        * @data 返回数据
+       * @totalpage 总页数
        */
-      public function jsonMsg($code,$msg='',$data=''){
+      public function jsonMsg($code,$msg='',$data='',$totalpage=''){
             $datas['code'] =$code;
             $datas['msg']  =$msg;
             $datas['data'] =$data;
+            $datas['totalpage'] =$totalpage;
 
             echo  json_encode($datas);
             exit();

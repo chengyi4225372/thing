@@ -680,7 +680,6 @@ class Workservice
         return $return_data;
     }
 
-
     /**
      *获取新闻列表
      * @title 搜索关键字
@@ -691,17 +690,29 @@ class Workservice
           if(empty($title) || !isset($title) || is_null($title)){
               $w = ['status'=>1];
           }else {
-              $w = ['status'=>1, 'keyword|title|desc'=>['like','%'.$title.'%'],];
+              $new_title = explode(',',$title);
+              $arr_title = array_filter($new_title,function ($params){
+                  return !empty($params);
+              });
+
+              $arr_w = array_map(function ($pa){
+                  return '%'.$pa.'%';
+              },$arr_title);
+
+              $w = [
+                   'status'=>1,
+                   'title|desc|keyword'=>['like',$arr_w,'OR'],
+                  ];
           }
 
 
           if(empty($page)||is_null($page) || $page <= 1 || !isset($page)){
               $page =0;
+          }else{
+              $page = ($page -1) * $size;
           }
 
-          $page = ($page -1) * $size;
-
-          if(empty($size) || !isset($size) || $page = 0){
+          if(empty($size) || !isset($size) || $size == 0){
               $size = 10;
           }
 
@@ -718,11 +729,50 @@ class Workservice
           foreach ($list as $key =>$val){
               $list[$key]['imgs'] = config('curl.hzs').$list[$key]['imgs'];
               $list[$key]['time'] = date('Y-m-d H:i:s',$list[$key]['time']);
+              $list[$key]['keyword']= explode(',', $list[$key]['keyword']);
           }
 
           return $list;
      }
 
+    /**
+     * 获取新闻列表总页数
+     * @title 搜索关键字
+     * @size  每页显示条数
+     */
+      public function getnewslistcount($title,$size){
+          if(empty($title) || !isset($title) || is_null($title)){
+              $w = ['status'=>1];
+          }else {
+              $new_title = explode(',',$title);
+              $arr_title = array_filter($new_title,function ($params){
+                  return !empty($params);
+              });
+
+              $arr_w = array_map(function ($pa){
+                  return '%'.$pa.'%';
+              },$arr_title);
+
+              $w = [
+                   'status'=>1,
+                   'title|desc|keyword'=>['like',$arr_w,'OR'],
+                  ];
+          }
+
+          if(empty($size) || is_null($size) || !isset($size)){
+              $size = 10;
+          }
+
+         $total =Work::instance()->where($w)->count();
+
+         if(empty($total) || is_null($total)){
+             return $count=1;
+         }
+
+         $count = ceil($total / $size);
+
+         return $count;
+      }
 
      /**
       * 获取新闻详情

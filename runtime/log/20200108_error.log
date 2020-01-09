@@ -46,3 +46,15 @@
 ---------------------------------------------------------------
 [ 2020-01-08T15:40:29+08:00 ] 192.168.56.1 POST /api/index/getnewsinfo
 [ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:742]
+---------------------------------------------------------------
+[ 2020-01-08T16:49:33+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [2]Missing argument 2 for app\v1\service\Workservice::getnewslistcount(), called in C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\api\controller\Index.php on line 72 and defined[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:731]
+---------------------------------------------------------------
+[ 2020-01-08T17:21:18+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [2]implode(): Invalid arguments passed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Workservice.php:693]
+---------------------------------------------------------------
+[ 2020-01-08T19:36:36+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-8' at line 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2020-01-08T19:37:03+08:00 ] 192.168.56.1 POST /api/index/newslist
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-8,8' at line 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\thinkphp\library\think\db\Connection.php:390]

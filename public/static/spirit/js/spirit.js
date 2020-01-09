@@ -180,7 +180,6 @@ function form_btn() {
     });
 };
 
-
 //分页
 function getMore(keyword, i, objthis) {
     var urls = $(objthis).attr('data-url');
@@ -193,7 +192,7 @@ function getMore(keyword, i, objthis) {
                 $.each(ret.data, function (i, item) {
                     html+="<li><a href="+hrefs+'?mid='+item.id+">";
                          html+= "<div class='tabs-items-img'>";
-                         html+= "<img src="+item.imgs+" ></div>";
+                         html+= "<img src="+trims(item.imgs)+" ></div>";
                          html+= "<div class='tabs-items-content'>";
                          html+= "<div class='tabs-items-content-title figcaption'>";
                          html+= "<p>"+item.title+"</p>";
@@ -223,6 +222,10 @@ function getMore(keyword, i, objthis) {
 
 }
 
+//替换图片空格
+function trims(str){
+    return str.replace(/\s/g,'%20');
+}
 
 //根据关键字搜索
 var title = []; //需要搜索关键字
@@ -233,12 +236,14 @@ function hotsearch(obj){
     var index = $.inArray(key,title);
    
     if(index >=0){
-         title.pop(title); //移除并且返回新数组
+         title.push(key);
+         title.pop(key); //移除并且返回新数组
+     }else {
+        title.push(key); //往数组中添加
      }
 
-    title.push(key); //往数组中添加
-    
-    
+
+
     console.log(title);
     var urls = $(obj).attr('data-url'); //ajax请求地址
     var hrefs= $(obj).attr('data-href');//详情页地址
@@ -251,7 +256,7 @@ function hotsearch(obj){
                     $.each(ret.data, function (i, item) {
                          html+="<li><a href="+hrefs+'?mid='+item.id+">";
                          html+= "<div class='tabs-items-img'>";
-                         html+= "<img src="+item.imgs+" ></div>";
+                         html+= "<img src="+trims(item.imgs)+" ></div>";
                          html+= "<div class='tabs-items-content'>";
                          html+= "<div class='tabs-items-content-title figcaption'>";
                          html+= "<p>"+item.title+"</p>";
@@ -267,7 +272,6 @@ function hotsearch(obj){
                     
                          html+="</div></div></a></li>";
                     });
-                    console.log(html);
                     $('#content').append(html).html();
                     $('#page').val('1');
                }else {
@@ -299,13 +303,11 @@ function nullhot(obj){
     var keys = $(obj).attr('data-title');//获取当前搜索的关键字
      
     //判断当前数组中是否已经存在
-    var index = $.inArray(keys,title);
+    var index1 = $.inArray(keys,title);
    
-    if(index >=0){
-         title.pop(title); //移除并且返回新数组
+    if(index1 >=0){
+         title.splice(index1,1); //移除并且返回新数组
      }
-
-    title.pop(keys); //往数组中移除
     
     console.log(title);
     var urls = $(obj).attr('data-url'); //ajax请求地址
@@ -319,7 +321,7 @@ function nullhot(obj){
                  $.each(ret.data, function (i, item) {
                       html+="<li><a href="+hrefs+'?mid='+item.id+">";
                       html+= "<div class='tabs-items-img'>";
-                      html+= "<img src="+item.imgs+" ></div>";
+                      html+= "<img src="+trims(item.imgs)+" ></div>";
                       html+= "<div class='tabs-items-content'>";
                       html+= "<div class='tabs-items-content-title figcaption'>";
                       html+= "<p>"+item.title+"</p>";
@@ -335,7 +337,6 @@ function nullhot(obj){
                  
                       html+="</div></div></a></li>";
                  });
-                 console.log(html);
                  $('#content').append(html).html();
                  $('#page').val('1');
             }else {

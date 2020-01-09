@@ -66,12 +66,16 @@ class Index extends Apis{
              $page  = input('post.page','','int');
              $size  = input('post.size','','int');
 
-             $list = Workservice::instance()->getworklist($title,$page,$size);
+
+             $list  = Workservice::instance()->getworklist($title,$page,$size);
+             //总页数
+             $count = Workservice::instance()->getnewslistcount($title,$size);
 
              if(empty($list) || !isset($list)){
                  $this->jsonMsg(400,'请求数据为空');
              }
-            $this->jsonMsg(200,'success',$list);
+
+            $this->jsonMsg(200,'success',$list,$count);
         }
         return false;
     }
@@ -116,7 +120,6 @@ class Index extends Apis{
 
         return false;
     }
-
 
     /**
      * 行业资讯最新的三条

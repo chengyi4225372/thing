@@ -108,7 +108,7 @@
                   <span onclick="hotsearch(this)" data-url="{:url('home/index/getinfoapi')}" data-href="{:url('/home/index/detail')}" 
                    data-title='{$kwords.title}'>{$kwords.title}</span>
                   <span class="close" onclick='nullhot(this)' data-href="{:url('/home/index/detail')}"
-                   data-url="{:url('home/index/getinfoapi')}">✕</span>
+                        data-title='{$kwords.title}' data-url="{:url('home/index/getinfoapi')}">✕</span>
                 </li>
                 {/volist}
               </ul>
