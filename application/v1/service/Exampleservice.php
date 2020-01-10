@@ -198,18 +198,12 @@ class Exampleservice
             $ret['imgs'] = config('curl.hzs').$ret['imgs'];
             $ret['time'] = date('Y-m-d H:i:s',$ret['time']);
 
-            $ret['content'] = htmlspecialchars_decode($ret['content']);//html实体转标签
-            preg_match_all('/(?<=img.src=").*?(?=")/', $ret['content'], $out, PREG_PATTERN_ORDER);      //正则匹配img标签的src属性，返回二维数组
+           // $ret['content'] = htmlspecialchars_decode($ret['content']);//html实体转标签
+            $url = config('curl.hzs');
+            $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
+            $info['content'] = preg_replace($pregRule, '<img src="' . $url . '${1}">', $info['content']);
 
-            if (!empty($out)) {
-                foreach ($out as $v) {
-                    foreach ($v as $j) {
-                        $url = config('curl.hzs').$j;
-                        $info['content'] = str_replace($j, $url, $ret['content']);   //替换相对路径为绝对路径
-                    }
-                }
-            }
 
-            return  $ret;
+           return  $ret;
         }
 }

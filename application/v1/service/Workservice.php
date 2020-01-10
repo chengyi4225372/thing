@@ -789,19 +789,12 @@ class Workservice
             return $info ='';
           }
 
+
+
           $info['time'] = date('Y-m-d H:i:s',$info['time']);
-
-          $info['content'] = htmlspecialchars_decode($info['content']);//html实体转标签
-          preg_match_all('/(?<=img.src=").*?(?=")/', $info['content'], $out, PREG_PATTERN_ORDER);      //正则匹配img标签的src属性，返回二维数组
-
-          if (!empty($out)) {
-              foreach ($out as $v) {
-                  foreach ($v as $j) {
-                      $url = config('curl.hzs').$j;
-                      $info['content'] = str_replace($j, $url, $info['content']);   //替换相对路径为绝对路径
-                  }
-              }
-          }
+          $url = config('curl.hzs');
+          $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
+          $info['content'] = preg_replace($pregRule, '<img src="' . $url . '${1}">', $info['content']);
 
           return $info;
       }
