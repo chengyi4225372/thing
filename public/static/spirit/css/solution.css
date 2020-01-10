@@ -76,9 +76,10 @@ html {
     }
 
     /* 头部占位 */
-    .header-box .header {
-        padding-top: 6.5rem !important;
-    }
+    /*.header-box .header {*/
+        /*padding-top: 6.5rem !important;*/
+
+    /*}*/
 
     .status-industry-wm-item-content p:nth-of-type(1) {
         margin-bottom: 1rem !important;
@@ -345,9 +346,9 @@ html {
     }
 
     /* 头部占位 */
-    .header-box .header {
-        padding-top: 7.5rem !important;
-    }
+    /*.header-box .header {*/
+        /*padding-top: 7.5rem !important;*/
+    /*}*/
 
     .status-industry-wm-item-content p:nth-of-type(1) {
         margin-bottom: 1rem !important;
@@ -416,7 +417,7 @@ a {
 
 .header-box .header {
     padding-left: 4rem;
-    padding-top: 8.5rem;
+    padding-top: 7.8rem;
     text-align: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

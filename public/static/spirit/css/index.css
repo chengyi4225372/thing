@@ -493,6 +493,7 @@ input:-webkit-autofill {
 
 /* 轮播图 */
 #swiper {
+    height: 40rem;
     margin-top: 5rem;
 }
 
