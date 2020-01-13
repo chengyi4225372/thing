@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1577433602;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577433319;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577173287;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:71:"C:\phpEnv\www\thing\public/../application/home\view\index\solution.html";i:1578910000;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1578910000;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578910000;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578910000;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1578910000;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578910000;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,7 +99,7 @@
         <!--</div>-->
         <!--<?php endif; ?>-->
         <!--登陆注册-->
-        <?php if(empty($userinfo['mobile'])): ?>
+        <!-- <?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
             登录
@@ -119,7 +119,7 @@
             location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
-<?php endif; ?>
+<?php endif; ?> -->
       </div>
 
     </div>
