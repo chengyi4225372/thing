@@ -788,9 +788,6 @@ class Workservice
           if(empty($info) || !isset($info)){
             return $info ='';
           }
-
-
-
           $info['time'] = date('Y-m-d H:i:s',$info['time']);
           $url = config('curl.hzs');
           $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";

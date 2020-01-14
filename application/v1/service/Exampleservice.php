@@ -188,7 +188,7 @@ class Exampleservice
             $w = ['id'=>$id,'status'=>1];
 
             $ret = Example::instance()->where($w)
-                   ->field('id,sort,title,imgs,describes,content,seokey,create_time as time')
+                   ->field('id,sort,title,describes,imgs,content,seokey,create_time as time')
                    ->find();
 
             if(empty($ret) || !isset($ret)){
@@ -198,12 +198,10 @@ class Exampleservice
             $ret['imgs'] = config('curl.hzs').$ret['imgs'];
             $ret['time'] = date('Y-m-d H:i:s',$ret['time']);
 
-           // $ret['content'] = htmlspecialchars_decode($ret['content']);//html实体转标签
             $url = config('curl.hzs');
             $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
-            $info['content'] = preg_replace($pregRule, '<img src="' . $url . '${1}">', $info['content']);
+            $ret['content'] = preg_replace($pregRule, '<img src="' . $url . '${1}">', $ret['content']);
 
-
-           return  $ret;
+            return  $ret;
         }
 }
