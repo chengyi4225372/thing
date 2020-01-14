@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577434022;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577434000;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577173287;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1578910000;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1578910000;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578910000;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578910000;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1578910000;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578910000;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -156,7 +156,7 @@
                   <span onclick="hotsearch(this)" data-url="<?php echo url('home/index/getinfoapi'); ?>" data-href="<?php echo url('/home/index/detail'); ?>" 
                    data-title='<?php echo $kwords['title']; ?>'><?php echo $kwords['title']; ?></span>
                   <span class="close" onclick='nullhot(this)' data-href="<?php echo url('/home/index/detail'); ?>"
-                   data-url="<?php echo url('home/index/getinfoapi'); ?>">✕</span>
+                        data-title='<?php echo $kwords['title']; ?>' data-url="<?php echo url('home/index/getinfoapi'); ?>">✕</span>
                 </li>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
               </ul>

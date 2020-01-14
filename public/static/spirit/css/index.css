@@ -796,7 +796,9 @@ input::-ms-input-placeholder {
     width: 32.25rem;
     height: 3.375rem;
     background: url('../images/ENVIRONMENT2x.png') no-repeat;
+    background-size: 100% 100%;
     margin: 6.6875rem auto;
+    box-sizing: border-box;
 }
 
 .difficulty .difficulty-title p {
@@ -892,6 +894,8 @@ input::-ms-input-placeholder {
     margin-bottom: 1.25rem;
     padding-top: 1.25rem;
     background: url('../images/fanganbeijing2x.png') no-repeat;
+    box-sizing: border-box;
+    background-size: 100% 100%;
     font-size: 2.625rem;
     font-family: "PingFang-SC", "syht";
     font-weight: 500;
@@ -1021,6 +1025,8 @@ input::-ms-input-placeholder {
     margin-bottom: 1.25rem;
     padding-top: 1.25rem;
     background: url('../images/liyoubeijing2x.png') no-repeat;
+    box-sizing: border-box;
+    background-size: 100% 100%;
     font-size: 2.625rem;
     font-family: "PingFang-SC", "syht";
     font-weight: 500;
@@ -1144,6 +1150,8 @@ input::-ms-input-placeholder {
     margin-bottom: 1.8125rem;
     padding-top: 1.25rem;
     background: url('../images/liuchengbeijing2x.png') no-repeat;
+    box-sizing: border-box;
+    background-size: 100% 100%;
     font-size: 2.625rem;
     font-family: "PingFang-SC", "syht";
     font-weight: 500;
@@ -1189,6 +1197,8 @@ input::-ms-input-placeholder {
     margin-bottom: 1.8125rem;
     padding-top: 1.25rem;
     background: url('../images/hangyezixun2x.png') no-repeat;
+    box-sizing: border-box;
+    background-size: 100% 100%;
     font-size: 2.625rem;
     font-family: "PingFang-SC", "syht";
     font-weight: 500;
