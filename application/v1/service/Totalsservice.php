@@ -36,7 +36,7 @@ class Totalsservice
      * @id
      */
      public function counts($id){
-         if(empty($id) || !isset($id) || id_null($id) || $id<=0){
+         if(empty($id) || !isset($id) || is_null($id) || $id<=0){
              return false;
          }
 
@@ -51,7 +51,7 @@ class Totalsservice
       * @id
       */
      public function humansetadd($id){
-         if(empty($id) || !isset($id) || id_null($id) || $id<=0){
+         if(empty($id) || !isset($id) || is_null($id) || $id<=0){
              return false;
          }
          //每次提交 增加的人数
@@ -65,6 +65,16 @@ class Totalsservice
              return false;
          }
 
+     }
+
+
+     /**
+      * 统计所有次数
+      *
+      */
+     public function countpeople(){
+         $counts = Totals::instance()->field('totals')->where('id',1)->find();
+         return $counts?$counts:0;
      }
 
 }
