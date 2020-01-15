@@ -803,7 +803,7 @@ class Workservice
               'status' => 1
           ];
 
-          $top = Work::instance()->where($w)->field('sort')->order('sort desc ,create_time asc')->find();
+          $top = Work::instance()->where($w)->field('sort')->find();
 
           $where = [
               'status'=>1,
@@ -813,7 +813,8 @@ class Workservice
           $info = Work::instance()
                   ->where($where)
                   ->field('id,sort,title')
-                  ->order('sort asc ,create_time asc')->find();
+                  ->order('sort asc ,create_time desc')
+                  ->find();
 
           if (empty($info)) {
               return $info = '这是第一篇了!';
@@ -836,7 +837,7 @@ class Workservice
                'status' =>1,
            ];
 
-           $next = Work::instance()->where($w)->field('sort')->order('sort desc ,create_time asc')->find();
+           $next = Work::instance()->where($w)->field('sort')->find();
            $where = [
                'status'=>1,
                'sort'=>['LT',$next['sort']],
