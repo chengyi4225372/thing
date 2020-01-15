@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="__SPI__/css/alert.css">
   <link rel="stylesheet" href="__SPI__/css/header_nav.css">
   <link rel="stylesheet" href="__SPI__/css/left.css">
+  <link rel="stylesheet" href="__SPI__/css/news.css">
   <script src="__SPI__/js/clamp.js"></script>
   <script src='__SPI__/js/Informationlist.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -160,10 +161,20 @@
               {/empty}
 
             </ul>
-            <input type="hidden" value="{$Think.get.keyword}" id="sid">
-            <input type="hidden" value="1" id="page">
-            <div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val(),this)"
-              data-href="{:url('/home/index/detail')}" data-url="{:url('/home/index/getpageInfo')}">查看更多</div>
+            <!--<input type="hidden" value="{$Think.get.keyword}" id="sid">-->
+            <!--<input type="hidden" value="1" id="page">-->
+            <!--<div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val(),this)"-->
+              <!--data-href="{:url('/home/index/detail')}" data-url="{:url('/home/index/getpageInfo')}">查看更多</div>-->
+            <!--分页-->
+
+          </div>
+          <div class="pageNation" style="background: #fff;">
+            <ul class="page">
+              <li class="prev">上一页</li>
+              <li class="currentPage">1</li>
+              <li>2</li>
+              <li class="next">下一页</li>
+            </ul>
           </div>
 
         </div>

@@ -1,0 +1,3 @@
+---------------------------------------------------------------
+[ 2020-01-15T16:02:47+08:00 ] 192.168.56.1 GET /home/index/informationlist.html
+[ error ] [0]致命错误: Call to undefined method think\Collection::render()[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\ffa9b840d055665e266a2b7355fb9b20.php:216]

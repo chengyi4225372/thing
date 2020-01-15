@@ -40,7 +40,7 @@ class Exampleservice
 
         }
 
-         $list = Example::instance()->where($w)->order(['sort'=>'desc','create_time'=>'desc'])->paginate(15);
+         $list = Example::instance()->where($w)->order(['sort'=>'desc','create_time'=>'desc'])->paginate(9);
 
          return $list?$list:'';
      }
