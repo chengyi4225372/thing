@@ -313,12 +313,12 @@ class Workservice
 
 
     /**
-     * 前台新闻列表 接口
+     * 前台新闻列表
      * title string
      * page  string | int
      * return array|null
      */
-    public function Getinfolist($title, $page)
+    public function Getinfolist($title)
     {
         if (empty($title) || !isset($title)) {
 
@@ -331,14 +331,8 @@ class Workservice
             ];
         }
 
-        $next = 10;
-        if (empty($page)) {
-            $page = 0;
-        } else {
-            $page = $next * $page;
-        }
 
-        $list = Work::instance()->where($where)->order('sort desc,create_time desc')->limit($page, $next)->select();
+        $list = Work::instance()->where($where)->order('sort desc,create_time desc')->paginate(10);
         
         foreach($list as $k =>$val){
             $list[$k]['keyword'] = explode(',',$list[$k]['keyword']); 

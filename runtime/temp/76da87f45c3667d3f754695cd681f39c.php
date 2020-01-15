@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\clientcase.html";i:1579073907;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577175962;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\clientcase.html";i:1579077689;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577175962;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -308,13 +308,13 @@
 
         <!--分页-->
         <div class="pageNation">
-            <!--<?php echo $list->render();; ?>-->
-            <ul class="page">
-                <li class="prev">上一页</li>
-                <li class="currentPage">1</li>
-                <li>2</li>
-                <li class="next">下一页</li>
-            </ul>
+            <?php echo $list->render();; ?>
+            <!--<ul class="page">-->
+                <!--<li class="prev">上一页</li>-->
+                <!--<li class="currentPage">1</li>-->
+                <!--<li>2</li>-->
+                <!--<li class="next">下一页</li>-->
+            <!--</ul>-->
         </div>
     </div>
 
