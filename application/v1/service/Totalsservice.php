@@ -40,7 +40,7 @@ class Totalsservice
              return false;
          }
 
-         $res = Totals::instance()->where(['id'=>$id])->count();
+         $res = Totals::instance()->where(['id'=>$id])->value('totals');
 
          return $res?$res:0;
 
