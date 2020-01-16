@@ -721,7 +721,7 @@ class Workservice
           }
 
           foreach ($list as $key =>$val){
-              $list[$key]['imgs'] = config('curl.hzs').$list[$key]['imgs'];
+              $list[$key]['imgs'] = config('curl.hlg').$list[$key]['imgs'];
               $list[$key]['time'] = date('Y-m-d H:i:s',$list[$key]['time']);
               $list[$key]['keyword']= explode(',', $list[$key]['keyword']);
           }
@@ -783,7 +783,7 @@ class Workservice
             return $info ='';
           }
           $info['time'] = date('Y-m-d H:i:s',$info['time']);
-          $url = config('curl.hzs');
+          $url = config('curl.hlg');
           $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
           $info['content'] = preg_replace($pregRule, '<img src="' . $url . '${1}">', $info['content']);
 
@@ -873,7 +873,7 @@ class Workservice
            }
 
            foreach ($newlist as $key =>$val){
-               $newlist[$key]['imgs'] = config('curl.hzs').$newlist[$key]['imgs'];
+               $newlist[$key]['imgs'] = config('curl.hlg').$newlist[$key]['imgs'];
                $newlist[$key]['time'] = date('Y-m-d H:i:s',$newlist[$key]['time']);
            }
 

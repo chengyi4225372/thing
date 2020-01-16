@@ -198,7 +198,7 @@ class Exampleservice
             $ret['imgs'] = config('curl.hzs').$ret['imgs'];
             $ret['time'] = date('Y-m-d H:i:s',$ret['time']);
 
-            $url = config('curl.hzs');
+            $url = config('curl.hlg');
             $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
             $ret['content'] = preg_replace($pregRule, '<img src="' . $url . '${1}">', $ret['content']);
 
