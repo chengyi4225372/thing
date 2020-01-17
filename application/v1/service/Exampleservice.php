@@ -170,7 +170,7 @@ class Exampleservice
             }
 
             foreach ($list as $key =>$val){
-                $list[$key]['imgs'] = config('curl.hzs').$val['imgs'];
+                $list[$key]['imgs'] = config('curl.hlg').$val['imgs'];
             }
 
             return $list;
