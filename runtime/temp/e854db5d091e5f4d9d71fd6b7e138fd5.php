@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"/opt/web/thing/public/../application/home/view/index/clientcase.html";i:1577675022;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1577084715;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1577091472;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1577091472;s:54:"/opt/web/thing/application/home/view/common/alert.html";i:1577234996;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:68:"/opt/web/thing/public/../application/home/view/index/clientcase.html";i:1579229706;s:53:"/opt/web/thing/application/home/view/common/logo.html";i:1576736895;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1577084715;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1577091472;s:53:"/opt/web/thing/application/home/view/common/left.html";i:1577091472;s:54:"/opt/web/thing/application/home/view/common/alert.html";i:1577234996;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="/static/spirit/css/footer.css">
     <link rel="stylesheet" href="/static/spirit/css/alert.css">
     <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
-  <link rel="stylesheet" href="/static/spirit/css/left.css">
+    <link rel="stylesheet" href="/static/spirit/css/left.css">
+    <link rel="stylesheet" href="/static/spirit/css/news.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/spirit/js/clamp.js"></script>
     <script src='/static/spirit/js/clientcase.js'></script>
@@ -305,8 +306,17 @@
             </div>
         </div>
 
+        <!--分页-->
+        <div class="pageNation">
+            <?php echo $list->render();; ?>
+            <!--<ul class="page">-->
+                <!--<li class="prev">上一页</li>-->
+                <!--<li class="currentPage">1</li>-->
+                <!--<li>2</li>-->
+                <!--<li class="next">下一页</li>-->
+            <!--</ul>-->
+        </div>
     </div>
-
 
     <!-- 底部 -->
     <div class="bottomBox">

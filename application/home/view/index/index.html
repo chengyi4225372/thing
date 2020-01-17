@@ -75,9 +75,9 @@
     <!-- 轮播图 -->
     <div class="layui-carousel" id="swiper">
       <div carousel-item="">
-        <div><img src="__SPI__/images/BANNER01.png"></div>
-        <div><img src="__SPI__/images/BANNER02.png"></div>
-        <div><img src="__SPI__/images/BANNER03.png"></div>
+        {volist name="slideshow" id="slide_list"}
+        <div><img src="{$slide_list['pic']}"></div>
+        {/volist}
       </div>
     </div>
 
@@ -291,7 +291,7 @@
               </div>
               <div class="reason-content-item-text">
                 <p>三流合一</p>
-                <p>服务流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp资金流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp发票流</p>
+                <p>三流合一&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp资金流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp发票流</p>
               </div>
             </div>
           </div>

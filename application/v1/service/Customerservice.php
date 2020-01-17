@@ -196,6 +196,19 @@ class Customerservice
     }
 
     /**
+     * @DESC：前端显示的轮播图
+     * @return false|\PDOStatement|string|\think\Collection
+     * @author: jason
+     * @date: 2020-01-17 02:41:32
+     */
+    public function getOneshow()
+    {
+        $where['status'] = 1;
+        $return_data = Customer::instance()->where($where)->order('sort desc,add_time desc')->select();
+        return $return_data;
+    }
+
+    /**
      * @DESC：上传轮播图
      * @author: jason
      * @date: 2019-10-21 03:31:26

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:61:"/opt/web/thing/public/../application/v1/view/index/index.html";i:1575463857;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575958790;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1579229706;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1577234997;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:69:"/opt/web/thing/public/../application/v1/view/humans/totals/index.html";i:1578971197;s:54:"/opt/web/thing/application/v1/view/layout/default.html";i:1575958790;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/header.html";i:1575463857;s:51:"/opt/web/thing/application/v1/view/common/left.html";i:1579229706;s:53:"/opt/web/thing/application/v1/view/common/footer.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1577234997;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -262,64 +262,43 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
-    <!-- Main content -->
-    <section class="content">
-        <div class="box box-default color-palette-box" style="min-height:700px;">
-            <div class="row">
-                <!-- todo 注释
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-                        <a href="<?php echo url('/v1/protuct/protucts/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>共享产品</h2></span>
-                                <span class="info-box-number"><h2><?php echo $pro_count; ?></h2></span>
-                            </div>
-                        </a>
+<div class="content" style="margin-bottom:0px;min-height:0px;">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline"  id="form">
 
+                <div class="panel panel-default panel-btn">
+                    <div class="panel-heading">
+                        <div class="form-group"></div>
 
                     </div>
                 </div>
-                -->
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-
-                        <a href="<?php echo url('/v1/info/infos/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>资讯信息</h2></span>
-                                <span class="info-box-number"><h2><?php echo $work_count; ?></h2></span>
-                            </div>
-                        </a>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-
-                <!-- fix for small devices only -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-                        <a href="<?php echo url('/v1/users/user/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>用户信息</h2></span>
-                                <span class="info-box-number"><h2><?php echo $user_count; ?></h2></span>
-                            </div>
-                        </a>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-            </div>
+                <br>
+            </form>
         </div>
-    </section>
+    </div>
+</div>
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <th class="text-center td-width-40px">在线报名人数统计</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center"><?php echo (isset($totals['totals']) && ($totals['totals'] !== '')?$totals['totals']:'0'); ?></td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div class="pages"></div>
+        </div>
+    </div>
+
+</section>
 
     </div>
 
