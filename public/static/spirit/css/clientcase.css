@@ -313,7 +313,7 @@ html {
     }
 
     .tabBox .item-content p:nth-of-type(2) {
-        height: 4.2rem !important;
+        height: 4rem !important;
         word-break: break-all;
         display: -webkit-box;
         -webkit-line-clamp: 3 !important;
@@ -514,7 +514,7 @@ a {
 }
 
 .tabBox .item-content p:nth-of-type(2) {
-    height: 4.5rem;
+    height: 4.4rem;
     font-size: .875rem;
     font-family: "PingFang-SC","syht";
     font-weight: 400;
