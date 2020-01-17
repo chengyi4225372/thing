@@ -40,7 +40,7 @@ class Exampleservice
 
         }
 
-         $list = Example::instance()->where($w)->order(['sort'=>'desc','create_time'=>'desc'])->paginate(15);
+         $list = Example::instance()->where($w)->order(['sort'=>'desc','create_time'=>'desc'])->paginate(9);
 
          return $list?$list:'';
      }
@@ -170,7 +170,7 @@ class Exampleservice
             }
 
             foreach ($list as $key =>$val){
-                $list[$key]['imgs'] = config('curl.hzs').$val['imgs'];
+                $list[$key]['imgs'] = config('curl.hlg').$val['imgs'];
             }
 
             return $list;
@@ -198,7 +198,7 @@ class Exampleservice
             $ret['imgs'] = config('curl.hzs').$ret['imgs'];
             $ret['time'] = date('Y-m-d H:i:s',$ret['time']);
 
-            $url = config('curl.hzs');
+            $url = config('curl.hlg');
             $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
             $ret['content'] = preg_replace($pregRule, '<img src="' . $url . '${1}">', $ret['content']);
 
