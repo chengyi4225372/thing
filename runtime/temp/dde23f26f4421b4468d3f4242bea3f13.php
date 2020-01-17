@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\solution.html";i:1577434481;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577175962;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\solution.html";i:1579072769;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\logo.html";i:1576806779;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\left.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577175962;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -383,7 +383,7 @@
                     </div>
                     <p class="plan-advantage-item-title">降低企业成本</p>
                     <p class="plan-advantage-item-content">
-                      基于国家减税降赋政策，优化企业人力架构方案有效匹配实际业务需求进行资源优化，实现科学合理用工
+                      基于国家减税政策，优化企业人力架构方案有效匹配实际业务需求进行资源优化，实现科学合理用工
                     </p>
                   </li>
                   <li>
@@ -669,7 +669,7 @@
                   </li>
                   <li>
                     <div class="plan-advantage-item-img">
-                      <img src="/static/spirit/images/plan-advantage3.png" alt="">
+                      <img src="/static/spirit/images/plan-advantage5.png" alt="">
                     </div>
                     <p class="plan-advantage-item-title">优化用工管理</p>
                     <p class="plan-advantage-item-content">
@@ -795,7 +795,7 @@
                   </li>
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage5.png" alt=""></div>
                       <p>优化用工管理</p>
                       <div>
                         <p>将工作任务由传统的按职位划分转变</p>

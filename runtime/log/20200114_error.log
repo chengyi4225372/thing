@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+[ 2020-01-14T09:32:34+08:00 ] 192.168.56.1 POST /api/index/totalpeople
+[ error ] [0]致命错误: Call to undefined function app\v1\service\id_null()[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\service\Totalsservice.php:39]
+---------------------------------------------------------------
+[ 2020-01-14T09:37:40+08:00 ] 192.168.56.1 GET /v1/humans/totals/index.html
+[ error ] [8]未定义变量: params[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\runtime\temp\a7c5d1af2641b9a303faac78052c654a.php:283]
+---------------------------------------------------------------
+[ 2020-01-14T09:41:33+08:00 ] 192.168.56.1 GET /v1/humans/totals/index.html
+[ error ] [0]致命错误: Call to undefined method app\v1\service\Totalsservice::count()[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\humans\Totals.php:17]
+---------------------------------------------------------------
+[ 2020-01-14T09:43:01+08:00 ] 192.168.56.1 GET /v1/humans/totals/index.html
+[ error ] [0]致命错误: Call to undefined method app\v1\service\Totalsservice::count()[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\v1\controller\humans\Totals.php:17]

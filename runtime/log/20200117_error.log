@@ -1,0 +1,15 @@
+---------------------------------------------------------------
+[ 2020-01-17T14:28:24+08:00 ] 172.26.2.111 GET /
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test_huiqiyun.h_hlg_slideshow' doesn't exist[/opt/web/thing/thinkphp/library/think/db/Connection.php:390]
+---------------------------------------------------------------
+[ 2020-01-17T14:32:16+08:00 ] 172.26.2.111 GET /
+[ error ] [0]致命错误: Call to a member function toArray() on null[/opt/web/thing/application/v1/service/Systems.php:446]
+---------------------------------------------------------------
+[ 2020-01-17T14:53:42+08:00 ] 172.26.2.111 POST /v1/customer/customers/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/v1/service/Customerservice.php:238]
+---------------------------------------------------------------
+[ 2020-01-17T14:54:56+08:00 ] 172.26.2.111 POST /v1/customer/customers/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/v1/service/Customerservice.php:238]
+---------------------------------------------------------------
+[ 2020-01-17T14:55:25+08:00 ] 172.26.2.111 POST /v1/customer/customers/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/thing/application/v1/service/Customerservice.php:238]

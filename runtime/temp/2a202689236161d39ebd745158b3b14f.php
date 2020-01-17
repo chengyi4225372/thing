@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1577434022;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1577062600;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1577434000;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1577090138;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1577090142;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1577173287;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:79:"C:\phpEnv\www\thing\public/../application/home\view\index\information_list.html";i:1579251602;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578648450;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578648450;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578648450;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/static/spirit/css/alert.css">
   <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
   <link rel="stylesheet" href="/static/spirit/css/left.css">
+  <link rel="stylesheet" href="/static/spirit/css/news.css">
   <script src="/static/spirit/js/clamp.js"></script>
   <script src='/static/spirit/js/Informationlist.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -156,7 +157,7 @@
                   <span onclick="hotsearch(this)" data-url="<?php echo url('home/index/getinfoapi'); ?>" data-href="<?php echo url('/home/index/detail'); ?>" 
                    data-title='<?php echo $kwords['title']; ?>'><?php echo $kwords['title']; ?></span>
                   <span class="close" onclick='nullhot(this)' data-href="<?php echo url('/home/index/detail'); ?>"
-                   data-url="<?php echo url('home/index/getinfoapi'); ?>">✕</span>
+                        data-title='<?php echo $kwords['title']; ?>' data-url="<?php echo url('home/index/getinfoapi'); ?>">✕</span>
                 </li>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
               </ul>
@@ -206,10 +207,21 @@
               <?php endforeach; endif; else: echo "" ;endif; endif; ?>
 
             </ul>
-            <input type="hidden" value="<?php echo \think\Request::instance()->get('keyword'); ?>" id="sid">
-            <input type="hidden" value="1" id="page">
-            <div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val(),this)"
-              data-href="<?php echo url('/home/index/detail'); ?>" data-url="<?php echo url('/home/index/getpageInfo'); ?>">查看更多</div>
+            <!--<input type="hidden" value="<?php echo \think\Request::instance()->get('keyword'); ?>" id="sid">-->
+            <!--<input type="hidden" value="1" id="page">-->
+            <!--<div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val(),this)"-->
+              <!--data-href="<?php echo url('/home/index/detail'); ?>" data-url="<?php echo url('/home/index/getpageInfo'); ?>">查看更多</div>-->
+            <!--分页-->
+
+          </div>
+          <div class="pageNation" style="background: #fff;">
+            <?php echo $list->render();; ?>
+            <!--<ul class="page">-->
+              <!--<li class="prev">上一页</li>-->
+              <!--<li class="currentPage">1</li>-->
+              <!--<li>2</li>-->
+              <!--<li class="next">下一页</li>-->
+            <!--</ul>-->
           </div>
 
         </div>

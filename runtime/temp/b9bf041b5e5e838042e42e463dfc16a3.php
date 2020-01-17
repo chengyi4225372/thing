@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"/opt/web/thing/public/../application/v1/view/customer/customers/edit.html";i:1575879166;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575465348;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1575463857;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"/opt/web/thing/public/../application/v1/view/customer/customers/edit.html";i:1575879166;s:53:"/opt/web/thing/application/v1/view/layout/dialog.html";i:1575958789;s:51:"/opt/web/thing/application/v1/view/common/meta.html";i:1575463857;s:53:"/opt/web/thing/application/v1/view/common/script.html";i:1577234997;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -165,6 +165,8 @@
 <script src="/static/assets/dist/js/infos.js"></script>
 <script src="/static/assets/dist/js/partners.js"></script>
 <script src="/static/assets/dist/js/works.js"></script>
+<script src="/static/assets/dist/js/example.js"></script>
+<script src="/static/assets/dist/js/keys.js"></script>
 <script>
     admin_module.changepas();
 </script>

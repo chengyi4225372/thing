@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1578648450;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578648450;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578648450;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578648450;}*/ ?>
+=======
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:77:"C:\phpEnv\www\thing\public/../application/home\view\index\productservice.html";i:1578910000;s:58:"C:\phpEnv\www\thing\application\home\view\common\logo.html";i:1578910000;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578910000;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578910000;s:58:"C:\phpEnv\www\thing\application\home\view\common\left.html";i:1578910000;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578910000;}*/ ?>
+>>>>>>> 2e0c8575cce9b05a4c0af64dc209aeedea40b1a4
 <!DOCTYPE html>
 <html lang="en">
 

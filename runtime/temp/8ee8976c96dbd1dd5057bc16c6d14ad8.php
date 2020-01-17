@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1579249809;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578648450;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578648450;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578648450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1579251602;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578648450;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578648450;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578648450;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,9 +96,9 @@
     <!-- 轮播图 -->
     <div class="layui-carousel" id="swiper">
       <div carousel-item="">
-        <div><img src="/static/spirit/images/BANNER01.png"></div>
-        <div><img src="/static/spirit/images/BANNER02.png"></div>
-        <div><img src="/static/spirit/images/BANNER03.png"></div>
+        <?php if(is_array($slideshow) || $slideshow instanceof \think\Collection || $slideshow instanceof \think\Paginator): $i = 0; $__LIST__ = $slideshow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$slide_list): $mod = ($i % 2 );++$i;?>
+        <div><img src="<?php echo $slide_list['pic']; ?>"></div>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
       </div>
     </div>
 
@@ -312,7 +312,7 @@
               </div>
               <div class="reason-content-item-text">
                 <p>三流合一</p>
-                <p>服务流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp资金流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp发票流</p>
+                <p>三流合一&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp资金流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp发票流</p>
               </div>
             </div>
           </div>

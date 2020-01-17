@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="__SPI__/css/footer.css">
     <link rel="stylesheet" href="__SPI__/css/alert.css">
     <link rel="stylesheet" href="__SPI__/css/header_nav.css">
-  <link rel="stylesheet" href="__SPI__/css/left.css">
+    <link rel="stylesheet" href="__SPI__/css/left.css">
+    <link rel="stylesheet" href="__SPI__/css/news.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="__SPI__/js/clamp.js"></script>
     <script src='__SPI__/js/clientcase.js'></script>
@@ -257,8 +258,17 @@
             </div>
         </div>
 
+        <!--分页-->
+        <div class="pageNation">
+            {$list->render();}
+            <!--<ul class="page">-->
+                <!--<li class="prev">上一页</li>-->
+                <!--<li class="currentPage">1</li>-->
+                <!--<li>2</li>-->
+                <!--<li class="next">下一页</li>-->
+            <!--</ul>-->
+        </div>
     </div>
-
 
     <!-- 底部 -->
     {include file="common/footer"/}

@@ -313,12 +313,12 @@ class Workservice
 
 
     /**
-     * 前台新闻列表 接口
+     * 前台新闻列表
      * title string
      * page  string | int
      * return array|null
      */
-    public function Getinfolist($title, $page)
+    public function Getinfolist($title)
     {
         if (empty($title) || !isset($title)) {
 
@@ -331,14 +331,8 @@ class Workservice
             ];
         }
 
-        $next = 10;
-        if (empty($page)) {
-            $page = 0;
-        } else {
-            $page = $next * $page;
-        }
 
-        $list = Work::instance()->where($where)->order('sort desc,create_time desc')->limit($page, $next)->select();
+        $list = Work::instance()->where($where)->order('sort desc,create_time desc')->paginate(10);
         
         foreach($list as $k =>$val){
             $list[$k]['keyword'] = explode(',',$list[$k]['keyword']); 
@@ -727,7 +721,7 @@ class Workservice
           }
 
           foreach ($list as $key =>$val){
-              $list[$key]['imgs'] = config('curl.hzs').$list[$key]['imgs'];
+              $list[$key]['imgs'] = config('curl.hlg').$list[$key]['imgs'];
               $list[$key]['time'] = date('Y-m-d H:i:s',$list[$key]['time']);
               $list[$key]['keyword']= explode(',', $list[$key]['keyword']);
           }
@@ -788,11 +782,8 @@ class Workservice
           if(empty($info) || !isset($info)){
             return $info ='';
           }
-
-
-
           $info['time'] = date('Y-m-d H:i:s',$info['time']);
-          $url = config('curl.hzs');
+          $url = config('curl.hlg');
           $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
           $info['content'] = preg_replace($pregRule, '<img src="' . $url . '${1}">', $info['content']);
 
@@ -812,7 +803,7 @@ class Workservice
               'status' => 1
           ];
 
-          $top = Work::instance()->where($w)->field('sort')->order('sort desc ,create_time asc')->find();
+          $top = Work::instance()->where($w)->field('sort')->find();
 
           $where = [
               'status'=>1,
@@ -822,7 +813,8 @@ class Workservice
           $info = Work::instance()
                   ->where($where)
                   ->field('id,sort,title')
-                  ->order('sort asc ,create_time asc')->find();
+                  ->order('sort asc ,create_time desc')
+                  ->find();
 
           if (empty($info)) {
               return $info = '这是第一篇了!';
@@ -845,7 +837,7 @@ class Workservice
                'status' =>1,
            ];
 
-           $next = Work::instance()->where($w)->field('sort')->order('sort desc ,create_time asc')->find();
+           $next = Work::instance()->where($w)->field('sort')->find();
            $where = [
                'status'=>1,
                'sort'=>['LT',$next['sort']],
@@ -881,7 +873,7 @@ class Workservice
            }
 
            foreach ($newlist as $key =>$val){
-               $newlist[$key]['imgs'] = config('curl.hzs').$newlist[$key]['imgs'];
+               $newlist[$key]['imgs'] = config('curl.hlg').$newlist[$key]['imgs'];
                $newlist[$key]['time'] = date('Y-m-d H:i:s',$newlist[$key]['time']);
            }
 

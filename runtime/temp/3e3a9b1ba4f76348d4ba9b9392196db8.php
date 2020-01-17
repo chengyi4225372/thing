@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1578446927;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:102:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\leftIndex.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577175962;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:107:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\public/../application/home\view\index\index.html";i:1579248714;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\login.html";i:1577091708;s:99:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\footer.html";i:1577090558;s:102:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\leftIndex.html";i:1577090558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\thing\application\home\view\common\alert.html";i:1577175962;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -361,7 +361,7 @@
                   <p class="conTitle limit1"><?php echo $vo['title']; ?></p>
                   <p class="conTime"><?php echo $vo['create_time']; ?></p>
                   <p class="conDetail limit2">
-                    <?php echo mb_substr($vo['desc'],0,70,'utf-8'); ?>...
+                    <?php echo mb_substr($vo['desc'],0,70,'utf-8'); ?>
                   </p>
                 </div>
                 <div class="separate"></div>

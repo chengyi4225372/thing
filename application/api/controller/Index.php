@@ -7,6 +7,7 @@ use app\api\controller\Apis;
 use app\v1\service\Exampleservice;
 use app\v1\service\Workservice;
 use app\v1\service\Keywordsservice;
+use app\v1\service\Totalsservice;
 
 class Index extends Apis{
 
@@ -135,4 +136,47 @@ class Index extends Apis{
            $this->jsonMsg(200,'success',$list);
         }
     }
+
+    /**
+     * 统计人数
+     */
+    public function totalpeople(){
+        if($this->request->isPost()){
+            $id = input('post.id','','int');
+
+            if(empty($id) || !isset($id) || is_null($id) || $id<=0){
+                $this->jsonMsg(403,'请求数据不合法','');
+            }
+
+            $ret = Totalsservice::instance()->counts($id);
+
+            if(!empty($ret) || isset($ret)){
+                $this->jsonMsg(200,'success',$ret);
+            }else {
+                $this->jsonMsg(400,'请求数据为空',$ret);
+            }
+        }
+    }
+
+    /**
+     * 增加在线报名人数
+     * @id
+     */
+     public function  addpeople(){
+         if($this->request->isPost()){
+             $id = input('post.id','','int');
+
+             if(empty($id) || !isset($id) || is_null($id) || $id<=0){
+                 $this->jsonMsg(403,'请求数据不合法','');
+             }
+
+             $ret =  Totalsservice::instance()->humansetadd($id);
+
+             if(empty($ret) || !isset($ret) || is_null($ret)){
+                 $this->jsonMsg(400,'请求数据为空','');
+             }else{
+                 $this->jsonMsg(200,'success',$ret);
+             }
+         }
+     }
 }
