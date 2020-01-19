@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1579251602;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578648450;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578648450;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578648450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1579423053;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578648450;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578648450;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578648450;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -342,7 +342,7 @@
     <div class="consulting-box">
       <div class="w consulting">
         <div class="consulting-title">
-          <p>行业资讯</p>
+          <p>新闻资讯</p>
         </div>
         <div class="consulting-text">
           行业动态抢先看，创新与进步只为给您带来卓越体验
