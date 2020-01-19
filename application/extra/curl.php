@@ -1,7 +1,9 @@
 <?php
 return [
     //    'hlg' => 'http://172.26.3.13:8009/index.php',//惠灵工
-    'hlg' => 'https://hui0g.hui7y.com',//惠灵工
+    'hlg' => 'https://hui0g.hui7y.com',//pc端惠灵工
+
+    'mobile_hlg'=>'http://hlg_h5.hui7y.com',//手机端惠灵工
 
     //    'website' => 'http://172.26.3.13:8008/index.php',//官网
     'website' => 'https://www.hui7y.com', //官网
