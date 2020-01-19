@@ -32,7 +32,7 @@ class Index extends BaseController
     {
         //$redirect_url = Config::get('curl.redirect_url');
 
-        
+
         //行业资讯
         $data = Workservice::instance()->three();
         if ((isset($_GET['line']) && !empty($_GET['line'])) && (isset($_GET['ttttt']) && !empty($_GET['ttttt']))) {
