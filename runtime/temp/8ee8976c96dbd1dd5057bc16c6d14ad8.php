@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1579423053;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578648450;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578648450;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578648450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"C:\phpEnv\www\thing\public/../application/home\view\index\index.html";i:1579423222;s:59:"C:\phpEnv\www\thing\application\home\view\common\login.html";i:1578648450;s:60:"C:\phpEnv\www\thing\application\home\view\common\footer.html";i:1578648450;s:63:"C:\phpEnv\www\thing\application\home\view\common\leftIndex.html";i:1578648450;s:59:"C:\phpEnv\www\thing\application\home\view\common\alert.html";i:1578648450;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -312,7 +312,7 @@
               </div>
               <div class="reason-content-item-text">
                 <p>三流合一</p>
-                <p>三流合一&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp资金流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp发票流</p>
+                <p>合同流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp资金流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp发票流</p>
               </div>
             </div>
           </div>
