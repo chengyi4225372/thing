@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:77:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/index.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:72:"/Users/zhanwen/Desktop/thing/application/home/view/common/leftIndex.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1580699706;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,21 +10,21 @@
   <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>{$title|default=''}</title>
-  <meta name="keywords" content="灵活用工,灵活用工节税,灵活用工避税,社保入税,灵活用工税务筹划,税负转嫁公司,外包项目发票,开劳务发票,惠灵工" />
-  <meta name="description" content="惠灵工立足“互联网+”共享新经济,专业为企业和自由职业者提供灵活用工综合服务平台。">
-  <link rel="stylesheet" href="__SPI__/css/base.css">
-  <link rel="stylesheet" href="__PUBLIC__/assets/plugins/layui/css/layui.css">
-  <link rel="stylesheet" href="__SPI__/font/syht.css">
-  <link rel="stylesheet" href="__SPI__/css/index.css">
-  <link rel="stylesheet" href="__SPI__/css/footer.css">
-  <link rel="stylesheet" href="__SPI__/css/alert.css">
+  <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
+  <meta name="keywords" content="灵活用工,灵活用工节税,灵活用工避税,社保入税,灵活用工税务筹划,外包项目发票,开劳务发票,惠灵工" />
+  <meta name="description" content="惠灵工立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。">
+  <link rel="stylesheet" href="/static/spirit/css/base.css">
+  <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
+  <link rel="stylesheet" href="/static/spirit/font/syht.css">
+  <link rel="stylesheet" href="/static/spirit/css/index.css">
+  <link rel="stylesheet" href="/static/spirit/css/footer.css">
+  <link rel="stylesheet" href="/static/spirit/css/alert.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="__SPI__/js/clamp.js"></script>
-  <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
-  <script src="__SPI__/js/spirit.js"></script>
-  <script src='__PUBLIC__/common/js/public.js'></script>
-  <script src='__SPI__/js/index.js'></script>
+  <script src="/static/spirit/js/clamp.js"></script>
+  <script src="/static/assets/plugins/layui/layui.all.js"></script>
+  <script src="/static/spirit/js/spirit.js"></script>
+  <script src='/static/common/js/public.js'></script>
+  <script src='/static/spirit/js/index.js'></script>
 
 </head>
 
@@ -37,27 +38,27 @@
         <!-- logo图 -->
         <div class="logo">
           <h1>
-            <a href="{:url('/home/index/index')}">
-              <img src="__SPI__/images/logo2xxx.png">
+            <a href="<?php echo url('/home/index/index'); ?>">
+              <img src="/static/spirit/images/logo2xxx.png">
             </a>
           </h1>
         </div>
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
-            <li class="nav-active"><a href="{:url('/home/index/index')}">首页</a></li>
-            <li><a href="{:url('/home/index/productservice')}">产品服务</a></li>
-            <li><a href="{:url('/home/index/solution')}">行业解决方案</a></li>
-            <li><a href="{:url('/home/index/clientcase')}">客户案例</a></li>
-            <li><a href="{:url('/home/index/informationlist')}">新闻资讯</a></li>
+            <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+            <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
+            <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
+            <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
+            <li><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
             <!--<li>-->
-            <!--{if empty($userinfo['userType'])}-->
-            <!--<a href="javascript:void(0)" login_url="{:config('curl.login_url')}" loca_url="{:config('curl.hlg')}" onclick="members_click(this)">会员通道</a>-->
-            <!--{elseif $userinfo['userType'] == 'C' /}-->
+            <!--<?php if(empty($userinfo['userType'])): ?>-->
+            <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
+            <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
             <!--<a href="javascript:void(0)">会员通道</a>-->
-            <!--{else /}-->
-            <!--<a href="{:config('curl.redirect_url')}/task/task">会员通道</a>-->
-            <!--{/if}-->
+            <!--<?php else: ?>-->
+            <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
+            <!--<?php endif; ?>-->
 
             <!--</li>-->
           </ul>
@@ -66,7 +67,27 @@
 
 
         <!--登陆注册-->
-        {include file="common/login"}
+        <?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
+        </a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?>
       </div>
 
     </div>
@@ -75,9 +96,9 @@
     <!-- 轮播图 -->
     <div class="layui-carousel" id="swiper">
       <div carousel-item="">
-        {volist name="slideshow" id="slide_list"}
-        <div><img src="{$slide_list['pic']}"></div>
-        {/volist}
+        <?php if(is_array($slideshow) || $slideshow instanceof \think\Collection || $slideshow instanceof \think\Paginator): $i = 0; $__LIST__ = $slideshow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$slide_list): $mod = ($i % 2 );++$i;?>
+        <div><img src="<?php echo $slide_list['pic']; ?>"></div>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
       </div>
     </div>
 
@@ -118,7 +139,7 @@
       <div class="w serves clearfix">
         <div class="serve-item fl">
           <div class="serve-item-img firstImg">
-            <img src="__SPI__/images/yonghu2x.png" alt="">
+            <img src="/static/spirit/images/yonghu2x.png" alt="">
           </div>
           <div class="serve-item-text">
             <p>领先平台</p>
@@ -131,7 +152,7 @@
         </div>
         <div class="serve-item fl">
           <div class="serve-item-img">
-            <img src="__SPI__/images/qianbao2X.png" alt="">
+            <img src="/static/spirit/images/qianbao2X.png" alt="">
           </div>
           <div class="serve-item-text">
             <p>服务保证</p>
@@ -144,7 +165,7 @@
         </div>
         <div class="serve-item fl">
           <div class="serve-item-img">
-            <img src="__SPI__/images/fuwuxing2x.png" alt="">
+            <img src="/static/spirit/images/fuwuxing2x.png" alt="">
           </div>
           <div class="serve-item-text">
             <p>高效赋能</p>
@@ -168,7 +189,7 @@
           <ul class="clearfix">
             <li class="difficulty-item">
               <div class="difficulty-item-img">
-                <img src="__SPI__/images/qiyewentishuiwu.jpg" alt="">
+                <img src="/static/spirit/images/qiyewentishuiwu.jpg" alt="">
               </div>
               <div class="difficulty-item-title">
                 <p>税务管理压力</p>
@@ -178,7 +199,7 @@
             </li>
             <li class="difficulty-item">
               <div class="difficulty-item-img">
-                <img src="__SPI__/images/qitewentiyewu.jpg" alt="">
+                <img src="/static/spirit/images/qitewentiyewu.jpg" alt="">
               </div>
               <div class="difficulty-item-title">
                 <p>业务成本压力</p>
@@ -188,7 +209,7 @@
             </li>
             <li class="difficulty-item">
               <div class="difficulty-item-img">
-                <img src="__SPI__/images/qiyewentiyongren2X.jpg" alt="">
+                <img src="/static/spirit/images/qiyewentiyongren2X.jpg" alt="">
               </div>
               <div class="difficulty-item-title">
                 <p>用人成本压力</p>
@@ -198,7 +219,7 @@
             </li>
             <li class="difficulty-item">
               <div class="difficulty-item-img">
-                <img src="__SPI__/images/qiyewentixingxi2X.jpg" alt="">
+                <img src="/static/spirit/images/qiyewentixingxi2X.jpg" alt="">
               </div>
               <div class="difficulty-item-title">
                 <p>信息管理挑战</p>
@@ -267,7 +288,7 @@
           <div class="reason-content-items fl">
             <div class="reason-content-item">
               <div class="reason-content-item-img">
-                <img src="__SPI__/images/liyouxuanzhuan@2x.png" alt="">
+                <img src="/static/spirit/images/liyouxuanzhuan@2x.png" alt="">
               </div>
               <div class="reason-content-item-text">
                 <p>合法合规</p>
@@ -277,7 +298,7 @@
             </div>
             <div class="reason-content-item">
               <div class="reason-content-item-img">
-                <img src="__SPI__/images/liyouyingbi2x.png" alt="">
+                <img src="/static/spirit/images/liyouyingbi2x.png" alt="">
               </div>
               <div class="reason-content-item-text">
                 <p>成本风险控制</p>
@@ -287,7 +308,7 @@
             </div>
             <div class="reason-content-item">
               <div class="reason-content-item-img">
-                <img src="__SPI__/images/liyou3D2x.png" alt="">
+                <img src="/static/spirit/images/liyou3D2x.png" alt="">
               </div>
               <div class="reason-content-item-text">
                 <p>三流合一</p>
@@ -296,7 +317,7 @@
             </div>
           </div>
           <div class="reason-content-img">
-            <img src="__SPI__/images/liyou22x.png" alt="">
+            <img src="/static/spirit/images/liyou22x.png" alt="">
           </div>
         </div>
       </div>
@@ -312,7 +333,7 @@
           惠灵工服务体系业务逻辑流程图
         </div>
         <div class="process-img">
-          <img src="__SPI__/images/liucheng2x.png" alt="">
+          <img src="/static/spirit/images/liucheng2x.png" alt="">
         </div>
       </div>
     </div>
@@ -328,31 +349,31 @@
         </div>
         <div class="consulting-items">
           <ul>
-            {volist name='data' id='vo'}
+            <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
             <li class="industryItem">
               <div class="itemImg">
                 <div class="shadow"></div>
-                <img src="{$vo.imgs|default=''}" alt="">
+                <img src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
               </div>
 
               <div class="itemContent">
                 <div class="bottomContent">
-                  <p class="conTitle limit1">{$vo.title}</p>
-                  <p class="conTime">{$vo.create_time}</p>
+                  <p class="conTitle limit1"><?php echo $vo['title']; ?></p>
+                  <p class="conTime"><?php echo $vo['create_time']; ?></p>
                   <p class="conDetail limit2">
-                    {$vo.desc|mb_substr=0,70,'utf-8'}
+                    <?php echo mb_substr($vo['desc'],0,70,'utf-8'); ?>
                   </p>
                 </div>
                 <div class="separate"></div>
               </div>
               <div class="conBtn">
                 <div class="more">
-                  <a href="{:config('curl.hlg')}/home/index/informationlist">了解更多</a>
+                  <a href="<?php echo config('curl.hlg'); ?>/home/index/informationlist">了解更多</a>
                 </div>
               </div>
 
             </li>
-            {/volist}
+            <?php endforeach; endif; else: echo "" ;endif; ?>
           </ul>
         </div>
       </div>
@@ -369,14 +390,133 @@
 
 
     <!-- 底部 -->
-    {include file="common/footer"/}
+    <div class="bottomBox">
+    <div class="w bottom">
+        <div class="aboutUs">
+            <span>关于我们</span>
+            <p>
+                惠企云旗下【惠灵工】，立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+            </p>
+        </div>
+        <div class="w navBottom">
+            <div class="navList">
+                <dl>
+                    <dt>惠企云旗下产品</dt>
+                    <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
+                    <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
+                    <dd><a href="javascript:;">惠多薪</a></dd>
+                    <dd><a href="javascript:;">惠创业</a></dd>
+                    <dd><a href="javascript:;">惠找事</a></dd>
+                </dl>
+                <dl>
+                    <dt>惠灵工</dt>
+                    <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
+                    <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
+                    <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
+                    <dd><a href="javascript:;">招商合作</a></dd>
+                </dl>
+                <dl>
+                    <dt>客服热线</dt>
+                    <dd><a href="javascript:;">400-150-9896</a></dd>
+                    <dd><a href="javascript:;">181-8619-4461</a></dd>
+                </dl>
+                <dl>
+                    <dt>办公地址</dt>
+                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
+                    <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
+                    <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
+                </dl>
+            </div>
+
+            <ul class="qrCode">
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weixincode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                    <i>及时获知一手财税信息</i>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weibocode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                    <!-- <i>及时获一手财税信息</i> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+        Reserved&nbsp;ICP证
+        :
+        鄂ICP备16008680号-3</div>
+
+</div>
 
 
     <!-- 侧边栏bottom资讯 -->
-    {include file="common/leftIndex"/}
+    <div class="bottom-left">
+    <div>
+        <div class="bottom-title">惠家族产品</div>
+        <div class="bottom-item">
+            <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
+            <ul>
+                <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
+                <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠多薪</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠找事</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div class="bottom-title2">联系我们</div>
+        <div class="bottom-item2">
+            <div>
+                <p>立即预约咨询</p>
+                <p>181-8619-4461</p>
+            </div>
+            <div>
+                <p>获取税筹方案</p>
+                <p>400-150-9896</p>
+            </div>
+        </div>
+    </div>
+    <!-- 返回顶部 -->
+    <div class='goTop' id="goTop">
+        <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
+        <div>顶部</div>
+    </div>
+</div>
 
     <!-- 弹窗 -->
-    {include file="common/alert"/}
+    <div class="pop-up-box" id="popbox">
+    <div class="form">
+        <div class="form-titile">
+            <p>方案咨询</p>
+            <span class="turnoff" onclick="turnoff()"></span>
+        </div>
+        <div class="form-content">
+            <div>
+                <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                </div>
+                <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                <input type='hidden' id='sources' value='惠灵工'>
+                <input type='hidden' id='identifications' value='灵活用工'>
+                <div class="form-btn" onclick="form_btn()">获取方案</div>
+            </div>
+        </div>
+        <!-- 提交成果后弹窗 -->
+        <div class="mask-box2">
+            <span></span>
+            <p class="mask-box-title">提交成功</p>
+            <p class="mask-box-content">我们会在一个工作日内联系您</p>
+        </div>
+    </div>
+
+</div>
   </div>
 
 </body>

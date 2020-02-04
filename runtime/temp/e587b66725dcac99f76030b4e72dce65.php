@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:80:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/solution.html";i:1580699706;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/logo.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/left.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1580699706;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,23 +10,21 @@
   <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>{$title|default=''}</title>
-  <meta name="keywords" content="用工节税方案,用工减税方案,人力外包节税方案,劳务派遣节税,共享经济平台节税,如何降低用工成本,如何减少用工税费,惠灵工" />
-  <meta name="description" content="惠灵工行业解决方案基于互联网技术和生态,对各垂直产业链和价值链进行重塑和改造,实现企业数字化和产业平台化,降低用工税务成本,满足灵活用工费用结算支付、开票和代扣税等场景需求,帮助自由职业者和企业实现社会化用工并同步提供税务筹划服务。">
-  <link rel="stylesheet" href="__SPI__/css/base.css">
-  <link rel="stylesheet" href="__PUBLIC__/assets/plugins/layui/css/layui.css">
-  <link rel="stylesheet" href="__SPI__/font/syht.css">
-  <link rel="stylesheet" href="__SPI__/css/solution.css">
-  <link rel="stylesheet" href="__SPI__/css/footer.css">
-  <link rel="stylesheet" href="__SPI__/css/alert.css">
-  <link rel="stylesheet" href="__SPI__/css/header_nav.css">
-  <link rel="stylesheet" href="__SPI__/css/left.css">
+  <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
+  <link rel="stylesheet" href="/static/spirit/css/base.css">
+  <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
+  <link rel="stylesheet" href="/static/spirit/font/syht.css">
+  <link rel="stylesheet" href="/static/spirit/css/solution.css">
+  <link rel="stylesheet" href="/static/spirit/css/footer.css">
+  <link rel="stylesheet" href="/static/spirit/css/alert.css">
+  <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
+  <link rel="stylesheet" href="/static/spirit/css/left.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="__SPI__/js/clamp.js"></script>
-  <script src='__SPI__/js/solution.js'></script>
-  <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
-  <script src="__SPI__/js/spirit.js"></script>
-  <script src='__PUBLIC__/common/js/public.js'></script>
+  <script src="/static/spirit/js/clamp.js"></script>
+  <script src='/static/spirit/js/solution.js'></script>
+  <script src="/static/assets/plugins/layui/layui.all.js"></script>
+  <script src="/static/spirit/js/spirit.js"></script>
+  <script src='/static/common/js/public.js'></script>
 </head>
 
 <body>
@@ -35,23 +34,30 @@
     <div class="nav-box">
       <div class="w nav-container clearfix">
         <!-- logo图 -->
-        {include file="common/logo"}
+        <div class="logo">
+    <h1>
+        <a href="<?php echo url('/home/index/index'); ?>">
+            <img src="/static/spirit/images/logo2xxxx.png">
+        </a>
+
+    </h1>
+</div>
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
-            <li><a href="{:url('/home/index/index')}">首页</a></li>
-            <li><a href="{:url('/home/index/productservice')}">产品服务</a></li>
-            <li class="nav-active"><a href="{:url('/home/index/solution')}">行业解决方案</a></li>
-            <li><a href="{:url('/home/index/clientcase')}">客户案例</a></li>
-            <li><a href="{:url('/home/index/informationlist')}">新闻资讯</a></li>
+            <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+            <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
+            <li class="nav-active"><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
+            <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
+            <li><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
             <!--<li>-->
-            <!--{if empty($userinfo['userType'])}-->
-            <!--<a href="javascript:void(0)" login_url="{:config('curl.login_url')}" loca_url="{:config('curl.hlg')}" onclick="members_click(this)">会员通道</a>-->
-            <!--{elseif $userinfo['userType'] == 'C' /}-->
+            <!--<?php if(empty($userinfo['userType'])): ?>-->
+            <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
+            <!--<?php elseif($userinfo['userType'] == 'C'): ?>-->
             <!--<a href="javascript:void(0)">会员通道</a>-->
-            <!--{else /}-->
-            <!--<a href="{:config('curl.redirect_url')}/task/task">会员通道</a>-->
-            <!--{/if}-->
+            <!--<?php else: ?>-->
+            <!--<a href="<?php echo config('curl.redirect_url'); ?>/task/task">会员通道</a>-->
+            <!--<?php endif; ?>-->
 
             <!--</li>-->
           </ul>
@@ -60,20 +66,60 @@
 
 
         <!-- 登陆注册 -->
-        <!--{if empty($userinfo['mobile'])}-->
+        <!--<?php if(empty($userinfo['mobile'])): ?>-->
         <!--<div class="loging clearfix">-->
-        <!--<div class="register-btn"><a href="javascript:void(0)" login_url="{:config('curl.login_url')}" loca_url="{:config('curl.hlg')}" onclick="login_btn(this)">-->
+        <!--<div class="register-btn"><a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="login_btn(this)">-->
         <!--登录-->
         <!--</a></div>-->
-        <!--<div class="loging-btn"><a href="{:url('/home/login/register')}">注册</a></div>-->
+        <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
         <!--</div>-->
-        <!--{else /}-->
+        <!--<?php else: ?>-->
         <!--<div>-->
-        <!--{include file="common/login"}-->
+        <!--<?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
+        </a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?>-->
         <!--</div>-->
-        <!--{/if}-->
+        <!--<?php endif; ?>-->
         <!--登陆注册-->
-        <!-- {include file="common/login"} -->
+        <!-- <?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
+            登录
+        </a></div>
+    <div class="loging-btn"><a href="javascript:void(0)" onclick="click_register(this)" location_url="<?php echo config('curl.hlg'); ?>" register_url="<?php echo config('curl.register_url'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <div>
+        <div class="u_info_img">
+            <img src="/static/spirit/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+        </div>
+        <p id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+    </div>
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" onclick="user_logout(this)" data-token="<?php echo $userinfo['token']; ?>"
+            location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?> -->
       </div>
 
     </div>
@@ -92,7 +138,7 @@
     <!-- 面包屑 -->
     <div class="crumbs-box">
       <div class="w crumbs">
-        <b><a href="{:url('/v1/home/index/index')}">首页</a> ></b>
+        <b><a href="<?php echo url('/v1/home/index/index'); ?>">首页</a> ></b>
         <b>行业解决方案</b>
       </div>
     </div>
@@ -124,9 +170,9 @@
               </div>
               <div class="status-industry-wm">
                 <div class="status-industry-wm-imgs status-industry-wm-imgs-icon">
-                  <img class="wm-img-active" src="__SPI__/images/waimai1.png" alt="">
-                  <img src="__SPI__/images/waimai2.png" alt="">
-                  <img src="__SPI__/images/waimai3.png" alt="">
+                  <img class="wm-img-active" src="/static/spirit/images/waimai1.png" alt="">
+                  <img src="/static/spirit/images/waimai2.png" alt="">
+                  <img src="/static/spirit/images/waimai3.png" alt="">
                 </div>
                 <!-- 折叠 -->
                 <div class="status-industry-wm-content" lay-accordion>
@@ -173,7 +219,7 @@
               </div>
               <div class="solution-flow-wm-chart">
                 <div>
-                  <img src="__SPI__/images/wmdongt.gif" alt="">
+                  <img src="/static/spirit/images/wmdongt.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
@@ -194,7 +240,7 @@
                 <ul class="clearfix">
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="__SPI__/images/plan-advantage1.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
                       <p>降低企业成本</p>
                       <div>
                         <p>基于国家减税降赋政策</p>
@@ -206,7 +252,7 @@
                   </li>
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="__SPI__/images/plan-advantage2.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
                       <p>提高个人收入</p>
                       <div>
                         <p>个人（骑手）在线简单操作</p>
@@ -219,7 +265,7 @@
                   </li>
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="__SPI__/images/plan-advantage4.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage4.png" alt=""></div>
                       <p>规避用工风险</p>
                       <div>
                         <p>将工作任务由传统的按职位划分转变为按项目划分</p>
@@ -250,7 +296,7 @@
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
                       <h3>模式不规范</h3>
-                      <div><img src="__SPI__/images/xingWuLiuHangYe1.png" alt=""></div>
+                      <div><img src="/static/spirit/images/xingWuLiuHangYe1.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
                       <h3>模式不规范</h3>
@@ -265,7 +311,7 @@
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
                       <h3>劳动力短缺</h3>
-                      <div><img src="__SPI__/images/xingWuLiuHangYe2.png" alt=""></div>
+                      <div><img src="/static/spirit/images/xingWuLiuHangYe2.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
                       <h3>劳动力短缺</h3>
@@ -280,7 +326,7 @@
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
                       <h3>用工成本高</h3>
-                      <div><img src="__SPI__/images/xingWuLiuHangYe3.png" alt=""></div>
+                      <div><img src="/static/spirit/images/xingWuLiuHangYe3.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
                       <h3>用工成本高</h3>
@@ -308,7 +354,7 @@
               </div>
               <div class="solution-flow-chart">
                 <div>
-                  <img src="__SPI__/images/xingWuLiuDongTu.gif" alt="">
+                  <img src="/static/spirit/images/xingWuLiuDongTu.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
@@ -333,7 +379,7 @@
                 <ul class="clearfix">
                   <li class="plan-advantage-item">
                     <div class="plan-advantage-item-img">
-                      <img src="__SPI__/images/plan-advantage1.png" alt="">
+                      <img src="/static/spirit/images/plan-advantage1.png" alt="">
                     </div>
                     <p class="plan-advantage-item-title">降低企业成本</p>
                     <p class="plan-advantage-item-content">
@@ -342,7 +388,7 @@
                   </li>
                   <li>
                     <div class="plan-advantage-item-img">
-                      <img src="__SPI__/images/plan-advantage4.png" alt="">
+                      <img src="/static/spirit/images/plan-advantage4.png" alt="">
                     </div>
                     <p class="plan-advantage-item-title">规避用工风险</p>
                     <p class="plan-advantage-item-content">
@@ -351,7 +397,7 @@
                   </li>
                   <li>
                     <div class="plan-advantage-item-img">
-                      <img src="__SPI__/images/plan-advantage2.png" alt="">
+                      <img src="/static/spirit/images/plan-advantage2.png" alt="">
                     </div>
                     <p class="plan-advantage-item-title">提高个人收入</p>
                     <p class="plan-advantage-item-content">
@@ -382,9 +428,9 @@
               </div>
               <div class="status-industry-wm">
                 <div class="status-industry-wm-imgs status-industry-xls-imgs-icon">
-                  <img class="wm-img-active" src="__SPI__/images/xingLingShou1.png" alt="">
-                  <img src="__SPI__/images/xingLingShou2.png" alt="">
-                  <img src="__SPI__/images/xingLingShou3.png" alt="">
+                  <img class="wm-img-active" src="/static/spirit/images/xingLingShou1.png" alt="">
+                  <img src="/static/spirit/images/xingLingShou2.png" alt="">
+                  <img src="/static/spirit/images/xingLingShou3.png" alt="">
                 </div>
                 <!-- 折叠 -->
                 <div class="status-industry-wm-content" lay-accordion>
@@ -437,7 +483,7 @@
               </div>
               <div class="solution-flow-wm-chart">
                 <div>
-                  <img src="__SPI__/images/wmdongt.gif" alt="">
+                  <img src="/static/spirit/images/wmdongt.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
@@ -463,7 +509,7 @@
                 <ul class="clearfix">
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="__SPI__/images/plan-advantage4.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage4.png" alt=""></div>
                       <p>规避用工风险</p>
                       <div>
                         <p>将工作任务由传统的按职位划分转变为按项目划分</p>
@@ -474,7 +520,7 @@
                   </li>
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="__SPI__/images/plan-advantage1.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
                       <p>降低企业成本</p>
                       <div>
                         <p>基于国家减税降赋政策</p>
@@ -488,7 +534,7 @@
                   </li>
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="__SPI__/images/plan-advantage2.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage2.png" alt=""></div>
                       <p>提高个人收入</p>
                       <div>
                         <p>个人（社会化营销人员）在线简单操作</p>
@@ -520,7 +566,7 @@
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
                       <h3>劳动力短缺</h3>
-                      <div><img src="__SPI__/images/zhizaoyexianzhuan1.png" alt=""></div>
+                      <div><img src="/static/spirit/images/zhizaoyexianzhuan1.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
                       <h3>劳动力短缺</h3>
@@ -535,7 +581,7 @@
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
                       <h3>用工成本高</h3>
-                      <div><img src="__SPI__/images/zhizaoyexianzhuan2.png" alt=""></div>
+                      <div><img src="/static/spirit/images/zhizaoyexianzhuan2.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
                       <h3>用工成本高</h3>
@@ -550,7 +596,7 @@
                   <li class="status-industry-item">
                     <div class="status-industry-item-box1">
                       <h3>模式不规范</h3>
-                      <div><img src="__SPI__/images/zhizaoyexianzhuan3.png" alt=""></div>
+                      <div><img src="/static/spirit/images/zhizaoyexianzhuan3.png" alt=""></div>
                     </div>
                     <div class="status-industry-item-box2">
                       <h3>模式不规范</h3>
@@ -578,7 +624,7 @@
               </div>
               <div class="solution-flow-chart">
                 <div>
-                  <img src="__SPI__/images/xingWuLiuDongTu.gif" alt="">
+                  <img src="/static/spirit/images/xingWuLiuDongTu.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
@@ -603,7 +649,7 @@
                 <ul class="clearfix">
                   <li class="plan-advantage-item">
                     <div class="plan-advantage-item-img">
-                      <img src="__SPI__/images/plan-advantage1.png" alt="">
+                      <img src="/static/spirit/images/plan-advantage1.png" alt="">
                     </div>
                     <p class="plan-advantage-item-title">降低企业成本</p>
                     <p class="plan-advantage-item-content">
@@ -612,7 +658,7 @@
                   </li>
                   <li>
                     <div class="plan-advantage-item-img">
-                      <img src="__SPI__/images/plan-advantage2.png" alt="">
+                      <img src="/static/spirit/images/plan-advantage2.png" alt="">
                     </div>
                     <p class="plan-advantage-item-title">提高个人收入</p>
                     <p class="plan-advantage-item-content">
@@ -623,7 +669,7 @@
                   </li>
                   <li>
                     <div class="plan-advantage-item-img">
-                      <img src="__SPI__/images/plan-advantage5.png" alt="">
+                      <img src="/static/spirit/images/plan-advantage5.png" alt="">
                     </div>
                     <p class="plan-advantage-item-title">优化用工管理</p>
                     <p class="plan-advantage-item-content">
@@ -655,9 +701,9 @@
               </div>
               <div class="status-industry-wm">
                 <div class="status-industry-wm-imgs status-industry-zx-imgs-icon">
-                  <img class="wm-img-active" src="__SPI__/images/ziXunPingTai1.png" alt="">
-                  <img src="__SPI__/images/ziXunPingTai2.png" alt="">
-                  <img src="__SPI__/images/ziXunPingTai3.png" alt="">
+                  <img class="wm-img-active" src="/static/spirit/images/ziXunPingTai1.png" alt="">
+                  <img src="/static/spirit/images/ziXunPingTai2.png" alt="">
+                  <img src="/static/spirit/images/ziXunPingTai3.png" alt="">
                 </div>
                 <!-- 折叠 -->
                 <div class="status-industry-wm-content" lay-accordion>
@@ -709,7 +755,7 @@
               </div>
               <div class="solution-flow-wm-chart">
                 <div>
-                  <img src="__SPI__/images/wmdongt.gif" alt="">
+                  <img src="/static/spirit/images/wmdongt.gif" alt="">
                 </div>
               </div>
               <div class="solution-footer">
@@ -737,7 +783,7 @@
                 <ul class="clearfix">
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="__SPI__/images/plan-advantage1.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage1.png" alt=""></div>
                       <p>降低企业成本</p>
                       <div>
                         <p>基于国家减税降赋政策</p>
@@ -749,7 +795,7 @@
                   </li>
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="__SPI__/images/plan-advantage5.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage5.png" alt=""></div>
                       <p>优化用工管理</p>
                       <div>
                         <p>将工作任务由传统的按职位划分转变</p>
@@ -761,7 +807,7 @@
                   </li>
                   <li class="plan-advantage-wm-item">
                     <div class="plan-advantage-wm-item-one">
-                      <div><img src="__SPI__/images/plan-advantage3.png" alt=""></div>
+                      <div><img src="/static/spirit/images/plan-advantage3.png" alt=""></div>
                       <p>简单高效安全</p>
                       <div>
                         <p>在线简单高效操作、统一发放报酬、统一报税</p>
@@ -781,13 +827,132 @@
     </div>
 
     <!-- 底部 -->
-    {include file="common/footer"/}
+    <div class="bottomBox">
+    <div class="w bottom">
+        <div class="aboutUs">
+            <span>关于我们</span>
+            <p>
+                惠企云旗下【惠灵工】，立足“互联网+”共享新经济，专业为企业和自由职业者提供灵活用工综合服务平台。
+            </p>
+        </div>
+        <div class="w navBottom">
+            <div class="navList">
+                <dl>
+                    <dt>惠企云旗下产品</dt>
+                    <dd><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></dd>
+                    <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
+                    <dd><a href="javascript:;">惠多薪</a></dd>
+                    <dd><a href="javascript:;">惠创业</a></dd>
+                    <dd><a href="javascript:;">惠找事</a></dd>
+                </dl>
+                <dl>
+                    <dt>惠灵工</dt>
+                    <dd><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></dd>
+                    <dd><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></dd>
+                    <dd><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></dd>
+                    <dd><a href="javascript:;">招商合作</a></dd>
+                </dl>
+                <dl>
+                    <dt>客服热线</dt>
+                    <dd><a href="javascript:;">400-150-9896</a></dd>
+                    <dd><a href="javascript:;">181-8619-4461</a></dd>
+                </dl>
+                <dl>
+                    <dt>办公地址</dt>
+                    <dd><a href="javascript:;">武汉市硚口区南国大武汉H座</a></dd>
+                    <dd><a href="javascript:;">深圳市福田区第一世界广场A座</a></dd>
+                    <dd><a href="javascript:;">北京市西城区贵都国际中心B座</a></dd>
+                </dl>
+            </div>
+
+            <ul class="qrCode">
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weixincode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                    <i>及时获知一手财税信息</i>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weibocode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                    <!-- <i>及时获一手财税信息</i> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+        Reserved&nbsp;ICP证
+        :
+        鄂ICP备16008680号-3</div>
+
+</div>
 
     <!-- 侧边栏bottom资讯 -->
-    {include file="common/left"/}
+    <div class="bottom-left">
+    <div onclick="GetErp();">
+        <div class="bottom-title">咨询方案</div>
+        <!-- <div class="bottom-item">
+            <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
+            <ul>
+                <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
+                <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠多薪</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠找事</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
+                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div>
+        <div class="bottom-title2">联系我们</div>
+        <div class="bottom-item2">
+            <div>
+                <p>立即预约咨询</p>
+                <p>181-8619-4461</p>
+            </div>
+            <div>
+                <p>获取税筹方案</p>
+                <p>400-150-9896</p>
+            </div>
+        </div>
+    </div>
+    <!-- 返回顶部 -->
+    <div class='goTop' id="goTop">
+        <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
+        <div>顶部</div>
+    </div>
+</div>
 
     <!-- 弹窗 -->
-    {include file="common/alert"/}
+    <div class="pop-up-box" id="popbox">
+    <div class="form">
+        <div class="form-titile">
+            <p>方案咨询</p>
+            <span class="turnoff" onclick="turnoff()"></span>
+        </div>
+        <div class="form-content">
+            <div>
+                <div><span class="title">您的姓名</span><input type="text" id="contactName" placeholder="请输入你的名字"></div>
+                <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
+                </div>
+                <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
+                <input type='hidden' id='sources' value='惠灵工'>
+                <input type='hidden' id='identifications' value='灵活用工'>
+                <div class="form-btn" onclick="form_btn()">获取方案</div>
+            </div>
+        </div>
+        <!-- 提交成果后弹窗 -->
+        <div class="mask-box2">
+            <span></span>
+            <p class="mask-box-title">提交成功</p>
+            <p class="mask-box-content">我们会在一个工作日内联系您</p>
+        </div>
+    </div>
+
+</div>
 
     <script>
 

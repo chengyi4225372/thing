@@ -82,7 +82,7 @@ class Index extends BaseController
             $this->assign('keylist', $keylist);
 
             $this->assign('list', $list);
-            $this->assign('title', '惠灵工新闻资讯');
+            $this->assign('title', '用工节税行业新闻_新闻资讯-惠灵工');
 
             return $this->fetch();
         }
@@ -148,7 +148,7 @@ class Index extends BaseController
      */
     public function solution()
     {
-        $this->assign('title', '行业解决方案');
+        $this->assign('title', '用工节税方案_用工减税方案_人力外包节税方案_劳务派遣节税_共享经济平台节税方案_行业解决方案-惠灵工');
         return $this->fetch();
     }
 
@@ -160,7 +160,7 @@ class Index extends BaseController
      */
     public function clientcase()
     {
-        $this->assign('title', '客户案例');
+        $this->assign('title', '用工行业节税案例_用工减税案例_人力外包节税案例_劳务派遣节税_共享经济平台节税案例_客户案例-惠灵工');
         /*
         $data = Workservice::instance()->getclientcase();
         $this->assign('list',$data);
@@ -238,7 +238,7 @@ class Index extends BaseController
      */
     public function productservice()
     {
-        $this->assign('title', '产品服务');
+        $this->assign('title', '用工节税产品_用工减税产品_人力外包节税产品_劳务派遣节税产品_共享经济平台节税产品_用工费用发票_产品服务-惠灵工');
         return $this->fetch();
     }
 
