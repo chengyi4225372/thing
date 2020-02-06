@@ -19,7 +19,8 @@
   <link rel="stylesheet" href="__SPI__/css/footer.css">
   <link rel="stylesheet" href="__SPI__/css/alert.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="__SPI__/js/clamp.js"></script>
+  <script type="text/javascript" src="__SPI__/js/lazysizes.min.js"  async=""></script>
+  <!-- <script src="__SPI__/js/clamp.js"></script> -->
   <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
   <script src="__SPI__/js/spirit.js"></script>
   <script src='__PUBLIC__/common/js/public.js'></script>
@@ -118,7 +119,7 @@
       <div class="w serves clearfix">
         <div class="serve-item fl">
           <div class="serve-item-img firstImg">
-            <img src="__SPI__/images/yonghu2x.png" alt="">
+            <img class="lazyload" data-src="__SPI__/images/yonghu2x.png" alt="">
           </div>
           <div class="serve-item-text">
             <p>领先平台</p>
@@ -131,7 +132,7 @@
         </div>
         <div class="serve-item fl">
           <div class="serve-item-img">
-            <img src="__SPI__/images/qianbao2X.png" alt="">
+            <img class="lazyload" data-src="__SPI__/images/qianbao2X.png" alt="">
           </div>
           <div class="serve-item-text">
             <p>服务保证</p>
@@ -144,7 +145,7 @@
         </div>
         <div class="serve-item fl">
           <div class="serve-item-img">
-            <img src="__SPI__/images/fuwuxing2x.png" alt="">
+            <img class="lazyload" data-src="__SPI__/images/fuwuxing2x.png" alt="">
           </div>
           <div class="serve-item-text">
             <p>高效赋能</p>
@@ -168,7 +169,7 @@
           <ul class="clearfix">
             <li class="difficulty-item">
               <div class="difficulty-item-img">
-                <img src="__SPI__/images/qiyewentishuiwu.jpg" alt="">
+                <img class="lazyload" data-src="__SPI__/images/qiyewentishuiwu.jpg" alt="">
               </div>
               <div class="difficulty-item-title">
                 <p>税务管理压力</p>
@@ -178,7 +179,7 @@
             </li>
             <li class="difficulty-item">
               <div class="difficulty-item-img">
-                <img src="__SPI__/images/qitewentiyewu.jpg" alt="">
+                <img class="lazyload" data-src="__SPI__/images/qitewentiyewu.jpg" alt="">
               </div>
               <div class="difficulty-item-title">
                 <p>业务成本压力</p>
@@ -188,7 +189,7 @@
             </li>
             <li class="difficulty-item">
               <div class="difficulty-item-img">
-                <img src="__SPI__/images/qiyewentiyongren2X.jpg" alt="">
+                <img class="lazyload" data-src="__SPI__/images/qiyewentiyongren2X.jpg" alt="">
               </div>
               <div class="difficulty-item-title">
                 <p>用人成本压力</p>
@@ -198,7 +199,7 @@
             </li>
             <li class="difficulty-item">
               <div class="difficulty-item-img">
-                <img src="__SPI__/images/qiyewentixingxi2X.jpg" alt="">
+                <img class="lazyload" data-src="__SPI__/images/qiyewentixingxi2X.jpg" alt="">
               </div>
               <div class="difficulty-item-title">
                 <p>信息管理挑战</p>
@@ -267,7 +268,7 @@
           <div class="reason-content-items fl">
             <div class="reason-content-item">
               <div class="reason-content-item-img">
-                <img src="__SPI__/images/liyouxuanzhuan@2x.png" alt="">
+                <img class="lazyload" data-src="__SPI__/images/liyouxuanzhuan@2x.png" alt="">
               </div>
               <div class="reason-content-item-text">
                 <p>合法合规</p>
@@ -277,7 +278,7 @@
             </div>
             <div class="reason-content-item">
               <div class="reason-content-item-img">
-                <img src="__SPI__/images/liyouyingbi2x.png" alt="">
+                <img class="lazyload" data-src="__SPI__/images/liyouyingbi2x.png" alt="">
               </div>
               <div class="reason-content-item-text">
                 <p>成本风险控制</p>
@@ -287,7 +288,7 @@
             </div>
             <div class="reason-content-item">
               <div class="reason-content-item-img">
-                <img src="__SPI__/images/liyou3D2x.png" alt="">
+                <img class="lazyload" data-src="__SPI__/images/liyou3D2x.png" alt="">
               </div>
               <div class="reason-content-item-text">
                 <p>三流合一</p>
@@ -296,7 +297,7 @@
             </div>
           </div>
           <div class="reason-content-img">
-            <img src="__SPI__/images/liyou22x.png" alt="">
+            <img class="lazyload" data-src="__SPI__/images/liyou22x.png" alt="">
           </div>
         </div>
       </div>
@@ -312,7 +313,7 @@
           惠灵工服务体系业务逻辑流程图
         </div>
         <div class="process-img">
-          <img src="__SPI__/images/liucheng2x.png" alt="">
+          <img class="lazyload" data-src="__SPI__/images/liucheng2x.png" alt="">
         </div>
       </div>
     </div>
@@ -332,7 +333,7 @@
             <li class="industryItem">
               <div class="itemImg">
                 <div class="shadow"></div>
-                <img src="{$vo.imgs|default=''}" alt="">
+                <img class="lazyload" data-src="{$vo.imgs|default=''}" alt="">
               </div>
 
               <div class="itemContent">
@@ -380,6 +381,7 @@
   </div>
 
 </body>
+
 <script>
   $('.nav ul li').on('click', function () {
     $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')

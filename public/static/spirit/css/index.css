@@ -894,10 +894,7 @@ input::-ms-input-placeholder {
     margin-bottom: 1.25rem;
     padding-top: 1.25rem;
     background: url('../images/fanganbeijing2x.png') no-repeat;
-<<<<<<< HEAD
-=======
     box-sizing: border-box;
->>>>>>> 2e0c8575cce9b05a4c0af64dc209aeedea40b1a4
     background-size: 100% 100%;
     font-size: 2.625rem;
     font-family: "PingFang-SC", "syht";
@@ -1029,10 +1026,7 @@ input::-ms-input-placeholder {
     margin-bottom: 1.25rem;
     padding-top: 1.25rem;
     background: url('../images/liyoubeijing2x.png') no-repeat;
-<<<<<<< HEAD
-=======
     box-sizing: border-box;
->>>>>>> 2e0c8575cce9b05a4c0af64dc209aeedea40b1a4
     background-size: 100% 100%;
     font-size: 2.625rem;
     font-family: "PingFang-SC", "syht";
@@ -1157,10 +1151,7 @@ input::-ms-input-placeholder {
     margin-bottom: 1.8125rem;
     padding-top: 1.25rem;
     background: url('../images/liuchengbeijing2x.png') no-repeat;
-<<<<<<< HEAD
-=======
     box-sizing: border-box;
->>>>>>> 2e0c8575cce9b05a4c0af64dc209aeedea40b1a4
     background-size: 100% 100%;
     font-size: 2.625rem;
     font-family: "PingFang-SC", "syht";
@@ -1208,10 +1199,7 @@ input::-ms-input-placeholder {
     margin-bottom: 1.8125rem;
     padding-top: 1.25rem;
     background: url('../images/hangyezixun2x.png') no-repeat;
-<<<<<<< HEAD
-=======
     box-sizing: border-box;
->>>>>>> 2e0c8575cce9b05a4c0af64dc209aeedea40b1a4
     background-size: 100% 100%;
     font-size: 2.625rem;
     font-family: "PingFang-SC", "syht";
@@ -1488,131 +1476,7 @@ input::-ms-input-placeholder {
     align-items: center;
 }
 
-/* .consulting-item:nth-child(3n+3) {
-    margin-right: 0;
-}
 
-.consulting-item-img {
-    position: relative;
-}
-
-.consulting-item-img img {
-    display: block;
-    width: 100%;
-}
-
-.shade {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-}
-
-.consulting-item-content-box {
-    padding: .625rem 1.25rem .625rem 1.25rem;
-}
-
-.consulting-item-content {
-    height: 11.9375rem;
-    padding-bottom: .625rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .03);
-}
-
-.consulting-item-content-title {
-    height: 4.5rem;
-    font-size: 1.4375rem;
-    font-family: "PingFang-SC","syht";
-    font-weight: 500;
-    color: rgba(0, 0, 0, 1);
-    line-height: 2.25rem;
-    text-overflow: -o-ellipsis-lastline;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    -moz-line-clamp: 2;
-    -moz-box-orient: vertical;
-    -o-line-clamp: 2;
-    -o-box-orient: vertical;
-    -ms-line-clamp: 2;
-    -ms-box-orient: vertical;
-    line-clamp: 2;
-    box-orient: vertical;
-}
-
-.consulting-item-content-time {
-    margin: 1.0625rem 0;
-    font-size: .75rem;
-    font-family: "PingFang-SC","syht";
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.consulting-item-content-details {
-    height: 4.5rem;
-    font-size: .875rem;
-    font-family: "PingFang-SC","syht";
-    font-weight: 400;
-    color: rgba(0, 0, 0, 1);
-    line-height: 1.5rem;
-    opacity: 0.8;
-    display: -webkit-box;
-    overflow: hidden;
-    white-space: normal !important;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    -moz-line-clamp: 3;
-    -moz-box-orient: vertical;
-    -o-line-clamp: 3;
-    -o-box-orient: vertical;
-    -ms-line-clamp: 3;
-    -ms-box-orient: vertical;
-    line-clamp: 3;
-    box-orient: vertical;
-} */
-
-/* .consulting-item-btn-box {
-    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
-    display: -webkit-flex; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 7.5rem;
-    height: 2.5rem;
-    padding: 1px;
-    border-radius: 1.875rem;
-    font-size: .875rem;
-    font-family: "PingFang-SC","syht";
-    font-weight: 400;
-    color: rgba(47, 128, 237, 1);
-    background: linear-gradient(0deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
-    line-height: 2.5rem;
-    text-align: center;
-    z-index: 2;
-    cursor: pointer
-}
-
-.consulting-item-btn {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 1.875rem;
-    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
-}
-
-.consulting-item-btn a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    font-size: .875rem;
-    font-family: "PingFang SC";
-    font-weight: 400;
-    color: rgba(47, 128, 237, 1);
-} */
 
 
 /* 从薪开始 */
@@ -1909,43 +1773,3 @@ input::-ms-input-placeholder {
     color: rgba(255, 255, 255, 1);
 }
 
-/* 返回顶部 */
-/* 
-.goTop {
-    position: fixed;
-    bottom: 6.25rem;
-    right: 8.4375rem;
-    width: 5rem;
-    height: 5rem;
-    text-align: center;
-    z-index: 999;
-    float: right;
-    background-color: red;
-    background-color: #fff;
-    display: none;
-    padding-top: 0.4375rem;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-.goTop i {
-    overflow: hidden;
-    float: right;
-    display: inline-block;
-    width: 2.1875rem;
-    height: 2.5625rem;
-    background-size: contain;
-    background-image: url('../images/goback.png');
-    margin-bottom: .2875rem;
-}
-
-.goTop div {
-    font-size: .875rem;
-    font-family: "PingFang-SC","syht";
-    font-weight: 400;
-    color: rgba(50, 50, 50, 1);
-} */

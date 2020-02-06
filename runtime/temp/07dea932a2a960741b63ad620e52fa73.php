@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1579243491;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1577084715;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1577091472;s:58:"/opt/web/thing/application/home/view/common/leftIndex.html";i:1577091472;s:54:"/opt/web/thing/application/home/view/common/alert.html";i:1577234996;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"/opt/web/thing/public/../application/home/view/index/index.html";i:1580690862;s:54:"/opt/web/thing/application/home/view/common/login.html";i:1580690862;s:55:"/opt/web/thing/application/home/view/common/footer.html";i:1580690862;s:58:"/opt/web/thing/application/home/view/common/leftIndex.html";i:1580690862;s:54:"/opt/web/thing/application/home/view/common/alert.html";i:1580690862;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,9 +99,6 @@
         <?php if(is_array($slideshow) || $slideshow instanceof \think\Collection || $slideshow instanceof \think\Paginator): $i = 0; $__LIST__ = $slideshow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$slide_list): $mod = ($i % 2 );++$i;?>
         <div><img src="<?php echo $slide_list['pic']; ?>"></div>
         <?php endforeach; endif; else: echo "" ;endif; ?>
-<!--        <div><img src="/static/spirit/images/BANNER01.png"></div>
-        <div><img src="/static/spirit/images/BANNER02.png"></div>
-        <div><img src="/static/spirit/images/BANNER03.png"></div>-->
       </div>
     </div>
 
@@ -315,7 +312,7 @@
               </div>
               <div class="reason-content-item-text">
                 <p>三流合一</p>
-                <p>服务流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp资金流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp发票流</p>
+                <p>合同流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp资金流&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp发票流</p>
               </div>
             </div>
           </div>
@@ -345,7 +342,7 @@
     <div class="consulting-box">
       <div class="w consulting">
         <div class="consulting-title">
-          <p>行业资讯</p>
+          <p>新闻资讯</p>
         </div>
         <div class="consulting-text">
           行业动态抢先看，创新与进步只为给您带来卓越体验
@@ -364,7 +361,7 @@
                   <p class="conTitle limit1"><?php echo $vo['title']; ?></p>
                   <p class="conTime"><?php echo $vo['create_time']; ?></p>
                   <p class="conDetail limit2">
-                    <?php echo mb_substr($vo['desc'],0,70,'utf-8'); ?>...
+                    <?php echo mb_substr($vo['desc'],0,70,'utf-8'); ?>
                   </p>
                 </div>
                 <div class="separate"></div>

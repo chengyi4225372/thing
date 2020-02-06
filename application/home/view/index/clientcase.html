@@ -11,7 +11,8 @@
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>{$title|default=''}</title>
     <meta name="keywords" content="合规用工,自由务工,用工节税案例,用工减税案例,人力外包节税案例,劳务用工节税案例,劳务众包减税案例,税务筹划案例,财税规划案例,共享经济平台节税案例,惠灵工" />
-  <meta name="description" content="惠灵工已服务全国各地众多行业,设计并落地实施众多行业用工合法节税案例,用工合法避税案例,劳务用工节税案例,企业用工减税案例,税务筹划案例,用工财税规划案例,共享经济平台节税案例等众多行业用工税筹案例。">
+    <meta name="description"
+        content="惠灵工已服务全国各地众多行业,设计并落地实施众多行业用工合法节税案例,用工合法避税案例,劳务用工节税案例,企业用工减税案例,税务筹划案例,用工财税规划案例,共享经济平台节税案例等众多行业用工税筹案例。">
     <link rel="stylesheet" href="__SPI__/css/base.css">
     <link rel="stylesheet" href="__SPI__/font/syht.css">
     <link rel="stylesheet" href="__SPI__/css/clientcase.css">
@@ -21,9 +22,9 @@
     <link rel="stylesheet" href="__SPI__/css/left.css">
     <link rel="stylesheet" href="__SPI__/css/news.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="__SPI__/js/clamp.js"></script>
+    <script type="text/javascript" src="__SPI__/js/lazysizes.min.js" async=""></script>
+    <!-- <script src="__SPI__/js/clamp.js"></script> -->
     <script src='__SPI__/js/clientcase.js'></script>
-
     <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
     <script src="__SPI__/js/spirit.js"></script>
     <script src='__PUBLIC__/common/js/public.js'></script>
@@ -74,7 +75,7 @@
                 <!--</div>-->
                 <!--{/if}-->
                 <!--登陆注册-->
-        <!-- {include file="common/login"} -->
+                <!-- {include file="common/login"} -->
             </div>
 
         </div>
@@ -107,7 +108,7 @@
                     <li>
                         <a href="{:url('/home/index/casedetail',['id'=>$vo.id])}">
                             <div class="item-img">
-                                <img src="{$vo.imgs?$vo.imgs:''}" alt="">
+                                <img src="" class="lazyload" data-src="{$vo.imgs?$vo.imgs:''}" alt="">
                             </div>
                             <div class="item-content">
                                 <p class="limit1">{$vo.title}</p>
@@ -118,144 +119,6 @@
                     </li>
                     {/volist}
 
-                    <!--
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="__SPI__/images/clientcaseitem2.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    揭秘网红一哥李佳琦千万收入的合理避税方案
-                                </p>
-                                <p>
-                                    公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="__SPI__/images/clientcaseitem3.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    灵活用工市场潜力爆发,惠灵工让青年白领用工更加高效
-                                </p>
-                                <p>
-                                    最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
-                                </p>
-
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="__SPI__/images/clientcaseitem4.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    直销类企业如何避免税务合规风险，提升企业劳动力效能？
-                                </p>
-                                <p>
-                                    随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始倾向多元化用工方式。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="__SPI__/images/clientcaseitem5.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    揭秘网红一哥李佳琦千万收入的合理避税方案
-                                </p>
-                                <p>
-                                    公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="__SPI__/images/clientcaseitem6.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    灵活用工市场潜力爆发,惠灵工让青年白领用工更加高效
-                                </p>
-                                <p>
-                                    最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="__SPI__/images/clientcaseitem7.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    直销类企业如何避免税务合规风险，提升企业劳动力效能？
-                                </p>
-                                <p>
-                                    随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始倾向多元化用工方式。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="__SPI__/images/clientcaseitem8.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    揭秘网红一哥李佳琦千万收入的合理避税方案
-                                </p>
-                                <p>
-                                    公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="__SPI__/images/clientcaseitem9.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    灵活用工市场潜力爆发,惠灵工让青年白领用工更加高效
-                                </p>
-                                <p>
-                                    最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    -->
                 </ul>
             </div>
         </div>
@@ -264,10 +127,10 @@
         <div class="pageNation">
             {$list->render();}
             <!--<ul class="page">-->
-                <!--<li class="prev">上一页</li>-->
-                <!--<li class="currentPage">1</li>-->
-                <!--<li>2</li>-->
-                <!--<li class="next">下一页</li>-->
+            <!--<li class="prev">上一页</li>-->
+            <!--<li class="currentPage">1</li>-->
+            <!--<li>2</li>-->
+            <!--<li class="next">下一页</li>-->
             <!--</ul>-->
         </div>
     </div>
@@ -281,42 +144,45 @@
 
     <!-- 弹窗 -->
     {include file="common/alert"/}
+    
+
+    <script>
+
+        $(function () {
+
+            $('.nav ul li').on('click', function () {
+                $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
+            })
+            $('.nav ul li').on('mouseenter', function () {
+                $(this).addClass('nav-active').siblings().removeClass('nav-active')
+            })
+            $('.nav-box').on('mouseleave', function () {
+                $('.nav ul li').removeClass('nav-active')
+                if ($('.chosenPage').length < 1) $('.nav ul li').eq(3).addClass('chosenPage')
+
+                $('.chosenPage').addClass('nav-active')
+            })
+
+            $('.tab ul li').on('click', function () {
+                $('.tabCon img').attr('src', `__SPI__/images/${$(this).index()}case.png`)
+                $('.tabTitle').html($(this).children().html())
+                $(this).addClass('activeTab').siblings().removeClass('activeTab')
+            })
+
+            $('.limit1').each(function () {
+                if ($(this).text().length > 31) {
+                    $(this).text($(this).text().slice(0, 31) + '...');
+                }
+            })
+
+            $('.limit2').each(function () {
+                if ($(this).text().length > 63) {
+                    $(this).text($(this).text().slice(0, 63) + '...');
+                }
+            })
+        })
+    </script>
 </body>
-<script>
 
-    $(function () {
-
-        $('.nav ul li').on('click', function () {
-            $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
-        })
-        $('.nav ul li').on('mouseenter', function () {
-            $(this).addClass('nav-active').siblings().removeClass('nav-active')
-        })
-        $('.nav-box').on('mouseleave', function () {
-            $('.nav ul li').removeClass('nav-active')
-            if ($('.chosenPage').length < 1) $('.nav ul li').eq(3).addClass('chosenPage')
-
-            $('.chosenPage').addClass('nav-active')
-        })
-
-        $('.tab ul li').on('click', function () {
-            $('.tabCon img').attr('src', `__SPI__/images/${$(this).index()}case.png`)
-            $('.tabTitle').html($(this).children().html())
-            $(this).addClass('activeTab').siblings().removeClass('activeTab')
-        })
-
-        $('.limit1').each(function () {
-            if ($(this).text().length > 31) {
-                $(this).text($(this).text().slice(0, 31) + '...');
-            }
-        })
-
-        $('.limit2').each(function () {
-            if ($(this).text().length > 63) {
-                $(this).text($(this).text().slice(0, 63) + '...');
-            }
-        })
-    })
-</script>
 
 </html>
