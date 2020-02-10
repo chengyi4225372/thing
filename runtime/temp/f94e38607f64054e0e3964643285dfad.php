@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:86:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/productservice.html";i:1580699706;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/logo.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/left.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1580699706;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:86:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/productservice.html";i:1581323014;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/logo.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1581319705;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +11,10 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
+    <meta name="keywords"
+        content="规避用工风险,项目外包,自由职业增收,斜杠青年,用工节税产品,用工减税产品,人力外包节税产品,劳务派遣节税产品,工资代发,薪筹代发,共享经济平台节税产品,劳务众包服务,社会化用工服务,惠灵工" />
+    <meta name="description"
+        content="惠灵工为企业量身定制合法合规的用工节税产品,用工减税产品,人力外包节税产品,劳务派遣节税产品,收入结算产品,人工智能报税,共享经济平台节税产品等综合服务,帮助企业破解用工风险,税收筹划优化,社保改革入稅,合规节税,降低用工成本,提升企业市场竞争力。">
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
     <link rel="stylesheet" href="/static/spirit/font/syht.css">
@@ -20,7 +24,8 @@
     <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
     <link rel="stylesheet" href="/static/spirit/css/left.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="/static/spirit/js/clamp.js"></script>
+    <script type="text/javascript" src="/static/spirit/js/lazysizes.min.js" async=""></script>
+    <!-- <script src="/static/spirit/js/clamp.js"></script> -->
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src="/static/spirit/js/spirit.js"></script>
     <script src='/static/common/js/public.js'></script>
@@ -164,7 +169,7 @@
                     <p>创新灵活用工、财税优化解决方案-打通应用工具与服务，提升企业劳动力管<br>理能力-打造国内领先标准化灵活用工综合服务体系</p>
                 </div>
                 <div class="serves-title-img">
-                    <img src="/static/spirit/images/servestitleimg.png" alt="">
+                    <img class="lazyload" data-src="/static/spirit/images/servestitleimg.png" alt="">
                 </div>
             </div>
         </div>
@@ -176,53 +181,53 @@
                     <li class="difficulty1-items">
                         <div class="difficulty1-left">
                             <div>
-                                <span><img src="/static/spirit/images/IconHZPT.png" alt=""></span>
+                                <span><img class="lazyload" data-src="/static/spirit/images/IconHZPT.png" alt=""></span>
                                 <p>合作平台化</p>
                             </div>
                             <div></div>
                             <div>转型传统雇佣模式， 企业和个人（创客）分别与平台签订协议，责任职责明确。</div>
                         </div>
                         <div class="difficulty1-right">
-                            <img src="/static/spirit/images/imgHZPT.png" alt="">
+                            <img class="lazyload" data-src="/static/spirit/images/imgHZPT.png" alt="">
                         </div>
                     </li>
                     <li class="difficulty1-items">
                         <div class="difficulty1-left">
                             <div>
-                                <span><img src="/static/spirit/images/IconXTZNH.png" alt=""></span>
+                                <span><img class="lazyload" data-src="/static/spirit/images/IconXTZNH.png" alt=""></span>
                                 <p>系统智能化</p>
                             </div>
                             <div></div>
                             <div>专业智能系统满足订单接发、身份查验等操作，在线获取专业财税服务，助力企业发展。</div>
                         </div>
                         <div class="difficulty1-right">
-                            <img src="/static/spirit/images/imgXTZNH.png" alt="">
+                            <img class="lazyload" data-src="/static/spirit/images/imgXTZNH.png" alt="">
                         </div>
                     </li>
                     <li class="difficulty1-items">
                         <div class="difficulty1-left">
                             <div>
-                                <span><img src="/static/spirit/images/IconFWHGH.png" alt=""></span>
+                                <span><img class="lazyload" data-src="/static/spirit/images/IconFWHGH.png" alt=""></span>
                                 <p>服务合规化</p>
                             </div>
                             <div></div>
                             <div>基于诚信纳税法律义务，个人（创客）享受更低个税核定，企业取得合规发票，劳务成本转为项目承包费用，项目外包转移风险，解决社保问题。</div>
                         </div>
                         <div class="difficulty1-right">
-                            <img src="/static/spirit/images/imgFWHGH.png" alt="">
+                            <img class="lazyload" data-src="/static/spirit/images/imgFWHGH.png" alt="">
                         </div>
                     </li>
                     <li class="difficulty1-items">
                         <div class="difficulty1-left">
                             <div>
-                                <span><img src="/static/spirit/images/IconYYGXH.png" alt=""></span>
+                                <span><img class="lazyload" data-src="/static/spirit/images/IconYYGXH.png" alt=""></span>
                                 <p>运营高效化</p>
                             </div>
                             <div></div>
                             <div>资深法务、税筹专家一对一，服务流、资金流、发票流一站式解决，释放职能部门，聚焦业务，提升企业效能。</div>
                         </div>
                         <div class="difficulty1-right">
-                            <img src="/static/spirit/images/imgYYGXH.png" alt="">
+                            <img class="lazyload" data-src="/static/spirit/images/imgYYGXH.png" alt="">
                         </div>
                     </li>
                 </ul>
@@ -230,7 +235,7 @@
         </div>
         <div class="difficulty-box2">
             <div class="w difficulty-box2-content">
-                <div><img src="/static/spirit/images/difficulty-box2Icon.png" alt=""></div>
+                <div><img class="lazyload" data-src="/static/spirit/images/difficulty-box2Icon.png" alt=""></div>
                 <div>企业将业务在线发布于惠灵工平台，提出任务的要求和标准。个人（创客）在线进行工单接取、业务自动申报等操作。平台将为企业和个人提供自动审核、高效结算等智能化服务。</div>
             </div>
         </div>
@@ -245,7 +250,7 @@
                     <p>平台的合作流程规范，简单四步轻松搞定。惠灵工服务让企业/个人操作更简<br>单、稳定、合规、安全、高效！</p>
                 </div>
                 <div class="project-content-img">
-                    <img src="/static/spirit/images/pingTaiFuLiuChengDtu.png" alt="">
+                    <img class="lazyload" data-src="/static/spirit/images/pingTaiFuLiuChengDtu.png" alt="">
                 </div>
             </div>
         </div>
@@ -265,7 +270,7 @@
                     <ul class="clearfix">
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/zhiXiaoHangye.png" alt="">
+                                <img class="lazyload" data-src="/static/spirit/images/zhiXiaoHangye.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>直销行业</h3>
@@ -274,7 +279,7 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/waiMaiHangYe.png" alt="">
+                                <img class="lazyload" data-src="/static/spirit/images/waiMaiHangYe.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>外卖行业</h3>
@@ -283,7 +288,7 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/dianShangPingtai.png" alt="">
+                                <img class="lazyload" data-src="/static/spirit/images/dianShangPingtai.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>电商平台</h3>
@@ -292,7 +297,7 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/zhiBoHangye.png" alt="">
+                                <img class="lazyload" data-src="/static/spirit/images/zhiBoHangye.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>直播行业</h3>
@@ -301,7 +306,7 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/xingWUliuHangye.png" alt="">
+                                <img class="lazyload" data-src="/static/spirit/images/xingWUliuHangye.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>新物流行业</h3>
@@ -310,7 +315,7 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/ziXunPeiXunPingtai.png" alt="">
+                                <img class="lazyload" data-src="/static/spirit/images/ziXunPeiXunPingtai.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>咨询培训平台</h3>
@@ -319,7 +324,7 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/xingLingShouHangye.png" alt="">
+                                <img class="lazyload" data-src="/static/spirit/images/xingLingShouHangye.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>新零售行业</h3>
@@ -328,7 +333,7 @@
                         </li>
                         <li>
                             <div class="reason-content-img">
-                                <img src="/static/spirit/images/zhiZaoHangYe.png" alt="">
+                                <img class="lazyload" data-src="/static/spirit/images/zhiZaoHangYe.png" alt="">
                             </div>
                             <div class="reason-content-text">
                                 <h3>制造行业</h3>
@@ -343,7 +348,7 @@
         <!-- 联系我们 -->
         <div class="cellme-box">
             <div class="w cellme">
-                <div onclick="GetErp()">立即咨询</div>
+                <div onclick="GetErp('底部服务中心','惠灵工产品服务')">立即咨询</div>
             </div>
         </div>
 
@@ -411,43 +416,30 @@
 
 </div>
 
-
-
         <!-- 侧边栏bottom资讯 -->
         <div class="bottom-left">
-    <div onclick="GetErp();">
-        <div class="bottom-title">咨询方案</div>
-        <!-- <div class="bottom-item">
-            <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
-            <ul>
-                <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
-                <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠多薪</a></li>
-                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠找事</a></li>
-                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
-                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
-            </ul>
-        </div> -->
-    </div>
-    <div>
-        <div class="bottom-title2">联系我们</div>
-        <div class="bottom-item2">
-            <div>
-                <p>立即预约咨询</p>
-                <p>181-8619-4461</p>
+            <div onclick="GetErp('右导航','惠灵工产品服务');">
+                <div class="bottom-title">咨询方案</div>
             </div>
             <div>
-                <p>获取税筹方案</p>
-                <p>400-150-9896</p>
+                <div class="bottom-title2">联系我们</div>
+                <div class="bottom-item2">
+                    <div>
+                        <p>立即预约咨询</p>
+                        <p>181-8619-4461</p>
+                    </div>
+                    <div>
+                        <p>获取税筹方案</p>
+                        <p>400-150-9896</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 返回顶部 -->
+            <div class='goTop' id="goTop">
+                <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
+                <div>顶部</div>
             </div>
         </div>
-    </div>
-    <!-- 返回顶部 -->
-    <div class='goTop' id="goTop">
-        <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
-        <div>顶部</div>
-    </div>
-</div>
 
         <!-- 弹窗 -->
         <div class="pop-up-box" id="popbox">
@@ -462,8 +454,8 @@
                 <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
                 </div>
                 <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
-                <input type='hidden' id='sources' value='惠灵工'>
-                <input type='hidden' id='identifications' value='灵活用工'>
+                <input type='hidden' id='sources' >
+                <input type='hidden' id='identifications'>
                 <div class="form-btn" onclick="form_btn()">获取方案</div>
             </div>
         </div>
@@ -479,21 +471,22 @@
 
 
     </div>
+    
+    <script>
+        $('.nav ul li').on('click', function () {
+            $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
+        })
+        $('.nav ul li').on('mouseenter', function () {
+            $(this).addClass('nav-active').siblings().removeClass('nav-active')
+        })
+        $('.nav-box').on('mouseleave', function () {
+            $('.nav ul li').removeClass('nav-active')
+            if ($('.chosenPage').length < 1) $('.nav ul li').eq(1).addClass('chosenPage')
 
+            $('.chosenPage').addClass('nav-active')
+        })
+    </script>
 </body>
-<script>
-    $('.nav ul li').on('click', function () {
-        $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
-    })
-    $('.nav ul li').on('mouseenter', function () {
-        $(this).addClass('nav-active').siblings().removeClass('nav-active')
-    })
-    $('.nav-box').on('mouseleave', function () {
-        $('.nav ul li').removeClass('nav-active')
-        if ($('.chosenPage').length < 1) $('.nav ul li').eq(1).addClass('chosenPage')
 
-        $('.chosenPage').addClass('nav-active')
-    })
-</script>
 
 </html>

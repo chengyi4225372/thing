@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:82:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/clientcase.html";i:1580793314;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/logo.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/left.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1580699706;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:82:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/clientcase.html";i:1581323188;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/logo.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1581319705;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,8 @@
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
     <meta name="keywords" content="合规用工,自由务工,用工节税案例,用工减税案例,人力外包节税案例,劳务用工节税案例,劳务众包减税案例,税务筹划案例,财税规划案例,共享经济平台节税案例,惠灵工" />
-  <meta name="description" content="惠灵工已服务全国各地众多行业,设计并落地实施众多行业用工合法节税案例,用工合法避税案例,劳务用工节税案例,企业用工减税案例,税务筹划案例,用工财税规划案例,共享经济平台节税案例等众多行业用工税筹案例。">
+    <meta name="description"
+        content="惠灵工已服务全国各地众多行业,设计并落地实施众多行业用工合法节税案例,用工合法避税案例,劳务用工节税案例,企业用工减税案例,税务筹划案例,用工财税规划案例,共享经济平台节税案例等众多行业用工税筹案例。">
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/font/syht.css">
     <link rel="stylesheet" href="/static/spirit/css/clientcase.css">
@@ -22,9 +23,9 @@
     <link rel="stylesheet" href="/static/spirit/css/left.css">
     <link rel="stylesheet" href="/static/spirit/css/news.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="/static/spirit/js/clamp.js"></script>
+    <script type="text/javascript" src="/static/spirit/js/lazysizes.min.js" async=""></script>
+    <!-- <script src="/static/spirit/js/clamp.js"></script> -->
     <script src='/static/spirit/js/clientcase.js'></script>
-
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src="/static/spirit/js/spirit.js"></script>
     <script src='/static/common/js/public.js'></script>
@@ -102,7 +103,7 @@
                 <!--</div>-->
                 <!--<?php endif; ?>-->
                 <!--登陆注册-->
-        <!-- <?php if(empty($userinfo['mobile'])): ?>
+                <!-- <?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
             登录
@@ -155,7 +156,7 @@
                     <li>
                         <a href="<?php echo url('/home/index/casedetail',['id'=>$vo['id']]); ?>">
                             <div class="item-img">
-                                <img src="<?php echo !empty($vo['imgs'])?$vo['imgs']:''; ?>" alt="">
+                                <img src="" class="lazyload" data-src="<?php echo !empty($vo['imgs'])?$vo['imgs']:''; ?>" alt="">
                             </div>
                             <div class="item-content">
                                 <p class="limit1"><?php echo $vo['title']; ?></p>
@@ -166,144 +167,6 @@
                     </li>
                     <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
 
-                    <!--
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem2.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    揭秘网红一哥李佳琦千万收入的合理避税方案
-                                </p>
-                                <p>
-                                    公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem3.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    灵活用工市场潜力爆发,惠灵工让青年白领用工更加高效
-                                </p>
-                                <p>
-                                    最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
-                                </p>
-
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem4.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    直销类企业如何避免税务合规风险，提升企业劳动力效能？
-                                </p>
-                                <p>
-                                    随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始倾向多元化用工方式。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem5.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    揭秘网红一哥李佳琦千万收入的合理避税方案
-                                </p>
-                                <p>
-                                    公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem6.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    灵活用工市场潜力爆发,惠灵工让青年白领用工更加高效
-                                </p>
-                                <p>
-                                    最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem7.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    直销类企业如何避免税务合规风险，提升企业劳动力效能？
-                                </p>
-                                <p>
-                                    随着中国经济进入新常态，国内经济结构发生变化，在互联网与科技发展之下，众多如服务、新零售、互联网等行业开始倾向多元化用工方式。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem8.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    揭秘网红一哥李佳琦千万收入的合理避税方案
-                                </p>
-                                <p>
-                                    公开数据显示，双11全天，淘宝直播带来的成交接近200亿，超过10个直播间引导成交过亿。随着李佳琦和薇娅的走红。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="item-img">
-                                <img src="/static/spirit/images/clientcaseitem9.png" alt="">
-                            </div>
-                            <div class="item-content">
-                                <p>
-                                    灵活用工市场潜力爆发,惠灵工让青年白领用工更加高效
-                                </p>
-                                <p>
-                                    最新调查发现，企业招聘的灵活用工人才大多为中高层管理人员，有时甚至是领导层人员。向着白领、金领以及一些高端技术岗位蔓延。
-                                </p>
-                            </div>
-                            <div class="item-comtent-more">查看详情</div>
-
-                        </a>
-                    </li>
-                    -->
                 </ul>
             </div>
         </div>
@@ -312,10 +175,10 @@
         <div class="pageNation">
             <?php echo $list->render();; ?>
             <!--<ul class="page">-->
-                <!--<li class="prev">上一页</li>-->
-                <!--<li class="currentPage">1</li>-->
-                <!--<li>2</li>-->
-                <!--<li class="next">下一页</li>-->
+            <!--<li class="prev">上一页</li>-->
+            <!--<li class="currentPage">1</li>-->
+            <!--<li>2</li>-->
+            <!--<li class="next">下一页</li>-->
             <!--</ul>-->
         </div>
     </div>
@@ -387,39 +250,28 @@
 
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-    <div onclick="GetErp();">
-        <div class="bottom-title">咨询方案</div>
-        <!-- <div class="bottom-item">
-            <div class="hqy"><a href="<?php echo config('curl.website'); ?>">惠企云</a></div>
-            <ul>
-                <li><a href="<?php echo config('curl.hys'); ?>">惠优税</a></li>
-                <li><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
-                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠多薪</a></li>
-                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠找事</a></li>
-                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠创业</a></li>
-                <li><a href="javascript:void(0)" style="color: rgba(220, 220, 220, 0.6);cursor: default; border-bottom: 1px solid rgba(220, 220, 220, 0.6);">惠企动</a></li>
-            </ul>
-        </div> -->
-    </div>
-    <div>
-        <div class="bottom-title2">联系我们</div>
-        <div class="bottom-item2">
-            <div>
-                <p>立即预约咨询</p>
-                <p>181-8619-4461</p>
-            </div>
-            <div>
-                <p>获取税筹方案</p>
-                <p>400-150-9896</p>
+        <div onclick="GetErp('右导航','惠灵工客户案例');">
+            <div class="bottom-title">咨询方案</div>
+        </div>
+        <div>
+            <div class="bottom-title2">联系我们</div>
+            <div class="bottom-item2">
+                <div>
+                    <p>立即预约咨询</p>
+                    <p>181-8619-4461</p>
+                </div>
+                <div>
+                    <p>获取税筹方案</p>
+                    <p>400-150-9896</p>
+                </div>
             </div>
         </div>
+        <!-- 返回顶部 -->
+        <div class='goTop' id="goTop">
+            <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
+            <div>顶部</div>
+        </div>
     </div>
-    <!-- 返回顶部 -->
-    <div class='goTop' id="goTop">
-        <div><img src="/static/spirit/images/top@2x.png" alt=""></div>
-        <div>顶部</div>
-    </div>
-</div>
 
     <!-- 弹窗 -->
     <div class="pop-up-box" id="popbox">
@@ -434,8 +286,8 @@
                 <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
                 </div>
                 <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
-                <input type='hidden' id='sources' value='惠灵工'>
-                <input type='hidden' id='identifications' value='灵活用工'>
+                <input type='hidden' id='sources' >
+                <input type='hidden' id='identifications'>
                 <div class="form-btn" onclick="form_btn()">获取方案</div>
             </div>
         </div>
@@ -448,42 +300,45 @@
     </div>
 
 </div>
+    
+
+    <script>
+
+        $(function () {
+
+            $('.nav ul li').on('click', function () {
+                $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
+            })
+            $('.nav ul li').on('mouseenter', function () {
+                $(this).addClass('nav-active').siblings().removeClass('nav-active')
+            })
+            $('.nav-box').on('mouseleave', function () {
+                $('.nav ul li').removeClass('nav-active')
+                if ($('.chosenPage').length < 1) $('.nav ul li').eq(3).addClass('chosenPage')
+
+                $('.chosenPage').addClass('nav-active')
+            })
+
+            $('.tab ul li').on('click', function () {
+                $('.tabCon img').attr('src', `/static/spirit/images/${$(this).index()}case.png`)
+                $('.tabTitle').html($(this).children().html())
+                $(this).addClass('activeTab').siblings().removeClass('activeTab')
+            })
+
+            $('.limit1').each(function () {
+                if ($(this).text().length > 31) {
+                    $(this).text($(this).text().slice(0, 31) + '...');
+                }
+            })
+
+            $('.limit2').each(function () {
+                if ($(this).text().length > 63) {
+                    $(this).text($(this).text().slice(0, 63) + '...');
+                }
+            })
+        })
+    </script>
 </body>
-<script>
 
-    $(function () {
-
-        $('.nav ul li').on('click', function () {
-            $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
-        })
-        $('.nav ul li').on('mouseenter', function () {
-            $(this).addClass('nav-active').siblings().removeClass('nav-active')
-        })
-        $('.nav-box').on('mouseleave', function () {
-            $('.nav ul li').removeClass('nav-active')
-            if ($('.chosenPage').length < 1) $('.nav ul li').eq(3).addClass('chosenPage')
-
-            $('.chosenPage').addClass('nav-active')
-        })
-
-        $('.tab ul li').on('click', function () {
-            $('.tabCon img').attr('src', `/static/spirit/images/${$(this).index()}case.png`)
-            $('.tabTitle').html($(this).children().html())
-            $(this).addClass('activeTab').siblings().removeClass('activeTab')
-        })
-
-        $('.limit1').each(function () {
-            if ($(this).text().length > 31) {
-                $(this).text($(this).text().slice(0, 31) + '...');
-            }
-        })
-
-        $('.limit2').each(function () {
-            if ($(this).text().length > 63) {
-                $(this).text($(this).text().slice(0, 63) + '...');
-            }
-        })
-    })
-</script>
 
 </html>

@@ -172,7 +172,7 @@ class Workservice
         }
         $w = ['id' => $id];
         $info = Work::instance()->where($w)->find();
-        if(count($info) == 0) return [];
+       // if(count($info) == 0) return [];
         $info['keyword2'] = $info['keyword'];
         $info['keyword'] = explode(',',$info['keyword']);
         return $info;

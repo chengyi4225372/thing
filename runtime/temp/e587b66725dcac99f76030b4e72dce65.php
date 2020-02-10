@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:80:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/solution.html";i:1580699706;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/logo.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/left.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1580699706;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:80:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/solution.html";i:1581322388;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/logo.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/left.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1581319705;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +11,8 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title><?php echo (isset($title) && ($title !== '')?$title:''); ?></title>
+  <meta name="keywords" content="用工节税方案,用工减税方案,人力外包节税方案,劳务派遣节税,共享经济平台节税,如何降低用工成本,如何减少用工税费,惠灵工" />
+  <meta name="description" content="惠灵工行业解决方案基于互联网技术和生态,对各垂直产业链和价值链进行重塑和改造,实现企业数字化和产业平台化,降低用工税务成本,满足灵活用工费用结算支付、开票和代扣税等场景需求,帮助自由职业者和企业实现社会化用工并同步提供税务筹划服务。">
   <link rel="stylesheet" href="/static/spirit/css/base.css">
   <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
   <link rel="stylesheet" href="/static/spirit/font/syht.css">
@@ -20,7 +22,7 @@
   <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
   <link rel="stylesheet" href="/static/spirit/css/left.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="/static/spirit/js/clamp.js"></script>
+  <!-- <script src="/static/spirit/js/clamp.js"></script> -->
   <script src='/static/spirit/js/solution.js'></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script src="/static/spirit/js/spirit.js"></script>
@@ -182,7 +184,7 @@
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-wm-item-content-icon  wm-item-show">
                       <p>行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，对用工环节风险防范非常薄弱，风险盲区凸显，机构责任压力巨大。</p>
-                      <div><span onclick="showSearch()">立即咨询</span></div>
+                      <div><span onclick="showSearch('外卖行业现状','惠灵工行业方案')">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
@@ -191,7 +193,7 @@
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-wm-item-content-icon">
                       <p>外卖配送业务属刚需业务，但是门槛低，准入要求不高，员工素质参差不齐，员工流动性大。</p>
-                      <div><span onclick="showSearch()">立即咨询</span></div>
+                      <div><span onclick="showSearch('外卖行业现状','惠灵工行业方案')">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
@@ -200,7 +202,7 @@
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-wm-item-content-icon">
                       <p>配送平台打款周期不定、存在多卡发薪等不合规的形式，影响骑手正常务工保障。</p>
-                      <div><span onclick="showSearch()">立即咨询</span></div>
+                      <div><span onclick="showSearch('外卖行业现状','惠灵工行业方案')">立即咨询</span></div>
                     </div>
                   </div>
                 </div>
@@ -304,7 +306,7 @@
                         <p>
                           行业多种模式并存，主体关系混乱（全职、兼职、临时工），统一标准化合同缺乏，用工风险盲区凸显，机构责任压力巨大。
                         </p>
-                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch('新物流行业现状','惠灵工行业方案')">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -319,7 +321,7 @@
                         <p>
                           劳动力成本上涨，用工压力越来越大，企业对人员安排配置提出更高要求。
                         </p>
-                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch('新物流行业现状','惠灵工行业方案')">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -334,7 +336,7 @@
                         <p>
                           物流务工人员准入要求不高，员工素质参差不齐，员工流动性大。
                         </p>
-                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch('新物流行业现状','惠灵工行业方案')">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -440,7 +442,7 @@
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-xls-item-content-icon wm-item-show">
                       <p>零售业岗位结构相对单一、工作门槛低、成长空间有限，人员流动性大。</p>
-                      <div><span onclick="showSearch()">立即咨询</span></div>
+                      <div><span onclick="showSearch('新零售行业现状','惠灵工行业方案')">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
@@ -449,7 +451,7 @@
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-xls-item-content-icon">
                       <p>线下店面的业务配置大量员工，五险一金和福利，企业用工成本高。</p>
-                      <div><span onclick="showSearch()">立即咨询</span></div>
+                      <div><span onclick="showSearch('新零售行业现状','惠灵工行业方案')">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
@@ -458,7 +460,7 @@
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-xls-item-content-icon">
                       <p>分销人员缺乏统一管理，统一标准化合同缺乏，企业面临用工风险、财税合规等问题。</p>
-                      <div><span onclick="showSearch()">立即咨询</span></div>
+                      <div><span onclick="showSearch('新零售行业现状','惠灵工行业方案')">立即咨询</span></div>
                     </div>
                   </div>
                 </div>
@@ -574,7 +576,7 @@
                         <p>
                           企业用工季节性需求波动大，劳动力市场匹配度较差。
                         </p>
-                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch('制造业行业现状','惠灵工行业方案')">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -589,7 +591,7 @@
                         <p>
                           企业人员规模大、区域多且分散，集中管控难，流程和制度的标准化比较差。
                         </p>
-                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch('制造业行业现状','惠灵工行业方案')">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -604,7 +606,7 @@
                         <p>
                           行业多种模式并存，主体关系混乱（全职、临时工等），统一标准化合同缺乏，企业用工风险高。
                         </p>
-                        <div><a href="javascript:;" onclick="showSearch()">了解更多</a></div>
+                        <div><a href="javascript:;" onclick="showSearch('制造业行业现状','惠灵工行业方案')">了解更多</a></div>
                       </div>
                     </div>
                   </li>
@@ -713,7 +715,7 @@
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-zx-item-content-icon wm-item-show">
                       <p>目前教育培训行业多种模式并存，主体关系混乱，统一的标准化制式合同缺乏，企业面临用工合规问题</p>
-                      <div><span onclick="showSearch()">立即咨询</span></div>
+                      <div><span onclick="showSearch('咨询培训行业现状','惠灵工行业方案')">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
@@ -722,7 +724,7 @@
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-zx-item-content-icon">
                       <p>平台专家顾问等高收入人群个税高，人员波动大，与平台粘性低。</p>
-                      <div><span onclick="showSearch()">立即咨询</span></div>
+                      <div><span onclick="showSearch('咨询培训行业现状','惠灵工行业方案')">立即咨询</span></div>
                     </div>
                   </div>
                   <div class="status-industry-wm-item">
@@ -731,7 +733,7 @@
                     </h2>
                     <div class="status-industry-wm-item-content status-industry-zx-item-content-icon">
                       <p>大量兼职用工等形式，劳动力变化频繁，用工事务繁杂程度。</p>
-                      <div><span onclick="showSearch()">立即咨询</span></div>
+                      <div><span onclick="showSearch('咨询培训行业现状','惠灵工行业方案')">立即咨询</span></div>
                     </div>
                   </div>
                 </div>
@@ -939,8 +941,8 @@
                 <div><span class="title">联系方式</span><input type="text" id="contactMobile" placeholder="请输入你的联系方式">
                 </div>
                 <div><span class="title">您的公司</span><input type="text" id="companyName" placeholder="请输入你的公司"></div>
-                <input type='hidden' id='sources' value='惠灵工'>
-                <input type='hidden' id='identifications' value='灵活用工'>
+                <input type='hidden' id='sources' >
+                <input type='hidden' id='identifications'>
                 <div class="form-btn" onclick="form_btn()">获取方案</div>
             </div>
         </div>

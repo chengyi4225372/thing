@@ -1,0 +1,21 @@
+---------------------------------------------------------------
+[ 2020-02-10T16:27:43+08:00 ] 0.0.0.0 GET /home/index/detail.html?mid=23
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/zhanwen/Desktop/thing/application/v1/service/Workservice.php:175]
+---------------------------------------------------------------
+[ 2020-02-10T16:27:54+08:00 ] 0.0.0.0 GET /home/index/detail.html?mid=22
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/zhanwen/Desktop/thing/application/v1/service/Workservice.php:175]
+---------------------------------------------------------------
+[ 2020-02-10T16:28:10+08:00 ] 0.0.0.0 GET /home/index/detail.html?mid=5
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/zhanwen/Desktop/thing/application/v1/service/Workservice.php:175]
+---------------------------------------------------------------
+[ 2020-02-10T16:28:31+08:00 ] 0.0.0.0 GET /home/index/detail.html?mid=23
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/zhanwen/Desktop/thing/application/v1/service/Workservice.php:175]
+---------------------------------------------------------------
+[ 2020-02-10T16:30:00+08:00 ] 0.0.0.0 GET /home/index/detail.html?mid=23
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/zhanwen/Desktop/thing/application/v1/service/Workservice.php:175]
+---------------------------------------------------------------
+[ 2020-02-10T16:30:34+08:00 ] 0.0.0.0 GET /home/index/detail.html?mid=23
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/zhanwen/Desktop/thing/application/v1/service/Workservice.php:175]
+---------------------------------------------------------------
+[ 2020-02-10T16:30:35+08:00 ] 0.0.0.0 GET /home/index/detail.html?mid=23
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/zhanwen/Desktop/thing/application/v1/service/Workservice.php:175]

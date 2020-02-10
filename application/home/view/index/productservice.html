@@ -300,17 +300,37 @@
         <!-- 联系我们 -->
         <div class="cellme-box">
             <div class="w cellme">
-                <div onclick="GetErp()">立即咨询</div>
+                <div onclick="GetErp('底部服务中心','惠灵工产品服务')">立即咨询</div>
             </div>
         </div>
 
         <!-- 底部 -->
         {include file="common/footer"/}
 
-
-
         <!-- 侧边栏bottom资讯 -->
-        {include file="common/left"/}
+        <div class="bottom-left">
+            <div onclick="GetErp('右导航','惠灵工产品服务');">
+                <div class="bottom-title">咨询方案</div>
+            </div>
+            <div>
+                <div class="bottom-title2">联系我们</div>
+                <div class="bottom-item2">
+                    <div>
+                        <p>立即预约咨询</p>
+                        <p>181-8619-4461</p>
+                    </div>
+                    <div>
+                        <p>获取税筹方案</p>
+                        <p>400-150-9896</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 返回顶部 -->
+            <div class='goTop' id="goTop">
+                <div><img src="__SPI__/images/top@2x.png" alt=""></div>
+                <div>顶部</div>
+            </div>
+        </div>
 
         <!-- 弹窗 -->
         {include file="common/alert"/}

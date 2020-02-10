@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:88:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/information_list.html";i:1581323259;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/logo.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1581319705;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:82:"/Users/zhanwen/Desktop/thing/public/../application/home/view/index/casedetail.html";i:1581323208;s:67:"/Users/zhanwen/Desktop/thing/application/home/view/common/logo.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/login.html";i:1580699706;s:69:"/Users/zhanwen/Desktop/thing/application/home/view/common/footer.html";i:1580699706;s:68:"/Users/zhanwen/Desktop/thing/application/home/view/common/alert.html";i:1581319705;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,30 +11,26 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title><?php echo $title; ?></title>
-  <meta name="keywords" content="用工节税新闻,用工行业资讯,税务筹划资讯,财税行业新闻,节税新闻,税务筹划新闻,惠灵工" />
-  <meta name="description" content="惠灵工新闻资讯是包含海量灵活用工行业资讯的新闻服务平台,反映各行各业的用工新闻热点,热门用工财税话题、用工财税人物动态、用工财税产品资讯等,快速了解灵活用工行业的最新进展。">
+  <meta name="keywords" content="<?php echo (isset($list['seokey']) && ($list['seokey'] !== '')?$list['seokey']:''); ?>" />
+  <meta name="description" content="<?php echo (isset($list['describes']) && ($list['describes'] !== '')?$list['describes']:''); ?>">
   <link rel="stylesheet" href="/static/spirit/css/base.css">
   <link rel="stylesheet" href="/static/spirit/font/syht.css">
-  <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
+  <link rel="stylesheet" href="/static/spirit/css/casedetail.css">
   <link rel="stylesheet" href="/static/spirit/css/footer.css">
   <link rel="stylesheet" href="/static/spirit/css/alert.css">
   <link rel="stylesheet" href="/static/spirit/css/header_nav.css">
   <link rel="stylesheet" href="/static/spirit/css/left.css">
-  <link rel="stylesheet" href="/static/spirit/css/news.css">
-  <!-- <script src="/static/spirit/js/clamp.js"></script> -->
-  <script src='/static/spirit/js/Informationlist.js'></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="/static/spirit/js/lazysizes.min.js"  async=""></script>
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script src='/static/spirit/js/spirit.js'></script>
   <script src='/static/common/js/public.js'></script>
 </head>
 
 <body>
-
   <div class='container'>
 
-    <!-- nav部分 -->
+
+    <!-- 导航部分 -->
     <div class="nav-box">
       <div class="w nav-container clearfix">
         <!-- logo图 -->
@@ -49,11 +45,18 @@
         <!-- nav部分 -->
         <div class="nav">
           <ul class="clearfix">
+            <!-- <li><a href="<?php echo config('curl.website'); ?>">首页</a></li>
+                        <li><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></li>
+                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">惠灵工</a></li>
+                        <li><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></li>
+                        <li><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></li>
+                        <li><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></li>
+                        <li><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></li> -->
             <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-            <li><a href="<?php echo url('/home/index/productservice'); ?>">产品服务</a></li>
+            <li><a href="javascript:;">产品服务</a></li>
             <li><a href="<?php echo url('/home/index/solution'); ?>">行业解决方案</a></li>
-            <li><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
-            <li class="nav-active"><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
+            <li class="nav-active"><a href="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></li>
+            <li><a href="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></li>
             <!--<li>-->
             <!--<?php if(empty($userinfo['userType'])): ?>-->
             <!--<a href="javascript:void(0)" login_url="<?php echo config('curl.login_url'); ?>" loca_url="<?php echo config('curl.hlg'); ?>" onclick="members_click(this)">会员通道</a>-->
@@ -78,8 +81,8 @@
         <!--<div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>-->
         <!--</div>-->
         <!--<?php else: ?>-->
-        <!-- <div> -->
-        <!-- <?php if(empty($userinfo['mobile'])): ?>
+        <!--<div>-->
+        <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="javascript:void(0)" onclick="click_login(this)" location_url="<?php echo config('curl.hlg'); ?>" login_url="<?php echo config('curl.login_url'); ?>" target="_blank">
             登录
@@ -99,8 +102,8 @@
             location_url="<?php echo config('curl.website'); ?>/home/login/hlg_logout" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
-<?php endif; ?> -->
-        <!-- </div> -->
+<?php endif; ?>-->
+        <!--</div>-->
         <!--<?php endif; ?>-->
         <!--登陆注册-->
         <!-- <?php if(empty($userinfo['mobile'])): ?>
@@ -131,97 +134,41 @@
     <!-- 头部部分 -->
     <div class='header-box'>
       <div class="w header">
-        <div>新闻资讯</div>
+        <div>客户案例</div>
         <div></div>
         <p>
-          共享经济新浪潮 开启灵活用工新模式
+          优化财税管理，助力企业全速发展
         </p>
       </div>
     </div>
-
-
-
-    <!-- 面包屑导航 -->
-    <div class="content-box">
-      <div class="w content">
-        <div class="bread-crumbs">
+    <!-- 主体内容 -->
+    <div class='main_content'>
+      <div class='content_middle'>
+        <div class='bread_title'>
           <b><a onclick="go_work(this)" data-url="<?php echo url('/home/index/index'); ?>">惠灵工</a></b> >
-          <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/informationlist'); ?>">新闻资讯</a></b>
-
-        </div>
-        <div class="information-list">
-          <div class="hotWord">
-
-            <div class="bgHot">
-              <span>热门关键词</span>
-              <ul>
-                <?php if(is_array($keylist) || $keylist instanceof \think\Collection || $keylist instanceof \think\Paginator): $i = 0; $__LIST__ = $keylist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$kwords): $mod = ($i % 2 );++$i;?>
-                <li>
-                  <span onclick="hotsearch(this)" data-url="<?php echo url('home/index/getinfoapi'); ?>" data-href="<?php echo url('/home/index/detail'); ?>" 
-                   data-title='<?php echo $kwords['title']; ?>'><?php echo $kwords['title']; ?></span>
-                  <span class="close" onclick='nullhot(this)' data-href="<?php echo url('/home/index/detail'); ?>"
-                        data-title='<?php echo $kwords['title']; ?>' data-url="<?php echo url('home/index/getinfoapi'); ?>">✕</span>
-                </li>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-              </ul>
-
+          <b><a onclick="go_news(this)" data-url="<?php echo url('/home/index/clientcase'); ?>">客户案例</a></b> >
+          <b class="current">案例详情</b></div>
+        <div class='pic_total'>
+          <div class='pic_title'><?php echo $list['title']; ?></div>
+          <div class='time'><?php echo $list['create_time']; ?></div>
+          <div class='line'></div>
+          <div class='tuwen'>
+            <div class='wenzi'>
+              <?php echo $list['content']; ?>
             </div>
 
-            <div class="search-box">
-              <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-              <div onclick="search(this)" data-url="<?php echo url('/home/index/informationList'); ?>">搜索</div>
-              <span onclick="window.location.href=$(this).attr('data-url');"
-                data-url="<?php echo url('/home/index/informationList'); ?>"></span>
-            </div>
+            <!-- <div class='page'>
+              <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
+              <div><span>上一篇:</span><a href="#">已经是第一篇了</a></div>
+              <?php else: ?>
+              <div><span>上一篇:</span><a href="<?php echo url('/home/index/detail',['mid'=>$top['id']]); ?>"><?php echo $top['title']; ?></a></div>
+              <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
+              <div><span>下一篇:</span><a href="#">已经是最后一篇</a></div>
+              <?php else: ?>
+              <div><span>下一篇:</span><a href="<?php echo url('/home/index/detail',['mid'=>$next['id']]); ?>"><?php echo $next['title']; ?></a></div>
+              <?php endif; ?>
+            </div> -->
           </div>
-          <div class="tabs-items show">
-            <ul id="content">
-              <?php if(empty($list) || (($list instanceof \think\Collection || $list instanceof \think\Paginator ) && $list->isEmpty())): ?>
-              <li>
-                <div class="tabs-items-content">
-                  <div class="tabs-items-content-text figcaption">
-                    <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
-                  </div>
-                </div>
-              </li>
-              <?php else: if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-              <li>
-                <a href="<?php echo url('/home/index/detail',['mid'=>$vo['id']]); ?>">
-                  <div class="tabs-items-img">
-                    <img class="lazyload" data-src="<?php echo (isset($vo['imgs']) && ($vo['imgs'] !== '')?$vo['imgs']:''); ?>" alt="">
-                  </div>
-                  <div class="tabs-items-content">
-                    <div class="tabs-items-content-title figcaption">
-                      <p><?php echo $vo['title']; ?></p>
-                      <div class="tabs-items-content-time"><span><img class="lazyload" data-src="/static/spirit/images/shijian2x.png"
-                            alt=""></span><span><?php echo $vo['create_time']; ?></span></div>
-                    </div>
-                    <div class="tabs-items-content-text figcaption">
-                      <p><?php echo $vo['desc']; ?></p>
-                    </div>
-                    <div class="tabs-items-content-label">
-                     <?php if(is_array($vo['keyword']) || $vo['keyword'] instanceof \think\Collection || $vo['keyword'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['keyword'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ko): $mod = ($i % 2 );++$i;?>
-                      <span><?php echo $ko; ?></span>
-                      <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <?php endforeach; endif; else: echo "" ;endif; endif; ?>
-
-            </ul>
-            <!--<input type="hidden" value="<?php echo \think\Request::instance()->get('keyword'); ?>" id="sid">-->
-            <!--<input type="hidden" value="1" id="page">-->
-            <!--<div class="more-btn" onclick="getMore($('#sid').val(),$('#page').val(),this)"-->
-              <!--data-href="<?php echo url('/home/index/detail'); ?>" data-url="<?php echo url('/home/index/getpageInfo'); ?>">查看更多</div>-->
-            <!--分页-->
-
-          </div>
-          <div class="pageNation" style="background: #fff;">
-            <?php echo $list->render();; ?>
-        
-          </div>
-
         </div>
       </div>
     </div>
@@ -291,9 +238,10 @@
 </div>
 
 
+
     <!-- 侧边栏bottom资讯 -->
     <div class="bottom-left">
-      <div onclick="GetErp('右导航','惠灵工新闻资讯');">
+      <div onclick="GetErp('右导航','惠灵工客户案例');">
           <div class="bottom-title">咨询方案</div>
       </div>
       <div>
@@ -343,9 +291,44 @@
     </div>
 
 </div>
-
   </div>
-  
+  <script>
+    // 返回顶部
+    window.onscroll = function () {
+      var top = document.body.scrollTop || document.documentElement.scrollTop;
+
+      if (top >= 1080) {
+        let goTop = document.getElementById('goTop')
+        goTop.style.display = "block"
+
+        // console.log(goTop);
+        var timer = null;
+        goTop.onclick = function () {
+          cancelAnimationFrame(timer);
+          //获取当前毫秒数
+          var startTime = +new Date();
+          //获取当前页面的滚动高度
+          var b = document.body.scrollTop || document.documentElement.scrollTop;
+          var d = 500;
+          var c = b;
+          timer = requestAnimationFrame(function func() {
+            var t = d - Math.max(0, startTime - (+new Date()) + d);
+            document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+            timer = requestAnimationFrame(func);
+            if (t == d) {
+              cancelAnimationFrame(timer);
+            }
+          });
+        }
+      } else if (top < 1080) {
+
+        // 返回顶部样式
+        let goTop = document.getElementById('goTop')
+        goTop.style.display = "none"
+
+      }
+    }
+  </script>
   <script>
     $('.nav ul li').on('click', function () {
       $(this).addClass('nav-active chosenPage').siblings().removeClass('nav-active chosenPage')
@@ -355,19 +338,9 @@
     })
     $('.nav-box').on('mouseleave', function () {
       $('.nav ul li').removeClass('nav-active')
-      if ($('.chosenPage').length < 1) $('.nav ul li').eq(4).addClass('chosenPage')
+      if ($('.chosenPage').length < 1) $('.nav ul li').eq(3).addClass('chosenPage')
 
       $('.chosenPage').addClass('nav-active')
-    })
-    /* 选择热词 */
-    $('.hotWord ul li').click(function (e) {
-      if (!$(this).hasClass('chosen')) {
-        $(this).addClass('chosen')
-      }
-    })
-    $('.hotWord ul li .close').click(function (e) {
-      e.stopPropagation()
-      $(this).parent().removeClass("chosen")
     })
   </script>
 </body>

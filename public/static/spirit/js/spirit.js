@@ -96,8 +96,12 @@ function btnErp() {
     });
 }
 
-//弹窗
-function GetErp() {
+//慧灵工首页 弹窗
+//obj 标识
+//source 来源
+function GetErp(obj,source) {
+    $('#sources').val(source);
+    $('#identifications').val(obj);
     $('#popbox').show();
 }
 
@@ -116,7 +120,7 @@ function form_btn() {
     data.contactName = $.trim($("#contactName").val());//联系姓名
     data.companyName = $.trim($("#companyName").val()); //公司
     data.contactMobile = $.trim($("#contactMobile").val());//手机
-    data.source = $("#sources").val(); //渠道
+    data.source = $("#sources").val(); //来源
     data.identification = $("#identifications").val();//标识
 
     if (data.contactMobile == '' || data.contactMobile == undefined) {
@@ -392,9 +396,13 @@ function is_login(objthis) {
     }
 }
 
-//立即咨询
-function showSearch(){
-    $('#popbox').css('display','block');
+//行业解决方案 弹窗
+//onj 标识
+//source  来源
+function showSearch(onj,source){
+    $('#sources').val(source);
+    $('#identifications').val(onj);
+    $('#popbox').show();
 }
 
 //惠灵工登录跳转
